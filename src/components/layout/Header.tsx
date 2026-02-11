@@ -1,9 +1,13 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
+import PublishersDialog from '@/components/dialogs/PublishersDialog'
+import AgentsDialog from '@/components/dialogs/AgentsDialog'
+import TherapistsDialog from '@/components/dialogs/TherapistsDialog'
 
 const whoItems = [
   { href: '/who', label: 'Individuals' },
@@ -29,7 +33,12 @@ export default function Header() {
   const isWhoPage = pathname === '/who'
   const isWhatPage = pathname === '/what'
 
+  const [showPublishers, setShowPublishers] = useState(false)
+  const [showAgents, setShowAgents] = useState(false)
+  const [showTherapists, setShowTherapists] = useState(false)
+
   return (
+    <>
     <header className="fixed top-0 inset-x-0 z-50 bg-accent backdrop-blur">
       <div className="max-w-[720px] mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/">
@@ -113,20 +122,45 @@ export default function Header() {
               anchor="bottom start"
               className="z-[100] mt-2 min-w-[200px] rounded-xl bg-white/95 backdrop-blur shadow-lg p-2"
             >
-              {bookItems.map((item) => (
-                <MenuItem key={item.label}>
-                  {({ focus }) => (
-                    <button
-                      type="button"
-                      className={`block w-full text-left px-4 py-2 rounded-lg text-sm ${
-                        focus ? 'bg-accent/10 text-accent' : 'text-gray-700'
-                      }`}
-                    >
-                      {item.label}
-                    </button>
-                  )}
-                </MenuItem>
-              ))}
+              <MenuItem>
+                {({ focus }) => (
+                  <button
+                    type="button"
+                    onClick={() => setShowPublishers(true)}
+                    className={`block w-full text-left px-4 py-2 rounded-lg text-sm ${
+                      focus ? 'bg-accent/10 text-accent' : 'text-gray-700'
+                    }`}
+                  >
+                    Publishers
+                  </button>
+                )}
+              </MenuItem>
+              <MenuItem>
+                {({ focus }) => (
+                  <button
+                    type="button"
+                    onClick={() => setShowAgents(true)}
+                    className={`block w-full text-left px-4 py-2 rounded-lg text-sm ${
+                      focus ? 'bg-accent/10 text-accent' : 'text-gray-700'
+                    }`}
+                  >
+                    Agents
+                  </button>
+                )}
+              </MenuItem>
+              <MenuItem>
+                {({ focus }) => (
+                  <button
+                    type="button"
+                    onClick={() => setShowTherapists(true)}
+                    className={`block w-full text-left px-4 py-2 rounded-lg text-sm ${
+                      focus ? 'bg-accent/10 text-accent' : 'text-gray-700'
+                    }`}
+                  >
+                    Therapists
+                  </button>
+                )}
+              </MenuItem>
             </MenuItems>
           </Menu>
           <button
@@ -138,5 +172,10 @@ export default function Header() {
         </nav>
       </div>
     </header>
+
+    <PublishersDialog isOpen={showPublishers} onClose={() => setShowPublishers(false)} />
+    <AgentsDialog isOpen={showAgents} onClose={() => setShowAgents(false)} />
+    <TherapistsDialog isOpen={showTherapists} onClose={() => setShowTherapists(false)} />
+    </>
   )
 }
