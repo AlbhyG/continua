@@ -76,10 +76,10 @@ Plans:
   3. Selecting Agents opens dialog saying "We will send you a proposal" with email or phone input
   4. Selecting Therapists opens dialog saying "We will send you a PDF of the book" with email input
   5. All Book dialogs are visual-only with no actual form submission
-**Plans**: TBD
+**Plans:** 1 plan
 
 Plans:
-- [ ] (Plans created during planning phase)
+- [ ] 04-01-PLAN.md — Create three Book dialog components and wire into Header dropdown
 
 ## Progress
 
@@ -91,8 +91,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Foundation & Layout | 2/2 | ✓ Complete | 2026-02-11 |
 | 2. Interactive Navigation | 1/1 | ✓ Complete | 2026-02-11 |
 | 3. Content Pages & SEO | 2/2 | ✓ Complete | 2026-02-11 |
-| 4. Book Dialogs | 0/TBD | Not started | - |
+| 4. Book Dialogs | 0/1 | Not started | - |
 
 ---
 *Roadmap created: 2026-02-11*
-*Last updated: 2026-02-11 after Phase 3 execution complete*
+*Last updated: 2026-02-11 after Phase 4 planning complete*
