@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
 
 const whoItems = [
@@ -24,6 +25,10 @@ const bookItems = [
 ]
 
 export default function Header() {
+  const pathname = usePathname()
+  const isWhoPage = pathname === '/who'
+  const isWhatPage = pathname === '/what'
+
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-accent backdrop-blur">
       <div className="max-w-[720px] mx-auto px-4 py-3 flex items-center justify-between">
@@ -39,52 +44,66 @@ export default function Header() {
 
         <nav className="flex items-center gap-2">
           <Menu>
-            <MenuButton className="rounded-full bg-white/20 backdrop-blur px-4 py-1.5 text-sm font-bold text-white hover:bg-white/35 transition-colors">
+            <MenuButton
+              disabled={isWhoPage}
+              className={`rounded-full bg-white/20 backdrop-blur px-4 py-1.5 text-sm font-bold text-white transition-colors ${
+                isWhoPage ? 'opacity-50 cursor-default' : 'hover:bg-white/35'
+              }`}
+            >
               Who
             </MenuButton>
-            <MenuItems
-              anchor="bottom start"
-              className="z-[100] mt-2 min-w-[200px] rounded-xl bg-white/95 backdrop-blur shadow-lg p-2"
-            >
-              {whoItems.map((item) => (
-                <MenuItem key={item.label}>
-                  {({ focus }) => (
-                    <Link
-                      href={item.href}
-                      className={`block px-4 py-2 rounded-lg text-sm ${
-                        focus ? 'bg-accent/10 text-accent' : 'text-gray-700'
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
-                  )}
-                </MenuItem>
-              ))}
-            </MenuItems>
+            {!isWhoPage && (
+              <MenuItems
+                anchor="bottom start"
+                className="z-[100] mt-2 min-w-[200px] rounded-xl bg-white/95 backdrop-blur shadow-lg p-2"
+              >
+                {whoItems.map((item) => (
+                  <MenuItem key={item.label}>
+                    {({ focus }) => (
+                      <Link
+                        href={item.href}
+                        className={`block px-4 py-2 rounded-lg text-sm ${
+                          focus ? 'bg-accent/10 text-accent' : 'text-gray-700'
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    )}
+                  </MenuItem>
+                ))}
+              </MenuItems>
+            )}
           </Menu>
           <Menu>
-            <MenuButton className="rounded-full bg-white/20 backdrop-blur px-4 py-1.5 text-sm font-bold text-white hover:bg-white/35 transition-colors">
+            <MenuButton
+              disabled={isWhatPage}
+              className={`rounded-full bg-white/20 backdrop-blur px-4 py-1.5 text-sm font-bold text-white transition-colors ${
+                isWhatPage ? 'opacity-50 cursor-default' : 'hover:bg-white/35'
+              }`}
+            >
               What
             </MenuButton>
-            <MenuItems
-              anchor="bottom start"
-              className="z-[100] mt-2 min-w-[200px] rounded-xl bg-white/95 backdrop-blur shadow-lg p-2"
-            >
-              {whatItems.map((item) => (
-                <MenuItem key={item.label}>
-                  {({ focus }) => (
-                    <Link
-                      href={item.href}
-                      className={`block px-4 py-2 rounded-lg text-sm ${
-                        focus ? 'bg-accent/10 text-accent' : 'text-gray-700'
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
-                  )}
-                </MenuItem>
-              ))}
-            </MenuItems>
+            {!isWhatPage && (
+              <MenuItems
+                anchor="bottom start"
+                className="z-[100] mt-2 min-w-[200px] rounded-xl bg-white/95 backdrop-blur shadow-lg p-2"
+              >
+                {whatItems.map((item) => (
+                  <MenuItem key={item.label}>
+                    {({ focus }) => (
+                      <Link
+                        href={item.href}
+                        className={`block px-4 py-2 rounded-lg text-sm ${
+                          focus ? 'bg-accent/10 text-accent' : 'text-gray-700'
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    )}
+                  </MenuItem>
+                ))}
+              </MenuItems>
+            )}
           </Menu>
           <Menu>
             <MenuButton className="rounded-full bg-white/20 backdrop-blur px-4 py-1.5 text-sm font-bold text-white hover:bg-white/35 transition-colors">
