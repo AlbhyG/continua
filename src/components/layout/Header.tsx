@@ -2,6 +2,26 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
+
+const whoItems = [
+  { href: '/who', label: 'Individuals' },
+  { href: '/who', label: 'Couples' },
+  { href: '/who', label: 'Families' },
+  { href: '/who', label: 'Teams' },
+]
+
+const whatItems = [
+  { href: '/what', label: 'Take a Test' },
+  { href: '/what', label: 'See Results' },
+  { href: '/what', label: 'Tools and Actions' },
+]
+
+const bookItems = [
+  { label: 'Publishers' },
+  { label: 'Agents' },
+  { label: 'Therapists' },
+]
 
 export default function Header() {
   return (
@@ -18,24 +38,78 @@ export default function Header() {
         </Link>
 
         <nav className="flex items-center gap-2">
-          <button
-            type="button"
-            className="rounded-full bg-white/20 backdrop-blur px-4 py-1.5 text-sm font-bold text-white hover:bg-white/35 transition-colors"
-          >
-            Who
-          </button>
-          <button
-            type="button"
-            className="rounded-full bg-white/20 backdrop-blur px-4 py-1.5 text-sm font-bold text-white hover:bg-white/35 transition-colors"
-          >
-            What
-          </button>
-          <button
-            type="button"
-            className="rounded-full bg-white/20 backdrop-blur px-4 py-1.5 text-sm font-bold text-white hover:bg-white/35 transition-colors"
-          >
-            Book
-          </button>
+          <Menu>
+            <MenuButton className="rounded-full bg-white/20 backdrop-blur px-4 py-1.5 text-sm font-bold text-white hover:bg-white/35 transition-colors">
+              Who
+            </MenuButton>
+            <MenuItems
+              anchor="bottom start"
+              className="z-[100] mt-2 min-w-[200px] rounded-xl bg-white/95 backdrop-blur shadow-lg p-2"
+            >
+              {whoItems.map((item) => (
+                <MenuItem key={item.label}>
+                  {({ focus }) => (
+                    <Link
+                      href={item.href}
+                      className={`block px-4 py-2 rounded-lg text-sm ${
+                        focus ? 'bg-accent/10 text-accent' : 'text-gray-700'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+                </MenuItem>
+              ))}
+            </MenuItems>
+          </Menu>
+          <Menu>
+            <MenuButton className="rounded-full bg-white/20 backdrop-blur px-4 py-1.5 text-sm font-bold text-white hover:bg-white/35 transition-colors">
+              What
+            </MenuButton>
+            <MenuItems
+              anchor="bottom start"
+              className="z-[100] mt-2 min-w-[200px] rounded-xl bg-white/95 backdrop-blur shadow-lg p-2"
+            >
+              {whatItems.map((item) => (
+                <MenuItem key={item.label}>
+                  {({ focus }) => (
+                    <Link
+                      href={item.href}
+                      className={`block px-4 py-2 rounded-lg text-sm ${
+                        focus ? 'bg-accent/10 text-accent' : 'text-gray-700'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+                </MenuItem>
+              ))}
+            </MenuItems>
+          </Menu>
+          <Menu>
+            <MenuButton className="rounded-full bg-white/20 backdrop-blur px-4 py-1.5 text-sm font-bold text-white hover:bg-white/35 transition-colors">
+              Book
+            </MenuButton>
+            <MenuItems
+              anchor="bottom start"
+              className="z-[100] mt-2 min-w-[200px] rounded-xl bg-white/95 backdrop-blur shadow-lg p-2"
+            >
+              {bookItems.map((item) => (
+                <MenuItem key={item.label}>
+                  {({ focus }) => (
+                    <button
+                      type="button"
+                      className={`block w-full text-left px-4 py-2 rounded-lg text-sm ${
+                        focus ? 'bg-accent/10 text-accent' : 'text-gray-700'
+                      }`}
+                    >
+                      {item.label}
+                    </button>
+                  )}
+                </MenuItem>
+              ))}
+            </MenuItems>
+          </Menu>
           <button
             type="button"
             className="rounded-full bg-white/20 backdrop-blur px-4 py-1.5 text-sm font-bold text-white hover:bg-white/35 transition-colors"
