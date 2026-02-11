@@ -29,10 +29,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Fixed header with Continua logo and navigation pills stays at top of viewport on all pages
   4. Content area centers at 375px max on mobile and 720px max at desktop breakpoint
   5. Home page displays at "/" route and header doesn't collapse into hamburger menu on mobile
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] (Plans created during planning phase)
+- [ ] 01-01-PLAN.md — Install Tailwind CSS v4, configure theme tokens, gradient background, Inter font
+- [ ] 01-02-PLAN.md — Build fixed header with logo and nav pills, set up home page content area
 
 ### Phase 2: Interactive Navigation
 **Goal**: Visitor can navigate between pages using accessible dropdown menus with full keyboard support
@@ -86,7 +87,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Layout | 0/TBD | Not started | - |
+| 1. Foundation & Layout | 0/2 | Not started | - |
 | 2. Interactive Navigation | 0/TBD | Not started | - |
 | 3. Content Pages & SEO | 0/TBD | Not started | - |
 | 4. Book Dialogs | 0/TBD | Not started | - |
