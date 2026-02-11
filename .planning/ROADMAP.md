@@ -60,10 +60,11 @@ Plans:
   3. What page displays all three feature descriptions (Take a Test, See Results, Tools and Actions) and greys out What pill in header
   4. Who and What pages include cross-links to each other as specified in architecture doc
   5. Each page has unique meta title and description, uses semantic HTML, and is statically generated at build time
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] (Plans created during planning phase)
+- [ ] 03-01-PLAN.md — Create Home, Who, What content pages with verbatim text, SEO metadata, typography, and cross-links
+- [ ] 03-02-PLAN.md — Add active navigation state to Header (greyed-out pills on current page) and verify static build
 
 ### Phase 4: Book Dialogs
 **Goal**: Visitor can open Book dialogs for Publishers, Agents, or Therapists and see visual-only forms
@@ -89,7 +90,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Foundation & Layout | 2/2 | ✓ Complete | 2026-02-11 |
 | 2. Interactive Navigation | 1/1 | ✓ Complete | 2026-02-11 |
-| 3. Content Pages & SEO | 0/TBD | Not started | - |
+| 3. Content Pages & SEO | 0/2 | Not started | - |
 | 4. Book Dialogs | 0/TBD | Not started | - |
 
 ---
