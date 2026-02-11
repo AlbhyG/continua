@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-foreground: rgb(7, 7, 8);
+  --color-muted: rgb(7, 7, 8);
+  --color-accent: rgba(67, 117, 237, 0.92);
+  --color-accent-light: rgba(169, 137, 236, 0.92);
+  --color-border: rgba(255, 255, 255, 0.3);
+  --color-card: rgba(255, 255, 255, 0.77);
+  --color-card-solid: #ffffff;
+}
+
+html {
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.6em;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  color: var(--color-foreground);
+  background: linear-gradient(
+    180deg,
+    rgba(67, 117, 237, 0.92) 0%,
+    rgba(169, 137, 236, 0.92) 35.14%,
+    rgb(229, 158, 221) 100%
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+p + p {
+  margin-top: 20px;
+}
