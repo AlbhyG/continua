@@ -1,15 +1,7 @@
 export default function Home() {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "100vh",
-        fontFamily: "system-ui, sans-serif",
-      }}
-    >
-      <h1>Continua</h1>
-    </div>
+    <main className="max-w-[375px] md:max-w-[720px] mx-auto px-6 pt-20">
+      <h1 className="text-foreground">Continua</h1>
+    </main>
   );
 }
