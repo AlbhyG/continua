@@ -45,10 +45,10 @@ Plans:
   3. Clicking outside an open dropdown closes it
   4. Dropdown panels display with glassmorphic styling and items navigate to appropriate pages
   5. User can navigate dropdowns entirely with keyboard (Tab, Enter, Escape to close)
-**Plans**: TBD
+**Plans:** 1 plan
 
 Plans:
-- [ ] (Plans created during planning phase)
+- [ ] 02-01-PLAN.md — Install @headlessui/react and implement dropdown menus for Who, What, Book with glassmorphic styling and keyboard accessibility
 
 ### Phase 3: Content Pages & SEO
 **Goal**: Visitor reads complete content for Home, Who, and What pages with proper SEO and cross-linking
@@ -88,7 +88,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Layout | 2/2 | ✓ Complete | 2026-02-11 |
-| 2. Interactive Navigation | 0/TBD | Not started | - |
+| 2. Interactive Navigation | 0/1 | Not started | - |
 | 3. Content Pages & SEO | 0/TBD | Not started | - |
 | 4. Book Dialogs | 0/TBD | Not started | - |
 
