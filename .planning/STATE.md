@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-11)
 ## Current Position
 
 Phase: 1 of 4 (Foundation & Layout)
-Plan: 1 of 2 in current phase
+Plan: 2 of 2 in current phase
 Status: Executing
-Last activity: 2026-02-11 — Completed plan 01-01 (Foundation Setup)
+Last activity: 2026-02-11 — Completed plan 01-02 (Header and Layout)
 
-Progress: [█░░░░░░░░░] 10%
+Progress: [██░░░░░░░░] 20%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 2 min
-- Total execution time: 0.03 hours
+- Total plans completed: 2
+- Average duration: 1.5 min
+- Total execution time: 0.05 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-foundation-and-layout | 1 | 2 min | 2 min |
+| 01-foundation-and-layout | 2 | 3 min | 1.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (2 min)
-- Trend: Starting execution
+- Last 5 plans: 01-01 (2 min), 01-02 (1 min)
+- Trend: Accelerating
 
 *Updated after each plan completion*
 
@@ -50,6 +50,10 @@ Recent decisions affecting current work:
 - Apply gradient to body with background-attachment: fixed — Ensures gradient stays stationary on scroll per FOUN-01 (01-01)
 - Use next/font/google with display: swap for Inter — Prevents invisible text, eliminates layout shift (01-01)
 - Define style guide colors as CSS custom properties in @theme — Auto-generates Tailwind utilities while maintaining design system consistency (01-01)
+- Mark Header as Client Component now for future dropdown state — Prevents boundary changes in Phase 2 (01-02)
+- Use button elements for navigation pills for accessibility — Focusable, keyboard-activatable (01-02)
+- [Phase 01-foundation-and-layout]: Mark Header as Client Component now for future dropdown state (prevents boundary changes in Phase 2)
+- [Phase 01-foundation-and-layout]: Use button elements for navigation pills for accessibility (focusable, keyboard-activatable)
 
 ### Pending Todos
 
@@ -62,9 +66,9 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-11 (plan execution)
-Stopped at: Completed 01-foundation-and-layout/01-01-PLAN.md
+Stopped at: Completed 01-foundation-and-layout/01-02-PLAN.md
 Resume file: None
 
 ---
 *State initialized: 2026-02-11*
-*Last updated: 2026-02-11 after completing plan 01-01*
+*Last updated: 2026-02-11 after completing plan 01-02*
