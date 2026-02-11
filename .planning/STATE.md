@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-11)
 ## Current Position
 
 Phase: 3 of 4 (Content Pages & SEO)
-Plan: 1 of 2 in current phase
-Status: Executing
-Last activity: 2026-02-11 — Completed 03-01-PLAN.md (content pages)
+Plan: 2 of 2 in current phase
+Status: Phase Complete
+Last activity: 2026-02-11 — Completed 03-02-PLAN.md (active navigation state)
 
-Progress: [██████░░░░] 62.5%
+Progress: [███████░░░] 75.0%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 1.75 min
-- Total execution time: 0.12 hours
+- Total plans completed: 5
+- Average duration: 1.6 min
+- Total execution time: 0.13 hours
 
 **By Phase:**
 
@@ -29,11 +29,11 @@ Progress: [██████░░░░] 62.5%
 |-------|-------|-------|----------|
 | 01-foundation-and-layout | 2 | 3 min | 1.5 min |
 | 02-interactive-navigation | 1 | 2 min | 2 min |
-| 03-content-pages-and-seo | 1 | 2 min | 2 min |
+| 03-content-pages-and-seo | 2 | 3 min | 1.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (2 min), 01-02 (1 min), 02-01 (2 min), 03-01 (2 min)
-- Trend: Stable
+- Last 5 plans: 01-02 (1 min), 02-01 (2 min), 03-01 (2 min), 03-02 (1 min)
+- Trend: Fast and Stable
 
 *Updated after each plan completion*
 
@@ -62,6 +62,9 @@ Recent decisions affecting current work:
 - Apply responsive typography with mobile-first breakpoints — 48px→64px headings, 18px→20px body (03-01)
 - Implement semantic HTML structure — main, section, h1, h2, p for accessibility (03-01)
 - Cross-link Who and What pages with exact architecture doc text — Bidirectional navigation (03-01)
+- Use usePathname() from next/navigation for client-side route detection — Route-aware navigation (03-02)
+- Apply opacity-50 cursor-default to greyed-out navigation pills — Clear disabled state (03-02)
+- Conditionally render MenuItems only when pill is not active — Prevents dropdown when disabled (03-02)
 
 ### Pending Todos
 
@@ -74,9 +77,9 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-11 (phase execution)
-Stopped at: Completed 03-01-PLAN.md (content pages with SEO)
+Stopped at: Completed 03-02-PLAN.md (active navigation state)
 Resume file: None
 
 ---
 *State initialized: 2026-02-11*
-*Last updated: 2026-02-11 after completing plan 03-01*
+*Last updated: 2026-02-11 after completing plan 03-02*
