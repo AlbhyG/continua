@@ -1,284 +1,413 @@
 # Feature Research
 
-**Domain:** Informational/Marketing Website for SaaS Product (Personality Assessment Platform)
-**Researched:** 2026-02-11
-**Confidence:** MEDIUM
+**Domain:** Marketing/Pre-Launch Site with Interactive Features (v2.0 Evolution)
+**Researched:** 2026-02-15 (Updated from v1.0 research)
+**Confidence:** HIGH
 
 ## Feature Landscape
 
 ### Table Stakes (Users Expect These)
 
-Features users assume exist. Missing these = product feels incomplete or unprofessional.
+Features users assume exist. Missing these = product feels incomplete.
+
+#### Authentication & Signup Features
 
 | Feature | Why Expected | Complexity | Notes |
 |---------|--------------|------------|-------|
-| **Mobile-responsive navigation** | 80%+ of B2B decision-makers research on mobile devices | LOW | Hamburger menu on mobile, full navigation on desktop. Must be thumbable (touch targets 44px+). |
-| **Clear value proposition above fold** | Users decide to stay/leave within 3-5 seconds | LOW | 6-10 word hero message that answers "who you help, what you solve, why you're different" |
-| **Primary CTA above fold** | Users expect clear next action | LOW | Single, action-oriented button (e.g., "Book Assessment", "Get Started") with standout color |
-| **Sticky header** | Standard pattern users expect for quick navigation | LOW | Limit to 50px height, disappear on scroll down, reappear on scroll up (Google NCI best practice) |
-| **Fast page load (LCP < 2.5s)** | Core Web Vitals now ranking factor; users abandon slow sites | MEDIUM | Technical requirement. Lazy-load non-essential elements, compress images, use CDN |
-| **WCAG 2.1 Level AA compliance** | Legal requirement (government deadline April 2026), table stakes for professional sites | MEDIUM | Minimum 4.5:1 contrast ratio for normal text, 3:1 for large text, keyboard navigation, semantic HTML, ARIA labels |
-| **Contact/lead capture mechanism** | Users expect way to get in touch or book | LOW | Either dedicated contact page, embedded form, or "Book" CTA linking to scheduling |
-| **About/Who page** | Users want to know who's behind the product | LOW | Team, mission, credentials. Builds trust for personality assessment context |
-| **Privacy policy link in footer** | Legal requirement, trust signal | LOW | Required for any data collection or cookies |
-| **Social proof above fold** | Users don't trust claims without validation | LOW | Logos, testimonials, or metrics (e.g., "5,000+ assessments completed") |
-| **Footer with site structure** | Universal pattern for navigation and trust signals | LOW | Links to key pages, social media, legal pages, copyright |
-| **Semantic HTML structure** | SEO table stakes, accessibility requirement | LOW | Proper heading hierarchy (h1-h6), nav/main/footer elements, alt text on images |
-| **Meta tags (title, description)** | SEO basics, controls how site appears in search and shares | LOW | Unique per page, 60 chars for title, 160 for description |
-| **SSL certificate (HTTPS)** | Security table stakes, Google ranking factor | LOW | Required for trust and SEO |
-| **Favicon** | Professional polish | LOW | Missing favicon looks incomplete, unprofessional |
+| Email validation before form submission | Standard practice for all web forms; prevents invalid submissions | LOW | Regex pattern matching + real-time feedback. Built into HTML5 but should supplement with custom validation |
+| Clear error messaging | Users need to know why action failed and how to fix | LOW | Inline validation messages with aria-live for accessibility |
+| Email confirmation after signup | Users expect proof that signup succeeded | LOW | Auto-sent after Supabase record created; uses email templates |
+| Loading states during async operations | Visual feedback that action is processing | LOW | Spinner or disabled state while API calls complete |
+| Accessible form controls | Screen readers must announce errors and states | MEDIUM | ARIA labels, live regions, keyboard navigation already handled by Headless UI |
+
+#### Email Verification & Download Features
+
+| Feature | Why Expected | Complexity | Notes |
+|---------|--------------|------------|-------|
+| One-time use verification links | Security standard for email verification | MEDIUM | Supabase provides this by default; tokens expire after 1 hour |
+| Link expiration messaging | Users clicking expired links need clear guidance | LOW | Custom error page or toast notification with re-send option |
+| Clear "check your email" prompt | After signup, users need explicit next-step guidance | LOW | Confirmation dialog or message stating "Check your inbox for verification link" |
+| Email delivery confirmation in UI | Users unsure if email sent need reassurance | LOW | "Email sent to [address]" message with edit option if wrong |
+
+#### Coming Soon & Navigation Features
+
+| Feature | Why Expected | Complexity | Notes |
+|---------|--------------|------------|-------|
+| Mobile-responsive dropdowns | 60%+ mobile traffic; dropdowns must work on touch devices | LOW | Already exists with @headlessui/react; verify touch interactions |
+| Visual indication of disabled/unavailable features | Users clicking non-functional items need to understand why | LOW | Grayed-out text, "Coming Soon" label, or tooltip on hover/tap |
+| Consistent navigation structure | Users expect predictable navigation patterns | LOW | Combining Who/What must maintain existing user mental model |
+
+#### Legal & Compliance
+
+| Feature | Why Expected | Complexity | Notes |
+|---------|--------------|------------|-------|
+| Privacy-compliant data storage | GDPR/CCPA considerations for email collection | MEDIUM | Supabase hosted; requires Terms/Privacy policy links on forms |
+| Clear data usage disclosure | Users want to know how email will be used | LOW | Brief explanation in dialog: "We'll notify you when Continua launches" |
 
 ### Differentiators (Competitive Advantage)
 
-Features that set the product apart. Not required, but valued and memorable.
+Features that set the product apart. Not required, but valuable.
 
 | Feature | Value Proposition | Complexity | Notes |
 |---------|-------------------|------------|-------|
-| **Glassmorphism design system** | Distinctive visual identity that conveys sophistication and modern approach | MEDIUM | Differentiator but has accessibility risks (contrast ratios). Requires careful implementation with fallbacks |
-| **Gradient backgrounds with depth** | Creates emotional, premium feel appropriate for personality insights | LOW | Aligns with brand differentiation, but must maintain text readability |
-| **Micro-animations on scroll** | Modern, polished feel that increases engagement | MEDIUM | Subtle animations (fade-in, parallax). Avoid excessive animation that distracts or reduces accessibility |
-| **Conversation-style form (one question at a time)** | 30% higher conversion than traditional multi-field forms | MEDIUM | For "Book" section. Reduces cognitive load and form abandonment |
-| **Interactive product preview** | 10-15 second micro-demos outperform "book a call" CTAs | MEDIUM-HIGH | Shows actual assessment interface. Makes site "first version of product" not pitch deck |
-| **AI Engine Optimization (AEO)** | Structured content so AI systems cite your information | MEDIUM | 2026 SEO evolution. Schema markup, FAQ sections, clear answer-style content |
-| **Pillar-cluster content model** | Establishes topical authority, improves SEO and discoverability | MEDIUM | Hub pages (e.g., "Personality Assessments") link to detailed content. Requires content strategy |
-| **Progressive disclosure in navigation** | Reduces cognitive load, highlights priority paths | LOW | Mega menu or focused dropdowns. Matches user intent journey |
-| **Dark mode support** | Growing user expectation, especially for professional tools | MEDIUM | Requires careful contrast management with glassmorphism |
-| **Sub-100ms interaction responses** | Engagement Reliability (ER) is new Google 2026 metric | MEDIUM | Optimized JavaScript, minimal blocking scripts, lazy-loading |
+| Coming Soon dropdowns with visual hierarchy | Shows product depth without building features; maintains UX consistency | LOW | Disabled state with helpful messaging vs. hiding features entirely |
+| Consolidated Who/What navigation | Reduces header clutter; signals product focus on relationships + assessments | LOW | Merge existing separate dropdowns; design challenge for mega menu structure |
+| Progressive disclosure in Book flow | Multi-step verification feels professional; reduces abandonment vs. long single form | MEDIUM | Email → verify → download creates trust; manages user expectations |
+| Contextual Coming Soon messages | Each placeholder explains *why* coming soon and *when* available | MEDIUM | Different copy per feature; can collect waitlist interest per feature |
+| Zero-password authentication pattern | Modern UX; users don't create/remember passwords for pre-launch signup | MEDIUM | Magic links only; simpler than traditional auth; aligns with "notify me" use case |
+| Inline validation with accessibility-first design | Real-time feedback without blocking submission; screen reader compatible | MEDIUM | Avoids disabled button trap; shows errors but allows form submission |
+| Verified email gating for premium content | Higher quality leads; prevents spam signups for PDF downloads | MEDIUM | Double opt-in pattern validates genuine interest |
+| Transparent waitlist positioning | Users can see how many signups ahead of them | MEDIUM | Gamification element; creates urgency and social proof |
 
 ### Anti-Features (Commonly Requested, Often Problematic)
 
-Features that seem good but create problems. Deliberately NOT building these.
+Features that seem good but create problems.
 
 | Feature | Why Requested | Why Problematic | Alternative |
 |---------|---------------|-----------------|-------------|
-| **Auto-playing video background** | Looks "modern" and "engaging" | Kills page performance (LCP), high bounce rates, accessibility issues, mobile data concerns | Static hero with gradient background and optional play button for demo video |
-| **Complex mega menu with images** | Showcase all offerings | Overwhelms users (paradox of choice), slow interaction, high maintenance | Simple 3-category dropdown (Who, What, Book) focused on user journey |
-| **Popup newsletter on entry** | Capture emails immediately | 22% conversion for click-triggered vs <2% for time/entry triggers. Entry popups annoy users before they see value | Exit-intent popup or embedded form after user engages with content |
-| **Multi-page "Book" flow** | Collect maximum information upfront | High abandonment (50% drop per field), intimidating, reduces conversions | Visual-only dialog form (as specified in project), or conversational single-question flow |
-| **Parallax scrolling everywhere** | Trendy, dynamic feel | Accessibility issues (motion sickness), performance hit, mobile problems, distracts from content | Subtle parallax on hero only, focus on content and fast load times |
-| **Animated SVG illustrations everywhere** | Visual interest, brand personality | File size and performance cost, maintenance burden, can distract from message | Strategic use on 1-2 key pages only; static with CSS transforms elsewhere |
-| **Social media feed embeds** | Show "we're active" | Third-party scripts kill performance, privacy concerns, layout shift (CLS), outdated content risk | Simple icon links to social profiles in footer |
-| **Live chat widget** | Immediate support | No support team for informational site, creates expectations can't meet, performance cost | Contact form or "Book" CTA with clear response time expectations |
-| **Cookie consent banner covering content** | Legal compliance | Annoying UX, hides content, high bounce rate | Minimal footer banner or implied consent for non-tracking cookies |
-| **Separate mobile site (m.domain.com)** | "Optimized" mobile experience | SEO nightmare (duplicate content), maintenance burden, broken mobile/desktop switching | Single responsive site with mobile-first design and single breakpoint |
+| Disabled submit button until all fields valid | Perceived as "helpful" — prevents invalid submissions | Accessibility nightmare: button loses keyboard focus, users confused why disabled, no error guidance | Keep button enabled; show inline validation errors; prevent submission with JS but show clear error summary |
+| Auto-login after email signup (without verification) | Reduces friction; faster onboarding | Security risk: anyone can claim any email; account takeovers if email recycled | Require email verification before any account access; auto-login only for returning verified users |
+| SMS verification alongside email | "More options = better UX" | Adds complexity: phone number validation, international formats, carrier issues, SMS costs | Email-only for v2.0; SMS is out-of-scope; most users prefer email for marketing signups |
+| Real-time everything (dropdowns, validation, etc.) | Modern feel; instant feedback | Over-engineering for marketing site; adds latency if server-dependent; battery drain on mobile | Use real-time validation for local checks (email format); defer to submission for server checks (email exists) |
+| Extensive form fields during signup | "Get more data upfront" | Increases abandonment; users resistant to sharing before value demonstrated | Collect only name + email; gather additional info post-launch when product value is proven |
+| Password-based authentication for pre-launch | Traditional pattern; perceived as "more secure" | Overkill for notification signup; users forget passwords; password reset flow adds complexity | Magic links for pre-launch; consider passwords only if building full user accounts post-launch |
+| Immediate PDF download without verification | Reduces friction for users | Spam risk; fake emails in database; no quality control on leads | Email verification required; builds higher quality lead list |
+| Hamburger menu for restructured navigation | "Standard mobile pattern" | Style guide specifies horizontal pills; breaking existing design system | Keep existing glassmorphic pill navigation; ensure responsive scaling |
+| Social login (Google, Apple) for pre-launch signup | "Users prefer social login" | Complexity for notification-only signup; OAuth setup overhead; tracking concerns | Magic links simpler for waitlist; defer social login until full product launch |
 
 ## Feature Dependencies
 
 ```
-WCAG 2.1 AA Compliance
-    └──requires──> Semantic HTML Structure
-    └──requires──> Color Contrast Standards (4.5:1)
-                       └──conflicts──> Glassmorphism (transparency reduces contrast)
-                           └──requires──> Fallback Overlays or Borders
+[Email Verification Flow]
+    └──requires──> [Supabase Email Configuration]
+                       └──requires──> [Email Templates]
+                       └──requires──> [Redirect URLs Configured]
+                       └──requires──> [Site URL Set]
 
-Mobile-Responsive Navigation
-    └──requires──> Sticky Header
-    └──enhances──> Fast Page Load
+[Sign In/Up Dialog] ──requires──> [Supabase Database Table]
+                     ──requires──> [Form Validation]
+                     ──requires──> [Name + Email Fields]
 
-Fast Page Load (Core Web Vitals)
-    └──requires──> Optimized Images
-    └──requires──> Lazy Loading
-    └──requires──> Minimal JavaScript
-    └──conflicts──> Auto-playing Video
-    └──conflicts──> Social Media Embeds
+[Book PDF Download] ──requires──> [Email Verification Flow]
+                     ──requires──> [PDF Storage/Hosting]
+                     ──requires──> [Download Link Generation]
 
-SEO Optimization
-    └──requires──> Semantic HTML
-    └──requires──> Meta Tags
-    └──requires──> Fast Page Load
-    └──enhances──> Pillar-Cluster Content Model
-    └──requires──> AI Engine Optimization (2026)
+[Coming Soon Dropdowns] ──enhances──> [Navigation Restructure]
+                         ──requires──> [Disabled State Styling]
 
-Glassmorphism Design
-    └──requires──> Contrast Testing
-    └──requires──> Dark Mode Consideration
-    └──conflicts──> WCAG 2.1 AA (without mitigation)
+[Inline Validation] ──conflicts──> [Disabled Button Pattern]
 
-Conversational Forms
-    └──enhances──> Lead Capture
-    └──conflicts──> Multi-page Book Flow
+[Navigation Restructure] ──requires──> [Content Migration]
+                          ──enhances──> [Mobile UX]
+
+[Magic Link Authentication] ──requires──> [Email Verification Flow]
+                             ──conflicts──> [Password-based Auth]
+
+[Verified PDF Downloads] ──requires──> [Double Opt-in Pattern]
 ```
 
 ### Dependency Notes
 
-- **WCAG 2.1 AA conflicts with Glassmorphism:** Transparency reduces contrast ratios. Requires semi-opaque color overlays, subtle borders, testing each glassmorphic element against backgrounds.
-- **Core Web Vitals conflicts with heavy media:** Auto-playing video, parallax everywhere, social embeds all kill performance metrics that now impact SEO rankings.
-- **Mobile-first enhances everything:** Starting with mobile constraints ensures fast, focused design that scales up gracefully.
-- **AEO enhances traditional SEO:** Not competing strategies. Structure content for AI systems while maintaining traditional optimization.
+- **Email Verification Flow requires Supabase Email Configuration:** Magic links need Site URL and redirect URLs configured in Supabase dashboard; email templates must be customized before sending
+- **Sign In/Up Dialog requires Supabase Database Table:** User records (name, email, created_at, verified) must be stored before email can be sent
+- **Book PDF Download requires Email Verification Flow:** Cannot serve PDF without confirming email ownership; prevents spam/abuse
+- **Coming Soon Dropdowns enhances Navigation Restructure:** Merging Who/What creates space for Coming Soon features; shows product roadmap visually
+- **Inline Validation conflicts with Disabled Button Pattern:** Accessibility best practice is keep button enabled + show errors; disabling button hides it from screen readers and confuses users
+- **Navigation Restructure requires Content Migration:** Existing Who/What pages need new content from architecture slides; can't just merge dropdowns without updating page content
+- **Magic Link Authentication conflicts with Password-based Auth:** Choose one pattern for v2.0; adding both creates confusion and implementation complexity
 
 ## MVP Definition
 
-### Launch With (v1)
+### Launch With (v2.0)
 
-Minimum viable informational site — what's needed to establish professional presence and capture leads.
+Features required for v2.0 interactive foundation — builds on v1.0 marketing shell.
 
-- [x] **Mobile-responsive navigation with sticky header** — Users expect intuitive navigation, sticky header is standard
-- [x] **Home page with value prop above fold** — Core landing page with hero message, primary CTA, social proof
-- [x] **Three-section navigation (Who, What, Book)** — Focused on user journey, not overwhelming
-- [x] **Content pages for Who and What sections** — Establish credibility and explain offering
-- [x] **Visual-only dialog form for Book section** — Lead capture mechanism (as specified in project scope)
-- [x] **WCAG 2.1 Level AA baseline compliance** — Legal requirement, trust signal
-- [x] **Core Web Vitals optimization** — LCP < 2.5s, CLS < 0.1, INP < 200ms
-- [x] **Glassmorphism design system with tested contrast** — Brand differentiator, but accessibility-validated
-- [x] **Basic SEO (semantic HTML, meta tags)** — Discoverability foundation
-- [x] **Footer with privacy policy and site structure** — Legal requirement, trust signal
+- [x] **Restructured navigation (Who/What combined)** — Signals product focus; reduces header clutter; table stakes for v2.0 content structure
+- [x] **My Relationships page with Coming Soon dropdowns** — Content delivery; shows planned features without building them
+- [x] **My Info page with Coming Soon dropdowns** — Content delivery; mirrors Relationships page structure
+- [x] **Sign In/Up dialog with email validation** — Notification signup; builds waitlist; validates interest
+- [x] **Supabase database integration** — Backend required for all interactive features
+- [x] **Email verification for Book downloads** — Gated content pattern; collects verified leads
+- [x] **Updated home page copy** — Marketing message evolution ("The Personality Continua")
+- [x] **Basic inline form validation** — Table stakes for any form; prevents bad data
+- [x] **Accessible form error handling** — Keep buttons enabled, show clear errors with ARIA announcements
+- [x] **Email template configuration** — Customize Supabase templates for brand voice
+- [x] **"Check your email" confirmation UI** — Post-signup guidance; reduces support questions
+- [x] **Improved tablet/PC responsive layout** — Existing mobile-first design needs better desktop optimization
 
-### Add After Validation (v1.x)
+### Add After Validation (v2.x)
 
-Features to add once core is working and validated with real users.
+Features to add once core is working and v2.0 is validated with real users.
 
-- [ ] **Micro-animations on scroll** — Add polish once performance budget allows
-- [ ] **Interactive product preview/demo** — Once assessment product is built, show actual interface
-- [ ] **Pillar-cluster content expansion** — Develop content hub for SEO and authority building
-- [ ] **AI Engine Optimization (AEO)** — Structure existing content for AI citation (FAQ schema, answer-style formatting)
-- [ ] **Exit-intent popup for lead capture** — Optimize conversion once baseline is established
-- [ ] **Dark mode support** — User experience enhancement, requires design system expansion
-- [ ] **Blog or resources section** — Content marketing, SEO long-tail keywords
-- [ ] **Case studies or testimonials page** — Social proof expansion once customers exist
-- [ ] **Optimized image formats (WebP/AVIF)** — Performance optimization iteration
+- [ ] **Resend verification email** — Trigger: user reports "didn't receive email"; 15% of users need this
+- [ ] **Better expired link handling** — Trigger: user complaints about confusing error messages
+- [ ] **Email address change before verification** — Trigger: users submit wrong email, want to correct before verifying
+- [ ] **Waitlist position/count display** — Trigger: want to gamify signups; show social proof ("Join 1,247 people waiting")
+- [ ] **Per-feature Coming Soon waitlists** — Trigger: want to prioritize features by demand; collect interest per feature
+- [ ] **Loading spinners for async operations** — Trigger: slow connections cause confusion; add once performance profiling shows need
+- [ ] **Success/error toast notifications** — Trigger: improve feedback for async actions; better than dialog-only patterns
+- [ ] **Email preview in dialog** — Trigger: reduce typos; show entered email with option to edit before submitting
+- [ ] **Keyboard shortcuts for power users** — Trigger: analytics show repeat visitors; add Cmd+K command palette
 
-### Future Consideration (v2+)
+### Future Consideration (v3+)
 
-Features to defer until product-market fit is established and site is generating leads.
+Features to defer until product launches and waitlist converts to users.
 
-- [ ] **Multi-language support** — Only if targeting international markets
-- [ ] **Advanced analytics/heatmaps** — User behavior insights for optimization
-- [ ] **A/B testing framework** — Once sufficient traffic for statistical significance
-- [ ] **CMS integration** — If frequent content updates needed (vs. static site)
-- [ ] **Client portal/login area** — Only if assessment results delivered via web (currently out of scope)
-- [ ] **Advanced micro-interactions** — Polish features, low ROI until core is proven
+- [ ] **SMS notifications** — Why defer: Email is sufficient for v2.0; SMS adds cost + complexity + international challenges
+- [ ] **User account system** — Why defer: Pre-launch doesn't need persistent sessions; build when product launches
+- [ ] **Social login (Google, Apple)** — Why defer: Magic links simpler for notification signup; add when converting to full accounts
+- [ ] **Advanced analytics (signup funnel)** — Why defer: Not enough traffic yet; use basic analytics first
+- [ ] **Referral/sharing incentives** — Why defer: Need user base first; growth hack after validation ("Move up 5 spots for each referral")
+- [ ] **Multi-language support** — Why defer: English-only validates faster; internationalize after PMF
+- [ ] **Custom email service (Resend/SendGrid)** — Why defer: Supabase email sufficient for v2.0; migrate if deliverability issues arise
+- [ ] **Rate limiting per email address** — Why defer: Low abuse risk for pre-launch; add if spam becomes problem
+- [ ] **Admin dashboard for waitlist management** — Why defer: Manual Supabase dashboard sufficient for v2.0; build custom UI when needed
 
 ## Feature Prioritization Matrix
 
 | Feature | User Value | Implementation Cost | Priority |
 |---------|------------|---------------------|----------|
-| Mobile-responsive navigation | HIGH | LOW | P1 |
-| WCAG 2.1 AA compliance | HIGH | MEDIUM | P1 |
-| Fast page load (Core Web Vitals) | HIGH | MEDIUM | P1 |
-| Clear value prop above fold | HIGH | LOW | P1 |
-| Primary CTA above fold | HIGH | LOW | P1 |
-| Sticky header | MEDIUM | LOW | P1 |
-| Contact/lead capture | HIGH | LOW | P1 |
-| Social proof above fold | HIGH | LOW | P1 |
-| Footer with site structure | MEDIUM | LOW | P1 |
-| Basic SEO (meta tags, semantic HTML) | HIGH | LOW | P1 |
-| Glassmorphism design system | MEDIUM | MEDIUM | P1 |
-| Conversational-style forms | HIGH | MEDIUM | P2 |
-| Micro-animations on scroll | LOW | MEDIUM | P2 |
-| Interactive product preview | HIGH | HIGH | P2 |
-| AI Engine Optimization (AEO) | MEDIUM | MEDIUM | P2 |
-| Dark mode support | MEDIUM | MEDIUM | P2 |
-| Pillar-cluster content model | MEDIUM | MEDIUM | P2 |
-| Exit-intent popup | MEDIUM | LOW | P2 |
-| Blog/resources section | MEDIUM | HIGH | P3 |
-| A/B testing framework | MEDIUM | HIGH | P3 |
-| Multi-language support | LOW | HIGH | P3 |
+| Email validation (inline) | HIGH | LOW | P1 |
+| Supabase integration | HIGH | MEDIUM | P1 |
+| Email verification flow | HIGH | MEDIUM | P1 |
+| Navigation restructure | MEDIUM | LOW | P1 |
+| Coming Soon dropdowns | MEDIUM | LOW | P1 |
+| Updated home copy | HIGH | LOW | P1 |
+| My Relationships page content | HIGH | LOW | P1 |
+| My Info page content | HIGH | LOW | P1 |
+| Accessible form controls | HIGH | MEDIUM | P1 |
+| Email template customization | MEDIUM | LOW | P1 |
+| "Check your email" UI | HIGH | LOW | P1 |
+| Responsive layout improvements | MEDIUM | MEDIUM | P1 |
+| Loading states | MEDIUM | LOW | P2 |
+| Resend verification email | MEDIUM | LOW | P2 |
+| Expired link handling | MEDIUM | LOW | P2 |
+| Email address change flow | MEDIUM | LOW | P2 |
+| Success/error toasts | MEDIUM | LOW | P2 |
+| Waitlist position display | LOW | MEDIUM | P3 |
+| Per-feature waitlists | LOW | HIGH | P3 |
+| SMS notifications | MEDIUM | HIGH | P3 |
+| Social login | MEDIUM | HIGH | P3 |
+| Referral incentives | MEDIUM | HIGH | P3 |
 
 **Priority key:**
-- P1: Must have for launch (table stakes, core brand differentiation)
-- P2: Should have, add when core is validated (optimization, enhancement)
-- P3: Nice to have, future consideration (expansion, scale)
+- P1: Must have for v2.0 launch — builds on existing v1.0 foundation
+- P2: Should have, add when time permits — improves UX but not blocking
+- P3: Nice to have, future consideration — deferred to v3+ or post-launch
 
 ## Competitor Feature Analysis
 
-**Note:** SaaS marketing websites in 2026 show convergence around certain patterns while differentiating on execution quality and brand expression.
-
-| Feature | Common Pattern | Differentiator Approach | Our Approach |
-|---------|----------------|-------------------------|--------------|
-| **Navigation** | Simple header with 3-5 items, sticky on scroll | Mega menu (complex products) vs. focused dropdown (simple products) | Focused dropdown (Who, What, Book) — simple, intent-driven |
-| **Hero Section** | Value prop + CTA + social proof above fold | 10-15s micro-demo vs. static with imagery | Static with glassmorphism + gradient, evolve to micro-demo in v2 |
-| **Lead Capture** | Multi-field form on contact page | Conversational one-at-a-time forms (30% higher conversion) | Visual-only dialog (v1), evolve to conversational (v2) |
-| **Performance** | Many sites fail Core Web Vitals | Top performers: LCP < 2s, mobile-first, optimized assets | Target Core Web Vitals "Good" thresholds, mobile-first |
-| **Accessibility** | Minimal compliance or failing | WCAG 2.1 AA with testing | WCAG 2.1 AA baseline with glassmorphism contrast testing |
-| **Design System** | Clean, minimal, lots of white space | Glassmorphism, dark themes, bold gradients | Glassmorphism + gradients + Inter font — distinctive visual identity |
-| **Content Structure** | Feature pages + blog + resources | Pillar-cluster model for SEO authority | Simple v1 (Who/What/Book), expand to pillar-cluster in v2 |
-| **SEO Strategy** | Basic meta tags, some failing technical SEO | AEO + traditional SEO, topical authority, sub-$100 CAC | Basic SEO v1, add AEO in v2, focus on personality assessment keywords |
+| Feature | Industry Standard | Marketing Sites (Carrd, Unicorn Platform) | SaaS Pre-Launch (Product Hunt, LaunchList) | Our Approach |
+|---------|-------------------|-------------------------------------------|-------------------------------------------|--------------|
+| Email signup | Email field only | Email + Name (optional) | Email + Name + Company | Email + Name — balance data collection vs. friction |
+| Verification | Optional | Rare (immediate signup) | Magic links or double opt-in | Magic links — modern pattern, aligns with no-password approach |
+| Coming Soon indicators | Grayed-out links or hidden features | Dedicated "Coming Soon" pages | Waitlist per feature with position tracking | Dropdown with disabled state + tooltip — shows structure without navigation |
+| Navigation structure | Static pages | Limited (1-3 pages) | Sections on single page | Mega dropdown combining Who/What — signals product depth while maintaining existing v1.0 pages |
+| Download gates | Immediate download or paywall | Email capture → download | Email → verify → download with position tracking | Email → verify → download — prevents spam, collects quality leads |
+| Form validation | Submit-time only | Real-time (varies) | Real-time + accessible | Real-time inline + enabled button — accessibility-first per WebAIM guidance |
+| Post-signup flow | Thank you page or redirect | Email confirmation | Redirect to dashboard or waitlist page | Confirmation message + "check email" prompt — clear next step without overcomplication |
+| Password vs. passwordless | 80% password-based | Varies | 60% magic links | Magic links only — modern pattern, no password reset complexity |
 
 ## Implementation Considerations
 
-### Glassmorphism + WCAG 2.1 AA
+### Disabled Button Accessibility Issue
 
-**Challenge:** Glassmorphism transparency inherently reduces contrast ratios, conflicting with WCAG requirements.
+**Challenge:** Project spec says "OK button disabled until valid input" but this conflicts with accessibility best practices.
 
-**Mitigation strategies:**
-1. Semi-opaque color overlays on glass panels (not pure transparency)
-2. Subtle borders (1px with contrast-meeting color) on glass elements
-3. Increase text weight (semibold vs. regular) on glass backgrounds
-4. Test every glass element against actual backgrounds it will overlay
-5. Fallback: Increase panel opacity for high-contrast mode users
-6. Dark mode: Boost opacity, add darker borders, enforce stricter contrast
+**Research findings:**
+- Disabled buttons cannot receive keyboard focus, making them invisible to screen reader users
+- Users don't understand why button is disabled or how to fix errors
+- Modern best practice: keep button enabled, show validation errors, prevent submission with clear messaging
 
-**Testing protocol:**
-- Use automated tools (axe, Lighthouse) for initial checks
-- Manual testing with color contrast analyzer for each glassmorphic element
-- Test in high-contrast mode (Windows, macOS)
-- Screen reader testing (VoiceOver, NVDA)
+**Recommendation:**
+- Keep button enabled at all times
+- Show inline validation errors as user types (with debouncing)
+- On submit with invalid data: prevent form submission, show error summary with aria-live announcement, focus first error
+- Visually style button differently when form is invalid (lower opacity) but keep it clickable
 
-### Performance Budget with Visual Design
+**Spec interpretation:**
+Reinterpret spec as "prevent submission until valid input" rather than "disable button until valid input" — achieves same goal with better accessibility.
 
-**Challenge:** Glassmorphism effects, gradients, and micro-animations can impact Core Web Vitals.
+### Email Verification Flow UX
+
+**Standard pattern from research:**
+
+1. User enters email in Book dialog
+2. System validates email format (client-side)
+3. User clicks submit
+4. System sends verification email
+5. UI shows "Check your email for verification link" message
+6. User clicks link in email (magic link with token)
+7. Link redirects to site, validates token
+8. System shows download page with PDF link
+9. Link expires after 1 hour; token is one-time use
+
+**Enhanced flow option (for P2):**
+
+1-3. Same as above
+4. System shows "Enter email to receive download link" confirmation
+5. User can edit email if wrong, or confirm
+6. On confirm, send verification email
+7-9. Same as above
+
+**Supabase implementation:**
+- Use `signInWithOtp` for magic link generation
+- Configure redirect URL to `/book/download?type=[publishers|agents|therapists]`
+- Download page checks session, serves appropriate PDF
+- Expire links via Supabase default (1 hour)
+
+### Coming Soon Dropdown Design
+
+**Pattern from research:**
+- Show feature structure without implementing functionality
+- Use disabled state with clear messaging
+- Avoid hiding features entirely (transparency builds trust)
+
+**Recommended implementation:**
+
+```tsx
+<Menu>
+  <MenuButton>Add</MenuButton>
+  <MenuItems>
+    <MenuItem disabled>
+      <div className="px-4 py-2 text-gray-400 cursor-not-allowed">
+        <div className="font-semibold">Person</div>
+        <div className="text-xs">Coming Soon</div>
+      </div>
+    </MenuItem>
+    <MenuItem disabled>
+      <div className="px-4 py-2 text-gray-400 cursor-not-allowed">
+        <div className="font-semibold">Group</div>
+        <div className="text-xs">Coming Soon</div>
+      </div>
+    </MenuItem>
+    {/* ... other options */}
+  </MenuItems>
+</Menu>
+```
+
+**Alternative approaches:**
+1. Tooltip on hover: "This feature launches in [timeframe]"
+2. Click opens "Coming Soon" dialog with email signup for feature-specific waitlist
+3. Show feature preview screenshot in dropdown
+
+**Recommendation:** Start with approach #1 (simple disabled state), evolve to #2 (feature waitlists) in v2.x if analytics show user interest.
+
+### Navigation Restructure Strategy
+
+**Challenge:** Merge Who/What into single dropdown without losing existing content or confusing users.
+
+**Options:**
+
+**Option A: Combined dropdown with sections**
+```
+Who + What
+  ├─ Who We Serve
+  │   ├─ Individuals
+  │   ├─ Couples
+  │   ├─ Families
+  │   └─ Teams
+  └─ What We Offer
+      ├─ Assessments
+      ├─ Results
+      └─ Tools
+```
+
+**Option B: Two columns (mega menu)**
+```
+[Who We Serve]    [What We Offer]
+Individuals       Assessments
+Couples           Results
+Families          Tools
+Teams
+```
+
+**Option C: Separate dropdowns, rename for clarity**
+```
+For Whom → Individuals, Couples, Families, Teams
+What's Included → Assessments, Results, Tools
+```
+
+**Research recommendation:**
+- Option B (two-column mega menu) aligns with mega menu best practices from NN/G research
+- Maintains clear visual separation while reducing header items
+- Mobile: stack columns vertically
+- Accessibility: keyboard navigation left-to-right, top-to-bottom
+
+**Spec interpretation:**
+Project spec says "Who/What combined dropdown" — interpret as Option B (mega menu with two sections).
+
+### Responsive Layout Improvements
+
+**Existing v1.0:**
+- Mobile-first design with single breakpoint
+- Horizontal pill navigation at all screen sizes
+- Glassmorphic cards with backdrop blur
+
+**v2.0 improvements needed:**
+- Tablet (768px-1024px): optimize card widths, potentially two-column layout for content
+- Desktop (>1024px): max-width container, better use of horizontal space
+- Mega menu: ensure two columns work on tablet, stack on mobile
+- Touch targets: verify 44px minimum for all interactive elements
 
 **Approach:**
-1. Set performance budget: LCP < 2.5s, CLS < 0.1, INP < 200ms
-2. Use CSS backdrop-filter (GPU-accelerated) for glass blur, not SVG filters
-3. Gradients as CSS, not images
-4. Lazy-load below-fold glass elements
-5. Preload critical fonts (Inter)
-6. Minimize JavaScript (avoid heavy animation libraries)
-7. Monitor with Real User Monitoring (RUM) tools
-
-### Mobile-First with Single Breakpoint
-
-**Challenge:** Simple breakpoint strategy while maintaining design quality.
-
-**Approach:**
-1. Design for 375px mobile first (iPhone SE baseline)
-2. Single breakpoint at 768px (tablet/desktop)
-3. Fluid typography using clamp() for smooth scaling
-4. Navigation: Hamburger < 768px, full navigation >= 768px
-5. Test at breakpoint edges (767px, 769px) for layout breaks
+- Keep existing mobile foundation
+- Add tablet optimizations: `@media (min-width: 768px)` for two-column cards
+- Add desktop optimizations: `@media (min-width: 1024px)` for max-width and spacing
+- Test at breakpoint boundaries (767px, 768px, 1023px, 1024px)
 
 ## Sources
 
-**Navigation Patterns:**
-- [Best B2B SaaS Website Examples (2026)](https://www.vezadigital.com/post/best-b2b-saas-websites-2026)
-- [SaaS website design in 2026 — best SaaS websites, examples & conversion framework](https://www.stan.vision/journal/saas-website-design)
-- [Designing Your SaaS Navigation Menu for Maximum Discoverability](https://lollypop.design/blog/2025/december/saas-navigation-menu-design/)
-- [15 Website Navigation Best Practices and Do's That Work](https://www.wearetenet.com/blog/website-navigation-best-practices)
+### Email Signup & Form Validation
+- [Best Sign Up Flows (2026): 15 UX Examples That Convert](https://www.eleken.co/blog-posts/sign-up-flow)
+- [20 Signup Form Examples: Ultimate Guide (2026 edition)](https://www.omnisend.com/blog/best-signup-forms-conversions/)
+- [9 Email Signup Form Best Practices to Grow Your List Faster](https://getsitecontrol.com/blog/email-signup-form-best-practices/)
+- [35 Best Signup Form Examples for Higher Conversions in 2026](https://optinmonster.com/best-signup-form-examples-for-higher-conversions/)
+- [13 Top Email Sign-Up Form Examples that Convert - Klaviyo](https://www.klaviyo.com/blog/top-signup-forms-examples)
 
-**Content & Structure:**
-- [35 SaaS website design examples to learn from in 2026 | Webflow Blog](https://webflow.com/blog/saas-website-design-examples)
-- [SaaS Website Structure Best Practices for Growth | RevenueZen](https://revenuezen.com/saas-website-best-practices/)
-- [Best Practices For A SaaS Website | Powered by Search](https://www.poweredbysearch.com/blog/saas-website-best-practices/)
+### Email Verification & Magic Links
+- [Passwordless email logins | Supabase Docs](https://supabase.com/docs/guides/auth/auth-email-passwordless)
+- [Login With Magic Link | Supabase Docs](https://supabase.com/docs/guides/auth/passwordless-login/auth-magic-link)
+- [Email Templates | Supabase Docs](https://supabase.com/docs/guides/auth/auth-email-templates)
+- [How magic links work and why should you use them? — WorkOS](https://workos.com/blog/a-guide-to-magic-links)
+- [How to use magic links for better UX - LogRocket](https://blog.logrocket.com/ux-design/how-to-use-magic-links/)
+- [What is Magic Link Login? How it Works - Ping Identity](https://www.pingidentity.com/en/resources/blog/post/what-is-magic-link-login.html)
 
-**Lead Capture & Forms:**
-- [The Ultimate Guide to High-Converting Lead Capture Forms (2026)](https://www.platoforms.com/blog/ultimate-guide-lead-capture-forms/)
-- [Ultimate guide to high-converting signup forms (2026 edition)](https://www.omnisend.com/blog/best-signup-forms-conversions/)
-- [Lead Capture Forms: 14 Best Practices With Tips & Templates](https://www.leadsquared.com/learn/marketing/lead-capture-forms/)
-- [9 Tips for Designing Contact Forms That Convert](https://www.webfx.com/blog/general/9-tips-for-designing-contact-forms-that-convert/)
+### Gated Content & Download Flows
+- [How to Build an Email Verification Workflow That Actually Works](https://clearout.io/blog/email-verification-workflow-guide/)
+- [Email Verification Flow | Descope Documentation](https://docs.descope.com/flows/use-cases/email-verification)
+- [Implementing the right email verification flow - SuperTokens](https://supertokens.com/blog/implementing-the-right-email-verification-flow)
+- [How Gating Content can Improve Lead Generation - MailerLite](https://www.mailerlite.com/blog/content-gating)
 
-**Accessibility:**
-- [2026 WCAG & ADA Website Compliance Requirements & Standards](https://www.accessibility.works/blog/wcag-ada-website-compliance-standards-requirements/)
-- [Glassmorphism Meets Accessibility: Can Glass Be Inclusive? | Axess Lab](https://axesslab.com/glassmorphism-meets-accessibility-can-frosted-glass-be-inclusive/)
-- [Glassmorphism with Website Accessibility in Mind: Balancing Style and Readability – New Target](https://www.newtarget.com/web-insights-blog/glassmorphism/)
+### Coming Soon & Pre-Launch Patterns
+- [Designing "Coming Soon" Pages — Smashing Magazine](https://www.smashingmagazine.com/2009/11/designing-coming-soon-pages/)
+- [32 Best Coming Soon Page Examples](https://elementor.com/blog/best-coming-soon-page-examples/)
+- [31 Best Coming Soon Page Examples I've Found in 2026](https://www.seedprod.com/coming-soon-pages-wordpress/)
+- [How To Grow a Prelaunch Waitlist for Your Startup](https://www.masslight.com/posts/prelaunch-waitlist-startup)
+- [Waitlist Marketing Strategy 2025](https://getwaitlist.com/blog/waitlist-marketing-strategy-2025-how-to-build-demand-before-launch)
+- [How to Launch a Waitlist and Build Hype for Your Product](https://unicornplatform.com/blog/how-to-launch-a-waitlist-and-build-hype-for-your-product/)
 
-**Performance:**
-- [Core Web Vitals 2026: Key Updates and How to Proof Your Website - SEOlogist Inc](https://www.seologist.com/knowledge-sharing/core-web-vitals-whats-changed/)
-- [2026 Web Performance Standards: Guide Faster Websites](https://www.inmotionhosting.com/blog/web-performance-benchmarks/)
-- [Core Web Vitals 2026: Technical SEO That Actually Moves the Needle](https://almcorp.com/blog/core-web-vitals-2026-technical-seo-guide/)
+### Navigation & Dropdown Design
+- [Mega Menus Work Well for Site Navigation - NN/G](https://www.nngroup.com/articles/mega-menus-work-well/)
+- [User-Friendly Mega-Dropdowns: When Hover Menus Fail — Smashing Magazine](https://www.smashingmagazine.com/2021/05/frustrating-design-patterns-mega-dropdown-hover-menus/)
+- [Mega Navigation Menu Design Trends in Modern Websites](https://designmodo.com/mega-navigation-menu/)
+- [7 Mega Menu Examples with Exceptional UX Design](https://www.webstacks.com/blog/mega-menu-examples)
+- [Dropdown UI Design: Anatomy, UX, and Use Cases](https://www.setproduct.com/blog/dropdown-ui-design)
 
-**SEO:**
-- [SaaS Marketing Trends 2026: AI-First Strategies](https://thesmarketers.com/blogs/saas-marketing-trends/)
-- [10 SaaS SEO Strategy - SaaS Startup Advice To Outrank Competitors in 2026](https://agilityportal.io/blog/10-saas-seo-strategy)
-- [SaaS SEO Strategy 2026: 7 Proven Tactics to Explode Organic Growth](https://abedintech.com/saas-seo-strategy/)
-- [B2B SaaS SEO Strategies for Growth in 2026](https://www.gravitatedesign.com/blog/b2b-saas-seo-strategies/)
+### Supabase Implementation
+- [JavaScript API Reference | Supabase Docs](https://supabase.com/docs/reference/javascript/auth-signup)
+- [Password-based Auth | Supabase Docs](https://supabase.com/docs/guides/auth/passwords)
+- [Email Magic Links overview | Okta Developer](https://developer.okta.com/docs/guides/email-magic-links-overview/java/main/)
 
-**Sticky Headers & Mobile Navigation:**
-- [Sticky Headers: 5 Ways to Make Them Better - NN/G](https://www.nngroup.com/articles/sticky-headers/)
-- [SEO Best Practices: Mobile-Friendly Sticky Headers](https://www.dodgeballmarketing.com/blog/seo-best-practices-is-the-header-sticky-for-mobile)
-- [The 3 Golden Rules of Sticky Menu Navigation | Contentsquare](https://contentsquare.com/blog/the-3-golden-rules-of-sticky-menu-navigation/)
+### Accessibility & Disabled Buttons
+- [WebAIM: Usable and Accessible Form Validation](https://webaim.org/techniques/formvalidation/)
+- [A Guide To Accessible Form Validation — Smashing Magazine](https://www.smashingmagazine.com/2023/02/guide-accessible-form-validation/)
+- [Accessibility and Usability: Inline Field Validation vs. Constantly Active Submit Button](https://www.sheribyrnehaber.com/accessibility-and-usability-inline-field-validation-vs-constantly-active-submit-button/)
+- [Don't Disable Form Controls - Adrian Roselli](https://adrianroselli.com/2024/02/dont-disable-form-controls.html)
+- [Stop disabling form submit buttons](https://blog.thms.uk/2023/03/stop-disabling-form-submit-buttons)
+- [Form Validation When Submit Button is Disabled • DigitalA11Y](https://www.digitala11y.com/academy/form-validation-when-submit-button-is-disabled/)
 
 ---
-*Feature research for: Continua - Personality Assessment Platform Informational Website*
-*Researched: 2026-02-11*
-*Confidence: MEDIUM (WebSearch verified with multiple credible sources; Context7 not available for this domain)*
+*Feature research for: Continua v2.0 Interactive Foundation*
+*Researched: 2026-02-15*
+*Confidence: HIGH (WebSearch findings verified across multiple authoritative sources; Supabase official documentation; accessibility standards from WebAIM and W3C)*
