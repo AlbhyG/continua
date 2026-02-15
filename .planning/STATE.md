@@ -2,19 +2,19 @@
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-02-11)
+See: .planning/PROJECT.md (updated 2026-02-15)
 
 **Core value:** Visitors understand what Continua is, who it's for, and what it does — clearly enough to want to use it when the product launches.
-**Current focus:** v1.0 complete — planning next milestone
+**Current focus:** v2.0 Interactive Foundation — backend, nav restructure, new pages, verified Book downloads
 
 ## Current Position
 
-Milestone: v1.0 SHIPPED (2026-02-11)
-Phase: All 4 phases complete
-Status: Milestone archived
-Last activity: 2026-02-11 — v1.0 milestone complete
+Milestone: v2.0 Interactive Foundation
+Phase: Not started (defining requirements)
+Status: Defining requirements
+Last activity: 2026-02-15 — Milestone v2.0 started
 
-Progress: [██████████] 100.0%
+Progress: [░░░░░░░░░░] 0%
 
 ## Performance Metrics
 
@@ -23,20 +23,16 @@ Progress: [██████████] 100.0%
 - Average duration: 1.6 min
 - Total execution time: 0.15 hours
 
-**By Phase:**
-
-| Phase | Plans | Total | Avg/Plan |
-|-------|-------|-------|----------|
-| 01-foundation-and-layout | 2 | 3 min | 1.5 min |
-| 02-interactive-navigation | 1 | 2 min | 2 min |
-| 03-content-pages-and-seo | 2 | 3 min | 1.5 min |
-| 04-book-dialogs | 1 | 1.5 min | 1.5 min |
-
 ## Accumulated Context
 
 ### Decisions
 
-All v1.0 decisions logged in PROJECT.md Key Decisions table.
+- Supabase chosen for backend (database + email)
+- Email only for v2.0 (no SMS)
+- Placeholder PDFs for Book downloads
+- Who/What merged into single dropdown
+- My Relationships and My Info replace Who and What pages
+- Coming Soon placeholders for Add, My Projects, Take a Test, My Results
 
 ### Pending Todos
 
@@ -48,10 +44,10 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-11 (milestone completion)
-Stopped at: v1.0 milestone archived, ready for next milestone
+Last session: 2026-02-15 (milestone v2.0 started)
+Stopped at: Defining requirements
 Resume file: None
 
 ---
 *State initialized: 2026-02-11*
-*Last updated: 2026-02-11 after v1.0 milestone complete*
+*Last updated: 2026-02-15 after v2.0 milestone started*
