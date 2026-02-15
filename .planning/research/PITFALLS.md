@@ -1,391 +1,532 @@
 # Pitfalls Research
 
-**Domain:** Next.js 15 Informational Website with Tailwind CSS v4
-**Researched:** 2026-02-11
+**Domain:** Adding Supabase Backend & Email Verification to Existing Static Next.js 15 Site
+**Researched:** 2026-02-15
 **Confidence:** HIGH
 
 ## Critical Pitfalls
 
-### Pitfall 1: Glassmorphism Accessibility Failures
+### Pitfall 1: Static-to-Dynamic Route Collision
 
 **What goes wrong:**
-Semi-transparent glassmorphism cards fail WCAG 2.2 contrast requirements (4.5:1 for body text, 3:1 for UI components). Text readability varies as users scroll because background content shifts beneath the transparent layer, creating unpredictable contrast ratios. Users with low vision or color blindness cannot read content reliably.
+When adding Supabase authentication and database access to existing static pages, Next.js attempts to switch routes from static (pre-rendered at build time) to dynamic (rendered on each request) during runtime. This causes the "app/ Static to Dynamic Error" which crashes the build. Existing pages that were working perfectly as static exports suddenly fail to build when you add `cookies()`, `headers()`, or Supabase client calls that require authentication.
 
 **Why it happens:**
-Designers prioritize aesthetic appeal over accessibility. The style guide specifies `rgba(255, 255, 255, 0.77)` for card backgrounds, which looks beautiful against the gradient but provides insufficient contrast guarantee. Developers test on their own screens at optimal angles and brightness, missing real-world accessibility failures.
+Next.js 15 does not support switching between static and dynamic rendering modes during runtime. Your existing static pages were built with `force-static` or default static behavior. When you add Supabase authentication that reads cookies (session tokens), those same routes try to become dynamic, creating an irreconcilable conflict. The build system throws an error because it cannot guarantee consistent behavior.
 
 **How to avoid:**
-- Test all text against the **darkest** possible background color in the gradient (the pink `rgb(229, 158, 221)` at 100%)
-- Add semi-opaque background overlays behind text blocks to ensure minimum 4.5:1 contrast
-- For critical content (navigation, forms, CTAs), use solid white backgrounds `#ffffff` instead of transparent ones
-- Run automated accessibility checks in CI using tools like axe-core or Lighthouse
-- Test with browser extensions that simulate color blindness and low vision
+- Audit all existing routes and explicitly declare their rendering strategy BEFORE adding Supabase
+- For pages that will remain static (Home, Who, What, Services), add `export const dynamic = 'force-static'` at the top
+- For new pages that need authentication (Book download flow), create them in a separate route segment with `export const dynamic = 'force-dynamic'`
+- Create a dedicated `/download` or `/protected` route for authenticated features, separate from public static pages
+- Use middleware to handle authentication redirects without affecting static generation of public pages
+- Test the build after each route modification: `npm run build` to catch conflicts early
 
 **Warning signs:**
-- Text that looks fine at the top of the page (blue gradient) but becomes harder to read toward the bottom (pink gradient)
-- User feedback about readability issues
-- Lighthouse accessibility scores below 90
-- Text that disappears or becomes illegible when users adjust screen brightness
+- Build fails with "Static to Dynamic Error" message
+- Pages that previously built statically now show dynamic rendering warnings
+- `generateStaticParams` returns empty arrays when it shouldn't
+- Different behavior between `npm run dev` and `npm run build`
+- Routes conflict: "The provided export path doesn't match the page"
 
 **Phase to address:**
-Phase 1 (Foundation/Design System) - Build accessibility testing into the component library from the start. Create card variants that meet WCAG requirements.
+Phase 1 (Supabase Setup & Database Schema) - Before writing any Supabase integration code, map all existing routes and declare their static/dynamic intent. Phase 2 (Email Collection Infrastructure) - Verify that adding form submissions doesn't break static routes.
 
 ---
 
-### Pitfall 2: Client/Server Component Boundary Violations
+### Pitfall 2: Supabase Client Initialization Chaos
 
 **What goes wrong:**
-Developers add `"use client"` at the top of page components to fix a single interactivity issue, converting the entire page and all imported components into client components. This eliminates Next.js 15's performance benefits, increases JavaScript bundle size, and breaks static generation. Alternatively, attempting to import Server Components into Client Components causes build errors.
+Developers create Supabase clients incorrectly, mixing server and client instances, using the wrong keys in the wrong environments, or creating new instances on every render. Server Components can't write cookies, so session refresh fails silently. Client Components use `createClientComponentClient()` but forget that it doesn't work in Server Components. The service role key gets exposed in client code, bypassing all Row Level Security. Sessions expire unexpectedly because middleware isn't refreshing auth tokens.
 
 **Why it happens:**
-The distinction between server and client rendering is conceptually confusing, especially since client components are also SSR'd initially. Developers see an error about `window` or `useState` and reflexively add `"use client"` to the nearest file without understanding the boundary implications. The error messages don't clearly explain the component tree implications.
+Next.js 15 has three distinct execution environments (Server Components, Client Components, Middleware) and each requires a different Supabase client factory function. The documentation shows examples for each but doesn't clearly emphasize that mixing them causes silent failures. Developers copy-paste from tutorials that assume Next.js 14 patterns. The error messages are cryptic: "supabaseUrl or supabaseKey required" even when both are set, because the wrong client function is being used in the wrong context.
 
 **How to avoid:**
-- Follow the "server by default" principle - all components are Server Components unless explicitly marked otherwise
-- Push `"use client"` as deep in the component tree as possible (e.g., only mark the interactive button as a client component, not the entire page)
-- Use the composition pattern: pass Server Components as children to Client Components rather than importing them
-- Create separate files for interactive pieces (e.g., `dropdown.client.tsx` vs `dropdown-content.server.tsx`)
-- Document which components are client vs server in your component library
+- Create THREE separate Supabase client utilities in `lib/supabase/`:
+  - `client.ts`: `createBrowserClient()` for Client Components (uses `NEXT_PUBLIC_SUPABASE_*` env vars)
+  - `server.ts`: `createServerClient()` for Server Components, Server Actions, Route Handlers (uses `cookies()` from `next/headers`)
+  - `middleware.ts`: `createServerClient()` specifically for middleware with `updateSession()` to refresh auth tokens
+- NEVER use `SUPABASE_SERVICE_ROLE_KEY` in client-side code or expose it in `NEXT_PUBLIC_*` variables
+- In middleware, always call `supabase.auth.getUser()` and `updateSession()` to keep sessions alive
+- Use `supabase.auth.getUser()` in Server Components, NEVER `supabase.auth.getSession()` (session can be stale)
+- Document which client to import where: add comments at the top of each utility file
+- Create a linting rule or code comment that flags mixing client types
 
 **Warning signs:**
-- JavaScript bundle size grows unexpectedly large
-- Static generation stops working (`generateStaticParams` errors)
-- Build warnings about "use client" in unexpected places
-- Loss of streaming and progressive enhancement benefits
-- TypeScript type inference breaking across boundaries
+- "supabaseUrl or supabaseKey required" error despite env vars being set
+- Sessions expire after 5 minutes even though user is active
+- Authentication works in development but fails in production
+- Cookies aren't being set or read correctly
+- TypeScript errors about `cookies()` not being available
+- Different auth behavior between server and client navigation
 
 **Phase to address:**
-Phase 1 (Foundation) and Phase 2 (Core Components) - Establish clear patterns for component boundaries. Every new component should explicitly decide server vs client.
+Phase 1 (Supabase Setup & Database Schema) - Set up client utilities correctly from day one. This is foundational; getting it wrong compounds into every feature.
 
 ---
 
-### Pitfall 3: Backdrop-Blur Performance Collapse on Mobile
+### Pitfall 3: Row Level Security (RLS) Disabled or Incomplete
 
 **What goes wrong:**
-The style guide extensively uses `backdrop-blur` for glassmorphism effects on header, dropdowns, and cards. On mobile devices, particularly mid-range and older phones, this causes severe performance degradation: janky scrolling, dropped frames, laggy interactions, and high battery drain. The site feels sluggish despite being otherwise well-optimized.
+You create the `emails` table in Supabase to store email addresses, run your app, successfully insert data via the Supabase client, and think everything is working. Then you deploy to production and discover that ANYONE can read, insert, update, or delete ALL email addresses through the public API because Row Level Security is disabled. Alternatively, you enable RLS but forget to create policies, and now your app shows no data because every query returns empty results. No errors, just silent failures and user reports that "nothing works."
 
 **Why it happens:**
-Backdrop-blur is GPU-intensive. Each blurred element requires the browser to sample, blur, and composite background pixels in real-time. The Continua design has multiple stacked blur effects (header with blur, dropdowns with blur, cards with blur). Mobile GPUs, especially on Android devices, struggle with 3+ simultaneous blur effects. Developers test on high-end MacBooks and recent iPhones, missing the performance cliff on real-world devices.
+Every new table created in Supabase has RLS **disabled** by default. This is the most dangerous default in the platform. The Supabase Dashboard shows a warning banner for tables without RLS, but if you create tables via SQL Editor or migrations (which you should for version control), there's no warning at all. Enabling RLS without creating policies is equally common: you check the "Enable RLS" box, think you're secure, but policies are what actually enforce security. Without policies, enabling RLS just blocks everything, including legitimate queries.
 
 **How to avoid:**
-- Reduce blur radius on mobile: Use media queries to drop from `blur(12px)` to `blur(3-5px)` on small screens
-- Limit the number of simultaneous blur effects: Ensure only 2-3 elements have backdrop-blur active at once
-- Use `will-change: backdrop-filter` sparingly (only on elements about to animate) to hint GPU optimization
-- Add hardware acceleration with `transform: translateZ(0)` but test battery impact
-- Provide a "reduce transparency" mode that respects `prefers-reduced-transparency` media query, replacing blur with solid colors
-- Consider removing blur entirely on very low-end devices (use device detection or performance API)
-- Profile on actual Android devices (Samsung Galaxy A series, Pixel 6a, etc.), not just iPhones
+- ALWAYS enable RLS when creating a table: `ALTER TABLE emails ENABLE ROW LEVEL SECURITY;`
+- IMMEDIATELY create policies after enabling RLS, even if it's just a basic one
+- For the `emails` table with public email collection:
+  - Allow INSERT for anyone (anon role): `CREATE POLICY "Allow public insert" ON emails FOR INSERT TO anon WITH CHECK (true);`
+  - Restrict SELECT/UPDATE/DELETE to authenticated admins only
+- For PDF download verification (if tracked in database):
+  - Allow SELECT only for verified users: `CREATE POLICY "Allow verified user select" ON downloads FOR SELECT TO authenticated USING (auth.uid() = user_id AND verified = true);`
+- Test policies from the client SDK, NOT the SQL Editor (SQL Editor bypasses RLS)
+- Add RLS check to CI: query Supabase API to list tables without RLS and fail the build
+- Document each policy's purpose in the migration file
+- Create indexes on columns used in RLS policies (e.g., `CREATE INDEX idx_downloads_user_id ON downloads(user_id);`)
 
 **Warning signs:**
-- Scrolling feels janky or stuttery on mobile
-- High battery drain reports from mobile users
-- Chrome DevTools performance profile shows long GPU tasks
-- Frame rate drops below 30fps during interactions
-- Mobile users complaining about sluggishness while desktop users report no issues
+- Supabase Dashboard shows red warning: "Warning: RLS is not enabled on this table"
+- Queries return all data regardless of authentication state (security issue)
+- Queries return empty arrays after enabling RLS (missing policies)
+- No errors but data doesn't appear in the app
+- API responses succeed but with empty results
+- Different users can see each other's data
 
 **Phase to address:**
-Phase 2 (Core Components) - Build mobile performance testing and blur fallbacks into all glassmorphism components. Phase 3 (Responsive & Performance) - Comprehensive mobile device testing.
+Phase 1 (Supabase Setup & Database Schema) - Enable RLS and create policies in the same migration as table creation. Never defer security to "later."
 
 ---
 
-### Pitfall 4: Tailwind CSS v4 Configuration Confusion
+### Pitfall 4: Email Verification Token Consumption by Link Prefetching
 
 **What goes wrong:**
-Developers try to configure Tailwind using `tailwind.config.js` (v3 approach) or put `@theme` directives in imported CSS files, causing configuration to silently fail. Custom colors, spacing, or fonts don't apply. IDE shows "Unknown at rule @theme" errors. Migration from examples or tutorials breaks because they assume v3 syntax.
+Users click the email verification link sent to their inbox, but instead of being verified, they see "Token has expired or is invalid." The verification fails even though they clicked within seconds of receiving the email. This happens because their email provider (Microsoft Outlook with Safe Links, Gmail with link scanning, corporate email security tools) automatically fetched the verification URL to scan for malware BEFORE the user clicked it. The one-time-use token gets consumed by the prefetch, leaving the real user with an expired token.
 
 **Why it happens:**
-Tailwind CSS v4 fundamentally changed configuration from JavaScript to CSS-based configuration. The `@theme` directive only works in the main entry CSS file that Tailwind processes directly - it's **not** processed in files imported via `@import`. Most existing documentation and tutorials still show v3 patterns. The error messages are confusing and IDE support is incomplete.
+Modern email providers use security features that automatically access links in emails to check for malicious content. Microsoft Defender for Office 365 Safe Links, Gmail's link protection, Barracuda, Proofpoint, and similar tools fetch URLs immediately when the email is delivered. Supabase's default email verification flow uses one-time tokens in the URL (`/verify?token=abc123`). When the security tool visits the URL, Supabase marks the token as used. When the actual user clicks the same link minutes later, the token is already expired.
 
 **How to avoid:**
-- Put **all** `@theme` configuration in the main CSS file (`app/globals.css`) that's imported in the root layout
-- Don't use `@import` to split theme configuration across multiple files
-- Configure VS Code to recognize Tailwind directives: Add `"*.css": "tailwindcss"` to CSS language associations in settings
-- Use `:root` CSS variables for values that don't need corresponding utility classes, reserve `@theme` for values that should generate utilities
-- Don't create `tailwind.config.js` - delete it if it exists from scaffolding
-- Reference the official v4 docs, not v3 docs or random blog posts
+- DO NOT use direct verification links with tokens in the URL for the primary flow
+- Instead, implement a two-step verification:
+  1. Email link goes to `/verify?email=user@example.com` (no token in URL)
+  2. Page shows: "Check your email and enter the 6-digit code we sent"
+  3. User enters the code manually, submits it via form
+  4. Form submission calls Server Action to verify the token
+- Alternatively, use magic link pattern with user action required:
+  1. Email link goes to `/verify/confirm?token=abc123`
+  2. Page shows button: "Click here to verify your email"
+  3. Button click (POST request via Server Action) actually consumes the token
+  4. Email prefetching only does a GET to the page, not the POST action
+- Configure longer token expiration if using direct links: increase from default 1 hour to 24 hours
+- In Supabase Dashboard → Authentication → Email Templates, customize the verification email to explain the two-step process
+- Monitor failed verification attempts and send a new code if the first expires
+- Detect if a token was consumed by prefetching: if token is consumed within <1 second of creation, auto-generate a new one
 
 **Warning signs:**
-- Custom colors defined in `@theme` not working
-- IDE showing red squiggles under `@theme`
-- Configuration working locally but failing in CI/build
-- Utilities not generating for custom theme values
-- Confusion about where configuration should live
+- Users report "token expired" immediately after receiving email
+- High rate of verification failures with "token_hash_not_found" or "otp_expired" errors
+- Verification works for some email providers (personal Gmail) but fails for others (corporate Outlook)
+- Verification fails on desktop but works on mobile (corporate networks have more aggressive link scanning)
+- Success rate for email verification is below 80%
 
 **Phase to address:**
-Phase 1 (Foundation) - Establish the correct configuration pattern and document it clearly for all developers.
+Phase 3 (Email Verification Link Flow) - Build the two-step verification flow from the start. Don't launch with direct token URLs.
 
 ---
 
-### Pitfall 5: Next.js 15 Caching Behavior Surprises
+### Pitfall 5: Missing SMTP Configuration in Production
 
 **What goes wrong:**
-Developers expect pages to be cached by default (Next.js 14 behavior) but Next.js 15 changed defaults: GET Route Handlers are **not** cached by default, and the behavior differs between development and production. Static pages that should be cached aren't, or pages that should be dynamic are cached. Stale content appears after deployments. Revalidation doesn't work as expected.
+Email verification works perfectly in development: you sign up, receive the verification email within seconds, click the link, and you're verified. You deploy to production, and users start reporting they're not receiving emails. Some receive them 30 minutes late. Some never receive them. You check the logs: no errors. Supabase is reporting "email sent" successfully, but emails aren't arriving. Users can't access the Book PDF because they can't verify their email.
 
 **Why it happens:**
-Next.js 15 changed caching defaults for better developer ergonomics, but this breaks assumptions from Next.js 14. Documentation from early 2025 is outdated. The behavior is different in `next dev` vs production builds vs edge deployments, making it hard to predict. Developers don't understand the interaction between `fetch` caching, Full Route Cache, and Router Cache.
+Supabase's default email service is a shared SMTP server intended for **demonstration purposes only**. It has a rate limit of **2 emails per hour per project** with best-effort delivery. There's no guaranteed delivery, no retry mechanism, no bounce handling. It's fine for testing with 1-2 developers but completely inadequate for production. The default SMTP is also more likely to land in spam folders because it doesn't send from your domain. You never configured a custom SMTP provider because it "worked" in development.
 
 **How to avoid:**
-- Explicitly declare rendering strategy with `export const dynamic = 'force-static'` or `export const dynamic = 'force-dynamic'` in route segments
-- For static pages (most informational content), use `export const dynamic = 'force-static'` to guarantee static generation
-- Test caching behavior in production builds (`npm run build` && `npm run start`), not just `npm run dev`
-- Add automated CI tests that check `Cache-Control` headers on representative endpoints
-- Understand the four caching layers: Request Memoization, Data Cache, Full Route Cache, Router Cache
-- For ISR (Incremental Static Regeneration), use time-based revalidation: `export const revalidate = 3600` (seconds)
-- Document expected caching behavior for each route in code comments
+- Configure a custom SMTP provider BEFORE launching any email-based feature
+- Recommended providers: SendGrid, AWS SES, Postmark, Resend, Mailgun
+- In Supabase Dashboard → Project Settings → Authentication → SMTP Settings:
+  - Enable custom SMTP
+  - Configure host, port, username/password from your email provider
+  - Set "Sender email" to `noreply@continua.com` (your domain for trust)
+  - Set "Sender name" to "Continua"
+- Disable link tracking in your SMTP provider (SendGrid, Mailgun have this feature) because it can interfere with Supabase verification URLs
+- Configure SPF, DKIM, and DMARC records for your domain to improve deliverability
+- Set up a dedicated subdomain for transactional emails: `mail.continua.com`
+- Test email delivery to multiple providers: Gmail, Outlook, Yahoo, corporate email
+- Implement email bounce/complaint webhooks from your SMTP provider to track failures
+- Monitor email delivery metrics: delivery rate, bounce rate, spam complaints
+- Set rate limits in Supabase Dashboard → Authentication → Rate Limits (default 30/hour is low; adjust based on your SMTP provider's limits)
 
 **Warning signs:**
-- Pages showing stale data after deployment
-- Development behavior differs dramatically from production
-- `generateStaticParams` returning empty arrays causing dynamic rendering
-- Unexpected cache misses or hits
-- Headers showing `Cache-Control: private` when you expected caching
+- Users report not receiving verification emails
+- Emails arrive 10-30 minutes after being triggered
+- Emails land in spam folders
+- Supabase logs show "email sent" but users don't receive them
+- Production email volume exceeds 2 per hour and emails stop sending
+- Different users have different experiences (some get emails, some don't)
 
 **Phase to address:**
-Phase 1 (Foundation) - Set up the correct static generation patterns and document them. Phase 4 (Deployment) - Add cache validation tests.
+Phase 2 (Email Collection Infrastructure) - Configure custom SMTP immediately after setting up the database, before implementing any email-sending features.
 
 ---
 
-### Pitfall 6: Inter Font Loading Performance Issues
+### Pitfall 6: Middleware Authentication Redirect Loops
 
 **What goes wrong:**
-The style guide specifies loading Inter font from Google Fonts using `@font-face` pointing to `fonts.gstatic.com`. This creates a waterfall: HTML loads → CSS loads → font URLs discovered → fonts download. Users see invisible text (FOIT) or fallback fonts that shift layout (FOUT) before Inter loads. Core Web Vitals suffer, particularly CLS (Cumulative Layout Shift).
+You add middleware to protect the `/download` route, redirecting unauthenticated users to `/login`. Everything works in development. You deploy to production and users report infinite redirect loops: `/download` → `/login` → `/download` → `/login`. The browser throws "Too many redirects" errors. Or worse: the middleware redirects authenticated users AWAY from protected pages, requiring them to log in repeatedly even though they're already logged in.
 
 **Why it happens:**
-Developers use the familiar Google Fonts approach without understanding Next.js 15's built-in font optimization. The `next/font/google` module exists specifically to solve this problem but goes unused. Font subsetting isn't applied, so users download the entire font family including unused glyphs.
+Next.js middleware runs on EVERY request, including redirects. If your middleware logic isn't precise, it creates loops: unauthenticated user requests `/download` → middleware redirects to `/login` → but `/login` is also checked by middleware → middleware sees no session → redirects to `/login` again. Additionally, middleware in Next.js 15 can't access hash fragments (`#token=abc`), so OAuth and magic link flows that rely on hash-based tokens don't work in middleware. The session check happens before the client has a chance to exchange the token for a session, causing the middleware to think the user is unauthenticated when they're actually mid-authentication.
 
 **How to avoid:**
-- Use `next/font/google` to import Inter: `import { Inter } from 'next/font/google'`
-- This automatically: downloads fonts at build time, self-hosts them (no external requests), generates optimal `@font-face` declarations, subsets to only needed characters
-- Apply `font-display: swap` to ensure text is visible during loading
-- Preload critical fonts in the `<head>` (Next.js does this automatically with `next/font`)
-- Use variable fonts (`Inter` is available as a variable font) for better performance and flexibility
-- Specify only the weights you need (400, 700) to reduce file size
-- Consider font subsetting for Latin-only text: `subset: ['latin']`
+- Define a clear list of routes that middleware should IGNORE:
+  ```typescript
+  export const config = {
+    matcher: [
+      '/((?!_next/static|_next/image|favicon.ico|api/auth|login|signup|verify).*)',
+    ],
+  }
+  ```
+- EXCLUDE auth-related routes from middleware protection: `/login`, `/signup`, `/verify`, `/auth/callback`
+- In middleware, check if the current path is the redirect target and skip processing:
+  ```typescript
+  if (request.nextUrl.pathname === '/login') {
+    return response; // Don't redirect login page to login page
+  }
+  ```
+- Use `updateSession()` from `@supabase/ssr` to refresh expired tokens before checking auth state
+- For OAuth/magic link flows, create a dedicated `/auth/callback` route that handles token exchange
+- Don't perform authentication checks in middleware for auth callback routes
+- Add logging to middleware to debug redirect loops (but remove in production for performance)
+- Test authentication flow end-to-end: logout → request protected page → redirected to login → login → redirected back to protected page
+- Handle edge case: user lands on `/login` while already authenticated (redirect to home or dashboard)
 
 **Warning signs:**
-- Flash of invisible text (FOIT) on page load
-- Flash of unstyled text (FOUT) with layout shift
-- Poor CLS scores in Lighthouse
-- Fonts loading slowly on throttled connections
-- Multiple font file requests in Network tab instead of self-hosted fonts
+- Browser error: "This page isn't working. [domain] redirected you too many times."
+- Infinite redirect loops in Network tab showing repeating requests
+- Users report getting "stuck" between login and protected pages
+- Authenticated users are forced to login again immediately after logging in
+- OAuth flows fail with "Token expired" after redirect
+- Different behavior in development vs production (middleware behaves differently on Vercel Edge vs local Node.js)
 
 **Phase to address:**
-Phase 1 (Foundation) - Implement proper font loading from the start. This affects the entire design system.
+Phase 3 (Email Verification Link Flow) - When implementing authentication middleware, build redirect logic carefully and test all edge cases. Phase 4 (Book PDF Download Flow) - Verify middleware doesn't interfere with PDF serving.
 
 ---
 
-### Pitfall 7: Hydration Errors from Dynamic Content
+### Pitfall 7: Environment Variables Not Exposed to Client Components
 
 **What goes wrong:**
-The app crashes on the client with "Text content does not match server-rendered HTML" errors. Server renders one thing, client expects another. Common causes in informational sites: timestamps, random values, window-dependent calculations, third-party scripts, browser extensions modifying DOM.
+You create `.env.local` with `SUPABASE_URL` and `SUPABASE_ANON_KEY`, reference them in your Client Component, and get the error "supabaseUrl or supabaseKey required" even though the variables are clearly defined. The app works in development but breaks in production after deployment. TypeScript shows `process.env.SUPABASE_URL` as `undefined`. The Supabase client can't initialize.
 
 **Why it happens:**
-Server-side rendering happens in Node.js without access to browser APIs. If a component uses `window`, `localStorage`, `document`, or generates dynamic values (timestamps, random numbers) during render, the server output differs from the client's first render. React detects the mismatch and throws. The error messages are cryptic and don't clearly point to the cause.
+Next.js 15 has strict rules about environment variable visibility. Variables WITHOUT the `NEXT_PUBLIC_` prefix are ONLY available in Server Components, Server Actions, Route Handlers, and middleware. They are NOT bundled into the client JavaScript. This is a security feature to prevent accidentally exposing secrets in the browser. If you define `SUPABASE_URL` (without the prefix) and try to use it in a Client Component, it will be `undefined` at runtime. Deployment platforms (Vercel, Netlify) have their own environment variable management, and if you don't configure them correctly, production builds fail.
 
 **How to avoid:**
-- Never access browser APIs (`window`, `document`, `localStorage`) in Server Components
-- For client-side-only code, use `useEffect` hook to defer execution until after hydration
-- For dynamic values, render a loading state or generic default on the server, then update in `useEffect`
-- Wrap browser-dependent code in checks: `if (typeof window !== 'undefined')`
-- Validate HTML structure - don't nest `<div>` in `<p>`, don't nest `<p>` in `<p>`
-- Be careful with third-party libraries that modify DOM (analytics, chat widgets)
-- Use `suppressHydrationWarning` only as a last resort for truly unavoidable cases (like timestamps)
-- Test with React StrictMode enabled (Next.js enables this by default in dev)
+- For Supabase URL and anon key (safe to expose publicly), use `NEXT_PUBLIC_` prefix:
+  - `NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co`
+  - `NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key`
+- For service role key (NEVER expose), use NO prefix (server-only):
+  - `SUPABASE_SERVICE_ROLE_KEY=your-service-role-key`
+- Use separate env files for different environments:
+  - `.env.local` for local development (gitignored)
+  - `.env.production` for production-specific overrides
+- Add `.env.example` to version control with dummy values to document required variables
+- In deployment platform (Vercel, Netlify), configure environment variables in the dashboard
+- Never commit `.env.local` or any file containing real secrets
+- Use `process.env.NEXT_PUBLIC_SUPABASE_URL!` (TypeScript non-null assertion) if you're sure it's defined
+- Add startup validation in `lib/supabase/client.ts`:
+  ```typescript
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL) {
+    throw new Error('Missing NEXT_PUBLIC_SUPABASE_URL');
+  }
+  ```
+- Document which variables are required and where they're used
 
 **Warning signs:**
-- Console errors about hydration mismatch
-- Flash of wrong content before it corrects itself
-- Components unmounting and remounting unexpectedly
-- Different behavior in dev vs production
-- Errors that only occur on specific browsers or with specific extensions
+- "supabaseUrl or supabaseKey required" error in browser console
+- Environment variables undefined in Client Components but work in Server Components
+- TypeScript errors: `process.env.VARIABLE_NAME` has type `undefined`
+- App works in development (`npm run dev`) but fails in production build
+- Different behavior between local and deployed environments
+- Secrets accidentally exposed in browser DevTools → Sources → webpack bundle
 
 **Phase to address:**
-Phase 1 (Foundation) and Phase 2 (Core Components) - Establish patterns for client-side code. Add linting rules to catch browser API usage in Server Components.
+Phase 1 (Supabase Setup & Database Schema) - Set up environment variables correctly from the start. Add validation to prevent runtime failures.
 
 ---
 
-### Pitfall 8: Dropdown and Modal Accessibility Violations
+### Pitfall 8: PDF File Serving Without Proper Authorization
 
 **What goes wrong:**
-The header dropdowns and dialog forms are built without proper ARIA attributes, keyboard navigation, or focus management. Screen readers can't understand the dropdown structure. Keyboard users can't open dropdowns with Enter/Space, can't navigate items with arrow keys, can't close with Escape. Focus isn't trapped in modals. Tab order is wrong.
+You implement the email verification flow, store the Book PDF in `/public/book.pdf`, and send users to `/book.pdf` after verification. You deploy and discover that anyone who guesses the URL can download the PDF without verifying their email. The entire authentication gate is bypassed. Alternatively, you try to serve the PDF through a Server Action or Route Handler, but large files (5+ MB PDFs) cause memory issues, timeouts, or exceed serverless function limits.
 
 **Why it happens:**
-Developers build interactive UI by hand without understanding accessibility requirements. The visual behavior works (click to open, click item to activate) so it seems "done." Keyboard and screen reader testing is skipped. WAI-ARIA patterns aren't followed. There's no accessibility checklist in the development process.
+Files in `/public/` are served directly by Next.js (or your CDN) as static assets. They are NOT protected by authentication middleware or Server Components. Any URL like `/book.pdf` is publicly accessible regardless of session state. Developers assume that because the link is only shown to authenticated users, the file is protected, but direct URL access bypasses the UI. Serving large files through serverless functions hits memory limits (Vercel functions have 1024 MB limit on Hobby plan) and timeout limits (10 seconds for Hobby, 60 seconds for Pro). Streaming files through Server Actions adds unnecessary latency.
 
 **How to avoid:**
-- Follow WAI-ARIA Authoring Practices for Menu Button pattern and Dialog pattern
-- For dropdowns:
-  - Button trigger: `role="button"`, `aria-haspopup="true"`, `aria-expanded="false|true"`
-  - Menu: `role="menu"`, positioned absolutely
-  - Menu items: `role="menuitem"`, focusable
-  - Keyboard: Space/Enter to open, Arrow keys to navigate, Escape to close, Tab to close and move focus
-- For modals:
-  - Container: `role="dialog"`, `aria-modal="true"`, `aria-labelledby` pointing to title
-  - Trap focus inside modal (cycle tab within modal)
-  - Escape key closes modal
-  - Return focus to trigger element when closed
-  - Disable body scrolling while open
-- Consider using React Aria or Radix UI primitives instead of building from scratch
-- Add automated accessibility testing with axe-core
-- Test with keyboard only (unplug mouse)
-- Test with screen reader (VoiceOver on Mac, NVDA on Windows)
+- DO NOT put protected PDFs in `/public/` folder
+- Instead, use one of these approaches:
+
+**Option 1: Supabase Storage (Recommended)**
+  - Upload PDF to Supabase Storage bucket
+  - Set bucket policy to require authentication: `CREATE POLICY "Require email verification" ON storage.objects FOR SELECT USING (bucket_id = 'protected-files' AND auth.jwt()->>'email_verified' = 'true');`
+  - Generate signed URLs with expiration: `supabase.storage.from('protected-files').createSignedUrl('book.pdf', 3600)` (1 hour expiration)
+  - Return the signed URL to verified users only
+  - Signed URL expires automatically, preventing long-term sharing
+
+**Option 2: Route Handler with Authentication**
+  - Move PDF outside `/public/`, e.g., to `storage/` (not served by Next.js)
+  - Create Route Handler `/api/download/book` that:
+    1. Checks authentication: `supabase.auth.getUser()`
+    2. Verifies email is verified: `user.email_verified === true`
+    3. Streams file as response: `fs.createReadStream()` → `Response` with `ReadableStream`
+  - Use `X-Accel-Redirect` (Nginx) or equivalent for efficient file serving (offload to reverse proxy)
+
+**Option 3: Vercel Blob Storage (if using Vercel)**
+  - Upload PDF to Vercel Blob
+  - Generate downloadable URLs in API route after auth check
+  - Vercel handles large file serving efficiently
+
+- For any approach, set proper `Content-Disposition` header: `Content-Disposition: attachment; filename="continua-book.pdf"`
+- Add rate limiting to prevent abuse: max 5 downloads per user per day
+- Log download events for analytics: track who downloaded, when, from where
+- Consider adding watermarking or user-specific metadata to PDFs (advanced)
 
 **Warning signs:**
-- Can't operate dropdowns with keyboard
-- Screen reader announces wrong information or nothing at all
-- Focus disappears or moves to wrong elements
-- Can't escape from modals with keyboard
-- Lighthouse accessibility score below 90
+- Users report sharing direct PDF URLs that work for anyone
+- PDF URLs don't require authentication to access
+- Large PDF downloads fail with timeout errors
+- Serverless function memory exceeded errors
+- PDF downloads are slow (>10 seconds for a 5 MB file)
+- Users can download PDFs by guessing the filename
 
 **Phase to address:**
-Phase 2 (Core Components) - Build accessibility into dropdown and modal components from the start. Add accessibility testing to component development workflow.
+Phase 4 (Book PDF Download Flow) - Implement secure file serving from the start. Test with unauthenticated requests to verify protection.
+
+---
+
+### Pitfall 9: Navigation Restructure Breaks Existing Links and SEO
+
+**What goes wrong:**
+You restructure the navigation dropdowns (merge What and Services into "Our Work", rename "Who" to "For Who"), update the internal links, and deploy. Google Search Console shows a spike in 404 errors. External sites and bookmarks pointing to `/what` now break. Users land on error pages. Social media shares with old URLs show broken links. SEO rankings drop for pages that were previously indexed.
+
+**Why it happens:**
+Your v1.0 site has been live and indexed by search engines. External sites may have linked to your pages. Users may have bookmarked specific pages. When you rename or move pages without setting up redirects, all those links break. Next.js doesn't automatically create redirects when you change route structure. The old URLs return 404 errors, creating a poor user experience and SEO penalties.
+
+**How to avoid:**
+- Before restructuring, audit all existing URLs that need to be preserved
+- Create redirects in `next.config.ts` for any changed URLs:
+  ```typescript
+  async redirects() {
+    return [
+      {
+        source: '/what',
+        destination: '/our-work',
+        permanent: true, // 301 redirect for SEO
+      },
+      {
+        source: '/who/:slug',
+        destination: '/for-who/:slug',
+        permanent: true,
+      },
+    ];
+  }
+  ```
+- Use 301 (permanent) redirects for renamed/moved pages to transfer SEO value
+- Use 302 (temporary) redirects for temporary changes
+- Update internal links throughout the site to use new URLs (don't rely on redirects for internal navigation)
+- Update sitemap.xml with new URLs and submit to Google Search Console
+- Check for broken links in Google Search Console → Coverage → Not Found errors
+- Test all old URLs manually to verify redirects work
+- Update any external links you control (social media bios, email signatures, documentation)
+- Add redirect tests to CI: automated checks that old URLs return 301/302 to new URLs
+- Consider keeping redirects indefinitely (they're cheap and prevent broken links)
+
+**Warning signs:**
+- Google Search Console shows spike in 404 errors
+- Users report "page not found" when clicking old bookmarks
+- SEO traffic drops for specific pages
+- External backlinks show broken link warnings
+- Social media shares of old URLs don't work
+- Analytics show increased bounce rate from search engine traffic
+
+**Phase to address:**
+Phase 5 (Navigation Restructure) - Set up all redirects in the same deployment that changes URLs. Test before deploying.
 
 ---
 
 ## Moderate Pitfalls
 
-### Pitfall 9: Fixed Header Anchor Link Coverage
+### Pitfall 10: Forgetting to Handle Email Already Verified State
 
 **What goes wrong:**
-The header is fixed at the top of the viewport. When users click anchor links (e.g., from "Who" page to "For Individuals" section), the browser scrolls so the target is at the very top, but the fixed header covers it. Users must manually scroll down to see the content they navigated to.
+A user signs up, verifies their email, and successfully downloads the Book PDF. They close the browser. Later, they return to the site and click "Get the Book" again, enter their email again, and get a confusing error or duplicate entry. Or worse: they receive a new verification email even though they're already verified, and clicking it breaks their account state.
 
 **Prevention:**
-- Add `scroll-padding-top: 80px` to the `html` element (80px matches the header height including padding)
-- Alternatively, add `scroll-margin-top: 80px` to all anchor target elements
-- Test all anchor navigation scenarios
-- Consider smooth scrolling: `scroll-behavior: smooth` on `html` element
+- Check if email is already verified BEFORE sending verification email:
+  ```typescript
+  const existingUser = await supabase
+    .from('emails')
+    .select('verified')
+    .eq('email', email)
+    .single();
+
+  if (existingUser?.verified) {
+    // Send them directly to download page or magic link to login
+    return { message: 'Email already verified. Check your email for download link.' };
+  }
+  ```
+- If user is already in the database but not verified, resend verification (invalidate old token)
+- If user is verified, send them a magic link to login and download
+- Show clear messaging: "We've sent you a login link to access your download"
+- Handle duplicate email entries gracefully (unique constraint on email column in database)
+- Add "Already verified? Click here to login" link on verification page
 
 **Phase to address:**
-Phase 2 (Core Components) - When building the header and page navigation.
+Phase 3 (Email Verification Link Flow) - Build this logic when implementing verification flow.
 
 ---
 
-### Pitfall 10: Missing or Incorrect SEO Metadata
+### Pitfall 11: Missing Loading States During Email Submission
 
 **What goes wrong:**
-Informational pages missing unique `title` and `description` meta tags. All pages using the same generic metadata. Open Graph images not set or using relative URLs that social platforms can't fetch. Robots.txt blocking important pages or assets.
+User fills out the email form, clicks "Get the Book," and nothing happens. No feedback. They click again. Still nothing visible. They click 5 more times. Behind the scenes, 7 email verification requests are queued, sending 7 verification emails to their inbox. User is confused and frustrated.
 
 **Prevention:**
-- Export `metadata` object from every page with unique title and description
-- Set `metadataBase` in root layout for absolute URLs: `metadataBase: new URL('https://continua.com')`
-- Create OpenGraph images for each major page
-- For dynamic routes, use `generateMetadata` async function
-- Don't mix `metadata` object and `generateMetadata` function in the same file
-- Add meta description to every page (150-160 characters)
-- Validate metadata with social media preview tools (Twitter Card Validator, Facebook Sharing Debugger)
-- Generate a sitemap with all pages
-- Test that robots.txt isn't blocking pages or CSS/JS assets
+- Add immediate loading state when form is submitted:
+  ```typescript
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  async function handleSubmit(e) {
+    setIsSubmitting(true);
+    try {
+      await submitEmail(email);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+  ```
+- Disable submit button during submission: `disabled={isSubmitting}`
+- Show loading spinner or skeleton in button: "Submitting..." or spinner icon
+- Show success message immediately after successful submission: "Check your email for verification link"
+- Handle errors gracefully with user-friendly messages: "Something went wrong. Please try again."
+- Use optimistic UI: immediately show success state, revert if request fails
+- Implement debouncing or rate limiting on client side to prevent duplicate submissions
+- Add toast notifications for success/error states
 
 **Phase to address:**
-Phase 3 (Content Pages) - As pages are built, add proper metadata to each.
+Phase 2 (Email Collection Infrastructure) - Add to the email submission form component.
 
 ---
 
-### Pitfall 11: Next.js 15 params Type Mismatch
+### Pitfall 12: Not Handling Email Verification Errors Gracefully
 
 **What goes wrong:**
-TypeScript build errors in dynamic routes: "Type 'Params' is missing the following properties from type 'Promise<any>': then, catch, finally." This is a Next.js 15-specific breaking change that breaks code migrated from Next.js 14.
+User's verification link expires (after 24 hours). They click it and see a cryptic error page: "Token has expired." No guidance on what to do next. They're stuck. They can't access the PDF. They contact support. Or worse: the error is shown as a default Next.js error page with stack traces in development mode.
 
 **Prevention:**
-- In Next.js 15, `params` in Server Components is a Promise that must be awaited
-- Change from: `function Page({ params }: { params: { slug: string } })`
-- Change to: `async function Page({ params }: { params: Promise<{ slug: string }> })` and `const { slug } = await params`
-- Also affects: `searchParams` (now a Promise)
-- Update all dynamic route pages and generateMetadata functions
-- Add TypeScript strict mode to catch these early: `"strict": true` in tsconfig.json
+- Create custom error pages for common verification failures:
+  - `/verify/expired` - Token expired, offer to resend
+  - `/verify/invalid` - Token invalid, offer to try again
+  - `/verify/success` - Verification successful, redirect to download
+- In verification route handler, catch specific error types:
+  ```typescript
+  try {
+    await supabase.auth.verifyOtp({ token_hash, type: 'email' });
+    redirect('/download');
+  } catch (error) {
+    if (error.message.includes('expired')) {
+      redirect('/verify/expired?email=' + email);
+    }
+    redirect('/verify/invalid');
+  }
+  ```
+- On error pages, provide clear next steps:
+  - "Your verification link has expired. Enter your email to receive a new one."
+  - Include a form to resend verification email
+- Log verification errors for debugging and monitoring
+- Set up alerts for high verification failure rates (>20%)
+- Test error scenarios: expired token, invalid token, already used token, missing token
 
 **Phase to address:**
-Phase 2 (Routing) - If/when building dynamic routes. For this fully static informational site, this may not apply.
+Phase 3 (Email Verification Link Flow) - Create error pages when building verification flow.
 
 ---
 
-### Pitfall 12: Tailwind CSS v4 Browser Support Issues
+### Pitfall 13: Cookie SameSite Attribute Issues in Production
 
 **What goes wrong:**
-Site breaks on older browsers because Tailwind CSS v4 requires Safari 16.4+, Chrome 111+, and Firefox 128+. Styles fail on older iOS devices. Range media queries don't work on Safari 15.4-16.3.
+Authentication works perfectly in local development (localhost). You deploy to production and users report they can't stay logged in. Sessions expire immediately. Login succeeds but subsequent requests show as unauthenticated. Cookies aren't being sent with requests.
 
 **Prevention:**
-- Document minimum browser versions in README and support policy
-- Add browserslist configuration if needed for PostCSS compatibility
-- Test on real older devices, not just modern browsers
-- Consider showing a browser upgrade notice for unsupported browsers
-- If you must support older browsers, stay on Tailwind CSS v3.4 until requirements change
-- Use feature detection with `@supports` for critical features
-- Check Can I Use for specific CSS features used extensively (backdrop-filter requires Safari 18+, Chrome 76+)
+- Supabase sets cookies with `SameSite=Lax` by default
+- If your app is on a different domain than Supabase (`continua.com` vs `your-project.supabase.co`), cookies may be blocked
+- Use custom domain for Supabase if possible (Enterprise plan) or ensure same-origin
+- Check that your site is served over HTTPS in production (cookies with `Secure` flag require HTTPS)
+- In Supabase Dashboard → Authentication → URL Configuration, set:
+  - Site URL: `https://continua.com`
+  - Redirect URLs: `https://continua.com/auth/callback`
+- Test authentication on production domain, not localhost
+- Check browser DevTools → Application → Cookies to verify cookies are being set
+- Modern browsers block third-party cookies; verify your setup doesn't rely on them
 
 **Phase to address:**
-Phase 1 (Foundation) - Decide browser support policy. Phase 4 (Deployment) - Test on target browsers.
+Phase 3 (Email Verification Link Flow) - Test on production domain before launch.
 
 ---
 
-## Minor Pitfalls
-
-### Pitfall 13: TypeScript Errors Skipped in Development
+### Pitfall 14: Database Migration Drift Between Environments
 
 **What goes wrong:**
-TypeScript errors are visible in the IDE but don't block `npm run dev`. Developers ignore them because the site appears to work. Production build suddenly fails with type errors, blocking deployment.
+You create the `emails` table in Supabase Dashboard manually in development. Everything works. You deploy to production and create the table manually again, but with slightly different column types or constraints. Queries that work in development fail in production. Or worse: you forget to create the table in production entirely and get "relation does not exist" errors.
 
 **Prevention:**
-- Enable TypeScript checking in development: Run `tsc --noEmit --watch` in a separate terminal
-- Add pre-commit hooks that run type checking: `tsc --noEmit`
-- Configure CI to fail on type errors before merging
-- Don't use `ignoreBuildErrors: true` in `next.config.ts` - this hides problems
-- Use strict TypeScript mode: `"strict": true`
-- Treat warnings as errors in CI
+- NEVER create tables manually in Supabase Dashboard for production use
+- Use Supabase CLI to manage migrations:
+  ```bash
+  supabase init
+  supabase migration new create_emails_table
+  # Edit migration file with CREATE TABLE
+  supabase db push
+  ```
+- Store migrations in version control (`supabase/migrations/`)
+- Apply migrations to production via CLI: `supabase db push --project-ref your-prod-ref`
+- Generate TypeScript types from database schema: `supabase gen types typescript`
+- Keep development and production schemas in sync
+- Test migrations on staging environment before production
+- Use migration rollback capability for failed migrations
 
 **Phase to address:**
-Phase 1 (Foundation) - Set up development workflow and CI checks.
+Phase 1 (Supabase Setup & Database Schema) - Set up migration workflow from the start.
 
 ---
 
-### Pitfall 14: Missing Loading and Error States
+### Pitfall 15: Hardcoded URLs and Environment-Specific Logic
 
 **What goes wrong:**
-If any page uses dynamic data fetching (even just for forms), users see a blank screen during loading. Errors show ugly Next.js error pages instead of styled messages. No feedback for form submissions.
+You hardcode `https://continua.com/verify` in the email template. Local development verification emails link to production instead of `http://localhost:3000/verify`. Or production links point to localhost because you forgot to update them. OAuth redirects go to the wrong domain.
 
 **Prevention:**
-- Create `loading.tsx` for any route that might load data
-- Create `error.tsx` with proper error UI for every major route segment
-- Even for static pages, consider skeleton screens during client-side navigation
-- For forms, show loading state during submission and clear success/error messages
-- Test error scenarios: network offline, server errors, validation failures
+- Use environment variables for all URLs:
+  ```typescript
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const verifyUrl = `${siteUrl}/verify?token=${token}`;
+  ```
+- Configure `NEXT_PUBLIC_SITE_URL` in:
+  - `.env.local`: `http://localhost:3000`
+  - Vercel/Netlify environment variables: `https://continua.com`
+- In Supabase email templates, use `{{ .SiteURL }}/verify` (Supabase template variable)
+- Supabase Site URL is set in Dashboard → Authentication → URL Configuration
+- Set different Site URLs for different Supabase projects (dev vs prod)
+- Test email links in all environments to verify they point to correct domain
 
 **Phase to address:**
-Phase 2 (Core Components) - Build loading and error components. Phase 3 (Content Pages) - Apply to all routes.
-
----
-
-### Pitfall 15: Gradient Background Performance
-
-**What goes wrong:**
-The full-viewport fixed gradient (`background-attachment: fixed`) can cause performance issues on mobile, particularly during scrolling. The browser must recalculate background position for every frame.
-
-**Prevention:**
-- Test scroll performance on mid-range Android devices
-- Consider using a static gradient (remove `background-attachment: fixed`) on mobile via media query
-- If performance is poor, create the gradient as an absolutely positioned `::before` pseudo-element instead
-- Profile with Chrome DevTools Performance tab looking for paint operations during scroll
-- Monitor Core Web Vitals, particularly CLS and INP (Interaction to Next Paint)
-
-**Phase to address:**
-Phase 3 (Responsive & Performance) - Mobile performance testing and optimization.
-
----
-
-### Pitfall 16: Over-Using "use client" Directive
-
-**What goes wrong:**
-Beyond the critical boundary violations, subtle overuse happens: developers mark components as client "just in case" or because they're imported from a client component. This gradually inflates the client bundle without clear benefit.
-
-**Prevention:**
-- Regularly audit `"use client"` usage: `grep -r "use client" src/`
-- Ask for every client component: "Does this truly need browser APIs or state?"
-- Use `next build` and check `.next/static/chunks` to see client bundle size
-- Aim for minimal client JavaScript - the informational site should be mostly server components
-- Document why each client component needs to be client-side
-
-**Phase to address:**
-Ongoing - Code review checklist item.
+Phase 2 (Email Collection Infrastructure) - Set up environment-aware URLs before implementing email flows.
 
 ---
 
@@ -393,13 +534,14 @@ Ongoing - Code review checklist item.
 
 | Shortcut | Immediate Benefit | Long-term Cost | When Acceptable |
 |----------|-------------------|----------------|-----------------|
-| Using `suppressHydrationWarning` to hide hydration errors | Removes console noise quickly | Masks underlying bugs that cause poor UX, unpredictable behavior, and potential runtime errors | Only for truly unavoidable cases like server-rendered timestamps |
-| Skipping keyboard accessibility testing | Faster component development | Legal liability (ADA), excludes keyboard users, fails WCAG requirements | Never - keyboard testing is essential |
-| Using inline blur radius without mobile optimization | Simpler code, fewer media queries | Terrible mobile performance, user complaints, high bounce rate | Never for production - always optimize mobile blur |
-| Hardcoding fixed header height instead of CSS variables | Quicker implementation | Difficult to maintain when header height changes, breaks scroll padding | Never - use CSS variables or Tailwind theme |
-| Skipping OpenGraph images | Saves design time | Poor social media presence, unprofessional sharing previews | Acceptable for internal pages, never for marketing pages |
-| Using any/unknown TypeScript types | Silences type errors quickly | Loses type safety, causes runtime errors, makes refactoring dangerous | Never - invest time in proper types |
-| Ignoring backdrop-filter browser support | Works on developer's Mac | Breaks on older browsers, no fallback UI | Only acceptable if browser support policy excludes those browsers |
+| Storing PDF in `/public/` instead of protected storage | Quick to implement, no backend needed | PDF is publicly accessible by direct URL, security bypass | Never for gated content |
+| Using default Supabase SMTP instead of custom provider | Zero configuration, works immediately | 2 emails/hour limit, poor deliverability, unprofessional | Only for early development/testing |
+| Skipping RLS policies during development | Faster iteration, no policy debugging | Catastrophic security hole if forgotten before launch | Acceptable for local dev ONLY if migrations enable RLS before production |
+| Hardcoding site URLs instead of using env vars | Works quickly for single environment | Breaks when switching environments, forces manual updates | Never - env vars are trivial to set up |
+| Using direct token URLs instead of two-step verification | Simpler email template, one less page | Link prefetching breaks verification for many users | Never in production - prefetching is too common |
+| Mixing Supabase client types (server/client) | Fixes immediate errors, compiles | Silent failures, session bugs, auth doesn't work reliably | Never - proper clients are well-documented |
+| Not setting up database migrations | Tables created faster in Dashboard | Schema drift, production incidents, no rollback | Never - migrations are essential |
+| Skipping redirect setup when restructuring navigation | Faster deployment, fewer files to change | SEO damage, broken external links, poor UX | Never - redirects are critical for URL changes |
 
 ---
 
@@ -407,11 +549,13 @@ Ongoing - Code review checklist item.
 
 | Integration | Common Mistake | Correct Approach |
 |-------------|----------------|------------------|
-| Google Fonts | Using `<link>` or `@import` from Google Fonts directly | Use `next/font/google` module for automatic optimization |
-| Analytics Scripts | Adding `<script>` tags directly to HTML | Use `next/script` with `strategy="afterInteractive"` |
-| Form Handling | Using client-side only forms | Use Server Actions for progressive enhancement |
-| Environment Variables | Using `process.env` in client components | Prefix with `NEXT_PUBLIC_` for client access, or keep server-only |
-| CSS Variables | Defining in CSS file outside `@theme` directive | Use `@theme` for values that need utility classes, `:root` for others |
+| Supabase + Server Components | Using `createClientComponentClient()` in Server Components | Use `createServerClient()` with `cookies()` from `next/headers` |
+| Supabase + Middleware | Not calling `updateSession()` to refresh tokens | Always call `updateSession()` in middleware before checking auth |
+| SMTP + Supabase | Enabling link tracking in SendGrid/Mailgun | Disable link tracking - it breaks verification URLs |
+| Environment Variables | Using non-prefixed vars in Client Components | Use `NEXT_PUBLIC_` prefix for client-accessible variables |
+| Next.js Static + Supabase | Adding dynamic features to static routes without declaring `dynamic` | Explicitly set `export const dynamic = 'force-static'` or `'force-dynamic'` |
+| PDF Serving | Serving large files through serverless functions | Use Supabase Storage with signed URLs or external blob storage |
+| Email Verification | Using one-time tokens directly in email links | Implement two-step verification or user action required to avoid prefetching issues |
 
 ---
 
@@ -419,11 +563,25 @@ Ongoing - Code review checklist item.
 
 | Trap | Symptoms | Prevention | When It Breaks |
 |------|----------|------------|----------------|
-| Multiple backdrop-blur layers | Janky scrolling, low FPS on mobile | Limit to 2-3 simultaneous blur effects, reduce radius on mobile | 3+ blur effects on mid-range Android devices |
-| Large client bundle from over-using client components | Slow initial page load, high TBT | Keep most components as Server Components, measure bundle size | Bundle exceeds 100-200KB for an informational site |
-| Unoptimized images | Large LCP, slow loading | Use `next/image` for automatic optimization (even though not many images in this site) | Any image over 100KB |
-| Fixed gradient with `background-attachment: fixed` | Scroll jank on mobile | Use static gradient or absolutely positioned element on mobile | Low-end devices, particularly Android |
-| Too many font weights loaded | Slow FCP, unnecessary bandwidth | Only load weights 400 and 700 as specified in style guide | Loading 5+ font weights |
+| Loading PDF files into serverless function memory | Timeout errors, memory exceeded, failed downloads | Use Supabase Storage signed URLs or streaming via Route Handlers | PDFs larger than 5 MB on Vercel Hobby plan (1024 MB function memory limit) |
+| Creating new Supabase client on every render | Slow performance, connection pool exhaustion | Create client once per request, use React Context or singleton | High traffic (100+ concurrent users) |
+| Missing indexes on RLS policy columns | Slow queries (>1s for simple selects), database timeouts | Always index columns used in RLS policies: `CREATE INDEX idx_emails_user_id ON emails(user_id);` | Tables with >10k rows |
+| Sending verification emails synchronously in form submission | Form submission hangs for 2-5 seconds while email sends | Queue email sending (use Server Action that returns immediately, email sends async) | Any production use - users expect instant feedback |
+| Not caching email verification status | Database query on every page load to check if verified | Cache verification status in session or JWT claims | Pages with >1000 daily visitors |
+
+---
+
+## Security Mistakes
+
+| Mistake | Risk | Prevention |
+|---------|------|------------|
+| Exposing `SUPABASE_SERVICE_ROLE_KEY` in client code | Complete bypass of Row Level Security, full database access to attackers | Never use `NEXT_PUBLIC_` prefix for service role key, only use in Server Actions/Route Handlers |
+| Not enabling RLS on `emails` table | Anyone can read, modify, delete all email addresses via Supabase API | Enable RLS immediately: `ALTER TABLE emails ENABLE ROW LEVEL SECURITY;` |
+| Using `supabase.auth.getSession()` instead of `getUser()` in Server Components | Stale sessions, security bypass (session not revalidated) | Always use `supabase.auth.getUser()` in Server Components for auth checks |
+| Serving PDFs from `/public/` folder | Anyone can download by guessing URL, authentication gate bypassed | Store PDFs in Supabase Storage with RLS or outside `/public/` with Route Handler auth |
+| No rate limiting on email submission | Spam, abuse, email provider rate limit violations | Add rate limiting: max 5 verification emails per email address per hour |
+| Accepting unvalidated email addresses | Database pollution, spam traps, security issues | Validate email format on client and server, consider using email verification service |
+| Not logging download events | No audit trail, can't detect abuse, no analytics | Log all download events with user ID, timestamp, IP address |
 
 ---
 
@@ -431,27 +589,29 @@ Ongoing - Code review checklist item.
 
 | Pitfall | User Impact | Better Approach |
 |---------|-------------|-----------------|
-| Dropdown closes on any click outside, including header navigation | User accidentally closes dropdown when trying to click adjacent button | Implement proper focus management and intentional close interactions |
-| No visual feedback on form submission | User doesn't know if action succeeded, clicks multiple times | Show loading state, then success/error message with clear next steps |
-| Mobile header too large | Wastes precious mobile viewport space | Consider smaller padding/logo on mobile |
-| Text over gradient without opacity control | Readability varies dramatically as user scrolls | Add semi-opaque backgrounds behind text or use solid backgrounds |
-| Dropdown items without hover states | Unclear what's interactive | Clear hover/focus states with background color change |
-| No keyboard focus indicators | Keyboard users lost | Visible focus rings, don't disable outline without replacement |
+| No feedback after email submission | User unsure if it worked, clicks multiple times, receives duplicate emails | Show immediate success message: "Check your email for verification link" |
+| Cryptic error messages for verification failures | User stuck, doesn't know what to do, abandons flow | Clear messaging with next steps: "Link expired. Enter your email to receive a new one." |
+| Verification link expires too quickly (1 hour default) | User checks email later, link expired, frustrating experience | Extend to 24 hours for better UX, balance with security |
+| No "already verified" handling | User confused why they're getting verification email again, duplicate entries | Detect verified users, send download link directly instead of verification |
+| Email lands in spam folder | User never receives verification, thinks site is broken | Configure SPF/DKIM/DMARC, use custom SMTP from your domain, avoid spam trigger words |
+| No way to resend verification email if lost | User stuck, can't proceed, contacts support | Add "Resend verification email" button on verification pending page |
 
 ---
 
 ## "Looks Done But Isn't" Checklist
 
-- [ ] **Dropdowns:** Often missing keyboard navigation (arrow keys, enter, escape) - verify with keyboard only
-- [ ] **Forms:** Often missing loading states and error handling - test with network throttling and invalid inputs
-- [ ] **Glassmorphism cards:** Often failing contrast requirements - test with accessibility checker on all gradient sections
-- [ ] **Fixed header:** Often covers anchor link targets - test all internal navigation links
-- [ ] **Metadata:** Often using generic title/description - verify unique metadata on every page
-- [ ] **Mobile performance:** Often only tested on high-end devices - test on mid-range Android
-- [ ] **Accessibility:** Often missing ARIA labels and roles - test with screen reader
-- [ ] **Error states:** Often showing default error pages - verify custom error pages render correctly
-- [ ] **TypeScript:** Often ignoring type errors visible in IDE - verify `npm run build` succeeds
-- [ ] **Font loading:** Often causing layout shift - verify fonts load without FOUT/FOIT
+- [ ] **Email submission form:** Often missing loading states and error handling - test with network throttling and invalid inputs
+- [ ] **RLS policies:** Often enabled but with no policies created - test queries from client SDK, verify they respect policies
+- [ ] **SMTP configuration:** Often using default Supabase SMTP - verify custom SMTP is configured in production
+- [ ] **Email verification:** Often using direct token URLs - verify two-step flow or user action required to avoid prefetching
+- [ ] **PDF access control:** Often files in `/public/` - verify PDFs are in protected storage with auth checks
+- [ ] **Environment variables:** Often missing `NEXT_PUBLIC_` prefix - verify client components can access needed variables
+- [ ] **Middleware redirect logic:** Often creates redirect loops - test all edge cases (authenticated on login page, unauthenticated on protected page, mid-auth callback)
+- [ ] **Navigation redirects:** Often missing when restructuring URLs - test all old URLs return proper 301/302 redirects
+- [ ] **Database migrations:** Often tables created manually - verify migrations exist in `supabase/migrations/` and are in version control
+- [ ] **Static/dynamic route declarations:** Often missing explicit `export const dynamic` - verify build succeeds and static pages are actually static
+- [ ] **Error handling:** Often showing generic error pages - verify custom error pages for verification failures, expired tokens, etc.
+- [ ] **Email already verified state:** Often not checked - verify resubmission is handled gracefully
 
 ---
 
@@ -459,16 +619,18 @@ Ongoing - Code review checklist item.
 
 | Pitfall | Recovery Cost | Recovery Steps |
 |---------|---------------|----------------|
-| Glassmorphism accessibility failure | MEDIUM | Audit all text-on-transparent-background, add semi-opaque backgrounds, retest contrast ratios |
-| Client/server boundary violations | LOW-MEDIUM | Move "use client" deeper in tree, refactor to composition pattern, rebuild affected pages |
-| Backdrop-blur mobile performance | MEDIUM | Add media queries to reduce/remove blur on mobile, test on real devices |
-| Tailwind v4 config issues | LOW | Consolidate all @theme into main CSS file, remove tailwind.config.js |
-| Caching behavior surprises | MEDIUM | Add explicit dynamic/static exports, add cache testing to CI, redeploy |
-| Font loading issues | LOW | Migrate to next/font/google, remove external font links |
-| Hydration errors | MEDIUM-HIGH | Identify dynamic content, wrap in useEffect, separate server/client concerns |
-| Accessibility violations | MEDIUM-HIGH | Add ARIA attributes, implement keyboard navigation, add focus management |
-| Fixed header anchor coverage | LOW | Add scroll-padding-top to HTML element |
-| Missing SEO metadata | MEDIUM | Create metadata for each page, set metadataBase, generate sitemap |
+| Static-to-dynamic route collision | MEDIUM | Add explicit `export const dynamic = 'force-static'` or `'force-dynamic'` to all routes, separate protected routes into dedicated path, rebuild |
+| Supabase client initialization chaos | LOW-MEDIUM | Create proper client utilities for server/client/middleware, update all imports, test auth flow end-to-end |
+| RLS disabled or incomplete | HIGH | Immediately enable RLS on all tables, create policies, test from client SDK, audit for data exposure, rotate anon key if needed |
+| Email verification token prefetching | MEDIUM | Implement two-step verification flow, update email templates, test with corporate email providers |
+| Missing SMTP configuration | LOW | Configure custom SMTP provider, update Supabase settings, test email delivery to multiple providers |
+| Middleware redirect loops | MEDIUM | Fix matcher config to exclude auth routes, add path checks, test all redirect scenarios, add logging |
+| Environment variables not exposed | LOW | Rename variables with `NEXT_PUBLIC_` prefix, update code references, configure in deployment platform |
+| PDF serving without authorization | HIGH | Move PDFs to Supabase Storage or protected directory, implement auth checks, test with unauthenticated requests, audit access logs |
+| Navigation restructure breaks links | MEDIUM | Add redirects in `next.config.ts`, update sitemap, submit to search engines, monitor 404 errors |
+| Email already verified state | LOW | Add database check before sending email, implement smart routing, update flow logic |
+| Missing loading states | LOW | Add `isSubmitting` state, disable button during submission, show spinner/loading text |
+| Email verification errors | LOW-MEDIUM | Create custom error pages, add resend functionality, implement error handling in verification route |
 
 ---
 
@@ -476,99 +638,85 @@ Ongoing - Code review checklist item.
 
 | Pitfall | Prevention Phase | Verification |
 |---------|------------------|--------------|
-| Glassmorphism accessibility | Phase 1 (Foundation) | Automated accessibility tests passing, manual screen reader testing |
-| Client/server boundaries | Phase 1 (Foundation), Phase 2 (Components) | Build succeeds, bundle size within targets, static generation working |
-| Backdrop-blur performance | Phase 2 (Components), Phase 3 (Responsive) | Scroll FPS >50 on mid-range Android, mobile performance metrics green |
-| Tailwind v4 configuration | Phase 1 (Foundation) | All custom theme values working, IDE not showing errors |
-| Caching behavior | Phase 1 (Foundation), Phase 4 (Deployment) | Cache headers correct in production, static pages cached as expected |
-| Font loading | Phase 1 (Foundation) | No FOUT/FOIT, CLS score <0.1, fonts self-hosted |
-| Hydration errors | Phase 1 (Foundation), Phase 2 (Components) | No hydration warnings in console, StrictMode enabled |
-| Dropdown/modal accessibility | Phase 2 (Components) | Keyboard navigation working, screen reader testing passed |
-| Fixed header anchors | Phase 2 (Components) | All anchor links scroll to visible position |
-| SEO metadata | Phase 3 (Content Pages) | Unique metadata on all pages, social previews working |
-| TypeScript errors | Phase 1 (Foundation) | CI checks enabled, build succeeds with no type errors |
-| Missing loading/error states | Phase 2 (Components), Phase 3 (Content) | All routes have loading.tsx and error.tsx |
-| Gradient performance | Phase 3 (Responsive) | Smooth scrolling on mobile devices |
-| Over-using "use client" | Ongoing (Code Review) | Regular bundle size audits, documentation of client components |
+| Static-to-dynamic collision | Phase 1 (Supabase Setup) | Build succeeds, static routes remain static, new dynamic routes work correctly |
+| Supabase client initialization | Phase 1 (Supabase Setup) | No "missing key" errors, sessions persist correctly, auth works in all component types |
+| RLS disabled/incomplete | Phase 1 (Supabase Setup) | Dashboard shows no RLS warnings, queries from client SDK respect policies |
+| Email verification token prefetching | Phase 3 (Email Verification Flow) | Verification success rate >90%, works with Outlook/corporate email |
+| Missing SMTP configuration | Phase 2 (Email Collection) | Emails deliver within 30 seconds, no rate limit errors, emails don't land in spam |
+| Middleware redirect loops | Phase 3 (Email Verification Flow) | No redirect loops, auth flow works end-to-end, protected routes stay protected |
+| Environment variables not exposed | Phase 1 (Supabase Setup) | Client components can access public vars, secrets stay server-only |
+| PDF serving without auth | Phase 4 (Book PDF Download) | Unauthenticated requests return 401/403, authenticated verified users can download |
+| Navigation restructure breaks links | Phase 5 (Navigation Restructure) | Old URLs redirect to new ones, Google Search Console shows no new 404s |
+| Email already verified state | Phase 3 (Email Verification Flow) | Resubmissions handled gracefully, no duplicate entries, clear messaging |
+| Missing loading states | Phase 2 (Email Collection) | Form shows immediate feedback, button disabled during submission |
+| Email verification errors | Phase 3 (Email Verification Flow) | Custom error pages shown, users can resend verification, clear next steps |
+| Cookie SameSite issues | Phase 3 (Email Verification Flow) | Sessions persist on production domain, cookies set correctly |
+| Database migration drift | Phase 1 (Supabase Setup) | Migrations in version control, dev and prod schemas match |
+| Hardcoded URLs | Phase 2 (Email Collection) | All URLs use env vars, work correctly in all environments |
 
 ---
 
 ## Sources
 
-### Next.js App Router and Caching
-- [Common mistakes with the Next.js App Router and how to fix them - Vercel](https://vercel.com/blog/common-mistakes-with-the-next-js-app-router-and-how-to-fix-them)
-- [Next.js 15 Upgrade Guide: App Router changes, caching gotchas - Prateeksha](https://prateeksha.com/blog/nextjs-15-upgrade-guide-app-router-caching-migration)
+### Next.js 15 App Router and Supabase Integration
+- [Build a User Management App with Next.js | Supabase Docs](https://supabase.com/docs/guides/getting-started/tutorials/with-nextjs)
+- [Use Supabase with Next.js | Supabase Docs](https://supabase.com/docs/guides/getting-started/quickstarts/nextjs)
+- [Supabase Auth with the Next.js App Router](https://supabase.com/docs/guides/auth/auth-helpers/nextjs)
+- [Setting up Server-Side Auth for Next.js | Supabase Docs](https://supabase.com/docs/guides/auth/server-side/nextjs)
 - [Next.js App Router: common mistakes and how to fix them - Upsun](https://upsun.com/blog/avoid-common-mistakes-with-next-js-app-router/)
-- [Next.js App Router Gotchas - TevPro](https://tevpro.com/next-js-gotchas/)
+- [App Router pitfalls: common Next.js mistakes and practical ways to avoid them](https://imidef.com/en/2026-02-11-app-router-pitfalls)
 
-### Tailwind CSS v4
-- [Tailwind CSS 4: What's New and Should You Migrate? - Code With Seb](https://www.codewithseb.com/blog/tailwind-css-4-whats-new-migration-guide)
-- [Upgrading to Tailwind CSS v4: Missing Defaults, Broken Dark Mode - GitHub Discussion](https://github.com/tailwindlabs/tailwindcss/discussions/16517)
-- [Upgrade guide - Tailwind CSS](https://tailwindcss.com/docs/upgrade-guide)
-- [@theme directive not working when importing CSS files - GitHub Issue](https://github.com/tailwindlabs/tailwindcss/issues/18966)
-- [Quick Fix: "Unknown at rule @theme" in Tailwind CSS v4 - Medium](https://medium.com/@luizmipc/quick-fix-unknown-at-rule-theme-in-tailwind-css-v4-2000b965eda5)
+### Static to Database Migration
+- [Why a Database Migration Forced an API Redesign | Medium](https://medium.com/data-science-collective/why-a-database-migration-forced-an-api-redesign-ac82f7256142)
+- [Database Migration Horror Stories: Lessons from 10 Companies | Medium](https://medium.com/the-tech-draft/database-migration-horror-stories-lessons-from-10-companies-that-got-it-wrong-and-right-71857e3319da)
+- [Supabase Pitfalls: Avoid These Common Mistakes for a Robust Backend](https://hrekov.com/blog/supabase-common-mistakes)
 
-### Client/Server Components
-- [Next.js Server Components Broke Our App Twice - Medium](https://medium.com/lets-code-future/next-js-server-components-broke-our-app-twice-worth-it-e511335eed22)
-- [Getting Started: Server and Client Components - Next.js](https://nextjs.org/docs/app/getting-started/server-and-client-components)
-- [Mastering Client and Server Components in Next.js - Medium](https://medium.com/@vshall/mastering-client-and-server-components-in-next-js-a-comprehensive-guide-573acf9892a2)
+### Row Level Security
+- [Row Level Security | Supabase Docs](https://supabase.com/docs/guides/database/postgres/row-level-security)
+- [Supabase Row Level Security (RLS): Complete Guide (2026)](https://designrevision.com/blog/supabase-row-level-security)
+- [Supabase Row Level Security Explained With Real Examples | Medium](https://medium.com/@jigsz6391/supabase-row-level-security-explained-with-real-examples-6d06ce8d221c)
 
-### Glassmorphism Accessibility
-- [Glassmorphism Meets Accessibility: Can Glass Be Inclusive? - Axess Lab](https://axesslab.com/glassmorphism-meets-accessibility-can-frosted-glass-be-inclusive/)
-- [Glassmorphism with Website Accessibility in Mind - New Target](https://www.newtarget.com/web-insights-blog/glassmorphism/)
-- [Glassmorphism: Definition and Best Practices - Nielsen Norman Group](https://www.nngroup.com/articles/glassmorphism/)
+### Email Verification Security
+- [Supabase Docs | Troubleshooting | OTP Verification Failures](https://supabase.com/docs/guides/troubleshooting/otp-verification-failures-token-has-expired-or-otp_expired-errors-5ee4d0)
+- [Email Templates | Supabase Docs](https://supabase.com/docs/guides/auth/auth-email-templates)
+- [Password-based Auth | Supabase Docs](https://supabase.com/docs/guides/auth/passwords)
+- [Managing Two Email Notifications Using Supabase and Next.js | Medium](https://medium.com/@python-javascript-php-html-css/handling-dual-email-notifications-with-next-js-and-supabase-02f729d5892b)
 
-### Font Loading
-- [How to Fix "Font Loading" Issues in Next.js - OneUpTime](https://oneuptime.com/blog/post/2026-01-24-nextjs-font-loading-issues/view)
-- [Getting Started: Font Optimization - Next.js](https://nextjs.org/docs/app/getting-started/fonts)
-- [Optimizing: Fonts - Next.js](https://nextjs.org/docs/14/app/building-your-application/optimizing/fonts)
+### SMTP Configuration
+- [Production Checklist | Supabase Docs](https://supabase.com/docs/guides/deployment/going-into-prod)
+- [Send emails with custom SMTP | Supabase Docs](https://supabase.com/docs/guides/auth/auth-smtp)
+- [Notice: Change to the email rate limits | Supabase Discussion](https://github.com/orgs/supabase/discussions/15896)
+- [Supabase Custom SMTP and Email Configuration Guide](https://sendlayer.com/blog/supabase-custom-smtp-and-email-configuration-guide/)
 
-### Static Generation
-- [How to Fix "generateStaticParams" Errors in Next.js - OneUpTime](https://oneuptime.com/blog/post/2026-01-24-nextjs-generatestaticparams-errors/view)
-- [Functions: generateStaticParams - Next.js](https://nextjs.org/docs/app/api-reference/functions/generate-static-params)
-- [How to Fix Next.js searchParams Killing Static Generation - Build with Matija](https://www.buildwithmatija.com/blog/nextjs-searchparams-static-generation-fix)
+### Authentication and Middleware
+- [Next.js App with @supabase/auth-helpers-nextjs middleware | Discussion](https://github.com/orgs/supabase/discussions/13879)
+- [OAuth and magic links with Supabase and NextJS middleware - Basejump](https://usebasejump.com/blog/supabase-oauth-with-nextjs-middleware)
+- [Next.js doesn't support auth redirects in middleware for server actions | Issue](https://github.com/supabase/ssr/issues/50)
 
-### Accessibility
-- [Building an Accessible Dropdown (Combobox) in React - Medium](https://medium.com/@katr.zaks/building-an-accessible-dropdown-combobox-in-react-a-step-by-step-guide-f6e0439c259c)
-- [Accessibility - React](https://legacy.reactjs.org/docs/accessibility.html)
-- [Accessibility - react-modal documentation](https://reactcommunity.org/react-modal/accessibility/)
-- [Keyboard Events and Accessibility in React - Useful Codes](https://useful.codes/keyboard-events-and-accessibility-in-react/)
+### Environment Variables and Security
+- [Creating a Supabase client for SSR | Supabase Docs](https://supabase.com/docs/guides/auth/server-side/creating-a-client)
+- [Next.js Security Best Practices](https://makerkit.dev/docs/next-supabase-turbo/security/nextjs-best-practices)
+- [Complete Next.js security guide 2025](https://www.turbostarter.dev/blog/complete-nextjs-security-guide-2025-authentication-api-protection-and-best-practices)
+- [Secure configuration of Supabase products | Supabase Docs](https://supabase.com/docs/guides/security/product-security)
 
-### SEO and Metadata
-- [Next.js Metadata Tutorial: Static & Dynamic SEO Configs - Medium](https://utsavdesai26.medium.com/next-js-metadata-tutorial-static-dynamic-seo-configs-7c843ea9e416)
-- [How to Configure SEO in Next.js 16 (the Right Way) - JS Dev Space](https://jsdevspace.substack.com/p/how-to-configure-seo-in-nextjs-16)
-- [Next.js SEO: Metadata, Sitemaps & Canonical Tags - Prateeksha](https://prateeksha.com/blog/nextjs-app-router-seo-metadata-sitemaps-canonicals)
-- [How to Fix "Metadata" Generation Errors in Next.js - OneUpTime](https://oneuptime.com/blog/post/2026-01-24-fix-nextjs-metadata-generation-errors/view)
+### Static to Dynamic Migration
+- [Resolving "app/ Static to Dynamic Error" in Next.js](https://nextjs.org/docs/messages/app-static-to-dynamic-error)
+- [How to Fix Next.js searchParams Killing Static Generation](https://www.buildwithmatija.com/blog/nextjs-searchparams-static-generation-fix)
+- [Migrating: App Router | Next.js](https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration)
 
-### Hydration Errors
-- [Next.js Hydration Errors in 2026: The Real Causes, Fixes, and Prevention - Medium](https://medium.com/@blogs-world/next-js-hydration-errors-in-2026-the-real-causes-fixes-and-prevention-checklist-4a8304d53702)
-- [Next.js 15 Hydration Errors Explained (and Eliminated) - Medium](https://medium.com/@sureshdotariya/next-js-15-hydration-errors-explained-and-eliminated-12-real-bugs-and-their-one-line-fixes-966ae9360258)
-- [Text content does not match server-rendered HTML - Next.js](https://nextjs.org/docs/messages/react-hydration-error)
-- [React 19 & Next.js 15 Hydration Error Fix - C# Corner](https://www.c-sharpcorner.com/article/react-19-next-js-15-hydration-error-fix/)
+### PDF Serving and File Security
+- [Top 5 authentication solutions for secure Next.js apps in 2026 — WorkOS](https://workos.com/blog/top-authentication-solutions-nextjs-2026)
+- [Next.js Security Hardening: Five Steps to Bulletproof Your App in 2026 | Medium](https://medium.com/@widyanandaadi22/next-js-security-hardening-five-steps-to-bulletproof-your-app-in-2026-61e00d4c006e)
+- [Guides: Data Security | Next.js](https://nextjs.org/docs/app/guides/data-security)
+- [Storage Access Control | Supabase Docs](https://supabase.com/docs/guides/storage/security/access-control)
 
-### Performance
-- [Creating Blurred Backgrounds Using CSS Backdrop-Filter - OpenReplay](https://blog.openreplay.com/creating-blurred-backgrounds-css-backdrop-filter/)
-- [backdrop-filter - CSS | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/backdrop-filter)
-- [Performance issue with backdrop blur - GitHub Issue](https://github.com/tailwindlabs/tailwindcss/issues/15256)
-- [How CSS Properties Affect Website Performance - F22 Labs](https://www.f22labs.com/blogs/how-css-properties-affect-website-performance/)
-
-### Fixed Headers and Anchors
-- [Fixed Headers and Jump Links? The Solution is scroll-margin-top - CSS-Tricks](https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/)
-- [Simple Solution for Anchor Links Behind Sticky Headers - Markus Oberlehner](https://markus.oberlehner.net/blog/simple-solution-for-anchor-links-behind-sticky-headers)
-- [One line CSS solution to prevent anchor links from scrolling behind a sticky header - GetPublii](https://getpublii.com/blog/one-line-css-solution-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header.html)
-
-### TypeScript and Build Issues
-- [Next.js 15 Build Fails: 'params' type mismatch - GitHub Issue](https://github.com/vercel/next.js/issues/77609)
-- [Next.js 15 params Type Error During Build - GitHub Discussion](https://github.com/vercel/next.js/discussions/80494)
-- [How to Use Next.js with TypeScript - OneUpTime](https://oneuptime.com/blog/post/2026-02-02-nextjs-typescript/view)
-
-### Caching and Revalidation
-- [Getting Started: Caching and Revalidating - Next.js](https://nextjs.org/docs/app/getting-started/caching-and-revalidating)
-- [Deep Dive: Caching and Revalidating - GitHub Discussion](https://github.com/vercel/next.js/discussions/54075)
-- [Functions: revalidatePath - Next.js](https://nextjs.org/docs/app/api-reference/functions/revalidatePath)
+### Email Security and Authentication Standards 2026
+- [Microsoft's Modern Authentication Enforcement in 2026](https://www.getmailbird.com/microsoft-modern-authentication-enforcement-email-guide/)
+- [Essential Email Authentication Guide 2026](https://cmercury.com/blog/email-authentication-2026/)
+- [2026 Guide: Best Practices for User Verification](https://www.fastpasscorp.com/best-practices-for-user-verification/)
 
 ---
 
-*Pitfalls research for: Next.js 15 Informational Website with Tailwind CSS v4, React 19, TypeScript*
-*Researched: 2026-02-11*
-*Confidence: HIGH (verified through official documentation, recent 2026 sources, and real-world issue reports)*
+*Pitfalls research for: Adding Supabase Backend, Email Verification, and PDF Download Flows to Existing Static Next.js 15 Site (Continua v2.0)*
+*Researched: 2026-02-15*
+*Confidence: HIGH (verified through official Supabase and Next.js documentation, 2026 security standards, real-world issue reports, and community best practices)*

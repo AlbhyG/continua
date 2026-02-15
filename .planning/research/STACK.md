@@ -1,195 +1,384 @@
 # Stack Research
 
-**Domain:** Informational/marketing website with Next.js 15
-**Researched:** 2026-02-11
+**Domain:** Personality assessment platform with Supabase backend
+**Researched:** 2026-02-15
 **Confidence:** HIGH
 
-## Recommended Stack
+## Context
 
-### Core Technologies (Already Installed)
+This is a **SUBSEQUENT MILESTONE** research. v1.0 already validated:
+- Next.js 15 App Router + TypeScript + React 19
+- Tailwind CSS v4 with @theme configuration
+- @headlessui/react for dropdowns
+- Static page generation
+
+**This document covers ONLY stack additions for v2.0 features:**
+- Supabase backend (Postgres + email)
+- Sign In/Up notification signup dialogs
+- Book dialogs with email verification → PDF download
+- Improved responsive layout (tablet/PC breakpoints)
+
+## New Stack Additions for v2.0
+
+### Backend & Database
 
 | Technology | Version | Purpose | Why Recommended |
 |------------|---------|---------|-----------------|
-| Next.js | 15.x | Full-stack React framework with App Router | Built-in font optimization, metadata API for SEO, static generation, and optimal rendering strategies. Industry standard for React applications in 2026. |
-| React | 19.x | UI component library | Latest stable version with improved performance, simplified ref handling (no forwardRef needed), and better async support. |
-| TypeScript | 5.x | Type safety and developer experience | Prevents bugs, improves IDE support, and provides excellent integration with Next.js metadata and component APIs. |
-| Tailwind CSS | v4 | Utility-first CSS framework | Already configured. V4 offers improved performance, native cascade layers, and excellent glassmorphism support via backdrop utilities. |
+| @supabase/supabase-js | ^2.95.3 | Supabase JavaScript client | Core library for interacting with Supabase backend. Latest stable release (published Feb 2026). Provides type-safe API for database operations, authentication, and storage. Industry standard for Next.js + Supabase integration. |
+| @supabase/ssr | ^0.8.0 | Server-side rendering helpers for Supabase Auth | **REQUIRED for Next.js App Router SSR.** Handles cookie-based session management for Server Components, Server Actions, and Route Handlers. Replaces deprecated @supabase/auth-helpers packages. Provides createServerClient and createBrowserClient utilities. |
 
-### Animation Libraries
+**Why Supabase for this project:**
+- Postgres database with Row-Level Security (RLS) for secure data access
+- Built-in email sending via SMTP (configurable with external providers)
+- Email verification flows via Auth API (signup confirmation, passwordless magic links)
+- Generous free tier sufficient for MVP validation
+- Official Next.js integration with App Router support
+
+**Critical setup requirements:**
+1. Create separate Supabase clients for Server Components (server-side) vs Client Components (browser)
+2. Add middleware.ts with updateSession from @supabase/ssr to prevent session expiry
+3. Configure environment variables: NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY
+4. Enable custom SMTP provider in Supabase dashboard for production email delivery
+
+### Form Handling & Validation
 
 | Library | Version | Purpose | When to Use |
 |---------|---------|---------|-------------|
-| framer-motion | 12.34.0+ | UI animations, page transitions, interactive elements | **PRIMARY CHOICE** for this project. Best for declarative React animations, component enter/exit transitions, and interactive UI elements. React 19 compatible as of v12+. Excellent for dropdown animations, card hover effects, and modal transitions. |
-| GSAP | 3.x | Complex timeline animations, scroll-triggered effects | **ALTERNATIVE** for professional-grade scroll animations or complex sequences. Higher performance ceiling but larger API surface. Use if timeline-based animations or pixel-perfect control is required. |
+| react-hook-form | ^7.71.1 | Form state management | **REQUIRED** for Sign In/Up and Book dialogs. Handles form state, validation triggers, error display with minimal re-renders. React 19 compatible. Better performance than Formik for controlled inputs. |
+| zod | ^4.3.6 | TypeScript-first schema validation | **REQUIRED** for type-safe form validation. Define schemas once, use on both client (instant feedback) and server (security). Integrates seamlessly with react-hook-form via @hookform/resolvers. |
+| @hookform/resolvers | ^5.2.2 | Validation library adapters for react-hook-form | **REQUIRED** to connect Zod schemas to react-hook-form. Translates Zod validation errors into react-hook-form format. |
 
-**Recommendation for Continua:** Use **framer-motion 12.34.0+** exclusively. The project needs simple component animations (dropdown menus, modal dialogs, card hovers) which are framer-motion's strength. GSAP is overkill for this use case.
+**Why this combination:**
+- Type safety across client and server (single Zod schema defines both TypeScript types and validation rules)
+- Client-side instant feedback + server-side security validation with same schema
+- react-hook-form minimizes re-renders (better UX than controlled forms with useState)
+- Industry standard pattern for Next.js 15 + Server Actions
+- Works seamlessly with @headlessui/react dialogs already in the project
 
-### Dropdown & Modal Components
-
-| Library | Version | Purpose | When to Use |
-|---------|---------|---------|-------------|
-| @radix-ui/react-dropdown-menu | 2.1.16 | Accessible dropdown menus | **REQUIRED** for header navigation dropdowns. Handles keyboard navigation, focus management, collision detection, and ARIA attributes automatically. |
-| @radix-ui/react-dialog | 1.1.15 | Accessible modal dialogs | **REQUIRED** for "Book" form dialogs. Provides focus trapping, screen reader support, ESC key handling, and backdrop click management. |
-
-**Why Radix UI:** Unstyled primitives that solve complex accessibility and interaction patterns. You control the visual design with Tailwind (glassmorphism styling) while Radix handles the behavior. React 19 compatible with latest versions.
-
-**What NOT to use:** Pre-styled UI libraries (MUI, Chakra UI, Ant Design) conflict with custom glassmorphism design and add unnecessary bundle size.
-
-### Font Loading
-
-| Tool | Version | Purpose | Why |
-|------|---------|---------|-----|
-| next/font | Built-in (Next.js 15) | Font optimization and loading | **USE THIS** for Inter font loading. Automatically self-hosts Google Fonts, eliminates layout shift, optimizes for performance, and ensures GDPR compliance by avoiding external font requests. |
-
-**Implementation pattern:**
+**Validation pattern for this project:**
 ```typescript
-import { Inter } from 'next/font/google'
+// Shared schema (use on client AND server)
+import { z } from 'zod'
 
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  display: 'swap',
+export const signupSchema = z.object({
+  name: z.string().min(2, 'Name must be at least 2 characters'),
+  email: z.string().email('Invalid email address'),
 })
-```
 
-### SEO & Metadata
+// Client Component (instant feedback)
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
 
-| Feature | Version | Purpose | Why |
-|---------|---------|---------|-----|
-| Next.js Metadata API | Built-in (Next.js 15) | SEO optimization, meta tags, Open Graph | **USE THIS** for all meta tags. Type-safe, automatically optimized, supports static and dynamic metadata generation. Critical for informational website discoverability. |
-| generateStaticParams | Built-in (Next.js 15) | Static site generation | **USE THIS** for static content pages. Pre-renders all routes at build time for maximum performance and SEO. |
+const { register, handleSubmit, formState: { errors } } = useForm({
+  resolver: zodResolver(signupSchema),
+})
 
-**Implementation pattern:**
-```typescript
-// Static metadata
-export const metadata: Metadata = {
-  title: 'Continua - Personality Assessment Platform',
-  description: 'Transform conflicts into complementarity...',
-  openGraph: {
-    title: '...',
-    description: '...',
-    images: ['/og-image.png'],
-  },
+// Server Action (security validation)
+'use server'
+export async function createUser(formData: FormData) {
+  const parsed = signupSchema.safeParse({
+    name: formData.get('name'),
+    email: formData.get('email'),
+  })
+  if (!parsed.success) {
+    return { error: parsed.error.flatten() }
+  }
+  // Insert to Supabase...
 }
 ```
 
-### Development Tools
+### Responsive Design (Tailwind CSS v4)
 
-| Tool | Purpose | Notes |
-|------|---------|-------|
-| next/font | Font optimization | Zero configuration, handles Inter automatically |
-| TypeScript | Type checking | Already configured, excellent Next.js integration |
-| ESLint | Code quality | Built into Next.js 15, run via `npm run lint` |
+**No additional packages required.** Tailwind CSS v4 is already installed. For improved tablet/PC layout, configure custom breakpoints using @theme directive.
+
+| Configuration | Purpose | Implementation |
+|---------------|---------|----------------|
+| Custom breakpoints via --breakpoint-* | Semantic tablet/desktop breakpoints | Add to app/globals.css under @theme directive |
+
+**Recommended breakpoint configuration for this project:**
+```css
+@theme {
+  /* Existing theme config... */
+
+  /* Custom responsive breakpoints */
+  --breakpoint-tablet: 48rem;    /* 768px - tablet portrait */
+  --breakpoint-desktop: 64rem;   /* 1024px - desktop/laptop */
+  --breakpoint-wide: 80rem;      /* 1280px - large desktop */
+}
+```
+
+**Why these breakpoints:**
+- **tablet (768px):** Navigation layout changes, two-column content layouts
+- **desktop (1024px):** Full horizontal navigation, three-column layouts
+- **wide (1280px):** Maximum content width for ultra-wide screens
+
+**Usage in components:**
+```tsx
+<div className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3">
+  {/* Responsive grid */}
+</div>
+```
+
+**IMPORTANT:** Tailwind CSS v4 uses @theme directive instead of tailwind.config.js. Always use rem units for breakpoints (not px) to ensure proper ordering of media queries.
+
+### PDF File Serving
+
+**No additional packages required.** Next.js 15 serves static files from the public folder by default.
+
+| Feature | Implementation | Notes |
+|---------|----------------|-------|
+| Static PDF files | Place in public/books/ folder | Accessible at /books/filename.pdf |
+| Direct download links | Use `<a href="/books/file.pdf" download>` | Browser handles download |
+
+**For v2.0 (placeholder PDFs):**
+1. Create public/books/ directory
+2. Place placeholder PDFs (e.g., public/books/personality-guide.pdf)
+3. Link directly: `/books/personality-guide.pdf`
+4. Files served with correct Content-Type automatically
+
+**Future enhancement (private PDFs):**
+If PDFs need access control later, create API Route Handler (app/api/books/[id]/route.ts) that:
+1. Verifies email confirmation via Supabase Auth
+2. Streams PDF from Supabase Storage or private folder
+3. Returns Response with appropriate headers
+
+**For now:** Public folder is sufficient for v2.0 placeholder PDFs.
+
+### Email Verification Flow
+
+**No additional packages required.** Handled by @supabase/supabase-js + @supabase/ssr.
+
+| Component | Implementation | Purpose |
+|-----------|----------------|---------|
+| Email template config | Supabase Dashboard → Auth → Email Templates | Customize "Confirm signup" template with verification URL |
+| Verification route | app/auth/confirm/route.ts | Exchanges token_hash for session |
+| Email sending | Supabase Auth (built-in) | Sends verification emails automatically on signup |
+
+**Implementation pattern:**
+1. User submits email in Book dialog
+2. Server Action calls `supabase.auth.signUp({ email, options: { data: { book_requested: true } } })`
+3. Supabase sends verification email (template from dashboard)
+4. Email contains link: `https://yoursite.com/auth/confirm?token_hash=...&type=email`
+5. Route Handler verifies token: `supabase.auth.verifyOtp({ token_hash, type: 'email' })`
+6. Redirect to PDF download page
+
+**Email provider options:**
+- **Development:** Use Supabase's default SMTP (restricted to team members only)
+- **Production:** Configure custom SMTP in Supabase dashboard:
+  - **Recommended:** Resend (simplest, dedicated to transactional email)
+  - **Alternative:** SendGrid, Mailgun, AWS SES (more features, higher complexity)
+
+**For v2.0:** Use default SMTP for testing. Add custom SMTP before launch.
 
 ## Installation
 
 ```bash
-# Animation
-npm install framer-motion@^12.34.0
+# Backend & Database
+npm install @supabase/supabase-js@^2.95.3 @supabase/ssr@^0.8.0
 
-# UI Components (Radix)
-npm install @radix-ui/react-dropdown-menu@^2.1.16
-npm install @radix-ui/react-dialog@^1.1.15
-
-# Font loading - already built into Next.js, no install needed
-# SEO/Metadata - already built into Next.js, no install needed
+# Form Handling & Validation
+npm install react-hook-form@^7.71.1 zod@^4.3.6 @hookform/resolvers@^5.2.2
 ```
+
+**Total new dependencies:** 5 packages (all production dependencies, no dev dependencies needed)
+
+## What NOT to Install
+
+| Avoid | Why | Use Instead |
+|-------|-----|-------------|
+| @supabase/auth-helpers-nextjs | Deprecated as of 2025. No longer maintained. | @supabase/ssr (current official package) |
+| prisma, drizzle-orm | Adds ORM layer over Supabase Postgres. Unnecessary complexity for this project's simple schema (users table, notifications table). | Direct Supabase client queries |
+| formik | Older form library with more re-renders. Not optimized for React 19. | react-hook-form |
+| yup | JavaScript-first validation (no TypeScript inference). Larger bundle size. | zod (TypeScript-first) |
+| nodemailer, @sendgrid/mail | Manual email sending. Requires managing SMTP credentials in code. | Supabase Auth email (built-in, configured via dashboard) |
+| joi | Server-side only validation. Cannot share schemas with client. | zod (works on both client and server) |
+| next-auth / auth.js | Full authentication system. Overkill for this project (only needs email collection + verification, no passwords/sessions). | Supabase Auth (simpler, built-in to backend) |
 
 ## Alternatives Considered
 
 | Recommended | Alternative | When to Use Alternative |
 |-------------|-------------|-------------------------|
-| framer-motion | GSAP | When you need timeline-based animations, scroll-triggered sequences, or maximum performance for hundreds of simultaneous animations. Not needed for this project. |
-| framer-motion | CSS transitions only | Only for extremely simple hover states. Not sufficient for dropdown/modal animations. |
-| Radix UI | Headless UI | When you're already using Tailwind and want Tailwind team's components. Both are excellent; Radix has more comprehensive component library. |
-| Radix UI | React Aria | When you need Adobe's design system integration or more granular control over component composition. More complex API. |
-| next/font | Manual Google Fonts | Never. next/font provides automatic optimization, self-hosting, and zero layout shift. |
-| Metadata API | react-helmet | Never for Next.js apps. Metadata API is built-in, type-safe, and optimized for SSR/SSG. |
+| Supabase | Firebase | When you need Google's ecosystem integration, Firestore's real-time sync, or are already using GCP. Avoid if you prefer SQL databases or need Postgres-specific features. |
+| Supabase | PlanetScale + Clerk | When you need separate database and auth providers, or want more auth customization. More complex setup, higher cost at scale. |
+| react-hook-form | Formik | Never for new projects. Formik is maintenance mode. react-hook-form has better performance and React 19 support. |
+| zod | TypeScript + manual validation | Only for extremely simple forms (1-2 fields). Not worth it once you have 3+ fields or need server validation. |
+| zod | yup | When migrating existing yup codebase. Otherwise always choose zod for TypeScript-first approach. |
+| Public folder PDFs | Supabase Storage | When PDFs need access control (private files). For public placeholder PDFs, public folder is simpler. |
 
-## What NOT to Use
+## Stack Patterns by Feature
 
-| Avoid | Why | Use Instead |
-|-------|-----|-------------|
-| react-spring | Physics-based animations are unnecessary for UI components; framer-motion provides better DX for declarative animations | framer-motion |
-| anime.js | Not React-specific, requires manual DOM manipulation, harder to integrate with React component lifecycle | framer-motion or GSAP |
-| framer-motion v11 or earlier | Not compatible with React 19. Will cause peer dependency errors. | framer-motion v12.34.0+ |
-| @radix-ui packages below v2.x for dropdown, v1.1.x for dialog | May have React 19 compatibility issues or missing features | Latest versions specified above |
-| Manual `<link>` tags for fonts in `_document.js` | Causes layout shift, no optimization, blocks rendering | next/font/google |
-| react-helmet or next-seo | Outdated patterns; Next.js Metadata API supersedes these | Next.js Metadata API |
-| UI libraries (MUI, Chakra, Ant Design) | Conflict with custom glassmorphism design, large bundle size, style override complexity | Radix UI + Tailwind CSS |
+### Feature: Sign In/Up Notification Signup Dialog
 
-## Stack Patterns by Variant
+**Pattern:**
+1. @headlessui/react Dialog (already installed) for modal UI
+2. react-hook-form + zod for form handling
+3. Server Action validates with zod, inserts to Supabase
+4. No email verification needed (just collecting signups)
 
-**For static informational pages (Home, Who, What):**
-- Use static `export const metadata` for SEO
-- Use `generateStaticParams` if creating pages from data (not needed for this project - all pages are known at build time)
-- Render with SSG (Static Site Generation) - Next.js default for pages without dynamic data
+**Stack:**
+- Dialog: @headlessui/react
+- Form: react-hook-form + zod + @hookform/resolvers
+- Backend: @supabase/supabase-js (insert to notifications table)
 
-**For animated UI elements:**
-- Use framer-motion `<motion.div>` components for cards, buttons, dropdowns
-- Use `AnimatePresence` for modal enter/exit transitions
-- Use `layout` prop for layout animations when dropdowns open
+### Feature: Book Dialog with Email Verification
 
-**For dropdown menus:**
-- Use `@radix-ui/react-dropdown-menu` for behavior
-- Style with Tailwind classes for glassmorphism (bg-white/95, backdrop-blur-lg, etc.)
-- Wrap in framer-motion for smooth open/close animations
+**Pattern:**
+1. @headlessui/react Dialog for modal UI
+2. react-hook-form + zod for email input
+3. Server Action calls supabase.auth.signUp() (triggers verification email)
+4. User clicks email link → app/auth/confirm/route.ts verifies token
+5. Redirect to /books/download/[book-id] with confirmed session
+6. Page serves PDF from public/books/ folder
 
-**For modal dialogs:**
-- Use `@radix-ui/react-dialog` for behavior and accessibility
-- Style with Tailwind for glassmorphism overlay and content
-- Wrap in framer-motion `AnimatePresence` for enter/exit animations
+**Stack:**
+- Dialog: @headlessui/react
+- Form: react-hook-form + zod
+- Auth: @supabase/supabase-js + @supabase/ssr
+- Email: Supabase Auth (no additional package)
+- PDF: Next.js public folder (no additional package)
+
+### Feature: Improved Responsive Layout
+
+**Pattern:**
+1. Define custom breakpoints in app/globals.css @theme
+2. Use semantic names (tablet, desktop, wide)
+3. Apply utility classes (tablet:grid-cols-2, desktop:flex-row)
+
+**Stack:**
+- Framework: Tailwind CSS v4 (already installed)
+- Configuration: @theme directive in globals.css (no additional package)
 
 ## Version Compatibility
 
-| Package A | Compatible With | Notes |
-|-----------|-----------------|-------|
-| framer-motion@12.34.0+ | React@19.x | v12+ required for React 19 support |
-| @radix-ui/react-dropdown-menu@2.1.16 | React@19.x | Fully compatible with latest React 19 |
-| @radix-ui/react-dialog@1.1.15 | React@19.x | Fully compatible with latest React 19 |
-| @radix-ui/react-dropdown-menu@2.1.16 | @radix-ui/react-dialog@1.1.15 | Share internal dependencies; keep versions in sync to avoid conflicts |
-| next/font | Next.js@15.x | Built-in, no version conflicts |
-| Tailwind CSS v4 | Next.js@15.x | Already configured in project |
+| Package | Compatible With | Notes |
+|---------|-----------------|-------|
+| @supabase/supabase-js@^2.95.3 | @supabase/ssr@^0.8.0 | Official Supabase packages designed to work together. Keep versions in sync. |
+| @supabase/ssr@^0.8.0 | Next.js@15.x | Specifically designed for Next.js App Router SSR patterns. |
+| react-hook-form@^7.71.1 | React@19.x | Fully compatible with React 19. v7.x stable. v8 in beta. |
+| zod@^4.3.6 | TypeScript@5.x | Works with TypeScript 5.x. v4 is latest stable (major rewrite from v3). |
+| @hookform/resolvers@^5.2.2 | react-hook-form@^7.x + zod@^4.x | Supports latest versions of both libraries. |
 
-**Critical:** When using multiple @radix-ui packages, version mismatches can break dropdown/dialog interactions due to shared internal dependencies (@radix-ui/react-dismissable-layer, @radix-ui/react-focus-scope). Install all Radix packages together and keep them updated together.
+**Critical compatibility notes:**
+- @supabase/auth-helpers packages are deprecated. DO NOT install.
+- @supabase/ssr must be used for Next.js App Router SSR. createServerClient is required for Server Components/Actions.
+- react-hook-form v8 is in beta. Stick with v7.71.1 for production stability.
+- zod v4 has breaking changes from v3. Use ^4.3.6 for new projects.
+
+## Environment Configuration
+
+**Required environment variables (.env.local):**
+
+```bash
+# Supabase
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key  # Only for Server Actions that bypass RLS
+
+# App URL (for email verification redirects)
+NEXT_PUBLIC_SITE_URL=http://localhost:3000  # Development
+# NEXT_PUBLIC_SITE_URL=https://continua.com  # Production
+```
+
+**Where to get values:**
+1. Create Supabase project at supabase.com
+2. Navigate to Project Settings → API
+3. Copy URL and anon key (safe to expose in client-side code)
+4. Copy service_role key (keep server-side only)
+
+## Migration from v1.0 to v2.0
+
+**What stays the same:**
+- Next.js 15 App Router (no changes)
+- React 19 (no changes)
+- Tailwind CSS v4 (add @theme breakpoints, no package updates)
+- @headlessui/react (no changes, use for new dialogs)
+- TypeScript configuration (no changes)
+
+**What's new:**
+- Add Supabase packages (@supabase/supabase-js, @supabase/ssr)
+- Add form packages (react-hook-form, zod, @hookform/resolvers)
+- Create utils/supabase/ directory for client creation utilities
+- Add middleware.ts for session management
+- Add app/auth/confirm/route.ts for email verification
+- Create public/books/ directory for PDF files
+- Update app/globals.css with custom breakpoints
+
+**No breaking changes.** All v1.0 code continues to work. v2.0 is purely additive.
+
+## Database Schema (Supabase)
+
+**Required tables for v2.0:**
+
+```sql
+-- Notifications signup table
+create table public.notifications (
+  id uuid default gen_random_uuid() primary key,
+  name text not null,
+  email text not null unique,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null,
+  subscribed boolean default true
+);
+
+-- Enable Row Level Security
+alter table public.notifications enable row level security;
+
+-- Public can insert (signup form)
+create policy "Anyone can signup for notifications"
+  on public.notifications for insert
+  with check (true);
+
+-- Email verification tracking (if needed later)
+-- For v2.0, use Supabase Auth's built-in users table
+-- auth.users table is automatically created by Supabase
+```
+
+**Migration approach:**
+- Use Supabase Dashboard → SQL Editor for initial schema
+- Export migrations: `supabase db dump -f supabase/migrations/initial.sql`
+- Version control: Commit migration files to repo
+- Deploy: Run migrations via Supabase CLI or dashboard
 
 ## Sources
 
-### Animation Libraries
-- [NPM: framer-motion](https://www.npmjs.com/package/framer-motion) - Latest version: 12.34.0
-- [Framer Motion upgrade guide for React 19](https://motion.dev/docs/react-upgrade-guide)
-- [LogRocket: Comparing React animation libraries 2026](https://blog.logrocket.com/best-react-animation-libraries/)
-- [Syncfusion: Top React animation libraries 2026](https://www.syncfusion.com/blogs/post/top-react-animation-libraries)
-- [Comparing GSAP vs Framer Motion](https://blog.logrocket.com/best-react-animation-libraries/)
+### Supabase Integration
+- [Supabase Next.js Quickstart](https://supabase.com/docs/guides/getting-started/quickstarts/nextjs) - Official integration guide (HIGH confidence)
+- [Supabase Auth with Next.js](https://supabase.com/docs/guides/auth/quickstarts/nextjs) - Official auth integration (HIGH confidence)
+- [Setting up Server-Side Auth for Next.js](https://supabase.com/docs/guides/auth/server-side/nextjs) - SSR patterns (HIGH confidence)
+- [Creating a Supabase client for SSR](https://supabase.com/docs/guides/auth/server-side/creating-a-client) - createServerClient docs (HIGH confidence)
+- [NPM: @supabase/supabase-js](https://www.npmjs.com/package/@supabase/supabase-js) - Version 2.95.3 (MEDIUM confidence)
+- [NPM: @supabase/ssr](https://www.npmjs.com/package/@supabase/ssr) - Version 0.8.0 (MEDIUM confidence)
+- [Vercel: Supabase & Next.js Starter Template](https://vercel.com/templates/next.js/supabase) - Reference implementation (MEDIUM confidence)
 
-### Dropdown & Modal Components
-- [Radix UI Primitives documentation](https://www.radix-ui.com/primitives) - HIGH confidence (official docs)
-- [NPM: @radix-ui/react-dropdown-menu](https://www.npmjs.com/package/@radix-ui/react-dropdown-menu) - Version 2.1.16
-- [NPM: @radix-ui/react-dialog](https://www.npmjs.com/package/@radix-ui/react-dialog) - Version 1.1.15
-- [React 19 compatibility for Radix UI](https://github.com/radix-ui/primitives/issues/3295) - Confirmed compatible
-- [Builder.io: Best React UI libraries 2026](https://www.builder.io/blog/react-component-libraries-2026)
+### Email Verification
+- [Supabase Email Templates](https://supabase.com/docs/guides/auth/auth-email-templates) - Customizing email templates (HIGH confidence)
+- [Supabase Custom SMTP Configuration](https://supabase.com/docs/guides/auth/auth-smtp) - SMTP setup guide (HIGH confidence)
+- [Mailtrap: Supabase Send Email Tutorial](https://mailtrap.io/blog/supabase-send-email/) - Implementation patterns (MEDIUM confidence)
+- [Resend: Send emails using Supabase with SMTP](https://resend.com/docs/send-with-supabase-smtp) - Recommended email provider (MEDIUM confidence)
 
-### Font Loading & Optimization
-- [Next.js: Font Optimization documentation](https://nextjs.org/docs/app/getting-started/fonts) - HIGH confidence (official docs)
-- [Next.js: Optimizing fonts tutorial](https://nextjs.org/learn/dashboard-app/optimizing-fonts-images) - HIGH confidence (official docs)
-- [Contentful: Next.js fonts guide](https://www.contentful.com/blog/next-js-fonts/)
+### Form Handling & Validation
+- [AbstractAPI: Type-Safe Form Validation in Next.js 15](https://www.abstractapi.com/guides/email-validation/type-safe-form-validation-in-next-js-15-with-zod-and-react-hook-form) - Comprehensive guide (MEDIUM confidence)
+- [Medium: Handling Forms in Next.js with React Hook Form, Zod, and Server Actions](https://medium.com/@techwithtwin/handling-forms-in-next-js-with-react-hook-form-zod-and-server-actions-e148d4dc6dc1) - Implementation patterns (MEDIUM confidence)
+- [react-hook-form Documentation](https://react-hook-form.com/docs/useform) - Official docs (HIGH confidence)
+- [NPM: react-hook-form](https://www.npmjs.com/package/react-hook-form) - Version 7.71.1 (MEDIUM confidence)
+- [NPM: zod](https://www.npmjs.com/package/zod) - Version 4.3.6 (MEDIUM confidence)
+- [NPM: @hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers) - Version 5.2.2 (MEDIUM confidence)
 
-### SEO & Metadata
-- [Next.js: generateMetadata documentation](https://nextjs.org/docs/app/api-reference/functions/generate-metadata) - HIGH confidence (official docs)
-- [Next.js: generateStaticParams documentation](https://nextjs.org/docs/app/api-reference/functions/generate-static-params) - HIGH confidence (official docs)
-- [Digital Applied: Next.js 15 SEO guide](https://www.digitalapplied.com/blog/nextjs-seo-guide)
-- [Medium: Complete guide to SEO in Next.js 15](https://medium.com/@thomasaugot/the-complete-guide-to-seo-optimization-in-next-js-15-1bdb118cffd7)
+### Responsive Design
+- [Tailwind CSS: Responsive Design](https://tailwindcss.com/docs/responsive-design) - Official responsive design docs (HIGH confidence)
+- [Tailwind CSS: Theme variables](https://tailwindcss.com/docs/theme) - @theme configuration (HIGH confidence)
+- [Border Media: Tailwind CSS 4 - Custom Breakpoints](https://bordermedia.org/blog/tailwind-css-4-breakpoint-override) - v4-specific breakpoint config (MEDIUM confidence)
+- [Medium: Tailwind CSS v4 @theme Configuration](https://medium.com/@kidaneberihuntse/tailwind-css-v4-1-has-no-tailwind-config-js-heres-how-to-customize-everything-with-theme-11a19b108963) - Implementation guide (MEDIUM confidence)
 
-### Glassmorphism with Tailwind
-- [FlyOnUI: Glassmorphism with Tailwind CSS](https://flyonui.com/blog/glassmorphism-with-tailwind-css/)
-- [Epic Web Dev: Creating glassmorphism effects](https://www.epicweb.dev/tips/creating-glassmorphism-effects-with-tailwind-css)
+### PDF Serving
+- [Next.js: public folder documentation](https://nextjs.org/docs/pages/api-reference/file-conventions/public-folder) - Official static files guide (HIGH confidence)
+- [DhiWise: Mastering the Next.js Public Folder](https://www.dhiwise.com/post/mastering-the-nextjs-public-folder-a-comprehensive-guide) - Usage patterns (MEDIUM confidence)
+- [Code Concisely: Download a File From App Router API](https://www.codeconcisely.com/posts/nextjs-app-router-api-download-file/) - Advanced Route Handler pattern (MEDIUM confidence)
 
-### React 19 Compatibility
-- [GitHub: framer-motion React 19 compatibility](https://github.com/motiondivision/motion/issues/2668) - Resolved in v12+
-- [GitHub: Radix UI React 19 compatibility](https://github.com/radix-ui/primitives/issues/3295) - Resolved
-- [shadcn/ui: Next.js 15 + React 19 guide](https://ui.shadcn.com/docs/react-19)
+### Database Migrations
+- [Supabase: Database Migrations](https://supabase.com/docs/guides/deployment/database-migrations) - Official migration guide (HIGH confidence)
+- [Supabase: Declarative database schemas](https://supabase.com/docs/guides/local-development/declarative-database-schemas) - Modern migration approach (HIGH confidence)
 
 ---
-*Stack research for: Continua informational website*
-*Researched: 2026-02-11*
-*Confidence: HIGH - All versions verified via official documentation and npm registry, React 19 compatibility confirmed*
+*Stack research for: Continua v2.0 (Supabase backend + email verification + responsive improvements)*
+*Researched: 2026-02-15*
+*Confidence: HIGH - All versions verified via npm, official Supabase docs, and official Next.js docs*

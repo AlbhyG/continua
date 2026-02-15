@@ -1,7 +1,7 @@
-# Architecture Research
+# Architecture Research: Continua v2.0 Supabase Integration
 
-**Domain:** Multi-page informational website on Next.js 15 App Router
-**Researched:** 2026-02-11
+**Domain:** Next.js 15 App Router + Supabase Backend Integration
+**Researched:** 2026-02-15
 **Confidence:** HIGH
 
 ## Standard Architecture
@@ -9,708 +9,800 @@
 ### System Overview
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    Root Layout (Server)                      │
-│  ┌────────────────────────────────────────────────────┐     │
-│  │            Header (Client Component)                │     │
-│  │  ┌─────────┐  ┌──────────┐  ┌──────────┐  ┌─────┐ │     │
-│  │  │  Logo   │  │ Who ▾    │  │ What ▾   │  │Sign │ │     │
-│  │  │         │  │ Dropdown │  │ Dropdown │  │ In  │ │     │
-│  │  └─────────┘  └──────────┘  └──────────┘  └─────┘ │     │
-│  └────────────────────────────────────────────────────┘     │
-├─────────────────────────────────────────────────────────────┤
-│                     Page Content (Server)                    │
-│  ┌─────────────────────────────────────────────────────┐    │
-│  │  Home Page / Who Page / What Page / Book Page       │    │
-│  │  (Static content rendered as Server Components)     │    │
-│  └─────────────────────────────────────────────────────┘    │
-├─────────────────────────────────────────────────────────────┤
-│                 Dialog/Modal Layer (Client)                  │
-│  ┌─────────────────────────────────────────────────────┐    │
-│  │  Form Dialogs (Publishers/Agents/Therapists forms)  │    │
-│  │  Triggered from Book page dropdown                   │    │
-│  └─────────────────────────────────────────────────────┘    │
-└─────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────┐
+│                     Browser (Client Components)                     │
+│  ┌────────────┐  ┌────────────┐  ┌────────────┐  ┌──────────────┐ │
+│  │   Header   │  │   Dialogs  │  │   Forms    │  │ Sign In UI   │ │
+│  │ (existing) │  │ (existing) │  │   (new)    │  │    (new)     │ │
+│  └─────┬──────┘  └─────┬──────┘  └─────┬──────┘  └──────┬───────┘ │
+│        │ Link          │ Dialog         │ Server         │ Server   │
+│        │               │ Submit         │ Action         │ Action   │
+├────────┴───────────────┴────────────────┴────────────────┴─────────┤
+│                Next.js 15 App Router (Server Side)                  │
+├────────────────────────────────────────────────────────────────────┤
+│  Server Components     │  Server Actions      │  Route Handlers    │
+│  ┌──────────────┐     │  ┌────────────────┐  │  ┌──────────────┐  │
+│  │ Pages (.tsx) │     │  │ Form Handlers  │  │  │ /auth/confirm│  │
+│  │ - /          │     │  │ - Notification │  │  │ /api/download│  │
+│  │ - /my-*      │     │  │ - Book Request │  │  │              │  │
+│  │ (new pages)  │     │  │ (new actions)  │  │  │  (new routes)│  │
+│  └──────┬───────┘     │  └───────┬────────┘  │  └──────┬───────┘  │
+│         │             │          │            │         │          │
+├─────────┴─────────────┴──────────┴────────────┴─────────┴──────────┤
+│                     Middleware (Cookie Proxy)                       │
+│  ┌──────────────────────────────────────────────────────────────┐  │
+│  │ Token Refresh + Cookie Sync (supabase.auth.getClaims())     │  │
+│  └────────────────────────────┬─────────────────────────────────┘  │
+├────────────────────────────────┴───────────────────────────────────┤
+│                      Supabase Client Layer                          │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐                │
+│  │   Browser   │  │   Server    │  │ Route/Action│                │
+│  │   Client    │  │   Client    │  │   Client    │                │
+│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘                │
+│         │                │                 │                        │
+├─────────┴────────────────┴─────────────────┴────────────────────────┤
+│                         Supabase Backend                            │
+├────────────────────────────────────────────────────────────────────┤
+│  Database (PostgreSQL)   │  Auth           │  Storage              │
+│  ┌──────────────────┐    │  ┌───────────┐  │  ┌──────────────┐    │
+│  │ notification_    │    │  │ auth.users│  │  │ book-pdfs/   │    │
+│  │   signups        │    │  │           │  │  │ (private)    │    │
+│  │ ┌──────────────┐ │    │  └───────────┘  │  └──────────────┘    │
+│  │ │ book_requests│ │    │                  │                       │
+│  │ └──────────────┘ │    │  Email Service   │                       │
+│  └──────────────────┘    │  (verification)  │                       │
+└────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Component Responsibilities
 
-| Component | Responsibility | Typical Implementation |
-|-----------|----------------|------------------------|
-| Root Layout | HTML structure, global styles, font loading, wraps all pages | Server Component with Inter font, Tailwind CSS v4, gradient background |
-| Header | Fixed navigation bar with logo and dropdown menus | Client Component for interactivity, preserves state across navigation |
-| Dropdown Menu | Manage open/close state, handle click-outside-to-close, position absolutely | Client Component with local state or headless UI library |
-| Page Components | Render static content for each route (/who, /what, /book) | Server Components for SEO and performance |
-| Dialog/Modal | Overlay forms for Publishers/Agents/Therapists | Client Component with URL-synced state for shareability |
-| Text Content | Long-form text with proper spacing and typography | Server Component, could be extracted to separate files/components |
+| Component | Responsibility | Integration Point |
+|-----------|----------------|-------------------|
+| **Header (existing)** | Navigation, dropdowns, Sign In trigger | Modified: merge Who/What dropdowns, trigger auth flow |
+| **Dialog Components (existing)** | Book request forms (Publishers, Agents, Therapists) | Modified: add form submission to Server Actions |
+| **Coming Soon Dialog (new)** | Placeholder for unavailable features | Created: reuse Headless UI pattern |
+| **Server Actions (new)** | Form submissions, DB writes | Created: handle notification signups, book requests |
+| **Route Handlers (new)** | Email verification, PDF downloads | Created: /auth/confirm, /api/download/[book] |
+| **Middleware (new)** | Session refresh, cookie management | Created: supabase.auth.getClaims() proxy |
+| **Supabase Clients (new)** | Database/auth operations | Created: browser, server, route/action clients |
 
 ## Recommended Project Structure
 
 ```
-src/
-├── app/                    # Next.js App Router directory
-│   ├── layout.tsx          # Root layout (Server Component)
-│   ├── page.tsx            # Home page (Server Component)
-│   ├── who/                # Who page route
-│   │   └── page.tsx        # (Server Component)
-│   ├── what/               # What page route
-│   │   └── page.tsx        # (Server Component)
-│   ├── book/               # Book page route
-│   │   └── page.tsx        # (Server Component)
-│   └── globals.css         # Tailwind CSS v4 with @theme directive
-│
-├── components/             # Shared components (organized by type)
-│   ├── layout/             # Layout-specific components
-│   │   ├── Header.tsx      # Fixed header with logo and nav (Client)
-│   │   ├── Logo.tsx        # Logo component with home link
-│   │   └── Navigation.tsx  # Navigation pills container
-│   │
-│   ├── ui/                 # Reusable UI primitives
-│   │   ├── Dropdown.tsx    # Dropdown menu component (Client)
-│   │   ├── Dialog.tsx      # Modal dialog component (Client)
-│   │   └── Button.tsx      # Button component (can be Server or Client)
-│   │
-│   └── forms/              # Form-related components
-│       ├── PublisherForm.tsx      # (Client)
-│       ├── AgentForm.tsx          # (Client)
-│       └── TherapistForm.tsx      # (Client)
-│
-├── lib/                    # Utility functions and constants
-│   └── content.ts          # Page content as constants/exports
-│
-└── types/                  # TypeScript type definitions
-    └── index.ts            # Shared types
+/Users/shantam/continua/
+├── .env.local                    # Supabase env vars (NEXT_PUBLIC_*, private keys)
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx            # EXISTING: Root layout
+│   │   ├── page.tsx              # EXISTING: Home page
+│   │   ├── my-relationships/     # NEW: replaces /who
+│   │   │   └── page.tsx
+│   │   ├── my-info/              # NEW: replaces /what
+│   │   │   └── page.tsx
+│   │   ├── auth/
+│   │   │   └── confirm/
+│   │   │       └── route.ts      # NEW: Email verification callback
+│   │   ├── api/
+│   │   │   └── download/
+│   │   │       └── [book]/
+│   │   │           └── route.ts  # NEW: Authenticated PDF downloads
+│   │   └── globals.css           # EXISTING: Tailwind @theme
+│   ├── components/
+│   │   ├── layout/
+│   │   │   └── Header.tsx        # MODIFIED: Merge dropdowns, new nav structure
+│   │   ├── dialogs/
+│   │   │   ├── PublishersDialog.tsx    # MODIFIED: Add form submission
+│   │   │   ├── AgentsDialog.tsx        # MODIFIED: Add form submission
+│   │   │   ├── TherapistsDialog.tsx    # MODIFIED: Add form submission
+│   │   │   └── ComingSoonDialog.tsx    # NEW: Generic coming soon
+│   │   └── forms/                # NEW: Form components
+│   │       ├── NotificationSignup.tsx  # NEW: Email notification form
+│   │       └── BookRequestForm.tsx     # NEW: Shared book request logic
+│   ├── lib/
+│   │   ├── supabase/
+│   │   │   ├── client.ts         # NEW: Browser client (createBrowserClient)
+│   │   │   ├── server.ts         # NEW: Server component client
+│   │   │   └── action.ts         # NEW: Server Action client
+│   │   └── actions/              # NEW: Server Actions
+│   │       ├── notifications.ts  # NEW: Notification signup action
+│   │       └── book-requests.ts  # NEW: Book request submission
+│   └── middleware.ts             # NEW: Supabase session refresh proxy
+└── supabase/
+    └── migrations/               # NEW: Database schema
+        └── 001_initial_schema.sql
 ```
 
 ### Structure Rationale
 
-- **app/ directory:** Follows Next.js 15 App Router conventions where folders define routes and special files (layout.tsx, page.tsx) define UI. Each route segment gets its own folder.
-
-- **components/ organized by purpose:** Layout components are separated from reusable UI primitives and form components. This follows the "three-tier component structure" pattern where UI primitives live separately from layout components and feature-specific components.
-
-- **Client boundaries at component level:** Only interactive components (Header, Dropdown, Dialog, Forms) use "use client" directive. Page content remains as Server Components for optimal performance and SEO.
-
-- **lib/ for utilities:** Extracting long-form text content into lib/content.ts keeps page components clean and makes content management easier.
-
-- **No route groups needed:** For a simple 4-page site, route groups (folderName) would add unnecessary complexity. Direct folders for each route are clearer.
+- **lib/supabase/**: Three separate client creators following official Supabase SSR pattern. Browser client for client components, server client for Server Components, action client for Server Actions/Route Handlers.
+- **lib/actions/**: Server Actions colocated with business logic. These are imported by client components for form submissions.
+- **app/my-***: New page routes replacing /who and /what. Named to reflect user-centric perspective.
+- **app/auth/confirm/**: Route Handler for email verification. Must be a route (not action) because it's called via URL from email.
+- **app/api/download/[book]/**: Route Handler for PDF downloads. Must be API route because it serves files with custom headers.
+- **components/forms/**: Extracted form logic for reuse across dialogs. Keeps dialogs focused on presentation.
+- **middleware.ts**: Root-level middleware intercepts all requests to refresh auth tokens via cookie proxy.
 
 ## Architectural Patterns
 
-### Pattern 1: Server Component by Default, Client When Needed
+### Pattern 1: Three-Client Supabase Architecture
 
-**What:** All components are Server Components by default. Only mark components as Client Components (with "use client" directive) when they need interactivity, state, effects, or browser APIs.
+**What:** Create three distinct Supabase client instances for different execution contexts.
 
-**When to use:** This is the foundational pattern for all Next.js 15 App Router apps, especially static informational sites.
+**When to use:** Always in Next.js 15 App Router with Supabase. Server Components can't write cookies, clients execute in different environments.
 
 **Trade-offs:**
-- **Pros:** Better performance (less JavaScript shipped), better SEO (HTML rendered on server), faster initial page load, can access server resources directly
-- **Cons:** Requires understanding server/client boundary, can't use React hooks like useState in Server Components
+- PRO: Type-safe, environment-appropriate, prevents auth bugs
+- PRO: Official Supabase pattern with best security practices
+- CON: Slight complexity managing three clients
+- CON: Must remember which client to use where
 
 **Example:**
 ```typescript
-// app/who/page.tsx - Server Component (default)
-export default function WhoPage() {
-  return (
-    <div className="max-w-[720px] mx-auto px-6 pt-20">
-      <h1 className="text-[32px] font-bold mb-6">Who is Continua For?</h1>
-      <section className="space-y-6">
-        <div>
-          <h2 className="text-[20px] font-bold mb-3">For Individuals</h2>
-          <p>Continua helps you see your patterns across different situations...</p>
-        </div>
-        {/* More content */}
-      </section>
-    </div>
+// lib/supabase/client.ts (Browser - Client Components)
+import { createBrowserClient } from '@supabase/ssr'
+
+export function createClient() {
+  return createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!
   )
 }
 
-// components/layout/Header.tsx - Client Component (needs state)
-'use client'
+// lib/supabase/server.ts (Server Components)
+import { createServerClient } from '@supabase/ssr'
+import { cookies } from 'next/headers'
 
-import { useState } from 'react'
-import Logo from './Logo'
-import Navigation from './Navigation'
+export async function createClient() {
+  const cookieStore = await cookies()
 
-export default function Header() {
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
-
-  return (
-    <header className="fixed top-0 w-full bg-[rgba(67,117,237,0.92)] backdrop-blur z-50">
-      <div className="max-w-[720px] mx-auto px-4 py-3 flex items-center justify-between">
-        <Logo />
-        <Navigation openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} />
-      </div>
-    </header>
-  )
-}
-```
-
-### Pattern 2: Composition Pattern for Client Components in Server Components
-
-**What:** Server Components can render Client Components as children. Pass Server Components to Client Components via the children prop to maintain server rendering benefits.
-
-**When to use:** When you need a Client Component wrapper (like Header) but want to keep the content inside as Server Components, or when building layouts that need both server and client rendering.
-
-**Trade-offs:**
-- **Pros:** Minimizes client-side JavaScript while maintaining interactivity where needed, clear separation of concerns
-- **Cons:** Requires understanding of component boundaries, need to be careful about data flow
-
-**Example:**
-```typescript
-// app/layout.tsx - Server Component
-import Header from '@/components/layout/Header'
-import type { ReactNode } from 'react'
-
-export default function RootLayout({ children }: { children: ReactNode }) {
-  return (
-    <html lang="en">
-      <body className="font-inter">
-        <Header /> {/* Client Component */}
-        <main>{children}</main> {/* Server Component pages */}
-      </body>
-    </html>
-  )
-}
-
-// The Header is a Client Component, but the pages rendered in {children}
-// remain Server Components. This composition is key to the architecture.
-```
-
-### Pattern 3: Shared Layout with State Preservation
-
-**What:** Layouts in Next.js App Router preserve state across navigation and do not re-render. This is called "partial rendering" - only page components update while layouts remain mounted.
-
-**When to use:** For fixed headers, navigation bars, or any UI that should persist across page transitions.
-
-**Trade-offs:**
-- **Pros:** Better UX (no flicker on navigation), maintains dropdown open/close state, preserves scroll position in sidebar/nav
-- **Cons:** Layout components stay mounted, so be mindful of effects and subscriptions that shouldn't run on every page
-
-**Example:**
-```typescript
-// components/layout/Header.tsx
-'use client'
-
-import { useState } from 'react'
-
-export default function Header() {
-  // This state persists across page navigation because the layout doesn't re-render
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
-
-  const handleNavigation = () => {
-    // Dropdown state is preserved when using <Link> for navigation
-    // User can open "Who" dropdown, click a link, and the dropdown
-    // position/state persists until they click outside or navigate away
-  }
-
-  return (
-    <header>
-      {/* Header content */}
-    </header>
-  )
-}
-```
-
-### Pattern 4: Click-Outside-to-Close Pattern for Dropdowns
-
-**What:** Dropdowns should close when clicking outside them or when clicking another dropdown trigger. Use useEffect with document-level event listeners.
-
-**When to use:** All dropdown menus and popovers in the application.
-
-**Trade-offs:**
-- **Pros:** Expected UX pattern, accessible, handles edge cases
-- **Cons:** Need to manage cleanup of event listeners, need to handle refs correctly
-
-**Example:**
-```typescript
-'use client'
-
-import { useRef, useEffect } from 'react'
-
-export default function Dropdown({ isOpen, onClose, children }) {
-  const dropdownRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (!isOpen) return
-
-    function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        onClose()
-      }
+  return createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return cookieStore.getAll()
+        },
+        setAll(cookiesToSet) {
+          cookiesToSet.forEach(({ name, value, options }) =>
+            cookieStore.set(name, value, options)
+          )
+        },
+      },
     }
+  )
+}
 
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [isOpen, onClose])
+// lib/supabase/action.ts (Server Actions & Route Handlers)
+// Same as server.ts but used in actions/route handlers
+```
 
-  if (!isOpen) return null
+### Pattern 2: Server Actions for Form Submissions
+
+**What:** Use Server Actions (not API routes) for form submissions from React components.
+
+**When to use:** Form submissions tightly coupled to UI (notification signups, book requests). No external clients need these endpoints.
+
+**Trade-offs:**
+- PRO: Type-safe by default when called from same Next.js app
+- PRO: Simpler than API routes (no need to define HTTP methods, parse bodies)
+- PRO: Automatic integration with React 19 useActionState/useFormStatus
+- CON: Can't be called from external sources (webhooks, mobile apps)
+- CON: No predefined URL endpoint
+
+**Example:**
+```typescript
+// lib/actions/notifications.ts
+'use server'
+
+import { createClient } from '@/lib/supabase/action'
+import { revalidatePath } from 'next/cache'
+
+export async function submitNotificationSignup(formData: FormData) {
+  const email = formData.get('email') as string
+  const name = formData.get('name') as string
+
+  const supabase = await createClient()
+
+  const { error } = await supabase
+    .from('notification_signups')
+    .insert({ email, name })
+
+  if (error) {
+    return { success: false, error: error.message }
+  }
+
+  return { success: true }
+}
+
+// components/forms/NotificationSignup.tsx
+'use client'
+
+import { submitNotificationSignup } from '@/lib/actions/notifications'
+import { useActionState } from 'react'
+
+export function NotificationSignup() {
+  const [state, formAction] = useActionState(submitNotificationSignup, null)
 
   return (
-    <div ref={dropdownRef} className="absolute mt-2 rounded-xl bg-white/95">
-      {children}
-    </div>
+    <form action={formAction}>
+      <input name="name" required />
+      <input name="email" type="email" required />
+      <button type="submit">Subscribe</button>
+      {state?.error && <p>{state.error}</p>}
+    </form>
   )
 }
 ```
 
-### Pattern 5: URL-Synced Modals for Shareability
+### Pattern 3: Route Handlers for URL-Based Operations
 
-**What:** Dialog/modal state can be represented in the URL for shareable deep links. Users can refresh the page or share the URL and the modal will open to the same state.
+**What:** Use Route Handlers (API routes) for operations that need URL endpoints.
 
-**When to use:** For important dialogs (like the Publisher/Agent/Therapist forms) that users might want to bookmark or share.
+**When to use:** Email verification callbacks (called from email links), file downloads, webhooks, external API access.
 
 **Trade-offs:**
-- **Pros:** Shareable URLs, back button closes modal naturally, better UX for deep linking
-- **Cons:** More complex than local state, requires understanding of Next.js routing
+- PRO: Have URL endpoints that can be called externally
+- PRO: Support all HTTP methods with full control
+- PRO: Can set custom response headers (needed for file downloads)
+- CON: More boilerplate than Server Actions
+- CON: Manual type safety (must parse request bodies)
 
 **Example:**
 ```typescript
-// Option 1: Using search params (simpler, good for this use case)
-'use client'
+// app/auth/confirm/route.ts
+import { createClient } from '@/lib/supabase/action'
+import { NextRequest, NextResponse } from 'next/server'
 
-import { useSearchParams, useRouter } from 'next/navigation'
-import Dialog from '@/components/ui/Dialog'
+export async function GET(request: NextRequest) {
+  const { searchParams } = new URL(request.url)
+  const token_hash = searchParams.get('token_hash')
+  const type = searchParams.get('type')
 
-export default function BookPage() {
-  const searchParams = useSearchParams()
-  const router = useRouter()
-  const formType = searchParams.get('form') // 'publisher' | 'agent' | 'therapist'
-
-  const openForm = (type: string) => {
-    router.push(`/book?form=${type}`)
+  if (!token_hash || !type) {
+    return NextResponse.redirect(new URL('/error', request.url))
   }
 
-  const closeForm = () => {
-    router.push('/book')
+  const supabase = await createClient()
+
+  const { error } = await supabase.auth.verifyOtp({
+    type: type as any,
+    token_hash,
+  })
+
+  if (error) {
+    return NextResponse.redirect(new URL('/error', request.url))
   }
 
-  return (
-    <>
-      <div>
-        <button onClick={() => openForm('publisher')}>Publishers</button>
-        <button onClick={() => openForm('agent')}>Agents</button>
-        <button onClick={() => openForm('therapist')}>Therapists</button>
-      </div>
-
-      <Dialog open={formType === 'publisher'} onClose={closeForm}>
-        <PublisherForm />
-      </Dialog>
-      {/* Similar for agent and therapist */}
-    </>
-  )
+  // Email verified, redirect to app
+  return NextResponse.redirect(new URL('/my-info', request.url))
 }
 
-// Option 2: Using parallel routes and intercepting routes (more advanced)
-// Good for full-page modals with their own URLs like /book/publisher
-// See Next.js docs on intercepting routes for this pattern
+// app/api/download/[book]/route.ts
+import { createClient } from '@/lib/supabase/action'
+import { NextRequest, NextResponse } from 'next/server'
+
+export async function GET(
+  request: NextRequest,
+  { params }: { params: { book: string } }
+) {
+  const supabase = await createClient()
+
+  // Check auth and book request verification
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
+  const { data: bookRequest } = await supabase
+    .from('book_requests')
+    .select('verified')
+    .eq('email', user.email)
+    .eq('type', params.book)
+    .single()
+
+  if (!bookRequest?.verified) {
+    return NextResponse.json({ error: 'Not verified' }, { status: 403 })
+  }
+
+  // Generate signed URL (60 second expiry)
+  const { data: signedUrl } = await supabase.storage
+    .from('book-pdfs')
+    .createSignedUrl(`${params.book}.pdf`, 60)
+
+  if (!signedUrl) {
+    return NextResponse.json({ error: 'File not found' }, { status: 404 })
+  }
+
+  // Redirect to signed URL
+  return NextResponse.redirect(signedUrl.signedUrl)
+}
 ```
 
-### Pattern 6: Headless UI Pattern for Complex Interactive Components
+### Pattern 4: Email Verification with TokenHash
 
-**What:** Use headless UI libraries (like Headless UI or Radix UI) for complex interactive components like dropdowns, dialogs, and menus. These handle accessibility, keyboard navigation, and state management while you control styling.
+**What:** Use TokenHash in custom email templates with server-side verification route.
 
-**When to use:** For accessible dropdown menus and modals. Especially recommended when building with Tailwind CSS (Headless UI is from the Tailwind team).
+**When to use:** Email verification flows. Prevents email prefetch issues where security tools consume links.
 
 **Trade-offs:**
-- **Pros:** Handles accessibility (ARIA, keyboard nav, focus management), battle-tested logic, saves development time
-- **Cons:** Another dependency, learning curve for the library API
+- PRO: Prevents email prefetching from invalidating tokens
+- PRO: Server-side verification before user sees authenticated content
+- CON: Requires custom email template configuration
+- CON: Need to create route handler for verification
+
+**Example:**
+```html
+<!-- Supabase Email Template (Dashboard > Auth > Email Templates > Confirm signup) -->
+<h2>Confirm your signup</h2>
+<p>Click the link below to confirm your email:</p>
+<p><a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email">Confirm Email</a></p>
+```
+
+### Pattern 5: Middleware Cookie Proxy
+
+**What:** Middleware that refreshes auth tokens on every request by calling supabase.auth.getClaims().
+
+**When to use:** Always with Supabase in Next.js App Router. Required for session management.
+
+**Trade-offs:**
+- PRO: Automatic token refresh on every request
+- PRO: Syncs cookies between server and browser
+- PRO: Validates JWT signatures (getClaims validates, getSession doesn't)
+- CON: Runs on every request (minimal overhead)
 
 **Example:**
 ```typescript
-'use client'
+// middleware.ts
+import { createServerClient } from '@supabase/ssr'
+import { NextResponse, type NextRequest } from 'next/server'
 
-import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
+export async function middleware(request: NextRequest) {
+  let response = NextResponse.next({
+    request: {
+      headers: request.headers,
+    },
+  })
 
-export default function WhoDropdown() {
-  return (
-    <Menu>
-      <MenuButton className="rounded-full bg-white/20 hover:bg-white/35 px-4 py-1.5">
-        Who ▾
-      </MenuButton>
-
-      <MenuItems className="absolute mt-2 min-w-[180px] rounded-xl bg-white/95 p-2">
-        <MenuItem>
-          {({ focus }) => (
-            <a
-              href="/who#individuals"
-              className={`block rounded-lg px-3 py-2 ${
-                focus ? 'bg-black/5' : ''
-              }`}
-            >
-              Individuals
-            </a>
-          )}
-        </MenuItem>
-        <MenuItem>
-          {({ focus }) => (
-            <a
-              href="/who#couples"
-              className={`block rounded-lg px-3 py-2 ${
-                focus ? 'bg-black/5' : ''
-              }`}
-            >
-              Couples
-            </a>
-          )}
-        </MenuItem>
-        {/* More items */}
-      </MenuItems>
-    </Menu>
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return request.cookies.getAll()
+        },
+        setAll(cookiesToSet) {
+          cookiesToSet.forEach(({ name, value, options }) => {
+            request.cookies.set(name, value)
+            response.cookies.set(name, value, options)
+          })
+        },
+      },
+    }
   )
+
+  // CRITICAL: Use getClaims() not getSession()
+  // getClaims() validates JWT signature on each invocation
+  await supabase.auth.getClaims()
+
+  return response
+}
+
+export const config = {
+  matcher: [
+    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+  ],
 }
 ```
 
 ## Data Flow
 
-### Navigation Flow
+### Form Submission Flow (Notification Signup)
 
 ```
-User clicks navigation item
+User fills form in Dialog
     ↓
-Client Component (Header/Dropdown) updates local state
+Form submits to Server Action (submitNotificationSignup)
     ↓
-Next.js <Link> component triggers client-side navigation
+Server Action creates Supabase client (action client)
     ↓
-App Router performs partial rendering:
-  - Layout (Header) stays mounted → state preserved
-  - Page component swaps → new Server Component renders
+Server Action inserts into notification_signups table
     ↓
-User sees new page with same header state
+Return success/error to client
+    ↓
+Dialog shows confirmation or error message
 ```
 
-### Modal/Dialog Flow
+### Email Verification Flow (Book Request)
 
 ```
-User clicks "Publishers" in Book dropdown
+User submits book request form (email required)
     ↓
-Client Component calls router.push('/book?form=publisher')
+Server Action:
+  1. Insert book_requests row (verified: false, token: generated UUID)
+  2. Send verification email via Resend/Supabase Edge Function
+     Email contains: /auth/confirm?token_hash={{ .TokenHash }}&type=email
     ↓
-URL updates (can be shared/bookmarked)
+User clicks email link
     ↓
-Component re-renders, reads searchParams
+Route Handler (/auth/confirm/route.ts):
+  1. Extract token_hash from URL
+  2. Call supabase.auth.verifyOtp({ token_hash, type: 'email' })
+  3. Mark book_requests.verified = true
+  4. Redirect to /my-info with success message
     ↓
-Dialog component sees open={true} and renders
-    ↓
-User closes dialog (button or click outside)
-    ↓
-Client Component calls router.push('/book')
-    ↓
-URL updates, Dialog sees open={false}, unmounts
+User can now download PDF from /api/download/[book]
 ```
 
-### Static Content Flow
+### PDF Download Flow (Authenticated)
 
 ```
-Build time:
-  - Next.js runs Server Components
-  - Generates static HTML for each page
-  - Creates client bundle with only Client Components
+User clicks "Download PDF" link
     ↓
-Request time:
-  - Server sends pre-rendered HTML immediately
-  - Browser displays content (no loading spinner)
-  - Client JavaScript hydrates interactive components
-  - Navigation becomes instant (prefetched)
-```
-
-### Key Data Flows
-
-1. **Page Navigation:** User interaction in Header (Client) → Next.js routing (client-side) → Page swap (Server Component) → Layout preserved. Data flows one-way down from Server to Client.
-
-2. **Dropdown State:** Local state in Header component → passed down as props to Dropdown components → onClick handlers bubble up to update state → state preserved across page navigation.
-
-3. **Form Submission:** User fills form (Client Component) → validates input → triggers action → displays success/error. For this project, forms are visual-only (no API), so flow ends at display.
-
-## Component Boundaries
-
-### Server/Client Boundary Rules
-
-1. **Server Components (default):**
-   - All components in `app/` directory are Server Components unless marked with 'use client'
-   - Can access server resources, databases, file system
-   - Cannot use React hooks (useState, useEffect, etc.)
-   - Cannot use browser APIs
-   - Examples: page.tsx files, layout.tsx (root), text content components
-
-2. **Client Components (explicit):**
-   - Must have 'use client' directive at the top
-   - Can use React hooks and browser APIs
-   - Once marked, all imports and children become part of client bundle
-   - Examples: Header, Dropdown, Dialog, Forms
-
-3. **Composition Rules:**
-   - ✅ Server Component can render Client Component as child
-   - ✅ Server Component can be passed to Client Component via children prop
-   - ❌ Client Component cannot directly import Server Component
-   - ✅ Client Component can render Server Component if passed as prop
-
-### Component Communication
-
-| From → To | Method | Example |
-|-----------|--------|---------|
-| Server → Client | Props | Pass static data like page title, content to client wrapper |
-| Client → Client | Props & callbacks | Dropdown receives `isOpen` and `onClose` from parent |
-| Client → Server | Not applicable | Client Components cannot call Server Components directly |
-| Layout → Page | URL params | Pages receive route params and search params as props |
-
-## Build Order and Dependencies
-
-### Suggested Build Order
-
-**Phase 1: Foundation (No dependencies)**
-1. Set up root layout with Tailwind CSS v4 configuration
-2. Add Inter font loading
-3. Apply gradient background styling
-4. Create basic page structure (app/page.tsx)
-
-**Phase 2: Static Content (Depends on Phase 1)**
-1. Create UI primitives (components/ui/Button.tsx if needed)
-2. Build page routes: app/who/page.tsx, app/what/page.tsx, app/book/page.tsx
-3. Add static text content (can extract to lib/content.ts later)
-
-**Phase 3: Layout Components (Depends on Phase 1)**
-1. Create Logo component (components/layout/Logo.tsx)
-2. Build basic Header component without dropdowns (components/layout/Header.tsx)
-3. Add fixed positioning and backdrop blur styling
-
-**Phase 4: Interactive Navigation (Depends on Phase 3)**
-1. Add dropdown component (components/ui/Dropdown.tsx or install Headless UI)
-2. Implement dropdown state management in Header
-3. Build Navigation component with dropdown menus
-4. Wire up navigation links to page routes
-5. Add click-outside-to-close behavior
-
-**Phase 5: Modals and Forms (Depends on Phase 4)**
-1. Create Dialog component (components/ui/Dialog.tsx)
-2. Build form components (components/forms/PublisherForm.tsx, etc.)
-3. Implement URL-synced modal state in Book page
-4. Wire up "Book" dropdown to open appropriate modal
-
-**Phase 6: Polish (Depends on all previous)**
-1. Add hover states and transitions
-2. Test all navigation paths
-3. Verify glassmorphism styling matches design
-4. Test responsive behavior at mobile and desktop sizes
-
-### Dependency Graph
-
-```
-Phase 1 (Foundation)
+Route Handler (/api/download/[book]/route.ts):
+  1. Middleware refreshes auth tokens via getClaims()
+  2. Route handler checks user authentication
+  3. Query book_requests for user's email + book type
+  4. Verify book_requests.verified = true
+  5. Generate signed URL from Supabase Storage (60s expiry)
+  6. Redirect user to signed URL
     ↓
-├─→ Phase 2 (Static Content)
-│
-└─→ Phase 3 (Layout Components)
-        ↓
-    Phase 4 (Interactive Navigation)
-        ↓
-    Phase 5 (Modals and Forms)
-        ↓
-    Phase 6 (Polish)
+Supabase Storage serves PDF via CDN
+    ↓
+Browser downloads file
 ```
 
-### Critical Path Components
+### Navigation Restructure Flow
 
-These components block other work if not completed:
+```
+BEFORE (v1.0):
+Header
+├── Who dropdown (disabled on /who)
+│   └── All items → /who
+├── What dropdown (disabled on /what)
+│   └── All items → /what
+└── Book dropdown
+    └── Opens dialogs
 
-1. **Root Layout (app/layout.tsx)** - Blocks all pages
-2. **Header Component** - Blocks navigation implementation
-3. **Dropdown Component** - Blocks interactive menus
-4. **Dialog Component** - Blocks form modals
-
-These can be built in parallel:
-- All page routes (who, what, book) can be built simultaneously
-- Form components (Publisher, Agent, Therapist) can be built in parallel
-- Logo and basic navigation can be built while pages are in progress
+AFTER (v2.0):
+Header
+├── Learn dropdown (merged Who + What content)
+│   ├── For Individuals → /my-relationships
+│   ├── For Couples → /my-relationships
+│   ├── For Families → /my-relationships
+│   ├── For Teams → /my-relationships
+│   ├── separator
+│   ├── Take a Test → ComingSoonDialog
+│   ├── See Results → ComingSoonDialog
+│   └── Tools and Actions → ComingSoonDialog
+├── My Info → /my-info
+├── My Relationships → /my-relationships
+├── Book dropdown
+│   └── Opens dialogs (now with form submission)
+└── Sign In → Auth flow (coming soon)
+```
 
 ## Scaling Considerations
 
 | Scale | Architecture Adjustments |
 |-------|--------------------------|
-| 0-10 pages | Current architecture is perfect. Keep all content as static Server Components. Consider moving page content to separate MDX files if content becomes large. |
-| 10-50 pages | Add route groups to organize pages by category. Consider a CMS for content management. Add a sitemap generation script. |
-| 50+ pages | Use MDX for content authoring. Implement content collections. Consider parallel routes for more complex UI. Add search functionality. |
+| 0-1k users | Current architecture is perfect. Static pages + Supabase. No changes needed. |
+| 1k-10k users | Add database indices on book_requests(email, verified). Consider caching signed URLs for repeated downloads (same user, same book within expiry window). |
+| 10k-100k users | Move email sending to Supabase Edge Functions for better rate limiting. Consider CDN for static assets. Database connection pooling via Supabase built-in. |
+| 100k+ users | Evaluate Supabase Pro for dedicated resources. Add Redis for session caching. Consider separating notification_signups to separate table with partitioning. |
 
 ### Scaling Priorities
 
-1. **First bottleneck:** Content management becomes tedious with many pages. **Fix:** Move to MDX files or a headless CMS like Sanity/Contentful. Keep the component architecture the same.
+1. **First bottleneck:** Database writes (notification signups, book requests). Fix: Add indices on frequently queried columns (email, type, verified). Consider rate limiting form submissions per IP.
 
-2. **Second bottleneck:** Too many navigation items in dropdown. **Fix:** Implement mega-menu pattern or sidebar navigation. This would require refactoring the Header component but the overall architecture remains sound.
+2. **Second bottleneck:** Email sending volume. Fix: Use Supabase Edge Functions with Resend for better deliverability. Implement queuing for non-critical emails. Add retry logic.
 
-3. **Third bottleneck:** Client bundle size grows with many interactive components. **Fix:** Implement dynamic imports with React.lazy for modals and forms. Split code by route automatically happens with App Router.
+3. **Third bottleneck:** PDF downloads (Storage bandwidth). Fix: Supabase Storage includes global CDN. Signed URLs are cached at edge. Consider longer expiry times (5-10 min) to reduce API calls for repeated downloads.
 
 ## Anti-Patterns
 
-### Anti-Pattern 1: Making Everything a Client Component
+### Anti-Pattern 1: Using getSession() in Server Components
 
-**What people do:** Add 'use client' to the root layout or to all page components "just in case" they need state later.
+**What people do:** Call `supabase.auth.getSession()` in Server Components to check authentication.
 
-**Why it's wrong:** Ships unnecessary JavaScript to the browser, loses Server Component benefits (direct data access, zero-bundle-size, SEO), slower initial page load.
+**Why it's wrong:** `getSession()` does NOT validate JWT signatures. An attacker can forge session cookies. Only `getClaims()` validates against Supabase's public keys.
 
-**Do this instead:** Start with Server Components by default. Only add 'use client' to the specific components that need interactivity. Push the client boundary down as far as possible.
-
-**Example:**
+**Do this instead:**
 ```typescript
-// ❌ WRONG - Everything is client-side
-'use client'
-export default function WhoPage() {
-  return <div>Static content that doesn't need client JavaScript</div>
+// BAD
+const { data: { session } } = await supabase.auth.getSession()
+if (session) { /* user is authenticated */ }
+
+// GOOD
+const { data: { user } } = await supabase.auth.getClaims()
+if (user) { /* user is authenticated AND validated */ }
+```
+
+### Anti-Pattern 2: Single Supabase Client for All Contexts
+
+**What people do:** Create one Supabase client and import it everywhere.
+
+**Why it's wrong:** Server Components can't write cookies (read-only). Browser client needs different cookie handling than server. Mixing contexts causes auth bugs.
+
+**Do this instead:**
+```typescript
+// BAD
+// lib/supabase.ts
+export const supabase = createClient(url, key)
+
+// GOOD
+// lib/supabase/client.ts (browser)
+export function createClient() { return createBrowserClient(...) }
+
+// lib/supabase/server.ts (server components)
+export async function createClient() { return createServerClient(...) }
+
+// lib/supabase/action.ts (server actions/routes)
+export async function createClient() { return createServerClient(...) }
+```
+
+### Anti-Pattern 3: Forgetting to Call cookies() in Server Actions
+
+**What people do:** Call Supabase directly in Server Actions without calling Next.js `cookies()` first.
+
+**Why it's wrong:** Next.js caches aggressively. Without `cookies()`, Server Actions may serve cached data to wrong users.
+
+**Do this instead:**
+```typescript
+// BAD
+'use server'
+export async function myAction() {
+  const supabase = await createClient()
+  const { data } = await supabase.from('table').select()
+  return data
 }
 
-// ✅ RIGHT - Server Component by default
-export default function WhoPage() {
-  return <div>Static content that doesn't need client JavaScript</div>
+// GOOD
+'use server'
+import { cookies } from 'next/headers'
+
+export async function myAction() {
+  await cookies() // Opts out of Next.js caching
+  const supabase = await createClient()
+  const { data } = await supabase.from('table').select()
+  return data
 }
 ```
 
-### Anti-Pattern 2: Prop Drilling Through Many Layers
+### Anti-Pattern 4: Public Buckets for User-Gated Content
 
-**What people do:** Pass dropdown state from Header → Navigation → Dropdown → MenuItem through 4+ levels of props.
+**What people do:** Store PDFs in public Supabase Storage bucket, rely on obscure URLs for "security."
 
-**Why it's wrong:** Becomes hard to maintain, makes components tightly coupled, difficult to refactor.
+**Why it's wrong:** Public bucket URLs are guessable. Anyone can download PDFs without verification.
 
-**Do this instead:** Use composition or a state management solution. For simple dropdown state, keep it in the component that owns it. For complex state, consider React Context (client-side only) or a library like Zustand.
-
-**Example:**
+**Do this instead:**
 ```typescript
-// ❌ WRONG - Deep prop drilling
-<Header openDropdown={open} setOpen={setOpen}>
-  <Navigation openDropdown={open} setOpen={setOpen}>
-    <Dropdown openDropdown={open} setOpen={setOpen}>
-      <MenuItem openDropdown={open} setOpen={setOpen}>
+// BAD
+// Storage bucket: public
+// Download: https://project.supabase.co/storage/v1/object/public/book-pdfs/agents.pdf
 
-// ✅ RIGHT - State lives where it's used
-function Dropdown() {
-  const [isOpen, setIsOpen] = useState(false)
-  return (
-    <Menu>
-      <MenuButton onClick={() => setIsOpen(!isOpen)} />
-      <MenuItems show={isOpen} />
-    </Menu>
-  )
-}
+// GOOD
+// Storage bucket: private
+// Download: Generate signed URL after verifying book_requests.verified
+const { data: signedUrl } = await supabase.storage
+  .from('book-pdfs')
+  .createSignedUrl('agents.pdf', 60)
 ```
 
-### Anti-Pattern 3: Mixing Inline Styles with Tailwind
+### Anti-Pattern 5: API Routes for Form Submissions
 
-**What people do:** Use both `className` with Tailwind utilities and `style` prop with inline CSS in the same component.
+**What people do:** Create API route for every form submission (notification signup, book request).
 
-**Why it's wrong:** Inconsistent styling approach, harder to maintain, can't leverage Tailwind's design system benefits.
+**Why it's wrong:** Server Actions are simpler, type-safe by default, integrate with React 19 hooks. API routes add unnecessary HTTP layer for internal operations.
 
-**Do this instead:** Use Tailwind utilities exclusively. If you need custom values, use Tailwind's arbitrary values syntax: `className="bg-[rgba(67,117,237,0.92)]"`
-
-**Example:**
+**Do this instead:**
 ```typescript
-// ❌ WRONG - Mixed approaches
-<div
-  className="rounded-xl p-4"
-  style={{ backgroundColor: 'rgba(255,255,255,0.77)' }}
->
-
-// ✅ RIGHT - Tailwind only
-<div className="rounded-xl p-4 bg-[rgba(255,255,255,0.77)]">
-```
-
-### Anti-Pattern 4: Not Using Link Component for Navigation
-
-**What people do:** Use regular `<a>` tags or `router.push()` for internal navigation.
-
-**Why it's wrong:** Loses prefetching benefits, causes full page reload, breaks the single-page app experience, layout re-renders unnecessarily.
-
-**Do this instead:** Use Next.js `<Link>` component for all internal navigation. It provides automatic prefetching and client-side transitions.
-
-**Example:**
-```typescript
-// ❌ WRONG - Full page reload
-<a href="/who">Who</a>
-
-// ❌ WRONG - Works but no prefetching
-onClick={() => router.push('/who')}
-
-// ✅ RIGHT - Prefetched client-side navigation
-import Link from 'next/link'
-<Link href="/who">Who</Link>
-```
-
-### Anti-Pattern 5: Creating Separate layout.tsx for Every Route
-
-**What people do:** Add a layout.tsx file in every route folder (app/who/layout.tsx, app/what/layout.tsx, etc.) even though they all render the same header.
-
-**Why it's wrong:** Duplicated code, harder to maintain, wastes the shared layout feature of App Router.
-
-**Do this instead:** Use a single root layout (app/layout.tsx) for shared UI like the header. Only create nested layouts when the layout actually differs for that route segment.
-
-**Example:**
-```typescript
-// ❌ WRONG - Duplicated layout
-// app/who/layout.tsx
-export default function WhoLayout({ children }) {
-  return <><Header />{children}</>
-}
-// app/what/layout.tsx
-export default function WhatLayout({ children }) {
-  return <><Header />{children}</>  // Same code!
+// BAD
+// app/api/notifications/route.ts
+export async function POST(req: Request) {
+  const body = await req.json()
+  // validate, insert to DB
 }
 
-// ✅ RIGHT - Single shared layout
-// app/layout.tsx
-export default function RootLayout({ children }) {
-  return (
-    <html>
-      <body>
-        <Header />
-        {children}  // Different page for each route
-      </body>
-    </html>
-  )
+// Client component
+const response = await fetch('/api/notifications', {
+  method: 'POST',
+  body: JSON.stringify({ email, name })
+})
+
+// GOOD
+// lib/actions/notifications.ts
+'use server'
+export async function submitNotification(formData: FormData) {
+  // insert to DB
 }
+
+// Client component
+import { submitNotification } from '@/lib/actions/notifications'
+const [state, formAction] = useActionState(submitNotification, null)
+<form action={formAction}>...</form>
 ```
 
 ## Integration Points
 
 ### External Services
 
-For this project, all functionality is static with visual-only forms (no API). If integration becomes necessary in the future:
-
 | Service | Integration Pattern | Notes |
 |---------|---------------------|-------|
-| Email API (SendGrid, Resend) | Server Action in app/actions | Call from Client Component form submission |
-| Analytics (Vercel Analytics) | Script in root layout | Client-side tracking |
-| CMS (Sanity, Contentful) | Fetch in Server Components | Can use ISR for content updates |
+| **Supabase Auth** | Middleware + Three-client pattern | Middleware refreshes tokens. Browser/server/action clients. Use getClaims() not getSession(). |
+| **Supabase Database** | Direct via Supabase client | PostgreSQL via Supabase client. RLS policies for auth. No ORM needed. |
+| **Supabase Storage** | Private buckets + signed URLs | Store PDFs in private bucket. Generate 60s signed URLs after auth check. |
+| **Email Sending** | Resend via Supabase Edge Function OR Supabase built-in | Option 1: Resend for custom templates. Option 2: Supabase auth emails for verification. Configure TokenHash in templates. |
 
 ### Internal Boundaries
 
 | Boundary | Communication | Notes |
 |----------|---------------|-------|
-| Root Layout ↔ Pages | children prop | Layout wraps all pages, pages are swapped on navigation |
-| Header ↔ Dropdowns | Props (isOpen, onClose) | State management for open/close |
-| Dropdown ↔ Menu Items | Headless UI context | If using Headless UI, context provides state automatically |
-| Book Page ↔ Dialogs | URL search params | Modals synchronized with URL for shareability |
+| **Client Components ↔ Server Actions** | Direct import + useActionState | Server Actions are 'use server' functions. Import directly in client components. React 19 useActionState hook for form state. |
+| **Server Components ↔ Database** | Direct Supabase query | Server Components can query database directly. No API layer needed for internal pages. |
+| **Client Components ↔ Route Handlers** | fetch() or redirect | Email verification callback (URL from email). PDF downloads (file serving). |
+| **Dialogs ↔ Forms** | Component composition | Extract form logic to components/forms/. Dialogs import and render forms. Keeps concerns separated. |
+| **Header ↔ New Pages** | Next.js Link component | Use <Link> for navigation. Disable dropdown on current page (existing pattern). |
+
+## Database Schema
+
+### Tables
+
+**notification_signups**
+```sql
+CREATE TABLE notification_signups (
+  id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+  email text NOT NULL UNIQUE,
+  name text NOT NULL,
+  created_at timestamptz DEFAULT now() NOT NULL
+);
+
+CREATE INDEX idx_notification_signups_email ON notification_signups(email);
+```
+
+**book_requests**
+```sql
+CREATE TABLE book_requests (
+  id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+  email text NOT NULL,
+  type text NOT NULL CHECK (type IN ('publishers', 'agents', 'therapists')),
+  verified boolean DEFAULT false NOT NULL,
+  token uuid DEFAULT gen_random_uuid() NOT NULL,
+  created_at timestamptz DEFAULT now() NOT NULL,
+  verified_at timestamptz
+);
+
+CREATE INDEX idx_book_requests_email_type ON book_requests(email, type);
+CREATE INDEX idx_book_requests_verified ON book_requests(verified) WHERE verified = true;
+```
+
+**Row Level Security (RLS)**
+```sql
+-- Enable RLS
+ALTER TABLE notification_signups ENABLE ROW LEVEL SECURITY;
+ALTER TABLE book_requests ENABLE ROW LEVEL SECURITY;
+
+-- notification_signups: Anyone can insert, only authenticated can read
+CREATE POLICY "Anyone can signup" ON notification_signups
+  FOR INSERT WITH CHECK (true);
+
+CREATE POLICY "Authenticated can read signups" ON notification_signups
+  FOR SELECT USING (auth.role() = 'authenticated');
+
+-- book_requests: Anyone can insert, users can read their own
+CREATE POLICY "Anyone can request books" ON book_requests
+  FOR INSERT WITH CHECK (true);
+
+CREATE POLICY "Users can read own requests" ON book_requests
+  FOR SELECT USING (auth.email() = email);
+
+CREATE POLICY "System can update verification" ON book_requests
+  FOR UPDATE USING (true)
+  WITH CHECK (true);
+```
+
+### Storage Buckets
+
+**book-pdfs (private)**
+```sql
+-- Create private bucket
+INSERT INTO storage.buckets (id, name, public)
+VALUES ('book-pdfs', 'book-pdfs', false);
+
+-- RLS policy: Only system can read (via signed URLs)
+CREATE POLICY "System access only" ON storage.objects
+  FOR SELECT USING (bucket_id = 'book-pdfs' AND auth.role() = 'authenticated');
+```
+
+## Environment Variables
+
+```bash
+# .env.local
+
+# Supabase Configuration (from Supabase Dashboard > Settings > API)
+NEXT_PUBLIC_SUPABASE_URL=https://your-project-ref.supabase.co
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+
+# Optional: If using Resend for custom emails
+RESEND_API_KEY=re_123456789
+
+# Site URL (for email verification redirects)
+NEXT_PUBLIC_SITE_URL=http://localhost:3000  # Development
+# NEXT_PUBLIC_SITE_URL=https://continua.com  # Production
+```
+
+## Build Order & Dependencies
+
+### Phase 1: Supabase Foundation
+1. Create Supabase project
+2. Set up environment variables (.env.local)
+3. Create database schema (migrations)
+4. Create storage bucket (book-pdfs, private)
+5. Create Supabase client utilities (lib/supabase/*.ts)
+6. Create middleware (middleware.ts)
+
+**Dependencies:** None. This must be done first.
+
+### Phase 2: Navigation Restructure
+1. Rename /who to /my-relationships
+2. Rename /what to /my-info
+3. Update Header component (merge dropdowns)
+4. Create ComingSoonDialog component
+5. Update all internal links
+
+**Dependencies:** Phase 1 (middleware for auth state in header)
+
+### Phase 3: Form Submission Infrastructure
+1. Create Server Actions (lib/actions/*.ts)
+2. Create form components (components/forms/*.ts)
+3. Update existing dialogs to use forms
+4. Add form validation
+
+**Dependencies:** Phase 1 (Supabase clients), Phase 2 (dialogs work)
+
+### Phase 4: Email Verification
+1. Configure Supabase email templates (Dashboard)
+2. Create /auth/confirm route handler
+3. Update book request Server Action to trigger email
+4. Test verification flow
+
+**Dependencies:** Phase 3 (form submissions work)
+
+### Phase 5: PDF Download
+1. Upload PDFs to Supabase Storage
+2. Create /api/download/[book] route handler
+3. Add download links to verified users
+4. Test signed URL generation
+
+**Dependencies:** Phase 4 (verification must work first)
 
 ## Sources
 
-### Official Documentation (HIGH confidence)
-- [Getting Started: Layouts and Pages | Next.js](https://nextjs.org/docs/app/getting-started/layouts-and-pages)
-- [Getting Started: Server and Client Components | Next.js](https://nextjs.org/docs/app/getting-started/server-and-client-components)
-- [Guides: Static Exports | Next.js](https://nextjs.org/docs/app/guides/static-exports)
-- [File-system conventions: Intercepting Routes | Next.js](https://nextjs.org/docs/app/api-reference/file-conventions/intercepting-routes)
-- [Dropdown Menu - Headless UI](https://headlessui.com/react/menu)
+**Architecture & Patterns:**
+- [Next.js App Router Documentation](https://nextjs.org/docs/app)
+- [Supabase Next.js Server-Side Auth Guide](https://supabase.com/docs/guides/auth/server-side/nextjs)
+- [Server Actions vs Route Handlers (Wisp CMS)](https://www.wisp.blog/blog/server-actions-vs-api-routes-in-nextjs-15-which-should-i-use)
+- [MakerKit: API Routes vs Server Actions](https://makerkit.dev/docs/next-supabase/how-to/api/api-routes-vs-server-actions)
 
-### Next.js 15 Guides and Tutorials (MEDIUM confidence)
-- [Next.js 15: App Router — A Complete Senior-Level Guide | Medium](https://medium.com/@livenapps/next-js-15-app-router-a-complete-senior-level-guide-0554a2b820f7)
-- [Ideaflow - Next.js 15 App Router Deep Dive](https://www.ideaflow.studio/en/blog/next-js-15-app-router-deep-dive-building-lightning-fast-multi-page-apps)
-- [Next.js 15 Advanced Patterns for 2026](https://johal.in/next-js-15-advanced-patterns-app-router-server-actions-and-caching-strategies-for-2026/)
+**Supabase Integration:**
+- [Supabase Auth with Next.js Guide](https://supabase.com/docs/guides/auth/auth-helpers/nextjs)
+- [Creating Supabase SSR Clients](https://supabase.com/docs/guides/auth/server-side/creating-a-client)
+- [Supabase Next.js User Management Tutorial](https://supabase.com/docs/guides/getting-started/tutorials/with-nextjs)
 
-### Component Patterns (MEDIUM confidence)
-- [A guide to Next.js layouts and nested layouts - LogRocket](https://blog.logrocket.com/guide-next-js-layouts-nested-layouts/)
-- [Shareable Modals in Next.js: URL-Synced UI Made Simple](https://javascript-conference.com/blog/shareable-modals-nextjs/)
-- [Dialog with Next.js App Router - Ariakit](https://ariakit.org/examples/dialog-next-router)
-- [Headless Component Pattern - Martin Fowler](https://martinfowler.com/articles/headless-component.html)
+**Email & Verification:**
+- [Supabase Email Templates](https://supabase.com/docs/guides/auth/auth-email-templates)
+- [Custom Auth Emails with Resend](https://supabase.com/docs/guides/functions/examples/auth-send-email-hook-react-email-resend)
+- [Resend + Supabase Edge Functions](https://resend.com/docs/send-with-supabase-edge-functions)
 
-### Project Structure (MEDIUM confidence)
-- [The Ultimate Guide to Organizing Your Next.js 15 Project Structure - Wisp CMS](https://www.wisp.blog/blog/the-ultimate-guide-to-organizing-your-nextjs-15-project-structure)
-- [Next js Folder Structure Best Practices for Scalable Applications (2026 Guide)](https://www.codebydeep.com/blog/next-js-folder-structure-best-practices-for-scalable-applications-2026-guide)
-- [Getting Started: Project Structure | Next.js](https://nextjs.org/docs/app/getting-started/project-structure)
+**Storage & File Serving:**
+- [Supabase Storage Downloads](https://supabase.com/docs/guides/storage/serving/downloads)
+- [Supabase Storage Buckets Guide](https://supabase.com/docs/guides/storage/buckets/fundamentals)
+
+**User Management & Database:**
+- [Supabase User Management](https://supabase.com/docs/guides/auth/managing-user-data)
+- [Supabase Auth Signup API](https://supabase.com/docs/reference/javascript/auth-signup)
 
 ---
-*Architecture research for: Continua multi-page informational website*
-*Researched: 2026-02-11*
+*Architecture research for: Continua v2.0 Supabase Integration*
+*Researched: 2026-02-15*
