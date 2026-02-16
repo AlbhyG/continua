@@ -8,6 +8,7 @@ import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
 import PublishersDialog from '@/components/dialogs/PublishersDialog'
 import AgentsDialog from '@/components/dialogs/AgentsDialog'
 import TherapistsDialog from '@/components/dialogs/TherapistsDialog'
+import SignupDialog from '@/components/dialogs/SignupDialog'
 
 const whoItems = [
   { href: '/who', label: 'Individuals' },
@@ -36,6 +37,7 @@ export default function Header() {
   const [showPublishers, setShowPublishers] = useState(false)
   const [showAgents, setShowAgents] = useState(false)
   const [showTherapists, setShowTherapists] = useState(false)
+  const [showSignup, setShowSignup] = useState(false)
 
   return (
     <>
@@ -165,9 +167,10 @@ export default function Header() {
           </Menu>
           <button
             type="button"
+            onClick={() => setShowSignup(true)}
             className="rounded-full bg-white/20 backdrop-blur px-4 py-1.5 text-sm font-bold text-white hover:bg-white/35 transition-colors"
           >
-            Sign In
+            Sign In / Up
           </button>
         </nav>
       </div>
@@ -176,6 +179,7 @@ export default function Header() {
     <PublishersDialog isOpen={showPublishers} onClose={() => setShowPublishers(false)} />
     <AgentsDialog isOpen={showAgents} onClose={() => setShowAgents(false)} />
     <TherapistsDialog isOpen={showTherapists} onClose={() => setShowTherapists(false)} />
+    <SignupDialog isOpen={showSignup} onClose={() => setShowSignup(false)} />
     </>
   )
 }
