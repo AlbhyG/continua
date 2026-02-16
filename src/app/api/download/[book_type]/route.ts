@@ -1,7 +1,5 @@
 import { NextRequest } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
-import { readFile } from 'fs/promises'
-import path from 'path'
 
 // Force dynamic rendering to prevent caching
 export const dynamic = 'force-dynamic'
@@ -78,19 +76,31 @@ export async function GET(
       console.error('Failed to log book download:', logError)
     }
 
-    // Read PDF file from private directory
-    const filePath = path.join(process.cwd(), 'private', 'books', `${book_type}.pdf`)
-    const fileBuffer = await readFile(filePath)
+    // Download PDF from Supabase Storage (private 'books' bucket)
+    const { data: fileData, error: storageError } = await supabase
+      .storage
+      .from('books')
+      .download(`${book_type}.pdf`)
 
-    // Return PDF with appropriate headers
-    // NOTE: Using email parameter for auth is acceptable for pre-launch placeholder PDFs.
-    // This will be replaced with session-based auth when implementing the full download flow.
-    return new Response(fileBuffer, {
+    if (storageError || !fileData) {
+      console.error('Storage download error:', storageError)
+      return new Response(
+        JSON.stringify({ error: 'Book file not found' }),
+        {
+          status: 404,
+          headers: { 'Content-Type': 'application/json' }
+        }
+      )
+    }
+
+    const arrayBuffer = await fileData.arrayBuffer()
+
+    return new Response(arrayBuffer, {
       status: 200,
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition': `attachment; filename="continua-${book_type}-book.pdf"`,
-        'Content-Length': fileBuffer.length.toString(),
+        'Content-Length': arrayBuffer.byteLength.toString(),
       },
     })
   } catch (error) {
