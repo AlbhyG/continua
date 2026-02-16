@@ -98,10 +98,11 @@ Plans:
   3. User can complete verification by clicking button on confirmation page
   4. User with expired verification link sees clear error message with re-request guidance
   5. Verification tokens survive email link prefetching (corporate security scanners don't consume them)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 07-01: TBD
+- [ ] 07-01-PLAN.md — Database migration, token generation utility, React Email template, and send-verification email function
+- [ ] 07-02-PLAN.md — Server Actions (request-verification + verify-email), two-step verification page, Book dialog wiring, end-to-end checkpoint
 
 #### Phase 8: Book PDF Downloads
 **Goal**: Verified users can download Book PDFs for Publishers, Agents, and Therapists
