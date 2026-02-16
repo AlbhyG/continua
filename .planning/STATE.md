@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-15)
 ## Current Position
 
 Phase: 7 of 9 (Email Verification Flow)
-Plan: Not started
-Status: Not started
-Last activity: 2026-02-16 — Completed Phase 6 (Notification Signup)
+Plan: 01 of 03 (Backend Infrastructure)
+Status: In progress
+Last activity: 2026-02-16 — Completed 07-01 (Backend Infrastructure)
 
 Progress: [██████░░░░] 67% (6/9 phases complete)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10 (6 from v1.0, 4 from v2.0)
-- Average duration: 5.3 min
-- Total execution time: 0.91 hours
+- Total plans completed: 11 (6 from v1.0, 5 from v2.0)
+- Average duration: 5.1 min
+- Total execution time: 0.95 hours
 
 **By Phase:**
 
@@ -33,9 +33,10 @@ Progress: [██████░░░░] 67% (6/9 phases complete)
 | 4. Book Dialogs | 1 | - | 1.6 min |
 | 5. Supabase Foundation | 2 | 25.1 min | 12.6 min |
 | 6. Notification Signup | 2 | 8.9 min | 4.5 min |
+| 7. Email Verification Flow | 1 | 2.6 min | 2.6 min |
 
 **Recent Trend:**
-- v2.0 plans: 05-01 (2.1 min), 05-02 (23.0 min), 06-01 (1.9 min), 06-02 (7.0 min)
+- v2.0 plans: 05-01 (2.1 min), 05-02 (23.0 min), 06-01 (1.9 min), 06-02 (7.0 min), 07-01 (2.6 min)
 
 *Updated after each plan completion*
 
@@ -60,6 +61,11 @@ Recent decisions affecting current work:
 - 06: Insert + unique violation catch instead of upsert (avoids RLS SELECT policy requirement)
 - 06-02: Controlled inputs to preserve field values through Server Action submission cycle
 - 06-02: Validate on blur first, then live on change after field touched
+- 07-01: Use crypto.randomBytes(32) with base64url encoding for 43-character URL-safe tokens with 256 bits of entropy
+- 07-01: Add unique constraint on verification_token to prevent collisions at database level
+- 07-01: Use partial index (WHERE verification_token IS NOT NULL) for efficient token lookups
+- 07-01: Add RLS SELECT policy for anon role to allow token verification without service role
+- 07-01: Install only @react-email/components (not react-email dev server) since Resend renders React Email directly
 
 ### Pending Todos
 
@@ -72,9 +78,9 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-16
-Stopped at: Phase 6 complete, Phase 7 not started
-Resume file: .planning/ROADMAP.md
+Stopped at: Completed 07-01-PLAN.md (Backend Infrastructure for Email Verification)
+Resume file: .planning/phases/07-email-verification-flow/07-02-PLAN.md
 
 ---
 *State initialized: 2026-02-11 for v1.0*
-*Last updated: 2026-02-16 after Phase 6 complete*
+*Last updated: 2026-02-16 after 07-01 complete*
