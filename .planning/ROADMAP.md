@@ -69,8 +69,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 05-01-PLAN.md — Install Supabase/Resend packages and create client utilities for browser, server, and middleware contexts
-- [ ] 05-02-PLAN.md — Database migration SQL with RLS, Next.js middleware, and user account setup checkpoint
+- [x] 05-01-PLAN.md — Install Supabase/Resend packages and create client utilities for browser, server, and middleware contexts
+- [x] 05-02-PLAN.md — Database migration SQL with RLS, Next.js middleware, and user account setup checkpoint
 
 #### Phase 6: Notification Signup
 **Goal**: Users can sign up for launch notifications with validated email addresses
@@ -85,8 +85,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 06-01-PLAN.md — Install Zod, create shared validation schema, Server Action for signup upsert, RLS UPDATE policy
-- [ ] 06-02-PLAN.md — SignupDialog component with on-blur validation and ARIA errors, wire Header button, end-to-end verification
+- [x] 06-01-PLAN.md — Install Zod, create shared validation schema, Server Action for signup upsert, RLS UPDATE policy
+- [x] 06-02-PLAN.md — SignupDialog component with on-blur validation and ARIA errors, wire Header button, end-to-end verification
 
 #### Phase 7: Email Verification Flow
 **Goal**: Users verify email addresses through two-step confirmation before accessing gated content
@@ -145,12 +145,12 @@ Phases execute in numeric order: 5 → 6 → 7 → 8 → 9
 | 2. Interactive Navigation | v1.0 | 1/1 | Complete | 2026-02-11 |
 | 3. Content Pages & SEO | v1.0 | 2/2 | Complete | 2026-02-11 |
 | 4. Book Dialogs | v1.0 | 1/1 | Complete | 2026-02-11 |
-| 5. Supabase Foundation | v2.0 | 0/2 | In progress | - |
-| 6. Notification Signup | v2.0 | 0/0 | Not started | - |
+| 5. Supabase Foundation | v2.0 | 2/2 | Complete | 2026-02-16 |
+| 6. Notification Signup | v2.0 | 2/2 | Complete | 2026-02-16 |
 | 7. Email Verification Flow | v2.0 | 0/0 | Not started | - |
 | 8. Book PDF Downloads | v2.0 | 0/0 | Not started | - |
 | 9. Navigation & Content Restructure | v2.0 | 0/0 | Not started | - |
 
 ---
 *Roadmap created: 2026-02-11 for v1.0*
-*Last updated: 2026-02-15 after Phase 5 plans created*
+*Last updated: 2026-02-16 after Phase 6 complete*
