@@ -53,15 +53,23 @@ export default function SignupDialog({ isOpen, onClose }: SignupDialogProps) {
     }
   }, [isOpen])
 
-  const handleBlur = (field: 'name' | 'email', value: string) => {
-    setTouched((prev) => ({ ...prev, [field]: true }))
-
+  const validate = (field: 'name' | 'email', value: string) => {
     const result = signupSchema.shape[field].safeParse(value)
     if (!result.success) {
-      const errorMessage = result.error.issues[0]?.message || ''
-      setClientErrors((prev) => ({ ...prev, [field]: errorMessage }))
+      setClientErrors((prev) => ({ ...prev, [field]: result.error.issues[0]?.message || '' }))
     } else {
       setClientErrors((prev) => ({ ...prev, [field]: '' }))
+    }
+  }
+
+  const handleBlur = (field: 'name' | 'email', value: string) => {
+    setTouched((prev) => ({ ...prev, [field]: true }))
+    validate(field, value)
+  }
+
+  const handleChange = (field: 'name' | 'email', value: string) => {
+    if (touched[field]) {
+      validate(field, value)
     }
   }
 
@@ -118,6 +126,7 @@ export default function SignupDialog({ isOpen, onClose }: SignupDialogProps) {
                 id="name"
                 name="name"
                 onBlur={(e) => handleBlur('name', e.target.value)}
+                onChange={(e) => handleChange('name', e.target.value)}
                 aria-invalid={touched.name && !!clientErrors.name}
                 aria-describedby={touched.name && clientErrors.name ? 'name-error' : undefined}
                 className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent"
@@ -143,6 +152,7 @@ export default function SignupDialog({ isOpen, onClose }: SignupDialogProps) {
                 id="email"
                 name="email"
                 onBlur={(e) => handleBlur('email', e.target.value)}
+                onChange={(e) => handleChange('email', e.target.value)}
                 aria-invalid={touched.email && !!clientErrors.email}
                 aria-describedby={touched.email && clientErrors.email ? 'email-error' : undefined}
                 className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent"
