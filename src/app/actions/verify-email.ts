@@ -31,43 +31,30 @@ export async function verifyEmailAction(
 
     const supabase = await createClient()
 
-    // Query contact by verification token
-    const { data: contact, error: queryError } = await supabase
-      .from('contacts')
-      .select('id, verification_token_expires_at')
-      .eq('verification_token', token)
-      .single()
+    // Call the SECURITY DEFINER function to verify atomically
+    // This bypasses RLS so we can clear the token in the same operation
+    const { data, error: rpcError } = await supabase.rpc('verify_email_token', {
+      token_value: token,
+    })
 
-    if (queryError || !contact) {
+    if (rpcError) {
+      console.error('Verify email RPC error:', rpcError)
+      return {
+        error: 'Something went wrong. Please try again.',
+      }
+    }
+
+    const result = data as { status: string }
+
+    if (result.status === 'invalid') {
       return {
         error: 'This verification link is invalid or has already been used. Please request a new Book download to receive a fresh link.',
       }
     }
 
-    // Check if token is expired
-    const expiresAt = new Date(contact.verification_token_expires_at)
-    const now = new Date()
-
-    if (expiresAt < now) {
+    if (result.status === 'expired') {
       return {
         error: 'This verification link has expired. Please request a new Book download to receive a fresh link.',
-      }
-    }
-
-    // Mark email as verified and clear token
-    const { error: updateError } = await supabase
-      .from('contacts')
-      .update({
-        email_verified: true,
-        verification_token: null,
-        verification_token_expires_at: null,
-      })
-      .eq('id', contact.id)
-
-    if (updateError) {
-      console.error('Verify email update error:', JSON.stringify(updateError, null, 2))
-      return {
-        error: 'Something went wrong. Please try again.',
       }
     }
 
