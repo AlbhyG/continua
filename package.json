@@ -17,7 +17,8 @@
     "react": "^19",
     "react-dom": "^19",
     "resend": "^6.9.2",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.1.18",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@types/node": "^22",
