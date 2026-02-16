@@ -66,10 +66,11 @@ Plans:
   3. Production email delivery works via custom SMTP provider
   4. All existing static routes remain static (no build errors from dynamic collisions)
   5. Session refresh middleware validates JWT signatures on every request
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 05-01: TBD
+- [ ] 05-01-PLAN.md — Install Supabase/Resend packages and create client utilities for browser, server, and middleware contexts
+- [ ] 05-02-PLAN.md — Database migration SQL with RLS, Next.js middleware, and user account setup checkpoint
 
 #### Phase 6: Notification Signup
 **Goal**: Users can sign up for launch notifications with validated email addresses
@@ -143,7 +144,7 @@ Phases execute in numeric order: 5 → 6 → 7 → 8 → 9
 | 2. Interactive Navigation | v1.0 | 1/1 | Complete | 2026-02-11 |
 | 3. Content Pages & SEO | v1.0 | 2/2 | Complete | 2026-02-11 |
 | 4. Book Dialogs | v1.0 | 1/1 | Complete | 2026-02-11 |
-| 5. Supabase Foundation | v2.0 | 0/0 | Not started | - |
+| 5. Supabase Foundation | v2.0 | 0/2 | In progress | - |
 | 6. Notification Signup | v2.0 | 0/0 | Not started | - |
 | 7. Email Verification Flow | v2.0 | 0/0 | Not started | - |
 | 8. Book PDF Downloads | v2.0 | 0/0 | Not started | - |
@@ -151,4 +152,4 @@ Phases execute in numeric order: 5 → 6 → 7 → 8 → 9
 
 ---
 *Roadmap created: 2026-02-11 for v1.0*
-*Last updated: 2026-02-15 after v2.0 roadmap defined*
+*Last updated: 2026-02-15 after Phase 5 plans created*
