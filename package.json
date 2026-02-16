@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
+    "@supabase/ssr": "^0.8.0",
+    "@supabase/supabase-js": "^2.95.3",
     "@tailwindcss/postcss": "^4.1.18",
     "next": "^15",
     "react": "^19",
     "react-dom": "^19",
+    "resend": "^6.9.2",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
