@@ -58,7 +58,9 @@ export default function AgentsDialog({ isOpen, onClose }: AgentsDialogProps) {
     }
   }
 
-  const isValid = touched.name && touched.email && !clientErrors.name && !clientErrors.email
+  const isValid =
+    signupSchema.shape.name.safeParse(values.name).success &&
+    signupSchema.shape.email.safeParse(values.email).success
 
   // Show confirmation view if successful
   if (state?.success) {
