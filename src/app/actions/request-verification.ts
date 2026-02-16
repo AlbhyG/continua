@@ -49,64 +49,27 @@ export async function requestVerificationAction(
     const token = generateVerificationToken()
     const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString()
 
-    // Try to insert new contact with verification token
-    const { data: insertData, error: insertError } = await supabase
-      .from('contacts')
-      .insert({
-        email,
-        name,
-        verification_token: token,
-        verification_token_expires_at: expiresAt,
-      })
-      .select('id')
-      .single()
-
-    let contactId: string
-
-    if (insertError) {
-      // Unique violation (duplicate email) — update existing contact
-      if (insertError.code === '23505') {
-        const { data: updateData, error: updateError } = await supabase
-          .from('contacts')
-          .update({
-            verification_token: token,
-            verification_token_expires_at: expiresAt,
-          })
-          .eq('email', email)
-          .select('id')
-          .single()
-
-        if (updateError) {
-          console.error('Update contact error:', JSON.stringify(updateError, null, 2))
-          return {
-            errors: { form: ['Something went wrong. Please try again.'] },
-          }
-        }
-
-        contactId = updateData.id
-      } else {
-        console.error('Insert contact error:', JSON.stringify(insertError, null, 2))
-        return {
-          errors: { form: ['Something went wrong. Please try again.'] },
-        }
+    // Upsert contact and book request via RPC (SECURITY DEFINER bypasses RLS).
+    // Direct INSERT/UPDATE via PostgREST fails when an existing contact has
+    // email_verified=false AND verification_token=NULL — neither SELECT policy
+    // matches, so PostgREST can't find the row to update.
+    const { data: rpcData, error: rpcError } = await supabase.rpc(
+      'upsert_contact_verification',
+      {
+        p_email: email,
+        p_name: name,
+        p_token: token,
+        p_expires_at: expiresAt,
+        p_book_type: book_type,
       }
-    } else {
-      contactId = insertData.id
-    }
+    )
 
-    // Insert book request (catch duplicate silently)
-    await supabase
-      .from('book_requests')
-      .insert({
-        contact_id: contactId,
-        book_type,
-      })
-      .then(({ error }) => {
-        // Ignore duplicate key violations (user already requested this book)
-        if (error && error.code !== '23505') {
-          console.error('Book request insert error:', JSON.stringify(error, null, 2))
-        }
-      })
+    if (rpcError) {
+      console.error('Upsert contact RPC error:', JSON.stringify(rpcError, null, 2))
+      return {
+        errors: { form: ['Something went wrong. Please try again.'] },
+      }
+    }
 
     // Send verification email
     await sendVerificationEmail({
