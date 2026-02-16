@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 
@@ -25,6 +26,9 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <footer className="max-w-[375px] md:max-w-[720px] mx-auto px-6 py-8 text-[14px] opacity-70">
+          <Link href="/privacy" className="underline hover:opacity-100 transition-opacity">Privacy Policy</Link>
+        </footer>
       </body>
     </html>
   );
