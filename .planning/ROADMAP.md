@@ -131,10 +131,11 @@ Plans:
   5. User visiting old URLs (/who, /what) is redirected to new pages without 404 errors
   6. Site layout renders correctly on tablet (768px) and desktop (1024px+) screen sizes
   7. Home page displays updated copy "The Personality Continua"
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 09-01: TBD
+- [ ] 09-01-PLAN.md — Learn dropdown with Coming Soon items, URL redirects, home page copy update
+- [ ] 09-02-PLAN.md — My Relationships and My Info content pages, responsive layout optimization
 
 ## Progress
 
@@ -155,4 +156,4 @@ Phases execute in numeric order: 5 → 6 → 7 → 8 → 9
 
 ---
 *Roadmap created: 2026-02-11 for v1.0*
-*Last updated: 2026-02-16 after Phase 6 complete*
+*Last updated: 2026-02-16 after Phase 9 planned*
