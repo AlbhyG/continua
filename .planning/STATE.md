@@ -60,9 +60,9 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-15
-Stopped at: v2.0 roadmap created, ready for Phase 5 planning
-Resume file: None
+Stopped at: Phase 5 context gathered
+Resume file: .planning/phases/05-supabase-foundation/05-CONTEXT.md
 
 ---
 *State initialized: 2026-02-11 for v1.0*
-*Last updated: 2026-02-15 after v2.0 roadmap created*
+*Last updated: 2026-02-15 after Phase 5 context gathered*
