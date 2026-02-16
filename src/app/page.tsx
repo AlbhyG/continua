@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="max-w-[375px] md:max-w-[720px] mx-auto px-6 pt-20 pb-12">
       <h1 className="text-[48px] md:text-[64px] leading-[1.2] font-bold mb-6">
-        How can we improve the human condition one person, one couple, one family, and one office at a time?
+        The Personality Continua
       </h1>
       <div className="text-[18px] md:text-[20px] leading-[1.6] space-y-5">
         <p>

@@ -2,14 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Who is Continua For? | Continua',
-  description: 'Continua helps individuals, couples, families, and teams understand personality patterns across different contexts.'
+  title: 'My Relationships | Continua',
+  description: 'Understand personality patterns in your relationships. See how Continua helps couples, families, and teams transform differences into complementarity.'
 }
 
-export default function WhoPage() {
+export default function MyRelationshipsPage() {
   return (
     <main className="max-w-[375px] md:max-w-[720px] mx-auto px-6 pt-20 pb-12">
-      <h1 className="text-[32px] font-bold mb-8">Who is Continua For?</h1>
+      <h1 className="text-[32px] font-bold mb-8">My Relationships</h1>
       <section className="space-y-8">
         <div>
           <h2 className="text-[24px] font-bold mb-3">For Individuals</h2>
@@ -37,7 +37,7 @@ export default function WhoPage() {
         </div>
       </section>
       <p className="text-[18px] md:text-[20px] leading-[1.6] mt-8 italic">
-        Want to see how it works? Check out <Link href="/what" className="underline hover:text-accent transition-colors">What</Link> to learn about taking assessments, viewing results, and exploring your personality coordinates over time.
+        Want to learn more about yourself? Check out <Link href="/my-info" className="underline hover:text-accent transition-colors">My Info</Link> to explore personality assessments and your personal profile.
       </p>
     </main>
   );

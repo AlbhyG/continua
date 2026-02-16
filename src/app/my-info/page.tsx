@@ -2,14 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'What Does Continua Do? | Continua',
-  description: 'Take personality assessments, see your results across contexts, and get personalized tools and actions for growth.'
+  title: 'My Info | Continua',
+  description: 'Understand your personality patterns across different contexts. Take assessments, see results, and get personalized insights with Continua.'
 }
 
-export default function WhatPage() {
+export default function MyInfoPage() {
   return (
     <main className="max-w-[375px] md:max-w-[720px] mx-auto px-6 pt-20 pb-12">
-      <h1 className="text-[32px] font-bold mb-8">What Does Continua Do?</h1>
+      <h1 className="text-[32px] font-bold mb-8">My Info</h1>
       <section className="space-y-8">
         <div>
           <h2 className="text-[24px] font-bold mb-3">Take Assessments</h2>
@@ -37,7 +37,7 @@ export default function WhatPage() {
         </div>
       </section>
       <p className="text-[18px] md:text-[20px] leading-[1.6] mt-8 italic">
-        Check out <Link href="/who" className="underline hover:text-accent transition-colors">Who</Link> to see how Continua works for individuals, couples, families, and teams.
+        Check out <Link href="/my-relationships" className="underline hover:text-accent transition-colors">My Relationships</Link> to see how Continua works for couples, families, and teams.
       </p>
     </main>
   );
