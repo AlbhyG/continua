@@ -113,10 +113,11 @@ Plans:
   2. User without verified email cannot access PDF download URLs (authentication gate works)
   3. Book download requests are logged to database for analytics
   4. PDF files are served securely (not directly accessible from /public/)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 08-01: TBD
+- [ ] 08-01-PLAN.md — Database migration (book_downloads table, RPC update), authenticated Route Handler, and placeholder PDFs
+- [ ] 08-02-PLAN.md — Verification success download link, Agents/Therapists dialog forms, end-to-end verification
 
 #### Phase 9: Navigation & Content Restructure
 **Goal**: Restructured navigation with new content pages and Coming Soon indicators
