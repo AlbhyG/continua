@@ -10,25 +10,7 @@ interface SignupDialogProps {
   onClose: () => void
 }
 
-function SubmitButton({ isValid }: { isValid: boolean }) {
-  const [isPending, setIsPending] = useState(false)
-
-  useEffect(() => {
-    const form = document.querySelector('form')
-    if (!form) return
-
-    const handleSubmit = () => setIsPending(true)
-    const handleReset = () => setIsPending(false)
-
-    form.addEventListener('submit', handleSubmit)
-    form.addEventListener('reset', handleReset)
-
-    return () => {
-      form.removeEventListener('submit', handleSubmit)
-      form.removeEventListener('reset', handleReset)
-    }
-  }, [])
-
+function SubmitButton({ isValid, isPending }: { isValid: boolean; isPending: boolean }) {
   return (
     <button
       type="submit"
@@ -42,12 +24,14 @@ function SubmitButton({ isValid }: { isValid: boolean }) {
 
 export default function SignupDialog({ isOpen, onClose }: SignupDialogProps) {
   const [state, formAction, isPending] = useActionState<SignupState, FormData>(signupAction, null)
+  const [values, setValues] = useState({ name: '', email: '' })
   const [touched, setTouched] = useState({ name: false, email: false })
   const [clientErrors, setClientErrors] = useState({ name: '', email: '' })
 
   // Reset form state when dialog closes
   useEffect(() => {
     if (!isOpen) {
+      setValues({ name: '', email: '' })
       setTouched({ name: false, email: false })
       setClientErrors({ name: '', email: '' })
     }
@@ -68,6 +52,7 @@ export default function SignupDialog({ isOpen, onClose }: SignupDialogProps) {
   }
 
   const handleChange = (field: 'name' | 'email', value: string) => {
+    setValues((prev) => ({ ...prev, [field]: value }))
     if (touched[field]) {
       validate(field, value)
     }
@@ -125,6 +110,7 @@ export default function SignupDialog({ isOpen, onClose }: SignupDialogProps) {
                 type="text"
                 id="name"
                 name="name"
+                value={values.name}
                 onBlur={(e) => handleBlur('name', e.target.value)}
                 onChange={(e) => handleChange('name', e.target.value)}
                 aria-invalid={touched.name && !!clientErrors.name}
@@ -151,6 +137,7 @@ export default function SignupDialog({ isOpen, onClose }: SignupDialogProps) {
                 type="email"
                 id="email"
                 name="email"
+                value={values.email}
                 onBlur={(e) => handleBlur('email', e.target.value)}
                 onChange={(e) => handleChange('email', e.target.value)}
                 aria-invalid={touched.email && !!clientErrors.email}
@@ -179,7 +166,7 @@ export default function SignupDialog({ isOpen, onClose }: SignupDialogProps) {
               </div>
             )}
 
-            <SubmitButton isValid={isValid} />
+            <SubmitButton isValid={isValid} isPending={isPending} />
           </form>
         </DialogPanel>
       </div>

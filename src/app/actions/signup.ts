@@ -33,17 +33,18 @@ export async function signupAction(
     const supabase = await createClient()
     const { error } = await supabase
       .from('contacts')
-      .upsert(
-        {
-          email,
-          name,
-          signed_up_at: new Date().toISOString(),
-        },
-        { onConflict: 'email' }
-      )
+      .insert({
+        email,
+        name,
+        signed_up_at: new Date().toISOString(),
+      })
 
     if (error) {
-      console.error('Signup database error:', error)
+      // Unique violation (duplicate email) — succeed silently (privacy-safe)
+      if (error.code === '23505') {
+        return { success: true }
+      }
+      console.error('Signup database error:', JSON.stringify(error, null, 2))
       return {
         errors: { form: ['Something went wrong. Please try again.'] },
       }
