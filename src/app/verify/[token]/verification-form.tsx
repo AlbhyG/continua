@@ -12,14 +12,32 @@ export default function VerificationForm({ token }: VerificationFormProps) {
 
   // Success state
   if (state?.success) {
+    // Check if we have download info
+    const hasDownloadInfo = !!(state.email && state.bookType)
+
     return (
       <div className="max-w-md w-full rounded-2xl bg-white/95 backdrop-blur shadow-lg p-8">
         <div className="text-center">
           <div className="text-5xl mb-4">✓</div>
           <h1 className="text-2xl font-bold text-green-600 mb-4">Email Verified!</h1>
-          <p className="text-gray-600">
-            Your email has been verified successfully. You'll be able to download your Book shortly.
-          </p>
+          {hasDownloadInfo && state.email && state.bookType ? (
+            <div className="space-y-4">
+              <p className="text-gray-600">
+                Your email has been verified successfully. Click the button below to download your Book.
+              </p>
+              <a
+                href={`/api/download/${state.bookType}?email=${encodeURIComponent(state.email)}`}
+                download
+                className="inline-block rounded-full bg-accent text-white font-bold py-3 px-8 hover:bg-accent/90 transition-colors"
+              >
+                Download {state.bookType.charAt(0).toUpperCase() + state.bookType.slice(1)} Book PDF
+              </a>
+            </div>
+          ) : (
+            <p className="text-gray-600">
+              Your email has been verified successfully. You'll be able to download your Book shortly.
+            </p>
+          )}
         </div>
       </div>
     )

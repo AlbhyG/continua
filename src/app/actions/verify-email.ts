@@ -6,6 +6,8 @@ import { isValidTokenFormat } from '@/lib/tokens/generate'
 type VerifyEmailState = {
   success?: boolean
   error?: string
+  email?: string
+  bookType?: string
 } | null
 
 export async function verifyEmailAction(
@@ -44,7 +46,7 @@ export async function verifyEmailAction(
       }
     }
 
-    const result = data as { status: string }
+    const result = data as { status: string; email?: string; book_type?: string }
 
     if (result.status === 'invalid') {
       return {
@@ -58,7 +60,13 @@ export async function verifyEmailAction(
       }
     }
 
-    return { success: true }
+    // Extract email and book_type from RPC response (from 08-01 updates)
+    // Return them for download link construction
+    return {
+      success: true,
+      email: result.email,
+      bookType: result.book_type
+    }
   } catch (err) {
     console.error('Verify email unexpected error:', err)
     return {
