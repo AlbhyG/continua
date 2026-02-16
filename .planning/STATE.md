@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-15)
 ## Current Position
 
 Phase: 5 of 9 (Supabase Foundation)
-Plan: 02 of 03
+Plan: 03 of 03
 Status: In progress
-Last activity: 2026-02-16 — Completed plan 05-01 (Supabase & Resend client utilities)
+Last activity: 2026-02-16 — Completed plan 05-02 (Database migration & account setup)
 
-Progress: [████░░░░░░] 44% (4/9 phases complete from v1.0, Phase 5: 1/3 plans complete)
+Progress: [████░░░░░░] 44% (4/9 phases complete from v1.0, Phase 5: 2/3 plans complete)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7 (6 from v1.0, 1 from v2.0)
-- Average duration: 1.7 min
-- Total execution time: 0.19 hours
+- Total plans completed: 8 (6 from v1.0, 2 from v2.0)
+- Average duration: 5.6 min
+- Total execution time: 0.76 hours
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [████░░░░░░] 44% (4/9 phases complete from v1.0, P
 | 2. Interactive Navigation | 1 | - | 1.6 min |
 | 3. Content Pages & SEO | 2 | - | 1.6 min |
 | 4. Book Dialogs | 1 | - | 1.6 min |
-| 5. Supabase Foundation | 1 | 2.1 min | 2.1 min |
+| 5. Supabase Foundation | 2 | 25.1 min | 12.6 min |
 
 **Recent Trend:**
 - Last 5 plans: Not tracked individually for v1.0
-- v2.0 started: 05-01 completed in 2.1 min (127s)
+- v2.0 plans: 05-01 (2.1 min / 127s), 05-02 (23.0 min / 1380s)
 
 *Updated after each plan completion*
 
@@ -51,6 +51,9 @@ Recent decisions affecting current work:
 - v2.0: Placeholder PDFs for Book downloads (wire verification flow now, swap real PDFs later)
 - 05-01: Use getUser() instead of getSession() in middleware for JWT validation (stronger security)
 - 05-01: Separate client modules for browser, server, and middleware contexts (Next.js requirement)
+- 05-02: Use functional index LOWER(email) for case-insensitive uniqueness (prevents duplicate emails)
+- 05-02: Deploy migration via Supabase CLI (npx supabase db push) instead of SQL Editor (more reproducible)
+- 05-02: Resend domain verification is non-blocking (DNS propagation 24-48h, can proceed with development)
 
 ### Pending Todos
 
@@ -63,9 +66,9 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-16
-Stopped at: Completed 05-01-PLAN.md (Supabase & Resend client utilities)
-Resume file: .planning/phases/05-supabase-foundation/05-01-SUMMARY.md
+Stopped at: Completed 05-02-PLAN.md (Database migration & account setup)
+Resume file: .planning/phases/05-supabase-foundation/05-02-SUMMARY.md
 
 ---
 *State initialized: 2026-02-11 for v1.0*
-*Last updated: 2026-02-16 after completing 05-01-PLAN.md*
+*Last updated: 2026-02-16 after completing 05-02-PLAN.md*
