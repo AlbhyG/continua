@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-15)
 
 **Core value:** Visitors understand what Continua is, who it's for, and what it does — clearly enough to want to use it when the product launches.
-**Current focus:** Phase 7 - Email Verification Flow
+**Current focus:** Phase 8 - Book PDF Downloads
 
 ## Current Position
 
-Phase: 7 of 9 (Email Verification Flow)
-Plan: 02 of 03 (Email Verification Flow)
+Phase: 8 of 9 (Book PDF Downloads)
+Plan: 01 of 02 (Book PDF Downloads Backend)
 Status: In progress
-Last activity: 2026-02-16 — Completed 07-02 (Email Verification Flow)
+Last activity: 2026-02-16 — Completed 08-01 (Book PDF Downloads Backend)
 
-Progress: [██████░░░░] 67% (6/9 phases complete)
+Progress: [███████░░░] 78% (7/9 phases complete)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 12 (6 from v1.0, 6 from v2.0)
-- Average duration: 22.2 min
-- Total execution time: 4.44 hours
+- Total plans completed: 13 (6 from v1.0, 7 from v2.0)
+- Average duration: 20.6 min
+- Total execution time: 4.47 hours
 
 **By Phase:**
 
@@ -34,9 +34,10 @@ Progress: [██████░░░░] 67% (6/9 phases complete)
 | 5. Supabase Foundation | 2 | 25.1 min | 12.6 min |
 | 6. Notification Signup | 2 | 8.9 min | 4.5 min |
 | 7. Email Verification Flow | 2 | 207.4 min | 103.7 min |
+| 8. Book PDF Downloads | 1 | 2.6 min | 2.6 min |
 
 **Recent Trend:**
-- v2.0 plans: 05-01 (2.1 min), 05-02 (23.0 min), 06-01 (1.9 min), 06-02 (7.0 min), 07-01 (2.6 min), 07-02 (204.8 min)
+- v2.0 plans: 05-01 (2.1 min), 05-02 (23.0 min), 06-01 (1.9 min), 06-02 (7.0 min), 07-01 (2.6 min), 07-02 (204.8 min), 08-01 (2.6 min)
 
 *Updated after each plan completion*
 
@@ -68,6 +69,10 @@ Recent decisions affecting current work:
 - 07-01: Install only @react-email/components (not react-email dev server) since Resend renders React Email directly
 - 07-02: Use SECURITY DEFINER RPC function (verify_email_token) to clear verification_token during UPDATE (RLS prevented anon client from setting token to NULL)
 - 07-02: Two-step verification flow (confirmation page with button) prevents token consumption by email prefetching scanners
+- 08-01: Use anon Supabase client in Route Handler with RLS policies (not service_role) for download authorization
+- 08-01: Add RLS SELECT policy for email_verified=true contacts (enables post-verification queries from anon client)
+- 08-01: Log download analytics with graceful degradation (don't block PDF if logging fails)
+- 08-01: Store PDFs in private/ directory (not public/) for controlled access via Route Handler
 
 ### Pending Todos
 
@@ -80,9 +85,9 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-16
-Stopped at: Completed 07-02-PLAN.md (Email Verification Flow)
-Resume file: .planning/phases/07-email-verification-flow/07-03-PLAN.md
+Stopped at: Completed 08-01-PLAN.md (Book PDF Downloads Backend)
+Resume file: .planning/phases/08-book-pdf-downloads/08-02-PLAN.md
 
 ---
 *State initialized: 2026-02-11 for v1.0*
-*Last updated: 2026-02-16 after 07-02 complete*
+*Last updated: 2026-02-16 after 08-01 complete*
