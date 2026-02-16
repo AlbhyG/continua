@@ -82,10 +82,11 @@ Plans:
   3. User with screen reader hears error announcements via ARIA live regions
   4. User's signup data persists in database after form submission
   5. User sees "check your email" confirmation message after successful signup
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 06-01: TBD
+- [ ] 06-01-PLAN.md — Install Zod, create shared validation schema, Server Action for signup upsert, RLS UPDATE policy
+- [ ] 06-02-PLAN.md — SignupDialog component with on-blur validation and ARIA errors, wire Header button, end-to-end verification
 
 #### Phase 7: Email Verification Flow
 **Goal**: Users verify email addresses through two-step confirmation before accessing gated content
