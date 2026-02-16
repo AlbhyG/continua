@@ -1,0 +1,178 @@
+'use client'
+
+import { useState, useEffect, useActionState } from 'react'
+import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
+import { signupAction, type SignupState } from '@/app/actions/signup'
+import { signupSchema } from '@/lib/validations/signup'
+
+interface SignupDialogProps {
+  isOpen: boolean
+  onClose: () => void
+}
+
+function SubmitButton({ isValid }: { isValid: boolean }) {
+  const [isPending, setIsPending] = useState(false)
+
+  useEffect(() => {
+    const form = document.querySelector('form')
+    if (!form) return
+
+    const handleSubmit = () => setIsPending(true)
+    const handleReset = () => setIsPending(false)
+
+    form.addEventListener('submit', handleSubmit)
+    form.addEventListener('reset', handleReset)
+
+    return () => {
+      form.removeEventListener('submit', handleSubmit)
+      form.removeEventListener('reset', handleReset)
+    }
+  }, [])
+
+  return (
+    <button
+      type="submit"
+      disabled={!isValid || isPending}
+      className="w-full rounded-full bg-accent text-white font-bold py-2 hover:bg-accent/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+    >
+      {isPending ? 'Signing up...' : 'Sign Up'}
+    </button>
+  )
+}
+
+export default function SignupDialog({ isOpen, onClose }: SignupDialogProps) {
+  const [state, formAction, isPending] = useActionState<SignupState, FormData>(signupAction, null)
+  const [touched, setTouched] = useState({ name: false, email: false })
+  const [clientErrors, setClientErrors] = useState({ name: '', email: '' })
+
+  // Reset form state when dialog closes
+  useEffect(() => {
+    if (!isOpen) {
+      setTouched({ name: false, email: false })
+      setClientErrors({ name: '', email: '' })
+    }
+  }, [isOpen])
+
+  const handleBlur = (field: 'name' | 'email', value: string) => {
+    setTouched((prev) => ({ ...prev, [field]: true }))
+
+    const result = signupSchema.shape[field].safeParse(value)
+    if (!result.success) {
+      const errorMessage = result.error.issues[0]?.message || ''
+      setClientErrors((prev) => ({ ...prev, [field]: errorMessage }))
+    } else {
+      setClientErrors((prev) => ({ ...prev, [field]: '' }))
+    }
+  }
+
+  const isValid = touched.name && touched.email && !clientErrors.name && !clientErrors.email
+
+  // Show confirmation view if successful
+  if (state?.success) {
+    return (
+      <Dialog open={isOpen} onClose={onClose} className="relative z-[60]">
+        <DialogBackdrop className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[60]" />
+
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+          <DialogPanel className="max-w-md w-full rounded-xl bg-white/95 backdrop-blur shadow-lg p-6">
+            <DialogTitle className="text-lg font-bold text-foreground">
+              Check your email
+            </DialogTitle>
+
+            <p className="text-sm text-gray-600 mt-2">
+              We've sent a verification link to your email address.
+            </p>
+
+            <div className="mt-6 flex justify-end">
+              <button
+                onClick={onClose}
+                className="px-4 py-2 rounded-lg bg-accent text-white hover:bg-accent/90 transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </DialogPanel>
+        </div>
+      </Dialog>
+    )
+  }
+
+  // Show form view
+  return (
+    <Dialog open={isOpen} onClose={onClose} className="relative z-[60]">
+      <DialogBackdrop className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[60]" />
+
+      <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+        <DialogPanel className="max-w-md w-full rounded-xl bg-white/95 backdrop-blur shadow-lg p-6">
+          <DialogTitle className="text-lg font-bold text-foreground">
+            Sign In / Up
+          </DialogTitle>
+
+          <form action={formAction} className="mt-4 space-y-4">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                onBlur={(e) => handleBlur('name', e.target.value)}
+                aria-invalid={touched.name && !!clientErrors.name}
+                aria-describedby={touched.name && clientErrors.name ? 'name-error' : undefined}
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent"
+              />
+              {touched.name && clientErrors.name && (
+                <div
+                  id="name-error"
+                  role="alert"
+                  aria-live="polite"
+                  className="text-sm text-red-600 mt-1"
+                >
+                  {clientErrors.name}
+                </div>
+              )}
+            </div>
+
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                onBlur={(e) => handleBlur('email', e.target.value)}
+                aria-invalid={touched.email && !!clientErrors.email}
+                aria-describedby={touched.email && clientErrors.email ? 'email-error' : undefined}
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent"
+              />
+              {touched.email && clientErrors.email && (
+                <div
+                  id="email-error"
+                  role="alert"
+                  aria-live="polite"
+                  className="text-sm text-red-600 mt-1"
+                >
+                  {clientErrors.email}
+                </div>
+              )}
+            </div>
+
+            {state?.errors?.form && (
+              <div
+                role="alert"
+                aria-live="polite"
+                className="text-sm text-red-600"
+              >
+                {state.errors.form[0]}
+              </div>
+            )}
+
+            <SubmitButton isValid={isValid} />
+          </form>
+        </DialogPanel>
+      </div>
+    </Dialog>
+  )
+}
