@@ -44,7 +44,9 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body>
         <Header />
+        <main className="pt-6">
         {children}
+        </main>
         <footer className="max-w-[375px] md:max-w-[720px] mx-auto px-6 py-8 text-[14px] opacity-70">
           <Link href="/privacy" className="underline hover:opacity-100 transition-opacity">Privacy Policy</Link>
         </footer>
