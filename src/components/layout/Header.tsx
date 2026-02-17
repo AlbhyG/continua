@@ -10,13 +10,9 @@ import AgentsDialog from '@/components/dialogs/AgentsDialog'
 import TherapistsDialog from '@/components/dialogs/TherapistsDialog'
 import SignupDialog from '@/components/dialogs/SignupDialog'
 
-const learnItems = [
-  { href: '/my-relationships', label: 'My Relationships', comingSoon: false },
-  { href: '/my-info', label: 'My Info', comingSoon: false },
-  { href: '#', label: 'Add', comingSoon: true },
-  { href: '#', label: 'My Projects', comingSoon: true },
-  { href: '#', label: 'Take a Test', comingSoon: true },
-  { href: '#', label: 'My Results', comingSoon: true },
+const whoWhatItems = [
+  { href: '/my-relationships', label: 'My Relationships' },
+  { href: '/my-info', label: 'My Info' },
 ]
 
 const bookItems = [
@@ -50,30 +46,23 @@ export default function Header() {
         <nav className="flex items-center gap-2">
           <Menu>
             <MenuButton className="rounded-full bg-white/20 backdrop-blur px-4 py-1.5 text-sm font-bold text-white hover:bg-white/35 transition-colors">
-              Learn
+              Who / What
             </MenuButton>
             <MenuItems
               anchor="bottom start"
               className="z-[100] mt-2 min-w-[200px] rounded-xl bg-white/95 backdrop-blur shadow-lg p-2"
             >
-              {learnItems.map((item) => (
-                <MenuItem key={item.label} disabled={item.comingSoon}>
+              {whoWhatItems.map((item) => (
+                <MenuItem key={item.label}>
                   {({ focus }) => (
-                    item.comingSoon ? (
-                      <span className="flex items-center justify-between px-4 py-2 rounded-lg text-sm cursor-default opacity-60 text-gray-700">
-                        <span>{item.label}</span>
-                        <span className="text-xs text-gray-500">Coming Soon</span>
-                      </span>
-                    ) : (
-                      <Link
-                        href={item.href}
-                        className={`block px-4 py-2 rounded-lg text-sm ${
-                          focus ? 'bg-accent/10 text-accent' : 'text-gray-700'
-                        }`}
-                      >
-                        {item.label}
-                      </Link>
-                    )
+                    <Link
+                      href={item.href}
+                      className={`block px-4 py-2 rounded-lg text-sm ${
+                        focus ? 'bg-accent/10 text-accent' : 'text-gray-700'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
                   )}
                 </MenuItem>
               ))}
