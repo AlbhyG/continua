@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import MyRelationshipsActions from '@/components/MyRelationshipsActions'
 
 export const metadata: Metadata = {
   title: 'My Relationships | Continua',
@@ -9,7 +10,8 @@ export const metadata: Metadata = {
 export default function MyRelationshipsPage() {
   return (
     <main className="max-w-[375px] md:max-w-[720px] mx-auto px-6 pt-20 pb-12">
-      <h1 className="text-[32px] font-bold mb-8">My Relationships</h1>
+      <h1 className="text-[32px] font-bold mb-6">My Relationships</h1>
+      <MyRelationshipsActions />
       <section className="space-y-8">
         <div>
           <h2 className="text-[24px] font-bold mb-3">For Individuals</h2>
