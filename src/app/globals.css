@@ -12,7 +12,13 @@
 
 html {
   scroll-padding-top: 80px;
-  background-color: rgb(229, 158, 221);
+  background: linear-gradient(
+    180deg,
+    rgb(62, 109, 222) 0%,
+    rgb(156, 127, 218) 35.14%,
+    rgb(229, 158, 221) 100%
+  );
+  background-attachment: fixed;
 }
 
 body {
