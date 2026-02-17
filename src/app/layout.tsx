@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 import Header from "@/components/layout/Header";
+import OverscrollColor from "@/components/OverscrollColor";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -43,6 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body>
+        <OverscrollColor />
         <Header />
         <main className="pt-6">
         {children}
