@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -10,6 +11,14 @@ export default function MyInfoPage() {
   return (
     <main className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-20 pb-12">
       <h1 className="text-[32px] md:text-[40px] lg:text-[48px] font-bold mb-8">My Info</h1>
+      <Image
+        src="/slide-my-info.png"
+        alt="My Info page design showing Take a Test and My Results sections with assessment details"
+        width={2667}
+        height={1500}
+        className="w-full rounded-xl mb-8"
+        priority
+      />
       <section className="space-y-8">
         <div>
           <h2 className="text-[24px] md:text-[28px] font-bold mb-3">Take Assessments</h2>
