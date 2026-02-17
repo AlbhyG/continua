@@ -32,7 +32,7 @@ export default function Header() {
   return (
     <>
     <header className="fixed top-0 inset-x-0 z-50 bg-accent backdrop-blur">
-      <div className="max-w-[720px] mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="max-w-[720px] lg:max-w-[960px] mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/">
           <Image
             src="/logo.png"
