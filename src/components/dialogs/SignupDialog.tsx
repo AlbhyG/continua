@@ -71,11 +71,11 @@ export default function SignupDialog({ isOpen, onClose }: SignupDialogProps) {
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
           <DialogPanel className="max-w-md w-full rounded-xl bg-white/95 backdrop-blur shadow-lg p-6">
             <DialogTitle className="text-lg font-bold text-foreground">
-              Check your email
+              You're signed up!
             </DialogTitle>
 
             <p className="text-sm text-gray-600 mt-2">
-              We've sent a verification link to your email address.
+              We'll let you know when Continua launches.
             </p>
 
             <div className="mt-6 flex justify-end">
