@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -10,6 +11,16 @@ export default function MyInfoPage() {
   return (
     <main className="max-w-[375px] md:max-w-[720px] mx-auto px-6 pt-20 pb-12">
       <h1 className="text-[32px] font-bold mb-8">My Info</h1>
+      <div className="mb-10">
+        <Image
+          src="/personality-map.svg"
+          alt="The Continua Personality Map — six dimensions showing the spectrum from High Empathy to Low Empathy, High Reactivity to Low Reactivity, Dominant to Submissive, High Conscientiousness to Impulsive, Hyper-Socially Attuned to Hypo-Socially Attuned, and Altruistic to Self-Focused"
+          width={1280}
+          height={720}
+          className="w-full h-auto"
+          priority
+        />
+      </div>
       <section className="space-y-8">
         <div>
           <h2 className="text-[24px] font-bold mb-3">Take Assessments</h2>
