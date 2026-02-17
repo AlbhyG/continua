@@ -11,11 +11,8 @@ export default function OverscrollColor() {
     let isTop = true
 
     const update = () => {
-      const scrollTop = window.scrollY
-      const scrollHeight = document.documentElement.scrollHeight
-      const clientHeight = window.innerHeight
-      const atBottom = scrollTop + clientHeight >= scrollHeight - 100
-      const nearTop = scrollTop < 100 && !atBottom
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight
+      const nearTop = maxScroll <= 0 || window.scrollY < maxScroll / 2
 
       if (nearTop && !isTop) {
         html.style.backgroundColor = TOP_COLOR
