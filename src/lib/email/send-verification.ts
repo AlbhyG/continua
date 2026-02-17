@@ -25,7 +25,7 @@ export async function sendVerificationEmail({
   try {
     // Send email using Resend with React Email template
     const { data, error } = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL!,
+      from: `Continua <${process.env.RESEND_FROM_EMAIL!}>`,
       to,
       subject: 'Verify your email — Continua',
       react: VerificationEmail({ name, verificationUrl }),
