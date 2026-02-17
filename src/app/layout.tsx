@@ -11,9 +11,28 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Continua",
+  title: {
+    default: "Continua",
+    template: "%s | Continua",
+  },
   description:
     "Transform conflicts into complementarity. Understand personality as fluid coordinates across six dimensions.",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+  ),
+  openGraph: {
+    title: "Continua",
+    description:
+      "Transform conflicts into complementarity. Understand personality as fluid coordinates across six dimensions.",
+    siteName: "Continua",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Continua",
+    description:
+      "Transform conflicts into complementarity. Understand personality as fluid coordinates across six dimensions.",
+  },
 };
 
 export default function RootLayout({
