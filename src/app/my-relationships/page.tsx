@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import MyRelationshipsActions from '@/components/MyRelationshipsActions'
 
@@ -13,14 +12,6 @@ export default function MyRelationshipsPage() {
     <main className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-20 pb-12">
       <h1 className="text-[32px] md:text-[40px] lg:text-[48px] font-bold mb-6">My Relationships</h1>
       <MyRelationshipsActions />
-      <Image
-        src="/slide-my-relationships.png"
-        alt="My Relationships page design showing navigation structure for Add (Person, Group), relationship types (Partner, Friend, Family, Team), and My Projects"
-        width={2667}
-        height={1500}
-        className="w-full rounded-xl mb-8"
-        priority
-      />
       <section className="space-y-8">
         <div>
           <h2 className="text-[24px] md:text-[28px] font-bold mb-3">For Individuals</h2>
