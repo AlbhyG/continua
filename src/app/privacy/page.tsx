@@ -128,8 +128,8 @@ export default function PrivacyPage() {
           <p>If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:</p>
           <p className="mt-3">
             Continua<br />
-            Email: <a href="mailto:privacy@continua.com" className="underline hover:text-accent transition-colors">privacy@continua.com</a><br />
-            Website: <a href="https://continua.com" className="underline hover:text-accent transition-colors">https://continua.com</a>
+            Email: <a href="mailto:privacy@continua.info" className="underline hover:text-accent transition-colors">privacy@continua.info</a><br />
+            Website: <a href="https://continua.info" className="underline hover:text-accent transition-colors">https://continua.info</a>
           </p>
         </section>
       </div>
