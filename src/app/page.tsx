@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="max-w-[375px] md:max-w-[720px] mx-auto px-6 pt-20 pb-12">
+    <main className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-20 pb-12">
       <h1 className="text-[48px] md:text-[64px] leading-[1.2] font-bold mb-4">
         The Personality Continua
       </h1>

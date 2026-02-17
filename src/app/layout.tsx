@@ -49,7 +49,7 @@ export default function RootLayout({
         <main className="pt-6">
         {children}
         </main>
-        <footer className="max-w-[375px] md:max-w-[720px] mx-auto px-6 py-8 text-[14px] opacity-70">
+        <footer className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 py-8 text-[14px] opacity-70">
           <Link href="/privacy" className="underline hover:opacity-100 transition-opacity">Privacy Policy</Link>
         </footer>
       </body>
