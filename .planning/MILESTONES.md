@@ -14,3 +14,20 @@
 
 ---
 
+
+## v2.0 Interactive Foundation (Shipped: 2026-02-16)
+
+**Phases completed:** 5 phases (5-9), 10 plans
+**Timeline:** 2 days (2026-02-15 → 2026-02-16)
+**Files modified:** 70 | **LOC:** 1,925 TypeScript/TSX/CSS
+
+**Key accomplishments:**
+- Supabase backend with database, Row Level Security, and email delivery via Resend
+- Notification signup dialog with Zod validation, ARIA accessibility, and database persistence
+- Two-step email verification flow with branded React Email templates and prefetch protection
+- Gated Book PDF downloads from Supabase Storage with download analytics tracking
+- Restructured navigation with combined Learn dropdown and Coming Soon indicators
+- Content pages (My Relationships, My Info) with responsive tablet/desktop layout
+
+---
+
