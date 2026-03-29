@@ -20,7 +20,7 @@ export default function InDevelopmentDialog({ isOpen, onClose, feature }: InDeve
           </DialogTitle>
 
           <p className="text-sm text-gray-600 mt-2">
-            This feature is in development.
+            Coming Soon
           </p>
 
           <div className="mt-6 flex justify-end">
