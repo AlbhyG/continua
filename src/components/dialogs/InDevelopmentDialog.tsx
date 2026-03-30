@@ -11,22 +11,22 @@ interface InDevelopmentDialogProps {
 export default function InDevelopmentDialog({ isOpen, onClose, feature }: InDevelopmentDialogProps) {
   return (
     <Dialog open={isOpen} onClose={onClose} className="relative z-[60]">
-      <DialogBackdrop className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[60]" />
+      <DialogBackdrop className="fixed inset-0 bg-black/20 backdrop-blur-sm z-[60]" />
 
       <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
-        <DialogPanel className="max-w-md w-full rounded-xl bg-white/95 backdrop-blur shadow-lg p-6">
-          <DialogTitle className="text-lg font-bold text-foreground">
+        <DialogPanel className="max-w-md w-full glass-card p-8 shadow-xl">
+          <DialogTitle className="text-xl font-bold text-foreground">
             {feature}
           </DialogTitle>
 
-          <p className="text-sm text-gray-600 mt-2">
-            Coming Soon
+          <p className="text-[15px] text-foreground/60 mt-3">
+            This feature is coming soon.
           </p>
 
-          <div className="mt-6 flex justify-end">
+          <div className="mt-8 flex justify-end">
             <button
               onClick={onClose}
-              className="px-4 py-2 rounded-lg bg-accent text-white hover:bg-accent/90 transition-colors"
+              className="px-5 py-2.5 rounded-lg bg-accent text-white text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer"
             >
               Close
             </button>

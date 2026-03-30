@@ -50,14 +50,23 @@ function HamburgerIcon() {
   )
 }
 
+function CloseIcon() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+      <line x1="6" y1="6" x2="18" y2="18" />
+      <line x1="6" y1="18" x2="18" y2="6" />
+    </svg>
+  )
+}
+
 const menuBtnClass =
-  'flex items-center gap-1.5 text-sm font-bold text-foreground hover:opacity-70 transition-opacity cursor-pointer'
+  'flex items-center gap-1.5 text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors cursor-pointer'
 
 const dropdownClass =
-  'z-[100] mt-2 min-w-[200px] rounded-xl bg-white/95 backdrop-blur shadow-lg p-2'
+  'z-[100] mt-2 min-w-[200px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-1 ring-black/5 p-2'
 
 function itemClass(focus: boolean) {
-  return `block w-full text-left px-4 py-2 rounded-lg text-sm ${focus ? 'bg-accent/10 text-accent' : 'text-gray-700'}`
+  return `block w-full text-left px-4 py-2.5 rounded-lg text-sm transition-colors ${focus ? 'bg-accent/10 text-accent' : 'text-gray-700'}`
 }
 
 // ─── Get Started Form ──────────────────────────────────────────
@@ -91,7 +100,7 @@ function GetStartedForm({ onComplete }: { onComplete: () => void }) {
 
   if (done) {
     return (
-      <div className="p-4 space-y-3">
+      <div className="p-5 space-y-3">
         <p className="text-sm font-bold text-foreground">Thank you!</p>
         <p className="text-sm text-gray-600">We&apos;ll be in touch.</p>
         <CloseButton className="text-sm text-accent hover:underline cursor-pointer">
@@ -103,16 +112,16 @@ function GetStartedForm({ onComplete }: { onComplete: () => void }) {
 
   if (showRoles) {
     return (
-      <div className="p-4 space-y-3">
+      <div className="p-5 space-y-3">
         <p className="text-sm font-bold text-foreground">I am a:</p>
         {['Agent', 'Publisher', 'Psychologist', 'Interested Reader'].map(
           (role) => (
-            <label key={role} className="flex items-center gap-2 text-sm text-gray-700 cursor-pointer">
+            <label key={role} className="flex items-center gap-2.5 text-sm text-gray-700 cursor-pointer">
               <input
                 type="checkbox"
                 checked={roles.includes(role)}
                 onChange={() => toggleRole(role)}
-                className="rounded"
+                className="rounded border-gray-300"
               />
               {role}
             </label>
@@ -122,7 +131,7 @@ function GetStartedForm({ onComplete }: { onComplete: () => void }) {
           type="button"
           onClick={handleSubmit}
           disabled={submitting || roles.length === 0}
-          className="w-full mt-2 px-4 py-2 rounded-lg bg-accent text-white text-sm font-bold hover:bg-accent/90 transition-colors disabled:opacity-50 cursor-pointer"
+          className="w-full mt-2 px-4 py-2.5 rounded-lg bg-accent text-white text-sm font-semibold hover:bg-accent/90 transition-colors disabled:opacity-50 cursor-pointer"
         >
           {submitting ? 'Submitting...' : 'Submit'}
         </button>
@@ -131,14 +140,14 @@ function GetStartedForm({ onComplete }: { onComplete: () => void }) {
   }
 
   return (
-    <div className="p-4 space-y-3">
+    <div className="p-5 space-y-3">
       <div>
         <label className="block text-sm font-medium text-foreground mb-1">Name</label>
         <input
           type="text"
           value={values.name}
           onChange={(e) => setValues((v) => ({ ...v, name: e.target.value }))}
-          className="w-full px-3 py-1.5 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+          className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
         />
       </div>
       <div>
@@ -147,25 +156,25 @@ function GetStartedForm({ onComplete }: { onComplete: () => void }) {
           type="email"
           value={values.email}
           onChange={(e) => setValues((v) => ({ ...v, email: e.target.value }))}
-          className="w-full px-3 py-1.5 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+          className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
         />
       </div>
-      <p className="text-xs text-gray-500 text-center">And / Or</p>
+      <p className="text-xs text-gray-400 text-center">And / Or</p>
       <div>
         <label className="block text-sm font-medium text-foreground mb-1">Phone</label>
         <input
           type="tel"
           value={values.phone}
           onChange={(e) => setValues((v) => ({ ...v, phone: e.target.value }))}
-          className="w-full px-3 py-1.5 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+          className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
         />
       </div>
-      <label className="flex items-center gap-2 text-sm text-gray-700 cursor-pointer pt-1">
+      <label className="flex items-center gap-2.5 text-sm text-gray-700 cursor-pointer pt-1">
         <input
           type="checkbox"
           disabled={!values.name.trim() || !hasContact}
           onChange={() => setShowRoles(true)}
-          className="rounded"
+          className="rounded border-gray-300"
         />
         OK
       </label>
@@ -191,31 +200,37 @@ function MobileMenu({
 
   return (
     <Dialog open={open} onClose={onClose} className="relative z-[60]">
-      <DialogBackdrop className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[60]" />
+      <DialogBackdrop className="fixed inset-0 bg-black/20 backdrop-blur-sm z-[60]" />
       <div className="fixed inset-0 z-[60]">
-        <DialogPanel className="w-[300px] h-full bg-accent-light/90 backdrop-blur-md p-6 overflow-y-auto">
+        <DialogPanel className="w-[300px] h-full bg-white/90 backdrop-blur-xl p-6 overflow-y-auto shadow-2xl">
           <DialogTitle className="sr-only">Navigation</DialogTitle>
 
+          <div className="flex justify-end mb-6">
+            <button onClick={onClose} className="p-1 cursor-pointer text-foreground/60 hover:text-foreground transition-colors" aria-label="Close menu">
+              <CloseIcon />
+            </button>
+          </div>
+
           {/* My Info */}
-          <div className="mb-6">
-            <h3 className="text-base font-bold text-foreground mb-2">My Info</h3>
-            <div className="ml-4 space-y-1">
+          <div className="mb-8">
+            <h3 className="text-xs font-semibold text-foreground/40 uppercase tracking-wider mb-3">My Info</h3>
+            <div className="space-y-1">
               <Link
                 href="/graphic-exemplar"
                 onClick={onClose}
-                className="block text-sm text-foreground py-1"
+                className="block text-[15px] text-foreground/80 hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent/5 transition-colors"
               >
                 Graphic Exemplar
               </Link>
               <button
                 onClick={() => handleCS('Take a Test')}
-                className="block text-sm text-foreground py-1 cursor-pointer"
+                className="block w-full text-left text-[15px] text-foreground/80 hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
               >
                 Take a Test
               </button>
               <button
                 onClick={() => handleCS('My Results')}
-                className="block text-sm text-foreground py-1 cursor-pointer"
+                className="block w-full text-left text-[15px] text-foreground/80 hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
               >
                 My Results
               </button>
@@ -223,65 +238,65 @@ function MobileMenu({
           </div>
 
           {/* My Relationships */}
-          <div className="mb-6">
-            <h3 className="text-base font-bold text-foreground mb-2">My Relationships</h3>
-            <div className="ml-4 space-y-1">
+          <div className="mb-8">
+            <h3 className="text-xs font-semibold text-foreground/40 uppercase tracking-wider mb-3">My Relationships</h3>
+            <div className="space-y-1">
               <button
                 onClick={() => handleCS('Add a Person')}
-                className="block text-sm text-foreground py-1 cursor-pointer"
+                className="block w-full text-left text-[15px] text-foreground/80 hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
               >
                 + Add a Person
               </button>
               <button
                 onClick={() => handleCS('Add a Group')}
-                className="block text-sm text-foreground py-1 cursor-pointer"
+                className="block w-full text-left text-[15px] text-foreground/80 hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
               >
                 + Add a Group
               </button>
-              <div className="ml-4 space-y-1 border-l border-foreground/30 pl-3">
+              <div className="ml-3 border-l-2 border-accent/15 pl-3 space-y-1">
                 <button
                   onClick={() => handleCS('Family')}
-                  className="flex items-center gap-1 text-sm text-foreground py-1 cursor-pointer"
+                  className="block w-full text-left text-sm text-foreground/60 hover:text-foreground py-1.5 px-3 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
                 >
-                  <span className="text-foreground/50">&#x2192;</span> Family
+                  Family
                 </button>
                 <button
                   onClick={() => handleCS('Friend')}
-                  className="flex items-center gap-1 text-sm text-foreground py-1 cursor-pointer"
+                  className="block w-full text-left text-sm text-foreground/60 hover:text-foreground py-1.5 px-3 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
                 >
-                  <span className="text-foreground/50">&#x2192;</span> Friend
+                  Friend
                 </button>
                 <button
                   onClick={() => handleCS('Team')}
-                  className="flex items-center gap-1 text-sm text-foreground py-1 cursor-pointer"
+                  className="block w-full text-left text-sm text-foreground/60 hover:text-foreground py-1.5 px-3 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
                 >
-                  <span className="text-foreground/50">&#x2192;</span> Team
+                  Team
                 </button>
               </div>
             </div>
           </div>
 
           {/* My Projects */}
-          <div className="mb-6">
-            <h3 className="text-base font-bold text-foreground mb-2">My Projects</h3>
-            <div className="ml-4 space-y-1">
+          <div className="mb-8">
+            <h3 className="text-xs font-semibold text-foreground/40 uppercase tracking-wider mb-3">My Projects</h3>
+            <div className="space-y-1">
               <button
                 onClick={() => handleCS('New Project')}
-                className="block text-sm text-foreground py-1 cursor-pointer"
+                className="block w-full text-left text-[15px] text-foreground/80 hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
               >
                 + Project
               </button>
               <Link
                 href="/famous-figures"
                 onClick={onClose}
-                className="block text-sm text-foreground py-1"
+                className="block text-[15px] text-foreground/80 hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent/5 transition-colors"
               >
                 Famous Archetypal Figures
               </Link>
               <Link
                 href="/graphic-exemplar"
                 onClick={onClose}
-                className="block text-sm text-foreground py-1"
+                className="block text-[15px] text-foreground/80 hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent/5 transition-colors"
               >
                 Graphic Exemplar
               </Link>
@@ -305,10 +320,10 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-sm">
+      <header className="fixed top-0 inset-x-0 z-50 bg-white/70 backdrop-blur-xl border-b border-white/30">
         <div className="max-w-[720px] lg:max-w-[960px] mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo + mobile hamburger */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <Link href="/">
               <Image
                 src="/logo.png"
@@ -319,7 +334,7 @@ export default function Header() {
               />
             </Link>
             <button
-              className="md:hidden p-1 cursor-pointer"
+              className="md:hidden p-2 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open menu"
             >
@@ -328,11 +343,11 @@ export default function Header() {
           </div>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-4 lg:gap-6">
+          <nav className="hidden md:flex items-center gap-5 lg:gap-7">
             {/* My Info */}
             <Menu>
               <MenuButton className={menuBtnClass}>
-                <ChevronDown /> My Info
+                My Info <ChevronDown />
               </MenuButton>
               <MenuItems anchor="bottom start" className={dropdownClass}>
                 <MenuItem>
@@ -370,7 +385,7 @@ export default function Header() {
             {/* My Relationships */}
             <Menu>
               <MenuButton className={menuBtnClass}>
-                <ChevronDown /> My Relationships
+                My Relationships <ChevronDown />
               </MenuButton>
               <MenuItems anchor="bottom start" className={dropdownClass}>
                 <MenuItem>
@@ -396,7 +411,7 @@ export default function Header() {
                   )}
                 </MenuItem>
                 {/* Sub-items with tree connector */}
-                <div className="ml-6 border-l border-gray-300 pl-2">
+                <div className="ml-6 border-l-2 border-accent/15 pl-2">
                   <MenuItem>
                     {({ focus }) => (
                       <button
@@ -404,7 +419,7 @@ export default function Header() {
                         onClick={() => handleComingSoon('Family')}
                         className={itemClass(focus)}
                       >
-                        <span className="text-gray-400 mr-1">&#x2192;</span> Family
+                        Family
                       </button>
                     )}
                   </MenuItem>
@@ -415,7 +430,7 @@ export default function Header() {
                         onClick={() => handleComingSoon('Friend')}
                         className={itemClass(focus)}
                       >
-                        <span className="text-gray-400 mr-1">&#x2192;</span> Friend
+                        Friend
                       </button>
                     )}
                   </MenuItem>
@@ -426,7 +441,7 @@ export default function Header() {
                         onClick={() => handleComingSoon('Team')}
                         className={itemClass(focus)}
                       >
-                        <span className="text-gray-400 mr-1">&#x2192;</span> Team
+                        Team
                       </button>
                     )}
                   </MenuItem>
@@ -437,7 +452,7 @@ export default function Header() {
             {/* My Projects */}
             <Menu>
               <MenuButton className={menuBtnClass}>
-                <ChevronDown /> My Projects
+                My Projects <ChevronDown />
               </MenuButton>
               <MenuItems anchor="bottom start" className={dropdownClass}>
                 <MenuItem>
@@ -476,12 +491,12 @@ export default function Header() {
 
             {/* Get Started (desktop) */}
             <Popover className="relative">
-              <PopoverButton className={menuBtnClass}>
-                <ChevronDown /> Get Started
+              <PopoverButton className="bg-accent text-white rounded-full px-5 py-2 text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer">
+                Get Started
               </PopoverButton>
               <PopoverPanel
                 anchor="bottom end"
-                className="z-[100] mt-2 w-[260px] rounded-xl bg-white/95 backdrop-blur shadow-lg"
+                className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-1 ring-black/5"
               >
                 <GetStartedForm onComplete={() => {}} />
               </PopoverPanel>
@@ -491,12 +506,12 @@ export default function Header() {
           {/* Mobile Get Started */}
           <div className="md:hidden">
             <Popover className="relative">
-              <PopoverButton className="text-sm font-bold text-foreground cursor-pointer">
+              <PopoverButton className="bg-accent text-white rounded-full px-4 py-1.5 text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer">
                 Get Started
               </PopoverButton>
               <PopoverPanel
                 anchor="bottom end"
-                className="z-[100] mt-2 w-[260px] rounded-xl bg-white/95 backdrop-blur shadow-lg"
+                className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-1 ring-black/5"
               >
                 <GetStartedForm onComplete={() => {}} />
               </PopoverPanel>

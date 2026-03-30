@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import FadeIn from '@/components/FadeIn'
 
 export const metadata: Metadata = {
   title: 'Famous Archetypal Figures',
@@ -20,7 +21,7 @@ const sections = [
   {
     title: 'Hyper-Socially Attuned',
     names:
-      'Abraham Lincoln, Martin Luther King Jr., Princess Diana, Albert Einstein, José Andrés, Jane Goodall, Charles Darwin, Nicole Kidman, Alanis Morissette, Viola Davis, Steve Martin, Lady Gaga, Lin-Manuel Miranda, Sonia Sotomayor, Dolly Parton, Keanu Reeves, Oprah Winfrey, Angelina Jolie, Emma Watson, Paul Rudd, Mahatma Gandhi, Princess Diana, Abraham Lincoln, Eleanor Roosevelt',
+      'Abraham Lincoln, Martin Luther King Jr., Princess Diana, Albert Einstein, Jos\u00E9 Andr\u00E9s, Jane Goodall, Charles Darwin, Nicole Kidman, Alanis Morissette, Viola Davis, Steve Martin, Lady Gaga, Lin-Manuel Miranda, Sonia Sotomayor, Dolly Parton, Keanu Reeves, Oprah Winfrey, Angelina Jolie, Emma Watson, Paul Rudd, Mahatma Gandhi, Princess Diana, Abraham Lincoln, Eleanor Roosevelt',
   },
   {
     title: 'Hypo-Socially Attuned',
@@ -62,34 +63,43 @@ const sections = [
 
 export default function FamousFiguresPage() {
   return (
-    <main className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-20 pb-12">
-      <h1 className="text-[36px] md:text-[48px] leading-[1.2] font-bold mb-4">
-        Famous Archetypal Figures
-      </h1>
+    <div>
+      {/* Page header */}
+      <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-20 pb-8">
+        <FadeIn>
+          <h1 className="text-[36px] md:text-[48px] leading-[1.1] font-bold text-white mb-4">
+            Famous Archetypal Figures
+          </h1>
+          <p className="text-[18px] md:text-[20px] leading-[1.6] text-white/80">
+            Using the internet &mdash; not official diagnoses but the wisdom (or
+            stupidity) of the crowds &mdash; here are some people that many believe to be
+            on the extreme ends of the Continua spectra.
+          </p>
+        </FadeIn>
+      </section>
 
-      <p className="text-[18px] md:text-[20px] leading-[1.6] mb-10">
-        Using the internet — not official diagnoses but the wisdom (or
-        stupidity) of the crowds — here are some people that many believe to be
-        on the extreme ends of the Continua spectra.
-      </p>
-
-      <div className="space-y-8">
-        {sections.map((section) => (
-          <section key={section.title}>
-            <h2 className="text-[24px] md:text-[28px] font-bold mb-2">
-              {section.title}
-            </h2>
-            {section.note && (
-              <p className="text-[16px] italic text-gray-600 mb-2">
-                {section.note}
-              </p>
-            )}
-            <p className="text-[16px] md:text-[18px] leading-[1.6]">
-              {section.names}
-            </p>
-          </section>
-        ))}
-      </div>
-    </main>
+      {/* Category cards */}
+      <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-16">
+        <div className="grid md:grid-cols-2 gap-4">
+          {sections.map((section, i) => (
+            <FadeIn key={section.title} delay={i * 60}>
+              <div className="glass-card p-6 h-full">
+                <h2 className="text-[20px] md:text-[22px] font-bold mb-2">
+                  {section.title}
+                </h2>
+                {section.note && (
+                  <p className="text-[14px] italic text-foreground/50 mb-2">
+                    {section.note}
+                  </p>
+                )}
+                <p className="text-[15px] md:text-[16px] leading-[1.6] text-foreground/70">
+                  {section.names}
+                </p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </section>
+    </div>
   )
 }
