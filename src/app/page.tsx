@@ -23,7 +23,7 @@ export default function Home() {
       <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-20 pb-16">
         <FadeIn>
           <h1 className="text-[44px] md:text-[60px] lg:text-[72px] leading-[1.08] font-bold text-white mb-4">
-            The Personality Continua
+            Continua
           </h1>
           <h2 className="text-[22px] md:text-[28px] lg:text-[32px] leading-[1.3] font-light text-white/90 mb-10">
             a new language for understanding each other
@@ -61,11 +61,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Philosophy */}
+      {/* Philosophy — plain text on gradient, no card */}
       <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-12">
         <FadeIn>
-          <div className="glass-card p-8 md:p-10">
-            <div className="text-[17px] md:text-[19px] leading-[1.7] text-foreground/85 space-y-5">
+          <div className="text-[17px] md:text-[19px] leading-[1.7] text-white/90 space-y-5">
               <p>
                 This is not a goal with an end state but, rather, the beginning of a process. All personality characteristics function on continua. Most people fall somewhere between the extremes, and even those positions shift depending on context, stress, growth, and intention.
               </p>
@@ -75,7 +74,6 @@ export default function Home() {
               <p>
                 We introduce that vision: a way of seeing personality as fluid coordinates across six primary axes &mdash; Empathy, Self-Orientation, Social Attunement, Conscientiousness, Agency, and Reactivity. Together, these six dimensions form a living system &mdash; a portrait of human nature in motion.
               </p>
-            </div>
           </div>
         </FadeIn>
       </section>
@@ -98,6 +96,16 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Privacy Policy — small link, bottom left, home page only */}
+      <div className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-8">
+        <Link
+          href="/privacy"
+          className="text-sm text-white/50 hover:text-white/80 transition-colors"
+        >
+          Privacy Policy
+        </Link>
+      </div>
     </div>
   )
 }

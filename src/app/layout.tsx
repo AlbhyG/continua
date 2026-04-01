@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Lora, Raleway } from "next/font/google";
-import Link from "next/link";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import OverscrollColor from "@/components/OverscrollColor";
@@ -57,18 +56,10 @@ export default function RootLayout({
         <div className="pt-6">
           {children}
         </div>
-        <footer className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 py-12">
-          <div className="glass-card p-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-            <p className="text-foreground/60 font-medium">
-              Continua &mdash; a new language for understanding each other
-            </p>
-            <Link
-              href="/privacy"
-              className="text-foreground/60 hover:text-foreground transition-colors"
-            >
-              Privacy Policy
-            </Link>
-          </div>
+        <footer className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 py-8">
+          <p className="text-sm text-white/50 text-center">
+            Continua &mdash; a new language for understanding each other
+          </p>
         </footer>
       </body>
     </html>

@@ -17,7 +17,6 @@ import {
   DialogTitle,
   CloseButton,
 } from '@headlessui/react'
-import InDevelopmentDialog from '@/components/dialogs/InDevelopmentDialog'
 import { getStartedAction } from '@/app/actions/get-started'
 
 function ChevronDown({ className }: { className?: string }) {
@@ -65,9 +64,8 @@ const menuBtnClass =
 const dropdownClass =
   'z-[100] mt-2 min-w-[200px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-1 ring-black/5 p-2'
 
-function itemClass(focus: boolean) {
-  return `block w-full text-left px-4 py-2.5 rounded-lg text-sm transition-colors ${focus ? 'bg-accent/10 text-accent' : 'text-gray-700'}`
-}
+const greyedItemClass =
+  'block w-full text-left px-4 py-2.5 rounded-lg text-sm text-gray-400 cursor-default'
 
 // ─── Get Started Form ──────────────────────────────────────────
 
@@ -187,17 +185,10 @@ function GetStartedForm({ onComplete }: { onComplete: () => void }) {
 function MobileMenu({
   open,
   onClose,
-  onComingSoon,
 }: {
   open: boolean
   onClose: () => void
-  onComingSoon: (feature: string) => void
 }) {
-  const handleCS = (feature: string) => {
-    onClose()
-    onComingSoon(feature)
-  }
-
   return (
     <Dialog open={open} onClose={onClose} className="relative z-[60]">
       <DialogBackdrop className="fixed inset-0 bg-black/20 backdrop-blur-sm z-[60]" />
@@ -213,94 +204,61 @@ function MobileMenu({
 
           {/* My Info */}
           <div className="mb-8">
-            <h3 className="text-xs font-semibold text-foreground/40 uppercase tracking-wider mb-3">My Info</h3>
+            <Link
+              href="/my-info"
+              onClick={onClose}
+              className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-3 block hover:text-foreground transition-colors"
+            >
+              My Info
+            </Link>
             <div className="space-y-1">
-              <Link
-                href="/graphic-exemplar"
-                onClick={onClose}
-                className="block text-[15px] text-foreground/80 hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent/5 transition-colors"
-              >
-                Graphic Exemplar
-              </Link>
-              <button
-                onClick={() => handleCS('Take a Test')}
-                className="block w-full text-left text-[15px] text-foreground/80 hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
-              >
-                Take a Test
-              </button>
-              <button
-                onClick={() => handleCS('My Results')}
-                className="block w-full text-left text-[15px] text-foreground/80 hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
-              >
-                My Results
-              </button>
+              <span className="block text-[15px] text-gray-400 py-2 px-3">
+                + Take Assessments
+              </span>
+              <span className="block text-[15px] text-gray-400 py-2 px-3">
+                + See Results
+              </span>
+              <span className="block text-[15px] text-gray-400 py-2 px-3">
+                + Tools &amp; Actions
+              </span>
             </div>
           </div>
 
           {/* My Relationships */}
           <div className="mb-8">
-            <h3 className="text-xs font-semibold text-foreground/40 uppercase tracking-wider mb-3">My Relationships</h3>
+            <Link
+              href="/my-relationships"
+              onClick={onClose}
+              className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-3 block hover:text-foreground transition-colors"
+            >
+              My Relationships
+            </Link>
             <div className="space-y-1">
-              <button
-                onClick={() => handleCS('Add a Person')}
-                className="block w-full text-left text-[15px] text-foreground/80 hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
-              >
+              <span className="block text-[15px] text-gray-400 py-2 px-3">
                 + Add a Person
-              </button>
-              <button
-                onClick={() => handleCS('Add a Group')}
-                className="block w-full text-left text-[15px] text-foreground/80 hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
-              >
+              </span>
+              <span className="block text-[15px] text-gray-400 py-2 px-3">
                 + Add a Group
-              </button>
-              <div className="ml-3 border-l-2 border-accent/15 pl-3 space-y-1">
-                <button
-                  onClick={() => handleCS('Family')}
-                  className="block w-full text-left text-sm text-foreground/60 hover:text-foreground py-1.5 px-3 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
-                >
+              </span>
+              <div className="ml-3 border-l-2 border-gray-200 pl-3 space-y-1">
+                <span className="block text-sm text-gray-400 py-1.5 px-3">
                   Family
-                </button>
-                <button
-                  onClick={() => handleCS('Friend')}
-                  className="block w-full text-left text-sm text-foreground/60 hover:text-foreground py-1.5 px-3 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
-                >
+                </span>
+                <span className="block text-sm text-gray-400 py-1.5 px-3">
                   Friend
-                </button>
-                <button
-                  onClick={() => handleCS('Team')}
-                  className="block w-full text-left text-sm text-foreground/60 hover:text-foreground py-1.5 px-3 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
-                >
+                </span>
+                <span className="block text-sm text-gray-400 py-1.5 px-3">
                   Team
-                </button>
+                </span>
               </div>
             </div>
           </div>
 
           {/* My Projects */}
           <div className="mb-8">
-            <h3 className="text-xs font-semibold text-foreground/40 uppercase tracking-wider mb-3">My Projects</h3>
-            <div className="space-y-1">
-              <button
-                onClick={() => handleCS('New Project')}
-                className="block w-full text-left text-[15px] text-foreground/80 hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
-              >
-                + Project
-              </button>
-              <Link
-                href="/famous-figures"
-                onClick={onClose}
-                className="block text-[15px] text-foreground/80 hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent/5 transition-colors"
-              >
-                Famous Archetypal Figures
-              </Link>
-              <Link
-                href="/graphic-exemplar"
-                onClick={onClose}
-                className="block text-[15px] text-foreground/80 hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent/5 transition-colors"
-              >
-                Graphic Exemplar
-              </Link>
-            </div>
+            <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 block">
+              My Projects
+            </span>
           </div>
         </DialogPanel>
       </div>
@@ -311,12 +269,7 @@ function MobileMenu({
 // ─── Header ────────────────────────────────────────────────────
 
 export default function Header() {
-  const [comingSoon, setComingSoon] = useState<string | null>(null)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  const handleComingSoon = useCallback((feature: string) => {
-    setComingSoon(feature)
-  }, [])
 
   return (
     <>
@@ -344,159 +297,89 @@ export default function Header() {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-5 lg:gap-7">
-            {/* My Info */}
+            {/* My Info — clickable link with greyed-out dropdown */}
             <Menu>
-              <MenuButton className={menuBtnClass}>
-                My Info <ChevronDown />
-              </MenuButton>
+              <div className="flex items-center gap-0">
+                <Link href="/my-info" className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
+                  My Info
+                </Link>
+                <MenuButton className="p-1 text-foreground/80 hover:text-foreground transition-colors cursor-pointer">
+                  <ChevronDown />
+                </MenuButton>
+              </div>
               <MenuItems anchor="bottom start" className={dropdownClass}>
-                <MenuItem>
-                  {({ focus }) => (
-                    <Link href="/graphic-exemplar" className={itemClass(focus)}>
-                      Graphic Exemplar
-                    </Link>
+                <MenuItem disabled>
+                  {() => (
+                    <span className={greyedItemClass}>+ Take Assessments</span>
                   )}
                 </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <button
-                      type="button"
-                      onClick={() => handleComingSoon('Take a Test')}
-                      className={itemClass(focus)}
-                    >
-                      Take a Test
-                    </button>
+                <MenuItem disabled>
+                  {() => (
+                    <span className={greyedItemClass}>+ See Results</span>
                   )}
                 </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <button
-                      type="button"
-                      onClick={() => handleComingSoon('My Results')}
-                      className={itemClass(focus)}
-                    >
-                      My Results
-                    </button>
+                <MenuItem disabled>
+                  {() => (
+                    <span className={greyedItemClass}>+ Tools &amp; Actions</span>
                   )}
                 </MenuItem>
               </MenuItems>
             </Menu>
 
-            {/* My Relationships */}
+            {/* My Relationships — clickable link with greyed-out dropdown */}
             <Menu>
-              <MenuButton className={menuBtnClass}>
-                My Relationships <ChevronDown />
-              </MenuButton>
+              <div className="flex items-center gap-0">
+                <Link href="/my-relationships" className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
+                  My Relationships
+                </Link>
+                <MenuButton className="p-1 text-foreground/80 hover:text-foreground transition-colors cursor-pointer">
+                  <ChevronDown />
+                </MenuButton>
+              </div>
               <MenuItems anchor="bottom start" className={dropdownClass}>
-                <MenuItem>
-                  {({ focus }) => (
-                    <button
-                      type="button"
-                      onClick={() => handleComingSoon('Add a Person')}
-                      className={itemClass(focus)}
-                    >
-                      + Add a Person
-                    </button>
+                <MenuItem disabled>
+                  {() => (
+                    <span className={greyedItemClass}>+ Add a Person</span>
                   )}
                 </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <button
-                      type="button"
-                      onClick={() => handleComingSoon('Add a Group')}
-                      className={itemClass(focus)}
-                    >
-                      + Add a Group
-                    </button>
+                <MenuItem disabled>
+                  {() => (
+                    <span className={greyedItemClass}>+ Add a Group</span>
                   )}
                 </MenuItem>
-                {/* Sub-items with tree connector */}
-                <div className="ml-6 border-l-2 border-accent/15 pl-2">
-                  <MenuItem>
-                    {({ focus }) => (
-                      <button
-                        type="button"
-                        onClick={() => handleComingSoon('Family')}
-                        className={itemClass(focus)}
-                      >
-                        Family
-                      </button>
+                <div className="ml-6 border-l-2 border-gray-200 pl-2">
+                  <MenuItem disabled>
+                    {() => (
+                      <span className={greyedItemClass}>Family</span>
                     )}
                   </MenuItem>
-                  <MenuItem>
-                    {({ focus }) => (
-                      <button
-                        type="button"
-                        onClick={() => handleComingSoon('Friend')}
-                        className={itemClass(focus)}
-                      >
-                        Friend
-                      </button>
+                  <MenuItem disabled>
+                    {() => (
+                      <span className={greyedItemClass}>Friend</span>
                     )}
                   </MenuItem>
-                  <MenuItem>
-                    {({ focus }) => (
-                      <button
-                        type="button"
-                        onClick={() => handleComingSoon('Team')}
-                        className={itemClass(focus)}
-                      >
-                        Team
-                      </button>
+                  <MenuItem disabled>
+                    {() => (
+                      <span className={greyedItemClass}>Team</span>
                     )}
                   </MenuItem>
                 </div>
               </MenuItems>
             </Menu>
 
-            {/* My Projects */}
-            <Menu>
-              <MenuButton className={menuBtnClass}>
-                My Projects <ChevronDown />
-              </MenuButton>
-              <MenuItems anchor="bottom start" className={dropdownClass}>
-                <MenuItem>
-                  {({ focus }) => (
-                    <button
-                      type="button"
-                      onClick={() => handleComingSoon('New Project')}
-                      className={itemClass(focus)}
-                    >
-                      + Project
-                    </button>
-                  )}
-                </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <Link
-                      href="/famous-figures"
-                      className={itemClass(focus)}
-                    >
-                      Famous Archetypal Figures
-                    </Link>
-                  )}
-                </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <Link
-                      href="/graphic-exemplar"
-                      className={itemClass(focus)}
-                    >
-                      Graphic Exemplar
-                    </Link>
-                  )}
-                </MenuItem>
-              </MenuItems>
-            </Menu>
+            {/* My Projects — greyed out */}
+            <span className="text-sm font-semibold text-gray-400 cursor-default">
+              My Projects
+            </span>
 
             {/* Get Started (desktop) */}
             <Popover className="relative">
-              <PopoverButton className="bg-accent text-white rounded-full px-5 py-2 text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer">
+              <PopoverButton className="bg-accent text-white rounded-full px-5 py-2 text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer ring-1 ring-accent/30">
                 Get Started
               </PopoverButton>
               <PopoverPanel
                 anchor="bottom end"
-                className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-1 ring-black/5"
+                className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
               >
                 <GetStartedForm onComplete={() => {}} />
               </PopoverPanel>
@@ -506,12 +389,12 @@ export default function Header() {
           {/* Mobile Get Started */}
           <div className="md:hidden">
             <Popover className="relative">
-              <PopoverButton className="bg-accent text-white rounded-full px-4 py-1.5 text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer">
+              <PopoverButton className="bg-accent text-white rounded-full px-4 py-1.5 text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer ring-1 ring-accent/30">
                 Get Started
               </PopoverButton>
               <PopoverPanel
                 anchor="bottom end"
-                className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-1 ring-black/5"
+                className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
               >
                 <GetStartedForm onComplete={() => {}} />
               </PopoverPanel>
@@ -524,14 +407,6 @@ export default function Header() {
       <MobileMenu
         open={mobileMenuOpen}
         onClose={() => setMobileMenuOpen(false)}
-        onComingSoon={handleComingSoon}
-      />
-
-      {/* Coming Soon dialog */}
-      <InDevelopmentDialog
-        isOpen={comingSoon !== null}
-        onClose={() => setComingSoon(null)}
-        feature={comingSoon ?? ''}
       />
     </>
   )
