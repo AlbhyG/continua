@@ -15,6 +15,19 @@ const nextConfig: NextConfig = {
       },
     ]
   },
+  async rewrites() {
+    return [
+      // Named version aliases — /april-2026/* serves /v1/*
+      {
+        source: '/april-2026',
+        destination: '/v1',
+      },
+      {
+        source: '/april-2026/:path*',
+        destination: '/v1/:path*',
+      },
+    ]
+  },
 };
 
 export default nextConfig;
