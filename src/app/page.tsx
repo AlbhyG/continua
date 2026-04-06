@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import FadeIn from '@/components/FadeIn'
 
@@ -25,8 +26,15 @@ export default function Home() {
       {/* Hero */}
       <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-20 pb-16">
         <FadeIn>
-          <h1 className="text-[44px] md:text-[60px] lg:text-[72px] leading-[1.08] font-bold text-white mb-4">
-            Continua
+          <h1 className="mb-4">
+            <Image
+              src="/continua-wordmark.svg"
+              alt="Continua"
+              width={4279}
+              height={1280}
+              className="h-[52px] md:h-[72px] lg:h-[88px] w-auto invert"
+              priority
+            />
           </h1>
           <h2 className="text-[22px] md:text-[28px] lg:text-[32px] leading-[1.3] font-light text-white/90 mb-10">
             How Opposites Align
