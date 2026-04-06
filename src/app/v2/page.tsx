@@ -3,7 +3,7 @@ import Link from 'next/link'
 import FadeIn from '@/components/FadeIn'
 
 export const metadata: Metadata = {
-  title: 'Continua: How Opposites Align',
+  title: 'Continua: How Opposites Align (v2)',
   description: 'Transform conflicts into complementarity. Understand personality as fluid coordinates across six dimensions.'
 }
 
@@ -19,7 +19,7 @@ const behavioralAxes = [
   { name: 'Reactivity', range: 'High \u2194 Low' },
 ]
 
-export default function Home() {
+export default function V2Home() {
   return (
     <div>
       {/* Hero */}
@@ -43,9 +43,9 @@ export default function Home() {
       <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-12">
         <div className="grid md:grid-cols-3 gap-4">
           {[
-            { href: '/my-info', title: 'Know Yourself', desc: 'Take contextual assessments that capture your personality in motion \u2014 not a fixed label.' },
-            { href: '/my-relationships', title: 'Understand Others', desc: 'See how personality differences create complementarity in couples, families, and teams.' },
-            { href: '/graphic-exemplar', title: 'See the Patterns', desc: 'Visualize personality as color orbs across six dimensions \u2014 a living portrait in motion.' },
+            { href: '/v2/my-info', title: 'Know Yourself', desc: 'Take contextual assessments that capture your personality in motion \u2014 not a fixed label.' },
+            { href: '/v2/my-relationships', title: 'Understand Others', desc: 'See how personality differences create complementarity in couples, families, and teams.' },
+            { href: '/v2/graphic-exemplar', title: 'See the Patterns', desc: 'Visualize personality as color orbs across six dimensions \u2014 a living portrait in motion.' },
           ].map((card, i) => (
             <FadeIn key={card.href} delay={i * 100}>
               <Link
@@ -134,7 +134,7 @@ export default function Home() {
       {/* Privacy Policy — small link, bottom left, home page only */}
       <div className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-8">
         <Link
-          href="/privacy"
+          href="/v2/privacy"
           className="text-sm text-white/50 hover:text-white/80 transition-colors"
         >
           Privacy Policy

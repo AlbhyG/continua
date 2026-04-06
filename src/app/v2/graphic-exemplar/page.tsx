@@ -3,12 +3,12 @@ import Image from 'next/image'
 import FadeIn from '@/components/FadeIn'
 
 export const metadata: Metadata = {
-  title: 'Graphic Exemplar',
+  title: 'Graphic Exemplar (v2)',
   description:
     'Personality Color Orbs \u2014 visual representations of the Continua Six-Axis personality profile.',
 }
 
-export default function GraphicExemplarPage() {
+export default function V2GraphicExemplarPage() {
   return (
     <div>
       {/* Page header */}

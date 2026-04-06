@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
   ),
   openGraph: {
-    title: "Continua",
+    title: "Continua: How Opposites Align",
     description:
       "Transform conflicts into complementarity. Understand personality as fluid coordinates across six dimensions.",
     siteName: "Continua",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Continua",
+    title: "Continua: How Opposites Align",
     description:
       "Transform conflicts into complementarity. Understand personality as fluid coordinates across six dimensions.",
   },
@@ -58,7 +58,7 @@ export default function RootLayout({
         </div>
         <footer className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 py-8">
           <p className="text-sm text-white/50 text-center">
-            Continua &mdash; a new language for understanding each other
+            Continua &mdash; How Opposites Align
           </p>
         </footer>
       </body>

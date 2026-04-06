@@ -3,7 +3,7 @@ import Link from 'next/link'
 import FadeIn from '@/components/FadeIn'
 
 export const metadata: Metadata = {
-  title: 'Famous Archetypal Figures',
+  title: 'Famous Archetypal Figures (v2)',
   description:
     'Famous people believed to be on the extreme ends of the Continua personality spectra.',
 }
@@ -61,13 +61,13 @@ const sections = [
   },
 ]
 
-export default function FamousFiguresPage() {
+export default function V2FamousFiguresPage() {
   return (
     <div>
       {/* Back button */}
       <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-16 pb-2">
         <Link
-          href="/my-info"
+          href="/v2/my-info"
           className="inline-flex items-center gap-1.5 text-sm text-white/70 hover:text-white transition-colors"
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

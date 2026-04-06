@@ -26,6 +26,15 @@ const nextConfig: NextConfig = {
         source: '/april-2026/:path*',
         destination: '/v1/:path*',
       },
+      // Named version aliases — /book-aligned/* serves /v2/*
+      {
+        source: '/book-aligned',
+        destination: '/v2',
+      },
+      {
+        source: '/book-aligned/:path*',
+        destination: '/v2/:path*',
+      },
     ]
   },
 };

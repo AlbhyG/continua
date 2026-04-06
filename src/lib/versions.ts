@@ -14,6 +14,13 @@ export const versions: Version[] = [
     description: 'Initial site with glassmorphism design, six dimensions, and personality orbs',
     aliases: ['april-2026'],
   },
+  {
+    slug: 'v2',
+    name: 'April 2026 Book Alignment',
+    date: '2026-04-06',
+    description: 'Aligned axis terminology with book (Empathy↔Detachment, Assertive↔Yielding), added How We Feel/Act grouping, meta-awareness, and expanded Famous Figures',
+    aliases: ['book-aligned'],
+  },
 ]
 
 export function getVersion(slug: string): Version | undefined {
