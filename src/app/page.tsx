@@ -24,24 +24,24 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-20 pb-16">
+      <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-20 pb-16 text-center">
         <FadeIn>
-          <h1 className="mb-4">
+          <h1 className="mb-4 flex justify-center">
             <Image
               src="/continua-word.svg"
               alt="Continua"
               width={1752}
               height={455}
-              className="h-[52px] md:h-[72px] lg:h-[88px] w-auto invert"
+              className="h-[40px] md:h-[56px] lg:h-[68px] w-auto invert"
               priority
             />
           </h1>
-          <h2 className="text-[22px] md:text-[28px] lg:text-[32px] leading-[1.3] font-light text-white/90 mb-10">
+          <h2 className="text-[18px] md:text-[22px] lg:text-[26px] leading-[1.3] font-light text-white/90 mb-10">
             How Opposites Align
           </h2>
         </FadeIn>
         <FadeIn delay={150}>
-          <p className="text-[19px] md:text-[22px] leading-[1.6] italic text-white/80 max-w-[640px]">
+          <p className="text-[19px] md:text-[22px] leading-[1.6] italic text-white/80 max-w-[640px] mx-auto">
             How can we improve the human condition one person, one couple, one family, and one office at a time?
           </p>
         </FadeIn>
