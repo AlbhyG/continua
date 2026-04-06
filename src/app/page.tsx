@@ -28,10 +28,10 @@ export default function Home() {
         <FadeIn>
           <h1 className="mb-4">
             <Image
-              src="/continua-wordmark.svg"
+              src="/continua-word.svg"
               alt="Continua"
-              width={4279}
-              height={1280}
+              width={1752}
+              height={455}
               className="h-[52px] md:h-[72px] lg:h-[88px] w-auto invert"
               priority
             />
