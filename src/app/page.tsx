@@ -14,7 +14,7 @@ const feelingAxes = [
 ]
 
 const behavioralAxes = [
-  { name: 'Conscientiousness', range: 'High \u2194 Impulsive' },
+  { name: 'Conscientiousness', range: 'Conscientiousness \u2194 Impulsivity' },
   { name: 'Agency', range: 'Assertive \u2194 Yielding' },
   { name: 'Reactivity', range: 'High \u2194 Low' },
 ]
@@ -45,7 +45,7 @@ export default function Home() {
           {[
             { href: '/my-info', title: 'Know Yourself', desc: 'Take contextual assessments that capture your personality in motion \u2014 not a fixed label.' },
             { href: '/my-relationships', title: 'Understand Others', desc: 'See how personality differences create complementarity in couples, families, and teams.' },
-            { href: '/graphic-exemplar', title: 'See the Patterns', desc: 'Visualize personality as color orbs across six dimensions \u2014 a living portrait in motion.' },
+            { href: '/graphic-exemplar', title: 'See the Patterns', desc: 'Visualize personality as radar charts and color orbs across six dimensions \u2014 a living portrait in motion.' },
           ].map((card, i) => (
             <FadeIn key={card.href} delay={i * 100}>
               <Link

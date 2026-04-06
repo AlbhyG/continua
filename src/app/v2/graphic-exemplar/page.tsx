@@ -18,8 +18,9 @@ export default function V2GraphicExemplarPage() {
             Personality Color Orbs
           </h1>
           <p className="text-[18px] md:text-[20px] leading-[1.6] text-white/80">
-            We generate color orbs based on your Continua Six-Axis profile at any
-            moment using colors to represent the different axes:
+            We generate color orbs and radar charts (spider diagrams) based on your Continua Six-Axis profile at any
+            moment. The radar chart plots your coordinates across all six axes to create a unique psychological fingerprint, while
+            color orbs use colors to represent the different axes:
           </p>
         </FadeIn>
       </section>
