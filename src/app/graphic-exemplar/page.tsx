@@ -28,7 +28,7 @@ export default function GraphicExemplarPage() {
       {/* Axes Diagram */}
       <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-12">
         <FadeIn>
-          <div className="glass-card p-6 md:p-8">
+          <div className="glass-card p-6 md:p-8 !bg-white">
             <div className="flex justify-center">
               <Image
                 src="/axes-diagram.png"
@@ -80,7 +80,7 @@ export default function GraphicExemplarPage() {
       {/* Graphic Map */}
       <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-16">
         <FadeIn>
-          <div className="glass-card p-6 md:p-8">
+          <div className="glass-card p-6 md:p-8 !bg-white">
             <h2 className="text-[24px] md:text-[32px] leading-[1.2] font-bold mb-6">
               Graphic Map with Values
             </h2>
