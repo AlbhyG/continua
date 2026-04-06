@@ -49,26 +49,29 @@ export default function GraphicExemplarPage() {
             <h2 className="text-[24px] md:text-[32px] leading-[1.2] font-bold mb-6">
               Extreme Examples
             </h2>
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="text-center">
                 <h3 className="text-[18px] font-bold mb-1">High Empathy</h3>
-                <p className="text-[15px] text-foreground/60 italic">e.g., Mother Teresa</p>
+                <p className="text-[15px] text-foreground/60 italic mb-4">e.g., Mother Teresa</p>
+                <Image
+                  src="/orb-high-empathy.png"
+                  alt="High Empathy personality color orb (blue, teal, yellow)"
+                  width={388}
+                  height={388}
+                  className="rounded-lg mx-auto max-w-[240px]"
+                />
               </div>
-              <div>
+              <div className="text-center">
                 <h3 className="text-[18px] font-bold mb-1">Detachment</h3>
-                <p className="text-[15px] text-foreground/60 italic">e.g., Hitler</p>
+                <p className="text-[15px] text-foreground/60 italic mb-4">e.g., Hitler</p>
+                <Image
+                  src="/orb-detachment.png"
+                  alt="Detachment personality color orb (purple, magenta, red-orange)"
+                  width={388}
+                  height={388}
+                  className="rounded-lg mx-auto max-w-[240px]"
+                />
               </div>
-            </div>
-
-            {/* Personality Orbs */}
-            <div className="flex justify-center">
-              <Image
-                src="/personality-orbs.png"
-                alt="Two personality color orbs \u2014 High Empathy profile (blue, teal, yellow) and Detachment profile (purple, magenta, red-orange)"
-                width={600}
-                height={300}
-                className="rounded-lg"
-              />
             </div>
           </div>
         </FadeIn>
