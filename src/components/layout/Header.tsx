@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import {
   Menu,
   MenuButton,
@@ -185,9 +186,11 @@ function GetStartedForm({ onComplete }: { onComplete: () => void }) {
 function MobileMenu({
   open,
   onClose,
+  versionPrefix,
 }: {
   open: boolean
   onClose: () => void
+  versionPrefix: string
 }) {
   return (
     <Dialog open={open} onClose={onClose} className="relative z-[60]">
@@ -205,7 +208,7 @@ function MobileMenu({
           {/* My Info */}
           <div className="mb-8">
             <Link
-              href="/my-info"
+              href={`${versionPrefix}/my-info`}
               onClick={onClose}
               className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-3 block hover:text-foreground transition-colors"
             >
@@ -227,7 +230,7 @@ function MobileMenu({
           {/* My Relationships */}
           <div className="mb-8">
             <Link
-              href="/my-relationships"
+              href={`${versionPrefix}/my-relationships`}
               onClick={onClose}
               className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-3 block hover:text-foreground transition-colors"
             >
@@ -270,6 +273,9 @@ function MobileMenu({
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const versionMatch = pathname.match(/^\/(v\d+)(?:\/|$)/)
+  const versionPrefix = versionMatch ? `/${versionMatch[1]}` : ''
 
   return (
     <>
@@ -300,7 +306,7 @@ export default function Header() {
             {/* My Info — clickable link with greyed-out dropdown */}
             <Menu>
               <div className="flex items-center gap-0">
-                <Link href="/my-info" className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
+                <Link href={`${versionPrefix}/my-info`} className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
                   My Info
                 </Link>
                 <MenuButton className="p-1 text-foreground/80 hover:text-foreground transition-colors cursor-pointer">
@@ -329,7 +335,7 @@ export default function Header() {
             {/* My Relationships — clickable link with greyed-out dropdown */}
             <Menu>
               <div className="flex items-center gap-0">
-                <Link href="/my-relationships" className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
+                <Link href={`${versionPrefix}/my-relationships`} className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
                   My Relationships
                 </Link>
                 <MenuButton className="p-1 text-foreground/80 hover:text-foreground transition-colors cursor-pointer">
@@ -407,6 +413,7 @@ export default function Header() {
       <MobileMenu
         open={mobileMenuOpen}
         onClose={() => setMobileMenuOpen(false)}
+        versionPrefix={versionPrefix}
       />
     </>
   )
