@@ -5,20 +5,20 @@ import PersonalityOrb, { type OrbData } from '@/components/PersonalityOrb'
 
 const PRESETS: Record<string, OrbData> = {
   'Mother Teresa': {
-    yellow: 10, blue: 1,       // Empathy: high
-    chartreuse: 9, indigo: 1,   // Self-Orientation: altruistic
-    lime: 8, violet: 2,         // Attunement: hyper
-    emerald: 9, magenta: 1,     // Conscientiousness: high
-    teal: 2, red: 1,            // Agency: yielding
-    aqua: 3, orange: 2,         // Reactivity: low
+    yellow: 10, blue: 1,
+    chartreuse: 9, indigo: 1,
+    lime: 8, violet: 2,
+    emerald: 9, magenta: 1,
+    teal: 2, red: 1,
+    aqua: 3, orange: 2,
   },
   'Hitler': {
-    yellow: 1, blue: 9,         // Empathy: detached
-    chartreuse: 1, indigo: 10,  // Self-Orientation: narcissistic
-    lime: 1, violet: 8,         // Attunement: hypo
-    emerald: 3, magenta: 8,     // Conscientiousness: impulsive
-    teal: 9, red: 8,            // Agency: assertive
-    aqua: 2, orange: 7,         // Reactivity: high
+    yellow: 1, blue: 9,
+    chartreuse: 1, indigo: 10,
+    lime: 1, violet: 8,
+    emerald: 3, magenta: 8,
+    teal: 9, red: 8,
+    aqua: 2, orange: 7,
   },
   'Balanced': {
     yellow: 5, blue: 5,
@@ -75,17 +75,21 @@ export default function OrbDemoPage() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white p-8">
-      <div className="max-w-[1200px] mx-auto">
-        <h1 className="text-3xl font-bold mb-2">Personality Orb Generator</h1>
-        <p className="text-white/60 mb-8">Deterministic WebGL shader — same data always produces the same orb.</p>
+    <div className="min-h-screen bg-white">
+      <section className="max-w-[960px] mx-auto px-6 pt-24 pb-8">
+        <h1 className="text-[36px] md:text-[48px] leading-[1.1] font-bold text-gray-900 mb-2">
+          Personality Orb Generator
+        </h1>
+        <p className="text-[17px] text-gray-500">
+          Deterministic WebGL shader &mdash; same data always produces the same orb.
+        </p>
+      </section>
 
-        <div className="flex flex-col lg:flex-row gap-8">
+      <section className="max-w-[960px] mx-auto px-6 pb-12">
+        <div className="flex flex-col lg:flex-row gap-10 items-start">
           {/* Orb display */}
-          <div className="flex flex-col items-center gap-6">
-            <div className="bg-white rounded-2xl p-8 inline-block">
-              <PersonalityOrb data={data} size={350} />
-            </div>
+          <div className="flex flex-col items-center gap-5">
+            <PersonalityOrb data={data} size={350} />
 
             {/* Presets */}
             <div className="flex gap-3">
@@ -95,8 +99,8 @@ export default function OrbDemoPage() {
                   onClick={() => loadPreset(name)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                     activePreset === name
-                      ? 'bg-white text-black'
-                      : 'bg-white/10 hover:bg-white/20'
+                      ? 'bg-gray-900 text-white'
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
                   }`}
                 >
                   {name}
@@ -110,8 +114,8 @@ export default function OrbDemoPage() {
             {LABELS.map(([key, label]) => (
               <div key={key}>
                 <div className="flex justify-between text-sm mb-1">
-                  <span style={{ color: SLIDER_COLORS[key] }}>{label}</span>
-                  <span className="text-white/60 font-mono">{data[key as keyof OrbData]}</span>
+                  <span className="font-medium" style={{ color: SLIDER_COLORS[key] }}>{label}</span>
+                  <span className="text-gray-400 font-mono">{data[key as keyof OrbData]}</span>
                 </div>
                 <input
                   type="range"
@@ -122,29 +126,29 @@ export default function OrbDemoPage() {
                   onChange={e => updateValue(key as keyof OrbData, Number(e.target.value))}
                   className="w-full h-2 rounded-lg appearance-none cursor-pointer"
                   style={{
-                    background: `linear-gradient(to right, ${SLIDER_COLORS[key]}40, ${SLIDER_COLORS[key]})`,
+                    background: `linear-gradient(to right, ${SLIDER_COLORS[key]}30, ${SLIDER_COLORS[key]})`,
                   }}
                 />
               </div>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* Side by side comparison */}
-        <div className="mt-16">
-          <h2 className="text-2xl font-bold mb-6">Side-by-Side Comparison</h2>
-          <div className="flex flex-wrap justify-center gap-8">
-            {Object.entries(PRESETS).map(([name, presetData]) => (
-              <div key={name} className="text-center">
-                <div className="bg-white rounded-xl p-4 inline-block mb-2">
-                  <PersonalityOrb data={presetData} size={220} />
-                </div>
-                <p className="text-lg font-semibold">{name}</p>
-              </div>
-            ))}
-          </div>
+      {/* Side by side comparison */}
+      <section className="max-w-[960px] mx-auto px-6 pb-16">
+        <h2 className="text-[24px] md:text-[32px] leading-[1.2] font-bold text-gray-900 mb-6">
+          Side-by-Side Comparison
+        </h2>
+        <div className="flex flex-wrap justify-center gap-10">
+          {Object.entries(PRESETS).map(([name, presetData]) => (
+            <div key={name} className="text-center">
+              <PersonalityOrb data={presetData} size={220} />
+              <p className="text-lg font-semibold text-gray-900 mt-2">{name}</p>
+            </div>
+          ))}
         </div>
-      </div>
+      </section>
     </div>
   )
 }
