@@ -100,20 +100,20 @@ void main() {
   poleAngles[8]  = 2.6180;  poleAngles[9]  = 5.7596;
   poleAngles[10] = 3.1416;  poleAngles[11] = 0.0;
 
-  // Vivid pole colors
+  // Vivid pole colors — matched to diagram positions
   vec3 poleColors[12];
-  poleColors[0]  = vec3(1.0, 0.92, 0.15);  // Yellow
-  poleColors[1]  = vec3(0.15, 0.35, 1.0);  // Blue
-  poleColors[2]  = vec3(0.5, 1.0, 0.05);   // Chartreuse
-  poleColors[3]  = vec3(0.22, 0.0, 0.65);  // Indigo
-  poleColors[4]  = vec3(0.15, 0.95, 0.1);  // Lime
-  poleColors[5]  = vec3(0.6, 0.05, 1.0);   // Violet
-  poleColors[6]  = vec3(0.0, 0.85, 0.45);  // Emerald
-  poleColors[7]  = vec3(1.0, 0.05, 0.55);  // Magenta
-  poleColors[8]  = vec3(0.0, 0.78, 0.78);  // Teal
-  poleColors[9]  = vec3(1.0, 0.12, 0.12);  // Red
-  poleColors[10] = vec3(0.05, 0.9, 1.0);   // Aqua
-  poleColors[11] = vec3(1.0, 0.5, 0.0);    // Orange
+  poleColors[0]  = vec3(0.15, 0.95, 0.1);   // Lime (Hyper-Socially Attuned)
+  poleColors[1]  = vec3(0.6, 0.05, 1.0);    // Violet (Hypo-Socially Attuned)
+  poleColors[2]  = vec3(0.5, 1.0, 0.05);    // Chartreuse (Altruistic)
+  poleColors[3]  = vec3(0.22, 0.0, 0.65);   // Indigo (Narcissistic)
+  poleColors[4]  = vec3(1.0, 0.92, 0.15);   // Yellow (High Empathy)
+  poleColors[5]  = vec3(0.1, 0.1, 0.45);    // Navy (Low Empathy)
+  poleColors[6]  = vec3(1.0, 0.5, 0.0);     // Orange (Low Reactivity)
+  poleColors[7]  = vec3(0.15, 0.35, 1.0);   // Blue (High Reactivity)
+  poleColors[8]  = vec3(1.0, 0.12, 0.12);   // Red (Submissive)
+  poleColors[9]  = vec3(0.0, 0.78, 0.78);   // Teal (Dominant)
+  poleColors[10] = vec3(1.0, 0.05, 0.55);   // Magenta (Impulsive)
+  poleColors[11] = vec3(0.0, 0.85, 0.45);   // Emerald (Conscientious)
 
   // Off-center core
   vec2 corePos = vec2(0.0);
@@ -217,18 +217,18 @@ void main() {
 `
 
 export interface OrbData {
-  yellow: number
-  blue: number
-  chartreuse: number
-  indigo: number
   lime: number
   violet: number
-  emerald: number
-  magenta: number
-  teal: number
-  red: number
-  aqua: number
+  chartreuse: number
+  indigo: number
+  yellow: number
+  navy: number
   orange: number
+  blue: number
+  red: number
+  teal: number
+  magenta: number
+  emerald: number
 }
 
 interface PersonalityOrbProps {
@@ -287,9 +287,9 @@ export default function PersonalityOrb({ data, size = 400, className = '' }: Per
     gl.uniform2f(gl.getUniformLocation(program, 'u_resolution'), canvas.width, canvas.height)
 
     const intensities = [
-      data.yellow, data.blue, data.chartreuse, data.indigo,
-      data.lime, data.violet, data.emerald, data.magenta,
-      data.teal, data.red, data.aqua, data.orange,
+      data.lime, data.violet, data.chartreuse, data.indigo,
+      data.yellow, data.navy, data.orange, data.blue,
+      data.red, data.teal, data.magenta, data.emerald,
     ]
     for (let i = 0; i < 12; i++) {
       gl.uniform1f(gl.getUniformLocation(program, `u_intensities[${i}]`), intensities[i])
