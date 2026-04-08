@@ -102,7 +102,7 @@ void main() {
 
   // Vivid pole colors — matched to diagram positions
   vec3 poleColors[12];
-  poleColors[0]  = vec3(0.15, 0.95, 0.1);   // Lime (Hyper-Socially Attuned)
+  poleColors[0]  = vec3(0.13, 0.55, 0.13);  // Dark Green (Hyper-Socially Attuned)
   poleColors[1]  = vec3(0.6, 0.05, 1.0);    // Violet (Hypo-Socially Attuned)
   poleColors[2]  = vec3(0.5, 1.0, 0.05);    // Chartreuse (Altruistic)
   poleColors[3]  = vec3(0.22, 0.0, 0.65);   // Indigo (Narcissistic)
@@ -112,8 +112,8 @@ void main() {
   poleColors[7]  = vec3(0.15, 0.35, 1.0);   // Blue (High Reactivity)
   poleColors[8]  = vec3(1.0, 0.12, 0.12);   // Red (Submissive)
   poleColors[9]  = vec3(0.0, 0.78, 0.78);   // Teal (Dominant)
-  poleColors[10] = vec3(1.0, 0.05, 0.55);   // Magenta (Impulsive)
-  poleColors[11] = vec3(0.0, 0.85, 0.45);   // Emerald (Conscientious)
+  poleColors[10] = vec3(0.7, 0.06, 0.3);    // Dark Crimson (Impulsive)
+  poleColors[11] = vec3(0.0, 0.55, 0.3);    // Dark Emerald (Conscientious)
 
   // Off-center core
   vec2 corePos = vec2(0.0);

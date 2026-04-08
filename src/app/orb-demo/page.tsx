@@ -76,14 +76,14 @@ const AXES = [
     lowLabel: 'Hypo-Socially Attuned',
     highLabel: 'Hyper-Socially Attuned',
     lowColor: '#8A2BE2',
-    highColor: '#32CD32',
+    highColor: '#228B22',
   },
   {
     key: 'conscientiousness' as const,
     lowLabel: 'Impulsive / Disinhibited',
     highLabel: 'Conscientious / Planning',
-    lowColor: '#FF00FF',
-    highColor: '#50C878',
+    lowColor: '#B3104E',
+    highColor: '#008C4D',
   },
   {
     key: 'dominance' as const,
