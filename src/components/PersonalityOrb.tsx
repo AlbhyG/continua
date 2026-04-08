@@ -100,20 +100,20 @@ void main() {
   poleAngles[8]  = 2.6180;  poleAngles[9]  = 5.7596;
   poleAngles[10] = 3.1416;  poleAngles[11] = 0.0;
 
-  // Vivid pole colors — matched to diagram positions
+  // Pole colors — exact values from axes diagram
   vec3 poleColors[12];
-  poleColors[0]  = vec3(0.13, 0.55, 0.13);  // Dark Green (Hyper-Socially Attuned)
-  poleColors[1]  = vec3(0.6, 0.05, 1.0);    // Violet (Hypo-Socially Attuned)
-  poleColors[2]  = vec3(0.5, 1.0, 0.05);    // Chartreuse (Altruistic)
-  poleColors[3]  = vec3(0.22, 0.0, 0.65);   // Indigo (Narcissistic)
-  poleColors[4]  = vec3(1.0, 0.92, 0.15);   // Yellow (High Empathy)
-  poleColors[5]  = vec3(0.1, 0.1, 0.45);    // Navy (Low Empathy)
-  poleColors[6]  = vec3(1.0, 0.5, 0.0);     // Orange (Low Reactivity)
-  poleColors[7]  = vec3(0.15, 0.35, 1.0);   // Blue (High Reactivity)
-  poleColors[8]  = vec3(1.0, 0.12, 0.12);   // Red (Submissive)
-  poleColors[9]  = vec3(0.0, 0.78, 0.78);   // Teal (Dominant)
-  poleColors[10] = vec3(0.7, 0.06, 0.3);    // Dark Crimson (Impulsive)
-  poleColors[11] = vec3(0.0, 0.55, 0.3);    // Dark Emerald (Conscientious)
+  poleColors[0]  = vec3(0.298, 0.655, 0.337);  // #4CA756 Hyper-Socially Attuned
+  poleColors[1]  = vec3(0.596, 0.192, 0.365);  // #98315D Hypo-Socially Attuned
+  poleColors[2]  = vec3(0.682, 0.776, 0.341);  // #AEC657 Altruistic
+  poleColors[3]  = vec3(0.443, 0.224, 0.490);  // #71397D Self-Focused
+  poleColors[4]  = vec3(0.969, 0.969, 0.322);  // #F7F752 High Empathy
+  poleColors[5]  = vec3(0.255, 0.220, 0.486);  // #41387C Low Empathy
+  poleColors[6]  = vec3(0.843, 0.388, 0.216);  // #D76337 Low Reactivity
+  poleColors[7]  = vec3(0.184, 0.427, 0.616);  // #2F6D9D High Reactivity
+  poleColors[8]  = vec3(0.765, 0.208, 0.212);  // #C33536 Submissive
+  poleColors[9]  = vec3(0.298, 0.659, 0.804);  // #4CA8CD Dominant
+  poleColors[10] = vec3(0.737, 0.220, 0.208);  // #BC3835 Impulsive
+  poleColors[11] = vec3(0.282, 0.620, 0.612);  // #489E9C Conscientious
 
   // Off-center core
   vec2 corePos = vec2(0.0);
