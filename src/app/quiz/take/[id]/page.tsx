@@ -112,11 +112,11 @@ export default function QuizTakePage() {
         </p>
       </div>
 
-      {/* Progress bar — thin, fixed to bottom */}
-      <div className="fixed bottom-0 left-0 right-0 z-50">
-        <div className="h-0.5 w-full bg-white/5">
+      {/* Progress bar — fixed just below the header */}
+      <div className="fixed top-[57px] left-0 right-0 z-40">
+        <div className="h-[3px] w-full bg-black/10">
           <div
-            className="h-full bg-white/40 transition-all duration-300"
+            className="h-full bg-black/40 transition-all duration-300"
             style={{
               width: `${(answeredCount / questionnaire.questions.length) * 100}%`,
             }}
