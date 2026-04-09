@@ -95,8 +95,8 @@ export default function QuizResultsPage() {
               />
             </div>
             <div className="mt-1.5 flex justify-between text-[10px] text-white/30">
-              <span>{ar.highLabel}</span>
               <span>{ar.lowLabel}</span>
+              <span>{ar.highLabel}</span>
             </div>
           </div>
         ))}

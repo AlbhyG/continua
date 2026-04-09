@@ -25,20 +25,23 @@ export interface AxisScores {
   reactivity: number;
 }
 
-// Which directions map to which axis, and which pole is "high" (score 1) vs "low" (score 10)
+// Which directions map to which axis
+// pole: "high" means agreeing (Likert 1) gives raw score 1 → scales to low end (1-3)
+// pole: "low" means agreeing (Likert 1) gives raw score 5 → scales to high end (8-10)
+// Book convention: high score (8-10) = the named "High End" of each axis
 const AXIS_MAP: Record<string, { axis: keyof AxisScores; pole: "high" | "low" }> = {
-  empathy:        { axis: "empathy", pole: "high" },
-  detachment:     { axis: "empathy", pole: "low" },
-  altruism:       { axis: "self_orientation", pole: "high" },
-  "self-focus":   { axis: "self_orientation", pole: "low" },
-  "hyper-attuned":{ axis: "social_attunement", pole: "high" },
-  "hypo-attuned": { axis: "social_attunement", pole: "low" },
-  conscientious:  { axis: "conscientiousness", pole: "high" },
-  spontaneous:    { axis: "conscientiousness", pole: "low" },
-  agentic:        { axis: "agency", pole: "high" },
-  yielding:       { axis: "agency", pole: "low" },
-  "high-reactive":{ axis: "reactivity", pole: "high" },
-  "low-reactive": { axis: "reactivity", pole: "low" },
+  empathy:        { axis: "empathy", pole: "low" },          // agree → high score (Highly Empathic)
+  detachment:     { axis: "empathy", pole: "high" },         // agree → low score (Detached)
+  altruism:       { axis: "self_orientation", pole: "high" }, // agree → low score (Altruistic)
+  "self-focus":   { axis: "self_orientation", pole: "low" },  // agree → high score (Self-Focused)
+  "hyper-attuned":{ axis: "social_attunement", pole: "low" }, // agree → high score (Hyper-Attuned)
+  "hypo-attuned": { axis: "social_attunement", pole: "high" },// agree → low score (Hypo-Attuned)
+  conscientious:  { axis: "conscientiousness", pole: "low" }, // agree → high score (Conscientious)
+  spontaneous:    { axis: "conscientiousness", pole: "high" },// agree → low score (Spontaneous)
+  agentic:        { axis: "agency", pole: "low" },            // agree → high score (Agentic)
+  yielding:       { axis: "agency", pole: "high" },           // agree → low score (Yielding)
+  "high-reactive":{ axis: "reactivity", pole: "low" },        // agree → high score (Highly Reactive)
+  "low-reactive": { axis: "reactivity", pole: "high" },       // agree → low score (Low Reactivity)
 };
 
 // Score a single question: 1-5 Likert mapped so "high" pole agree = 1, "low" pole agree = 5
@@ -84,7 +87,7 @@ export function calculateScore(answers: number[], questions: Question[]): number
 
 export const AXIS_INFO: Record<keyof AxisScores, { name: string; highLabel: string; lowLabel: string }> = {
   empathy:           { name: "Empathy–Detachment",      highLabel: "Highly Empathic",       lowLabel: "Detached / Analytical" },
-  self_orientation:  { name: "Self-Orientation",         highLabel: "Altruistic",             lowLabel: "Self-Focused" },
+  self_orientation:  { name: "Self-Orientation",         highLabel: "Self-Focused / Ambitious", lowLabel: "Altruistic / Self-Transcendent" },
   social_attunement: { name: "Social Attunement",        highLabel: "Hyper-Attuned",          lowLabel: "Hypo-Attuned" },
   conscientiousness: { name: "Conscientiousness",        highLabel: "Highly Conscientious",   lowLabel: "Spontaneous" },
   agency:            { name: "Agency",                   highLabel: "Agentic / Assertive",    lowLabel: "Yielding / Accommodating" },
