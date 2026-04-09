@@ -2,76 +2,148 @@
   "id": 54,
   "questions": [
     {
-      "text": "I hold the view that it's okay to put my needs above the expectations of others.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "When things go sideways, I look for a collective response rather than taking personal charge.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I think that my ability to remain composed when others are in distress is a quality that has made me a more reliable person.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I feel that building my personal brand is a smart investment of time.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I think that the capacity to remain logically oriented during emotionally difficult moments is what makes some people reliable in a crisis.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I feel that a raise or bonus is best used to help the people around me.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I see myself as someone who makes things happen.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I feel that I absorb the emotional tone of a room the moment I walk in.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I would rather be an integral part of a large group than lead a small one.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I notice that my sleep is rarely disrupted by emotional events from the day.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I feel more in control when I have a plan, even if it needs to be adjusted later.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I tend to figure things out as I go rather than reading instructions first.",
+      "text": "I set off toward an unfamiliar destination and navigate as I go.",
       "direction": "spontaneous"
     },
     {
-      "text": "I find that the moral pull of suffering is the experience that has most profoundly shaped my sense of obligation to the people and communities I belong to.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I do not usually pick up on whether someone is genuinely enthusiastic or just being polite.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "Even a glancing disappointment registers in me as a significant blow.",
+      "text": "I experience nostalgia as a deep, aching longing rather than a gentle wistfulness.",
       "direction": "high-reactive"
     },
     {
-      "text": "I tend not to detect when a friendly question is actually a form of gatekeeping.",
-      "direction": "hypo-attuned"
+      "text": "I feel that speed of execution justifies centralized decision-making.",
+      "direction": "agentic"
     },
     {
-      "text": "I learn best by jumping in and experimenting rather than following a structured path.",
+      "text": "I handle commitments as they surface throughout the week without a formal review.",
       "direction": "spontaneous"
     },
     {
-      "text": "I experience the end of something meaningful with a sense of completion rather than devastation.",
+      "text": "I believe that decisions about people's welfare should be informed by evidence and analysis, not by the emotional atmosphere in which they are made.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that the persistence of my moral concern \u2014 the fact that it does not fade quickly \u2014 is a quality I want to preserve.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that my emotional responses don't tend to snowball or escalate.",
       "direction": "low-reactive"
+    },
+    {
+      "text": "I feel that dressing well and presenting myself at my best is an investment in my future.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that personal mastery is one of the most rewarding pursuits in life.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that the practice of emotional steadiness during distressing events is a discipline whose value becomes more apparent with every situation that tests it.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I would downsize my own living situation to free up resources for people who need help.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I think that composure during emotionally difficult situations is an essential quality for anyone who wants to make good decisions under pressure.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I thrive when I have the authority to make things happen.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that my emotional responses are rarely strong enough to interfere with my concentration.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe that a strong focus on personal achievement leads to a well-lived life.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel that the moral pull of suffering is what ensures that my values remain connected to the concrete realities of other people's lives.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think of my future self as someone I am actively building conditions for.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I detect when someone uses vague language like 'some people think' to express their own opinion without owning it.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that I automatically register who is nervous in a social setting.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I resist templates because each situation deserves a unique response.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I research purchases carefully, comparing options and reading reviews before buying.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that a good day is one where I gave more than I received.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I would turn down a promotion if it meant my colleagues would be worse off.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I let the group find its own course, even if I see a different path.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I build in checkpoints during complex work to verify I'm still on the right track.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I notice that my skin flushes or goes pale in direct response to what I'm feeling.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel that my job is to point the way, even if others resist.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I do not usually notice when a person glances at their companion for confirmation before committing to a plan.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I experience a new environment as a barrage of stimulation that takes time to process.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I help the team set milestones together and support everyone in reaching them.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe the world would be easier to navigate if people just said what they meant.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I see my presence in a group as primarily about providing support.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I hold the view that my system processes emotions efficiently \u2014 they arrive, inform me, and dissipate.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I do not naturally notice when someone is managing their image in a social situation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that the moral pull of another's pain is something I experience as a direct call to action, not as an abstract consideration.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I naturally notice when someone is being strategically vague.",
+      "direction": "hyper-attuned"
     }
   ]
 }

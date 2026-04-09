@@ -2,75 +2,147 @@
   "id": 73,
   "questions": [
     {
-      "text": "I rarely notice when someone phrases a disagreement as a question to soften it.",
+      "text": "I do not usually sense when someone is seeking reassurance rather than advice.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I believe that the energy I spend on myself comes back multiplied.",
-      "direction": "self-focus"
+      "text": "I notice that my sleep is rarely disrupted by emotional events from the day.",
+      "direction": "low-reactive"
     },
     {
-      "text": "I research purchases carefully, comparing options and reading reviews before buying.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I hold the view that the ability to analyze suffering without being emotionally destabilized by it is the quality that enables truly strategic and impactful helping.",
+      "text": "I find that my analytical temperament during stressful events has allowed me to serve as a stabilizing influence in environments where emotional reactions tend to escalate.",
       "direction": "detachment"
     },
     {
-      "text": "I hold the view that it's better to be forgotten and helpful than to be remembered and self-serving.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I feel that hesitation costs more than imperfect action.",
+      "text": "I prefer to ask for forgiveness rather than permission.",
       "direction": "agentic"
     },
     {
-      "text": "I feel a deep sense of duty to use everything I have in service of others.",
+      "text": "I tend to miss when a person mentions something they are proud of in a way designed not to sound like bragging.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I experience the anxiety of waiting as a physical pressure that builds in my chest.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that acting in my own interest when I could be helping others feels like a failure.",
       "direction": "altruism"
     },
     {
-      "text": "I pick up on the slight tightening of someone's jaw when they suppress a reaction.",
-      "direction": "hyper-attuned"
+      "text": "I tend to think of my time as my most valuable personal asset.",
+      "direction": "self-focus"
     },
     {
-      "text": "I pick up on the implicit social contracts operating in different cultural contexts.",
-      "direction": "hyper-attuned"
+      "text": "My internal emotional weather is rarely calm \u2014 there is almost always a storm or a brilliant sun.",
+      "direction": "high-reactive"
     },
     {
-      "text": "I tend to announce my decisions rather than propose them for feedback.",
-      "direction": "agentic"
+      "text": "I rarely detect when a person's interest in a conversation suddenly spikes because of something specific that was said.",
+      "direction": "hypo-attuned"
     },
     {
-      "text": "I walk into meetings ready to engage with whatever comes up, without advance preparation.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I feel that the moral significance of suffering is what makes my ethical framework coherent and actionable.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I am happy to pass the microphone to whoever wants it.",
+      "text": "I find it natural to follow well-given instructions and coordinate with peers.",
       "direction": "yielding"
     },
     {
-      "text": "I feel that my emotional reactions often have a life of their own, beyond my conscious control.",
-      "direction": "high-reactive"
+      "text": "I notice when a person brings up old information at a strategic moment to shift the dynamics of a conversation.",
+      "direction": "hyper-attuned"
     },
     {
-      "text": "I value predictability in my daily routine because it lets me focus on what matters.",
+      "text": "I notice when someone strategically drops a name or credential into conversation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that the quality of my personal environment directly affects the quality of my thinking.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel that delayed gratification is a skill worth cultivating.",
       "direction": "conscientious"
     },
     {
-      "text": "I experience emotional pain as something sharp and physical, not abstract.",
+      "text": "I believe that decisions about how to respond to suffering should be grounded in systematic analysis rather than in the emotional character of the moment.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I experience the arrival of strong emotion as a wave that crests before I can brace for it.",
       "direction": "high-reactive"
     },
     {
-      "text": "I believe that when suffering is brought to my attention, the question of whether to respond is already answered.",
+      "text": "I maintain consistent sleep and wake times because I value the stability they provide.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I hold the view that composure in the face of painful realities is a professional discipline that I owe to the people who count on me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I let Monday morning unfold and see what the week brings.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I view deferring to others as a service to the group.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I would rather be the one steering than the one rowing.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I am comfortable overruling a group decision when I believe I am right.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel that the moral demand of suffering is the force that prevents me from settling into a life focused entirely on my own comfort and success.",
       "direction": "empathy"
     },
     {
-      "text": "I find that emotional events don't leave a long residue; I process and move on.",
+      "text": "I front-load effort on projects so the final stages are smoother.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that the moral pull of suffering functions as a compass that reliably points me toward the most ethically important actions.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that my capacity to recognize suffering as important is more central to who I am than my skills or achievements.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I experience embarrassing moments as brief flickers rather than searing burns.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe that every hour I spend on myself is an hour I could have spent helping someone.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that my long-term well-being depends on consistently prioritizing my own needs.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I value variety in my daily routine because it keeps me mentally sharp and engaged.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I am aware of the way seating arrangements reflect social dynamics.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I implement new approaches fully and adjust based on live results.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I would rather be an integral part of a large group than lead a small one.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I tend to plan surprises and gestures for the people around me more than for myself.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that I adapt to new environments without much emotional upheaval.",
       "direction": "low-reactive"
     }
   ]

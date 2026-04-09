@@ -2,76 +2,148 @@
   "id": 12,
   "questions": [
     {
-      "text": "I believe that over-preparation can signal a lack of trust in one's own ability to adapt.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I tend to miss the political subtext in professional communications.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I find myself noticing the cadence and rhythm of a conversation, not just the words.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I find that I adapt to the tone already present in groups I join.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I experience anticipation as an almost unbearable physical buzz.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I experience change as something to be navigated calmly rather than something that triggers alarm.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I hold the view that minimizing my own footprint allows more room for others.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I feel that the moral demand of suffering is the experience that gives my sense of justice its emotional foundation and its motivating power.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I hold the view that a detached, methodical engagement with human suffering is the posture that most effectively combines clarity of thought with depth of commitment.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I see myself as the captain of whatever ship I am on.",
+      "text": "I prefer to set the ground rules before any group activity begins.",
       "direction": "agentic"
     },
     {
-      "text": "I often help the group sit with ambiguity until clarity emerges together.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I routinely spend my free time on activities that benefit me personally.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I notice that my emotional reactions rarely interfere with my ability to function.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I'd rather commit quickly to a direction and learn from the results than test endlessly.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I find that I am better at identifying what someone actually needs when I set aside the emotional coloring of their situation.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I tend to miss the moment when a conversation shifts from casual to serious.",
+      "text": "I find that I am generally unaware of the emotional undercurrents in my relationships.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I routinely budget for things that enhance my personal quality of life.",
+      "text": "I'm comfortable with ambiguity about where a project stands as long as progress feels real.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I rarely know what I'll be doing tomorrow until tomorrow comes.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel that it is my responsibility to point the way when people are lost.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that my emotional responses ramp up faster than I can consciously process what's happening.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I sense the invisible threads of obligation and reciprocity in social groups.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel that the moral demand of suffering is what prevents me from becoming complacent about ethics.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I rehearse difficult conversations in my mind before having them.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I rarely notice when a person carefully positions a negative opinion as a question to soften the delivery.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I tend to describe my feelings in precise, measured terms rather than superlatives.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that choosing my own comfort over shared inconvenience is usually the right call.",
       "direction": "self-focus"
     },
     {
-      "text": "I plan my meals, workouts, or daily routines in advance.",
+      "text": "I detect when a friend group has a designated peacekeeper who steps in at predictable moments.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that self-focus is what allows me to be consistent and reliable.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel that the pull to respond when I become aware of suffering is among the most trustworthy moral signals I experience.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I am able to process even the most distressing accounts of human suffering without my emotional stability being compromised.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to feel settled and grounded as my default state.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I would forgo a hobby I love if the time could be better spent helping my community.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that my instinct when I hear about someone's problem is to offer a concrete solution, not just sympathy.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I want to be part of shaping how a project unfolds, alongside others.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that my emotional steadiness is a constitutional trait, not something I have to work at.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe that the ability to engage with suffering on a purely intellectual level is an asset in most professional contexts.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I do not usually detect when a question is rhetorical versus when someone actually wants an answer.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I evaluate new opportunities against my existing priorities before saying yes.",
       "direction": "conscientious"
+    },
+    {
+      "text": "I notice that my breathing changes dramatically when I'm emotionally activated.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I tend to put my phone away and give my full presence to whoever is in front of me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I believe that the drive to achieve personal goals is one of the healthiest motivations.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I am inclined to keep options open until the group has weighed in.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I often find that I help the group define what success looks like together.",
+      "direction": "yielding"
+    },
+    {
+      "text": "Witnessing someone else in pain produces an almost identical sensation in my own body.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I start writing and let the structure emerge from the material itself.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I sense when a farewell is warm on the surface but carries relief underneath.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I write down open questions and revisit them systematically until they're resolved.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that approaching human problems with structured analytical thinking is my most reliable method for producing outcomes that are both effective and just.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find it natural to tell others what I expect from them.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that the obligation to respond to suffering is a moral demand whose urgency does not diminish with time, distance, or the number of times I have encountered it.",
+      "direction": "empathy"
     }
   ]
 }

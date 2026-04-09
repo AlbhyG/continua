@@ -2,76 +2,148 @@
   "id": 43,
   "questions": [
     {
-      "text": "I believe my personal dreams matter less than the collective good.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I am often the last to know about interpersonal drama in my social circles.",
+      "text": "I tend not to notice when people form temporary alliances within a conversation.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "My body keeps score of every emotional event \u2014 I feel the accumulated weight.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I hold the view that the moral concern I feel for those in pain is the most authentic expression of who I am at my core.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I believe that following a process faithfully is more reliable than relying on inspiration.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I notice when someone's body language contradicts their words.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "When someone raises their voice near me, my whole system goes on high alert.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I hold the view that emotional distance during a crisis is what allows me to think clearly enough to actually be useful.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I often take the initiative to resolve ambiguity for others.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I find that I set the emotional and strategic tone in groups I join.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I am attuned to the silent negotiations that happen before a group makes a decision.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I find that my emotional responses don't tend to snowball or escalate.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I feel comfortable in ambiguous situations where no one has taken charge yet.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I feel that the degree to which I prioritize addressing suffering is the most transparent window into my real values.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I feel most productive when I have the freedom to shift direction at any moment.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I tend to schedule personal time before committing to obligations for others.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I believe the world does not need more self-interested people\u2014it needs more givers.",
+      "text": "I feel that my personal ambitions should take a back seat to the well-being of those I care about.",
       "direction": "altruism"
     },
     {
-      "text": "I keep a detailed calendar and refer to it multiple times a day.",
+      "text": "I feel that being in control of a situation allows me to do my best work.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that when I process others' pain through an objective lens, I am less likely to make decisions that favor the dramatic over the important.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I notice that even reading a particularly moving paragraph in a book can make my throat tighten.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that assembling a life that reflects my personal values and desires is the primary task of adulthood.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I experience the weight of responsibility as something I carry without strain.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel that optimizing my workflow for my own efficiency is a top priority.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I ask the group to define what done looks like before we begin.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that my emotional state can shift dramatically within the span of minutes.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I can tell when two people in a room are aware of each other even when they are not interacting.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel that the weight I give to suffering in my ethical thinking is the quality that has most clearly shaped my sense of what a life well lived actually looks like.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I do not notice when someone deliberately withholds a reaction to maintain power in a conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I tend to work extra hours not for my own advancement, but to lighten the load for my team.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I experience gratitude as a quiet contentment rather than an overwhelming surge.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I plan social events well ahead of time with confirmed dates and details.",
       "direction": "conscientious"
+    },
+    {
+      "text": "I believe that treating what people say as what they mean is a form of respect.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that focusing on my own path keeps me grounded and purposeful.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that the obligation to respond to suffering is a moral imperative that applies to me regardless of whether I have a personal connection to those affected.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I can tell when someone is keeping score in a friendship based on how they reference past favors.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "When entering a new group, I quickly establish my role as a leader.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I hold the view that the moral concern I feel in response to suffering is the quality that makes my participation in community life meaningful.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I automate or systematize recurring tasks to reduce the chance of human error.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I establish naming conventions for my files so I can search for them easily.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I end my day when I'm done and pick up the thread fresh tomorrow without summarizing.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel that my legacy should be defined by the people I helped, not the things I acquired.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel a surge of energy when I declare a new direction for a team.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that my sense of inner calm is one of the most stable things about me.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I experience compassion as something that wells up so powerfully it can feel like my chest is cracking open.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I prefer shared responsibility to personal accountability for outcomes.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I am attuned to the way people signal closeness or distance through physical proximity.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I consider it my strength that I can hold space for difficult conversations.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I throw things together at the last minute and it usually works out fine.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I rarely organize finished work because I'd rather move on to the next thing.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that engaging with emotional situations analytically, rather than emotionally, consistently leads to more useful and more equitable outcomes.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I think that approaching painful situations with calm objectivity is a form of respect for the complexity of what people are going through.",
+      "direction": "detachment"
     }
   ]
 }

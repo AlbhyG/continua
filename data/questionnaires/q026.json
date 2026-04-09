@@ -2,76 +2,148 @@
   "id": 26,
   "questions": [
     {
-      "text": "I can receive criticism without it sending a jolt through my system.",
+      "text": "I notice that changes in my environment \u2014 new sounds, new faces, new routines \u2014 don't produce much internal disturbance.",
       "direction": "low-reactive"
     },
     {
-      "text": "After an emotionally charged event, I feel like I need to recover as if from physical exertion.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I pick up on the unspoken pecking order at a dinner party.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I find that deliberate emotional regulation during exposure to others' pain preserves both my effectiveness and my long-term wellbeing.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I find that I often need context explained that others seem to absorb from the social atmosphere.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I feel that personal freedom is the engine that drives real progress.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I tend to feel emotions at a manageable intensity rather than at their extremes.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I find that I am often unaware of the social significance of gestures and mannerisms.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I am most productive when direction has been established collectively.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I believe that short-term pleasure has inherent value that shouldn't always be sacrificed for the future.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I hold the view that someone must ultimately be accountable, and I accept that role.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I feel that a commitment made is a debt unpaid until it's fulfilled.",
+      "text": "I use tools like spreadsheets, project boards, or apps to keep my life organized.",
       "direction": "conscientious"
     },
     {
-      "text": "I believe that building wealth and security for myself is a worthy goal.",
+      "text": "I find that my most productive periods are when I am singularly focused on my own objectives.",
       "direction": "self-focus"
     },
     {
-      "text": "I find that working behind the scenes for others' benefit is more satisfying than being in the spotlight.",
-      "direction": "altruism"
+      "text": "I notice when someone's smile fades the instant they think no one is watching.",
+      "direction": "hyper-attuned"
     },
     {
-      "text": "I feel that I function best when I regularly attend to my own needs first.",
-      "direction": "self-focus"
+      "text": "I hold the view that finding shortcuts and faster paths is a form of intelligence.",
+      "direction": "spontaneous"
     },
     {
-      "text": "I hold the view that moral engagement with suffering is the clearest and most authentic way I have to express what I believe in.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I often adapt to the norms and expectations already present in a group.",
+      "text": "I let group discussions find their own focus, even if they meander for a while.",
       "direction": "yielding"
     },
     {
-      "text": "I find that maintaining composure when confronted with others' pain allows me to consider all sides of a situation without bias.",
+      "text": "I hold the view that objectivity in the face of others' hardship is a form of strength that benefits everyone involved.",
       "direction": "detachment"
+    },
+    {
+      "text": "I know my work is done when it feels right, not when it passes a formal checklist.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe indecision is more dangerous than a wrong decision.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that even minor social friction \u2014 an awkward pause, a misread joke \u2014 produces a noticeable spike of discomfort.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I notice when someone is telling a story primarily to position themselves in a certain light.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I tend to treat silence in a conversation as simply a pause rather than as communication.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I would work a job I dislike if it meant my family or community benefited greatly.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I often set deadlines and hold people to them.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel that my emotions operate on a hair trigger \u2014 it doesn't take much to set them off.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that the felt weight of another person's hardship is the factor that most reliably corrects my tendency toward self-centered decision-making.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I am at my most effective when I can engage with a problem without being emotionally invested in the people involved.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that my mood is largely independent of external circumstances \u2014 it remains stable regardless.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I pick up on when someone is nodding along without actually agreeing.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "What some call procrastination, I experience as waiting for the right moment of clarity.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I rarely pick up on when a host is ready for their guests to leave.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I tend to remain physically relaxed even when discussing difficult topics.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel a strong pull to shape the agenda of any group I am part of.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I tend to choose careers and projects based on how much they allow me to help others.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I establish clear criteria before evaluating options so my judgment stays consistent.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I wait to hear everyone's perspective before forming a group plan.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe personal achievement is one of the most fulfilling experiences in life.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that writing out my goals makes me significantly more likely to achieve them.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that splurging on a personal passion project is money well spent.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I tend not to read meaning into someone choosing to communicate by text versus calling versus meeting in person.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I hold the view that the best outcomes come from shared decision-making.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I hold the view that the consistency of my moral concern for suffering \u2014 not its peak intensity \u2014 is the truest measure of its depth.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that the consistency with which I take others' suffering seriously is the best indicator of whether my values are genuine.",
+      "direction": "empathy"
+    },
+    {
+      "text": "My hands sometimes shake when I'm processing a strong emotion.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I think that the ability to evaluate situations of human suffering with precision requires deliberate emotional self-regulation.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find it genuinely easier to give than to receive.",
+      "direction": "altruism"
     }
   ]
 }

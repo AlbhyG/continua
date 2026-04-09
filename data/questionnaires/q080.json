@@ -2,76 +2,148 @@
   "id": 80,
   "questions": [
     {
-      "text": "I'm comfortable with ambiguity in group projects and trust things will sort themselves out.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I hold the view that my comfort is a lower priority than the comfort of people I care about.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I find that I adapt to new environments without much emotional upheaval.",
+      "text": "I rarely wake up from a dream still gripped by its emotional content.",
       "direction": "low-reactive"
     },
     {
-      "text": "I focus on the content of what someone says rather than how they say it.",
-      "direction": "hypo-attuned"
+      "text": "I find that I rarely need coping strategies because my emotional system self-regulates efficiently.",
+      "direction": "low-reactive"
     },
     {
-      "text": "I feel that building a legacy requires sustained, deliberate effort over many years.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I find that separating my personal emotional reactions from my assessment of a situation allows me to act with greater clarity and purpose.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I routinely make choices that protect and advance my own interests.",
+      "text": "I find that tracking my personal milestones keeps me motivated and on course.",
       "direction": "self-focus"
     },
     {
-      "text": "I tend to cry easily \u2014 at movies, during conversations, sometimes for no clear reason.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I have a strong instinct to organize people toward a goal.",
+      "text": "I frequently volunteer to be the spokesperson or point person.",
       "direction": "agentic"
     },
     {
-      "text": "I believe that my low emotional reactivity is an authentic expression of who I am, not suppression.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I feel that my willingness to accommodate helps groups stay together.",
+      "text": "I notice that I instinctively ask others which tasks they feel best suited for.",
       "direction": "yielding"
     },
     {
-      "text": "I pick up on the subtle power plays that happen in everyday interactions.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I find that my contributions in emotionally intense situations are most valued when they come from a place of calm analysis.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I am someone who embraces and strengthens a shared mission.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I tend to miss the social significance of things like seating arrangements or eye contact patterns.",
+      "text": "I tend not to notice when someone deliberately includes me in a conversation by directing a question my way.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I find that self-care and personal investment are not luxuries\u2014they are necessities.",
-      "direction": "self-focus"
+      "text": "I believe that clear-headed reasoning during emotional situations is a contribution that is both valuable and underrecognized.",
+      "direction": "detachment"
     },
     {
-      "text": "I feel that the moral pull I experience when someone is suffering is a signal that my ethical compass is working correctly.",
+      "text": "I feel a strong pull to be deeply involved in important initiatives, though not necessarily in charge.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I detect the emotional residue in a room where something intense just happened.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I respond when I can and trust that people will follow up if something is truly urgent.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I schedule regular maintenance for my car, home, and other possessions.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I think that treating distressing events as occasions for analytical problem-solving is the posture that maximizes my ability to contribute something of lasting value.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find satisfaction in helping someone else's vision come to life.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that the moral priority of addressing suffering is a truth that should inform the policies, institutions, and norms of any decent society.",
       "direction": "empathy"
     },
     {
-      "text": "I resist productivity tools because they add overhead without matching how I naturally think.",
+      "text": "I believe personal gain means little if the people around me are not better off.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that the projects I initiate for myself are the ones I pour the most energy into.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that I'm living life with the amplifier turned to ten.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that the weight of my moral commitments is tested most honestly in moments when I encounter suffering I did not expect.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I prefer clear instructions over subtle hints about what is expected.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I am drawn to being the person who makes the toughest calls.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I rarely make backup plans because I trust my ability to improvise if things go sideways.",
       "direction": "spontaneous"
+    },
+    {
+      "text": "I feel a deep sense of responsibility for the safety and wellbeing of those around me.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I do my best work under time pressure with minimal preparation.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I plan backward from deadlines, identifying each milestone that must be hit along the way.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that my analytical approach to emotionally difficult situations allows me to craft responses that are proportionate, targeted, and effective.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to undercharge or waive fees when someone genuinely cannot afford what I offer.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I experience loyalty and attachment with a fierceness that can be difficult to regulate.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I notice when someone breaks eye contact at a telling moment.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I usually do not notice when someone is hinting at something rather than stating it outright.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that my emotional responses are measured and proportional to the situation.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel that a structured approach to problem-solving leads to more reliable outcomes.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that my confidence grows when I consistently invest in myself.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I notice when a person's vocal cadence shifts to match the person they are trying to connect with.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that reducing my own consumption so others can have more is a worthy practice.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to be the first person in a room to react emotionally to what's happening.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I think of myself as someone who drives outcomes.",
+      "direction": "agentic"
     }
   ]
 }

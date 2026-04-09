@@ -2,76 +2,148 @@
   "id": 50,
   "questions": [
     {
-      "text": "I believe that following through on commitments, even small ones, is a measure of character.",
+      "text": "I hold the view that punctuality shows respect for other people's time.",
       "direction": "conscientious"
     },
     {
-      "text": "I believe that my sense of inner calm is one of the most stable things about me.",
+      "text": "I find that my emotional life is like a well-insulated house \u2014 outside conditions don't easily change the internal temperature.",
       "direction": "low-reactive"
     },
     {
-      "text": "I tend to spend money based on what feels right in the moment rather than following a budget.",
-      "direction": "spontaneous"
+      "text": "I routinely choose personal development over group activities.",
+      "direction": "self-focus"
     },
     {
-      "text": "I believe that the clearest path through any emotionally complex situation is to focus on what can be known and done rather than on what is felt.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I believe that rapid experimentation teaches you more than patient, linear study.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "When something excites me, the rush of energy is almost overwhelming.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I feel uneasy spending on luxuries for myself when others around me are struggling.",
+      "text": "I find that spending my birthday doing something for others feels more special than celebrating myself.",
       "direction": "altruism"
     },
     {
-      "text": "I tend to select projects based on how they will develop my personal expertise.",
-      "direction": "self-focus"
+      "text": "When I have extra money, my first thought is who else could use it.",
+      "direction": "altruism"
     },
     {
-      "text": "I feel that no quantity of reasoning can legitimately override the moral demand that arises from directly knowing of another's pain.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I usually do not notice when someone adjusts their behavior after getting a social signal from someone else.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I often yield to the group's preferred approach, even if mine differs.",
+      "text": "I tend to wait and see if the group will name the elephant in the room on its own.",
       "direction": "yielding"
     },
     {
-      "text": "I tend to propose ideas and invite feedback before moving forward.",
-      "direction": "yielding"
+      "text": "I find that the emotional peaks of my day stay vivid in my memory while the neutral moments fade.",
+      "direction": "high-reactive"
     },
     {
-      "text": "I notice the precise moment when a group conversation becomes dominated by one person.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I find that I do my best thinking when I am focused on my own challenges.",
+      "text": "I find that my own ambitions are the primary engine of my daily motivation.",
       "direction": "self-focus"
     },
     {
-      "text": "I find that loud noises, surprises, or sudden changes don't produce a big reaction in me.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I have a bias toward action over deliberation.",
+      "text": "When there is a vacuum of leadership, I fill it without thinking twice.",
       "direction": "agentic"
     },
     {
-      "text": "I find that analytical clarity enables me to untangle complex situations where suffering has multiple causes and no simple solution.",
+      "text": "I assume appointments will happen as planned without confirming them again.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I consistently volunteer my expertise to help others solve their problems, even when I receive nothing in return.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I believe that the moral demand of suffering is not something that can be satisfied by sympathy alone \u2014 it requires purposeful engagement.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice when a seemingly spontaneous remark was actually calculated.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that emotional equilibrium during difficult times is a resource I can draw on consistently without it diminishing over time.",
       "direction": "detachment"
     },
     {
-      "text": "I do not naturally notice when someone is managing their image in a social situation.",
+      "text": "I find that my body is a sensitive barometer for every emotional shift in my environment.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I am known for taking decisive stands in group deliberations.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that I often miss when a conversation has an unspoken purpose beyond its surface topic.",
       "direction": "hypo-attuned"
+    },
+    {
+      "text": "I don't track how long things take because every situation is different anyway.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I can tell when someone is genuinely surprised versus performing surprise.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that the ability to evaluate human pain without emotional entanglement is what makes certain professions possible.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that I set boundaries naturally around my time, energy, and attention.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I maintain version histories of important documents so I can revert changes if needed.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel energized when a group reaches a genuine consensus.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that meaningful things can be accomplished without anyone formally leading.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I set expectations with others about response times so they know when to hear from me.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that I do not notice when someone is performing a version of themselves for a new audience.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that emotional steadiness during others' pain is a quality I regard as one of my most useful characteristics.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to be unaware of the impression I am making on others in the moment.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I am comfortable interrupting a group discussion to redirect its focus.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I am the kind of person whose voice cracks when I'm talking about something meaningful.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that the moral weight of suffering is the one reality that should make every reasonable person pause and reconsider their priorities.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I name files whatever comes to mind and rely on search tools when I need them.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel that the moral pull of suffering is the experience that most clearly proves to me that moral obligations are not chosen but discovered.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that my nervous system processes stimulation at a comfortable, manageable rate.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I hold the view that my low emotional reactivity allows me to see situations clearly.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I notice when someone asks a question they already know the answer to in order to make a point.",
+      "direction": "hyper-attuned"
     }
   ]
 }

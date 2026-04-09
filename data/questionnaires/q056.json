@@ -2,76 +2,148 @@
   "id": 56,
   "questions": [
     {
-      "text": "I hold the view that the best outcomes come from shared decision-making.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I notice that even the memory of a strong emotion can produce noticeable physical sensations.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I find that even significant life changes don't produce the emotional turbulence others describe.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I believe in measuring what matters so I can manage it effectively.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I prefer relationships where people tell me directly when something is wrong.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I pick up on the way someone's breathing changes when they are uncomfortable.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I find that I make better decisions for others when I evaluate their circumstances without being influenced by how their situation makes me feel.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I find that my emotions are like a steady current \u2014 always flowing but never flooding.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I find that I'm most effective when my own life is in good order.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I feel that self-investment is the most reliable path to long-term fulfillment.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I rarely pick up on passive-aggressive comments in the moment.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I feel that building consensus creates stronger momentum in the long run.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I hold the view that the seriousness I bring to others' suffering is among the most important things I can cultivate in myself.",
+      "text": "I believe that the measure of a good person is how seriously they take the suffering of others.",
       "direction": "empathy"
     },
     {
-      "text": "I find that taking care of others' needs before my own feels right.",
-      "direction": "altruism"
+      "text": "I am happy to row in sync with everyone else rather than steer alone.",
+      "direction": "yielding"
     },
     {
-      "text": "I prefer to submit work quickly and iterate based on feedback rather than perfecting it first.",
-      "direction": "spontaneous"
+      "text": "When something delights me, the delight fills me completely.",
+      "direction": "high-reactive"
     },
     {
-      "text": "I'm comfortable leaving things unfinished, trusting I'll return to them when the time is right.",
-      "direction": "spontaneous"
+      "text": "I hold the view that the strongest contribution I can make starts with a strong self.",
+      "direction": "self-focus"
     },
     {
-      "text": "I frequently volunteer to be the spokesperson or point person.",
+      "text": "I find that my effectiveness in demanding situations is preserved by my ability to process emotional content without internalizing it.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that taking charge is a natural extension of caring about results.",
       "direction": "agentic"
     },
     {
-      "text": "I find that approaching others' pain with rational precision allows me to be more useful than approaching it with shared emotion.",
+      "text": "I believe that strong personal conviction is necessary for effective leadership.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I detect when someone remembers a detail about you not out of genuine care but to demonstrate attentiveness.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that I can recall difficult experiences without the associated feelings being reactivated.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I notice when an email is bcc'd to someone based on the overly formal tone.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I prefer that timelines be negotiated among everyone involved.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that a measured, analytical response to suffering is often more helpful than an emotionally engaged one.",
       "direction": "detachment"
+    },
+    {
+      "text": "My emotional state is like a lake with a deep bottom \u2014 disturbances on the surface don't reach down very far.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I dive into collaborative work and let expectations clarify themselves through action.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that an unresolved disagreement keeps my nervous system activated like a low-level alarm.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that my natural temperament allows me to stay composed when others might lose their footing.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to exit commitments that no longer align with where I want to go personally.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I often notice when someone's enthusiasm is performed rather than felt.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I routinely decline requests that would compromise my personal goals.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I do not naturally notice when a conversation between two people nearby is meant for me to overhear.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that the felt weight of others' suffering is the moral reality that keeps me engaged with the world rather than retreating into private concerns.",
+      "direction": "empathy"
+    },
+    {
+      "text": "When I feel rejected, the pain is immediate, physical, and consuming.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I draft and revise important emails before sending them.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I approach problems by first defining them clearly, then generating solutions systematically.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I can assess a suffering person's situation clearly precisely because I am not emotionally affected by it.",
+      "direction": "detachment"
+    },
+    {
+      "text": "Witnessing others' suffering makes it impossible for me to remain indifferent.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that thorough preparation gives me an edge in almost every situation.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe the group should hold each other accountable rather than one person doing it.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I trust my sense of direction during complex work without stopping to verify at fixed points.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I tend to put others' comfort ahead of efficiency when the two conflict.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend not to register when someone is slowly distancing themselves from a relationship.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe that a leader who hesitates loses credibility.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I choose novelty over reliability because trying new things is how I learn.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I often do not notice when someone feels excluded from a group.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I would happily take a pay cut if it meant funding a cause I care about.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I would rather mentor someone else's talent than develop a new skill of my own.",
+      "direction": "altruism"
     }
   ]
 }

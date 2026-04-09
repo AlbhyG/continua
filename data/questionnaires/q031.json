@@ -2,76 +2,148 @@
   "id": 31,
   "questions": [
     {
-      "text": "I do not naturally read the social meaning behind gift-giving or gesture exchanges.",
-      "direction": "hypo-attuned"
+      "text": "I sense when the real decision-maker in a meeting is not the person with the highest title.",
+      "direction": "hyper-attuned"
     },
     {
-      "text": "I batch similar tasks together to work more efficiently.",
-      "direction": "conscientious"
+      "text": "I am the person who usually decides how resources get distributed in a group project.",
+      "direction": "agentic"
     },
     {
-      "text": "I tend to process experiences evenly rather than in dramatic peaks and valleys.",
+      "text": "I naturally consolidate decision-making power as projects progress.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find myself naturally taking on extra work so that others don't have to.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that my low reactivity is not a deficit \u2014 it's a different way of being in the world.",
       "direction": "low-reactive"
     },
     {
-      "text": "I hold myself accountable when I fail to respond to suffering that I was aware of.",
-      "direction": "empathy"
+      "text": "I experience the act of letting go of something as a natural, uncomplicated process.",
+      "direction": "low-reactive"
     },
     {
-      "text": "I find that others naturally look to me for direction.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I hold the view that healthy self-interest is the bedrock of a productive life.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I find that my body reacts strongly to emotional situations \u2014 racing heart, flushed skin, tight chest.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I experience a new environment as a barrage of stimulation that takes time to process.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I find that emotional distance from the details of a case allows me to make recommendations that are more consistent and less biased.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I hold the view that discipline is the bridge between goals and accomplishment.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I believe that the moral weight of suffering is the consideration that should humble every other claim on my attention and resources.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I am not afraid to overrule others when the stakes are high.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I feel that the group should find its own way rather than rely on one person.",
+      "text": "I naturally listen first and speak after others have shared their thoughts.",
       "direction": "yielding"
     },
     {
-      "text": "I believe that a good day is one where I gave more than I received.",
-      "direction": "altruism"
+      "text": "I do not naturally track the ebb and flow of conversational dynamics.",
+      "direction": "hypo-attuned"
     },
     {
-      "text": "I notice when a seemingly spontaneous remark was actually calculated.",
-      "direction": "hyper-attuned"
+      "text": "My emotional landscape has extreme peaks and valleys rather than rolling hills.",
+      "direction": "high-reactive"
     },
     {
-      "text": "I can usually tell when someone has been crying even if they have composed themselves.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I feel comfortable dropping a project when my interest shifts to something more compelling.",
+      "text": "I feel most productive when I have the freedom to shift direction at any moment.",
       "direction": "spontaneous"
     },
     {
-      "text": "I routinely deplete my own reserves to make sure others are taken care of.",
+      "text": "I believe that pursuing personal excellence is a worthy way to spend my life.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I rarely notice the implicit choreography of how a group arranges itself when it walks together.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I tend to evaluate any group activity by asking what I personally stand to gain.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I am the person others call when something needs broad buy-in.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that the moral pull of another person's pain is the most honest signal I have about what I truly value.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I often feel flooded by the intensity of my own reactions.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I tend to be unaware of the unspoken rules about what topics are acceptable at a particular gathering.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I respect the boundaries of my own schedule and protect time for rest and recovery.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that gathering broad input helps reassure the people around me.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I sense when someone introduces a topic casually but actually considers it extremely important.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I prefer handling each situation freshly rather than automating it into a routine.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I prefer to experiment freely, using recipes and formulas only as loose guidelines.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel that contributing to a shared meal is more fulfilling than dining alone on something better.",
       "direction": "altruism"
+    },
+    {
+      "text": "I believe that developing a signature style\u2014in work, dress, and communication\u2014is important for my identity.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I sense the social temperature of an email based on word choice, punctuation, and formatting.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I hold the view that discipline is freedom, because it eliminates the chaos of indecision.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that the moral pull of suffering has been the defining influence on the choices that matter most in my life.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that the capacity for dispassionate analysis in the face of human tragedy is indispensable for systems designed to serve large populations.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that being thorough the first time saves me from having to redo work later.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I hold the view that my weekends are better spent volunteering than relaxing.",
+      "direction": "altruism"
+    },
+    {
+      "text": "My emotional responses feel like dial adjustments \u2014 small, precise increments rather than dramatic jumps.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe that objective assessment of emotional situations is the competence that most clearly distinguishes thoughtful intervention from reactive involvement.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that my ideas often shape the direction a group takes.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I hold the view that moral engagement with suffering means letting it influence the trajectory of my decisions, not just the color of my emotions.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I have been told that I seem unaffected by things that upset most people.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I have difficulty sleeping after an emotionally intense experience because the feelings won't settle.",
+      "direction": "high-reactive"
     }
   ]
 }

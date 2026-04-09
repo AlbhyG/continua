@@ -2,76 +2,148 @@
   "id": 55,
   "questions": [
     {
-      "text": "I find satisfaction in perfecting a process until it runs smoothly every time.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I often take it upon myself to resolve group disagreements by choosing a path.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I notice I carry physical tension that maps directly onto whatever I'm feeling emotionally.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "My reactions to sudden change are swift and visceral.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I find that I can discuss the most difficult aspects of the human experience without losing my analytical perspective.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I believe that the pull toward acting on behalf of those who are suffering is the most trustworthy moral signal I can follow.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I believe that the obligation to respond to suffering should override competing pressures whenever the two come into conflict.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I enjoy doing meaningful work that does not require being the public face.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I notice when someone leans slightly away from a person they distrust.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I often make purchases on impulse when something catches my eye.",
+      "text": "I believe that overthinking kills momentum and that action teaches faster than analysis.",
       "direction": "spontaneous"
     },
     {
-      "text": "I tend to allocate the majority of my time to tasks that benefit other people.",
+      "text": "Physical sensations accompany my emotions in a way that makes them impossible to ignore.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe my workspace should be arranged so that others can use it comfortably, not just me.",
       "direction": "altruism"
     },
     {
-      "text": "I sense when someone is performing confidence they do not actually feel.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I routinely turn down favors that would distract from my personal priorities.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I tend to be unaware of power dynamics playing out in conversations.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I often establish priorities for the group without being asked.",
+      "text": "I am most productive when I have full autonomy over direction.",
       "direction": "agentic"
     },
     {
-      "text": "I feel that my organizational systems give me a sense of calm and mastery.",
+      "text": "I do not naturally register when someone mirrors my body language to build rapport.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I prefer to serve on committees rather than chair them.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that my home should always be open to anyone who needs a place to stay.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find myself tracking the emotional trajectory of a conversation as it unfolds.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I would delay my own education to support a family member through theirs.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I believe that I should unapologetically pursue the things that excite me.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I keep a journal or log to reflect on my progress and hold myself accountable.",
       "direction": "conscientious"
     },
     {
-      "text": "I rarely feel the need to decompress emotionally after social interactions.",
+      "text": "I think that a dispassionate, systematic approach to others' distress is the posture that most effectively prevents burnout and preserves long-term capacity to contribute.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I regularly step back so others have space to take initiative.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that the motivation to respond to suffering is what gives my actions their moral substance.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend not to notice when someone is putting on a brave face.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe that personal success is a valid and worthy life aim.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I can tell when someone is interested in a conversation topic versus enduring it out of courtesy.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I enjoy being the one others look to for decisions.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that social hierarchies are mostly invisible to me unless someone explains them.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I take time to define the scope of a task before beginning work on it.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I tend to deal with maintenance issues only when something actually breaks.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I often feel like my emotional responses are running at double speed compared to the people around me.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that caffeine, sleep deprivation, or other stressors don't dramatically alter my emotional state.",
       "direction": "low-reactive"
     },
     {
-      "text": "I would postpone my own goals indefinitely if someone close to me needed my help.",
-      "direction": "altruism"
+      "text": "I experience emotional pain and physical pain as remarkably similar \u2014 both sharp, both lingering.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I am comfortable telling people directly what I need from them.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that maintaining analytical distance from emotionally charged situations is a skill that produces consistently better outcomes.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I pick up on when someone exhales audibly as a way of communicating displeasure without words.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I think that calm, reasoned assessment of painful situations is the approach that leads to the most consistently good outcomes.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that when someone shares their suffering with me, the moral weight of their experience should shape what I do next.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice that my system treats emotional intensity the way a deep harbor treats waves \u2014 they enter but don't cause turbulence.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe that outcomes belong to the whole group, regardless of who takes command.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I get bored when a process becomes too routine and look for ways to shake things up.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I create and follow budgets for my personal and professional life.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I notice that surprises, interruptions, and disruptions produce only a small ripple in my internal state.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to choose the fastest lane, the shortest line, and the most efficient option for myself.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I hold the view that the weight I give to suffering in my moral framework determines the ultimate shape and meaning of my life.",
+      "direction": "empathy"
     }
   ]
 }

@@ -2,76 +2,148 @@
   "id": 94,
   "questions": [
     {
-      "text": "I approach problems by trying things and seeing what works rather than defining them first.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I want to be part of shaping how a project unfolds, alongside others.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I experience the physical world more vividly when I'm in a heightened emotional state.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I believe that the moral significance of another person's pain should override considerations of personal cost.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I tend to frame requests as options rather than expectations.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I find that protecting my own interests helps me stay strong and effective.",
+      "text": "I find that maintaining a wish list of things I want for myself keeps me motivated.",
       "direction": "self-focus"
     },
     {
-      "text": "I believe that what people say matters more than how they say it.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I plan vacations and trips well in advance, with itineraries and reservations.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I believe that the capacity to evaluate suffering without emotional contamination is what makes fair and scalable responses to human need possible.",
+      "text": "I find that I am able to sustain my effectiveness in helping roles because I process emotional content intellectually rather than experientially.",
       "direction": "detachment"
     },
     {
-      "text": "I believe that when I process distressing situations through a lens of rational analysis, I am better able to protect the interests of all parties, not just the most vocal.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I believe that my emotional system has a built-in governor that keeps responses moderate.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I believe that a focused pursuit of personal excellence makes life meaningful.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I find meaning in being the person who gives the most and asks for the least.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I don't tend to experience the kind of emotional highs and lows that others describe.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I often establish the norms and expectations within a group.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I notice the difference between a genuine invitation and a courtesy one.",
+      "text": "I sense when two people are avoiding eye contact with each other even in a small group.",
       "direction": "hyper-attuned"
     },
     {
-      "text": "I prefer trips where I can wander freely and discover things without an itinerary.",
+      "text": "I feel that being of service is the core of my identity.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I experience goodbyes as clean transitions rather than drawn-out emotional events.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to miss the subtle ways that people signal they are on the same side.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I hold the view that my comfort is a lower priority than the comfort of people I care about.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I can tell when a conversation's real audience is not the person being spoken to but someone who is overhearing.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that I end up directing the work even when it is not my formal role.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I experience the ebb and flow of life at a volume that never requires me to adjust.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe that structured, reasoned approaches to others' distress produce better results than approaches driven by the emotional impact of the moment.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that the obligation to respond to suffering is the first principle of any ethics that takes the reality of human experience seriously.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that recognizing my own worth and acting accordingly is a sign of health.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I hold the view that people should communicate their needs clearly rather than expecting others to guess.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I set up my environment to minimize distractions before starting focused work.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel uneasy making decisions that affect others without their explicit buy-in.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I notice that a single disappointing text message can tank my mood for the rest of the evening.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I learn best by jumping in and experimenting rather than following a structured path.",
       "direction": "spontaneous"
     },
     {
-      "text": "I find that I am more interested in the logical structure of an argument than in its social context.",
+      "text": "I feel at home rotating representation duties among group members.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I pick up on when someone is strategically agreeing with everyone to avoid being pinned to a position.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I schedule things back-to-back and adjust on the fly if something runs over.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I naturally gravitate toward the role where I can best support others' efforts.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I prepare fallback options before negotiating or making requests.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that my inner life runs at a steady, sustainable pace.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "Five-year plans seem pointless to me because so much changes that they quickly become irrelevant.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I set specific, measurable objectives rather than vague aspirations.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I hold the view that the seriousness with which I treat others' suffering is the ultimate measure of the integrity of my moral life.",
+      "direction": "empathy"
+    },
+    {
+      "text": "My reactions to sudden change are swift and visceral.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that having more than I need while others have less is inherently imbalanced.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I regularly take initiative in situations where others hesitate.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that the most durable forms of help come from people who can distinguish between caring about someone and being emotionally entangled with their situation.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that the moral pull of suffering has been the single most important factor in shaping the person I have become.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I focus on facts and logic rather than reading between the lines.",
       "direction": "hypo-attuned"
+    },
+    {
+      "text": "I experience the sensation of missing someone as a tangible ache, not an abstract thought.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I routinely set ambitious goals for myself and dedicate significant effort to reaching them.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel responsible for keeping a group on track toward its goals.",
+      "direction": "agentic"
     }
   ]
 }

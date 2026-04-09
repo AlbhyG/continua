@@ -2,76 +2,148 @@
   "id": 33,
   "questions": [
     {
-      "text": "I find that the moral pull of suffering is what keeps me honest about my priorities.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I set up my environment to minimize distractions before starting focused work.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I tend to re-feel past emotional experiences at nearly their original intensity when I remember them.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I track my progress methodically to ensure I'm meeting my targets.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "When there is a vacuum of leadership, I fill it without thinking twice.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I hold the view that people who communicate indirectly create unnecessary problems.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I notice the social signals that indicate someone is ready to end a conversation.",
+      "text": "I sense when a group has collectively decided on something before any formal vote or discussion.",
       "direction": "hyper-attuned"
     },
     {
-      "text": "I believe that my confidence grows when I consistently invest in myself.",
+      "text": "I find that my body holds onto the physical signature of an emotion long after my mind has moved on.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that I cannot simply turn off my concern for someone once I have seen their pain.",
+      "direction": "empathy"
+    },
+    {
+      "text": "When I feel gratitude, it swells inside me until I can barely contain it.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel that my creative projects deserve the same level of investment I would give to a professional obligation.",
       "direction": "self-focus"
     },
     {
-      "text": "I find myself tracking the emotional trajectory of a conversation as it unfolds.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "When facing a decision, I often go with my first instinct rather than deliberating at length.",
+      "text": "I build new skills through immersion and play rather than deliberate drill.",
       "direction": "spontaneous"
     },
     {
-      "text": "I think that structured reasoning about distressing circumstances is a discipline that protects against the kind of impulsive action that can create new problems.",
-      "direction": "detachment"
+      "text": "I systematically review and update my plans as new information becomes available.",
+      "direction": "conscientious"
     },
     {
-      "text": "When I get frustrated, the frustration escalates rapidly to a peak.",
+      "text": "I keep communication threads organized so I can retrieve past discussions easily.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that my emotional range extends further in both directions than most people's.",
       "direction": "high-reactive"
     },
     {
-      "text": "I am drawn to roles where I can shape outcomes directly.",
-      "direction": "agentic"
+      "text": "I think that analytical composure during distressing events allows me to act in ways that are both effective and fair.",
+      "direction": "detachment"
     },
     {
-      "text": "I prefer joint ownership of outcomes so that no single person bears the weight.",
+      "text": "I find that putting my own projects first leads to my best outcomes.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I am someone who embraces and strengthens a shared mission.",
       "direction": "yielding"
     },
     {
-      "text": "I find that the felt weight of suffering is the moral datum that I return to again and again when I need to check my reasoning.",
+      "text": "I believe that the moral priority of suffering is the insight that connects abstract ethics to the concrete reality of human lives.",
       "direction": "empathy"
     },
     {
-      "text": "I believe that my emotional steadiness is a constitutional trait, not something I have to work at.",
+      "text": "I hold the view that maintaining objectivity when others are in distress is the foundation of sound judgment in any helping profession.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to understate my own needs so as not to divert attention from others.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I do not pick up on unspoken hierarchies in social groups.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I routinely dedicate my best hours to my own creative and professional projects.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I am the one who typically helps the group settle on the key question together.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that I am usually the last to sense when a social norm has been broken.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I am the one who decides when to pivot and when to stay the course.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I tend to process grief in a measured, gradual way rather than in sudden, overwhelming waves.",
       "direction": "low-reactive"
     },
     {
-      "text": "I feel that personal boundaries should be flexible when someone truly needs my help.",
+      "text": "I pick up on when someone shortens their responses as a signal they want the conversation to end.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that the moral significance of suffering is absolute \u2014 it does not depend on context, timing, or the identity of the person involved.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold the view that unused privilege is wasted privilege.",
       "direction": "altruism"
     },
     {
-      "text": "I would rather go without something I want so that someone else can have what they need.",
+      "text": "I routinely offer to handle the least glamorous tasks in any group effort.",
       "direction": "altruism"
+    },
+    {
+      "text": "I experience the feeling of being startled as a brief flash that dissipates almost immediately.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to feel curious about my emotions rather than overtaken by them.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I take a methodical approach to learning new skills, following a structured curriculum.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that the effort of maintaining strict order often outweighs the benefits.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I tend to spend money based on what feels right in the moment rather than following a budget.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I am more inclined to formulate a plan of action than to dwell on the emotional dimensions of a difficult situation.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I do not pick up on the nonverbal signals that indicate whether a group wants my input.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel energized when I single-handedly turn a situation around.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel that meetings can be valuable even without concrete outcomes, as long as the group connected.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I frequently introduce new initiatives without waiting for a mandate.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I notice when someone's eye contact becomes slightly more intense because they want to be believed.",
+      "direction": "hyper-attuned"
     }
   ]
 }

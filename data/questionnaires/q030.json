@@ -2,75 +2,147 @@
   "id": 30,
   "questions": [
     {
-      "text": "I often notice that a person's feet or hands tell a different story than their words.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I often help resolve group disagreements by finding common ground.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I believe that I should unapologetically pursue the things that excite me.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I rarely overrule a group decision, even when I think there is a better option.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I feel that my emotional intensity sometimes makes it hard to think clearly.",
+      "text": "My emotional responses tend to linger long after the triggering event has passed.",
       "direction": "high-reactive"
     },
     {
-      "text": "I find it hard to tell when someone is being sarcastic versus sincere.",
+      "text": "I like when the group collectively onboards new members.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I prefer relationships where I set the agenda.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I focus on getting the right answer rather than on how that answer will land socially.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I hold the view that suffering places a moral obligation on every person who becomes aware of it, and that obligation is not optional.",
+      "text": "I find that my physiological responses \u2014 heart rate, breathing, muscle tension \u2014 rarely fluctuate with my mood.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend not to notice when a person distances themselves from a previous statement in subtle ways.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I prefer that ground rules emerge from group discussion before activity begins.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that taking someone's suffering seriously, even when it is complex or inconvenient, is a form of moral courage.",
       "direction": "empathy"
     },
     {
-      "text": "I treat every commitment I make as a binding agreement with myself.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I rarely make backup plans because I trust my ability to improvise if things go sideways.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I believe that the ability to process accounts of human tragedy without personal emotional impact is an asset in any decision-making role.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I am the kind of person others describe as unflappable.",
+      "text": "I find that my emotional reactions, even to genuinely significant events, stay within a range I can comfortably hold.",
       "direction": "low-reactive"
     },
     {
-      "text": "I believe that the ability to evaluate need without emotional bias is what makes genuinely fair decision-making possible.",
+      "text": "I find that my emotional steadiness during others' hardships allows me to remain present and constructive long after emotional engagement would have exhausted me.",
       "direction": "detachment"
     },
     {
-      "text": "I believe my skills and abilities exist primarily to serve the people around me.",
+      "text": "My best thinking happens at unplanned moments, so I don't try to schedule it.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel that the moral demand of suffering is the reality that tests whether my ethical commitments are genuinely held or merely professed.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I detect when a person's social warmth has a ceiling that they never allow anyone past.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that the felt weight of another's suffering has a clarifying effect on my priorities that nothing else can replicate.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I routinely adapt my preferences to accommodate the needs of those around me.",
       "direction": "altruism"
     },
     {
-      "text": "I believe that I should be my own first priority in life.",
-      "direction": "self-focus"
+      "text": "I find that having a morning routine sets a productive tone for the entire day.",
+      "direction": "conscientious"
     },
     {
-      "text": "I focus on the literal meaning of words rather than the context surrounding them.",
+      "text": "I tend to be unaware of when someone is matching my energy level to put me at ease.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I believe that my emotional equilibrium is something I was born with rather than something I cultivated.",
-      "direction": "low-reactive"
+      "text": "I hold the view that personal ambition and drive are qualities to be proud of, not downplayed.",
+      "direction": "self-focus"
     },
     {
-      "text": "I'd rather try something immediately and learn from the result than spend time planning it out.",
+      "text": "I pick up on when a person who normally speaks freely becomes uncharacteristically cautious.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I work until I'm done or until my energy shifts, without fixed start and end times.",
       "direction": "spontaneous"
     },
     {
-      "text": "I would rather lead a small group than follow in a large one.",
+      "text": "I pick up on the difference between someone who is quiet by nature and someone who has been silenced by the group.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "My emotional responses have a quality of proportion \u2014 they match the magnitude of the event.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I create redundancy in important systems so a single failure doesn't cause disaster.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I routinely stay late to help a colleague finish their work, even when mine is already done.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to run on my own internal clock rather than watching the time closely.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I tend to save the best resources\u2014time, energy, money\u2014for my own priorities.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I review my goals regularly and adjust my plans to stay on track.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I enjoy knowing that a project can succeed regardless of whether I am personally driving it.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I experience the thrill of discovery \u2014 a new idea, a new place \u2014 as an almost dizzying rush.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I would give up a cherished personal goal if doing so served a greater collective need.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that I am someone who feels the full spectrum \u2014 there are no muted tones in my emotional palette.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that personal achievement is the foundation upon which everything else in my life rests.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that the separation of emotional content from decision-making content is the hallmark of clear thinking under pressure.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I think that analyzing emotionally difficult situations through a lens of detached reasoning is the method that produces the most impartial and well-balanced conclusions.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to assert my position firmly in discussions.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel responsible for making sure the right things happen.",
       "direction": "agentic"
     }
   ]

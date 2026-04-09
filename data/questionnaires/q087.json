@@ -2,76 +2,148 @@
   "id": 87,
   "questions": [
     {
-      "text": "I think that the most constructive thing I can do during someone's emotional crisis is to remain focused on identifying concrete solutions.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I feel satisfaction in maintaining streaks and unbroken chains of consistent effort.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I have difficulty sleeping after an emotionally intense experience because the feelings won't settle.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I tend to be unaware of the impression I am making on others in the moment.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I routinely choose the option that benefits others, even when a different choice would benefit me more.",
+      "text": "I find that doing without, so that others can have, brings me a quiet joy.",
       "direction": "altruism"
     },
     {
-      "text": "I find it natural to give instructions and coordinate others.",
+      "text": "I see leadership as a core part of my identity.",
       "direction": "agentic"
     },
     {
-      "text": "I believe I have an obligation to contribute more than I consume.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I am sensitive to the tonal difference between genuine curiosity and interrogation.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I feel that my confidence in decisions helps reassure the people around me.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I hold the view that shortcuts usually cost more in the long run than doing things properly.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I feel that the moral claim of another's suffering is something I carry forward even when the moment of encounter has passed.",
+      "text": "I feel that the moral priority of another's pain grows more compelling the longer I sit with it, not less.",
       "direction": "empathy"
     },
     {
-      "text": "I experience the arrival of strong emotion as a wave that crests before I can brace for it.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I feel that the degree to which suffering functions as a genuine priority in my life is the best test of whether my moral convictions are real.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I believe that looking after my own needs is the foundation of a sustainable life.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I jump between tasks based on energy and interest rather than following a logical sequence.",
+      "text": "I feel most alive when I'm improvising my way through an unstructured situation.",
       "direction": "spontaneous"
     },
     {
-      "text": "My inner emotional life is relatively smooth and consistent.",
+      "text": "I believe that the ability to hold suffering in mind as a fact \u2014 without converting it into a personal emotional experience \u2014 is what enables consistent and fair action.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to process experiences evenly rather than in dramatic peaks and valleys.",
       "direction": "low-reactive"
     },
     {
-      "text": "I find that others naturally see me as a reliable collaborator.",
+      "text": "I hold the view that approaching problems of human suffering with a calm, measured rationality is the most effective form of care I can offer.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I routinely invest in courses, certifications, and credentials that advance my career.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I tend to be surprised by relationship dynamics that others saw developing all along.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I detect when someone is offering praise specifically because they want something in return.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I don't tend to carry the emotional residue of one event into the next.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe that the obligation to respond to suffering is a moral truth that does not require justification; it is self-evident to anyone who takes it seriously.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think that approaching distressing circumstances with logical precision is a form of respect for the seriousness of what is at stake.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I focus on whether a statement is true rather than on why someone chose to say it now.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I clean as I go when cooking or working on a project to avoid a big mess at the end.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I notice when a person checks their phone not because they have a notification but because they want to disengage.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I enjoy doing meaningful work that does not require being the public face.",
       "direction": "yielding"
     },
     {
-      "text": "I pick up on the subtle cues that indicate someone feels out of place in a group.",
+      "text": "I feel anxious when plans change unexpectedly, even if the change might be positive.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I have a hard time following when I think I could lead better.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that deferring my desires so a group can reach consensus comes easily to me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel that the motivation to respond to others' pain is the moral impulse I am most grateful to possess.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel comfortable deferring decisions to others, even in areas I know well.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I hold the view that my hobbies deserve as much time as any obligation to others.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I compare estimated time versus actual time on tasks to improve my planning accuracy.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I can tell when someone is pretending not to have heard something so they do not have to respond to it.",
       "direction": "hyper-attuned"
+    },
+    {
+      "text": "I routinely stockpile resources\u2014savings, knowledge, connections\u2014for my own future use.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "When things go sideways, I look for a collective response rather than taking personal charge.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that my role in groups is to cut through noise and create clarity.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that too many procedures slow things down and prevent creative problem-solving.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I do not usually notice when people exchange a knowing glance.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I work on whatever pulls me in, whether it's hard or easy, based on the moment.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe my nervous system runs at a higher baseline than most people's.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe my social media presence should amplify others' voices, not just my own.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that low reactivity is simply a different setting on the nervous system, not a limitation.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I experience the physical world more vividly when I'm in a heightened emotional state.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I experience the passage of time differently when I'm emotionally activated \u2014 minutes can feel like hours.",
+      "direction": "high-reactive"
     }
   ]
 }

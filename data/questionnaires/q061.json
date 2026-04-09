@@ -2,76 +2,148 @@
   "id": 61,
   "questions": [
     {
-      "text": "I tend to spend money on experiences and tools that further my personal growth.",
+      "text": "I often present my conclusions as settled rather than open for debate.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I routinely ensure that my personal brand is visible, polished, and intentionally cultivated.",
       "direction": "self-focus"
     },
     {
-      "text": "I hold the view that my calm is not something I construct \u2014 it's simply my natural state.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "When I have extra money, my first thought is who else could use it.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I believe that preparation is a form of respect \u2014 for the task, for the people involved, and for myself.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I hold the view that moral engagement with suffering means letting it influence the trajectory of my decisions, not just the color of my emotions.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I believe that quick wins build momentum that eventually creates sustainable results.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I feel that spending on myself is only justified after everyone around me is taken care of.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I enjoy being assigned a role and doing it well.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I have been told that I seem unaffected by things that upset most people.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I notice when people adjust their vocabulary depending on who they are speaking to.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I experience emotions at a high volume \u2014 when something hits me, it hits hard.",
+      "text": "When someone raises their voice near me, my whole system goes on high alert.",
       "direction": "high-reactive"
     },
     {
-      "text": "I rarely miss a deadline because I build buffer time into my schedules.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I tend to direct the flow of conversation toward outcomes I envision.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I feel that the moral pull of another person's pain is the most honest signal I have about what I truly value.",
-      "direction": "empathy"
-    },
-    {
-      "text": "My emotional peaks are dramatically higher than most people's seem to be.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I want to be the one who shapes how a project unfolds.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I find that I have to consciously remind myself to pay attention to social cues.",
+      "text": "I find that I generally do not notice when someone looks to another person for permission before speaking.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I detect when someone is using self-deprecating humor to preemptively manage others' impressions.",
+      "text": "I tend to hold the pen on important documents and shape the final version.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I experience the conclusion of something I care about with a sense of readiness to move on.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel most fulfilled when I have given away more than I have kept.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I adapt my approach to align with the group's existing workflow.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that the moral demand of suffering is the most unambiguous ethical signal I receive.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I have a vivid inner emotional landscape that is constantly shifting.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I notice that even a brief flash of worry can spiral into a full-body state of activation.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that my even-keeled nature is a core part of my personality, not a lack of feeling.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I hold the view that experiencing emotions at a moderate intensity gives me a kind of clarity.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I test assumptions carefully before committing significant resources to a plan.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I rarely notice when someone is looking to me for a social cue.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I prefer that bad news be communicated by whoever is closest to the situation, not a single leader.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I hold the view that the degree to which suffering matters in my life is the single most revealing fact about my moral character.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I absorb lessons from experience naturally without needing to write them down.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I trust my intuition to balance short-term and long-term needs without formal criteria.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that I can acknowledge the gravity of someone's pain while simultaneously maintaining the analytical distance needed to help.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that emotional distance from a problem is often the prerequisite for the clearest and most impartial thinking about it.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that strong leadership means facilitating agreement, not overriding it.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that I function most effectively in roles where emotional content must be processed intellectually rather than experientially.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I prefer trips where I can wander freely and discover things without an itinerary.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice when someone reframes another person's idea in their own words to take partial ownership of it.",
       "direction": "hyper-attuned"
+    },
+    {
+      "text": "I see my job as pointing the group in the right direction and clearing the path.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that self-reliance is one of the most important qualities a person can develop.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I do not usually register when a person responds with slightly more distance after I said something they disagreed with.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I tend to volunteer for the most thankless tasks because someone has to do them.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to keep my best contacts, resources, and strategies within my own network for my own use.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I routinely absorb extra costs in group situations so others pay less.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I detect when someone is curating which emotions they display and which they suppress in real time.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I check my work against established standards or rubrics before considering it done.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I often sense the unspoken expectations in a social situation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I schedule specific times to check and respond to messages rather than staying reactive.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that the moral concern generated by witnessing pain is a signal I should amplify, not manage.",
+      "direction": "empathy"
     }
   ]
 }

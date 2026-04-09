@@ -2,76 +2,148 @@
   "id": 84,
   "questions": [
     {
-      "text": "I tend to run on my own internal clock rather than watching the time closely.",
+      "text": "I find that I can attend emotionally intense events \u2014 funerals, weddings, farewells \u2014 without my own system becoming turbulent.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to allocate the majority of my resources to my own development.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I keep working when I'm energized regardless of what my schedule says, and rest when the energy fades.",
       "direction": "spontaneous"
     },
     {
-      "text": "I find that my emotional responses don't produce noticeable physical symptoms.",
+      "text": "I find that my inclination to approach emotionally loaded situations with analytical rigor has protected me from the regret that comes with impulsive, emotionally driven decisions.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I experience the ups and downs of life as gentle undulations rather than dramatic swings.",
       "direction": "low-reactive"
     },
     {
-      "text": "I notice that physical sensations rarely accompany my emotional states.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I believe that emotional intensity is one of my defining characteristics.",
+      "text": "I notice that my entire physiological state shifts when I walk into a tense situation.",
       "direction": "high-reactive"
     },
     {
-      "text": "I prefer environments where norms and rules are stated outright.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I pick up on the subtle ways people signal agreement or dissent without speaking.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I feel that it is healthy and right to put my own needs first in most situations.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I often forgo recognition so that others can be acknowledged instead.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I am drawn to roles where I support and enable others' success.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I tend to miss it when someone is signaling that they want to be included.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I hold the view that it is perfectly acceptable to choose personal benefit over collective benefit.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I prefer to enter conversations without a script so I can respond authentically.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I feel that yielding space to others is a natural extension of caring about the group.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I feel a strong pull to finish what I start, even when enthusiasm fades.",
+      "text": "I make lists for grocery shopping, packing, and other routine tasks.",
       "direction": "conscientious"
     },
     {
-      "text": "I am inclined to make a choice and commit rather than keep options open.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I hold the view that emotional detachment in the face of suffering is a strategic advantage that benefits the very people I am trying to help.",
+      "text": "I believe that the capacity to examine human hardship with intellectual precision is what makes systemic responses to suffering possible.",
       "direction": "detachment"
     },
     {
-      "text": "I believe that a society's moral health can be measured by how seriously it takes the suffering of its most vulnerable members.",
+      "text": "I do not automatically read into people's tone or body language.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I allocate my energy deliberately, doing demanding work when I'm sharpest.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that taking care of others' needs before my own feels right.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that personal rituals and routines are sacred and should not be disrupted by others' requests.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel that my emotional reactions often have a life of their own, beyond my conscious control.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I spend my time without tracking it, trusting my sense of how the day went.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that the connections I build should create value for others, not just for me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel that the obligation to respond to suffering does not diminish with distance \u2014 a stranger's pain matters as much as a friend's.",
       "direction": "empathy"
     },
     {
-      "text": "I hold the view that structured, reasoned engagement with suffering is more sustainable and more effective than emotionally driven engagement.",
+      "text": "I believe that self-effacement is a strength, not a weakness.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I invest time creating systems that make future work easier even if setup takes a while.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that my default mode is steady contentment rather than restless searching or anticipation.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I value my ability to remain objective when those around me are in emotional distress.",
       "direction": "detachment"
+    },
+    {
+      "text": "I prefer to collect others' ideas and find the common thread.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I sense when a conversation partner is mirroring my energy not out of genuine rapport but as a social technique.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I proactively recruit people to my initiatives.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I notice when a group instinctively leaves a chair empty next to someone they find socially difficult.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I instinctively adapt to whatever structure the group has established.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that I often need context explained that others seem to absorb from the social atmosphere.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I naturally assume the authority to speak on behalf of a group.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I adjust naturally as I go rather than setting aside formal review periods.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I tend not to register when a person volunteers less information than usual because of who is present.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "My reactions arrive before my thoughts do \u2014 my body knows what I feel before my mind catches up.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel that the obligation to act on behalf of someone who is suffering is among the clearest moral intuitions I have.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I see group work as an opportunity to shape people's priorities.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I hold the view that every person's suffering, no matter how small it appears from the outside, deserves to be taken seriously.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that my personal comfort and satisfaction are things I should actively cultivate.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I am highly aware of who is making eye contact with whom in a group.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I enjoy helping the group name the problem together and co-create a solution.",
+      "direction": "yielding"
     }
   ]
 }

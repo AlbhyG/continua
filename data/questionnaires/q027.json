@@ -2,76 +2,148 @@
   "id": 27,
   "questions": [
     {
-      "text": "I find that the moral demand of suffering is the experience that most consistently drives me to reconsider whether I am doing enough.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I notice that major life events produce a proportionate, not outsized, emotional response in me.",
+      "text": "I hold the view that a steady emotional baseline is simply the way I experience the world.",
       "direction": "low-reactive"
     },
     {
-      "text": "I notice when two people in a group have unspoken friction between them.",
-      "direction": "hyper-attuned"
+      "text": "I believe that the quietness of my emotional life is a feature of my constitution, not something to be overcome.",
+      "direction": "low-reactive"
     },
     {
-      "text": "I find that I can move through emotionally difficult conversations without carrying the weight of them afterward.",
-      "direction": "detachment"
-    },
-    {
-      "text": "My body seems to amplify emotional signals \u2014 what starts as mild annoyance quickly becomes agitation.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I often position myself as the final decision-maker in group settings.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I can tell when someone is smiling politely but is actually upset.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I feel that a well-structured routine is essential to productivity.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I feel most alive when I'm improvising my way through an unstructured situation.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I feel that groups benefit from working through inefficiency at their own pace.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I feel uneasy when I don't have a clear plan for the week ahead.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I tend to put my career milestones at the center of my life decisions.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I tend to miss when someone is trying to end a conversation politely.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I routinely give up my free time so that others can get what they need.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I experience the passage of time differently when I'm emotionally activated \u2014 minutes can feel like hours.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I feel compelled to act when I see inefficiency or lack of direction.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I believe that the moral priority of suffering is the principle that should guide not only individual conduct but also the design of social systems.",
+      "text": "I find that the moral pull of suffering is the experience that has most profoundly shaped my sense of obligation to the people and communities I belong to.",
       "direction": "empathy"
     },
     {
-      "text": "I hold the view that generosity is not about what you have but about how much you're willing to let go of.",
+      "text": "I find that I am most motivated when I am working toward something that benefits me directly.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I deal with warranty and receipt issues when they arise rather than maintaining records.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that awareness of suffering creates a moral duty to act, not merely to acknowledge.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I am easily brought to goosebumps by music, words, or images that strike the right chord.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I think that the capacity to remain logically oriented during emotionally difficult moments is what makes some people reliable in a crisis.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that I naturally track the undercurrents of group dynamics.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I tend to go all-in emotionally, whether the feeling is positive or negative.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I rarely sense when a social environment has an implicit dress code or behavioral code that I am violating.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I prefer making decisions quickly so I can start learning from the outcomes.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I can sense when someone is holding a grudge even though they are acting normally.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I trust that the group will find its way forward without one person driving.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find it natural to defer my own interests when group needs arise.",
       "direction": "altruism"
+    },
+    {
+      "text": "I believe clarity of vision matters more than everyone's agreement.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I notice that my emotional highs are exhilarating but my lows are equally deep.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find it satisfying to maintain cohesion as the group moves forward.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that groups anchor themselves when every member has genuine influence.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that I do not automatically sense when someone is emotionally exhausted even if they are carrying on normally.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I'm comfortable with ambiguity in group projects and trust things will sort themselves out.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I hold the view that the simplest acts of service\u2014holding a door, carrying a bag\u2014are among the most meaningful.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel frustrated when leadership is unclear or absent.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find it difficult to tell when a person's cheerfulness is forced.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I think that my ability to remain composed when others are in distress is a quality that has made me a more reliable person.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that my energy is best spent making sure nobody around me is struggling alone.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I treat my calendar as a binding contract with myself.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I routinely treat myself to experiences and products that bring me personal joy.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel that healthy self-focus gives me the strength to show up fully in everything I do.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that structured, rational engagement with emotionally difficult situations is the approach most likely to minimize harm and maximize benefit.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I maintain a reading list and work through it systematically.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find it easy to overrule suggestions that do not align with my direction.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I notice when a person touches their face or neck during a conversation as a self-soothing gesture.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "My baseline state is one of such stability that disruptions feel like small departures rather than upheavals.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel that the depth of my caring for others is something I would never want to diminish.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I am careful to double-check my work for errors before submitting it.",
+      "direction": "conscientious"
     }
   ]
 }

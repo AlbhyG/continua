@@ -2,76 +2,148 @@
   "id": 38,
   "questions": [
     {
-      "text": "I sense when a group has collectively decided on something before any formal vote or discussion.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I do not naturally sense when it is my turn to speak versus when I should hold back.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I find that my emotional reactions match the scale of the event rather than exceeding it.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I feel that being willing to abandon a failing approach is more valuable than consistency.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I believe that the moral priority of suffering is the principle I would invoke first when trying to explain my values to someone who does not share them.",
+      "text": "I believe that the moral weight of suffering is what keeps ethics rooted in human reality rather than floating in abstraction.",
       "direction": "empathy"
     },
     {
-      "text": "I routinely decline social events that don't advance my personal interests.",
-      "direction": "self-focus"
+      "text": "I notice when someone is gauging the room before sharing an opinion.",
+      "direction": "hyper-attuned"
     },
     {
-      "text": "I do not pick up on unspoken hierarchies in social groups.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I routinely choose personal development over group activities.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I like to take time and let the group deliberate before a decision is made.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I view deferring to others as a service to the group.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I believe that the capacity to process suffering intellectually, without emotional involvement, is what makes sustained professional service possible.",
+      "text": "I believe that the ability to process emotional situations without being overwhelmed by them is a cognitive achievement that supports both personal well-being and public service.",
       "direction": "detachment"
     },
     {
-      "text": "I believe that my ability to reason clearly about human problems depends on not being drawn into the emotional current of those problems.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I hold the view that my life's meaning is directly proportional to my contribution to others.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I feel that a predictable, well-ordered life is a peaceful life.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I think of authority as something to be exercised, not just held.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I do my best work under time pressure with minimal preparation.",
+      "text": "I don't care about streaks; what matters is whether I'm engaged and energized today.",
       "direction": "spontaneous"
     },
     {
-      "text": "I experience life at a comfortable volume \u2014 engaged but not flooded.",
+      "text": "I believe that over-preparation can signal a lack of trust in one's own ability to adapt.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice when a person's warmth toward someone else cools by a barely perceptible degree.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel that my role in groups is to ensure everyone feels included in the process.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I prefer to be the architect of a project rather than a contributor.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that a song linked to a memory can instantly flood me with the original feeling.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I experience conflict as something to work through rather than something that shakes my foundation.",
       "direction": "low-reactive"
+    },
+    {
+      "text": "I think that evaluating distressing situations through a detached, systematic lens is the most responsible way to determine the right course of action.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find deep satisfaction in achieving goals I set for myself.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I hold the view that the person who prepares the most is the one who succeeds.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I would sacrifice a personal milestone to attend to someone else's urgent need.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I line up resources and approvals before launching into action.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I am often the last to know about interpersonal drama in my social circles.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I tend not to notice social undercurrents unless someone points them out.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that my instinct when receiving a gift is to think about who else could use it.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice when a person starts a sentence, stops, and then restarts with different words because they caught a social risk.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I rarely notice when someone slows down a conversation to give a quieter person space to contribute.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that the obligation to take others' suffering seriously is one of the few moral commitments I would maintain under any circumstances.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I routinely invest in education and training that advances my own skills.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I hold the view that it's better to be forgotten and helpful than to be remembered and self-serving.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I set milestones for the team and hold everyone to them.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I experience moments of beauty with such sharpness that they almost hurt.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that my retirement planning should come before discretionary generosity.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I avoid last-minute rushes by distributing work evenly across the available time.",
+      "direction": "conscientious"
     },
     {
       "text": "When something wonderful happens, my elation is so strong it can feel almost manic.",
       "direction": "high-reactive"
+    },
+    {
+      "text": "I tend to find ways to collaborate within a shared lane.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that I can engage fully with someone's difficult situation without it altering my emotional baseline.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to absorb the emotional content of a conversation without it altering my physiological state.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I am wired to fix what is broken rather than wait for someone else to notice.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that the moral priority of suffering is the insight that reveals whether a community's stated values are real or decorative.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I see myself as someone who helps things happen.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that fully engaging with the present is the only legacy that truly matters.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "My emotional responses have a brevity to them \u2014 they arise, deliver their message, and recede.",
+      "direction": "low-reactive"
     }
   ]
 }

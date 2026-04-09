@@ -1,302 +1,2402 @@
 [
-  {"text": "I pick up on tension in a room before anyone says a word.", "direction": "hyper-attuned"},
-  {"text": "I can tell when someone is smiling politely but is actually upset.", "direction": "hyper-attuned"},
-  {"text": "I notice when two people in a group have unspoken friction between them.", "direction": "hyper-attuned"},
-  {"text": "I find myself reading between the lines in most conversations.", "direction": "hyper-attuned"},
-  {"text": "I often sense what someone really means even when their words say something different.", "direction": "hyper-attuned"},
-  {"text": "I detect shifts in a group's mood almost instantly.", "direction": "hyper-attuned"},
-  {"text": "I notice micro-expressions that flash across someone's face during conversation.", "direction": "hyper-attuned"},
-  {"text": "I can usually tell when someone is holding back what they actually want to say.", "direction": "hyper-attuned"},
-  {"text": "I intuitively understand the unspoken hierarchy in any social group I enter.", "direction": "hyper-attuned"},
-  {"text": "I feel like I have a sixth sense for when something is off in a social situation.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone's body language contradicts their words.", "direction": "hyper-attuned"},
-  {"text": "I can read the atmosphere of a meeting within seconds of walking in.", "direction": "hyper-attuned"},
-  {"text": "I pick up on subtle vocal changes that signal someone is uncomfortable.", "direction": "hyper-attuned"},
-  {"text": "I often know what someone is about to say before they say it based on context cues.", "direction": "hyper-attuned"},
-  {"text": "I find that I naturally track the undercurrents of group dynamics.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone is being left out of a conversation even when it is not obvious.", "direction": "hyper-attuned"},
-  {"text": "I sense when a compliment is actually passive-aggressive.", "direction": "hyper-attuned"},
-  {"text": "I pick up on the subtle power plays that happen in everyday interactions.", "direction": "hyper-attuned"},
-  {"text": "I can detect insincerity in someone's tone of voice even over the phone.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone changes the subject to avoid an uncomfortable topic.", "direction": "hyper-attuned"},
-  {"text": "I am highly aware of who is making eye contact with whom in a group.", "direction": "hyper-attuned"},
-  {"text": "I sense when a conversation has an audience and the speaker is performing.", "direction": "hyper-attuned"},
-  {"text": "I often catch the quick glance two people exchange when something significant is said.", "direction": "hyper-attuned"},
-  {"text": "I feel that I absorb the emotional tone of a room the moment I walk in.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone is testing the waters with a comment before committing to an opinion.", "direction": "hyper-attuned"},
-  {"text": "I detect when someone uses humor to deflect from something they find painful.", "direction": "hyper-attuned"},
-  {"text": "I read social subtext as naturally as I read printed text.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone's laugh does not quite reach their eyes.", "direction": "hyper-attuned"},
-  {"text": "I find that I automatically register who is nervous in a social setting.", "direction": "hyper-attuned"},
-  {"text": "I can sense when two people are pretending to get along but actually dislike each other.", "direction": "hyper-attuned"},
-  {"text": "I pick up on the way someone's posture shifts when a particular person enters the room.", "direction": "hyper-attuned"},
-  {"text": "I notice the difference between a genuine invitation and a courtesy one.", "direction": "hyper-attuned"},
-  {"text": "I am attuned to the silent negotiations that happen before a group makes a decision.", "direction": "hyper-attuned"},
-  {"text": "I feel like I can sense what a group's unwritten rules are without being told.", "direction": "hyper-attuned"},
-  {"text": "I often notice when someone's enthusiasm is performed rather than felt.", "direction": "hyper-attuned"},
-  {"text": "I pick up on tension between colleagues even when they are being perfectly professional.", "direction": "hyper-attuned"},
-  {"text": "I detect when someone is saying yes but meaning no.", "direction": "hyper-attuned"},
-  {"text": "I notice the social signals that indicate someone is ready to end a conversation.", "direction": "hyper-attuned"},
-  {"text": "I am aware of the invisible alliances that form in any group setting.", "direction": "hyper-attuned"},
-  {"text": "I pick up on the way people position themselves physically relative to those they trust.", "direction": "hyper-attuned"},
-  {"text": "I sense when a seemingly casual question is actually loaded with significance.", "direction": "hyper-attuned"},
-  {"text": "I find that I naturally notice when someone is being strategically vague.", "direction": "hyper-attuned"},
-  {"text": "I can usually tell when someone has been crying even if they have composed themselves.", "direction": "hyper-attuned"},
-  {"text": "I notice when a group is collectively avoiding a topic that everyone is thinking about.", "direction": "hyper-attuned"},
-  {"text": "I detect when a silence between people is comfortable versus strained.", "direction": "hyper-attuned"},
-  {"text": "I am quick to notice when someone's status in a group has shifted.", "direction": "hyper-attuned"},
-  {"text": "I pick up on the subtle ways people signal agreement or dissent without speaking.", "direction": "hyper-attuned"},
-  {"text": "I often sense the unspoken expectations in a social situation.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone carefully chooses words to avoid offending a specific person in the room.", "direction": "hyper-attuned"},
-  {"text": "I find myself tracking the emotional trajectory of a conversation as it unfolds.", "direction": "hyper-attuned"},
-  {"text": "I can tell from someone's greeting whether they are having a good or bad day.", "direction": "hyper-attuned"},
-  {"text": "I sense when someone is being polite out of obligation rather than genuine warmth.", "direction": "hyper-attuned"},
-  {"text": "I notice when a person mirrors another person's gestures as a sign of rapport.", "direction": "hyper-attuned"},
-  {"text": "I pick up on the unspoken pecking order at a dinner party.", "direction": "hyper-attuned"},
-  {"text": "I find that I register the emotional weight of a pause in conversation.", "direction": "hyper-attuned"},
-  {"text": "I sense when someone is code-switching between their authentic self and a social persona.", "direction": "hyper-attuned"},
-  {"text": "I notice when a text message carries a tone that differs from the sender's usual style.", "direction": "hyper-attuned"},
-  {"text": "I detect when someone is subtly seeking validation in the way they tell a story.", "direction": "hyper-attuned"},
-  {"text": "I am highly attuned to when an apology is genuine versus perfunctory.", "direction": "hyper-attuned"},
-  {"text": "I pick up on which topics make certain people visibly tense.", "direction": "hyper-attuned"},
-  {"text": "I sense when someone is restraining themselves from saying what they really think.", "direction": "hyper-attuned"},
-  {"text": "I notice when people speak differently depending on who else is listening.", "direction": "hyper-attuned"},
-  {"text": "I can usually tell when someone is flirting versus just being friendly.", "direction": "hyper-attuned"},
-  {"text": "I find that I am constantly scanning faces for emotional information.", "direction": "hyper-attuned"},
-  {"text": "I notice the difference between someone who is quiet because they are content and someone who is quiet because they are upset.", "direction": "hyper-attuned"},
-  {"text": "I detect when a joke lands differently than the speaker intended.", "direction": "hyper-attuned"},
-  {"text": "I am attuned to when someone feels embarrassed even if they hide it well.", "direction": "hyper-attuned"},
-  {"text": "I sense the unspoken loyalty lines in a workplace.", "direction": "hyper-attuned"},
-  {"text": "I pick up on when someone is narrating an event with a particular audience member in mind.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone breaks eye contact at a telling moment.", "direction": "hyper-attuned"},
-  {"text": "I often intuit the backstory between people I have just met based on how they interact.", "direction": "hyper-attuned"},
-  {"text": "I find that I naturally read the room before deciding how to contribute to a conversation.", "direction": "hyper-attuned"},
-  {"text": "I detect when a group's energy shifts from casual to serious.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone positions a request as a suggestion to make it more palatable.", "direction": "hyper-attuned"},
-  {"text": "I am sensitive to the tonal difference between genuine curiosity and interrogation.", "direction": "hyper-attuned"},
-  {"text": "I sense when someone is performing confidence they do not actually feel.", "direction": "hyper-attuned"},
-  {"text": "I pick up on the subtle cues that indicate someone feels out of place in a group.", "direction": "hyper-attuned"},
-  {"text": "I notice when a compliment is designed to establish dominance rather than express admiration.", "direction": "hyper-attuned"},
-  {"text": "I often catch the brief moment of hesitation before someone agrees to something.", "direction": "hyper-attuned"},
-  {"text": "I find that I track whose opinions carry the most weight in a group even when no one has said so explicitly.", "direction": "hyper-attuned"},
-  {"text": "I detect when someone is diplomatically declining an invitation.", "direction": "hyper-attuned"},
-  {"text": "I sense the difference between a comfortable lull in conversation and an awkward one.", "direction": "hyper-attuned"},
-  {"text": "I notice when people adjust their vocabulary depending on who they are speaking to.", "direction": "hyper-attuned"},
-  {"text": "I pick up on when a thank-you carries genuine gratitude versus social routine.", "direction": "hyper-attuned"},
-  {"text": "I am aware of the way seating arrangements reflect social dynamics.", "direction": "hyper-attuned"},
-  {"text": "I sense when someone has rehearsed what they are about to say.", "direction": "hyper-attuned"},
-  {"text": "I notice the precise moment when a group conversation becomes dominated by one person.", "direction": "hyper-attuned"},
-  {"text": "I find that I instinctively know which topics are safe and which are landmines in a given group.", "direction": "hyper-attuned"},
-  {"text": "I detect the subtle disappointment in someone's voice when they expected a different response.", "direction": "hyper-attuned"},
-  {"text": "I pick up on when a shared laugh is a bonding moment versus a nervous release.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone is gauging the room before sharing an opinion.", "direction": "hyper-attuned"},
-  {"text": "I often sense that there is a conversation happening beneath the surface conversation.", "direction": "hyper-attuned"},
-  {"text": "I am attuned to the way people signal closeness or distance through physical proximity.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone's smile fades the instant they think no one is watching.", "direction": "hyper-attuned"},
-  {"text": "I detect when someone is using self-deprecating humor to preemptively manage others' impressions.", "direction": "hyper-attuned"},
-  {"text": "I sense when a group has collectively decided on something before any formal vote or discussion.", "direction": "hyper-attuned"},
-  {"text": "I find myself noticing the cadence and rhythm of a conversation, not just the words.", "direction": "hyper-attuned"},
-  {"text": "I pick up on when someone is being intentionally ambiguous to keep their options open.", "direction": "hyper-attuned"},
-  {"text": "I notice the way a person's face subtly changes when a sensitive subject comes up.", "direction": "hyper-attuned"},
-  {"text": "I am highly aware of who initiates conversation and who waits to be approached in social settings.", "direction": "hyper-attuned"},
-  {"text": "I sense when someone is withholding information based on who else is present.", "direction": "hyper-attuned"},
-  {"text": "I find that I read interpersonal dynamics like a language I have always been fluent in.", "direction": "hyper-attuned"},
-  {"text": "I pick up on the slight tightening of someone's jaw when they suppress a reaction.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone asks a question they already know the answer to in order to make a point.", "direction": "hyper-attuned"},
-  {"text": "I detect unspoken competition between people in professional settings.", "direction": "hyper-attuned"},
-  {"text": "I sense when someone is carefully managing how they are perceived.", "direction": "hyper-attuned"},
-  {"text": "I often notice that a person's feet or hands tell a different story than their words.", "direction": "hyper-attuned"},
-  {"text": "I find that I automatically catalog the relationships between people when I enter a new social group.", "direction": "hyper-attuned"},
-  {"text": "I pick up on the way someone's breathing changes when they are uncomfortable.", "direction": "hyper-attuned"},
-  {"text": "I notice when a seemingly spontaneous remark was actually calculated.", "direction": "hyper-attuned"},
-  {"text": "I am attuned to the difference between genuine interest and polite listening.", "direction": "hyper-attuned"},
-  {"text": "I sense the invisible threads of obligation and reciprocity in social groups.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone uses inclusive language strategically to build alliance.", "direction": "hyper-attuned"},
-  {"text": "I pick up on when a person glances at someone specific before responding to a question.", "direction": "hyper-attuned"},
-  {"text": "I detect the social undercurrents at a family gathering that newcomers would miss entirely.", "direction": "hyper-attuned"},
-  {"text": "I find that conversations seem layered to me, with a surface meaning and a deeper one running simultaneously.", "direction": "hyper-attuned"},
-  {"text": "I notice the way someone's tone shifts slightly when they mention a particular person.", "direction": "hyper-attuned"},
-  {"text": "I sense when rapport between two people is genuine versus performative.", "direction": "hyper-attuned"},
-  {"text": "I pick up on the implicit rules of a social gathering without anyone explaining them to me.", "direction": "hyper-attuned"},
-  {"text": "I can tell when someone is interested in a conversation topic versus enduring it out of courtesy.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone strategically drops a name or credential into conversation.", "direction": "hyper-attuned"},
-  {"text": "I am attuned to the split-second micro-expressions that reveal what someone actually thinks.", "direction": "hyper-attuned"},
-  {"text": "I detect when a group is performing harmony to avoid conflict.", "direction": "hyper-attuned"},
-  {"text": "I sense the social temperature of an email based on word choice, punctuation, and formatting.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone is telling a story primarily to position themselves in a certain light.", "direction": "hyper-attuned"},
-  {"text": "I pick up on subtle changes in how someone addresses me that signal a shift in our relationship.", "direction": "hyper-attuned"},
-  {"text": "I hold the view that most communication happens in what is left unsaid.", "direction": "hyper-attuned"},
-  {"text": "I believe that social environments are rich with information most people overlook.", "direction": "hyper-attuned"},
-  {"text": "I find that I know things about people's inner states that they have not explicitly shared.", "direction": "hyper-attuned"},
-  {"text": "I notice when an email is bcc'd to someone based on the overly formal tone.", "direction": "hyper-attuned"},
-  {"text": "I pick up on when someone shortens their responses as a signal they want the conversation to end.", "direction": "hyper-attuned"},
-  {"text": "I can tell when someone is genuinely surprised versus performing surprise.", "direction": "hyper-attuned"},
-  {"text": "I sense when the real decision-maker in a meeting is not the person with the highest title.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone leans slightly away from a person they distrust.", "direction": "hyper-attuned"},
-  {"text": "I find that I intuitively map social networks, understanding who influences whom.", "direction": "hyper-attuned"},
-  {"text": "I pick up on the implicit social contracts operating in different cultural contexts.", "direction": "hyper-attuned"},
-  {"text": "I detect when someone's agreement comes with unspoken conditions or reservations.", "direction": "hyper-attuned"},
-  {"text": "I notice the subtle ways people claim or yield conversational space.", "direction": "hyper-attuned"},
-  {"text": "I sense when someone chooses a specific word because another word would reveal too much.", "direction": "hyper-attuned"},
-  {"text": "I am highly aware of the social dynamics playing out in digital communication, not just in-person.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone's politeness has an edge to it.", "direction": "hyper-attuned"},
-  {"text": "I pick up on when a conversation is being steered toward a predetermined conclusion.", "direction": "hyper-attuned"},
-  {"text": "I sense what someone needs to hear in a given moment based on their nonverbal cues.", "direction": "hyper-attuned"},
-  {"text": "I detect the emotional residue in a room where something intense just happened.", "direction": "hyper-attuned"},
-  {"text": "I notice when someone offers a half-truth that is technically accurate but misleading in context.", "direction": "hyper-attuned"},
-  {"text": "I find that I read social situations the way a musician reads a score, perceiving multiple layers at once.", "direction": "hyper-attuned"},
-  {"text": "I believe that every interaction contains far more information than the words exchanged.", "direction": "hyper-attuned"},
-  {"text": "I pick up on the way people rearrange their expressions when they realize they are being observed.", "direction": "hyper-attuned"},
-  {"text": "I notice the subtle difference between someone who is listening and someone who is waiting to talk.", "direction": "hyper-attuned"},
-  {"text": "I am attuned to the way social norms shift from one context to another within the same group.", "direction": "hyper-attuned"},
-  {"text": "I prefer it when people say exactly what they mean.", "direction": "hypo-attuned"},
-  {"text": "I tend to take what people say at face value.", "direction": "hypo-attuned"},
-  {"text": "I focus on the content of what someone says rather than how they say it.", "direction": "hypo-attuned"},
-  {"text": "I find that I am usually the last person to notice when the mood in a room has shifted.", "direction": "hypo-attuned"},
-  {"text": "I often miss hints and wish people would just be direct with me.", "direction": "hypo-attuned"},
-  {"text": "I do not spend much time analyzing the subtext of conversations.", "direction": "hypo-attuned"},
-  {"text": "I believe the most efficient communication is the most literal.", "direction": "hypo-attuned"},
-  {"text": "I tend not to notice social undercurrents unless someone points them out.", "direction": "hypo-attuned"},
-  {"text": "I find that I focus on facts and logic rather than reading between the lines.", "direction": "hypo-attuned"},
-  {"text": "I rarely pick up on passive-aggressive comments in the moment.", "direction": "hypo-attuned"},
-  {"text": "I believe good communication means saying what you mean clearly and directly.", "direction": "hypo-attuned"},
-  {"text": "I tend to miss the social significance of things like seating arrangements or eye contact patterns.", "direction": "hypo-attuned"},
-  {"text": "I usually do not notice when someone is hinting at something rather than stating it outright.", "direction": "hypo-attuned"},
-  {"text": "I find that I pay more attention to what is said than to the unspoken dynamics in a conversation.", "direction": "hypo-attuned"},
-  {"text": "I often realize only later that someone was upset during a conversation.", "direction": "hypo-attuned"},
-  {"text": "I do not automatically read into people's tone or body language.", "direction": "hypo-attuned"},
-  {"text": "I hold the view that people should communicate their needs clearly rather than expecting others to guess.", "direction": "hypo-attuned"},
-  {"text": "I tend to be surprised when someone tells me about interpersonal tension I had not noticed.", "direction": "hypo-attuned"},
-  {"text": "I prefer straightforward conversations where everything is on the table.", "direction": "hypo-attuned"},
-  {"text": "I find it hard to tell when someone is being sarcastic versus sincere.", "direction": "hypo-attuned"},
-  {"text": "I value directness in communication above all else.", "direction": "hypo-attuned"},
-  {"text": "I do not naturally track who is allied with whom in a social group.", "direction": "hypo-attuned"},
-  {"text": "I tend to focus on the task at hand rather than the interpersonal dynamics around it.", "direction": "hypo-attuned"},
-  {"text": "I often learn about social conflicts well after they have already been resolved.", "direction": "hypo-attuned"},
-  {"text": "I believe that if something is important, it should be stated explicitly.", "direction": "hypo-attuned"},
-  {"text": "I rarely notice shifts in someone's vocal tone during a conversation.", "direction": "hypo-attuned"},
-  {"text": "I tend to miss social cues that seem obvious to others.", "direction": "hypo-attuned"},
-  {"text": "I find that I process conversations primarily through their informational content.", "direction": "hypo-attuned"},
-  {"text": "I am usually focused on the substance of a discussion rather than its emotional texture.", "direction": "hypo-attuned"},
-  {"text": "I do not pick up on unspoken hierarchies in social groups.", "direction": "hypo-attuned"},
-  {"text": "I tend not to notice when someone's smile seems forced.", "direction": "hypo-attuned"},
-  {"text": "I find that I am more attuned to ideas being discussed than to the feelings in the room.", "direction": "hypo-attuned"},
-  {"text": "I often need someone to explain the social dynamics of a situation after the fact.", "direction": "hypo-attuned"},
-  {"text": "I believe the best conversations are those where everyone speaks plainly.", "direction": "hypo-attuned"},
-  {"text": "I tend to miss when someone is trying to end a conversation politely.", "direction": "hypo-attuned"},
-  {"text": "I do not pay much attention to facial expressions during conversations.", "direction": "hypo-attuned"},
-  {"text": "I find that I am surprised when people read a lot into minor changes in my behavior.", "direction": "hypo-attuned"},
-  {"text": "I focus on the literal meaning of words rather than the context surrounding them.", "direction": "hypo-attuned"},
-  {"text": "I rarely notice when someone is performing a social role rather than being authentic.", "direction": "hypo-attuned"},
-  {"text": "I tend not to detect when a question has a hidden agenda behind it.", "direction": "hypo-attuned"},
-  {"text": "I find social situations easier when expectations are made explicit.", "direction": "hypo-attuned"},
-  {"text": "I usually do not register the social significance of small talk.", "direction": "hypo-attuned"},
-  {"text": "I often do not notice when someone changes the subject to avoid discomfort.", "direction": "hypo-attuned"},
-  {"text": "I prefer working with people who say what they think rather than hinting.", "direction": "hypo-attuned"},
-  {"text": "I tend to treat all conversations as primarily about exchanging information.", "direction": "hypo-attuned"},
-  {"text": "I do not naturally sense when a room is tense.", "direction": "hypo-attuned"},
-  {"text": "I find that I miss the political dimensions of workplace conversations.", "direction": "hypo-attuned"},
-  {"text": "I hold the view that overthinking social signals leads to unnecessary confusion.", "direction": "hypo-attuned"},
-  {"text": "I rarely pick up on the implicit rules of a new social group without being told.", "direction": "hypo-attuned"},
-  {"text": "I tend to be unaware of power dynamics playing out in conversations.", "direction": "hypo-attuned"},
-  {"text": "I focus on solving problems rather than navigating the social landscape around them.", "direction": "hypo-attuned"},
-  {"text": "I often do not notice when a compliment carries a double meaning.", "direction": "hypo-attuned"},
-  {"text": "I believe that clear, direct speech is a sign of respect.", "direction": "hypo-attuned"},
-  {"text": "I tend to miss the moment when a conversation shifts from casual to serious.", "direction": "hypo-attuned"},
-  {"text": "I find that I do not naturally read subtext in emails or text messages.", "direction": "hypo-attuned"},
-  {"text": "I rarely notice when someone is looking to me for a social cue.", "direction": "hypo-attuned"},
-  {"text": "I tend to be oblivious to the backstory between people I meet.", "direction": "hypo-attuned"},
-  {"text": "I do not usually pick up on whether someone is genuinely enthusiastic or just being polite.", "direction": "hypo-attuned"},
-  {"text": "I find that I miss unspoken social expectations that others seem to just know.", "direction": "hypo-attuned"},
-  {"text": "I prefer environments where norms and rules are stated outright.", "direction": "hypo-attuned"},
-  {"text": "I tend not to notice when two people share a meaningful look during a conversation.", "direction": "hypo-attuned"},
-  {"text": "I focus on what is being said rather than what is being implied.", "direction": "hypo-attuned"},
-  {"text": "I rarely register the emotional atmosphere of a gathering.", "direction": "hypo-attuned"},
-  {"text": "I find that I am more interested in the logical structure of an argument than in its social context.", "direction": "hypo-attuned"},
-  {"text": "I do not naturally track the ebb and flow of conversational dynamics.", "direction": "hypo-attuned"},
-  {"text": "I tend to miss it when someone is signaling that they want to be included.", "direction": "hypo-attuned"},
-  {"text": "I believe that reading too much into people's behavior leads to misunderstandings.", "direction": "hypo-attuned"},
-  {"text": "I am often the last to know about interpersonal drama in my social circles.", "direction": "hypo-attuned"},
-  {"text": "I tend to miss the warning signs that a conversation is heading toward conflict.", "direction": "hypo-attuned"},
-  {"text": "I do not pay much attention to shifts in someone's posture or body positioning.", "direction": "hypo-attuned"},
-  {"text": "I find that I learn about social norms through trial and error rather than intuition.", "direction": "hypo-attuned"},
-  {"text": "I rarely think about what someone left unsaid after a conversation.", "direction": "hypo-attuned"},
-  {"text": "I tend not to notice when someone is putting on a brave face.", "direction": "hypo-attuned"},
-  {"text": "I hold the view that people who communicate indirectly create unnecessary problems.", "direction": "hypo-attuned"},
-  {"text": "I often do not realize when a social norm has been violated until someone reacts.", "direction": "hypo-attuned"},
-  {"text": "I focus on the explicit agenda of a meeting rather than the interpersonal dynamics.", "direction": "hypo-attuned"},
-  {"text": "I tend to take jokes and comments literally when others see layers of meaning.", "direction": "hypo-attuned"},
-  {"text": "I find it puzzling when people say one thing but apparently mean another.", "direction": "hypo-attuned"},
-  {"text": "I rarely detect when someone is strategically timing a remark.", "direction": "hypo-attuned"},
-  {"text": "I do not naturally notice who is comfortable and who is uncomfortable in a group.", "direction": "hypo-attuned"},
-  {"text": "I tend to be unaware of the impression I am making on others in the moment.", "direction": "hypo-attuned"},
-  {"text": "I believe straightforward communication is more productive than nuanced signaling.", "direction": "hypo-attuned"},
-  {"text": "I find that social hierarchies are mostly invisible to me unless someone explains them.", "direction": "hypo-attuned"},
-  {"text": "I often do not notice when people are speaking in code around me.", "direction": "hypo-attuned"},
-  {"text": "I tend to miss the significance of pauses and silences in conversation.", "direction": "hypo-attuned"},
-  {"text": "I focus on ideas and content rather than on reading people.", "direction": "hypo-attuned"},
-  {"text": "I rarely sense when someone is tailoring their message based on who is listening.", "direction": "hypo-attuned"},
-  {"text": "I find that I am generally unaware of the emotional undercurrents in my relationships.", "direction": "hypo-attuned"},
-  {"text": "I prefer clear instructions over subtle hints about what is expected.", "direction": "hypo-attuned"},
-  {"text": "I tend not to notice when someone softens a criticism to spare feelings.", "direction": "hypo-attuned"},
-  {"text": "I do not pick up on the nonverbal signals that indicate whether a group wants my input.", "direction": "hypo-attuned"},
-  {"text": "I believe the world would be easier to navigate if people just said what they meant.", "direction": "hypo-attuned"},
-  {"text": "I often find out about interpersonal tensions after they have already escalated.", "direction": "hypo-attuned"},
-  {"text": "I tend to evaluate conversations based on the quality of the ideas rather than the social nuances.", "direction": "hypo-attuned"},
-  {"text": "I rarely notice when someone is trying to impress a particular person in a group.", "direction": "hypo-attuned"},
-  {"text": "I find that I have to consciously remind myself to pay attention to social cues.", "direction": "hypo-attuned"},
-  {"text": "I do not naturally sense when it is my turn to speak versus when I should hold back.", "direction": "hypo-attuned"},
-  {"text": "I hold the view that most social signals are overinterpreted by people who look for them.", "direction": "hypo-attuned"},
-  {"text": "I tend to be focused on my own train of thought during conversations rather than scanning for reactions.", "direction": "hypo-attuned"},
-  {"text": "I rarely detect the difference between someone making small talk and someone trying to connect.", "direction": "hypo-attuned"},
-  {"text": "I find that I am not naturally tuned in to the emotional register of a conversation.", "direction": "hypo-attuned"},
-  {"text": "I often do not notice when someone feels excluded from a group.", "direction": "hypo-attuned"},
-  {"text": "I prefer relationships where people tell me directly when something is wrong.", "direction": "hypo-attuned"},
-  {"text": "I tend to miss the political subtext in professional communications.", "direction": "hypo-attuned"},
-  {"text": "I do not naturally sense when someone is testing boundaries.", "direction": "hypo-attuned"},
-  {"text": "I find that I am often unaware of the social significance of gestures and mannerisms.", "direction": "hypo-attuned"},
-  {"text": "I believe that indirectness in communication wastes everyone's time.", "direction": "hypo-attuned"},
-  {"text": "I rarely notice when someone downplays their accomplishments for social reasons.", "direction": "hypo-attuned"},
-  {"text": "I tend not to register when someone is being deliberately evasive.", "direction": "hypo-attuned"},
-  {"text": "I find that I am more interested in the factual accuracy of what is said than in how it was received.", "direction": "hypo-attuned"},
-  {"text": "I do not automatically sense the social temperature of a new environment.", "direction": "hypo-attuned"},
-  {"text": "I tend to miss when a conversation has a dual purpose beyond its surface topic.", "direction": "hypo-attuned"},
-  {"text": "I focus on getting the right answer rather than on how that answer will land socially.", "direction": "hypo-attuned"},
-  {"text": "I rarely notice when someone is posturing for an audience during a meeting.", "direction": "hypo-attuned"},
-  {"text": "I find that I have to work at reading social situations that others navigate effortlessly.", "direction": "hypo-attuned"},
-  {"text": "I believe that what people say matters more than how they say it.", "direction": "hypo-attuned"},
-  {"text": "I tend not to detect when a friendly question is actually a form of gatekeeping.", "direction": "hypo-attuned"},
-  {"text": "I usually do not notice when someone adjusts their behavior after getting a social signal from someone else.", "direction": "hypo-attuned"},
-  {"text": "I find that I am genuinely puzzled when people tell me I missed an obvious social cue.", "direction": "hypo-attuned"},
-  {"text": "I prefer working in environments where roles and expectations are explicit rather than inferred.", "direction": "hypo-attuned"},
-  {"text": "I do not naturally decode the layers of meaning in polite conversation.", "direction": "hypo-attuned"},
-  {"text": "I tend to be surprised by relationship dynamics that others saw developing all along.", "direction": "hypo-attuned"},
-  {"text": "I find social situations most comfortable when I know exactly what is expected of me.", "direction": "hypo-attuned"},
-  {"text": "I rarely pick up on the nonverbal negotiation that happens before a group makes a decision.", "direction": "hypo-attuned"},
-  {"text": "I tend to focus on the problem being discussed rather than on how people are feeling about it.", "direction": "hypo-attuned"},
-  {"text": "I hold the view that explicit communication is a kindness, not a lack of sophistication.", "direction": "hypo-attuned"},
-  {"text": "I often do not realize that a conversation had multiple layers until someone explains it to me afterward.", "direction": "hypo-attuned"},
-  {"text": "I find that I navigate social situations best when the rules are clearly defined.", "direction": "hypo-attuned"},
-  {"text": "I believe that treating what people say as what they mean is a form of respect.", "direction": "hypo-attuned"},
-  {"text": "I do not tend to analyze social interactions after they happen.", "direction": "hypo-attuned"},
-  {"text": "I am usually more aware of the logical flow of a conversation than its emotional currents.", "direction": "hypo-attuned"},
-  {"text": "I find that subtext is something I recognize in books more easily than in real life.", "direction": "hypo-attuned"},
-  {"text": "I tend not to notice when someone is performing friendliness rather than genuinely feeling it.", "direction": "hypo-attuned"},
-  {"text": "I rarely sense the invisible boundaries that others seem to navigate naturally in social spaces.", "direction": "hypo-attuned"},
-  {"text": "I prefer to deal with what is said rather than speculate about what was meant.", "direction": "hypo-attuned"},
-  {"text": "I find that I am usually focused on the content of a conversation rather than its politics.", "direction": "hypo-attuned"},
-  {"text": "I do not naturally notice when someone is managing their image in a social situation.", "direction": "hypo-attuned"},
-  {"text": "I tend to be unaware of the relational dynamics underlying a group discussion.", "direction": "hypo-attuned"},
-  {"text": "I rarely notice when someone phrases a disagreement as a question to soften it.", "direction": "hypo-attuned"},
-  {"text": "I find that I do not instinctively sense who the social connectors are in a group.", "direction": "hypo-attuned"},
-  {"text": "I tend to miss when someone withdraws from a conversation as a silent protest.", "direction": "hypo-attuned"},
-  {"text": "I do not automatically pick up on the difference between an invitation and a formality.", "direction": "hypo-attuned"},
-  {"text": "I find that I often need context explained that others seem to absorb from the social atmosphere.", "direction": "hypo-attuned"},
-  {"text": "I rarely notice when someone is building consensus behind the scenes before a formal discussion.", "direction": "hypo-attuned"},
-  {"text": "I tend not to detect when a story is being told for the benefit of a specific listener.", "direction": "hypo-attuned"},
-  {"text": "I do not naturally read the social meaning behind gift-giving or gesture exchanges.", "direction": "hypo-attuned"},
-  {"text": "I find that people sometimes describe social situations to me as if explaining a movie I watched with the sound off.", "direction": "hypo-attuned"},
-  {"text": "I tend to miss when someone uses a particular anecdote to send a message to someone else in the group.", "direction": "hypo-attuned"},
-  {"text": "I rarely sense when the emotional tone of a text conversation shifts.", "direction": "hypo-attuned"},
-  {"text": "I hold the view that the simplest interpretation of someone's words is usually the correct one.", "direction": "hypo-attuned"}
+  {
+    "text": "I pick up on tension in a room before anyone says a word.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when someone is smiling politely but is actually upset.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when two people in a group have unspoken friction between them.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find myself reading between the lines in most conversations.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I often sense what someone really means even when their words say something different.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect shifts in a group's mood almost instantly.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice micro-expressions that flash across someone's face during conversation.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can usually tell when someone is holding back what they actually want to say.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I intuitively understand the unspoken hierarchy in any social group I enter.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I feel like I have a sixth sense for when something is off in a social situation.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone's body language contradicts their words.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can read the atmosphere of a meeting within seconds of walking in.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on subtle vocal changes that signal someone is uncomfortable.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I often know what someone is about to say before they say it based on context cues.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find that I naturally track the undercurrents of group dynamics.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone is being left out of a conversation even when it is not obvious.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when a compliment is actually passive-aggressive.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the subtle power plays that happen in everyday interactions.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can detect insincerity in someone's tone of voice even over the phone.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone changes the subject to avoid an uncomfortable topic.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I am highly aware of who is making eye contact with whom in a group.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when a conversation has an audience and the speaker is performing.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I often catch the quick glance two people exchange when something significant is said.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I feel that I absorb the emotional tone of a room the moment I walk in.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone is testing the waters with a comment before committing to an opinion.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone uses humor to deflect from something they find painful.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I read social subtext as naturally as I read printed text.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone's laugh does not quite reach their eyes.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find that I automatically register who is nervous in a social setting.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can sense when two people are pretending to get along but actually dislike each other.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the way someone's posture shifts when a particular person enters the room.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice the difference between a genuine invitation and a courtesy one.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I am attuned to the silent negotiations that happen before a group makes a decision.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I feel like I can sense what a group's unwritten rules are without being told.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I often notice when someone's enthusiasm is performed rather than felt.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on tension between colleagues even when they are being perfectly professional.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone is saying yes but meaning no.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice the social signals that indicate someone is ready to end a conversation.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I am aware of the invisible alliances that form in any group setting.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the way people position themselves physically relative to those they trust.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when a seemingly casual question is actually loaded with significance.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find that I naturally notice when someone is being strategically vague.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can usually tell when someone has been crying even if they have composed themselves.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a group is collectively avoiding a topic that everyone is thinking about.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when a silence between people is comfortable versus strained.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I am quick to notice when someone's status in a group has shifted.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the subtle ways people signal agreement or dissent without speaking.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I often sense the unspoken expectations in a social situation.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone carefully chooses words to avoid offending a specific person in the room.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find myself tracking the emotional trajectory of a conversation as it unfolds.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell from someone's greeting whether they are having a good or bad day.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when someone is being polite out of obligation rather than genuine warmth.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person mirrors another person's gestures as a sign of rapport.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the unspoken pecking order at a dinner party.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find that I register the emotional weight of a pause in conversation.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when someone is code-switching between their authentic self and a social persona.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a text message carries a tone that differs from the sender's usual style.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone is subtly seeking validation in the way they tell a story.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I am highly attuned to when an apology is genuine versus perfunctory.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on which topics make certain people visibly tense.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when someone is restraining themselves from saying what they really think.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when people speak differently depending on who else is listening.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can usually tell when someone is flirting versus just being friendly.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find that I am constantly scanning faces for emotional information.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice the difference between someone who is quiet because they are content and someone who is quiet because they are upset.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when a joke lands differently than the speaker intended.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I am attuned to when someone feels embarrassed even if they hide it well.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense the unspoken loyalty lines in a workplace.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when someone is narrating an event with a particular audience member in mind.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone breaks eye contact at a telling moment.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I often intuit the backstory between people I have just met based on how they interact.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find that I naturally read the room before deciding how to contribute to a conversation.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when a group's energy shifts from casual to serious.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone positions a request as a suggestion to make it more palatable.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I am sensitive to the tonal difference between genuine curiosity and interrogation.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when someone is performing confidence they do not actually feel.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the subtle cues that indicate someone feels out of place in a group.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a compliment is designed to establish dominance rather than express admiration.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I often catch the brief moment of hesitation before someone agrees to something.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find that I track whose opinions carry the most weight in a group even when no one has said so explicitly.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone is diplomatically declining an invitation.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense the difference between a comfortable lull in conversation and an awkward one.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when people adjust their vocabulary depending on who they are speaking to.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when a thank-you carries genuine gratitude versus social routine.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I am aware of the way seating arrangements reflect social dynamics.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when someone has rehearsed what they are about to say.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice the precise moment when a group conversation becomes dominated by one person.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find that I instinctively know which topics are safe and which are landmines in a given group.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect the subtle disappointment in someone's voice when they expected a different response.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when a shared laugh is a bonding moment versus a nervous release.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone is gauging the room before sharing an opinion.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I often sense that there is a conversation happening beneath the surface conversation.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I am attuned to the way people signal closeness or distance through physical proximity.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone's smile fades the instant they think no one is watching.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone is using self-deprecating humor to preemptively manage others' impressions.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when a group has collectively decided on something before any formal vote or discussion.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find myself noticing the cadence and rhythm of a conversation, not just the words.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when someone is being intentionally ambiguous to keep their options open.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice the way a person's face subtly changes when a sensitive subject comes up.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I am highly aware of who initiates conversation and who waits to be approached in social settings.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when someone is withholding information based on who else is present.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find that I read interpersonal dynamics like a language I have always been fluent in.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the slight tightening of someone's jaw when they suppress a reaction.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone asks a question they already know the answer to in order to make a point.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect unspoken competition between people in professional settings.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when someone is carefully managing how they are perceived.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I often notice that a person's feet or hands tell a different story than their words.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find that I automatically catalog the relationships between people when I enter a new social group.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the way someone's breathing changes when they are uncomfortable.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a seemingly spontaneous remark was actually calculated.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I am attuned to the difference between genuine interest and polite listening.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense the invisible threads of obligation and reciprocity in social groups.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone uses inclusive language strategically to build alliance.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when a person glances at someone specific before responding to a question.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect the social undercurrents at a family gathering that newcomers would miss entirely.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find that conversations seem layered to me, with a surface meaning and a deeper one running simultaneously.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice the way someone's tone shifts slightly when they mention a particular person.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when rapport between two people is genuine versus performative.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the implicit rules of a social gathering without anyone explaining them to me.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when someone is interested in a conversation topic versus enduring it out of courtesy.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone strategically drops a name or credential into conversation.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I am attuned to the split-second micro-expressions that reveal what someone actually thinks.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when a group is performing harmony to avoid conflict.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense the social temperature of an email based on word choice, punctuation, and formatting.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone is telling a story primarily to position themselves in a certain light.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on subtle changes in how someone addresses me that signal a shift in our relationship.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I hold the view that most communication happens in what is left unsaid.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I believe that social environments are rich with information most people overlook.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find that I know things about people's inner states that they have not explicitly shared.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when an email is bcc'd to someone based on the overly formal tone.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when someone shortens their responses as a signal they want the conversation to end.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when someone is genuinely surprised versus performing surprise.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when the real decision-maker in a meeting is not the person with the highest title.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone leans slightly away from a person they distrust.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find that I intuitively map social networks, understanding who influences whom.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the implicit social contracts operating in different cultural contexts.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone's agreement comes with unspoken conditions or reservations.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice the subtle ways people claim or yield conversational space.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when someone chooses a specific word because another word would reveal too much.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I am highly aware of the social dynamics playing out in digital communication, not just in-person.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone's politeness has an edge to it.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when a conversation is being steered toward a predetermined conclusion.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense what someone needs to hear in a given moment based on their nonverbal cues.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect the emotional residue in a room where something intense just happened.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone offers a half-truth that is technically accurate but misleading in context.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I find that I read social situations the way a musician reads a score, perceiving multiple layers at once.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I believe that every interaction contains far more information than the words exchanged.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the way people rearrange their expressions when they realize they are being observed.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice the subtle difference between someone who is listening and someone who is waiting to talk.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I am attuned to the way social norms shift from one context to another within the same group.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I prefer it when people say exactly what they mean.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to take what people say at face value.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I focus on the content of what someone says rather than how they say it.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I am usually the last person to notice when the mood in a room has shifted.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I often miss hints and wish people would just be direct with me.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not spend much time analyzing the subtext of conversations.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I believe the most efficient communication is the most literal.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to notice social undercurrents unless someone points them out.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I focus on facts and logic rather than reading between the lines.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely pick up on passive-aggressive comments in the moment.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I believe good communication means saying what you mean clearly and directly.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss the social significance of things like seating arrangements or eye contact patterns.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I usually do not notice when someone is hinting at something rather than stating it outright.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I pay more attention to what is said than to the unspoken dynamics in a conversation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I often realize only later that someone was upset during a conversation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not automatically read into people's tone or body language.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I hold the view that people should communicate their needs clearly rather than expecting others to guess.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to be surprised when someone tells me about interpersonal tension I had not noticed.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I prefer straightforward conversations where everything is on the table.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find it hard to tell when someone is being sarcastic versus sincere.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I value directness in communication above all else.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally track who is allied with whom in a social group.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to focus on the task at hand rather than the interpersonal dynamics around it.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I often learn about social conflicts well after they have already been resolved.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I believe that if something is important, it should be stated explicitly.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice shifts in someone's vocal tone during a conversation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss social cues that seem obvious to others.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I process conversations primarily through their informational content.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I am usually focused on the substance of a discussion rather than its emotional texture.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not pick up on unspoken hierarchies in social groups.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to notice when someone's smile seems forced.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I am more attuned to ideas being discussed than to the feelings in the room.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I often need someone to explain the social dynamics of a situation after the fact.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I believe the best conversations are those where everyone speaks plainly.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss when someone is trying to end a conversation politely.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not pay much attention to facial expressions during conversations.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I am surprised when people read a lot into minor changes in my behavior.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I focus on the literal meaning of words rather than the context surrounding them.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when someone is performing a social role rather than being authentic.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to detect when a question has a hidden agenda behind it.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find social situations easier when expectations are made explicit.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I usually do not register the social significance of small talk.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I often do not notice when someone changes the subject to avoid discomfort.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I prefer working with people who say what they think rather than hinting.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to treat all conversations as primarily about exchanging information.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally sense when a room is tense.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I miss the political dimensions of workplace conversations.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I hold the view that overthinking social signals leads to unnecessary confusion.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely pick up on the implicit rules of a new social group without being told.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to be unaware of power dynamics playing out in conversations.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I focus on solving problems rather than navigating the social landscape around them.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I often do not notice when a compliment carries a double meaning.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I believe that clear, direct speech is a sign of respect.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss the moment when a conversation shifts from casual to serious.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I do not naturally read subtext in emails or text messages.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when someone is looking to me for a social cue.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to be oblivious to the backstory between people I meet.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually pick up on whether someone is genuinely enthusiastic or just being polite.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I miss unspoken social expectations that others seem to just know.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I prefer environments where norms and rules are stated outright.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to notice when two people share a meaningful look during a conversation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I focus on what is being said rather than what is being implied.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely register the emotional atmosphere of a gathering.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I am more interested in the logical structure of an argument than in its social context.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally track the ebb and flow of conversational dynamics.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss it when someone is signaling that they want to be included.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I believe that reading too much into people's behavior leads to misunderstandings.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I am often the last to know about interpersonal drama in my social circles.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss the warning signs that a conversation is heading toward conflict.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not pay much attention to shifts in someone's posture or body positioning.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I learn about social norms through trial and error rather than intuition.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely think about what someone left unsaid after a conversation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to notice when someone is putting on a brave face.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I hold the view that people who communicate indirectly create unnecessary problems.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I often do not realize when a social norm has been violated until someone reacts.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I focus on the explicit agenda of a meeting rather than the interpersonal dynamics.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to take jokes and comments literally when others see layers of meaning.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find it puzzling when people say one thing but apparently mean another.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely detect when someone is strategically timing a remark.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally notice who is comfortable and who is uncomfortable in a group.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to be unaware of the impression I am making on others in the moment.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I believe straightforward communication is more productive than nuanced signaling.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that social hierarchies are mostly invisible to me unless someone explains them.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I often do not notice when people are speaking in code around me.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss the significance of pauses and silences in conversation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I focus on ideas and content rather than on reading people.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely sense when someone is tailoring their message based on who is listening.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I am generally unaware of the emotional undercurrents in my relationships.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I prefer clear instructions over subtle hints about what is expected.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to notice when someone softens a criticism to spare feelings.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not pick up on the nonverbal signals that indicate whether a group wants my input.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I believe the world would be easier to navigate if people just said what they meant.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I often find out about interpersonal tensions after they have already escalated.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to evaluate conversations based on the quality of the ideas rather than the social nuances.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when someone is trying to impress a particular person in a group.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I have to consciously remind myself to pay attention to social cues.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally sense when it is my turn to speak versus when I should hold back.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I hold the view that most social signals are overinterpreted by people who look for them.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to be focused on my own train of thought during conversations rather than scanning for reactions.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely detect the difference between someone making small talk and someone trying to connect.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I am not naturally tuned in to the emotional register of a conversation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I often do not notice when someone feels excluded from a group.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I prefer relationships where people tell me directly when something is wrong.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss the political subtext in professional communications.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally sense when someone is testing boundaries.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I am often unaware of the social significance of gestures and mannerisms.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I believe that indirectness in communication wastes everyone's time.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when someone downplays their accomplishments for social reasons.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to register when someone is being deliberately evasive.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I am more interested in the factual accuracy of what is said than in how it was received.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not automatically sense the social temperature of a new environment.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss when a conversation has a dual purpose beyond its surface topic.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I focus on getting the right answer rather than on how that answer will land socially.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when someone is posturing for an audience during a meeting.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I have to work at reading social situations that others navigate effortlessly.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I believe that what people say matters more than how they say it.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to detect when a friendly question is actually a form of gatekeeping.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I usually do not notice when someone adjusts their behavior after getting a social signal from someone else.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I am genuinely puzzled when people tell me I missed an obvious social cue.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I prefer working in environments where roles and expectations are explicit rather than inferred.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally decode the layers of meaning in polite conversation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to be surprised by relationship dynamics that others saw developing all along.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find social situations most comfortable when I know exactly what is expected of me.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely pick up on the nonverbal negotiation that happens before a group makes a decision.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to focus on the problem being discussed rather than on how people are feeling about it.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I hold the view that explicit communication is a kindness, not a lack of sophistication.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I often do not realize that a conversation had multiple layers until someone explains it to me afterward.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I navigate social situations best when the rules are clearly defined.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I believe that treating what people say as what they mean is a form of respect.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not tend to analyze social interactions after they happen.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I am usually more aware of the logical flow of a conversation than its emotional currents.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that subtext is something I recognize in books more easily than in real life.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to notice when someone is performing friendliness rather than genuinely feeling it.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely sense the invisible boundaries that others seem to navigate naturally in social spaces.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I prefer to deal with what is said rather than speculate about what was meant.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I am usually focused on the content of a conversation rather than its politics.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally notice when someone is managing their image in a social situation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to be unaware of the relational dynamics underlying a group discussion.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when someone phrases a disagreement as a question to soften it.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I do not instinctively sense who the social connectors are in a group.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss when someone withdraws from a conversation as a silent protest.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not automatically pick up on the difference between an invitation and a formality.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I often need context explained that others seem to absorb from the social atmosphere.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when someone is building consensus behind the scenes before a formal discussion.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to detect when a story is being told for the benefit of a specific listener.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally read the social meaning behind gift-giving or gesture exchanges.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that people sometimes describe social situations to me as if explaining a movie I watched with the sound off.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss when someone uses a particular anecdote to send a message to someone else in the group.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely sense when the emotional tone of a text conversation shifts.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I hold the view that the simplest interpretation of someone's words is usually the correct one.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I notice when someone's handshake lingers a beat too long or ends a beat too soon.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can sense when a group chat message was drafted and redrafted before being sent.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the way someone subtly angles their body toward the person they most want approval from.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone uses a nickname versus a full name to signal the current state of a relationship.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when the rhythm of someone's texting changes, even slightly, and read meaning into it.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when someone is including unnecessary details in a story to justify themselves.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when a person is choosing to sit in a specific seat because of who is already sitting where.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone matches the volume of the loudest person in the room to assert themselves.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the difference between someone who is quiet by nature and someone who has been silenced by the group.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone's laughter is slightly delayed, as if they are calculating whether to join in.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person crosses their arms specifically in response to what was just said, not because they are cold.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when two people have had a private conversation before a group meeting based on how they interact.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when someone brings up a third party's name to indirectly communicate something to the person they are speaking with.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the way someone's voice gets slightly higher when they are not fully confident in what they are saying.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person offers to help not out of generosity but to position themselves as indispensable.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone deliberately mispronounces a word or name to signal familiarity or distance.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone repeats a phrase another person used earlier to build rapport or to mock them.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when a meeting is happening for show rather than for any real decision-making.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when someone introduces a topic casually but actually considers it extremely important.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when a group collectively decides to pretend something did not happen.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone slightly raises their eyebrows in a micro-reaction before composing their face.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect the difference between someone sharing personal information to build trust and someone doing it to create a sense of obligation.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person touches their face or neck during a conversation as a self-soothing gesture.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when someone is feigning ignorance to get someone else to reveal information.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when the energy of a room drops the moment a particular person starts speaking.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when someone is strategically agreeing with everyone to avoid being pinned to a position.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person checks their phone not because they have a notification but because they want to disengage.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone answers a different question than the one that was asked to steer the conversation.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice the way certain people in a group look to one specific person before reacting.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can sense when someone is holding a grudge even though they are acting normally.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when a person's enthusiasm for a plan is masking their resignation about it.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone speeds up their speech to get through a point before they can be interrupted.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when a gift or favor comes with unspoken strings attached.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person brings up old information at a strategic moment to shift the dynamics of a conversation.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when someone is listening with the intent to find a weakness in what is being said.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the way people's footsteps change when they are approaching someone they are nervous around.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone's eye contact becomes slightly more intense because they want to be believed.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when a couple is mid-argument even though they are being perfectly civil in public.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when a team member is withdrawing their investment in a project through subtle disengagement.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone uses the phrase 'to be honest' as a signal that previous statements may not have been.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone is watching a conversation from the periphery with more interest than they are showing.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when a person's compliment is actually a way of drawing attention to something they disapprove of.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice the way someone's posture changes depending on whether they are speaking to a peer or someone they perceive as above or below them.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when a person tells a self-deprecating joke to preempt a criticism they expect.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when someone is pretending not to have heard something so they do not have to respond to it.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person swallows or clears their throat before saying something that is difficult for them.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone's goodbye carries finality versus when it is a casual see-you-later.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the specific way that silence falls after someone says something that crossed a line.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person's tone becomes overly measured, as if they are carefully controlling their emotions.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when two people are communicating through a third person who does not realize they are being used as a channel.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when someone volunteers information to create an impression of transparency while still hiding the important parts.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a group's laughter is directed at someone rather than shared with them.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone is offering praise specifically because they want something in return.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when a person references a shared memory to remind the other person of their bond.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone adopts a casual posture to deliberately lower the perceived stakes of a conversation.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when a question is being asked to confirm something the asker already knows, as a test.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when a friend group has a designated peacekeeper who steps in at predictable moments.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice the tiny pause before someone says a name, as if deciding whether to include or exclude that person from the narrative.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when someone is narrating their own actions aloud to shape how others perceive what they are doing.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the difference between a sigh of relief and a sigh of frustration even when they sound almost identical.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone glances at the clock or door during a conversation, signaling they have mentally left.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when a group is tacitly agreeing to lower the emotional register of a conversation to keep things safe.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone emphasizes a particular word to send a message that only certain listeners will catch.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person's typing speed in a live chat changes in response to the emotional content of the discussion.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when someone deliberately mentions a deadline or constraint to create urgency and shift the power balance.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when someone is smiling with their mouth but not with the muscles around their eyes.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person starts a sentence, stops, and then restarts with different words because they caught a social risk.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense the precise moment when a debate stops being about the topic and becomes about winning.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone uses vague language like 'some people think' to express their own opinion without owning it.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when the pitch of a room changes because one dominant personality entered or left.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when a person lingers after a group disperses because they want a private word with someone specific.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when someone gives a longer answer than the question warranted because they are nervous.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person arranges their belongings on a table to claim space or establish boundaries.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone uses humor to say something true that they could not say seriously.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when a conversation is being held in a specific location because that location sends a message.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person's warmth toward someone else cools by a barely perceptible degree.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when someone is nodding along without actually agreeing.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when an invitation was extended to one person but worded to include the group so it would not seem exclusive.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone brings up a tangential topic to distract from something that was about to be discussed.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice the micro-adjustments people make to their clothing or hair when someone they want to impress is nearby.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell from the way two people greet each other how long it has been since they last spoke and how that gap felt.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when someone is using a story about another person to indirectly talk about themselves.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person offers unsolicited advice to subtly establish their expertise.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the difference between someone who pauses to think and someone who pauses for dramatic effect.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when a group member's contribution is being quietly dismissed by the way others respond to it.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone shifts from using 'I' to using 'we' to distribute responsibility for what they are about to say.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when a conversation partner is mirroring my energy not out of genuine rapport but as a social technique.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when someone has been wanting to bring up a topic for a while and is finally finding their opening.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person's vocal cadence shifts to match the person they are trying to connect with.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when a compliment about one person is actually a veiled criticism of someone else present.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone positions themselves physically between two people to mediate or interrupt a connection.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone's reply to a group message is really only intended for one person in the thread.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when a person mentions their credentials or background at a socially calculated moment.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when someone is keeping a conversation going longer than natural because they are avoiding being alone.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person tilts their head while listening because they are genuinely trying to understand versus when they tilt it to appear attentive.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on the way someone chooses to introduce two people and what that framing reveals about their view of each.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when a person's written punctuation changes to signal irritation, such as periods becoming curt.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone deliberately echoes the vocabulary of the most powerful person in the room.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when a shared meal or coffee is actually a pretext for a conversation someone needs to have.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can feel when a social gathering has an invisible guest list that determines who was and was not expected.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone's response time to messages changes as a reflection of their shifting feelings.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when a person frames a demand as a collaborative suggestion.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone remembers a detail about you not out of genuine care but to demonstrate attentiveness.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a speaker's gaze lingers on someone who challenged them earlier, even during an unrelated point.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when someone is being conspicuously silent to make their absence from the conversation felt.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when a person adjusts their level of formality mid-conversation in response to a social cue they received.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when the physical distance between two people in a conversation is slightly greater than normal and read the reason for it.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when someone is curating which emotions they display and which they suppress in real time.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when a person quotes someone else to lend authority to an opinion they are not confident enough to own.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when two people have developed private shorthand or inside references that exclude others in the group.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when a farewell is warm on the surface but carries relief underneath.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when someone asks how you are doing because they genuinely want to know versus when it is a formality.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person places themselves in someone's line of sight to ensure they are seen.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect subtle territorial behaviors like someone adjusting objects on a shared table.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when a person's energy dims slightly after receiving a response that was not what they hoped for.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone includes a disclaimer before a statement because they are anticipating pushback from a specific person.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense the unspoken ranking of whose time is considered most valuable in a professional setting.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when someone is keeping score in a friendship based on how they reference past favors.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a group conversation has an unacknowledged moderator who is guiding the flow without being explicit about it.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when a person's friendliness toward me is calibrated to what they think I can offer them.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when someone is listening to a story not for the story itself but for what it reveals about the storyteller.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person clenches or unclenches their hands in rhythm with the emotional intensity of a conversation.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when two people are avoiding eye contact with each other even in a small group.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when a host is performing hospitality versus genuinely enjoying having guests.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone reframes another person's idea in their own words to take partial ownership of it.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when a person chooses to stand rather than sit as a way to signal they do not intend to stay long.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when a silence after a question is the asker giving space versus the asker applying pressure.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone's entire demeanor shifts depending on whether their supervisor is present.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when a person withholds a compliment that would be natural because of a competitive dynamic.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when a conversation's real audience is not the person being spoken to but someone who is overhearing.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice the way people edit their stories in real time based on the reactions they are getting.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when a person uses physical touch, like a pat on the back, to establish a hierarchy rather than express warmth.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when someone exhales audibly as a way of communicating displeasure without words.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a group instinctively leaves a chair empty next to someone they find socially difficult.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when a person is testing the loyalty of others by sharing a piece of gossip and watching where it goes.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when someone responds to a text with a shorter message than usual and what that brevity means.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a person's speaking pace slows because they are choosing their words around a sensitive listener.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when the way someone closes a door, gently or firmly, carries emotional information.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when a person positions a joke as if it just occurred to them even though it was planned.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a group's unspoken topic of avoidance is the most important thing no one is saying.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense when someone uses the word 'interesting' as a placeholder for a reaction they do not want to reveal.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when two people in a room are aware of each other even when they are not interacting.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone volunteers to leave a room to give others privacy they did not explicitly request.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when a person's social warmth has a ceiling that they never allow anyone past.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when the timing of a message is itself the message.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone addresses one person by name more frequently than others to draw them in or single them out.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I sense the difference between a group that is comfortable with each other and a group that is performing comfort.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I detect when a person uses the phrase 'no offense' as a signal that offense is exactly what they intend.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when a conversation partner's pupils dilate or contract in response to what is being discussed.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I can tell when someone changes the subject not to avoid discomfort but to protect someone else from it.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I pick up on when a person who normally speaks freely becomes uncharacteristically cautious.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I notice when someone offers a carefully worded non-answer that sounds like an answer.",
+    "direction": "hyper-attuned"
+  },
+  {
+    "text": "I generally do not analyze why someone chose a particular word when a simpler one would do.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to assume people are in a neutral mood unless they tell me otherwise.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually notice when someone is nervous during a conversation unless they say so.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I am more interested in the outcome of a discussion than in how people felt during it.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely wonder what someone really meant by a particular comment.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to accept invitations at face value without wondering if there is a subtext.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally notice when someone changes their tone mid-sentence.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I often have to ask people directly how they are feeling because I cannot tell.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss the social significance of who arrives together or leaves together at an event.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not pick up on when someone is putting extra effort into their appearance for a specific social situation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when a person's posture closes off in response to something I said.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I do not register the difference between a quick hello and a deliberate greeting.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to think about why someone chose to sit where they sat.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually notice when people exchange a knowing glance.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I focus on whether a statement is true rather than on why someone chose to say it now.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely consider whether the timing of a message carries meaning beyond its content.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to take compliments at face value without analyzing what might be behind them.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually register shifts in formality during a conversation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I often miss when a conversation has an unspoken purpose beyond its surface topic.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to notice when someone is deliberately making themselves small in a social setting.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely detect when a person's generosity has a strategic element to it.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally sense when a friend group has an inner circle and an outer circle.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss when someone includes me in a plan out of obligation rather than desire.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I do not track who interrupted whom during a meeting.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when someone is holding back tears during a conversation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually detect when a question is rhetorical versus when someone actually wants an answer.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to register when someone's reply carries a hint of sarcasm.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find it hard to tell when someone is impressed versus when they are just being encouraging.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally pick up on when someone changes the way they address me.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice the social dynamics of who pays for what in a group.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to focus on the information in an email rather than the tone.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually sense when someone is seeking reassurance rather than advice.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I miss the unspoken rules about when it is appropriate to speak and when to stay quiet.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to notice when a person distances themselves from a previous statement in subtle ways.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely detect when someone is performing agreement to keep the peace.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not pick up on when someone is testing my reaction before committing to a stance.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to be unaware of when someone is jealous but hiding it.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I do not instinctively sense when I have overstayed my welcome.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when someone is speaking louder than necessary to assert dominance.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally register the social weight of who introduces whom in a new setting.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss when a conversational pause is an invitation for me to share something personal.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find it difficult to tell when a person's cheerfulness is forced.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually notice when someone edits their story in real time based on audience reactions.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to read meaning into the way someone signs off an email.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely detect when a friendly rivalry has an edge of real competition underneath.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally sense when someone wants to be contradicted rather than agreed with.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss the social implications of who gets credit for an idea in a group.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I do not notice when someone is performing a version of themselves for a new audience.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely pick up on when a host is ready for their guests to leave.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually register when someone deliberately avoids a topic in my presence.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to notice the difference between laughter that invites me in and laughter that keeps me out.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I often need to be told directly when I have accidentally offended someone.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally sense when two people are having a power struggle disguised as polite conversation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss when someone frames bad news inside good news to soften the blow.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when someone's contribution to a conversation is being systematically overlooked.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not pick up on when someone places themselves physically in a position of authority.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to be unaware of the subtle ways people express loyalty to each other in group settings.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I do not read the social meaning into someone's choice of clothing for a particular occasion.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when a person uses qualifiers like 'maybe' or 'sort of' to soften an opinion they feel strongly about.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually detect when someone is using a personal anecdote as an indirect warning.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to register when a group's dynamic shifts because of a new piece of information.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I generally do not notice when someone looks to another person for permission before speaking.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely pick up on the social choreography that determines who walks next to whom.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally sense when a person is gauging whether I am trustworthy before opening up.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss the subtle ways that people signal they are on the same side.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find it hard to detect when someone is being supportive on the surface but competitive underneath.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually notice when a text message carries emotional subtext that goes beyond the words.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to be the last person to realize when a social event is winding down.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when someone is performing busyness to avoid a conversation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally track whose opinion shifted during a discussion and why.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to register when someone is slowly distancing themselves from a relationship.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I miss the social meaning behind the order in which people are greeted or acknowledged.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely sense when a group has an unspoken agreement about who the designated leader is.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually notice when someone answers a question for another person to control the narrative.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss it when someone laughs at the wrong moment because they are uncomfortable.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I do not register the emotional tenor of a handshake or hug.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely detect when a person's interest in a conversation suddenly spikes because of something specific that was said.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally notice when someone is being deliberately vague to maintain deniability.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to focus on what was decided in a meeting rather than on the interpersonal dynamics that influenced the decision.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I generally miss when someone uses my name mid-conversation to increase intimacy or pressure.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely pick up on when a person's compliment is backhanded.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually sense when the mood of a text conversation shifts because of an emoji choice or its absence.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to notice when people form temporary alliances within a conversation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find it difficult to tell whether a group's silence indicates contentment or suppressed disagreement.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally register when someone mirrors my body language to build rapport.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss when a person's enthusiasm about a topic is meant to signal something about their values.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when someone slows down a conversation to give a quieter person space to contribute.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I do not instinctively sense when someone feels overlooked in a group.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not pick up on when a social invitation is phrased to make declining difficult.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to be unaware of the unspoken rules about what topics are acceptable at a particular gathering.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely detect when someone's reaction to news is performed for the benefit of the person sharing it.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally notice the way people position themselves during a photo to signal closeness or distance.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to register when a person volunteers less information than usual because of who is present.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I am often unaware of the social cost of something I said until someone tells me later.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely sense when a person is being patient with me rather than genuinely engaged.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually pick up on the difference between a question that invites discussion and one that shuts it down.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss the social significance of who reaches out to whom first after a conflict.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I am not naturally attuned to the way gossip functions as social bonding.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when the formality of an interaction is mismatched with the actual closeness of the relationship.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally detect when someone's storytelling style changes depending on the status of their audience.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to focus on the clarity of a message rather than on what the sender might be feeling.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I miss when a person's body language tells a completely different story than their words.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely sense when a social environment has an implicit dress code or behavioral code that I am violating.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually notice when someone is carefully not mentioning a person or topic that is obviously relevant.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to register the social dynamics of who gets the last word in a conversation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I generally do not notice when someone is managing my impression of a third party.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely pick up on when a person is signaling discomfort through fidgeting or restlessness.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally sense when a social ritual, like a toast or a round of introductions, carries deeper meaning than its surface function.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss the way people calibrate how much personal information to share based on their read of the room.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I do not track the unspoken turn-taking order in group conversations.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely detect when someone adjusts their opinion after sensing the majority view.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually notice when a person glances at their companion for confirmation before committing to a plan.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to treat silence in a conversation as simply a pause rather than as communication.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find it hard to tell when someone is genuinely asking for my opinion versus looking for validation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely register the social significance of response time in digital conversations.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally notice when someone is subtly coaching another person through a social situation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to read meaning into someone choosing to communicate by text versus calling versus meeting in person.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I am usually unaware of who feels most and least comfortable in a group until it becomes obvious.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice the implicit choreography of how a group arranges itself when it walks together.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not pick up on when a person gives a long explanation because they sense skepticism from the listener.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to focus on whether an idea is good rather than on how it was received by the group.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I do not notice when someone deliberately withholds a reaction to maintain power in a conversation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely sense when a person is anchoring a negotiation through seemingly casual conversation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally detect when someone uses a group's shared values or language to gain credibility.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss the social signal when someone says 'we should do this sometime' without ever intending to follow through.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I am generally unaware of when people around me are managing each other's emotions.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when someone structures a question to guide me toward a particular answer.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually detect when someone drops a hint about what they want for a gift or occasion.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to notice when a person's energy changes after reading a message on their phone.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I am usually the last to sense when a social norm has been broken.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally pick up on the difference between someone sharing a vulnerability and someone testing how I will respond to it.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely register when someone raises their eyebrows briefly to acknowledge a shared understanding.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss when a person mentions something they are proud of in a way designed not to sound like bragging.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find it hard to tell when someone is deferring to me out of genuine respect versus obligation.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally notice when a conversation between two people nearby is meant for me to overhear.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to be unaware of when someone is matching my energy level to put me at ease.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely sense when a person's choice of words reveals their stance on an issue they have not explicitly addressed.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually register when a person responds with slightly more distance after I said something they disagreed with.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to notice when someone deliberately includes me in a conversation by directing a question my way.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I miss when a person's farewell is warmer or cooler than their greeting and what that shift means.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely pick up on the way someone positions their belongings as a social boundary.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not naturally sense when a group has collectively moved on from a topic that one person still wants to discuss.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend to miss it when a person's agreement comes with a subtle qualifier that changes its meaning entirely.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I do not automatically sense when someone is emotionally exhausted even if they are carrying on normally.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I rarely notice when a person carefully positions a negative opinion as a question to soften the delivery.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I do not usually detect when a social environment has an unspoken expectation about reciprocity.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I tend not to notice when someone shifts their gaze away to signal they are done with a topic.",
+    "direction": "hypo-attuned"
+  },
+  {
+    "text": "I find that I miss when someone's phrasing of a request reveals how much power they think they have in the relationship.",
+    "direction": "hypo-attuned"
+  }
 ]

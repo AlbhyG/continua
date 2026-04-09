@@ -2,76 +2,148 @@
   "id": 16,
   "questions": [
     {
-      "text": "I automate or systematize recurring tasks to reduce the chance of human error.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I prefer it when people say exactly what they mean.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I find that I am generally unaware of the emotional undercurrents in my relationships.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I find that anger in me is a slow-building awareness rather than a flash of heat.",
+      "text": "I tend to absorb emotional information without it disrupting my internal stability.",
       "direction": "low-reactive"
     },
     {
-      "text": "I believe that the felt weight of suffering reveals moral truths that logical analysis alone would miss.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I tend to save the best resources\u2014time, energy, money\u2014for my own priorities.",
+      "text": "I find that decorating my space exactly to my taste improves my daily mood and output.",
       "direction": "self-focus"
     },
     {
-      "text": "I notice when an email is bcc'd to someone based on the overly formal tone.",
+      "text": "I pick up on the way someone's breathing changes when they are uncomfortable.",
       "direction": "hyper-attuned"
     },
     {
-      "text": "I can look back on difficult periods without re-experiencing the emotional intensity.",
-      "direction": "low-reactive"
+      "text": "I believe that the moral weight of suffering is the consideration that should humble every other claim on my attention and resources.",
+      "direction": "empathy"
     },
     {
-      "text": "I feel energized when a group reaches a genuine consensus.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I believe that processing emotionally charged situations through a framework of analysis rather than feeling is a mature and effective approach.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I believe I process stimuli at a deeper level than most, which is why everything feels so vivid.",
+      "text": "I experience the buildup to an important event as a nearly unbearable crescendo of feeling.",
       "direction": "high-reactive"
     },
     {
-      "text": "I find that I am most motivated when I am working toward something that benefits me directly.",
-      "direction": "self-focus"
+      "text": "I hold myself accountable when I fail to respond to suffering that I was aware of.",
+      "direction": "empathy"
     },
     {
-      "text": "I routinely put community obligations above personal recreation.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I hold the view that remaining objective during emotionally intense experiences is a capacity that improves with practice and is worth cultivating.",
+      "text": "I think that the discipline of remaining emotionally composed under pressure is one of the most practical skills a person can have.",
       "direction": "detachment"
     },
     {
-      "text": "I prefer to ask for forgiveness rather than permission.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I prefer to keep my options open rather than lock myself into a specific course of action.",
+      "text": "I know a project is done when it feels complete, not when it meets predefined criteria.",
       "direction": "spontaneous"
     },
     {
-      "text": "I prefer to find a decision everyone can accept, even if it means compromise.",
+      "text": "I believe that pouring myself out for others is the most fulfilling way to spend my energy.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that my morning routine should be designed entirely around my own optimal performance.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I often yield to the group's preferred approach, even if mine differs.",
       "direction": "yielding"
     },
     {
-      "text": "I find that improvisation gives me more confidence than any methodology in uncertain situations.",
+      "text": "I find that I naturally read the room before deciding how to contribute to a conversation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I prefer working with people who say what they think rather than hinting.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that emotional distance from the details of a case allows me to make recommendations that are more consistent and less biased.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I experience the first day at a new place as a sensory and emotional deluge.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I am usually the one who interviews and selects new team members.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I experience the anticipation before a big moment as a mild heightening of attention, not a surge of adrenaline.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I routinely set personal records and benchmarks to push myself further.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel uneasy when I don't have a clear plan for the week ahead.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I detect when someone positions themselves physically between two people to mediate or interrupt a connection.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that the discipline of maintaining a level-headed perspective during crises is what transforms good intentions into effective outcomes.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I notice that I frequently steer conversations toward action.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I rarely pick up on the social choreography that determines who walks next to whom.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I read contracts and agreements thoroughly before signing them.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I offer feedback only when asked or when the group has a feedback culture in place.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I research until I feel I have enough rather than imposing time limits on exploration.",
       "direction": "spontaneous"
+    },
+    {
+      "text": "I hold the view that true success is measured by how much you improve others' lives.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I like to personally onboard new members and set their expectations.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I notice that my voice changes \u2014 gets higher, tighter, or shakier \u2014 when I'm emotionally activated.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I do not tend to analyze social interactions after they happen.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I let daily activities be guided by what excites me rather than by a long-term vision.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that if my plate is full and someone else's is empty, something on my plate belongs to them.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I keep a log of what I accomplish each day to maintain awareness of my productivity.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "My emotional baseline is so stable that people often describe me as having a calming presence.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel that the moral weight of another's pain creates an imperative that is difficult to override with any competing consideration.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that ambiguity is an invitation for the group to explore possibilities together.",
+      "direction": "yielding"
     }
   ]
 }

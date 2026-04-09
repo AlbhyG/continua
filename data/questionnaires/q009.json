@@ -2,76 +2,148 @@
   "id": 9,
   "questions": [
     {
-      "text": "I rarely experience the physiological markers of stress even in stressful situations.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I have changed my plans because I became aware that someone needed help, even when it was inconvenient.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I believe that careful planning is the foundation of meaningful accomplishment.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I think of time as something to be experienced rather than optimized.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I feel that my energy is best spent helping others reach their goals.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I think that the most equitable treatment of people's needs comes from those who can separate the emotional from the factual.",
+      "text": "I believe that analytical composure during a human crisis is what turns good intentions into effective action.",
       "direction": "detachment"
     },
     {
-      "text": "I feel that I am at my best when I make my own interests a top priority.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I can still feel the emotional residue of an argument hours or even days later.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I am the type of person who builds the roadmap.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I prefer shared responsibility to personal accountability for outcomes.",
+      "text": "I help mediate disputes by drawing out each side's concerns without imposing a resolution.",
       "direction": "yielding"
     },
     {
-      "text": "I hold the view that suffering, when recognized, creates a moral imperative that should be reflected in my actions, priorities, and choices.",
-      "direction": "empathy"
+      "text": "I would rather participate in a safe venture than lead a risky one alone.",
+      "direction": "yielding"
     },
     {
-      "text": "I detect when someone is diplomatically declining an invitation.",
+      "text": "I hold the view that the ability to remain emotionally steady during distressing events is a competence that every serious professional should aspire to develop.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I learn from experience instinctively without needing to document or formalize lessons.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that maintaining objectivity during distressing events is the practice that most effectively prevents good intentions from leading to unintended harm.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that my emotional reactions are like weather systems \u2014 powerful, fast-moving, and hard to control.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I can tell when someone is keeping a conversation going longer than natural because they are avoiding being alone.",
       "direction": "hyper-attuned"
     },
     {
-      "text": "I feel most confident when I am directing a process from start to finish.",
+      "text": "I feel compelled to act when I see inefficiency or lack of direction.",
       "direction": "agentic"
     },
     {
-      "text": "I notice when someone offers a half-truth that is technically accurate but misleading in context.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I believe that life rewards those who show up consistently, day after day.",
+      "text": "I set firm boundaries around my work time to maintain a consistent rhythm.",
       "direction": "conscientious"
     },
     {
-      "text": "I prefer clear instructions over subtle hints about what is expected.",
-      "direction": "hypo-attuned"
+      "text": "I believe that my calm disposition is simply how my system is calibrated.",
+      "direction": "low-reactive"
     },
     {
-      "text": "I feel that the highest form of contribution is quiet, unrecognized service.",
+      "text": "I believe my steady emotional tempo is something people can count on about me.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I sense when someone is code-switching between their authentic self and a social persona.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I hold the view that consistency matters more than intensity in achieving goals.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that a single upsetting comment can color my entire day.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that my ambitions are a healthy and important part of who I am.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that when someone asks me for help, the answer should almost always be yes.",
       "direction": "altruism"
     },
     {
-      "text": "I often feel flooded by the intensity of my own reactions.",
+      "text": "I believe that adaptability is one of my core strengths.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that the moral priority of suffering is the criterion by which I evaluate whether a society or institution is truly just.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I rarely pick up on the way someone positions their belongings as a social boundary.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I can tell when someone has been wanting to bring up a topic for a while and is finally finding their opening.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find budgets and financial plans too restrictive and prefer to manage money intuitively.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I regularly push back when I disagree with the prevailing direction.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I hold the view that it's okay to put my needs above the expectations of others.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I go from calm to fully activated in a matter of seconds.",
       "direction": "high-reactive"
+    },
+    {
+      "text": "I often need someone to explain the social dynamics of a situation after the fact.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that the moral pull of suffering has given me a clarity of purpose that has shaped the direction of my life more than any ambition or goal.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I routinely surround myself with people and environments that elevate my personal trajectory.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel a genuine sense of accomplishment when I navigate an unplanned situation successfully.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I often do not notice when people are speaking in code around me.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that anonymously paying for a stranger's meal is one of my favorite things to do.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to view emotional intensity in others with a kind of curiosity because my own experience is different.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel most proud of the things I did for others, not the things I achieved for myself.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel most in my element when I am the person who makes the go or no-go call.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I choose reliability over novelty when both are available.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that moral attention to suffering is the most fundamental practice through which I express my values.",
+      "direction": "empathy"
     }
   ]
 }

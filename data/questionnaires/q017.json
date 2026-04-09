@@ -2,76 +2,148 @@
   "id": 17,
   "questions": [
     {
-      "text": "I believe that treating what people say as what they mean is a form of respect.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I hold the view that the ability to remain emotionally steady during distressing events is a competence that every serious professional should aspire to develop.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I notice that my breathing changes dramatically when I'm emotionally activated.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I prefer to have all the information before starting a task.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I feel that the moral pull of suffering has given me a clarity of purpose that has shaped the direction of my life more than any ambition or goal.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I believe the measure of my day is how much I gave, not how much I gained.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I tend to choose opportunities that advance my personal career over those that primarily benefit others.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I throw things together at the last minute and it usually works out fine.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I am energized by having the final say.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I experience nostalgia as a deep, aching longing rather than a gentle wistfulness.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I sense when rapport between two people is genuine versus performative.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I notice when someone's laugh does not quite reach their eyes.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I feel that keeping score of what I've given defeats the purpose of giving.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I find that I often refine and build on ideas others have introduced.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I experience anticipation as a mild interest rather than an overwhelming buzz.",
+      "text": "I hold the view that my emotional steadiness allows me to be a grounding presence.",
       "direction": "low-reactive"
     },
     {
-      "text": "I believe that the moral priority of suffering is the criterion by which I evaluate whether a society or institution is truly just.",
+      "text": "I believe that the discomfort of giving is always worth the benefit it creates for someone else.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I take the lead in negotiations and high-stakes conversations.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I am drawn to strengthening organizations that already exist.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that the moral pull of suffering is what keeps me honest about my priorities.",
       "direction": "empathy"
     },
     {
-      "text": "I think of my future self as someone I am actively building conditions for.",
+      "text": "I tend to frame requests as options rather than expectations.",
+      "direction": "yielding"
+    },
+    {
+      "text": "When I'm nervous, the sensation is so physical \u2014 dry mouth, tingling limbs \u2014 that it's impossible to ignore.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I start moving and gather resources and approvals along the way.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice when a group is collectively avoiding a topic that everyone is thinking about.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find myself correcting course when I think a group is going the wrong way.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that the felt weight of suffering is the moral datum that I return to again and again when I need to check my reasoning.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I miss when a person's body language tells a completely different story than their words.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I stick to proven methods when the stakes are high.",
       "direction": "conscientious"
     },
     {
-      "text": "I enjoy the challenge of persuading others to follow my direction.",
+      "text": "I feel that the moral demand of suffering applies with equal force whether the person is present or distant.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that directing my energy inward\u2014toward my own improvement\u2014is deeply satisfying.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe my purpose is best fulfilled when I am contributing to someone else's well-being.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice that I don't experience the dramatic emotional peaks and valleys that others describe.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I hold the view that orderliness in small things reflects clarity in thinking.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I rarely sense when a person is being patient with me rather than genuinely engaged.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I am energized by standing at the front of the room and guiding the discussion.",
       "direction": "agentic"
+    },
+    {
+      "text": "I hold the view that self-care is not indulgence\u2014it is strategy.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I notice that when I feel vulnerable, every nerve ending seems to be exposed.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I routinely proofread, edit, or review other people's work without being asked.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I believe that resources are meant to be used in service of present opportunities.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I think that structured reasoning about distressing circumstances is a discipline that protects against the kind of impulsive action that can create new problems.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that relying on willpower is exhausting; I'd rather follow my natural energy.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I track my progress methodically to ensure I'm meeting my targets.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that taking a solo trip to recharge is more valuable than a group vacation.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I hold the view that accountability should be distributed across the team.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I think that rational engagement with suffering, while less dramatic than emotional engagement, tends to produce results that are more lasting and more just.",
+      "direction": "detachment"
+    },
+    {
+      "text": "My emotional responses are proportional and consistent, which gives me a sense of reliability.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I notice when someone uses inclusive language strategically to build alliance.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I rarely detect when someone adjusts their opinion after sensing the majority view.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe my capacity for intense feeling is both a gift and a burden.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that remaining emotionally even during a crisis demonstrates a kind of competence that serves everyone better.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I pick up on when a conversation is being steered toward a predetermined conclusion.",
+      "direction": "hyper-attuned"
     }
   ]
 }

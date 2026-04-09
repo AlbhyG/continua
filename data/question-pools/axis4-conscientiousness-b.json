@@ -1,0 +1,1202 @@
+[
+  {
+    "text": "I rehearse important presentations multiple times before delivering them.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I prefer to speak off the cuff because rehearsed delivery feels stiff to me.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I map out dependencies between tasks so I can work on them in the most efficient order.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I pick up whichever task feels most natural in the moment rather than mapping dependencies.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I track recurring expenses and review them monthly to stay within my targets.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I rarely review past expenses because I trust my general sense of where I stand financially.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I archive completed work in labeled folders so I can find it years from now.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I rarely organize finished work because I'd rather move on to the next thing.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I draft and revise important emails before sending them.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I send emails as soon as I write them, trusting my first phrasing is good enough.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I build checklists for recurring processes so nothing gets skipped.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I handle recurring tasks differently each time based on what the situation calls for.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I keep a log of what I accomplish each day to maintain awareness of my productivity.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I gauge my productivity by how energized I feel, not by a tally of completed items.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I write down lessons from each project so I can apply them to the next one.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I absorb lessons from experience naturally without needing to write them down.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I schedule thinking time into my calendar rather than leaving reflection to chance.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "My best thinking happens at unplanned moments, so I don't try to schedule it.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I establish clear criteria before evaluating options so my judgment stays consistent.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I evaluate options holistically in the moment rather than against predetermined criteria.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I update my to-do list throughout the day as new tasks surface.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I carry tasks in my head and address them as they come to mind.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I feel uneasy leaving the house without confirming I have everything I need.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I head out the door and figure out what I forgot along the way.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I pre-read materials before classes, workshops, or events so I can engage more deeply.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I show up to learning experiences fresh, without preparation, to keep my perspective unbiased.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I keep a master list of all ongoing projects and their current statuses.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I keep track of projects mentally and trust I'll remember what needs attention.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I set weekly review sessions to assess what went well and what I need to adjust.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I adjust course continuously rather than waiting for a formal review session.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I establish naming conventions for my files so I can search for them easily.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I name files whatever comes to mind and rely on search tools when I need them.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I think through the logical sequence of an argument before presenting it.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I develop my argument as I speak, discovering what I think in real time.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I proactively identify risks at the start of any new undertaking.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I address risks as they materialize rather than cataloging them in advance.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I confirm details and expectations before starting any collaborative task.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I dive into collaborative work and let expectations clarify themselves through action.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I protect focused work time by blocking it on my calendar so no one can interrupt it.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I stay available throughout the day because the best conversations happen unexpectedly.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I return borrowed items promptly because outstanding obligations weigh on me.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I return things when I remember, without feeling pressured by a specific timeline.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I rehearse difficult conversations in my mind before having them.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I enter difficult conversations open-ended, letting the dialogue shape what I say.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I maintain version histories of important documents so I can revert changes if needed.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I work on the current version and don't worry about preserving past iterations.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I track my goals with quantifiable metrics so I can see objective progress.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I assess progress by how things feel rather than by numerical metrics.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I prepare fallback options before negotiating or making requests.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I negotiate and make requests without scripted fallbacks, adapting to the flow of conversation.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I always carry items I might need \u2014 a charger, a pen, an umbrella \u2014 just in case.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I travel light and improvise with whatever is available if I need something.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I verify facts and proofread carefully before sharing information with others.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I share information as I learn it, refining my understanding in conversation.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I plan my route before leaving for an unfamiliar destination.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I set off toward an unfamiliar destination and navigate as I go.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I think about what tools or supplies I'll need before starting a project.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I start projects with what I have and acquire tools as the need becomes clear.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I keep my digital files organized in a clear folder hierarchy.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "My digital files end up wherever is convenient; I search when I need something.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I take time to define the scope of a task before beginning work on it.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I let the scope of a task reveal itself as I work rather than defining it upfront.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I respect the boundaries of my own schedule and protect time for rest and recovery.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I keep working when I'm energized regardless of what my schedule says, and rest when the energy fades.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I value knowing exactly where I stand on a project at all times.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I'm comfortable with ambiguity about where a project stands as long as progress feels real.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I like to establish ground rules before starting a collaborative effort.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I prefer to let norms emerge organically as people work together.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I consider multiple possible outcomes before committing to a decision.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I commit to a decision and adjust quickly if the outcome isn't what I expected.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I front-load effort on projects so the final stages are smoother.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I ramp up effort as a project progresses, letting early stages stay loose and exploratory.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I maintain a reading list and work through it systematically.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I read whatever catches my interest without following a list.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I keep my passwords organized in a secure, systematic way.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I deal with passwords as they come up and reset them when I forget.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I believe that success comes from executing a clear vision with discipline.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I believe that success comes from staying open and responsive to emerging possibilities.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I avoid last-minute rushes by distributing work evenly across the available time.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I accept that last-minute rushes are part of my natural rhythm and often produce my best work.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I study the instructions for new software before using it.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I click around new software to figure it out through exploration.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I schedule appointments with buffer time between them to avoid feeling rushed.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I schedule things back-to-back and adjust on the fly if something runs over.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I periodically declutter my spaces to keep things functional and clear.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I declutter only when accumulation actually interferes with what I'm doing.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I note important dates and send reminders to myself well in advance.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I trust that important dates will come to mind when they need to.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I design my morning so the most important work gets done before distractions arise.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I let each morning develop its own rhythm instead of front-loading priority tasks.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I outline chapters or sections before I begin writing anything substantial.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I start writing and let the structure emerge from the material itself.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I keep spare supplies on hand so I never run out of essentials.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I buy supplies when I run out rather than stockpiling in advance.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I separate my work into distinct phases with clear transitions between them.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I blend research, creation, and revision together fluidly rather than working in distinct phases.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I identify the single most important task each day and make sure it gets done first.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I let the day's most important task reveal itself through my engagement rather than deciding it in advance.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I maintain a consistent filing system that anyone else could navigate.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "My organizational system makes sense to me even if it would confuse someone else.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I follow up on requests I've made to ensure nothing falls through the cracks.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I trust that things will come back to me without chasing them down.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I devote a fixed portion of my income to savings regardless of circumstances.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I save when it feels comfortable and spend more freely when opportunities arise.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I hold the view that patience in execution is what turns a good idea into a finished product.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I hold the view that speed in execution is what keeps an idea alive long enough to matter.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I write detailed instructions when handing off work to others.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I give others a quick overview and trust them to figure out the details their own way.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I tackle administrative tasks on a regular schedule so they never pile up.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I handle administrative tasks in bursts when they become unavoidable.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I plan social events well ahead of time with confirmed dates and details.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I organize social events spontaneously, often on the same day they happen.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I check my work against established standards or rubrics before considering it done.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I know my work is done when it feels right, not when it passes a formal checklist.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I keep a record of decisions and the reasoning behind them for future reference.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I make decisions and move forward without documenting the rationale behind each one.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I set clear start and end times for work sessions to maintain discipline.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I work until I'm done or until my energy shifts, without fixed start and end times.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I regularly audit my habits to see which ones are still serving me.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I let habits form and dissolve naturally without deliberate auditing.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I test new approaches on a small scale before rolling them out widely.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I implement new approaches fully and adjust based on live results.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I keep a curated collection of reference materials organized by topic.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I find reference materials when I need them rather than curating a collection.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I break vague goals into concrete next actions so I always know what to do next.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I sit with vague goals and let clarity emerge before forcing them into action steps.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I account for travel time, transitions, and setup when planning my schedule.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I tend to underestimate how long transitions take and adjust as I go.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I use consistent formats and templates for recurring communications.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I craft each communication fresh because templates feel impersonal to me.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I track the time I spend on different activities to understand where my hours go.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I spend my time without tracking it, trusting my sense of how the day went.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I establish personal policies for recurring decisions so I don't have to deliberate each time.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I make each recurring decision fresh because circumstances always differ.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I leave detailed notes for my future self when pausing a project mid-stream.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I pick up paused projects and re-orient myself through exploration rather than notes.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I regularly clean out expired items from my refrigerator and pantry.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I notice expired items when I happen to come across them, not on a set schedule.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I prepare agendas before any meeting I'm responsible for.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I let meetings flow conversationally rather than following a prepared agenda.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I choose reliability over novelty when both are available.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I choose novelty over reliability because trying new things is how I learn.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I keep careful records of warranties, receipts, and important transactions.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I deal with warranty and receipt issues when they arise rather than maintaining records.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I build in checkpoints during complex work to verify I'm still on the right track.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I trust my sense of direction during complex work without stopping to verify at fixed points.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I compare my current progress to my original timeline to gauge whether I'm ahead or behind.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I gauge progress by feel rather than comparing actual results to a predetermined timeline.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I plan my learning around specific skill gaps I've identified.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I learn whatever draws my curiosity without mapping it to identified skill gaps.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I treat my future obligations as commitments that deserve present-day preparation.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I give my full attention to what's happening now and prepare for future obligations closer to the time.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I set up automated reminders for bills, renewals, and recurring obligations.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I pay bills and handle obligations when I notice them rather than setting up automation.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I organize information I consume into notes, highlights, or summaries for later use.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I consume information and trust that what matters will stick without explicit note-taking.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I plan my errands in an efficient route rather than running them randomly.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I run errands as they occur to me, sometimes doubling back, and that's fine by me.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I define done criteria for my projects before I start working on them.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I know a project is done when it feels complete, not when it meets predefined criteria.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I maintain a structured approach to professional development with clear learning objectives.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I develop professionally by following whatever interests me at any given time.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I finalize plans early to give myself and others time to prepare.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I finalize plans late because earlier decisions might need changing anyway.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I keep track of favors I owe and make a point of reciprocating promptly.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I reciprocate favors when the opportunity naturally arises rather than tracking them.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I document processes I've figured out so I or others can repeat them.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I figure things out each time rather than writing down how I did it before.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I consolidate similar errands and tasks to minimize wasted time.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I handle errands and tasks as they come up, even if that means extra trips.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I set firm boundaries around my work time to maintain a consistent rhythm.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I let my work time expand and contract naturally with my creative energy.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I think about what skills I'll need in the future and start developing them now.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I develop skills when I actually need them rather than anticipating future requirements.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I review my commitments at the start of each week to ensure nothing is forgotten.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I handle commitments as they surface throughout the week without a formal review.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I stick to proven methods when the stakes are high.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I see high-stakes situations as opportunities to try bold new approaches.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I plan backward from deadlines, identifying each milestone that must be hit along the way.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I work forward from where I am, letting deadlines exert their pull as they approach.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I maintain a clear separation between planning time and execution time.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "Planning and execution blend together for me; I think and do simultaneously.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I invest time creating systems that make future work easier even if setup takes a while.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I'd rather start doing the work immediately than spend time building systems first.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I treat my calendar as a binding contract with myself.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I treat my calendar as a rough suggestion that I adjust throughout the day.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I finish unpleasant but necessary tasks promptly so they don't hang over me.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I wait for the right mood to tackle unpleasant tasks, knowing the timing matters.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I create redundancy in important systems so a single failure doesn't cause disaster.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I keep things simple and deal with failures as they happen rather than building in redundancy.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I maintain a consistent work environment because familiarity supports focus.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I change my work environment often because new surroundings stimulate fresh thinking.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I balance short-term demands with long-term priorities using explicit trade-off criteria.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I trust my intuition to balance short-term and long-term needs without formal criteria.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I label storage containers, drawers, and shelves so everything has a designated place.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I put things wherever there's space and rely on my memory to find them.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I complete the hardest tasks first when my energy is highest.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I work on whatever pulls me in, whether it's hard or easy, based on the moment.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I read contracts and agreements thoroughly before signing them.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I skim agreements and sign quickly, trusting I'll address issues if they arise.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I treat small daily choices as building blocks for long-term outcomes.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I treat each day as a standalone experience rather than a chapter in a larger arc.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I confirm appointments the day before to avoid miscommunications.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I assume appointments will happen as planned without confirming them again.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I schedule specific times to check and respond to messages rather than staying reactive.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I check and respond to messages whenever they arrive, staying in the flow of communication.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I weigh the trade-offs of a decision on paper before committing.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I weigh trade-offs in my head quickly and go with what feels best.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I maintain an inventory of supplies so I can reorder before running out.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I notice I'm out of something and get more when I need to.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I build transition rituals between activities to stay grounded and focused.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I move between activities fluidly without needing rituals or transitions.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I take detailed meeting notes and circulate them afterward.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I focus on the conversation during meetings and trust the key points will stick.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I create standard operating procedures for tasks I'll need to repeat.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I approach repeated tasks with fresh eyes each time rather than standardizing them.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I allocate my energy deliberately, doing demanding work when I'm sharpest.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I follow my curiosity regardless of my energy level, trusting engagement will sustain me.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I precommit to decisions to protect my future self from short-sighted impulses.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I keep my options open because my future self may see things differently.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I clean as I go when cooking or working on a project to avoid a big mess at the end.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I focus entirely on the task at hand and clean up everything at the end in one pass.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I evaluate new opportunities against my existing priorities before saying yes.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I say yes to compelling opportunities even if they don't fit my current priorities.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I keep a maintenance schedule for equipment, subscriptions, and recurring needs.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I deal with maintenance needs when they become apparent rather than on a schedule.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I time-box my research phase so I don't lose myself in gathering information.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I research until I feel I have enough rather than imposing time limits on exploration.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I use project management frameworks to coordinate complex work.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I coordinate complex work through conversations and shared intuition rather than frameworks.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I rehearse new procedures mentally before executing them for the first time.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I execute new procedures and learn from the actual experience of doing them.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I set recurring calendar events for tasks that need to happen regularly.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I do regular tasks when I remember them rather than relying on calendar prompts.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I compare estimated time versus actual time on tasks to improve my planning accuracy.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I don't track how long things take because every situation is different anyway.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I make sure my workspace is set up before I begin each work session.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I start working wherever I happen to be without preparing my environment.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I believe that mastery comes from repeating the fundamentals until they are effortless.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I believe that mastery comes from continually pushing into unfamiliar territory.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I write down open questions and revisit them systematically until they're resolved.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I let open questions simmer in the background and trust answers will surface when ready.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I keep a structured record of contacts and when I last communicated with them.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I reconnect with people when the impulse strikes rather than tracking our last contact.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I build buffers into estimates because I know unexpected complications are inevitable.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I give optimistic estimates and adjust timelines if complications actually arise.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I feel that a well-maintained system eventually runs itself, freeing my attention for new challenges.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I feel that maintaining systems takes energy away from the creative work I'd rather do.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I verify that backups of important data are running correctly on a regular basis.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I think about backups only when something goes wrong and I wish I had one.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I set expectations with others about response times so they know when to hear from me.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I respond when I can and trust that people will follow up if something is truly urgent.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I practice new skills in a structured, progressive way, building from simple to complex.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I jump into the deep end with new skills and piece together understanding through experience.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I evaluate whether a task is the best use of my time before doing it.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I do whatever task is in front of me without analyzing whether it's the optimal use of my time.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I write end-of-day summaries to capture what was accomplished and what's pending.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I end my day when I'm done and pick up the thread fresh tomorrow without summarizing.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I use a decision journal to record significant choices and revisit them later.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I make decisions, move on, and rarely look back at how I arrived at them.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I place items back in their designated spots immediately after using them.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I set items down wherever is convenient and tidy up when I feel like it.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I plan my week on Sunday evening so Monday morning starts with clarity.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I let Monday morning unfold and see what the week brings.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I align daily activities with my long-term vision so every day moves me forward.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I let daily activities be guided by what excites me rather than by a long-term vision.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I think of structure as scaffolding that can be removed once the work is solid.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I think of structure as something that should only be added if the work clearly demands it.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I develop contingency plans for critical tasks even when things are going well.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I focus all my energy on the primary plan rather than diverting effort to contingencies.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I verify my understanding by restating instructions before carrying them out.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I act on my initial understanding and ask for clarification only if I get stuck.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I organize my thoughts in writing before tackling a complex problem.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I think best while doing, not while planning on paper.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I maintain an orderly queue of tasks rather than juggling them all at once.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I keep all my tasks in motion simultaneously, moving between them as energy allows.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I resist starting new projects until current ones are at a natural stopping point.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I start new projects whenever inspiration strikes, even if others are unfinished.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I keep communication threads organized so I can retrieve past discussions easily.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I rarely go back to past conversations, preferring to keep things current.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I feel that predictable routines are the foundation on which creative breakthroughs are built.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I feel that breaking routines is what opens the door to creative breakthroughs.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I calibrate my effort to the importance of each task, giving more attention to high-impact work.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I give my full attention to whatever I'm working on regardless of its strategic importance.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I prefer having a detailed recipe or formula before attempting something new.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I prefer to experiment freely, using recipes and formulas only as loose guidelines.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I line up resources and approvals before launching into action.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I start moving and gather resources and approvals along the way.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I design my environment to support my goals, removing temptations and distractions.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I trust myself to stay focused regardless of what's around me.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I consider the downstream effects of my choices on future commitments before deciding.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I make choices based on present circumstances and adapt to downstream effects as they appear.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I rotate seasonal items in and out of storage on a predictable schedule.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I swap seasonal items when the weather actually changes rather than on a set date.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I proofread every piece of writing, even casual messages, before sending.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I send messages quickly and correct mistakes afterward if they matter.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I use deliberate practice techniques when building a new skill.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I build new skills through immersion and play rather than deliberate drill.",
+    "direction": "spontaneous"
+  },
+  {
+    "text": "I see my daily routine as a series of intentional choices, not defaults.",
+    "direction": "conscientious"
+  },
+  {
+    "text": "I see my daily routine as something that emerges from my mood and circumstances.",
+    "direction": "spontaneous"
+  }
+]

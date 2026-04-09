@@ -2,76 +2,148 @@
   "id": 74,
   "questions": [
     {
-      "text": "I can work productively even in noisy, unpredictable environments.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I routinely lend my possessions and rarely ask for them back.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I find it difficult to sit back when I have a clear idea of what should be done.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I routinely negotiate for the best possible outcome for myself.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I believe the intensity of my inner life is something most people would find surprising.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I tend to process emotional experiences in the background while staying functionally engaged.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I do not automatically sense the social temperature of a new environment.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I thrive when I have the trust of a group that works together.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I find that the emotional distance I maintain from distressing situations is what enables me to provide help that is both consistent and fair.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I tend to think of my career as the central project of my life.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I believe the most efficient communication is the most literal.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I feel that my job is to support the group in finding its own way.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I hold the view that approaching painful realities with a measured, analytical temperament is the contribution I am best equipped to make and the one I find most meaningful.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I hold the view that a tolerance for mess and ambiguity is a sign of creative flexibility.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "My emotional reactions tend to be brief \u2014 they register and then dissipate naturally.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I feel that doing things the same proven way each time ensures quality and reliability.",
+      "text": "I maintain an archive of past work so I can reference and build on it.",
       "direction": "conscientious"
     },
     {
-      "text": "I believe that the moral urgency I experience in the face of suffering is not something I manufacture but something I discover in myself.",
+      "text": "I routinely budget for things that enhance my personal quality of life.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe my constitutional calmness is an asset in uncertain situations.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I can deliver difficult news to someone without being significantly affected by their reaction.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I hold the view that the moral urgency of suffering is the same whether it belongs to someone I know or someone I will never meet.",
       "direction": "empathy"
     },
     {
-      "text": "I pick up on which topics make certain people visibly tense.",
+      "text": "I find that keeping my emotional state separate from my assessment of a situation is what allows me to be consistently helpful.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I create standard operating procedures for tasks I'll need to repeat.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I detect when someone uses humor to deflect from something they find painful.",
       "direction": "hyper-attuned"
+    },
+    {
+      "text": "I experience the feeling of being moved as a gentle warmth rather than a consuming fire.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I keep all my tasks in motion simultaneously, moving between them as energy allows.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe the most admirable people are those who give the most of themselves.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I prefer to experiment with a new tool or device hands-on rather than reading instructions.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I experience the sensation of calm not as something I achieve but as something I simply inhabit.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I hold the view that life without intense feeling would not feel like life at all.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I tend to view my personal bucket list as a binding contract with myself.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I routinely adjust my pace, my route, or my method to match what works best for others.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to miss it when a person's agreement comes with a subtle qualifier that changes its meaning entirely.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I instinctively work to make sure information flows freely to everyone, not through me.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I often know what someone is about to say before they say it based on context cues.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I think that the discipline of maintaining emotional composure during human crises is a form of service that directly improves outcomes.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I do whatever task is in front of me without analyzing whether it's the optimal use of my time.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I often adapt to the norms and expectations already present in a group.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I often push for my preferred approach in group decisions.",
+      "direction": "agentic"
+    },
+    {
+      "text": "After receiving bad news, I can feel the shock reverberating through my body for hours.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I am inclined to announce decisions first and explain my reasoning second.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I sense when someone is carefully managing how they are perceived.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that the moral weight of suffering should be treated as cumulative \u2014 each encounter adds to the case for engagement, never subtracts from it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice that my emotional sensitivity means I am deeply affected by the tone of a room, a text, or a glance.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "When resources are scarce, I instinctively direct them toward other people first.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that every instance of suffering I encounter that goes unaddressed represents a failure of my moral attention.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I often find myself telling others what needs to happen next.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that taking the most interesting assignment for myself, rather than the most needed one, is fair.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I focus on what is being said rather than what is being implied.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I create templates and standard procedures so I don't have to reinvent the wheel.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I am the person who usually says, 'What does everyone think we should do?'",
+      "direction": "yielding"
+    },
+    {
+      "text": "I tend to miss the way people calibrate how much personal information to share based on their read of the room.",
+      "direction": "hypo-attuned"
     }
   ]
 }

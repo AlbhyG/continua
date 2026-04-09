@@ -1,303 +1,2402 @@
 [
-  {"text": "I routinely give up my free time so that others can get what they need.", "direction": "altruism"},
-  {"text": "I find deep satisfaction in making personal sacrifices for the benefit of my community.", "direction": "altruism"},
-  {"text": "I believe my purpose is best fulfilled when I am contributing to someone else's well-being.", "direction": "altruism"},
-  {"text": "I tend to put other people's needs ahead of my own, even when it costs me.", "direction": "altruism"},
-  {"text": "I feel that my energy is best spent helping others reach their goals.", "direction": "altruism"},
-  {"text": "I hold the view that a life lived for others is the most meaningful kind of life.", "direction": "altruism"},
-  {"text": "When resources are scarce, I instinctively direct them toward other people first.", "direction": "altruism"},
-  {"text": "I find that volunteering my time for others gives me more fulfillment than personal leisure.", "direction": "altruism"},
-  {"text": "I would rather go without something I want so that someone else can have what they need.", "direction": "altruism"},
-  {"text": "I believe that putting myself last is a natural expression of how I value others.", "direction": "altruism"},
-  {"text": "I often skip meals or sleep to help someone who is counting on me.", "direction": "altruism"},
-  {"text": "I feel most aligned with my values when I am serving a purpose bigger than myself.", "direction": "altruism"},
-  {"text": "I regularly redirect my personal budget toward helping people around me.", "direction": "altruism"},
-  {"text": "I find that taking care of others' needs before my own feels right.", "direction": "altruism"},
-  {"text": "I believe the best use of my talents is to benefit other people.", "direction": "altruism"},
-  {"text": "I would postpone my own goals indefinitely if someone close to me needed my help.", "direction": "altruism"},
-  {"text": "I hold the view that self-sacrifice is one of the highest forms of contribution.", "direction": "altruism"},
-  {"text": "When I have extra money, my first thought is who else could use it.", "direction": "altruism"},
-  {"text": "I feel uneasy spending on luxuries for myself when others around me are struggling.", "direction": "altruism"},
-  {"text": "I find meaning in being the person who gives the most and asks for the least.", "direction": "altruism"},
-  {"text": "I tend to donate or share resources before setting aside savings for myself.", "direction": "altruism"},
-  {"text": "I believe that making others' lives easier is more rewarding than personal achievement.", "direction": "altruism"},
-  {"text": "I often cancel my own plans to help a friend, colleague, or family member.", "direction": "altruism"},
-  {"text": "I feel that my personal comfort matters less than the comfort of those around me.", "direction": "altruism"},
-  {"text": "I find myself naturally taking on extra work so that others don't have to.", "direction": "altruism"},
-  {"text": "I hold the view that putting others first is simply the right way to live.", "direction": "altruism"},
-  {"text": "I prefer to let others take credit even when I did most of the work.", "direction": "altruism"},
-  {"text": "I believe my role in any group is to make sure everyone else has what they need.", "direction": "altruism"},
-  {"text": "I feel most fulfilled when I have given away more than I have kept.", "direction": "altruism"},
-  {"text": "I find that my best days are the ones where I spent most of my time helping others.", "direction": "altruism"},
-  {"text": "I routinely accept inconvenience so that other people's lives run more smoothly.", "direction": "altruism"},
-  {"text": "I believe personal gain means little if the people around me are not better off.", "direction": "altruism"},
-  {"text": "I hold the view that my needs can always wait if someone else's are more pressing.", "direction": "altruism"},
-  {"text": "I find it hard to enjoy something if I know someone else had to go without.", "direction": "altruism"},
-  {"text": "I tend to work extra hours not for my own advancement, but to lighten the load for my team.", "direction": "altruism"},
-  {"text": "I feel that accumulating things for myself is less important than ensuring others are provided for.", "direction": "altruism"},
-  {"text": "I would turn down a promotion if it meant my colleagues would be worse off.", "direction": "altruism"},
-  {"text": "I believe the measure of my day is how much I gave, not how much I gained.", "direction": "altruism"},
-  {"text": "I find purpose in being the one who shoulders the burden so others don't have to.", "direction": "altruism"},
-  {"text": "I hold the view that my time is best invested in service to the people around me.", "direction": "altruism"},
-  {"text": "I feel a strong pull to put community needs above my personal desires.", "direction": "altruism"},
-  {"text": "I routinely choose the option that benefits others, even when a different choice would benefit me more.", "direction": "altruism"},
-  {"text": "I believe that if I have something to give, I should give it.", "direction": "altruism"},
-  {"text": "I find that keeping things for myself when others need them makes me uncomfortable.", "direction": "altruism"},
-  {"text": "I tend to exhaust my own resources before asking others to contribute theirs.", "direction": "altruism"},
-  {"text": "I feel that my personal ambitions should take a back seat to the well-being of those I care about.", "direction": "altruism"},
-  {"text": "I hold the view that true success is measured by how much you improve others' lives.", "direction": "altruism"},
-  {"text": "I would rather live simply so I can contribute more to the people and causes around me.", "direction": "altruism"},
-  {"text": "I believe that self-denial for the sake of others is deeply meaningful.", "direction": "altruism"},
-  {"text": "I find it natural to defer my own interests when group needs arise.", "direction": "altruism"},
-  {"text": "I tend to understate my own needs so as not to divert attention from others.", "direction": "altruism"},
-  {"text": "I feel that the highest form of contribution is quiet, unrecognized service.", "direction": "altruism"},
-  {"text": "I often forgo recognition so that others can be acknowledged instead.", "direction": "altruism"},
-  {"text": "I believe that serving others without expectation of return is a core part of who I am.", "direction": "altruism"},
-  {"text": "I find that prioritizing my own comfort over others' needs feels wrong.", "direction": "altruism"},
-  {"text": "I hold the view that every spare resource I have should flow toward those who need it.", "direction": "altruism"},
-  {"text": "I routinely eat last, leave last, and take the smallest portion.", "direction": "altruism"},
-  {"text": "I feel most like myself when I am in the middle of helping someone.", "direction": "altruism"},
-  {"text": "I believe the world would be better if more people put others ahead of themselves.", "direction": "altruism"},
-  {"text": "I find that personal success feels hollow unless it also lifts up the people around me.", "direction": "altruism"},
-  {"text": "I tend to absorb costs and difficulties so that others are shielded from them.", "direction": "altruism"},
-  {"text": "I feel a responsibility to contribute more than my fair share.", "direction": "altruism"},
-  {"text": "I hold the view that minimizing my own footprint allows more room for others.", "direction": "altruism"},
-  {"text": "I would work a job I dislike if it meant my family or community benefited greatly.", "direction": "altruism"},
-  {"text": "I believe that self-effacement is a strength, not a weakness.", "direction": "altruism"},
-  {"text": "I find that shrinking my own wants in favor of others' needs comes naturally.", "direction": "altruism"},
-  {"text": "I tend to allocate the majority of my time to tasks that benefit other people.", "direction": "altruism"},
-  {"text": "I feel that the best version of me is the one most devoted to others.", "direction": "altruism"},
-  {"text": "I routinely pick up tasks no one else wants to do, so the group can function well.", "direction": "altruism"},
-  {"text": "I believe my skills and abilities exist primarily to serve the people around me.", "direction": "altruism"},
-  {"text": "I find lasting satisfaction in contributions that no one knows I made.", "direction": "altruism"},
-  {"text": "I hold the view that I should always be looking for ways to lighten someone else's burden.", "direction": "altruism"},
-  {"text": "I feel that attending to my own desires while others have unmet needs is hard to justify.", "direction": "altruism"},
-  {"text": "I would sacrifice a personal passion if pursuing it took resources away from people who depend on me.", "direction": "altruism"},
-  {"text": "I believe that a good day is one where I gave more than I received.", "direction": "altruism"},
-  {"text": "I find that other people's gratitude means more to me than any personal reward.", "direction": "altruism"},
-  {"text": "I tend to quietly handle background work that makes everyone else's contribution possible.", "direction": "altruism"},
-  {"text": "I feel that spending on myself is only justified after everyone around me is taken care of.", "direction": "altruism"},
-  {"text": "I hold the view that my comfort is a lower priority than the comfort of people I care about.", "direction": "altruism"},
-  {"text": "I routinely turn down personal opportunities if they would take me away from people who rely on me.", "direction": "altruism"},
-  {"text": "I believe that the most important thing I can do with my life is reduce others' burdens.", "direction": "altruism"},
-  {"text": "I find that when I have two options, I almost always choose the one that benefits someone else.", "direction": "altruism"},
-  {"text": "I tend to go without rest to make sure the people around me are supported.", "direction": "altruism"},
-  {"text": "I feel that being of service is the core of my identity.", "direction": "altruism"},
-  {"text": "I would move to a less desirable place if it let me be more useful to people who need help.", "direction": "altruism"},
-  {"text": "I believe my personal dreams matter less than the collective good.", "direction": "altruism"},
-  {"text": "I find deep contentment in giving away things I worked hard to earn.", "direction": "altruism"},
-  {"text": "I hold the view that my job is not done until everyone else's needs are met.", "direction": "altruism"},
-  {"text": "I feel most at peace when I know I have put others before myself.", "direction": "altruism"},
-  {"text": "I routinely accept the worst option for myself so that others can have the better one.", "direction": "altruism"},
-  {"text": "I believe that diminishing my own visibility allows others to shine.", "direction": "altruism"},
-  {"text": "I find that the thought of keeping something for myself while others lack is deeply uncomfortable.", "direction": "altruism"},
-  {"text": "I tend to think of my possessions as shared resources, not private property.", "direction": "altruism"},
-  {"text": "I feel that self-interest should always yield to the greater good.", "direction": "altruism"},
-  {"text": "I hold the view that my time belongs as much to others as it does to me.", "direction": "altruism"},
-  {"text": "I would endure personal hardship rather than let someone I know struggle alone.", "direction": "altruism"},
-  {"text": "I believe that pouring myself out for others is the most fulfilling way to spend my energy.", "direction": "altruism"},
-  {"text": "I find that I am happiest when I have nothing left because I gave it all away.", "direction": "altruism"},
-  {"text": "I tend to measure my worth by how much I've contributed to others, not by what I've accumulated.", "direction": "altruism"},
-  {"text": "I feel that a raise or bonus is best used to help the people around me.", "direction": "altruism"},
-  {"text": "I routinely put my health second to the needs of those who depend on me.", "direction": "altruism"},
-  {"text": "I believe that every hour I spend on myself is an hour I could have spent helping someone.", "direction": "altruism"},
-  {"text": "I find that stepping back so others can step forward is one of the most meaningful things I do.", "direction": "altruism"},
-  {"text": "I hold the view that it's better to be forgotten and helpful than to be remembered and self-serving.", "direction": "altruism"},
-  {"text": "I feel that my personal growth matters only insofar as it lets me contribute more to others.", "direction": "altruism"},
-  {"text": "I would decline an award or honor and redirect attention to the team.", "direction": "altruism"},
-  {"text": "I believe the most admirable people are those who give the most of themselves.", "direction": "altruism"},
-  {"text": "I find that working behind the scenes for others' benefit is more satisfying than being in the spotlight.", "direction": "altruism"},
-  {"text": "I tend to volunteer for the most thankless tasks because someone has to do them.", "direction": "altruism"},
-  {"text": "I feel that my primary function in relationships is to give, not to receive.", "direction": "altruism"},
-  {"text": "I hold the view that generosity is not about what you have but about how much you're willing to let go of.", "direction": "altruism"},
-  {"text": "I routinely deplete my own reserves to make sure others are taken care of.", "direction": "altruism"},
-  {"text": "I believe that the less I focus on my own needs, the more I can focus on what really matters.", "direction": "altruism"},
-  {"text": "I find it genuinely easier to give than to receive.", "direction": "altruism"},
-  {"text": "I tend to spend my weekends doing things for other people rather than pursuing my own hobbies.", "direction": "altruism"},
-  {"text": "I feel a deep sense of duty to use everything I have in service of others.", "direction": "altruism"},
-  {"text": "I would rather be exhausted from helping than rested from self-care.", "direction": "altruism"},
-  {"text": "I believe the world does not need more self-interested people—it needs more givers.", "direction": "altruism"},
-  {"text": "I find that deflecting praise and redirecting it to others feels natural and right.", "direction": "altruism"},
-  {"text": "I hold the view that my life's meaning is directly proportional to my contribution to others.", "direction": "altruism"},
-  {"text": "I feel that every personal indulgence should be weighed against what it could do for someone else.", "direction": "altruism"},
-  {"text": "I routinely make financial sacrifices to support people in my life.", "direction": "altruism"},
-  {"text": "I believe that being needed by others is one of the most important things in life.", "direction": "altruism"},
-  {"text": "I find that my default setting is to consider what others need before what I want.", "direction": "altruism"},
-  {"text": "I tend to choose careers and projects based on how much they allow me to help others.", "direction": "altruism"},
-  {"text": "I feel that keeping score of what I've given defeats the purpose of giving.", "direction": "altruism"},
-  {"text": "I would give up a cherished personal goal if doing so served a greater collective need.", "direction": "altruism"},
-  {"text": "I believe that living for something beyond myself is the only way to find real meaning.", "direction": "altruism"},
-  {"text": "I find that acting in my own interest when I could be helping others feels like a failure.", "direction": "altruism"},
-  {"text": "I hold the view that the greatest reward is knowing I made someone else's life better.", "direction": "altruism"},
-  {"text": "I feel most proud of the things I did for others, not the things I achieved for myself.", "direction": "altruism"},
-  {"text": "I routinely lend my possessions and rarely ask for them back.", "direction": "altruism"},
-  {"text": "I believe that reducing my own consumption so others can have more is a worthy practice.", "direction": "altruism"},
-  {"text": "I find that my instinct when receiving a gift is to think about who else could use it.", "direction": "altruism"},
-  {"text": "I tend to feel guilty when I spend a whole day on my own interests.", "direction": "altruism"},
-  {"text": "I feel that personal boundaries should be flexible when someone truly needs my help.", "direction": "altruism"},
-  {"text": "I hold the view that real strength is the willingness to put yourself last.", "direction": "altruism"},
-  {"text": "I would happily take a pay cut if it meant funding a cause I care about.", "direction": "altruism"},
-  {"text": "I believe that what I do for others outlasts anything I do for myself.", "direction": "altruism"},
-  {"text": "I find that I often forget my own needs because I am so focused on meeting the needs of those around me.", "direction": "altruism"},
-  {"text": "I tend to define a good life as one spent in generous contribution to others.", "direction": "altruism"},
-  {"text": "I feel that the moment I stop giving is the moment I stop living fully.", "direction": "altruism"},
-  {"text": "I routinely put community obligations above personal recreation.", "direction": "altruism"},
-  {"text": "I believe that self-sacrifice is not a burden but a calling.", "direction": "altruism"},
-  {"text": "I find that doing without, so that others can have, brings me a quiet joy.", "direction": "altruism"},
-  {"text": "I hold the view that generosity should come before security.", "direction": "altruism"},
-  {"text": "I feel that the wellbeing of those around me is ultimately more important than my own wellbeing.", "direction": "altruism"},
-  {"text": "I would delay my own education to support a family member through theirs.", "direction": "altruism"},
-  {"text": "I believe I have an obligation to contribute more than I consume.", "direction": "altruism"},
-  {"text": "I find that the thought of others benefiting from my effort is the strongest motivation I know.", "direction": "altruism"},
-
-  {"text": "I believe investing in my own development is one of the most important things I can do.", "direction": "self-focus"},
-  {"text": "I find that prioritizing my own goals gives me the energy and clarity I need to thrive.", "direction": "self-focus"},
-  {"text": "I hold the view that taking care of myself first puts me in the best position to live well.", "direction": "self-focus"},
-  {"text": "I feel that my personal ambitions deserve dedicated time and resources.", "direction": "self-focus"},
-  {"text": "I tend to make sure my own needs are fully met before turning my attention outward.", "direction": "self-focus"},
-  {"text": "I believe that pursuing personal excellence is a worthy way to spend my life.", "direction": "self-focus"},
-  {"text": "I find deep satisfaction in achieving goals I set for myself.", "direction": "self-focus"},
-  {"text": "I hold the view that self-investment is not selfish—it's essential.", "direction": "self-focus"},
-  {"text": "I feel most alive when I am working toward my own aspirations.", "direction": "self-focus"},
-  {"text": "I routinely set aside time and money specifically for my own growth and enjoyment.", "direction": "self-focus"},
-  {"text": "I believe that building my own capabilities is the foundation of a good life.", "direction": "self-focus"},
-  {"text": "I find that protecting my own interests helps me stay strong and effective.", "direction": "self-focus"},
-  {"text": "I tend to choose opportunities that advance my personal career over those that primarily benefit others.", "direction": "self-focus"},
-  {"text": "I feel that my own dreams and aspirations are worth fighting for.", "direction": "self-focus"},
-  {"text": "I hold the view that I owe it to myself to pursue the life I want.", "direction": "self-focus"},
-  {"text": "I routinely decline requests that would compromise my personal goals.", "direction": "self-focus"},
-  {"text": "I believe personal achievement is one of the most fulfilling experiences in life.", "direction": "self-focus"},
-  {"text": "I find that putting my own projects first leads to my best outcomes.", "direction": "self-focus"},
-  {"text": "I tend to allocate the majority of my resources to my own development.", "direction": "self-focus"},
-  {"text": "I feel that maintaining a strong sense of self requires consistently investing in myself.", "direction": "self-focus"},
-  {"text": "I hold the view that my long-term well-being depends on consistently prioritizing my own needs.", "direction": "self-focus"},
-  {"text": "I routinely spend my free time on activities that benefit me personally.", "direction": "self-focus"},
-  {"text": "I believe that my ambitions are a healthy and important part of who I am.", "direction": "self-focus"},
-  {"text": "I find that I do my best work when I am focused on my own advancement.", "direction": "self-focus"},
-  {"text": "I tend to evaluate opportunities primarily by how much they help me reach my goals.", "direction": "self-focus"},
-  {"text": "I feel that building my own career and reputation is a central life priority.", "direction": "self-focus"},
-  {"text": "I hold the view that the best thing I can do is become the strongest version of myself.", "direction": "self-focus"},
-  {"text": "I routinely choose personal development over group activities.", "direction": "self-focus"},
-  {"text": "I believe that nurturing my own potential is one of my most important responsibilities.", "direction": "self-focus"},
-  {"text": "I find that when I invest in myself, everything else in my life improves.", "direction": "self-focus"},
-  {"text": "I tend to protect my personal time fiercely.", "direction": "self-focus"},
-  {"text": "I feel that I am at my best when I make my own interests a top priority.", "direction": "self-focus"},
-  {"text": "I hold the view that personal fulfillment should not be sacrificed for the sake of others.", "direction": "self-focus"},
-  {"text": "I routinely set ambitious goals for myself and dedicate significant effort to reaching them.", "direction": "self-focus"},
-  {"text": "I believe that looking after my own needs is the foundation of a sustainable life.", "direction": "self-focus"},
-  {"text": "I find that I am most motivated when I am working toward something that benefits me directly.", "direction": "self-focus"},
-  {"text": "I tend to spend money on experiences and tools that further my personal growth.", "direction": "self-focus"},
-  {"text": "I feel that my own happiness is something I should actively build and protect.", "direction": "self-focus"},
-  {"text": "I hold the view that it is important to be my own biggest advocate.", "direction": "self-focus"},
-  {"text": "I routinely make decisions based on what will best serve my personal trajectory.", "direction": "self-focus"},
-  {"text": "I believe that personal success is a valid and worthy life aim.", "direction": "self-focus"},
-  {"text": "I find that keeping my personal goals front and center gives my life direction.", "direction": "self-focus"},
-  {"text": "I tend to see my career advancement as one of my highest priorities.", "direction": "self-focus"},
-  {"text": "I feel that it is healthy and right to put my own needs first in most situations.", "direction": "self-focus"},
-  {"text": "I hold the view that I deserve the rewards of my own hard work.", "direction": "self-focus"},
-  {"text": "I routinely invest in education and training that advances my own skills.", "direction": "self-focus"},
-  {"text": "I believe that my confidence grows when I consistently invest in myself.", "direction": "self-focus"},
-  {"text": "I find that I'm most effective when my own life is in good order.", "direction": "self-focus"},
-  {"text": "I tend to seek out roles and projects that will look good on my own record.", "direction": "self-focus"},
-  {"text": "I feel that building my personal brand is a smart investment of time.", "direction": "self-focus"},
-  {"text": "I hold the view that people should ensure their own stability before worrying about others.", "direction": "self-focus"},
-  {"text": "I routinely turn down favors that would distract from my personal priorities.", "direction": "self-focus"},
-  {"text": "I believe that a strong focus on personal achievement leads to a well-lived life.", "direction": "self-focus"},
-  {"text": "I find that I naturally gravitate toward opportunities that advance my own position.", "direction": "self-focus"},
-  {"text": "I tend to measure a good day by how much progress I made on my own goals.", "direction": "self-focus"},
-  {"text": "I feel that self-investment is the most reliable path to long-term fulfillment.", "direction": "self-focus"},
-  {"text": "I hold the view that it's okay to put my needs above the expectations of others.", "direction": "self-focus"},
-  {"text": "I routinely budget for things that enhance my personal quality of life.", "direction": "self-focus"},
-  {"text": "I believe that the energy I spend on myself comes back multiplied.", "direction": "self-focus"},
-  {"text": "I find that self-care and personal investment are not luxuries—they are necessities.", "direction": "self-focus"},
-  {"text": "I tend to guard my weekends for personal projects and rest.", "direction": "self-focus"},
-  {"text": "I feel that my personal goals are just as important as anyone else's needs.", "direction": "self-focus"},
-  {"text": "I hold the view that maintaining my own well-being is a prerequisite for everything else.", "direction": "self-focus"},
-  {"text": "I routinely say no to requests that don't align with my personal objectives.", "direction": "self-focus"},
-  {"text": "I believe it's important to celebrate my own accomplishments.", "direction": "self-focus"},
-  {"text": "I find that focusing on my own path keeps me grounded and purposeful.", "direction": "self-focus"},
-  {"text": "I tend to select projects based on how they will develop my personal expertise.", "direction": "self-focus"},
-  {"text": "I feel that I function best when I regularly attend to my own needs first.", "direction": "self-focus"},
-  {"text": "I hold the view that healthy self-interest is the bedrock of a productive life.", "direction": "self-focus"},
-  {"text": "I routinely take credit for my contributions because acknowledging my own work matters to me.", "direction": "self-focus"},
-  {"text": "I believe that if I don't invest in myself, no one else will.", "direction": "self-focus"},
-  {"text": "I find that I gravitate toward the choice that most benefits my personal situation.", "direction": "self-focus"},
-  {"text": "I tend to think of my time as my most valuable personal asset.", "direction": "self-focus"},
-  {"text": "I feel that spending lavishly on my own experiences is a worthwhile use of money.", "direction": "self-focus"},
-  {"text": "I hold the view that my ambitions are a source of vitality and meaning.", "direction": "self-focus"},
-  {"text": "I routinely structure my life to maximize personal freedom and opportunity.", "direction": "self-focus"},
-  {"text": "I believe that knowing what I want and going after it is a sign of maturity.", "direction": "self-focus"},
-  {"text": "I find that I am unapologetically focused on building the life I envision for myself.", "direction": "self-focus"},
-  {"text": "I tend to weigh how a decision affects me before considering how it affects others.", "direction": "self-focus"},
-  {"text": "I feel that directing my resources toward my own goals is the smartest strategy.", "direction": "self-focus"},
-  {"text": "I hold the view that personal growth should be a daily practice.", "direction": "self-focus"},
-  {"text": "I routinely choose quality-of-life improvements for myself over gifts for others.", "direction": "self-focus"},
-  {"text": "I believe that maintaining my own standards of living is non-negotiable.", "direction": "self-focus"},
-  {"text": "I find that focusing on what I want—rather than what others expect—leads to my best life.", "direction": "self-focus"},
-  {"text": "I tend to view my savings as a tool for my own future, not a resource for others.", "direction": "self-focus"},
-  {"text": "I feel that healthy self-focus gives me the strength to show up fully in everything I do.", "direction": "self-focus"},
-  {"text": "I hold the view that the most important relationship I have is the one with myself.", "direction": "self-focus"},
-  {"text": "I routinely make choices that protect and advance my own interests.", "direction": "self-focus"},
-  {"text": "I believe that a well-developed sense of personal ambition is attractive and admirable.", "direction": "self-focus"},
-  {"text": "I find that I thrive when I give myself permission to focus on what I want.", "direction": "self-focus"},
-  {"text": "I tend to pick the option that strengthens my personal position, even when alternatives would benefit the group more.", "direction": "self-focus"},
-  {"text": "I feel that my personal achievements are among the things I am most proud of.", "direction": "self-focus"},
-  {"text": "I hold the view that every person's first responsibility is to themselves.", "direction": "self-focus"},
-  {"text": "I routinely dedicate my best hours to my own creative and professional projects.", "direction": "self-focus"},
-  {"text": "I believe that building wealth and security for myself is a worthy goal.", "direction": "self-focus"},
-  {"text": "I find that self-directed effort is the most energizing kind of work.", "direction": "self-focus"},
-  {"text": "I tend to schedule personal time before committing to obligations for others.", "direction": "self-focus"},
-  {"text": "I feel that investing in my appearance, health, and skills is time well spent.", "direction": "self-focus"},
-  {"text": "I hold the view that pursuing what I want is not at odds with being a good person.", "direction": "self-focus"},
-  {"text": "I routinely evaluate relationships by whether they support my personal growth.", "direction": "self-focus"},
-  {"text": "I believe that I should be my own first priority in life.", "direction": "self-focus"},
-  {"text": "I find that self-focus is what allows me to be consistent and reliable.", "direction": "self-focus"},
-  {"text": "I tend to put my career milestones at the center of my life decisions.", "direction": "self-focus"},
-  {"text": "I feel that when I take care of my own needs, I am better equipped for everything else.", "direction": "self-focus"},
-  {"text": "I hold the view that it is perfectly acceptable to choose personal benefit over collective benefit.", "direction": "self-focus"},
-  {"text": "I routinely track my personal progress and set benchmarks for my own improvement.", "direction": "self-focus"},
-  {"text": "I believe that self-reliance is one of the most important qualities a person can develop.", "direction": "self-focus"},
-  {"text": "I find that I am most engaged when working on something that directly serves my vision.", "direction": "self-focus"},
-  {"text": "I tend to keep my best ideas for my own projects rather than giving them away.", "direction": "self-focus"},
-  {"text": "I feel that personal recognition for my work is important to me.", "direction": "self-focus"},
-  {"text": "I hold the view that taking the best opportunity for myself is simply good judgment.", "direction": "self-focus"},
-  {"text": "I routinely invest in tools, equipment, and environments that optimize my own performance.", "direction": "self-focus"},
-  {"text": "I believe that I should unapologetically pursue the things that excite me.", "direction": "self-focus"},
-  {"text": "I find that directing my energy inward—toward my own improvement—is deeply satisfying.", "direction": "self-focus"},
-  {"text": "I tend to see helping others as secondary to achieving my own objectives.", "direction": "self-focus"},
-  {"text": "I feel that my personal comfort and satisfaction are things I should actively cultivate.", "direction": "self-focus"},
-  {"text": "I hold the view that the strongest contribution I can make starts with a strong self.", "direction": "self-focus"},
-  {"text": "I routinely decline social events that don't advance my personal interests.", "direction": "self-focus"},
-  {"text": "I believe that personal mastery is one of the most rewarding pursuits in life.", "direction": "self-focus"},
-  {"text": "I find that I do my best thinking when I am focused on my own challenges.", "direction": "self-focus"},
-  {"text": "I tend to redirect conversations toward topics that relate to my own goals.", "direction": "self-focus"},
-  {"text": "I feel that building a legacy around my own achievements is a meaningful aspiration.", "direction": "self-focus"},
-  {"text": "I hold the view that self-care is not indulgence—it is strategy.", "direction": "self-focus"},
-  {"text": "I routinely advocate for my own interests in negotiations and discussions.", "direction": "self-focus"},
-  {"text": "I believe my personal fulfillment should not depend on what I do for other people.", "direction": "self-focus"},
-  {"text": "I find that I am naturally oriented toward building my own life rather than supporting someone else's.", "direction": "self-focus"},
-  {"text": "I tend to allocate my vacation time to personal restoration and exploration.", "direction": "self-focus"},
-  {"text": "I feel that there is nothing wrong with making myself the center of my own life.", "direction": "self-focus"},
-  {"text": "I hold the view that self-investment yields the highest returns of any investment.", "direction": "self-focus"},
-  {"text": "I routinely surround myself with people and environments that elevate my personal trajectory.", "direction": "self-focus"},
-  {"text": "I believe that the drive to achieve personal goals is one of the healthiest motivations.", "direction": "self-focus"},
-  {"text": "I find that I set boundaries naturally around my time, energy, and attention.", "direction": "self-focus"},
-  {"text": "I tend to define success in terms of my own benchmarks, not in terms of what I did for others.", "direction": "self-focus"},
-  {"text": "I feel that acquiring resources for my own future is prudent and right.", "direction": "self-focus"},
-  {"text": "I hold the view that self-determination means consistently choosing what's best for me.", "direction": "self-focus"},
-  {"text": "I routinely negotiate for the best possible outcome for myself.", "direction": "self-focus"},
-  {"text": "I believe that personal autonomy and self-sufficiency are among my highest values.", "direction": "self-focus"},
-  {"text": "I find that my most productive periods are when I am singularly focused on my own objectives.", "direction": "self-focus"},
-  {"text": "I tend to save the best resources—time, energy, money—for my own priorities.", "direction": "self-focus"},
-  {"text": "I feel that I have a right to put myself first without apology.", "direction": "self-focus"},
-  {"text": "I hold the view that the person most responsible for my well-being is me.", "direction": "self-focus"},
-  {"text": "I routinely make lifestyle choices that reflect my personal standards and aspirations.", "direction": "self-focus"},
-  {"text": "I believe that a focused pursuit of personal excellence makes life meaningful.", "direction": "self-focus"},
-  {"text": "I find that my own ambitions are the primary engine of my daily motivation.", "direction": "self-focus"},
-  {"text": "I tend to think of my career as the central project of my life.", "direction": "self-focus"},
-  {"text": "I feel that ensuring my own financial security comes before generosity.", "direction": "self-focus"},
-  {"text": "I hold the view that a person who takes care of themselves is in the best position to live a good life.", "direction": "self-focus"},
-  {"text": "I routinely optimize my schedule around my own peak performance.", "direction": "self-focus"},
-  {"text": "I believe that recognizing my own worth and acting accordingly is a sign of health.", "direction": "self-focus"},
-  {"text": "I feel that enjoying the fruits of my own labor is exactly what hard work is for.", "direction": "self-focus"}
+  {
+    "text": "I routinely give up my free time so that others can get what they need.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find deep satisfaction in making personal sacrifices for the benefit of my community.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe my purpose is best fulfilled when I am contributing to someone else's well-being.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to put other people's needs ahead of my own, even when it costs me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that my energy is best spent helping others reach their goals.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that a life lived for others is the most meaningful kind of life.",
+    "direction": "altruism"
+  },
+  {
+    "text": "When resources are scarce, I instinctively direct them toward other people first.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that volunteering my time for others gives me more fulfillment than personal leisure.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would rather go without something I want so that someone else can have what they need.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that putting myself last is a natural expression of how I value others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I often skip meals or sleep to help someone who is counting on me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel most aligned with my values when I am serving a purpose bigger than myself.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I regularly redirect my personal budget toward helping people around me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that taking care of others' needs before my own feels right.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe the best use of my talents is to benefit other people.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would postpone my own goals indefinitely if someone close to me needed my help.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that self-sacrifice is one of the highest forms of contribution.",
+    "direction": "altruism"
+  },
+  {
+    "text": "When I have extra money, my first thought is who else could use it.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel uneasy spending on luxuries for myself when others around me are struggling.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find meaning in being the person who gives the most and asks for the least.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to donate or share resources before setting aside savings for myself.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that making others' lives easier is more rewarding than personal achievement.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I often cancel my own plans to help a friend, colleague, or family member.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that my personal comfort matters less than the comfort of those around me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find myself naturally taking on extra work so that others don't have to.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that putting others first is simply the right way to live.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I prefer to let others take credit even when I did most of the work.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe my role in any group is to make sure everyone else has what they need.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel most fulfilled when I have given away more than I have kept.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that my best days are the ones where I spent most of my time helping others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely accept inconvenience so that other people's lives run more smoothly.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe personal gain means little if the people around me are not better off.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that my needs can always wait if someone else's are more pressing.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find it hard to enjoy something if I know someone else had to go without.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to work extra hours not for my own advancement, but to lighten the load for my team.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that accumulating things for myself is less important than ensuring others are provided for.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would turn down a promotion if it meant my colleagues would be worse off.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe the measure of my day is how much I gave, not how much I gained.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find purpose in being the one who shoulders the burden so others don't have to.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that my time is best invested in service to the people around me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel a strong pull to put community needs above my personal desires.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely choose the option that benefits others, even when a different choice would benefit me more.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that if I have something to give, I should give it.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that keeping things for myself when others need them makes me uncomfortable.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to exhaust my own resources before asking others to contribute theirs.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that my personal ambitions should take a back seat to the well-being of those I care about.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that true success is measured by how much you improve others' lives.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would rather live simply so I can contribute more to the people and causes around me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that self-denial for the sake of others is deeply meaningful.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find it natural to defer my own interests when group needs arise.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to understate my own needs so as not to divert attention from others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that the highest form of contribution is quiet, unrecognized service.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I often forgo recognition so that others can be acknowledged instead.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that serving others without expectation of return is a core part of who I am.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that prioritizing my own comfort over others' needs feels wrong.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that every spare resource I have should flow toward those who need it.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely eat last, leave last, and take the smallest portion.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel most like myself when I am in the middle of helping someone.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe the world would be better if more people put others ahead of themselves.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that personal success feels hollow unless it also lifts up the people around me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to absorb costs and difficulties so that others are shielded from them.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel a responsibility to contribute more than my fair share.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that minimizing my own footprint allows more room for others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would work a job I dislike if it meant my family or community benefited greatly.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that self-effacement is a strength, not a weakness.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that shrinking my own wants in favor of others' needs comes naturally.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to allocate the majority of my time to tasks that benefit other people.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that the best version of me is the one most devoted to others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely pick up tasks no one else wants to do, so the group can function well.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe my skills and abilities exist primarily to serve the people around me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find lasting satisfaction in contributions that no one knows I made.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that I should always be looking for ways to lighten someone else's burden.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that attending to my own desires while others have unmet needs is hard to justify.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would sacrifice a personal passion if pursuing it took resources away from people who depend on me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that a good day is one where I gave more than I received.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that other people's gratitude means more to me than any personal reward.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to quietly handle background work that makes everyone else's contribution possible.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that spending on myself is only justified after everyone around me is taken care of.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that my comfort is a lower priority than the comfort of people I care about.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely turn down personal opportunities if they would take me away from people who rely on me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that the most important thing I can do with my life is reduce others' burdens.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that when I have two options, I almost always choose the one that benefits someone else.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to go without rest to make sure the people around me are supported.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that being of service is the core of my identity.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would move to a less desirable place if it let me be more useful to people who need help.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe my personal dreams matter less than the collective good.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find deep contentment in giving away things I worked hard to earn.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that my job is not done until everyone else's needs are met.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel most at peace when I know I have put others before myself.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely accept the worst option for myself so that others can have the better one.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that diminishing my own visibility allows others to shine.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that the thought of keeping something for myself while others lack is deeply uncomfortable.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to think of my possessions as shared resources, not private property.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that self-interest should always yield to the greater good.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that my time belongs as much to others as it does to me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would endure personal hardship rather than let someone I know struggle alone.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that pouring myself out for others is the most fulfilling way to spend my energy.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that I am happiest when I have nothing left because I gave it all away.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to measure my worth by how much I've contributed to others, not by what I've accumulated.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that a raise or bonus is best used to help the people around me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely put my health second to the needs of those who depend on me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that every hour I spend on myself is an hour I could have spent helping someone.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that stepping back so others can step forward is one of the most meaningful things I do.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that it's better to be forgotten and helpful than to be remembered and self-serving.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that my personal growth matters only insofar as it lets me contribute more to others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would decline an award or honor and redirect attention to the team.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe the most admirable people are those who give the most of themselves.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that working behind the scenes for others' benefit is more satisfying than being in the spotlight.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to volunteer for the most thankless tasks because someone has to do them.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that my primary function in relationships is to give, not to receive.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that generosity is not about what you have but about how much you're willing to let go of.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely deplete my own reserves to make sure others are taken care of.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that the less I focus on my own needs, the more I can focus on what really matters.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find it genuinely easier to give than to receive.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to spend my weekends doing things for other people rather than pursuing my own hobbies.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel a deep sense of duty to use everything I have in service of others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would rather be exhausted from helping than rested from self-care.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe the world does not need more self-interested people\u2014it needs more givers.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that deflecting praise and redirecting it to others feels natural and right.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that my life's meaning is directly proportional to my contribution to others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that every personal indulgence should be weighed against what it could do for someone else.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely make financial sacrifices to support people in my life.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that being needed by others is one of the most important things in life.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that my default setting is to consider what others need before what I want.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to choose careers and projects based on how much they allow me to help others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that keeping score of what I've given defeats the purpose of giving.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would give up a cherished personal goal if doing so served a greater collective need.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that living for something beyond myself is the only way to find real meaning.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that acting in my own interest when I could be helping others feels like a failure.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that the greatest reward is knowing I made someone else's life better.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel most proud of the things I did for others, not the things I achieved for myself.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely lend my possessions and rarely ask for them back.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that reducing my own consumption so others can have more is a worthy practice.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that my instinct when receiving a gift is to think about who else could use it.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to feel guilty when I spend a whole day on my own interests.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that personal boundaries should be flexible when someone truly needs my help.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that real strength is the willingness to put yourself last.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would happily take a pay cut if it meant funding a cause I care about.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that what I do for others outlasts anything I do for myself.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that I often forget my own needs because I am so focused on meeting the needs of those around me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to define a good life as one spent in generous contribution to others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that the moment I stop giving is the moment I stop living fully.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely put community obligations above personal recreation.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that self-sacrifice is not a burden but a calling.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that doing without, so that others can have, brings me a quiet joy.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that generosity should come before security.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that the wellbeing of those around me is ultimately more important than my own wellbeing.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would delay my own education to support a family member through theirs.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe I have an obligation to contribute more than I consume.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that the thought of others benefiting from my effort is the strongest motivation I know.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe investing in my own development is one of the most important things I can do.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that prioritizing my own goals gives me the energy and clarity I need to thrive.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that taking care of myself first puts me in the best position to live well.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that my personal ambitions deserve dedicated time and resources.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to make sure my own needs are fully met before turning my attention outward.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that pursuing personal excellence is a worthy way to spend my life.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find deep satisfaction in achieving goals I set for myself.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that self-investment is not selfish\u2014it's essential.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel most alive when I am working toward my own aspirations.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely set aside time and money specifically for my own growth and enjoyment.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that building my own capabilities is the foundation of a good life.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that protecting my own interests helps me stay strong and effective.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to choose opportunities that advance my personal career over those that primarily benefit others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that my own dreams and aspirations are worth fighting for.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that I owe it to myself to pursue the life I want.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely decline requests that would compromise my personal goals.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe personal achievement is one of the most fulfilling experiences in life.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that putting my own projects first leads to my best outcomes.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to allocate the majority of my resources to my own development.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that maintaining a strong sense of self requires consistently investing in myself.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that my long-term well-being depends on consistently prioritizing my own needs.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely spend my free time on activities that benefit me personally.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that my ambitions are a healthy and important part of who I am.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that I do my best work when I am focused on my own advancement.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to evaluate opportunities primarily by how much they help me reach my goals.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that building my own career and reputation is a central life priority.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that the best thing I can do is become the strongest version of myself.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely choose personal development over group activities.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that nurturing my own potential is one of my most important responsibilities.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that when I invest in myself, everything else in my life improves.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to protect my personal time fiercely.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that I am at my best when I make my own interests a top priority.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that personal fulfillment should not be sacrificed for the sake of others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely set ambitious goals for myself and dedicate significant effort to reaching them.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that looking after my own needs is the foundation of a sustainable life.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that I am most motivated when I am working toward something that benefits me directly.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to spend money on experiences and tools that further my personal growth.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that my own happiness is something I should actively build and protect.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that it is important to be my own biggest advocate.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely make decisions based on what will best serve my personal trajectory.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that personal success is a valid and worthy life aim.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that keeping my personal goals front and center gives my life direction.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to see my career advancement as one of my highest priorities.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that it is healthy and right to put my own needs first in most situations.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that I deserve the rewards of my own hard work.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely invest in education and training that advances my own skills.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that my confidence grows when I consistently invest in myself.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that I'm most effective when my own life is in good order.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to seek out roles and projects that will look good on my own record.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that building my personal brand is a smart investment of time.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that people should ensure their own stability before worrying about others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely turn down favors that would distract from my personal priorities.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that a strong focus on personal achievement leads to a well-lived life.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that I naturally gravitate toward opportunities that advance my own position.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to measure a good day by how much progress I made on my own goals.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that self-investment is the most reliable path to long-term fulfillment.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that it's okay to put my needs above the expectations of others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely budget for things that enhance my personal quality of life.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that the energy I spend on myself comes back multiplied.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that self-care and personal investment are not luxuries\u2014they are necessities.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to guard my weekends for personal projects and rest.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that my personal goals are just as important as anyone else's needs.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that maintaining my own well-being is a prerequisite for everything else.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely say no to requests that don't align with my personal objectives.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe it's important to celebrate my own accomplishments.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that focusing on my own path keeps me grounded and purposeful.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to select projects based on how they will develop my personal expertise.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that I function best when I regularly attend to my own needs first.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that healthy self-interest is the bedrock of a productive life.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely take credit for my contributions because acknowledging my own work matters to me.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that if I don't invest in myself, no one else will.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that I gravitate toward the choice that most benefits my personal situation.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to think of my time as my most valuable personal asset.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that spending lavishly on my own experiences is a worthwhile use of money.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that my ambitions are a source of vitality and meaning.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely structure my life to maximize personal freedom and opportunity.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that knowing what I want and going after it is a sign of maturity.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that I am unapologetically focused on building the life I envision for myself.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to weigh how a decision affects me before considering how it affects others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that directing my resources toward my own goals is the smartest strategy.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that personal growth should be a daily practice.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely choose quality-of-life improvements for myself over gifts for others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that maintaining my own standards of living is non-negotiable.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that focusing on what I want\u2014rather than what others expect\u2014leads to my best life.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to view my savings as a tool for my own future, not a resource for others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that healthy self-focus gives me the strength to show up fully in everything I do.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that the most important relationship I have is the one with myself.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely make choices that protect and advance my own interests.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that a well-developed sense of personal ambition is attractive and admirable.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that I thrive when I give myself permission to focus on what I want.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to pick the option that strengthens my personal position, even when alternatives would benefit the group more.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that my personal achievements are among the things I am most proud of.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that every person's first responsibility is to themselves.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely dedicate my best hours to my own creative and professional projects.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that building wealth and security for myself is a worthy goal.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that self-directed effort is the most energizing kind of work.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to schedule personal time before committing to obligations for others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that investing in my appearance, health, and skills is time well spent.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that pursuing what I want is not at odds with being a good person.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely evaluate relationships by whether they support my personal growth.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that I should be my own first priority in life.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that self-focus is what allows me to be consistent and reliable.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to put my career milestones at the center of my life decisions.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that when I take care of my own needs, I am better equipped for everything else.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that it is perfectly acceptable to choose personal benefit over collective benefit.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely track my personal progress and set benchmarks for my own improvement.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that self-reliance is one of the most important qualities a person can develop.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that I am most engaged when working on something that directly serves my vision.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to keep my best ideas for my own projects rather than giving them away.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that personal recognition for my work is important to me.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that taking the best opportunity for myself is simply good judgment.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely invest in tools, equipment, and environments that optimize my own performance.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that I should unapologetically pursue the things that excite me.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that directing my energy inward\u2014toward my own improvement\u2014is deeply satisfying.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to see helping others as secondary to achieving my own objectives.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that my personal comfort and satisfaction are things I should actively cultivate.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that the strongest contribution I can make starts with a strong self.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely decline social events that don't advance my personal interests.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that personal mastery is one of the most rewarding pursuits in life.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that I do my best thinking when I am focused on my own challenges.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to redirect conversations toward topics that relate to my own goals.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that building a legacy around my own achievements is a meaningful aspiration.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that self-care is not indulgence\u2014it is strategy.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely advocate for my own interests in negotiations and discussions.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe my personal fulfillment should not depend on what I do for other people.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that I am naturally oriented toward building my own life rather than supporting someone else's.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to allocate my vacation time to personal restoration and exploration.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that there is nothing wrong with making myself the center of my own life.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that self-investment yields the highest returns of any investment.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely surround myself with people and environments that elevate my personal trajectory.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that the drive to achieve personal goals is one of the healthiest motivations.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that I set boundaries naturally around my time, energy, and attention.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to define success in terms of my own benchmarks, not in terms of what I did for others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that acquiring resources for my own future is prudent and right.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that self-determination means consistently choosing what's best for me.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely negotiate for the best possible outcome for myself.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that personal autonomy and self-sufficiency are among my highest values.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that my most productive periods are when I am singularly focused on my own objectives.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to save the best resources\u2014time, energy, money\u2014for my own priorities.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that I have a right to put myself first without apology.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that the person most responsible for my well-being is me.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely make lifestyle choices that reflect my personal standards and aspirations.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that a focused pursuit of personal excellence makes life meaningful.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that my own ambitions are the primary engine of my daily motivation.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to think of my career as the central project of my life.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that ensuring my own financial security comes before generosity.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that a person who takes care of themselves is in the best position to live a good life.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely optimize my schedule around my own peak performance.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that recognizing my own worth and acting accordingly is a sign of health.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that enjoying the fruits of my own labor is exactly what hard work is for.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I consistently volunteer my expertise to help others solve their problems, even when I receive nothing in return.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that the most valuable thing I own is my willingness to share it.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would rather mentor someone else's talent than develop a new skill of my own.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe my knowledge is wasted if it only benefits me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I instinctively offer my seat, my place in line, or my turn to someone else.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that keeping a windfall for myself when others are in need would be wrong.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to craft my daily schedule around what the people in my life need from me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that cooking for others, even when I am tired, fills me with purpose.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe my professional network exists primarily so I can connect people who need each other.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would choose a lower-paying role that lets me serve my community over a higher-paying one that does not.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely stay late to help a colleague finish their work, even when mine is already done.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that my home should always be open to anyone who needs a place to stay.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that writing a recommendation letter for someone else brings me more satisfaction than updating my own resume.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that my car, my tools, and my space are shared assets for anyone who needs them.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would skip my own vacation to cover for a coworker dealing with a family crisis.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe every conversation should end with the other person feeling more supported than before.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to carry the heaviest bag, take the longest walk, or accept the least comfortable seat without being asked.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that lending money I may never get back is preferable to watching someone struggle.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that anonymously paying for a stranger's meal is one of my favorite things to do.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that my education was given to me so I could teach others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely offer to drive others to appointments, even when it disrupts my own plans.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that if I have a roof over my head and someone else does not, something is mine to give.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel most purposeful when I am tutoring, coaching, or guiding someone through a challenge.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to give the largest portion to others and take whatever remains.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that sharing credit publicly while absorbing blame privately is my natural style.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would downsize my own living situation to free up resources for people who need help.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that when someone asks me for help, the answer should almost always be yes.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that unused capacity in my life represents a missed opportunity to serve.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that passing along an opportunity to someone better suited, even when I want it, is the right call.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely spend my lunch break helping others with their tasks instead of resting.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to buy gifts for others before buying things I need for myself.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that the stories I most love telling are about times I was able to help someone.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe my physical energy should be spent on tasks that make life easier for those around me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would take on a second job to support a family member's dream.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that any privilege I hold comes with a duty to redistribute it.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that my weekends are better spent volunteering than relaxing.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely check in on neighbors, acquaintances, and distant friends to make sure they are okay.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that when I receive a compliment, my first thought is who else deserves one more.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe my calendar should reflect other people's needs as much as my own.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to put others' comfort ahead of efficiency when the two conflict.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that the most important line item in my budget is what I give away.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would forgo a hobby I love if the time could be better spent helping my community.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that having more than I need while others have less is inherently imbalanced.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely proofread, edit, or review other people's work without being asked.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that organizing events for others brings me more joy than attending events for myself.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe my social media presence should amplify others' voices, not just my own.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to donate my old belongings rather than sell them, even when I could use the money.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that celebrating someone else's achievement is more satisfying than celebrating my own.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would walk so someone else could ride.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that every skill I develop should eventually be taught to someone else.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely absorb extra costs in group situations so others pay less.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that my instinct when I hear about someone's problem is to offer a concrete solution, not just sympathy.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that being the person who cleans up after everyone else is a form of quiet leadership.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to take on the overnight shift or the early morning slot so others can have the easier schedule.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that my savings account is also an emergency fund for the people I care about.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would trade a comfortable retirement for the chance to fund someone else's education.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that the best use of any bonus or raise is to share it.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely carry extra supplies, snacks, or resources in case someone around me needs them.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that when I shop for myself, I end up buying things for other people instead.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that the effort I put into making others successful is more valuable than the effort I put into my own success.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to let others choose first\u2014the restaurant, the movie, the vacation destination.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that my role in any friendship is to be the one who gives more.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would relocate to be closer to someone who needs my daily support.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that I should be the first to arrive and the last to leave when there is work to be done for others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely translate, explain, or simplify information so others can access it.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that fixing something in someone else's home or workspace is deeply gratifying.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that when I succeed, the first thing I should do is figure out how to bring others along.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to undercharge or waive fees when someone genuinely cannot afford what I offer.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that keeping my accomplishments quiet so others can feel proud of theirs is a worthy trade.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would invest my inheritance in a cause rather than spend it on myself.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that my free time is a resource that should flow toward whoever needs it most.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely adapt my preferences to accommodate the needs of those around me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that assembling care packages for people going through hard times comes naturally to me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that the connections I build should create value for others, not just for me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to pick up the tab without mentioning it.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that my daily to-do list should have more items for others than for myself.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would sacrifice a personal milestone to attend to someone else's urgent need.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that if I can solve a problem for someone else, I am obligated to try.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely go out of my way to introduce people to opportunities they deserve.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that spending an afternoon helping a friend move is more rewarding than spending it on my own pursuits.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe my workspace should be arranged so that others can use it comfortably, not just me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to set my thermostat, my music, and my lighting to what makes my household most comfortable, not just me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that every talent I have is a tool meant to benefit other people.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would turn down a dream job if accepting it meant abandoning someone who depends on me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that generosity with my time is the highest form of generosity.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely take on administrative and logistical work so that others can focus on what they do best.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that remembering small details about other people's lives and acting on them is one of my strengths.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe it is better to overcommit to helping others than to undercommit.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to share my food, my space, and my belongings without a second thought.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that I should always leave a situation better for the next person.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would cancel a personal trip to help a neighbor through an emergency.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that the best friendships are the ones where I give more than I get.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely write thoughtful, detailed feedback for others' projects even when no one asks.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that when I have a choice between advancing myself and supporting someone else, I choose the latter.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that hosting others in my home, even at personal inconvenience, is an essential practice.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to plan surprises and gestures for the people around me more than for myself.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that my proudest moments are when someone tells me I made a difference in their life.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would spend my sabbatical working on behalf of a community project rather than resting.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that the surplus in my life exists so that I can fill the deficit in someone else's.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely adjust my pace, my route, or my method to match what works best for others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that advocating for someone else's raise or promotion feels as important as pursuing my own.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that the right response to abundance is to distribute it, not to hoard it.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to prioritize errands for others over my own errands when time is limited.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that my legacy should be defined by the people I helped, not the things I acquired.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would use my professional influence to open doors for others rather than to advance my own agenda.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that the proper response to receiving help is to immediately look for someone else to help.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely reduce my own workload expectations so I can pitch in where others are struggling.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that deferring my desires so a group can reach consensus comes easily to me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that if my plate is full and someone else's is empty, something on my plate belongs to them.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to choose the harder path if it clears the way for someone else.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that each day I do not contribute to someone else's well-being is a day partially wasted.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would trade personal recognition for the satisfaction of knowing my efforts lifted the team.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that the simplest acts of service\u2014holding a door, carrying a bag\u2014are among the most meaningful.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely offer to handle the least glamorous tasks in any group effort.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that my impulse when I learn something new is to teach it to someone who could benefit.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that personal convenience should never come at the expense of someone else's basic need.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to respond to every request for help before attending to my own inbox.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that contributing to a shared meal is more fulfilling than dining alone on something better.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would give up a front-row seat so a stranger could have a better experience.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that the measure of my character is how I treat people who can offer me nothing.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely set aside a portion of every paycheck specifically for helping others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that building something for someone else's use is more motivating than building it for my own.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that the discomfort of giving is always worth the benefit it creates for someone else.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to consider how my choices affect the most vulnerable people around me before deciding.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that an open hand is always preferable to a closed fist, even when closing would protect my own interests.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would share a professional secret or competitive advantage if it would significantly help someone else.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that comfort shared is comfort doubled, and comfort hoarded is comfort halved.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely pick up litter, fix broken things, and tidy shared spaces without being asked.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that spending my birthday doing something for others feels more special than celebrating myself.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that my strength exists to be lent to those who need it.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to put my phone away and give my full presence to whoever is in front of me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that if I have the ability to ease someone's burden, hesitation is unacceptable.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would deplete my emergency fund to help a loved one avoid a crisis.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that the world needs more people who give without calculating what they get back.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely hand off leads, clients, or referrals to colleagues who need them more.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that simplifying my own life so I can be more available to others is deeply rewarding.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that every act of generosity, no matter how small, matters more than any personal gain.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to fill gaps in any group without being asked\u2014whatever is missing, I provide.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that my energy is best spent making sure nobody around me is struggling alone.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would choose a less prestigious school or job if the alternative let me stay close to people who need me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that unused privilege is wasted privilege.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely bring extra food, supplies, or materials to share with whoever might need them.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that being the person others turn to in a crisis is one of the most meaningful roles I play.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that investing in someone else's potential is more important than polishing my own resume.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that tracking my personal milestones keeps me motivated and on course.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that curating my own experiences is one of the richest parts of life.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that my morning routine should be designed entirely around my own optimal performance.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that reserving my best energy for my own creative work is non-negotiable.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to choose the restaurant, the movie, or the activity that I most want.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely update my personal goals and adjust my life to match them.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that a well-furnished personal space is a worthwhile investment.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that maintaining a personal journal focused on my own progress is deeply satisfying.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that my hobbies deserve as much time as any obligation to others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that buying the best tools and equipment for myself directly improves my output.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to accept only the projects that align with my personal vision.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely turn down invitations that do not serve my personal interests or growth.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that building a personal portfolio of accomplishments is essential.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that my most productive days are those entirely devoted to my own agenda.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that personal rituals and routines are sacred and should not be disrupted by others' requests.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that splurging on a personal passion project is money well spent.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to measure my week by how much I advanced my own objectives.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely reserve the best seat, the best portion, or the best option for myself.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that I function best when I have dedicated, uninterrupted time for my own work.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that charting my personal growth on paper gives me a tangible sense of progress.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that my personal library, workspace, and equipment should reflect my standards.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that dressing well and presenting myself at my best is an investment in my future.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to pick vacations based on what I want to see and do, not on what others prefer.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely block off calendar time that belongs exclusively to me.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that hiring help for tasks I dislike frees me to focus on what I do best.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that saying no to requests that dilute my focus is one of my most valuable habits.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that my own intellectual curiosity should guide how I spend my learning time.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that cultivating personal expertise in my chosen field is a lifelong priority.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to negotiate the arrangement that works best for me in any shared situation.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely upgrade my personal environment\u2014better lighting, better furniture, better technology.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that tracking my own financial growth is a satisfying and important practice.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that designing my ideal morning, without accommodation for anyone else, sets me up for success.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that my dietary choices should reflect my own health goals, not others' preferences.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that personal reading time is a non-negotiable part of my schedule.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to keep my most innovative ideas for my own ventures.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely evaluate friendships by whether they contribute to my personal development.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that my physical fitness routine should take priority over social commitments.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that eating alone at my favorite restaurant is a perfectly worthwhile way to spend an evening.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that my long-term wealth is one of the most important things I am building.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that taking a solo trip to recharge is more valuable than a group vacation.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to choose the apartment, the neighborhood, and the city that best serve my own goals.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely set personal records and benchmarks to push myself further.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that my taste, my preferences, and my style deserve full expression.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that competing against my own previous best is one of the most motivating things I do.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that protecting my sleep schedule is more important than being available to others late at night.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that building a personal reputation for excellence is one of my top priorities.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to use unexpected free time for personal projects rather than reaching out to see if someone needs help.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely rearrange my environment to maximize my own comfort and productivity.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that accumulating experiences that enrich my life is a valid use of resources.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that setting aggressive personal deadlines keeps me sharp and engaged.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that I should not apologize for wanting the best for myself.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that my creative projects deserve the same level of investment I would give to a professional obligation.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to structure group decisions around outcomes that benefit me most.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely invest in courses, certifications, and credentials that advance my career.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that my personal brand\u2014how I am perceived\u2014is something I should actively manage.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that choosing my own comfort over shared inconvenience is usually the right call.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that my retirement planning should come before discretionary generosity.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that working on my own side projects in the evenings is more rewarding than socializing.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to ask for the raise, the upgrade, or the better deal without hesitation.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely choose the path of least resistance for myself, even if it requires more from others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that being well-rested, well-fed, and well-prepared is my responsibility to myself.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that I naturally prioritize tasks that build my own skill set over tasks that only help others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that collecting meaningful personal possessions adds richness to my life.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that earning more money for myself is one of the most practical goals I can pursue.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to see networking as a way to build my own opportunities, first and foremost.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely audit my commitments and drop those that no longer serve my personal direction.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that the quality of my personal environment directly affects the quality of my thinking.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that setting firm boundaries around my personal time prevents burnout and keeps me effective.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that personal ambition and drive are qualities to be proud of, not downplayed.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that optimizing my workflow for my own efficiency is a top priority.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to choose my battles based on what matters most to my own goals.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely treat myself to experiences and products that bring me personal joy.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that my personal development plan should be revisited and refined regularly.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that decorating my space exactly to my taste improves my daily mood and output.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that time spent perfecting my craft is never wasted.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that guarding my creative energy from others' demands is essential to producing my best work.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to make major life decisions based primarily on what excites and fulfills me.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely research and pursue opportunities that specifically strengthen my resume or portfolio.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that the time I spend alone working on my goals is among my most valuable hours.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that rewarding myself after completing a personal goal reinforces my discipline.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that my personal reading list, podcast queue, and study plan should reflect only my interests.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that my personal workspace should be optimized for my needs, not shared convenience.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to choose the fastest lane, the shortest line, and the most efficient option for myself.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely calculate the return on investment for my personal time and money.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that developing a signature style\u2014in work, dress, and communication\u2014is important for my identity.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that competing with others for top positions energizes me.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that my own legacy\u2014what I build and leave behind\u2014is a primary concern.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that hiring a personal trainer, coach, or therapist is an investment in my most important asset: myself.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to evaluate any group activity by asking what I personally stand to gain.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely keep a list of personal achievements and review it for motivation.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that my personal standards for quality should never be compromised to accommodate others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that traveling alone to pursue my own interests is more fulfilling than compromising on a group itinerary.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that my financial independence is one of the most important things I can achieve.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that my exercise time, my meal preparation, and my rest are boundaries I protect fiercely.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to frame career conversations around my own aspirations and what I need to get there.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely stockpile resources\u2014savings, knowledge, connections\u2014for my own future use.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that my personal comfort zone should expand on my terms, not because someone else pushed me.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that building something I am personally proud of is the strongest motivator I know.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that self-improvement books, courses, and retreats are among my best investments.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that securing the best possible outcome for myself in a negotiation is simply smart.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to exit commitments that no longer align with where I want to go personally.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely visualize my own future success and make decisions to bring that vision closer.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that my unique talents are best expressed through projects I choose for myself.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that maximizing my own earning potential is a responsibility I take seriously.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that personal benchmarks\u2014income, fitness, skills\u2014are the truest measures of progress.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that my daily habits should be engineered to serve my long-term personal vision.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to choose mentors and advisors based on how they can accelerate my personal growth.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely protect my focus time even when others express disappointment.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that taking the most interesting assignment for myself, rather than the most needed one, is fair.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that my personal satisfaction with my work matters more to me than external validation.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that I deserve to enjoy the lifestyle my work has earned.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that refining my personal aesthetic\u2014in everything from clothing to home design\u2014is a worthy pursuit.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to use windfalls on personal upgrades rather than distributing them to others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely document my own accomplishments so they are recognized and remembered.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that my personal energy is a finite resource that I should allocate with deliberate intention toward my own goals.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that building a strong personal financial cushion gives me more confidence than anything else.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that attending to my own emotional well-being should come before attending to anyone else's.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that my own creative output is the most important thing I produce.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to choose conferences, workshops, and events based on how they advance my career specifically.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely assess whether my current role still serves my personal growth trajectory.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that personal achievement is the foundation upon which everything else in my life rests.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that having a detailed personal five-year plan gives me clarity and drive.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that my own needs are the baseline I should secure before extending help outward.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that pursuing mastery in my chosen field is worth more than diversifying my efforts for others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to keep my best contacts, resources, and strategies within my own network for my own use.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely upgrade my skills specifically to increase my market value.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that the hours between 6 a.m. and 9 a.m. should belong entirely to my personal development.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that maintaining a wish list of things I want for myself keeps me motivated.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that being strategically selfish is a prerequisite for long-term effectiveness.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that my personal taste in food, travel, and entertainment should guide shared decisions.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to frame every major decision by asking: does this move me closer to where I want to be?",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely prioritize my own deadlines over requests that come from others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that assembling a life that reflects my personal values and desires is the primary task of adulthood.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that the projects I initiate for myself are the ones I pour the most energy into.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that self-advocacy is a skill everyone should develop, and I practice it constantly.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that reserving weekends for personal restoration is essential, even when others want my time.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to keep a running tally of my personal wins and review them when I need motivation.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely opt for premium personal experiences\u2014travel, dining, learning\u2014because I believe I am worth it.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that my most important competition is with my past self, and I intend to keep winning.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that aligning every aspect of my life with my personal mission statement keeps me centered.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that spending on personal health\u2014supplements, checkups, therapy\u2014is never excessive.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that building equity in my own ventures is smarter than building equity for someone else.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to accept praise graciously and use it as fuel for further personal achievement.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely ensure that my personal brand is visible, polished, and intentionally cultivated.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that the trajectory of my career is the single most important line on my personal graph.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to view my personal bucket list as a binding contract with myself.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely choose solitude for deep personal work over collaboration that dilutes my focus.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that cultivating my own inner life\u2014through reflection, learning, and growth\u2014is my highest duty.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that owning the best version of something, even when a cheaper option would do, reflects the standard I hold for myself.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that my personal time is too valuable to spend on obligations that do not advance my vision.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely gather extra supplies so I can offer them to anyone in my circle who runs short.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that when I receive an unexpected gift, I immediately think of someone who would appreciate it more.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that the conversations I have should leave the other person feeling valued, even if it costs me time.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to use my vacation days to visit people who need company rather than destinations I want to see.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that any award or recognition I receive belongs partly to everyone who supported me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel that my greatest accomplishment would be knowing every person in my life felt fully supported by me.",
+    "direction": "altruism"
+  }
 ]

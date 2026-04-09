@@ -2,75 +2,147 @@
   "id": 57,
   "questions": [
     {
-      "text": "I feel that the moral claim of suffering is universal \u2014 it applies to me whether the person is a loved one or a stranger.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I find it natural to follow well-given instructions and coordinate with peers.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I hold the view that a detached, information-driven approach to human pain is the method that produces the most defensible and well-reasoned decisions.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I keep promises and follow through even when it becomes inconvenient.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "My passions tend to consume me rather than simmer in the background.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I find that I learn about social norms through trial and error rather than intuition.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I am at my best when I am in the driver's seat.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I find lasting satisfaction in contributions that no one knows I made.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I believe that the obligation to respond to suffering is grounded in its moral reality, not in the emotional reaction it produces in me.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I notice when someone's smile fades the instant they think no one is watching.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "Even routine goodbyes can stir up a surprising depth of feeling in me.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I routinely decline requests that would compromise my personal goals.",
+      "text": "I believe that knowing what I want and going after it is a sign of maturity.",
       "direction": "self-focus"
     },
     {
-      "text": "I often set deadlines and hold people to them.",
-      "direction": "agentic"
+      "text": "I prefer that group deliverables be finalized by whoever the group entrusts with that task.",
+      "direction": "yielding"
     },
     {
-      "text": "I experience nervousness as a subtle signal rather than a full-body alarm.",
+      "text": "I notice when a person offers to help not out of generosity but to position themselves as indispensable.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "The suffering of strangers in distant places affects me in a way that feels personal and immediate.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to notice my emotional reactions in retrospect rather than being gripped by them in the moment.",
       "direction": "low-reactive"
     },
     {
-      "text": "I rarely set alarms or reminders; I trust my natural sense of timing.",
-      "direction": "spontaneous"
+      "text": "I find that I do not instinctively sense when I have overstayed my welcome.",
+      "direction": "hypo-attuned"
     },
     {
-      "text": "I save and invest with a long-term financial plan in mind.",
-      "direction": "conscientious"
+      "text": "I do not naturally sense when two people are having a power struggle disguised as polite conversation.",
+      "direction": "hypo-attuned"
     },
     {
-      "text": "I feel that my personal growth matters only insofar as it lets me contribute more to others.",
+      "text": "I think that approaching suffering with methodical clarity is the approach that most reliably converts concern into tangible progress.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I hold the view that self-sacrifice is one of the highest forms of contribution.",
       "direction": "altruism"
     },
     {
-      "text": "I believe that social environments are rich with information most people overlook.",
+      "text": "I believe my vivid emotional life is what makes me feel most alive.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "My emotional equilibrium is rarely disrupted for long.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I work forward from where I am, letting deadlines exert their pull as they approach.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel more in control when I'm free to react to what's actually happening rather than following a script.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I have been able to maintain focus on a task even when someone nearby was visibly upset.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I consider it my strength that I can make hard calls quickly.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel more in control when I have a plan, even if it needs to be adjusted later.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I experience loss as something I can hold without it consuming me.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I get restless in meetings where no one is driving toward a conclusion.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I rarely notice when someone's contribution to a conversation is being systematically overlooked.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I hold the view that my own needs are the baseline I should secure before extending help outward.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel that when I take care of my own needs, I am better equipped for everything else.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that emotional intensity is one of my defining characteristics.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I prefer a supportive role in negotiations and high-stakes conversations.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I am highly aware of the social dynamics playing out in digital communication, not just in-person.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I separate my work into distinct phases with clear transitions between them.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I am the kind of person who can be brought to tears by a commercial.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that living for something beyond myself is the only way to find real meaning.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I figure things out each time rather than writing down how I did it before.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I think that when I analyze distressing circumstances with rational precision, I honor the seriousness of the situation more effectively than if I were emotionally swept up in it.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel responsible for ensuring that meetings have concrete outcomes.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I like to establish ground rules before starting a collaborative effort.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I usually wait for someone else to propose a plan before weighing in.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that the moral pull of suffering should translate directly into changed behavior, not just into emotional acknowledgment.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that the stories I most love telling are about times I was able to help someone.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that the moral claim of suffering is the most fundamental ethical reality \u2014 everything else is commentary.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I intuitively map social networks, understanding who influences whom.",
       "direction": "hyper-attuned"
     }
   ]

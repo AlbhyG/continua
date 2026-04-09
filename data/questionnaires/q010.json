@@ -2,76 +2,148 @@
   "id": 10,
   "questions": [
     {
-      "text": "I find that once an emotion takes hold, it commands my full attention.",
+      "text": "I tend to feel a surge of intense emotion before I have any cognitive understanding of what triggered it.",
       "direction": "high-reactive"
     },
     {
-      "text": "I believe that the felt weight of another person's hardship is a form of moral evidence that deserves serious consideration.",
-      "direction": "empathy"
+      "text": "I find that emotional composure during hardship is what allows me to see the full picture rather than just the most painful part.",
+      "direction": "detachment"
     },
     {
-      "text": "I can be in the middle of a crisis and still feel internally composed.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I tend to view my savings as a tool for my own future, not a resource for others.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I tend to think of my time as my most valuable personal asset.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I tend to absorb emotional information without it disrupting my internal stability.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I do not naturally sense when someone is testing boundaries.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I am meticulous about keeping my appointments and rarely cancel or reschedule.",
+      "text": "I save and invest with a long-term financial plan in mind.",
       "direction": "conscientious"
     },
     {
-      "text": "I often start projects without a clear plan, trusting that the path will reveal itself.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I feel that attending to my own desires while others have unmet needs is hard to justify.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I notice micro-expressions that flash across someone's face during conversation.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I rarely register the emotional atmosphere of a gathering.",
+      "text": "I rarely notice when someone phrases a disagreement as a question to soften it.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I feel that if I don't take the reins, things won't move forward.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I believe that remaining analytically engaged while others are emotionally overwhelmed is a contribution that often goes unrecognized.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I trust the group's consensus more than my own individual judgment.",
-      "direction": "yielding"
-    },
-    {
-      "text": "Five-year plans seem pointless to me because so much changes that they quickly become irrelevant.",
+      "text": "I trust my gut instincts more than any amount of advance preparation.",
       "direction": "spontaneous"
     },
     {
-      "text": "I find it natural to sit back and let the group work through its process.",
+      "text": "My emotional system seems calibrated for maximum signal \u2014 nothing is filtered or dampened.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I notice that my emotional life is characterized by continuity rather than interruption.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I am energized by the act of making a consequential choice.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that aligning every aspect of my life with my personal mission statement keeps me centered.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that the moral weight of suffering is the single most important consideration when evaluating the ethics of any decision, public or private.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think of the present moment as the only real thing; the future is just a concept.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I do not usually register when someone deliberately avoids a topic in my presence.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that my proudest moments are when someone tells me I made a difference in their life.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel most confident when I am contributing to a process others are co-directing.",
       "direction": "yielding"
     },
     {
-      "text": "I find that I am drawn to roles and situations where my capacity for clear thinking during emotional intensity is needed.",
+      "text": "I maintain separate spaces or systems for different areas of my life to avoid confusion.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I detect shifts in a group's mood almost instantly.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I detect when someone uses humor to say something true that they could not say seriously.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe a premature decision is more dangerous than a delayed one.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I tend to craft my daily schedule around what the people in my life need from me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I prioritize tasks based on urgency and importance using a deliberate framework.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I am the type who builds the team around my vision rather than the other way around.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I tend to focus on the problem being discussed rather than on how people are feeling about it.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that an open hand is always preferable to a closed fist, even when closing would protect my own interests.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that my tendency to approach suffering analytically has allowed me to be helpful in situations where others felt paralyzed.",
       "direction": "detachment"
+    },
+    {
+      "text": "I believe that my emotional processing happens largely beneath the surface, quietly and efficiently.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel that my strength lies in driving momentum.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel that the moral pull of another person's pain creates an imperative in me that no amount of reasoning can fully override or dismiss.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that my emotions have a physical weight \u2014 when I'm happy I feel lighter, when I'm sad I feel heavier.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I tend to measure a good day by how much progress I made on my own goals.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I notice I'm out of something and get more when I need to.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I detect when someone is diplomatically declining an invitation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that the moral concern I have for those in pain is not a weakness to be managed but a strength to be honored.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that directing my resources toward my own goals is the smartest strategy.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I think that the most productive conversations about human tragedy are those conducted with analytical precision rather than emotional intensity.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that my presence in a group helps others articulate their own priorities.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I experience change as something to be navigated calmly rather than something that triggers alarm.",
+      "direction": "low-reactive"
     }
   ]
 }

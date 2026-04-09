@@ -2,76 +2,148 @@
   "id": 25,
   "questions": [
     {
-      "text": "I believe that if I don't invest in myself, no one else will.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I would move to a less desirable place if it let me be more useful to people who need help.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I prefer to build agreement organically rather than persuade.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I regularly push back when I disagree with the prevailing direction.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I pick up on when a conversation is being steered toward a predetermined conclusion.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I pick up on when a shared laugh is a bonding moment versus a nervous release.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I value precision in my work and take time to get the details right.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I believe my vivid emotional life is what makes me feel most alive.",
+      "text": "A photograph from the past can plunge me back into the feelings of that era with startling force.",
       "direction": "high-reactive"
     },
     {
-      "text": "I often find myself telling others what needs to happen next.",
-      "direction": "agentic"
+      "text": "I can tell when someone is smiling with their mouth but not with the muscles around their eyes.",
+      "direction": "hyper-attuned"
     },
     {
-      "text": "I hold the view that self-sacrifice is one of the highest forms of contribution.",
-      "direction": "altruism"
-    },
-    {
-      "text": "When something delights me, the delight fills me completely.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I believe that the moral demand of suffering is most authentic when it leads to a change in what I do, not just what I feel.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I proactively organize shared spaces and group projects because order enables progress.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I can receive bad news without my body going into alarm mode.",
+      "text": "I find that my emotional responses are predictable \u2014 I can usually anticipate how I'll feel about something.",
       "direction": "low-reactive"
     },
     {
-      "text": "I feel that moral seriousness about suffering means being willing to stay engaged with it long after the emotional intensity has faded.",
+      "text": "I have a strong desire to leave my mark on the things I work on.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I sometimes feel like my nervous system has no middle gear \u2014 it's either idling or redlining.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I am the type who contributes thoughtfully to an agenda someone else has set.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that when suffering is present, its moral claim on me is immediate and does not require further justification.",
       "direction": "empathy"
     },
     {
-      "text": "I find that skipping the planning phase allows me to be more present during execution.",
-      "direction": "spontaneous"
+      "text": "I am the type who creates the rules of engagement for a group.",
+      "direction": "agentic"
     },
     {
-      "text": "I find that I make better decisions about how to help when I can maintain emotional distance from the pain I am witnessing.",
+      "text": "I outline chapters or sections before I begin writing anything substantial.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that the clearest path through any emotionally complex situation is to focus on what can be known and done rather than on what is felt.",
       "direction": "detachment"
     },
     {
-      "text": "I tend to treat all conversations as primarily about exchanging information.",
+      "text": "I sense when two people are communicating through a third person who does not realize they are being used as a channel.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel that my job is to support the group in finding its own way.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that approaching emotionally complex situations with analytical rigor is the most reliable way to ensure fair treatment for everyone.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that the process of planning itself helps me understand what I'm trying to achieve.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I tend to respond to every request for help before attending to my own inbox.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I align daily activities with my long-term vision so every day moves me forward.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that my emotional state changes gradually, like a thermostat rather than a switch.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that other people's gratitude means more to me than any personal reward.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to allocate the majority of my time to tasks that benefit other people.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that my own intellectual curiosity should guide how I spend my learning time.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I prefer to set the timeline for a group effort rather than negotiate it.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I notice that I cannot easily mask my emotional state because my body broadcasts it so loudly.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that analytical clarity enables me to untangle complex situations where suffering has multiple causes and no simple solution.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I do not pay much attention to facial expressions during conversations.",
       "direction": "hypo-attuned"
+    },
+    {
+      "text": "I prefer that high-stakes elements be handled by whoever the group deems best suited.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that I'm most effective when my own life is in good order.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I approach repeated tasks with fresh eyes each time rather than standardizing them.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I like to try a different approach each time, even if the old way worked.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I often sense that there is a conversation happening beneath the surface conversation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel that no quantity of reasoning can legitimately override the moral demand that arises from directly knowing of another's pain.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that accumulating experiences that enrich my life is a valid use of resources.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find it hard to detect when someone is being supportive on the surface but competitive underneath.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I do not pick up on when a person gives a long explanation because they sense skepticism from the listener.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe that suffering, wherever it occurs, creates moral claims that are binding regardless of personal convenience.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to feel the same basic emotional temperature whether I'm alone or in a crowd.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I deal with maintenance needs when they become apparent rather than on a schedule.",
+      "direction": "spontaneous"
     }
   ]
 }

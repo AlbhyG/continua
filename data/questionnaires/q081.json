@@ -2,76 +2,148 @@
   "id": 81,
   "questions": [
     {
-      "text": "I believe that the moral weight of suffering, once I have truly registered it, cannot be set aside without a cost to my integrity.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I generally dictate the terms of a collaboration.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I feel that if no one leads, nothing meaningful gets accomplished.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I believe that the obligation to respond to suffering is what transforms ethical knowledge into ethical practice.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I find that having a morning routine sets a productive tone for the entire day.",
+      "text": "I believe that life rewards those who show up consistently, day after day.",
       "direction": "conscientious"
     },
     {
-      "text": "I routinely accept inconvenience so that other people's lives run more smoothly.",
-      "direction": "altruism"
+      "text": "I hold the view that decisive action is a form of respect for everyone's time.",
+      "direction": "agentic"
     },
     {
-      "text": "I rarely pick up on the nonverbal negotiation that happens before a group makes a decision.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I find that I contribute most when I maintain an objective stance rather than allowing myself to be moved by the emotional gravity of a situation.",
+      "text": "I hold the view that composure under emotional pressure is the characteristic that most consistently distinguishes clear-headed decision-makers from reactive ones.",
       "direction": "detachment"
     },
     {
-      "text": "I tend to match the pace others have set rather than impose my own.",
-      "direction": "yielding"
+      "text": "I find it natural to give instructions and coordinate others.",
+      "direction": "agentic"
     },
     {
-      "text": "I routinely optimize my schedule around my own peak performance.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I detect when someone uses humor to deflect from something they find painful.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I believe my capacity for intense feeling is both a gift and a burden.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "A messy desk doesn't bother me; I know where everything is in my own way.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I feel that personal accountability is the engine that drives real progress.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I hold the view that most communication happens in what is left unsaid.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I routinely eat last, leave last, and take the smallest portion.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I experience embarrassment as a passing moment rather than a lingering burn.",
+      "text": "I feel that I have a long fuse \u2014 it takes a lot to provoke a strong emotional response in me.",
       "direction": "low-reactive"
     },
     {
-      "text": "I often replay emotional moments in my mind and re-experience them at nearly full intensity.",
+      "text": "I find that I am more interested in the factual accuracy of what is said than in how it was received.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I sense when someone is being polite out of obligation rather than genuine warmth.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I hold the view that treating suffering as morally significant \u2014 even when it is one concern among many \u2014 is what keeps my priorities aligned with my values.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to propose ideas and invite feedback before moving forward.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I let each morning develop its own rhythm instead of front-loading priority tasks.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that recognizing the urgency of another's suffering \u2014 not just its existence \u2014 is what distinguishes deep moral engagement from surface-level concern.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I experience the pressure of a deadline not just mentally but as a tightening sensation throughout my body.",
       "direction": "high-reactive"
+    },
+    {
+      "text": "I find that I can participate in emotionally intense situations without my own system getting activated.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I experience the feeling of accomplishment as a quiet satisfaction rather than a triumphant high.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I practice important skills repeatedly until they become second nature.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that setting aggressive personal deadlines keeps me sharp and engaged.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I prefer to let others take credit even when I did most of the work.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice when a conversation partner's pupils dilate or contract in response to what is being discussed.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that when I succeed, the first thing I should do is figure out how to bring others along.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that my system responds to emotional stimuli the way a tuning fork responds to sound \u2014 instantly and completely.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that collecting meaningful personal possessions adds richness to my life.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I treat every commitment I make as a binding agreement with myself.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I give others a quick overview and trust them to figure out the details their own way.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel that the moral significance of suffering should not be treated as subject to negotiation or compromise.",
+      "direction": "empathy"
+    },
+    {
+      "text": "When I get good news, the euphoria can last for days.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I want to be the one who launches new ventures within my team.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that approaching others' difficulties with analytical detachment allows me to construct plans that address the problem systematically rather than piecemeal.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that my willingness to accommodate helps groups stay together.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I tend to focus on the clarity of a message rather than on what the sender might be feeling.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I hold the view that groups find focus naturally when everyone's voice is heard.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I tend to wait until the pressure of a deadline sharpens my focus.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I routinely make lifestyle choices that reflect my personal standards and aspirations.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe my physical energy should be spent on tasks that make life easier for those around me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice the subtle ways people claim or yield conversational space.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I think that those who can remain analytical during emotionally intense situations provide a kind of stability that is essential for groups.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that I do not track who interrupted whom during a meeting.",
+      "direction": "hypo-attuned"
     }
   ]
 }

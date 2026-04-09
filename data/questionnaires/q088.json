@@ -2,76 +2,148 @@
   "id": 88,
   "questions": [
     {
-      "text": "I sense when a compliment is actually passive-aggressive.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I rarely feel that my emotions are too much for me to handle.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I hold the view that the best thing I can do is become the strongest version of myself.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "When I see an opportunity, I move quickly to claim it.",
+      "text": "I often speak with an air of finality that signals the discussion is over.",
       "direction": "agentic"
     },
     {
-      "text": "I feel that healthy self-focus gives me the strength to show up fully in everything I do.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I feel that the moment I stop giving is the moment I stop living fully.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I feel that the moral imperative to address suffering grows stronger the more clearly I understand what someone is going through.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I believe that not everything worth doing can or should be measured.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I find that self-imposed deadlines feel artificial and don't motivate me.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I prefer to get buy-in before acting on behalf of the group.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I find that I can engage with the most difficult aspects of the human condition without it affecting my capacity to function.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I find social situations easier when expectations are made explicit.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I often do not notice when people are speaking in code around me.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I find that sticking to a proven methodology gives me confidence in uncertain situations.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I sometimes need to physically move or pace to discharge the intensity of what I'm feeling.",
+      "text": "I experience anger as a physical heat that radiates through my body.",
       "direction": "high-reactive"
     },
     {
-      "text": "I rarely redefine objectives that were set by the group.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I believe that emotional composure during a crisis is not a luxury but a necessity for clear and fair decision-making.",
+      "text": "I believe that the discipline of maintaining emotional equilibrium during others' pain is a capacity that serves the common good and deserves deliberate development.",
       "direction": "detachment"
     },
     {
-      "text": "I can be in the midst of uncertainty and still feel fundamentally okay.",
+      "text": "I believe that the most sustainable approach to helping others involves maintaining clear boundaries between their experience and my reasoning.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I am energized by being in the circle and contributing as one voice among many.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that the moral demand of suffering is the reality that has most decisively influenced the causes I support and the relationships I cultivate.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that my natural resting state is one of calm alertness, not agitation or anticipation.",
       "direction": "low-reactive"
+    },
+    {
+      "text": "I think that approaching difficult human situations with a clear and logical framework is the approach that produces the most sustainable solutions.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I prefer joint ownership of outcomes so that no single person bears the weight.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I prefer to let norms emerge organically as people work together.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I can usually tell when someone is flirting versus just being friendly.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "My body stays in a state of relaxed readiness regardless of the emotional temperature around me.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to select projects based on how they will develop my personal expertise.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "When entering a new group, I observe how things work before settling into a role.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that a well-directed team outperforms a democratic one.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that I am usually unaware of who feels most and least comfortable in a group until it becomes obvious.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I do not naturally sense when a social ritual, like a toast or a round of introductions, carries deeper meaning than its surface function.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe that an organized environment reflects and supports an organized mind.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "My emotional reactions are vivid enough to produce physical symptoms \u2014 headaches, stomach knots, trembling.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that self-advocacy is a skill everyone should develop, and I practice it constantly.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I rarely sense when the emotional tone of a text conversation shifts.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that my daily to-do list should have more items for others than for myself.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to take unexpected news in stride without a pronounced emotional spike.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I hold the view that my moral engagement with suffering should be measured by consistency of action, not by intensity of feeling.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that remembering small details about other people's lives and acting on them is one of my strengths.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I routinely prioritize my own deadlines over requests that come from others.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that registering others' suffering as important is a fundamental part of my moral compass.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that good habits, built over time, are the backbone of a well-lived life.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I develop professionally by following whatever interests me at any given time.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice when someone's politeness has an edge to it.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I notice when a person's speaking pace slows because they are choosing their words around a sensitive listener.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that committing too firmly to plans can make me miss out on better alternatives.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I experience anticipatory anxiety as a full-body state, not just a mental worry.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe my calendar should reflect other people's needs as much as my own.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that I can mobilize people toward a goal effectively.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I design my workflows to minimize friction and maximize repeatability.",
+      "direction": "conscientious"
     }
   ]
 }

@@ -2,76 +2,148 @@
   "id": 19,
   "questions": [
     {
-      "text": "I notice that strong emotions can make me feel physically unsteady.",
-      "direction": "high-reactive"
+      "text": "I document processes I've figured out so I or others can repeat them.",
+      "direction": "conscientious"
     },
     {
-      "text": "I find it genuinely easier to give than to receive.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I believe personal gain means little if the people around me are not better off.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I hold the view that maintaining my own well-being is a prerequisite for everything else.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I find that I can mobilize people toward a goal effectively.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I believe that the moral weight of suffering is the single most important consideration when evaluating the ethics of any decision, public or private.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I sense when the real decision-maker in a meeting is not the person with the highest title.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I find that emotional composure during hardship is what allows me to see the full picture rather than just the most painful part.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I believe my emotional steadiness is a genuine trait, not a mask I wear.",
+      "text": "I experience loneliness as a quiet awareness rather than a sharp pang.",
       "direction": "low-reactive"
     },
     {
-      "text": "I rarely detect when someone is strategically timing a remark.",
-      "direction": "hypo-attuned"
+      "text": "My emotional spectrum is real and present but it operates in pastel tones rather than neon.",
+      "direction": "low-reactive"
     },
     {
-      "text": "I feel uncomfortable when I leave things half-finished at the end of the day.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I believe that the moral concern I have for those in pain is not a weakness to be managed but a strength to be honored.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I trust that the group will find its way forward without one person driving.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I often decide what to do only once I'm already in the moment.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I sense the invisible threads of obligation and reciprocity in social groups.",
+      "text": "I notice when a person offers unsolicited advice to subtly establish their expertise.",
       "direction": "hyper-attuned"
     },
     {
-      "text": "I find that I am usually the one setting the standards for a group.",
-      "direction": "agentic"
+      "text": "I feel that investing in my appearance, health, and skills is time well spent.",
+      "direction": "self-focus"
     },
     {
-      "text": "I break large projects into smaller milestones with specific deadlines.",
+      "text": "I keep track of projects mentally and trust I'll remember what needs attention.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that life's best moments are the ones you didn't plan for.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I often present my thoughts as starting points for group discussion.",
+      "direction": "yielding"
+    },
+    {
+      "text": "My emotional states color my entire sensory experience \u2014 food tastes different, colors look different, depending on how I feel.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "When my expectations are violated, my system reacts as if to a physical shock.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel that earning more money for myself is one of the most practical goals I can pursue.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that the moral priority of suffering is the principle I would invoke first when trying to explain my values to someone who does not share them.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that when I invest in myself, everything else in my life improves.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that when I have a choice between advancing myself and supporting someone else, I choose the latter.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I prefer clearly defined roles and expectations in collaborative work.",
       "direction": "conscientious"
     },
     {
-      "text": "I believe my emotional intensity is central to who I am.",
+      "text": "I instinctively take control of high-pressure situations.",
+      "direction": "agentic"
+    },
+    {
+      "text": "When a conversation stalls, I push it forward with a concrete proposal.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that I am often unaware of the social cost of something I said until someone tells me later.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I hold the view that moral attention to suffering \u2014 the active decision to let it matter \u2014 is a habit that strengthens with practice.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I do not spend much time analyzing the subtext of conversations.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe that my ability to reason clearly about human problems depends on not being drawn into the emotional current of those problems.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that approaching emotional situations with structured reasoning produces outcomes that are fairer to everyone involved.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I set weekly review sessions to assess what went well and what I need to adjust.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that the capacity to process suffering intellectually, without emotional involvement, is what makes sustained professional service possible.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I sense the precise moment when a debate stops being about the topic and becomes about winning.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I reconnect with people when the impulse strikes rather than tracking our last contact.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel most like myself when I am part of an ensemble.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I frequently take on supporting or facilitating roles in team settings.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I do not usually detect when a social environment has an unspoken expectation about reciprocity.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that the emotional charge of a piece of music can override whatever I was feeling before.",
       "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that treating others' suffering as morally binding is not a philosophical position but a lived practice that I try to maintain daily.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe my role in any group is to make sure everyone else has what they need.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to consider how my choices affect the most vulnerable people around me before deciding.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice that dramatic revelations or plot twists \u2014 in life or in fiction \u2014 produce a mild stir rather than a jolt.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I often proactively define the criteria for who gets to participate in key discussions.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I intuitively understand the unspoken hierarchy in any social group I enter.",
+      "direction": "hyper-attuned"
     }
   ]
 }

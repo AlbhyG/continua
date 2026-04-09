@@ -2,76 +2,148 @@
   "id": 46,
   "questions": [
     {
-      "text": "I rarely notice shifts in someone's vocal tone during a conversation.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I prefer clearly defined roles and expectations in collaborative work.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I sense the social temperature of an email based on word choice, punctuation, and formatting.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I tend to put other people's needs ahead of my own, even when it costs me.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I tend to experience emotions as informational signals rather than as overwhelming forces.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I have been praised for my ability to stay rational when emotions run high.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I tend to wait until the pressure of a deadline sharpens my focus.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I experience boredom not as a quiet absence but as an agitating restlessness.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I feel that the effort of maintaining strict order often outweighs the benefits.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I tend to view emotional intensity in others with a kind of curiosity because my own experience is different.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "When there is a vacuum of leadership, I look around to see who else might step in.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I find that I am unapologetically focused on building the life I envision for myself.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I believe that the obligation to respond to suffering is the moral truth I hold most firmly, regardless of how inconvenient acting on it may be.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I believe that strong leadership requires the willingness to override dissent when needed.",
+      "text": "I commonly take the initiative to close out projects and declare them complete.",
       "direction": "agentic"
     },
     {
-      "text": "I find that maintaining emotional equilibrium during painful situations allows me to focus on what needs to happen rather than on how the situation makes me feel.",
-      "direction": "detachment"
+      "text": "I am attuned to when someone feels embarrassed even if they hide it well.",
+      "direction": "hyper-attuned"
     },
     {
-      "text": "I am happy to let someone else be the spokesperson.",
+      "text": "Even routine goodbyes can stir up a surprising depth of feeling in me.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I prefer flexible timelines that the group agrees upon together.",
       "direction": "yielding"
     },
     {
-      "text": "I hold the view that every person's first responsibility is to themselves.",
+      "text": "I find that advocating for someone else's raise or promotion feels as important as pursuing my own.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that my capacity for rational, composed analysis during emergencies is the quality that colleagues and friends rely on me for most.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that building something I am personally proud of is the strongest motivator I know.",
       "direction": "self-focus"
     },
     {
-      "text": "I hold the view that explicit communication is a kindness, not a lack of sophistication.",
+      "text": "I often have multiple projects going at once and move between them as my interest dictates.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I tend to choose opportunities that advance my personal career over those that primarily benefit others.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I hold the view that pursuing what I want is not at odds with being a good person.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that I am more helpful to people in distress when I engage with their problem intellectually rather than emotionally.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I pick up on when the timing of a message is itself the message.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel that doing things the same proven way each time ensures quality and reliability.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I can recall specific moments when someone's suffering changed the way I thought about a decision I was making.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I set clear start and end times for work sessions to maintain discipline.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I experience hope as a soaring sensation in my chest, almost like weightlessness.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel that ambiguity is a signal for me to step in and create order.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I detect when a person chooses to stand rather than sit as a way to signal they do not intend to stay long.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that the moral weight of suffering is the consideration that best reveals whether a person's ethical framework is serious or superficial.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think that the ability to suspend emotional reactions during a crisis is a skill that produces better outcomes for everyone.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to move through emotionally charged moments with a sense of groundedness.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I do not usually pick up on the difference between a question that invites discussion and one that shuts it down.",
       "direction": "hypo-attuned"
+    },
+    {
+      "text": "I am the one who cuts off brainstorming to move the group into execution.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I routinely go out of my way to introduce people to opportunities they deserve.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I focus on solving problems rather than navigating the social landscape around them.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I experience deadlines and time pressure as practical challenges rather than sources of physiological stress.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I prefer that the group collectively decides when a meeting has run its course.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I notice that major life events produce a proportionate, not outsized, emotional response in me.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend not to detect when a question has a hidden agenda behind it.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I hold the view that a tolerance for mess and ambiguity is a sign of creative flexibility.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe every conversation should end with the other person feeling more supported than before.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I prefer to let my day unfold naturally rather than follow a rigid schedule.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I hold the view that giving genuine moral priority to suffering is the most consequential choice I make on a daily basis.",
+      "direction": "empathy"
+    },
+    {
+      "text": "When I get frustrated, the frustration escalates rapidly to a peak.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I would rather slow down and ensure everyone is on board.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I keep a structured record of contacts and when I last communicated with them.",
+      "direction": "conscientious"
     }
   ]
 }

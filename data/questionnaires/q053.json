@@ -2,75 +2,147 @@
   "id": 53,
   "questions": [
     {
-      "text": "I tend to miss the significance of pauses and silences in conversation.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I find it satisfying to maintain cohesion as the group moves forward.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I take time each evening to prepare for the next day.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I believe that life's best moments are the ones you didn't plan for.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I am the person others call when something needs to get decided.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I feel that the depth of my caring for others is something I would never want to diminish.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I am aware of the way seating arrangements reflect social dynamics.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I find that I am naturally oriented toward building my own life rather than supporting someone else's.",
+      "text": "I tend to spend money on experiences and tools that further my personal growth.",
       "direction": "self-focus"
     },
     {
-      "text": "I tend to remain physically relaxed even when discussing difficult topics.",
+      "text": "I find that I don't need much recovery time after emotionally charged situations.",
       "direction": "low-reactive"
     },
     {
-      "text": "I believe that structured, rational engagement with emotionally difficult situations is the approach most likely to minimize harm and maximize benefit.",
-      "direction": "detachment"
-    },
-    {
-      "text": "Even reading about an intense event can produce a strong physical reaction in me.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I feel that self-interest should always yield to the greater good.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I sense when someone is code-switching between their authentic self and a social persona.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I hold the view that reliability is one of the most important qualities a person can have.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I notice that even subtle shifts in atmosphere \u2014 a room going quiet, a change in tone \u2014 hit me with force.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I am the type who creates the rules of engagement for a group.",
+      "text": "I tend to frame requests as expectations rather than options.",
       "direction": "agentic"
     },
     {
-      "text": "I believe that awareness of suffering creates a moral duty to act, not merely to acknowledge.",
+      "text": "I set up automated reminders for bills, renewals, and recurring obligations.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I routinely make choices that protect and advance my own interests.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that the professionals who navigate human tragedy most effectively are those who have mastered the discipline of emotional non-engagement.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that personal accountability is the engine that drives real progress.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I tend to use my vacation days to visit people who need company rather than destinations I want to see.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I often find out about interpersonal tensions after they have already escalated.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe that diminishing my own visibility allows others to shine.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that the moral urgency of suffering is the most compelling argument for action that I ever encounter.",
       "direction": "empathy"
     },
     {
-      "text": "I often skip meals or sleep to help someone who is counting on me.",
+      "text": "I tend to assert boundaries for the group about what is and isn't acceptable.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I sense when rapport between two people is genuine versus performative.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I detect when a person's written punctuation changes to signal irritation, such as periods becoming curt.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "My emotional landscape is always vivid, always moving, always demanding my attention.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that emotional composure during difficult situations is a quality that allows me to serve as a steady point of reference for others.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I routinely update my personal goals and adjust my life to match them.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "When I connect deeply with someone, the intensity of that bond registers as a physical sensation.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel that the moral claim of suffering remains intact even when the person suffering is unable to articulate their need.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I save when it feels comfortable and spend more freely when opportunities arise.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I rarely detect when someone is strategically timing a remark.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I tend to consult the team before making any scope changes mid-project.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I notice that my emotional responses are like ripples on a pond rather than crashing waves.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I track the time I spend on different activities to understand where my hours go.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that yielding space to others is a natural extension of caring about the group.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I often establish the norms and expectations within a group.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I hold the view that my emotional reactivity is simply the volume setting I was born with.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I sense when a person withholds a compliment that would be natural because of a competitive dynamic.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I rarely take notes, preferring to trust my memory and instincts.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that reading too much into people's behavior leads to misunderstandings.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that my life has more meaning when I am actively engaged in reducing someone else's suffering.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I work in intense bursts of energy rather than at a steady, measured pace.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that I often refine and build on ideas others have introduced.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that I can maintain equanimity even when those around me are emotional.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I am able to consider the suffering of an individual as one input among many when making decisions that affect a larger group.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I routinely give up my free time so that others can get what they need.",
       "direction": "altruism"
     }
   ]

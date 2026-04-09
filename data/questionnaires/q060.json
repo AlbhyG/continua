@@ -2,76 +2,148 @@
   "id": 60,
   "questions": [
     {
-      "text": "I hold the view that my needs can always wait if someone else's are more pressing.",
+      "text": "I believe that objectivity in the face of suffering is the quality that enables me to judge when a proposed action will genuinely help and when it will not.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that spending on myself is only justified after everyone around me is taken care of.",
       "direction": "altruism"
     },
     {
-      "text": "I would describe my influence style as collaborative.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I tend not to notice when someone is putting on a brave face.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "In high-pressure situations, I look to collaborate and distribute the load.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I complete tasks well before their deadlines whenever possible.",
+      "text": "I test new approaches on a small scale before rolling them out widely.",
       "direction": "conscientious"
     },
     {
-      "text": "I find that committing too firmly to plans can make me miss out on better alternatives.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I find that I am more interested in the factual accuracy of what is said than in how it was received.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I detect when someone is subtly seeking validation in the way they tell a story.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I find that the felt weight of another's suffering has a clarifying effect on my priorities that nothing else can replicate.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I believe a project needs one clear leader to succeed.",
+      "text": "I enjoy the weight of responsibility that comes with leading.",
       "direction": "agentic"
     },
     {
-      "text": "I think that analyzing emotionally difficult situations through a lens of detached reasoning is the method that produces the most impartial and well-balanced conclusions.",
-      "direction": "detachment"
-    },
-    {
-      "text": "My emotional equilibrium is rarely disrupted for long.",
+      "text": "I rarely cry, not because I suppress emotions but because they simply don't reach that intensity.",
       "direction": "low-reactive"
     },
     {
-      "text": "I find deep satisfaction in achieving goals I set for myself.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I believe that the separation of emotional content from decision-making content is the hallmark of clear thinking under pressure.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I find that my emotional responses are measured and proportional to the situation.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I feel that fully engaging with the present is the only legacy that truly matters.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I notice that my emotional highs are exhilarating but my lows are equally deep.",
+      "text": "I can still feel the emotional residue of an argument hours or even days later.",
       "direction": "high-reactive"
     },
     {
-      "text": "I routinely invest in education and training that advances my own skills.",
+      "text": "I hold the view that suffering that goes unaddressed when I had the capacity to respond is a form of moral failure that I take seriously.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that how you do anything is how you do everything, so I attend to details.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel most effective when responsibilities are negotiated openly among team members.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I schedule thinking time into my calendar rather than leaving reflection to chance.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that the moral demand of suffering is the experience that makes my sense of ethical purpose feel alive and evolving rather than fixed and settled.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find social situations most comfortable when I know exactly what is expected of me.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that fixing something in someone else's home or workspace is deeply gratifying.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice when two people in a group have unspoken friction between them.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that my personal energy is a finite resource that I should allocate with deliberate intention toward my own goals.",
       "direction": "self-focus"
+    },
+    {
+      "text": "I find that waiting for important news doesn't produce the anxiety I see in others.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I sense when someone is listening with the intent to find a weakness in what is being said.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel that the moral pull I experience in the presence of suffering is a signal I should trust, not manage.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe it is better to overcommit to helping others than to undercommit.",
+      "direction": "altruism"
+    },
+    {
+      "text": "My digital files end up wherever is convenient; I search when I need something.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that others naturally look to me for direction.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I hold the view that composure during painful circumstances is a quality whose true worth only becomes apparent when the crisis is over and the consequences of decisions become clear.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I think that the professional skill of remaining emotionally neutral during difficult interactions is one that can be learned and strengthened with practice.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to choose the apartment, the neighborhood, and the city that best serve my own goals.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I enjoy the challenge of getting skeptics to follow my lead.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that I can switch between emotional contexts without carrying residue from one to the next.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to miss the moment when a conversation shifts from casual to serious.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I want to support whoever launches new ventures within my team.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I respond to messages when the timing feels right, not according to a self-imposed schedule.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I focus on ideas and content rather than on reading people.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I am patient in meetings that take longer than expected, trusting the process.",
+      "direction": "yielding"
+    },
+    {
+      "text": "A messy desk doesn't bother me; I know where everything is in my own way.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I pick up on the subtle cues that indicate someone feels out of place in a group.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel that there is nothing wrong with making myself the center of my own life.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I experience the surge of emotion after a close call \u2014 almost missing a flight, nearly dropping something precious \u2014 as lasting and intense.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I notice that my face and body betray my emotional intensity before I have a chance to modulate it.",
+      "direction": "high-reactive"
     }
   ]
 }

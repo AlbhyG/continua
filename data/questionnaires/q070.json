@@ -2,76 +2,148 @@
   "id": 70,
   "questions": [
     {
-      "text": "When I'm upset, the feeling saturates my entire body.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I tend not to notice when two people share a meaningful look during a conversation.",
+      "text": "I find that I am usually focused on the content of a conversation rather than its politics.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I rarely sense when someone is tailoring their message based on who is listening.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I find that a calm, objective stance during others' crises allows me to be a stabilizing force when one is needed most.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I schedule regular maintenance for my car, home, and other possessions.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I prefer relationships where I set the agenda.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I find that analytical clarity during times of distress has made me a more strategic thinker and a more dependable partner in collaborative problem-solving.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I find that self-focus is what allows me to be consistent and reliable.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I find that my own ambitions are the primary engine of my daily motivation.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I welcome unexpected changes because they often lead somewhere more interesting.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I would rather live simply so I can contribute more to the people and causes around me.",
+      "text": "I hold the view that the best friendships are the ones where I give more than I get.",
       "direction": "altruism"
     },
     {
-      "text": "I am drawn to situations where every voice carries equal weight.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I find satisfaction in helping someone else's vision come to life.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I notice that I rarely need to actively calm myself down \u2014 my system does it automatically.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I find that sadness in me is a gentle ache rather than a consuming force.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I intuitively understand the unspoken hierarchy in any social group I enter.",
+      "text": "I detect when a person uses the phrase 'no offense' as a signal that offense is exactly what they intend.",
       "direction": "hyper-attuned"
     },
     {
-      "text": "I resist routines because they make my days feel repetitive and dull.",
+      "text": "I experience the onset of emotion as a sudden physical sensation before I can even name what I'm feeling.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that the obligation to respond to suffering is a moral imperative whose force does not weaken with repetition or familiarity.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to make major life decisions based primarily on what excites and fulfills me.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that maintaining a personal journal focused on my own progress is deeply satisfying.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I would rather make a bold, imperfect decision than let the group stall.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I am attracted to opportunities where I can set the tone for a team.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel that the moral weight of suffering should be assigned based on its severity, not on how emotionally compelling the person's story is.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold the view that putting others first is simply the right way to live.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice expired items when I happen to come across them, not on a set schedule.",
       "direction": "spontaneous"
     },
     {
-      "text": "I find that the felt weight of another person's suffering is the experience that has done the most to awaken my sense of moral urgency.",
+      "text": "I rarely detect when someone's reaction to news is performed for the benefit of the person sharing it.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I pick up on when a silence after a question is the asker giving space versus the asker applying pressure.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I hold the view that true freedom means not being bound by predetermined plans.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I break vague goals into concrete next actions so I always know what to do next.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I tend to accept only the projects that align with my personal vision.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I sense when a seemingly casual question is actually loaded with significance.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I gravitate toward letting discussions continue until the group is satisfied.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe in measuring what matters so I can manage it effectively.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that I respond to the world with a kind of natural equanimity.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I would rather participate in a panel discussion than give a keynote alone.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I think that the most equitable decisions come from those who can weigh competing claims of suffering without being pulled toward the most emotionally compelling one.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that planning for worst-case scenarios wastes energy better spent on execution.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that the moral weight I give to others' suffering is not a burden but a compass.",
       "direction": "empathy"
+    },
+    {
+      "text": "I am drawn to moments where one person's decision changes everything.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I offer my expertise gently and only when it seems helpful, not as an assertion of authority.",
+      "direction": "yielding"
+    },
+    {
+      "text": "When I receive unexpected praise, the flush of pleasure is so strong it makes me lightheaded.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I plan vacations and trips well in advance, with itineraries and reservations.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that I can sit with uncomfortable news without being destabilized by it.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I rarely feel the kind of emotional urgency that demands immediate action.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that I generally miss when someone uses my name mid-conversation to increase intimacy or pressure.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that treating emotional situations with calm rationality preserves my ability to be a reliable source of help over the long term.",
+      "direction": "detachment"
+    },
+    {
+      "text": "My body is always the first to tell me how I'm feeling, often before I have words for it.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that when I have two options, I almost always choose the one that benefits someone else.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that approaching human distress with calm, analytical rigor is the approach most likely to produce genuinely equitable outcomes.",
+      "direction": "detachment"
     }
   ]
 }

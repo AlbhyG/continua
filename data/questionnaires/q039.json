@@ -2,76 +2,148 @@
   "id": 39,
   "questions": [
     {
-      "text": "I find that I have to work at reading social situations that others navigate effortlessly.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I find that I can hold someone's pain in mind as a fact to be addressed without it becoming a feeling I experience.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I am the type of person who walks the roadmap alongside others.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I detect unspoken competition between people in professional settings.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I believe that the obligation to respond to suffering is a moral demand that should take precedence over comfort or convenience.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I am highly aware of who initiates conversation and who waits to be approached in social settings.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I believe the best use of my talents is to benefit other people.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I maintain separate spaces or systems for different areas of my life to avoid confusion.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I find that the felt weight of another's suffering is the experience that most consistently reveals my true moral commitments.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I take the lead in negotiations and high-stakes conversations.",
+      "text": "I feel that my confidence in decisions helps reassure the people around me.",
       "direction": "agentic"
     },
     {
-      "text": "I enjoy the weight of responsibility that comes with leading.",
+      "text": "I feel that good leadership means making the call, not facilitating the call.",
       "direction": "agentic"
     },
     {
-      "text": "I experience fear as a measured alertness rather than a full-body panic.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "Loud noises, bright lights, or sudden changes can trigger an outsized emotional response in me.",
+      "text": "I notice that emotionally significant dates \u2014 anniversaries, milestones \u2014 produce strong bodily reactions even years later.",
       "direction": "high-reactive"
     },
     {
-      "text": "I allocate specific blocks of time for different activities throughout my day.",
-      "direction": "conscientious"
+      "text": "I believe that short-term pleasure has inherent value that shouldn't always be sacrificed for the future.",
+      "direction": "spontaneous"
     },
     {
-      "text": "I find deep satisfaction in making personal sacrifices for the benefit of my community.",
-      "direction": "altruism"
+      "text": "I notice when someone leans slightly away from a person they distrust.",
+      "direction": "hyper-attuned"
     },
     {
-      "text": "I experience disappointment as a full-body event, not just a passing thought.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I hold the view that it is important to be my own biggest advocate.",
+      "text": "I believe that my physical fitness routine should take priority over social commitments.",
       "direction": "self-focus"
     },
     {
-      "text": "I prefer to experiment with a new tool or device hands-on rather than reading instructions.",
+      "text": "I hold the view that the people who do the most good in crises are those who can maintain analytical distance from the suffering around them.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I think that emotional restraint during crises is a skill that produces measurably better outcomes for the people involved.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I notice the difference between someone who is quiet because they are content and someone who is quiet because they are upset.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I tend to miss the social implications of who gets credit for an idea in a group.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe that someone who takes command earns the right to shape the outcome.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I focus on what's interesting and energizing right now rather than optimizing for the long term.",
       "direction": "spontaneous"
+    },
+    {
+      "text": "I tend to protect my personal time fiercely.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel a strong pull to ensure the agenda reflects everyone's interests, not just mine.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I hold the view that my moral commitment to addressing suffering is best expressed through reliable, sustained action rather than through emotional intensity.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I experience transitions \u2014 new cities, new routines, new people \u2014 with curiosity rather than upheaval.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to give the largest portion to others and take whatever remains.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that my body is a poor indicator of my emotional state because it rarely changes.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I prefer to find a path everyone can accept rather than force a choice.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that assembling care packages for people going through hard times comes naturally to me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I prefer that the narrative around a project's progress reflects everyone's perspective.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that a predictable, well-ordered life is a peaceful life.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that I generally do not notice when someone is managing my impression of a third party.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I do not naturally sense when a person is gauging whether I am trustworthy before opening up.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I work on the current version and don't worry about preserving past iterations.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that loud noises, surprises, or sudden changes don't produce a big reaction in me.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I think about what tools or supplies I'll need before starting a project.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I think of my daily habits as investments that pay dividends in the years ahead.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that the obligation to respond to suffering is a moral reality that persists even when circumstances make responding difficult, costly, or inconvenient.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that engaging with human pain through an analytical framework rather than an emotional one allows me to act with greater precision and less bias.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that my nervous system treats change like an emergency, even when the change is positive.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that feeling things intensely is simply how I'm wired.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that the most important thing I can do with my life is reduce others' burdens.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I sense when a shared meal or coffee is actually a pretext for a conversation someone needs to have.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel that the moral demand of suffering is the influence that has done the most to shape the kind of friend, colleague, and community member I strive to be.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that the energy I spend on myself comes back multiplied.",
+      "direction": "self-focus"
     }
   ]
 }

@@ -2,76 +2,148 @@
   "id": 85,
   "questions": [
     {
-      "text": "I hold the view that a life lived for others is the most meaningful kind of life.",
+      "text": "I instinctively offer my seat, my place in line, or my turn to someone else.",
       "direction": "altruism"
     },
     {
-      "text": "I find that engaging with emotional situations analytically, rather than emotionally, consistently leads to more useful and more equitable outcomes.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I believe that the less I focus on my own needs, the more I can focus on what really matters.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I find that I read interpersonal dynamics like a language I have always been fluent in.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "A beautiful piece of music can bring me to tears almost instantly.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I prefer fluid, evolving roles in collaborative work where people contribute where they can.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I hold the view that the moral concern I feel in response to suffering is the quality that makes my participation in community life meaningful.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I believe that the obligation to respond to suffering is a moral imperative that applies to me regardless of whether I have a personal connection to those affected.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I hold the view that my emotional responses are like a fire that catches fast and burns hot.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I routinely take credit for my contributions because acknowledging my own work matters to me.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I tend to feel emotionally prepared for whatever comes, because my system doesn't overreact.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I make decisions quickly and stand by them.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I believe that preparation is what separates success from failure in most endeavors.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I gravitate toward being the one who decides when a discussion has gone on long enough.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I tend not to notice when someone is performing friendliness rather than genuinely feeling it.",
+      "text": "I do not usually detect when someone drops a hint about what they want for a gift or occasion.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I document lessons learned from past experiences to avoid repeating mistakes.",
+      "text": "I notice when a group's unspoken topic of avoidance is the most important thing no one is saying.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I enjoy being the gatekeeper who controls access to key decisions.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I often make purchases on impulse when something catches my eye.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that creating checklists helps me stay focused and avoid overlooking details.",
       "direction": "conscientious"
     },
     {
-      "text": "I tend to let conversations flow where the group takes them.",
+      "text": "Even a mildly critical tone of voice can set off alarm bells throughout my system.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that I learn about social norms through trial and error rather than intuition.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I hold the view that processing suffering through analytical frameworks is more productive than processing it through emotional engagement.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I would trade a comfortable retirement for the chance to fund someone else's education.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I routinely choose quality-of-life improvements for myself over gifts for others.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I tend to let the group define its own evaluation criteria.",
       "direction": "yielding"
     },
     {
-      "text": "I detect when someone's agreement comes with unspoken conditions or reservations.",
+      "text": "I believe that careful planning is the foundation of meaningful accomplishment.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that accumulating things for myself is less important than ensuring others are provided for.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I experience the minutes before a big event as an almost electric buzzing under my skin.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "My emotional responses are present but proportionate \u2014 they don't take over.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to take jokes and comments literally when others see layers of meaning.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that my emotional responses are like a dimmer switch set to moderate rather than full brightness.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I volunteer to chair committees or working groups without hesitation.",
+      "direction": "agentic"
+    },
+    {
+      "text": "When I see others in pain, I feel a moral pull to respond that outweighs my own comfort.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that the moral priority of suffering is the conviction that, once fully internalized, transforms not just specific decisions but the entire orientation of a person's life.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I don't dwell on things I've forgotten to do; I simply pick them up when I remember.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice when someone positions a request as a suggestion to make it more palatable.",
       "direction": "hyper-attuned"
+    },
+    {
+      "text": "I develop contingency plans for critical tasks even when things are going well.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I hold the view that personal fulfillment should not be sacrificed for the sake of others.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that decisions about how to respond to suffering should be based on evidence and reasoning rather than on the strength of the emotional response it provokes.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I detect when a gift or favor comes with unspoken strings attached.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I travel light and improvise with whatever is available if I need something.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel that collaborative decision-making leads to more durable outcomes.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that treating painful situations as analytical challenges rather than emotional ones is the approach that lets me contribute the most.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel at home being the primary representative of a group to the outside world.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I hold the view that my nervous system is exceptionally sensitive to stimulation.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I experience daily frustrations \u2014 traffic, delays, minor inconveniences \u2014 without a noticeable rise in my stress level.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe that the moral weight of suffering is not diminished by distance, familiarity, or circumstance, and my response should reflect that.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I prefer that quality standards be maintained through peer review rather than a single gatekeeper.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I hold the view that self-improvement books, courses, and retreats are among my best investments.",
+      "direction": "self-focus"
     }
   ]
 }

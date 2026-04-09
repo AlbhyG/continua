@@ -2,75 +2,147 @@
   "id": 41,
   "questions": [
     {
-      "text": "I would decline an award or honor and redirect attention to the team.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I sense when someone is withholding information based on who else is present.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I thrive when I have the authority to make things happen.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I pick up on tension between colleagues even when they are being perfectly professional.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I would give up a cherished personal goal if doing so served a greater collective need.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I find that one strong emotion can completely hijack my attention.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I have been told that I am a great team player.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I don't tend to carry the emotional residue of one event into the next.",
+      "text": "I hold the view that my low reactivity means I'm able to stay with difficult realities without flinching.",
       "direction": "low-reactive"
     },
     {
-      "text": "I tend to miss when a conversation has a dual purpose beyond its surface topic.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I find that emotional recovery is a slow process for me compared to others.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I have a hard time following when I think I could lead better.",
-      "direction": "agentic"
-    },
-    {
-      "text": "My sleep schedule shifts depending on what I'm engaged with; I follow my energy.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I use tools like spreadsheets, project boards, or apps to keep my life organized.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I think that effective leadership requires the ability to make decisions about people's lives without being swayed by their individual stories.",
+      "text": "I find that I contribute most when I maintain an objective stance rather than allowing myself to be moved by the emotional gravity of a situation.",
       "direction": "detachment"
     },
     {
-      "text": "I believe that suffering creates a moral obligation that is more compelling than any argument against acting.",
+      "text": "I notice when a person's typing speed in a live chat changes in response to the emotional content of the discussion.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I tend to accept invitations at face value without wondering if there is a subtext.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that the moral weight I assign to suffering is not an opinion I hold but a conviction that organizes my priorities.",
       "direction": "empathy"
     },
     {
-      "text": "I find that the felt weight of suffering is the experience that most consistently reminds me that my ethical responsibilities extend beyond my immediate circle.",
+      "text": "I believe that the moral weight of suffering, once I have truly registered it, cannot be set aside without a cost to my integrity.",
       "direction": "empathy"
     },
     {
-      "text": "I find that advance planning allows me to be more present during execution.",
+      "text": "I tend to miss the social signal when someone says 'we should do this sometime' without ever intending to follow through.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I hold the view that taking care of myself first puts me in the best position to live well.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I hold the view that emotional detachment during painful situations is not a lack of caring but a different and sometimes superior way of caring.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I notice that my jaw clenches and my shoulders tense the instant I feel threatened or upset.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that the obligation to respond to suffering is what transforms ethical knowledge into ethical practice.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I evaluate options holistically in the moment rather than against predetermined criteria.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I accept that last-minute rushes are part of my natural rhythm and often produce my best work.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel most effective when I can direct the allocation of responsibilities.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I hold the view that the most useful thing I can offer in a painful situation is clear, structured thinking rather than an emotional response.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I routinely reduce my own workload expectations so I can pitch in where others are struggling.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I pick up on the way people position themselves physically relative to those they trust.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe my knowledge is wasted if it only benefits me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "My body temperature seems to fluctuate with my emotional state \u2014 hot when agitated, cold when frightened.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I establish personal policies for recurring decisions so I don't have to deliberate each time.",
       "direction": "conscientious"
     },
     {
-      "text": "I tend to allocate the majority of my resources to my own development.",
+      "text": "I would share a professional secret or competitive advantage if it would significantly help someone else.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I prepare talking points before important conversations.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that flat, collaborative structures produce better results.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I often find that I am the one defining what success looks like.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I notice that my appetite and energy fluctuate dramatically with my emotional state.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I often champion a particular direction and rally others behind it.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I can tell when someone responds to a text with a shorter message than usual and what that brevity means.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that traveling alone to pursue my own interests is more fulfilling than compromising on a group itinerary.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I prefer that new initiatives come from a collective mandate.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I notice that I rarely need to actively calm myself down \u2014 my system does it automatically.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I do not naturally sense when a room is tense.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I organize information I consume into notes, highlights, or summaries for later use.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I return things when I remember, without feeling pressured by a specific timeline.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I consider my ability to amplify others' voices an important professional asset.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that my emotional thermostat has a narrow range \u2014 I don't often reach the extremes.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe my personal fulfillment should not depend on what I do for other people.",
       "direction": "self-focus"
     }
   ]

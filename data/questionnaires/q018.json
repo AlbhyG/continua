@@ -2,75 +2,147 @@
   "id": 18,
   "questions": [
     {
-      "text": "I believe that my willingness to defer is valuable to those around me.",
+      "text": "I am comfortable letting others make the final call.",
       "direction": "yielding"
     },
     {
-      "text": "I find that caffeine, sleep deprivation, or other stressors don't dramatically alter my emotional state.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I believe that living for something beyond myself is the only way to find real meaning.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I can sense when two people are pretending to get along but actually dislike each other.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I feel that I have a naturally wide window of tolerance for emotional stimulation.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I feel that a flexible, exploratory approach to problem-solving leads to more creative outcomes.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "When I'm moved by something, the feeling washes over me like a wave.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I hold the view that punctuality shows respect for other people's time.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I feel that moral attention to suffering is the most fundamental practice through which I express my values.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I believe that analytical composure during a human crisis is what turns good intentions into effective action.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I tend to focus on the task at hand rather than the interpersonal dynamics around it.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I believe that maintaining objectivity during distressing events is the practice that most effectively prevents good intentions from leading to unintended harm.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I hold the view that true freedom means not being bound by predetermined plans.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I tend to be oblivious to the backstory between people I meet.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I hold the view that self-investment yields the highest returns of any investment.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I would rather slow down and ensure everyone is on board.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I believe that a leader who hesitates loses credibility.",
+      "text": "I often take it upon myself to resolve group disagreements by choosing a path.",
       "direction": "agentic"
     },
     {
-      "text": "I find that I set boundaries naturally around my time, energy, and attention.",
+      "text": "I tend to exhaust my own resources before asking others to contribute theirs.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel that my strength lies in sustaining group cohesion.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I routinely pick up tasks no one else wants to do, so the group can function well.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I sometimes feel overwhelmed by the sheer intensity of being alive.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel that the moral demand of suffering reveals the depth of my values in a way that ordinary life does not.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I am at my most helpful when I can analyze a crisis without being pulled into its emotional current.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I notice that I can hold space for difficult conversations without my own equilibrium being disrupted.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe my emotional intensity is central to who I am.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I think it is important to make a stand and defend it.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that over-preparation can make me rigid and slow to adapt when things change.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I am content letting the group commit without needing to add my final word.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I detect when someone is saying yes but meaning no.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I hold the view that my system is designed for endurance rather than intensity.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that I am most trusted in difficult situations because I bring logical clarity rather than emotional intensity.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend not to detect when a friendly question is actually a form of gatekeeping.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I tend to be focused on my own train of thought during conversations rather than scanning for reactions.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I detect when someone uses a nickname versus a full name to signal the current state of a relationship.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel that my role in any friendship is to be the one who gives more.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that the pull toward responding to suffering is the most honest expression of the values I actually hold.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that even significant life changes don't produce the emotional turbulence others describe.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I send emails as soon as I write them, trusting my first phrasing is good enough.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I prefer to own the relationship with external partners on behalf of the team.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I develop my argument as I speak, discovering what I think in real time.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I hold the view that the obligation to respond to suffering is among the most non-negotiable commitments a person can hold.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I track my goals with quantifiable metrics so I can see objective progress.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I prioritize long-term wellbeing over short-term pleasure when the two conflict.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I build buffers into estimates because I know unexpected complications are inevitable.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I am highly aware of who initiates conversation and who waits to be approached in social settings.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I have been told that I feel things more intensely than most people.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that it is important to be my own biggest advocate.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that I have to work at reading social situations that others navigate effortlessly.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I routinely protect my focus time even when others express disappointment.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I think that approaching others' distress with calm, logical analysis is the behavior that most reliably converts good intentions into measurable improvements.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that ensuring my own financial security comes before generosity.",
       "direction": "self-focus"
     }
   ]

@@ -2,76 +2,148 @@
   "id": 64,
   "questions": [
     {
-      "text": "I think that composure during emotionally charged situations is a form of service to the people involved, not a form of indifference.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I find that groups work best when no single person dominates the conversation.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I feel that the best version of me is the one most devoted to others.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I believe that the practice of remaining objective during distressing events is a discipline that, far from diminishing empathic concern, channels it in more productive directions.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I tend to evaluate conversations based on the quality of the ideas rather than the social nuances.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I tend to guard my weekends for personal projects and rest.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I resist templates because each situation deserves a unique response.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I tend to feel the full weight of an experience rather than experiencing it at a distance.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I believe that good habits, built over time, are the backbone of a well-lived life.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I prefer to offer suggestions rather than give directives.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I notice when someone uses inclusive language strategically to build alliance.",
+      "text": "I detect when someone's agreement comes with unspoken conditions or reservations.",
       "direction": "hyper-attuned"
     },
     {
-      "text": "I feel that a clear chain of command produces better results.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I find that I'm rarely the most emotionally activated person in any given room.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I find that I miss the political dimensions of workplace conversations.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I believe my emotional range is real but operates within a narrower band than most.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I feel that the weight of suffering in my moral outlook is the quality that has most consistently prevented me from accepting injustice as normal or inevitable.",
+      "text": "I believe that emotional connection to others' suffering is what drives people to make the world better.",
       "direction": "empathy"
     },
     {
-      "text": "I hold the view that personal fulfillment should not be sacrificed for the sake of others.",
+      "text": "I would rather lead a risky venture than follow in a safe one.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that I am not naturally attuned to the way gossip functions as social bonding.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I handle administrative tasks in bursts when they become unavoidable.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I gently offer perspective but leave it to others to decide if they are off track.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I notice that my sleep quality is rarely affected by emotional events from the preceding day.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that setting firm boundaries around my personal time prevents burnout and keeps me effective.",
       "direction": "self-focus"
+    },
+    {
+      "text": "I would rather make a controversial call than let the team drift without direction.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel that the moral demand of suffering is what gives urgency to commitments that would otherwise remain abstract.",
+      "direction": "empathy"
     },
     {
       "text": "I feel that the future takes care of itself if you fully engage with the present.",
       "direction": "spontaneous"
+    },
+    {
+      "text": "I prefer to speak off the cuff because rehearsed delivery feels stiff to me.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that decisions made from a position of emotional calm are more likely to be just than decisions made in the heat of emotional engagement.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that building my own capabilities is the foundation of a good life.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find deep satisfaction in making personal sacrifices for the benefit of my community.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I believe that my calm is structural, not performative \u2014 it goes all the way down.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that my emotional temperature swings widely within a single conversation.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "When I feel content, the contentment saturates me completely \u2014 it's not a background hum, it's the whole song.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I notice that my emotions leave a physical imprint \u2014 tension headaches, tight shoulders, clenched fists.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel that my energy is best spent helping others reach their goals.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that self-investment is not selfish\u2014it's essential.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that the moral priority of suffering is the conviction that has most consistently shaped the way I evaluate my own actions and their consequences.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I pick up on the way people's footsteps change when they are approaching someone they are nervous around.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I tend to miss when someone includes me in a plan out of obligation rather than desire.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe that approaching difficult human situations with deliberate objectivity is a mark of maturity, not of coldness.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to miss the warning signs that a conversation is heading toward conflict.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe I have a talent for bringing people together around a shared purpose.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I experience the quiet moments of life \u2014 a still morning, a warm drink \u2014 with a gentle appreciation that never tips into intensity.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I hold the view that I should be the first to arrive and the last to leave when there is work to be done for others.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I sense when someone is using a story about another person to indirectly talk about themselves.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I tackle administrative tasks on a regular schedule so they never pile up.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I prefer to give clear directives rather than open-ended suggestions.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I typically let someone else introduce structure and then adapt to it.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I update my to-do list throughout the day as new tasks surface.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that maintaining a dispassionate analytical stance during crises is a practice that over time has made me more effective and more trustworthy as a helper.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I build transition rituals between activities to stay grounded and focused.",
+      "direction": "conscientious"
     }
   ]
 }

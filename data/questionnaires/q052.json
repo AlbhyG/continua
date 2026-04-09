@@ -2,76 +2,148 @@
   "id": 52,
   "questions": [
     {
-      "text": "I tend to see helping others as secondary to achieving my own objectives.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "My startle response is mild \u2014 unexpected events register but don't jolt me.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I often find that I help the group define what success looks like together.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I routinely say no to requests that don't align with my personal objectives.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I gravitate toward letting discussions continue until the group is satisfied.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I tend to work extra hours not for my own advancement, but to lighten the load for my team.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I prefer to own the outcome of a decision rather than share that ownership.",
+      "text": "I feel a strong pull to be in charge of important initiatives.",
       "direction": "agentic"
     },
     {
-      "text": "I think that the ability to evaluate situations of human suffering with precision requires deliberate emotional self-regulation.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I feel that relying on willpower is exhausting; I'd rather follow my natural energy.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I can engage with intense subject matter \u2014 war, loss, tragedy \u2014 without being emotionally flooded.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I do not pay much attention to facial expressions during conversations.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I hold the view that the consistency of my moral concern for suffering \u2014 not its peak intensity \u2014 is the truest measure of its depth.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I value variety in my daily routine because it keeps me mentally sharp and engaged.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I notice the difference between someone who is quiet because they are content and someone who is quiet because they are upset.",
+      "text": "I sense when someone is performing confidence they do not actually feel.",
       "direction": "hyper-attuned"
     },
     {
-      "text": "I find that I am at my most effective when I can engage with a problem without being emotionally invested in the people involved.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I find that writing out my goals makes me significantly more likely to achieve them.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "My emotional landscape has extreme peaks and valleys rather than rolling hills.",
+      "text": "I find that celebrations and happy occasions fill me with a joy so strong it's almost painful.",
       "direction": "high-reactive"
     },
     {
-      "text": "I do not automatically read into people's tone or body language.",
+      "text": "I find that I do not register the difference between a quick hello and a deliberate greeting.",
       "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that I have a natural shock absorber for emotional impact.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to choose conferences, workshops, and events based on how they advance my career specifically.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that when I receive an unexpected gift, I immediately think of someone who would appreciate it more.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that subtext is something I recognize in books more easily than in real life.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I tend to frame every major decision by asking: does this move me closer to where I want to be?",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I enjoy adapting to and reinforcing the culture that already exists on a team.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that the moral urgency of suffering exists independently of whether I happen to feel an emotional reaction to it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the wellbeing of those around me is ultimately more important than my own wellbeing.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find it difficult to dial down my emotional intensity once it has ramped up.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I ramp up effort as a project progresses, letting early stages stay loose and exploratory.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I hold the view that my free time is a resource that should flow toward whoever needs it most.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I believe that too many habits can make life mechanical and rob it of spontaneity.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that my emotional life is so vivid it sometimes feels like I'm living more intensely than my circumstances warrant.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I have noticed that I respond to others' emotional pain with analysis rather than with feeling.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I see my presence in a group as primarily about providing direction.",
+      "direction": "agentic"
+    },
+    {
+      "text": "When I am near someone in deep pain, their suffering exists in my awareness as a moral weight that requires a response.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold the view that the moderate volume of my emotions is not numbness \u2014 it is a different kind of richness.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I review my calendar at the start of each day to set my intentions.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find myself reading between the lines in most conversations.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I hold the view that composure during distressing situations is the quality that creates space for careful deliberation in circumstances where haste would be harmful.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that I navigate social situations best when the rules are clearly defined.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I stay available throughout the day because the best conversations happen unexpectedly.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that the moral significance of suffering creates a responsibility that is both immediate and enduring.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I experience the onset of any emotion as a gradual dawn rather than a sudden blaze.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to choose my battles based on what matters most to my own goals.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I notice the precise moment when a group conversation becomes dominated by one person.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I think that analytical detachment during emotionally charged moments is a kind of service that is undervalued because it does not look like caring.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that buy-in justifies taking extra time for collective decision-making.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that consistency is what transforms average effort into exceptional outcomes.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I consider the downstream effects of my choices on future commitments before deciding.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that my decisiveness prevents wasted effort.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I naturally gravitate toward connecting people and letting them find their own roles.",
+      "direction": "yielding"
     }
   ]
 }

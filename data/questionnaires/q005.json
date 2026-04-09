@@ -2,76 +2,148 @@
   "id": 5,
   "questions": [
     {
-      "text": "I think that the ability to evaluate suffering without being consumed by it is what distinguishes sustainable helpers from those who burn out.",
+      "text": "I find that I am drawn to roles and situations where my capacity for clear thinking during emotional intensity is needed.",
       "direction": "detachment"
     },
     {
-      "text": "I find that I read social situations the way a musician reads a score, perceiving multiple layers at once.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I notice when someone is testing the waters with a comment before committing to an opinion.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I feel that planning for worst-case scenarios is practical, not pessimistic.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I regularly redirect my personal budget toward helping people around me.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I believe that the moral demand of suffering is clearest when it calls for action that is inconvenient, costly, or socially awkward.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I pour my energy into whatever excites me now and trust I'll recharge when needed.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I find that I can be in a noisy, chaotic environment without feeling overstimulated.",
+      "text": "I find that emotional upheaval in my environment doesn't destabilize me internally.",
       "direction": "low-reactive"
     },
     {
-      "text": "I find it energizing to direct a team through a challenging situation.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I hold the view that generosity should come before security.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I would describe my influence style as directive.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I lay out my clothes, pack my bag, or prepare materials the night before.",
+      "text": "I feel that having contingency plans is essential because things rarely go as expected.",
       "direction": "conscientious"
     },
     {
-      "text": "I feel that the moral pull I experience in the presence of suffering is evidence of a well-functioning conscience.",
+      "text": "I experience moments of awe so strongly that they bring me to a standstill.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I pick up on when a group collectively decides to pretend something did not happen.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I hold the view that suffering, when recognized, creates a moral imperative that should be reflected in my actions, priorities, and choices.",
       "direction": "empathy"
     },
     {
-      "text": "I experience embarrassment as a searing, full-body flush that takes a long time to dissipate.",
+      "text": "I feel restless when no one is taking charge of a situation.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that remaining analytically engaged while others are emotionally overwhelmed is a contribution that often goes unrecognized.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I am energized by the process of building a decision together.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I am wired to flag what seems broken and let the group decide how to address it.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that tracking my own financial growth is a satisfying and important practice.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I notice when a person clenches or unclenches their hands in rhythm with the emotional intensity of a conversation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that the felt weight of another person's hardship is a form of moral evidence that deserves serious consideration.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold the view that unused capacity in my life represents a missed opportunity to serve.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I can look back on difficult periods without re-experiencing the emotional intensity.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I think that the most equitable treatment of people's needs comes from those who can separate the emotional from the factual.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I rarely notice when someone is performing busyness to avoid a conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I have changed my plans because I became aware that someone needed help, even when it was inconvenient.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I value speed and momentum over precision in the early stages of any effort.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel that spending lavishly on my own experiences is a worthwhile use of money.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I prefer to help execute a shared vision rather than set one alone.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel the emotional atmosphere of a room the moment I walk in, and it lands in my body immediately.",
       "direction": "high-reactive"
+    },
+    {
+      "text": "I can detect insincerity in someone's tone of voice even over the phone.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I walk into meetings ready to engage with whatever comes up, without advance preparation.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that writing everything down makes me feel constrained rather than empowered.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I think of authority as something to be exercised, not just held.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I identify the single most important task each day and make sure it gets done first.",
+      "direction": "conscientious"
     },
     {
       "text": "I tend to miss social cues that seem obvious to others.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I find it hard to be around conflict because my body reacts so strongly to tension.",
+      "text": "I tend to miss when a conversational pause is an invitation for me to share something personal.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I rarely feel that my emotions are too much for me to handle.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel that having a single decision-maker leads to clearer outcomes.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find deep contentment in giving away things I worked hard to earn.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I believe that preparation is what separates success from failure in most endeavors.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that returning home after time away produces a surge of feeling so strong it catches me off guard.",
       "direction": "high-reactive"
     },
     {
-      "text": "I hold the view that groups find focus naturally when everyone's voice is heard.",
-      "direction": "yielding"
+      "text": "I hold the view that my personal library, workspace, and equipment should reflect my standards.",
+      "direction": "self-focus"
     },
     {
-      "text": "I believe investing in my own development is one of the most important things I can do.",
-      "direction": "self-focus"
+      "text": "I hold the view that I should always be looking for ways to lighten someone else's burden.",
+      "direction": "altruism"
     }
   ]
 }

@@ -2,76 +2,148 @@
   "id": 93,
   "questions": [
     {
-      "text": "I hold the view that feeling things intensely is simply how I'm wired.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I hold the view that putting others first is simply the right way to live.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I find that other people's gratitude means more to me than any personal reward.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I find that the moral demand of suffering grows stronger, not weaker, the more carefully I consider it.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I prefer to formulate my response to a difficult human situation before engaging with its emotional content.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I find that I am surprised when people read a lot into minor changes in my behavior.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I experience nostalgia as a pleasant memory rather than an aching longing.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I feel responsible for keeping a group on track toward its goals.",
+      "text": "I feel energized when people follow my lead.",
       "direction": "agentic"
     },
     {
-      "text": "I find that self-directed effort is the most energizing kind of work.",
-      "direction": "self-focus"
+      "text": "I proactively identify risks at the start of any new undertaking.",
+      "direction": "conscientious"
     },
     {
-      "text": "I feel that waiting for full consensus wastes valuable momentum.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I prefer flexible timelines that the group agrees upon together.",
+      "text": "I often wait for the group to signal readiness before pursuing change.",
       "direction": "yielding"
     },
     {
-      "text": "I can detect insincerity in someone's tone of voice even over the phone.",
+      "text": "I pick up on the implicit social contracts operating in different cultural contexts.",
       "direction": "hyper-attuned"
     },
     {
-      "text": "I hold the view that the moral weight of suffering should not be adjusted downward because of how common or expected the suffering is.",
-      "direction": "empathy"
+      "text": "I hold the view that personal growth should be a daily practice.",
+      "direction": "self-focus"
     },
     {
-      "text": "I find that being thorough the first time saves me from having to redo work later.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I feel more in control when I'm free to react to what's actually happening rather than following a script.",
+      "text": "I say yes to compelling opportunities even if they don't fit my current priorities.",
       "direction": "spontaneous"
     },
     {
-      "text": "I feel that the future is something you design through deliberate action in the present.",
-      "direction": "conscientious"
+      "text": "I craft each communication fresh because templates feel impersonal to me.",
+      "direction": "spontaneous"
     },
     {
-      "text": "I tend to go all-in emotionally, whether the feeling is positive or negative.",
+      "text": "I believe that the obligation to respond to suffering has a moral authority that overrides most other considerations.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I experience the surprise of being startled not as a brief jolt but as a lingering rush of adrenaline.",
       "direction": "high-reactive"
     },
     {
-      "text": "I often notice when someone's enthusiasm is performed rather than felt.",
+      "text": "I notice that emotional events pass through me rather than sticking \u2014 like water off a smooth surface.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that maintaining composure in the presence of strong emotions from others enables me to provide the kind of help that is actually needed.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I enjoy negotiating as an equal partner.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that reserving my best energy for my own creative work is non-negotiable.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I hold the view that any award or recognition I receive belongs partly to everyone who supported me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I would move to a less desirable place if it let me be more useful to people who need help.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that I am often unaware of the social significance of gestures and mannerisms.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I see my daily routine as a series of intentional choices, not defaults.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that treating others' suffering as morally compelling \u2014 even when I am tired or distracted \u2014 is a discipline that reflects my real values.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to miss when someone is trying to end a conversation politely.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel responsible for keeping a group connected and cohesive.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that I thrive when I give myself permission to focus on what I want.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I notice when someone deliberately echoes the vocabulary of the most powerful person in the room.",
       "direction": "hyper-attuned"
+    },
+    {
+      "text": "When I'm in the grip of a strong emotion, the world outside of it seems to temporarily cease to exist.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I tend to pick up the tab without mentioning it.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I am able to assess the severity of someone's situation without my assessment being colored by emotional involvement.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that hesitation costs more than imperfect action.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I keep my workspace meticulously organized because it helps me think clearly.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I swap seasonal items when the weather actually changes rather than on a set date.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice when someone speeds up their speech to get through a point before they can be interrupted.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I notice that my system takes much longer than others' to recalibrate after a disruptive event.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that my low reactivity gives me a kind of durability in the face of life's difficulties.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that I can hold the weight of bad news without it visibly affecting me.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I rarely pick up on the nonverbal negotiation that happens before a group makes a decision.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I am the person who usually calls the meeting or sets the agenda.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that the moral weight of suffering is the measure by which I judge whether my life is being lived with integrity.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I can work through emotionally heavy material \u2014 accounts of trauma, loss, injustice \u2014 without it altering my focus.",
+      "direction": "detachment"
     }
   ]
 }

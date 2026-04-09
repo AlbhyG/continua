@@ -2,76 +2,148 @@
   "id": 6,
   "questions": [
     {
-      "text": "I hold the view that the sincerity of my moral commitments is most accurately measured by how I respond to suffering, not by what I say about it.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I tend to describe my emotional experiences in moderate terms \u2014 things are good, fine, okay.",
+      "text": "My baseline emotional state is one of calm readiness.",
       "direction": "low-reactive"
     },
     {
-      "text": "I respond to messages when the timing feels right, not according to a self-imposed schedule.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I think that the capacity for objective assessment in the presence of human pain is a form of strength that serves the common good.",
+      "text": "I find that I am better at identifying what someone actually needs when I set aside the emotional coloring of their situation.",
       "direction": "detachment"
     },
     {
-      "text": "I often end up as the reliable supporter in group projects.",
+      "text": "I step aside willingly to give others opportunities to lead, even if I feel capable.",
       "direction": "yielding"
     },
     {
-      "text": "I believe that my willingness to decide quickly is valuable to those around me.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I sense when someone chooses a specific word because another word would reveal too much.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I often realize only later that someone was upset during a conversation.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I find purpose in being the one who shoulders the burden so others don't have to.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I let the boundaries between different areas of my life blur naturally.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I find it natural to ask others what they expect from themselves.",
-      "direction": "yielding"
-    },
-    {
-      "text": "After a stressful event, it takes me a long time to return to my emotional baseline.",
+      "text": "When I feel inspired, the energy is so strong that sitting still feels impossible.",
       "direction": "high-reactive"
     },
     {
-      "text": "I feel that my personal comfort and satisfaction are things I should actively cultivate.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I hold the view that the strongest contribution I can make starts with a strong self.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I experience emotions at a moderate volume \u2014 present but never overwhelming.",
+      "text": "I find that my emotional responses don't produce noticeable physical symptoms.",
       "direction": "low-reactive"
     },
     {
-      "text": "I find that I navigate emotionally complex situations more effectively by treating them as intellectual problems with emotional dimensions, rather than the reverse.",
+      "text": "I notice that physical sensations rarely accompany my emotional states.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel that personal reading time is a non-negotiable part of my schedule.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I often need time alone after social events to process the intensity of my reactions.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel that the obligation to respond to pain is a commitment that defines the core of my ethical life.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I routinely bring extra food, supplies, or materials to share with whoever might need them.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that a detached, methodical engagement with human suffering is the posture that most effectively combines clarity of thought with depth of commitment.",
       "direction": "detachment"
     },
     {
-      "text": "I take a methodical approach to learning new skills, following a structured curriculum.",
+      "text": "I hold the view that it is perfectly acceptable to choose personal benefit over collective benefit.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that I miss the social meaning behind the order in which people are greeted or acknowledged.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find myself noticing the cadence and rhythm of a conversation, not just the words.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I routinely accept inconvenience so that other people's lives run more smoothly.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice that my pulse quickens noticeably in response to emotional stimuli.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that the moral weight of someone's suffering should never be discounted simply because responding to it is inconvenient.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that my personal brand\u2014how I am perceived\u2014is something I should actively manage.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I tend to miss the political subtext in professional communications.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel empowered when I can make executive decisions.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I am aware of the invisible alliances that form in any group setting.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I actively lobby for my perspective before a group makes a decision.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I keep a running list of things I need to remember and review it regularly.",
       "direction": "conscientious"
     },
     {
-      "text": "I find that I am usually the last person to notice when the mood in a room has shifted.",
+      "text": "I quickly establish the pecking order in any new group I join.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I would choose a less prestigious school or job if the alternative let me stay close to people who need me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I do not usually notice when a text message carries emotional subtext that goes beyond the words.",
       "direction": "hypo-attuned"
+    },
+    {
+      "text": "I wait for the right mood to tackle unpleasant tasks, knowing the timing matters.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that the best creative work happens when all structure is removed.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "In high-pressure situations, I look to collaborate and distribute the load.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I complete tasks well before their deadlines whenever possible.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I hold the view that detached, methodical reasoning about painful situations is the approach that yields the broadest view and the most thoughtful response.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I am content to contribute to something larger without needing personal recognition.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I hold the view that speed in execution is what keeps an idea alive long enough to matter.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel that the moral demand of suffering is the experience that gives my sense of justice its emotional foundation and its motivating power.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice when someone offers a half-truth that is technically accurate but misleading in context.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I verify that backups of important data are running correctly on a regular basis.",
+      "direction": "conscientious"
     }
   ]
 }

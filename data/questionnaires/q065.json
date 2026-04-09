@@ -2,76 +2,148 @@
   "id": 65,
   "questions": [
     {
-      "text": "I find that I cannot simply turn off my concern for someone once I have seen their pain.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I pick up on when someone is being intentionally ambiguous to keep their options open.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I notice that my emotional states leave a kind of afterimage that takes time to clear.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I tend to allocate my vacation time to personal restoration and exploration.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I feel uncomfortable starting a project without a clear outline of the steps involved.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I notice when a person mirrors another person's gestures as a sign of rapport.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I believe that self-effacement is a strength, not a weakness.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I believe that the moral priority of suffering is the insight that connects abstract ethics to the concrete reality of human lives.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I instinctively create structure where there is none.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I am comfortable overruling a group decision when I believe I am right.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I generally negotiate the terms of a collaboration with all parties.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I think about what needs to happen three steps ahead of where I currently am.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I hold the view that maintaining objectivity when others are in distress is the foundation of sound judgment in any helping profession.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I believe that self-denial for the sake of others is deeply meaningful.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I believe the best conversations are those where everyone speaks plainly.",
+      "text": "I rarely pick up on the implicit rules of a new social group without being told.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I think of each day as its own self-contained experience rather than an investment in the future.",
-      "direction": "spontaneous"
+      "text": "I tend to think of my career as the central project of my life.",
+      "direction": "self-focus"
     },
     {
-      "text": "I sometimes feel like a lightning rod for emotional intensity.",
+      "text": "I believe my emotional steadiness allows me to remain functional in situations that would overwhelm a more reactive person.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I notice when someone adopts a casual posture to deliberately lower the perceived stakes of a conversation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that every interaction contains far more information than the words exchanged.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I am comfortable making decisions that cause short-term distress to others when I believe the outcome is better overall.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I experience fear as a measured alertness rather than a full-body panic.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I am inclined to share my reasoning first and let the group reach the decision.",
+      "direction": "yielding"
+    },
+    {
+      "text": "My body keeps score of every emotional event \u2014 I feel the accumulated weight.",
       "direction": "high-reactive"
     },
     {
-      "text": "I notice that my heart rate stays fairly constant even during heated discussions.",
+      "text": "I think about the second- and third-order consequences of my decisions.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I deal with problems as they come up rather than trying to anticipate every possible issue.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I hold the view that every skill I develop should eventually be taught to someone else.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to spend my weekends doing things for other people rather than pursuing my own hobbies.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I am inclined to avoid exercising authority if it would create tension.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I let habits form and dissolve naturally without deliberate auditing.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I do not pick up on when someone is testing my reaction before committing to a stance.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that the pull toward responding to suffering is a moral instinct that I trust more than almost any other guide.",
+      "direction": "empathy"
+    },
+    {
+      "text": "Loud noises, bright lights, or sudden changes can trigger an outsized emotional response in me.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that cooking for others, even when I am tired, fills me with purpose.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that moral engagement with suffering requires me to remain attentive to it long after the initial awareness has passed.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the recognition of suffering as important is the essential first step without which no meaningful response can follow.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I complete the hardest tasks first when my energy is highest.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that I pay more attention to what is said than to the unspoken dynamics in a conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I hold the view that the most important relationship I have is the one with myself.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I notice when a person arranges their belongings on a table to claim space or establish boundaries.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I gravitate toward being the one who decides when a discussion has gone on long enough.",
+      "direction": "agentic"
+    },
+    {
+      "text": "My emotions don't trickle in \u2014 they arrive like a sudden downpour.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I instinctively place myself in the center of the information flow.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I act on my initial understanding and ask for clarification only if I get stuck.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I hold the view that a rational, evidence-based approach to human distress is the method that minimizes unintended consequences and maximizes positive impact.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I notice that my emotional reactions rarely interfere with my ability to function.",
       "direction": "low-reactive"
+    },
+    {
+      "text": "I find that my natural inclination toward analytical thinking during emotional situations is an asset I have learned to rely on.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to set the criteria by which the group evaluates options.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel a genuine sense of accomplishment when I execute a plan exactly as designed.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I tend to choose the restaurant, the movie, or the activity that I most want.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I bring concerns about a plan to the group rather than canceling it myself.",
+      "direction": "yielding"
     }
   ]
 }

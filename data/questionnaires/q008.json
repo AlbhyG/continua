@@ -2,76 +2,148 @@
   "id": 8,
   "questions": [
     {
-      "text": "I respond to new information by pivoting quickly rather than updating a formal plan.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "My startle response is pronounced \u2014 unexpected sounds or events jolt me intensely.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I believe that my calm disposition is simply how my system is calibrated.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I find that directing my energy inward\u2014toward my own improvement\u2014is deeply satisfying.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I am usually focused on the substance of a discussion rather than its emotional texture.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I feel most at ease when I have minimal systems and maximum freedom.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I believe that remaining emotionally uninvolved during another's crisis enables a quality of judgment that emotional involvement would compromise.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I believe that my steady temperament reflects a genuine way of experiencing the world.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I am the person who helps refine and improve someone else's plan of action.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I feel that acquiring resources for my own future is prudent and right.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I hold the view that taking others' suffering seriously enough to act on it \u2014 not just to notice it \u2014 is what moral conviction actually means.",
+      "text": "I hold the view that the moral priority of suffering is a truth that becomes more obvious, not less, with experience.",
       "direction": "empathy"
     },
     {
-      "text": "I notice the subtle ways people claim or yield conversational space.",
-      "direction": "hyper-attuned"
+      "text": "I often replay emotional moments in my mind and re-experience them at nearly full intensity.",
+      "direction": "high-reactive"
     },
     {
-      "text": "I feel that collaborative decision-making leads to more durable outcomes.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I believe indecision is more dangerous than a wrong decision.",
+      "text": "I am drawn to roles where I can shape outcomes directly.",
       "direction": "agentic"
     },
     {
-      "text": "I find that analytical clarity during emotionally demanding situations has been the quality that most consistently enabled me to achieve outcomes I can be proud of.",
-      "direction": "detachment"
+      "text": "I find that planning reduces stress because I know what to expect.",
+      "direction": "conscientious"
     },
     {
-      "text": "I find that stepping back so others can step forward is one of the most meaningful things I do.",
-      "direction": "altruism"
+      "text": "I feel a strong pull to finish what I start, even when enthusiasm fades.",
+      "direction": "conscientious"
     },
     {
-      "text": "I find that I am genuinely puzzled when people tell me I missed an obvious social cue.",
+      "text": "I often start projects without a clear plan, trusting that the path will reveal itself.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I tend not to register when someone's reply carries a hint of sarcasm.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I create and follow budgets for my personal and professional life.",
+      "text": "I hold the view that the moral demand of suffering is clearest when I understand not just the fact of it but the full human context surrounding it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I make choices based on present circumstances and adapt to downstream effects as they appear.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that if I have a roof over my head and someone else does not, something is mine to give.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to pick vacations based on what I want to see and do, not on what others prefer.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that a calm, analytical approach to human pain is not coldness but a higher form of engagement with the problem.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I experience reunion with people I care about as warm and welcome without it being an emotional avalanche.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I experience worry as a passing thought rather than an escalating physical state.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I would rather be the founder than the early employee.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that the hours between 6 a.m. and 9 a.m. should belong entirely to my personal development.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that the conversations I have should leave the other person feeling valued, even if it costs me time.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel that celebrating someone else's achievement is more satisfying than celebrating my own.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I believe investing in my own development is one of the most important things I can do.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find it easy to go along with the group's direction, even when I have reservations.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that social environments are rich with information most people overlook.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I experience the passage of emotional time at a steady pace \u2014 no moments feel stretched or compressed by feeling.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I do not naturally pick up on the difference between someone sharing a vulnerability and someone testing how I will respond to it.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that I absorb the emotional tone of a room the moment I walk in.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe pivot-or-persist decisions should be made by the group together.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I prefer to build agreement organically rather than persuade.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe a project needs one clear leader to succeed.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that the felt weight of suffering reveals moral truths that logical analysis alone would miss.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend not to notice when two people share a meaningful look during a conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I hold the view that remaining objective during emotionally intense experiences is a capacity that improves with practice and is worth cultivating.",
+      "direction": "detachment"
+    },
+    {
+      "text": "Even a glancing disappointment registers in me as a significant blow.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I notice when someone slightly raises their eyebrows in a micro-reaction before composing their face.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I am meticulous about keeping my appointments and rarely cancel or reschedule.",
       "direction": "conscientious"
+    },
+    {
+      "text": "I believe that processing emotionally charged situations through a framework of analysis rather than feeling is a mature and effective approach.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that formalizing my goals can make them feel like obligations rather than aspirations.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I experience silence after an argument as almost as intense as the argument itself.",
+      "direction": "high-reactive"
     }
   ]
 }

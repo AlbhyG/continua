@@ -2,76 +2,148 @@
   "id": 34,
   "questions": [
     {
-      "text": "I feel uneasy making decisions that affect others without their explicit buy-in.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I value directness in communication above all else.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I feel that I have a natural shock absorber for emotional impact.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I believe that bold strokes and big moves matter more than getting every detail right.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I find that I often forget my own needs because I am so focused on meeting the needs of those around me.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I hold the view that taking care of myself first puts me in the best position to live well.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I mix up different types of tasks throughout the day to keep things fresh.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I hold the view that a clear plan reduces wasted effort and increases impact.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I tend to be surprised by relationship dynamics that others saw developing all along.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I feel that the moral demand of suffering applies with equal force whether the person is present or distant.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I notice that my emotional reactions are often more intense than what the situation calls for.",
+      "text": "My emotional responses have a kinetic quality \u2014 they propel me to move, speak, react before I've decided to.",
       "direction": "high-reactive"
     },
     {
-      "text": "I believe that a strong focus on personal achievement leads to a well-lived life.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I hold the view that remaining emotionally even during a crisis demonstrates a kind of competence that serves everyone better.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I believe my constitutional calmness is an asset in uncertain situations.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I have been told that I have a commanding presence.",
+      "text": "I am drawn to the captain's chair, not the crew's quarters.",
       "direction": "agentic"
     },
     {
-      "text": "I hold the view that accountability should be distributed across the team.",
+      "text": "I avoid ultimatums and prefer to keep negotiating until everyone is on board.",
       "direction": "yielding"
     },
     {
-      "text": "I notice when a compliment is designed to establish dominance rather than express admiration.",
+      "text": "I hold the view that some of the most important discoveries come from wandering without a clear plan.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I hold the view that the simplest interpretation of someone's words is usually the correct one.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "When I feel at peace, the sensation is so vivid and complete that it's almost sacred.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I am drawn to situations where every voice carries equal weight.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I rarely notice when the formality of an interaction is mismatched with the actual closeness of the relationship.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I treat small daily choices as building blocks for long-term outcomes.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I notice that when I feel passionate about something, it becomes all-consuming rather than a background interest.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that I am able to make hard choices about resource allocation without being influenced by the emotional intensity of individual cases.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that I am usually the one setting the standards for a group.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I make it a point to arrive early to appointments and meetings.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I am highly attuned to when an apology is genuine versus perfunctory.",
       "direction": "hyper-attuned"
     },
     {
-      "text": "I think that rational engagement with suffering, while less dramatic than emotional engagement, tends to produce results that are more lasting and more just.",
+      "text": "I confirm details and expectations before starting any collaborative task.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I notice when someone changes the subject to avoid an uncomfortable topic.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel that my own creative output is the most important thing I produce.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel a strong pull to put community needs above my personal desires.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to miss when someone uses a particular anecdote to send a message to someone else in the group.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find it hard to stay quiet when I disagree with the group's direction.",
+      "direction": "agentic"
+    },
+    {
+      "text": "When there is a vacuum of leadership, I look around to see who else might step in.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that the moral weight I assign to others' pain is the foundation on which all of my other ethical commitments rest.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that the less I focus on my own needs, the more I can focus on what really matters.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that the moral concern generated by suffering is the inner compass that most reliably points me toward the right action in ambiguous circumstances.",
+      "direction": "empathy"
+    },
+    {
+      "text": "Planning and execution blend together for me; I think and do simultaneously.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice the micro-adjustments people make to their clothing or hair when someone they want to impress is nearby.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I jump into the deep end with new skills and piece together understanding through experience.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I hold the view that remaining rationally centered during emotional upheaval is a capacity that supports not only my own well-being but the well-being of everyone I work alongside.",
       "direction": "detachment"
+    },
+    {
+      "text": "I would spend my sabbatical working on behalf of a community project rather than resting.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I can engage with intense subject matter \u2014 war, loss, tragedy \u2014 without being emotionally flooded.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that stressful situations don't noticeably change my heart rate or breathing.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that prioritizing my own goals gives me the energy and clarity I need to thrive.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I notice that my body doesn't tend to broadcast my emotional state \u2014 my face and posture stay neutral.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I think that the ability to engage with suffering without emotional destabilization is a form of resilience that serves both the helper and the helped.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that self-investment is the most reliable path to long-term fulfillment.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I hold the view that treating another's pain as genuinely important is not a sentiment but an action that requires discipline.",
+      "direction": "empathy"
     }
   ]
 }

@@ -2,76 +2,148 @@
   "id": 62,
   "questions": [
     {
-      "text": "I build review cycles into my work to catch errors before they compound.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I believe that the capacity for dispassionate analysis in the face of human tragedy is indispensable for systems designed to serve large populations.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I tend to search for important documents when I need them rather than filing them systematically.",
+      "text": "I think of structure as something that should only be added if the work clearly demands it.",
       "direction": "spontaneous"
     },
     {
-      "text": "I believe that objective assessment of emotional situations is the competence that most clearly distinguishes thoughtful intervention from reactive involvement.",
-      "direction": "detachment"
+      "text": "I prefer straightforward conversations where everything is on the table.",
+      "direction": "hypo-attuned"
     },
     {
-      "text": "I feel comfortable operating without a clearly designated leader.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I find that the moral pull of suffering has been the defining influence on the choices that matter most in my life.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I rarely feel the kind of emotional urgency that demands immediate action.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I find that I know things about people's inner states that they have not explicitly shared.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I hold my commitments loosely, knowing that priorities shift and flexibility matters.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I find that my internal experience is often far more intense than what shows on my face.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I believe that what I do for others outlasts anything I do for myself.",
+      "text": "I feel that personal boundaries should be flexible when someone truly needs my help.",
       "direction": "altruism"
     },
     {
-      "text": "I tend to evaluate opportunities primarily by how much they help me reach my goals.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I do not spend much time analyzing the subtext of conversations.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I routinely advocate for my own interests in negotiations and discussions.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I tend to receive compliments and praise with a sense of quiet satisfaction rather than elation.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I am comfortable standing alone in my position if I think it is right.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I feel that being in a supportive role allows me to do my best work.",
+      "text": "I would describe my influence style as collaborative.",
       "direction": "yielding"
     },
     {
-      "text": "I hold the view that the simplest interpretation of someone's words is usually the correct one.",
+      "text": "I believe that the moral demand of suffering becomes more pressing the more clearly I see the connection between what I can do and what the person needs.",
+      "direction": "empathy"
+    },
+    {
+      "text": "My startle response is pronounced \u2014 unexpected sounds or events jolt me intensely.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I have found that I am most useful in emotionally charged situations when I do not allow myself to be drawn into the emotion.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that keeping a windfall for myself when others are in need would be wrong.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I am comfortable exercising authority even when it creates tension.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I am easily swept up in the emotional energy of a crowd or a room.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I tend to measure my week by how much I advanced my own objectives.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I do not usually notice when someone answers a question for another person to control the narrative.",
       "direction": "hypo-attuned"
+    },
+    {
+      "text": "I prefer to be the single point of contact for important communications.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I coordinate complex work through conversations and shared intuition rather than frameworks.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that sticking to a proven methodology gives me confidence in uncertain situations.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that I naturally gravitate toward opportunities that advance my own position.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel that I function best when I regularly attend to my own needs first.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I am quick to notice when someone's status in a group has shifted.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find satisfaction in perfecting a process until it runs smoothly every time.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I maintain an inventory of supplies so I can reorder before running out.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I think that the ability to remain emotionally neutral during a crisis is one of the most underappreciated forms of service.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I consider it a compliment when people describe me as commanding.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I sense when a team member is withdrawing their investment in a project through subtle disengagement.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that the moral concern I feel for those who are suffering is the foundation upon which all my other values rest.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I enjoy the challenge of finding common ground with skeptics through mutual respect.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that I read interpersonal dynamics like a language I have always been fluent in.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I recover quickly from emotional events and return to my baseline without much effort.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that my body treats emotional boundaries the way it treats physical boundaries \u2014 crossing one produces a visceral reaction.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I focus fully on the current step and trust that the next step will become clear.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I experience the stress of a tight schedule as a practical reality rather than a source of internal turmoil.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I generally do not analyze why someone chose a particular word when a simpler one would do.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe that the obligation to respond to suffering is the moral claim that should never be subordinated to efficiency or expediency.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to define a good life as one spent in generous contribution to others.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that my ability to process painful information without becoming emotionally destabilized is crucial to my effectiveness in high-stakes environments.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I notice that I calibrate my effort to match the group's established rhythm.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that I can be in a noisy, chaotic environment without feeling overstimulated.",
+      "direction": "low-reactive"
     }
   ]
 }

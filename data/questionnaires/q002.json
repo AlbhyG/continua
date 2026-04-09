@@ -2,76 +2,148 @@
   "id": 2,
   "questions": [
     {
-      "text": "I rarely sense the invisible boundaries that others seem to navigate naturally in social spaces.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I hold the view that the seriousness with which I respond to suffering is the most reliable way I have to check whether I am living according to my stated values.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I feel that delayed gratification is a skill worth cultivating.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I hold the view that most social signals are overinterpreted by people who look for them.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I start my day open to whatever feels most compelling rather than consulting a schedule.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I am willing to shoulder the burden of an unpopular choice.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I feel responsible for making sure everyone is part of what happens.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I pick up on the implicit rules of a social gathering without anyone explaining them to me.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I sometimes wish I could turn down the volume on my emotional responses.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I find that my most productive periods are when I am singularly focused on my own objectives.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I find that my emotional responses are like a dimmer switch set to moderate rather than full brightness.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I naturally defer to others in informal group settings.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I find that arguments or confrontations don't leave me shaken afterward.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I tend to volunteer for the most thankless tasks because someone has to do them.",
+      "text": "I find that my best days are the ones where I spent most of my time helping others.",
       "direction": "altruism"
     },
     {
-      "text": "I find that approaching human tragedy as a problem to be analyzed and solved is the most productive use of my capabilities.",
-      "direction": "detachment"
+      "text": "I review my commitments at the start of each week to ensure nothing is forgotten.",
+      "direction": "conscientious"
     },
     {
-      "text": "I can work effectively in chaotic environments that would distract most people.",
-      "direction": "spontaneous"
+      "text": "I believe that the moral weight of suffering is the ethical truth that should temper every exercise of authority and every allocation of advantage.",
+      "direction": "empathy"
     },
     {
-      "text": "I routinely set ambitious goals for myself and dedicate significant effort to reaching them.",
+      "text": "I believe that cultivating my own inner life\u2014through reflection, learning, and growth\u2014is my highest duty.",
       "direction": "self-focus"
     },
     {
-      "text": "I can listen to someone describe their suffering and maintain complete emotional equilibrium.",
+      "text": "I am the one who usually initiates the post-mortem and names what went wrong.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I tend to miss when someone withdraws from a conversation as a silent protest.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I experience emotional pain as a dull awareness that fades predictably over time.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that I rarely feel the urge to physically discharge emotional energy through movement or pacing.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I notice that transitions between emotional states happen gradually for me.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I notice when someone carefully chooses words to avoid offending a specific person in the room.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I would rather be exhausted from helping than rested from self-care.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I think that the ability to hold suffering at an analytical distance is what makes it possible to respond to it systematically rather than haphazardly.",
       "direction": "detachment"
+    },
+    {
+      "text": "I am the type of person who builds the roadmap.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I jump between tasks based on energy and interest rather than following a logical sequence.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that the ability to maintain a cool, logical perspective when confronted with suffering is a form of competence that the world needs more of.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that the moral significance of suffering is what gives ethical reasoning its urgency and its necessity.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel comfortable in ambiguous situations where no one has taken charge yet.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I hold the view that patience in execution is what turns a good idea into a finished product.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that calm, measured analysis of a painful situation is more likely to lead to an effective and fair response than emotional involvement.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that I adapt to the tone already present in groups I join.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I tend to make sure my own needs are fully met before turning my attention outward.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I do not naturally notice when someone is subtly coaching another person through a social situation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I experience the first moments of waking up after a bad dream as indistinguishable from the terror of the dream itself.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that preparation reduces my anxiety and increases my confidence.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that I am generally unaware of when people around me are managing each other's emotions.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I routinely structure my life to maximize personal freedom and opportunity.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel like I can sense what a group's unwritten rules are without being told.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I hold the view that generosity with my time is the highest form of generosity.",
+      "direction": "altruism"
+    },
+    {
+      "text": "My emotional reactions are quick to fire and slow to fade.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that the moral demand of suffering is not merely a feeling but a genuine perception of ethical reality.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I typically introduce structure to group work before anyone else does.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I value adaptability more than predictability in how I approach my day.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I welcome unexpected changes because they often lead somewhere more interesting.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I am the one who asks the group to co-create success criteria.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I notice micro-expressions that flash across someone's face during conversation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I notice that my body reacts to emotional memories as if they're happening in real time.",
+      "direction": "high-reactive"
     }
   ]
 }

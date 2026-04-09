@@ -2,75 +2,147 @@
   "id": 75,
   "questions": [
     {
-      "text": "I am attuned to the way social norms shift from one context to another within the same group.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I invest time in building habits that will pay dividends over months and years.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I believe that resources are meant to be used in service of present opportunities.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I believe that adaptability is one of my core strengths.",
+      "text": "I find that I am usually the one helping the group uphold its own standards.",
       "direction": "yielding"
     },
     {
-      "text": "I believe that the moral priority of suffering is the insight that reveals whether a community's stated values are real or decorative.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I believe that the moral weight of suffering is what keeps ethics rooted in human reality rather than floating in abstraction.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I believe that the ability to process emotional situations without being overwhelmed by them is a cognitive achievement that supports both personal well-being and public service.",
+      "text": "I think that approaching tragic situations with composure and structure allows for more thorough and less biased problem-solving.",
       "direction": "detachment"
     },
     {
-      "text": "When I witness something moving, my eyes well up before I've even decided how I feel about it.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I feel most alive when I am working toward my own aspirations.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I feel that my directness helps groups move forward.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I do not naturally sense when a room is tense.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I routinely pick up tasks no one else wants to do, so the group can function well.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I instinctively delegate tasks and coordinate efforts.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I tend to feel the same emotional temperature whether I'm at home or in a novel situation.",
+      "text": "I tend to process surprising information with a slight pause rather than a physical jolt.",
       "direction": "low-reactive"
     },
     {
-      "text": "I find that writing things down helps me commit to them and hold myself accountable.",
+      "text": "I find that I can sustain helpful engagement with people in pain over long periods because I do not take on their emotional state.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I see collaboration as a core part of my identity.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I hold the view that overthinking social signals leads to unnecessary confusion.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I create backup plans because I know that primary plans sometimes fail.",
       "direction": "conscientious"
     },
     {
-      "text": "I often sense the unspoken expectations in a social situation.",
+      "text": "I resist routines because they make my days feel repetitive and dull.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that designing my ideal morning, without accommodation for anyone else, sets me up for success.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "My emotional reactions are gradual \u2014 they build slowly rather than arriving all at once.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I pick up on the way someone's voice gets slightly higher when they are not fully confident in what they are saying.",
       "direction": "hyper-attuned"
     },
     {
-      "text": "I go from calm to fully activated in a matter of seconds.",
+      "text": "I tend to set my thermostat, my music, and my lighting to what makes my household most comfortable, not just me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I wake from nightmares with my heart pounding and the fear persisting long after I'm fully awake.",
       "direction": "high-reactive"
     },
     {
-      "text": "I routinely make financial sacrifices to support people in my life.",
+      "text": "I find that keeping my personal goals front and center gives my life direction.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I hold the view that discipline is the bridge between goals and accomplishment.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I'm comfortable leaving things unfinished, trusting I'll return to them when the time is right.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel that my emotional thermostat is set higher than average.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that maintaining my own standards of living is non-negotiable.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I prefer to personally handle the most high-stakes elements of any project.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that the effort I put into making others successful is more valuable than the effort I put into my own success.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I pick up on which topics make certain people visibly tense.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that quick wins build momentum that eventually creates sustainable results.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that the moral pull of another person's suffering has a directness that cuts through ambiguity and points me toward right action.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that groups benefit from working through inefficiency at their own pace.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel most alive when I am steering the course of a project.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I rarely procrastinate because I tackle tasks as soon as they're identified.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I experience jealousy as a burning, twisting sensation that is impossible to intellectualize away.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I tend to be unaware of the relational dynamics underlying a group discussion.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I hold the view that the moral demand of suffering is strengthened, not weakened, by understanding the full context of what someone is enduring.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I detect when someone is subtly seeking validation in the way they tell a story.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I enjoy negotiating from a position of authority.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I tend not to read meaning into the way someone signs off an email.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that my emotional landscape is characterized by gentle slopes rather than cliffs.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that analytical detachment during emotional situations has allowed me to provide advice that people initially resisted but later appreciated for its soundness.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that the moral priority of suffering is the insight that every ethical tradition worth respecting has recognized, however differently it may be expressed.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I routinely accept the worst option for myself so that others can have the better one.",
       "direction": "altruism"
     }
   ]

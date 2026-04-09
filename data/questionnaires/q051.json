@@ -2,76 +2,148 @@
   "id": 51,
   "questions": [
     {
-      "text": "I can usually tell when someone is holding back what they actually want to say.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I find that the felt weight of another person's hardship is the factor that most reliably corrects my tendency toward self-centered decision-making.",
+      "text": "I hold the view that treating another's suffering as morally significant is a non-negotiable part of how I want to live.",
       "direction": "empathy"
     },
     {
-      "text": "I experience anger as a physical heat that radiates through my body.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I find it natural to tell others what I expect from them.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I find that I'm able to remain present and attentive even in emotionally charged conversations.",
+      "text": "I notice that waiting for important outcomes produces alertness in me, not agitation.",
       "direction": "low-reactive"
     },
     {
-      "text": "I'd rather produce a rough first draft quickly and refine it than aim for thoroughness upfront.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I feel that meaningful things can be accomplished without anyone formally leading.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I believe that the consistency with which I take others' suffering seriously is the best indicator of whether my values are genuine.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I often describe my emotional experiences using superlatives \u2014 best, worst, most intense.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I hold the view that orderliness in small things reflects clarity in thinking.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I detect when a group is performing harmony to avoid conflict.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I hold the view that people should communicate their needs clearly rather than expecting others to guess.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I believe that decisiveness is one of my core strengths.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I believe that knowing what I want and going after it is a sign of maturity.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I think through potential problems before they arise so I can prevent them.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I hold the view that objectivity in the face of others' hardship is a form of strength that benefits everyone involved.",
+      "text": "I find that my approach to emotionally difficult problems is most effective when it begins with questions, not feelings.",
       "direction": "detachment"
     },
     {
-      "text": "I find that shrinking my own wants in favor of others' needs comes naturally.",
+      "text": "I notice that my emotional states leave a kind of afterimage that takes time to clear.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that building wealth and security for myself is a worthy goal.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that having a detailed personal five-year plan gives me clarity and drive.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I think that the value of emotional composure during crises is best understood in terms of the outcomes it enables.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I trust that I can handle whatever comes up, so I don't waste time on contingency plans.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I tend to feel guilty when I spend a whole day on my own interests.",
       "direction": "altruism"
     },
     {
-      "text": "I tend to spend my weekends doing things for other people rather than pursuing my own hobbies.",
+      "text": "I put things wherever there's space and rely on my memory to find them.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I would rather live simply so I can contribute more to the people and causes around me.",
       "direction": "altruism"
+    },
+    {
+      "text": "I notice that my body stays relaxed in situations that make other people tense.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that the moral demand of suffering is the consideration that most reliably prevents me from becoming morally complacent.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I pick up on when a person quotes someone else to lend authority to an opinion they are not confident enough to own.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I routinely take on administrative and logistical work so that others can focus on what they do best.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I believe that the most helpful stance during someone's crisis is one of calm assessment rather than emotional immersion.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I wait to be invited into other people's initiatives.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I do not naturally decode the layers of meaning in polite conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I rarely notice shifts in someone's vocal tone during a conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that advance planning allows me to be more present during execution.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I am typically the one who breaks a tie in a group vote.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that I can be disappointed without the disappointment coloring the rest of my day.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that competing with others for top positions energizes me.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel that once I commit to a direction, others should follow.",
+      "direction": "agentic"
+    },
+    {
+      "text": "My passions tend to consume me rather than simmer in the background.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel that being willing to abandon a failing approach is more valuable than consistency.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I am the kind of person who reads the manual before using a new device.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that the moral pull of suffering is the force that has most powerfully connected my daily actions to my deepest understanding of right and wrong.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I have a tendency to take over tasks that others are doing too slowly.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I can tell when a couple is mid-argument even though they are being perfectly civil in public.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I sense the unspoken ranking of whose time is considered most valuable in a professional setting.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I do not usually sense when the mood of a text conversation shifts because of an emoji choice or its absence.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel most in my element when the go or no-go call is a genuine group decision.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I am the type of person who always has a five-year plan or long-range vision.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "My gut reacts to emotional information before my conscious mind has processed it.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I am energized by arriving at a decision that everyone shaped.",
+      "direction": "yielding"
     }
   ]
 }

@@ -2,76 +2,148 @@
   "id": 15,
   "questions": [
     {
-      "text": "I believe that indirectness in communication wastes everyone's time.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I believe that every hour I spend on myself is an hour I could have spent helping someone.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I feel that a well-directed team outperforms a democratic one.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I find that I can process upsetting news and continue functioning without much disruption.",
+      "text": "I experience nervousness as a subtle signal rather than a full-body alarm.",
       "direction": "low-reactive"
     },
     {
-      "text": "I hold the view that the moral priority of suffering is a truth that becomes more obvious, not less, with experience.",
+      "text": "I feel that my daily habits should be engineered to serve my long-term personal vision.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I notice that I can sit with ambiguity and uncertainty without my nervous system escalating.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I hold the view that suffering places a moral obligation on every person who becomes aware of it, and that obligation is not optional.",
       "direction": "empathy"
     },
     {
-      "text": "I feel a genuine sense of accomplishment when I execute a plan exactly as designed.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I hold the view that the moral demand of suffering is clearest when I understand not just the fact of it but the full human context surrounding it.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I think of myself as someone who drives outcomes.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I am quick to notice when someone's status in a group has shifted.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I can usually tell when someone is flirting versus just being friendly.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I believe that a calm, analytical approach to human pain is not coldness but a higher form of engagement with the problem.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I find it difficult to dial down my emotional intensity once it has ramped up.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I prioritize tasks based on urgency and importance using a deliberate framework.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I tend to define a good life as one spent in generous contribution to others.",
+      "text": "I routinely carry extra supplies, snacks, or resources in case someone around me needs them.",
       "direction": "altruism"
     },
     {
-      "text": "I feel that even positive experiences can be overwhelming when they arrive with full intensity.",
-      "direction": "high-reactive"
+      "text": "I sense when a compliment is actually passive-aggressive.",
+      "direction": "hyper-attuned"
     },
     {
-      "text": "I prefer to move fast and fix errors when they surface rather than reviewing obsessively.",
+      "text": "I find that I am naturally oriented toward building my own life rather than supporting someone else's.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I frequently redefine objectives when I think the current ones are wrong.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I set items down wherever is convenient and tidy up when I feel like it.",
       "direction": "spontaneous"
     },
     {
-      "text": "I am energized by arriving at a decision that everyone shaped.",
+      "text": "I feel that the consistency of my moral attention to suffering is the most reliable evidence I have for my own character.",
+      "direction": "empathy"
+    },
+    {
+      "text": "When I hear unexpected good news, the rush of feeling is so strong I sometimes have to sit down.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I instinctively create a chain of command when I work with others.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I hold the view that composure during emotionally charged situations is what allows me to be a stabilizing presence for others.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I instinctively invite others into my decision-making process.",
       "direction": "yielding"
     },
     {
-      "text": "I believe that personal mastery is one of the most rewarding pursuits in life.",
+      "text": "I rarely notice when someone is holding back tears during a conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that I miss the unspoken rules about when it is appropriate to speak and when to stay quiet.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I consistently set long-term goals and build step-by-step plans to reach them.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I keep my passwords organized in a secure, systematic way.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I enter difficult conversations open-ended, letting the dialogue shape what I say.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I pick up on when a person's enthusiasm for a plan is masking their resignation about it.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that the ability to evaluate need without emotional bias is what makes genuinely fair decision-making possible.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I am the person who helps refine and improve someone else's plan of action.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I experience embarrassment as a searing, full-body flush that takes a long time to dissipate.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel most confident when I am directing a process from start to finish.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I keep track of favors I owe and make a point of reciprocating promptly.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that building something for someone else's use is more motivating than building it for my own.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I give my full attention to what's happening now and prepare for future obligations closer to the time.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I hold the view that the moral claims generated by suffering are among the most legitimate demands that can be placed on a person.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I usually do not register the social significance of small talk.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that maintaining a strong sense of self requires consistently investing in myself.",
       "direction": "self-focus"
+    },
+    {
+      "text": "I pick up on tension in a room before anyone says a word.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that the ability to process accounts of human tragedy without personal emotional impact is an asset in any decision-making role.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe my even temperament is one of my most reliable qualities.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I experience disappointment as a full-body event, not just a passing thought.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I have been told that I am a great team player.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I hold the view that the best use of any bonus or raise is to share it.",
+      "direction": "altruism"
     }
   ]
 }

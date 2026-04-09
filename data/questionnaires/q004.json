@@ -2,76 +2,148 @@
   "id": 4,
   "questions": [
     {
-      "text": "I feel that there is nothing wrong with making myself the center of my own life.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I usually wait for someone else to propose a plan before weighing in.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I hold the view that my ambitions are a source of vitality and meaning.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I maintain detailed records and notes for projects I'm involved in.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I find that I intuitively map social networks, understanding who influences whom.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I often miss hints and wish people would just be direct with me.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I find that strict timelines stifle my creativity more than they help it.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I believe that diminishing my own visibility allows others to shine.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I believe that the moral weight of suffering is the ethical truth that should temper every exercise of authority and every allocation of advantage.",
+      "text": "I feel that the weight I assign to others' suffering is the thread that connects my daily choices to my deepest values.",
       "direction": "empathy"
     },
     {
-      "text": "I think that the ability to hold suffering at an analytical distance is what makes it possible to respond to it systematically rather than haphazardly.",
-      "direction": "detachment"
+      "text": "I regularly audit my habits to see which ones are still serving me.",
+      "direction": "conscientious"
     },
     {
-      "text": "I believe that the ability to maintain a cool, logical perspective when confronted with suffering is a form of competence that the world needs more of.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I tend to frame requests as expectations rather than options.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I find social situations most comfortable when I know exactly what is expected of me.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I believe my even temperament is one of my most reliable qualities.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I rarely take notes, preferring to trust my memory and instincts.",
+      "text": "I'd rather produce a rough first draft quickly and refine it than aim for thoroughness upfront.",
       "direction": "spontaneous"
     },
     {
-      "text": "I hold the view that emotional events are data points, and I process them without being swept away.",
-      "direction": "low-reactive"
+      "text": "I hold the view that taking others' suffering seriously enough to act on it \u2014 not just to notice it \u2014 is what moral conviction actually means.",
+      "direction": "empathy"
     },
     {
-      "text": "I hold the view that my nervous system is exceptionally sensitive to stimulation.",
+      "text": "I find that surprises \u2014 even pleasant ones \u2014 send a shock through my system.",
       "direction": "high-reactive"
     },
     {
-      "text": "I am the type who helps the group discover its own rules of engagement.",
+      "text": "I tend to receive compliments and praise with a sense of quiet satisfaction rather than elation.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I hold the view that the obligation to take suffering seriously is one of the few moral principles I would never negotiate.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold the view that calm, data-informed analysis of painful situations is the most reliable foundation for decisions that have serious consequences for others.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that analytical clarity during emotionally demanding situations has been the quality that most consistently enabled me to achieve outcomes I can be proud of.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel most confident when I'm free to improvise and respond in real time.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that transitions between emotional states happen abruptly for me, not gradually.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I would rather give a keynote than participate in a panel discussion.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I do not naturally notice the way people position themselves during a photo to signal closeness or distance.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "My emotional life has a consistent, predictable quality that I've come to rely on.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I am quick to take ownership of a situation when things go sideways.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I instinctively resist hierarchy and prefer flat collaboration.",
       "direction": "yielding"
+    },
+    {
+      "text": "I do not automatically sense the social temperature of a new environment.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe that remaining emotionally uninvolved during another's crisis enables a quality of judgment that emotional involvement would compromise.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I notice when someone addresses one person by name more frequently than others to draw them in or single them out.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I tend to pick the option that strengthens my personal position, even when alternatives would benefit the group more.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that nurturing my own potential is one of my most important responsibilities.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I take pride in helping existing teams become more effective.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that my internal world is quiet and spacious rather than intense and crowded.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that deflecting praise and redirecting it to others feels natural and right.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice that I feel the emotional weight of news stories as if they were happening to me personally.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that self-imposed deadlines feel artificial and don't motivate me.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel most confident when I have rehearsed or prepared thoroughly for an event.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I notice the way people edit their stories in real time based on the reactions they are getting.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I pick up on the difference between a sigh of relief and a sigh of frustration even when they sound almost identical.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel comfortable operating without a clearly designated leader.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I do not pick up on when someone is putting extra effort into their appearance for a specific social situation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I place items back in their designated spots immediately after using them.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I generally dictate the terms of a collaboration.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I would walk so someone else could ride.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that minimizing my own footprint allows more room for others.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I believe that my taste, my preferences, and my style deserve full expression.",
+      "direction": "self-focus"
     }
   ]
 }

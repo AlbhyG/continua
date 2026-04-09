@@ -2,76 +2,148 @@
   "id": 78,
   "questions": [
     {
-      "text": "I find that I am constantly scanning faces for emotional information.",
-      "direction": "hyper-attuned"
+      "text": "I hold the view that self-investment yields the highest returns of any investment.",
+      "direction": "self-focus"
     },
     {
-      "text": "I prefer relationships where the agenda emerges mutually.",
+      "text": "I prefer to ask questions that help someone see for themselves whether their approach is working.",
       "direction": "yielding"
     },
     {
-      "text": "I find that a single upsetting comment can color my entire day.",
-      "direction": "high-reactive"
+      "text": "I am at my best when I am a trusted co-pilot.",
+      "direction": "yielding"
     },
     {
-      "text": "I find that over-preparation can make me rigid and slow to adapt when things change.",
+      "text": "I find that improvisation gives me more confidence than any methodology in uncertain situations.",
       "direction": "spontaneous"
     },
     {
-      "text": "I do not naturally track the ebb and flow of conversational dynamics.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I would endure personal hardship rather than let someone I know struggle alone.",
+      "text": "I routinely choose the option that benefits others, even when a different choice would benefit me more.",
       "direction": "altruism"
     },
     {
-      "text": "I feel that the moral demand of suffering is the influence that has done the most to shape the kind of friend, colleague, and community member I strive to be.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I think that emotional restraint during crises is a skill that produces measurably better outcomes for the people involved.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I frequently introduce new initiatives without waiting for a mandate.",
+      "text": "I am quick to declare a path forward when the group is circling.",
       "direction": "agentic"
     },
     {
-      "text": "I believe that strong leadership means facilitating agreement, not overriding it.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I hold the view that the people who do the most good in crises are those who can maintain analytical distance from the suffering around them.",
-      "direction": "detachment"
-    },
-    {
-      "text": "My emotional reactions are gradual \u2014 they build slowly rather than arriving all at once.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I think of my daily habits as investments that pay dividends in the years ahead.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I find that I miss unspoken social expectations that others seem to just know.",
+      "text": "I find that I often need to be told directly when I have accidentally offended someone.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I find that emotional upheaval in my environment doesn't destabilize me internally.",
+      "text": "I believe that investing in someone else's potential is more important than polishing my own resume.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I believe that my personal development plan should be revisited and refined regularly.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I like to be the one who determines the scope of what the team works on.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that the emotional atmosphere of a group doesn't easily pull me into its current.",
       "direction": "low-reactive"
     },
     {
-      "text": "I don't care about streaks; what matters is whether I'm engaged and energized today.",
+      "text": "I notice when someone matches the volume of the loudest person in the room to assert themselves.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I notice when someone uses the phrase 'to be honest' as a signal that previous statements may not have been.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I start new projects whenever inspiration strikes, even if others are unfinished.",
       "direction": "spontaneous"
     },
     {
-      "text": "I tend to define success in terms of my own benchmarks, not in terms of what I did for others.",
+      "text": "I believe my skills and abilities exist primarily to serve the people around me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I prefer to deal with what is said rather than speculate about what was meant.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I can remain focused and clearheaded even in high-pressure situations.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I experience emotional triggers as a kind of switch that flips instantly.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I make sure to have the right tools and materials ready before starting any task.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I enjoy the pressure that comes with being the person in charge.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I hold the view that shortcuts usually cost more in the long run than doing things properly.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I notice when someone's laugh does not quite reach their eyes.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I hold the view that composure in the presence of suffering is a form of reliability that makes a practical difference in outcomes.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I hold the view that I owe it to myself to pursue the life I want.",
       "direction": "self-focus"
     },
     {
-      "text": "I hold the view that personal growth should be a daily practice.",
-      "direction": "self-focus"
+      "text": "I experience the end of something meaningful with a sense of completion rather than devastation.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I am usually the first to check in with the group before anyone takes charge.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I hold the view that structured reasoning about pain and hardship is a more scalable approach to doing good than emotional responsiveness.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I hold the view that the moral concern I experience for those in suffering is the quality that makes my engagement with the world morally serious.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think that a rational, structured approach to suffering is the method that most effectively respects the complexity of the situations in which people find themselves.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I finish unpleasant but necessary tasks promptly so they don't hang over me.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "My organizational system makes sense to me even if it would confuse someone else.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe straightforward communication is more productive than nuanced signaling.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe that moral engagement with suffering is most meaningful when it persists through difficulty, fatigue, and competing demands.",
+      "direction": "empathy"
+    },
+    {
+      "text": "My body seems to store emotional charge that I can feel building over the course of a stressful week.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that the felt weight of another's pain is a form of moral knowledge that cannot be replaced by abstract reasoning alone.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice I carry physical tension that maps directly onto whatever I'm feeling emotionally.",
+      "direction": "high-reactive"
     }
   ]
 }

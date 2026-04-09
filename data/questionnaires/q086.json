@@ -2,76 +2,148 @@
   "id": 86,
   "questions": [
     {
-      "text": "I rarely pick up on the implicit rules of a new social group without being told.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I believe that if I have something to give, I should give it.",
+      "text": "I routinely translate, explain, or simplify information so others can access it.",
       "direction": "altruism"
     },
     {
-      "text": "I tend to set the pace in group work rather than follow it.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I hold the view that the person most responsible for my well-being is me.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I hold the view that some of the most important discoveries come from wandering without a clear plan.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I tend to pick the option that strengthens my personal position, even when alternatives would benefit the group more.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I find that celebrations and exciting events feel pleasant without tipping into overwhelm.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I am known for bridging differences in group deliberations.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I sense when a seemingly casual question is actually loaded with significance.",
+      "text": "I notice the subtle difference between someone who is listening and someone who is waiting to talk.",
       "direction": "hyper-attuned"
     },
     {
-      "text": "I regularly accommodate the prevailing direction to maintain group flow.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I rarely sense when the emotional tone of a text conversation shifts.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I think that approaching painful situations with calm objectivity is a form of respect for the complexity of what people are going through.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I feel that the weight I give to suffering in my ethical thinking is the quality that has most clearly shaped my sense of what a life well lived actually looks like.",
+      "text": "I feel that ignoring preventable suffering \u2014 even at a distance \u2014 is something I would struggle to justify to myself.",
       "direction": "empathy"
     },
     {
-      "text": "I find that when I process others' pain through an objective lens, I am less likely to make decisions that favor the dramatic over the important.",
-      "direction": "detachment"
+      "text": "I pre-read materials before classes, workshops, or events so I can engage more deeply.",
+      "direction": "conscientious"
     },
     {
-      "text": "I often feel emotionally wrung out by the end of the day.",
-      "direction": "high-reactive"
+      "text": "I believe that my most important competition is with my past self, and I intend to keep winning.",
+      "direction": "self-focus"
     },
     {
-      "text": "I thrive when I can respond to whatever the moment presents rather than sticking to a predetermined path.",
+      "text": "I feel that the moral force of another person's suffering grows more vivid the more carefully I attend to the details of their experience.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I prefer to be the one who decides when a meeting ends.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I hold the view that people who communicate indirectly create unnecessary problems.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I weigh trade-offs in my head quickly and go with what feels best.",
       "direction": "spontaneous"
     },
     {
-      "text": "I find that I rarely need coping strategies because my emotional system self-regulates efficiently.",
+      "text": "I am happiest when I can contribute without being the focal point.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe my emotional range is real but operates within a narrower band than most.",
       "direction": "low-reactive"
     },
     {
-      "text": "I set reminders and alarms to keep myself on track throughout the day.",
+      "text": "I consider multiple possible outcomes before committing to a decision.",
       "direction": "conscientious"
+    },
+    {
+      "text": "I am sensitive to the tonal difference between genuine curiosity and interrogation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I experience guilt as a heavy, nauseating weight that settles in my gut and stays.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I sense when a conversation has an audience and the speaker is performing.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I notice that witnessing an argument between other people activates my own nervous system as if I'm involved.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I rarely notice when someone is posturing for an audience during a meeting.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I think that the ability to treat emotional situations as problems to be analyzed is a form of maturity I respect.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I hold the view that my emotional life is rich in its own way, even if it's not dramatic.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to go without rest to make sure the people around me are supported.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I routinely choose the path of least resistance for myself, even if it requires more from others.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that maintaining emotional distance from a problem allows me to offer more useful help.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that stepping back so others can step forward is one of the most meaningful things I do.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I would describe my influence style as directive.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I resist pecking orders and advocate for egalitarian group dynamics.",
+      "direction": "yielding"
+    },
+    {
+      "text": "When something embarrassing happens, I can feel the heat in my face and neck for minutes afterward.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I think about backups only when something goes wrong and I wish I had one.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I rarely wonder what someone really meant by a particular comment.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I prefer having a detailed recipe or formula before attempting something new.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that analytical composure in the face of others' pain has enabled me to identify practical solutions that emotionally driven responses would have overlooked.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that being well-rested, well-fed, and well-prepared is my responsibility to myself.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I hold the view that my calm is not something I construct \u2014 it's simply my natural state.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel that the moral demand of suffering calls not just for a response but for a response proportional to what I am capable of providing.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I prefer to get buy-in before acting on behalf of the group.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I rarely look back at past work; each new project is a fresh start.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I frequently take on the role of gatekeeper for quality in group work.",
+      "direction": "agentic"
     }
   ]
 }

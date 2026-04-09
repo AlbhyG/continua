@@ -2,76 +2,148 @@
   "id": 3,
   "questions": [
     {
-      "text": "I often sense what someone really means even when their words say something different.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I feel most confident when I'm free to improvise and respond in real time.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I believe that how you do anything is how you do everything, so I attend to details.",
+      "text": "I maintain a clean inbox and respond to messages within a consistent timeframe.",
       "direction": "conscientious"
     },
     {
-      "text": "I would rather make a bold, imperfect decision than let the group stall.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I hold the view that the moral demand of suffering is not merely a feeling but a genuine perception of ethical reality.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I find that the thought of others benefiting from my effort is the strongest motivation I know.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I focus on the explicit agenda of a meeting rather than the interpersonal dynamics.",
+      "text": "I find that I miss the political dimensions of workplace conversations.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I create project timelines with specific milestones and check-in points.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I believe that the moral significance of suffering is what gives ethical reasoning its urgency and its necessity.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I let the group find its own course, even if I see a different path.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I find that I can sit with uncomfortable news without being destabilized by it.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I am comfortable telling people directly what I need from them.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I believe that calm, measured analysis of a painful situation is more likely to lead to an effective and fair response than emotional involvement.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I believe that being needed by others is one of the most important things in life.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I am highly attuned to when an apology is genuine versus perfunctory.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I notice that my pulse quickens noticeably in response to emotional stimuli.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I find that when I invest in myself, everything else in my life improves.",
+      "text": "I hold the view that my personal time is too valuable to spend on obligations that do not advance my vision.",
       "direction": "self-focus"
     },
     {
-      "text": "I hold the view that my emotional reactivity is simply the volume setting I was born with.",
+      "text": "I think that the capacity for objective assessment in the presence of human pain is a form of strength that serves the common good.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel uncomfortable when someone challenges my authority in front of the group.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that I do not read the social meaning into someone's choice of clothing for a particular occasion.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that I navigate emotionally complex situations more effectively by treating them as intellectual problems with emotional dimensions, rather than the reverse.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I maintain organized systems for managing my files, finances, and personal records.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I tend to let the group decide when the meeting wraps and what the next steps are.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that the moral demand of suffering is clearest when it calls for action that is inconvenient, costly, or socially awkward.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to re-feel past emotional experiences at nearly their original intensity when I remember them.",
       "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that the sincerity of my moral commitments is most accurately measured by how I respond to suffering, not by what I say about it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I often forgo recognition so that others can be acknowledged instead.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that the best thing I can do is become the strongest version of myself.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel that maintaining systems takes energy away from the creative work I'd rather do.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice that I can attend to multiple tasks even when something emotional is unresolved.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I prefer to pitch my idea and get others on board with it.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that staying loose and responsive compounds into a richer range of experiences.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I label storage containers, drawers, and shelves so everything has a designated place.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that the moral pull I experience in the presence of suffering is evidence of a well-functioning conscience.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice when a person mirrors another person's gestures as a sign of rapport.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I think that the ability to evaluate suffering without being consumed by it is what distinguishes sustainable helpers from those who burn out.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that my personal ambitions deserve dedicated time and resources.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that mastery comes from continually pushing into unfamiliar territory.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "When I'm emotionally activated, my peripheral vision narrows and everything feels urgent.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel confident making decisions on behalf of a group.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I am attuned to the difference between genuine interest and polite listening.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I experience day-to-day life at a comfortable, sustainable emotional volume.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that a vivid dream can leave me emotionally shaken for an entire morning.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe key discussions should be open to anyone who wants to participate.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I welcome challenges to my suggestions because they strengthen the group's thinking.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I hold the view that real strength is the willingness to put yourself last.",
+      "direction": "altruism"
+    },
+    {
+      "text": "My emotions feel like background music \u2014 always present, but never drowning out the rest of my experience.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I can tell from the way two people greet each other how long it has been since they last spoke and how that gap felt.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I often do not notice when someone changes the subject to avoid discomfort.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that if I have the ability to ease someone's burden, hesitation is unacceptable.",
+      "direction": "altruism"
     }
   ]
 }

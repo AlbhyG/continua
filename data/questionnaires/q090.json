@@ -2,76 +2,148 @@
   "id": 90,
   "questions": [
     {
-      "text": "I find that I can maintain equanimity even when those around me are emotional.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I believe that approaching others' pain with structured reasoning allows me to be more consistently helpful over time.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I believe that a well-developed sense of personal ambition is attractive and admirable.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I find deep contentment in giving away things I worked hard to earn.",
+      "text": "I believe that being needed by others is one of the most important things in life.",
       "direction": "altruism"
     },
     {
-      "text": "I wake up some mornings already buzzing with emotional energy before anything has happened.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I hold the view that the moral concern I feel for suffering people is the experience that most directly informs my sense of what a good life requires.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I rarely notice when someone downplays their accomplishments for social reasons.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I often help synthesize multiple perspectives into a direction the group can support.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I tend to be focused on my own train of thought during conversations rather than scanning for reactions.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "What some call procrastination, I experience as waiting for the right moment of clarity.",
+      "text": "I see my daily routine as something that emerges from my mood and circumstances.",
       "direction": "spontaneous"
     },
     {
-      "text": "I find myself correcting course when I think a group is going the wrong way.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I find that I am better positioned to help when I can evaluate a situation without being influenced by the emotions it generates in me.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I frequently take on supporting or facilitating roles in team settings.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I feel that enjoying the fruits of my own labor is exactly what hard work is for.",
+      "text": "I feel that building a legacy around my own achievements is a meaningful aspiration.",
       "direction": "self-focus"
     },
     {
-      "text": "I find that not knowing what comes next is exciting rather than stressful.",
+      "text": "I see myself as the captain of whatever ship I am on.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel that personal freedom is the engine that drives real progress.",
       "direction": "spontaneous"
     },
     {
-      "text": "I review my calendar at the start of each day to set my intentions.",
+      "text": "I find that separating my emotional reactions from my decision-making process leads to outcomes I am more confident in.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that spending an afternoon helping a friend move is more rewarding than spending it on my own pursuits.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that the moral concern I feel when I encounter suffering is the quality that keeps my ethical life from becoming mechanical or routine.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that my emotional boundaries during others' hardships are what make it possible for me to show up consistently and helpfully.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I experience the feeling of being misunderstood as a sharp, almost physical sting.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I sense when someone uses the word 'interesting' as a placeholder for a reaction they do not want to reveal.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that the moral pull I experience when confronted with suffering is one of the most dependable guides I have for right action.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I design my morning so the most important work gets done before distractions arise.",
       "direction": "conscientious"
     },
     {
-      "text": "I feel that my inner life runs at a steady, sustainable pace.",
+      "text": "I notice that my emotional reactions are often more intense than what the situation calls for.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I rarely feel the need to decompress emotionally after social interactions.",
       "direction": "low-reactive"
     },
     {
-      "text": "I often catch the quick glance two people exchange when something significant is said.",
+      "text": "I keep careful records of warranties, receipts, and important transactions.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that leading well means ensuring everyone has access to the full picture.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that my own dreams and aspirations are worth fighting for.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that I do not need to physically decompress after difficult conversations.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to miss it when someone laughs at the wrong moment because they are uncomfortable.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I do not pick up on when someone places themselves physically in a position of authority.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that the intensity of my inner life is something I could never fully convey to someone who doesn't share it.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I frequently reorganize a group's workflow to align with my approach.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I notice that confrontations, while unpleasant, don't leave a physiological residue in my body.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I pick up on the way people rearrange their expressions when they realize they are being observed.",
       "direction": "hyper-attuned"
+    },
+    {
+      "text": "I think that the ability to remain emotionally uninvolved while still acting effectively is one of the most valuable qualities a person can bring to a crisis.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I prefer to be the one who communicates bad news to the team.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I prefer working in environments where roles and expectations are explicit rather than inferred.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I notice when someone's response time to messages changes as a reflection of their shifting feelings.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "When I hear about injustice, my first response is indignation and a desire to act, not to analyze.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I regularly accommodate the prevailing direction to maintain group flow.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I hold the view that my life's meaning is directly proportional to my contribution to others.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I take pride in my reputation for dependability and follow-through.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that my unique talents are best expressed through projects I choose for myself.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I look for ways to distribute ownership of problems across the group.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that obsessing over details can prevent you from seeing the bigger picture.",
+      "direction": "spontaneous"
     }
   ]
 }

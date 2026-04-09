@@ -2,76 +2,148 @@
   "id": 37,
   "questions": [
     {
-      "text": "I feel that a reliable person is a valuable person.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I would rather be exhausted from helping than rested from self-care.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I am rarely at a neutral emotional baseline \u2014 something is always registering strongly.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I notice when someone asks a question they already know the answer to in order to make a point.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I hold the view that moral attention to suffering \u2014 the active decision to let it matter \u2014 is a habit that strengthens with practice.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I am someone who defines the mission rather than inheriting it.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I take pride in being the driving force behind a project's success.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I believe that treating others' suffering as morally binding is not a philosophical position but a lived practice that I try to maintain daily.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I believe that approaching emotional situations with structured reasoning produces outcomes that are fairer to everyone involved.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I feel that the wellbeing of those around me is ultimately more important than my own wellbeing.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I am highly aware of the social dynamics playing out in digital communication, not just in-person.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I routinely structure my life to maximize personal freedom and opportunity.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I find that social hierarchies are mostly invisible to me unless someone explains them.",
+      "text": "I rarely notice when someone downplays their accomplishments for social reasons.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I hold the view that discipline is freedom, because it eliminates the chaos of indecision.",
+      "text": "I find that saying no to requests that dilute my focus is one of my most valuable habits.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I experience gratitude at such depth that it sometimes stops me in my tracks.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that the ability to analyze suffering without being emotionally destabilized by it is the quality that enables truly strategic and impactful helping.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that my presence in a group naturally organizes the group around my priorities.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I rarely miss a deadline because I build buffer time into my schedules.",
       "direction": "conscientious"
     },
     {
-      "text": "I usually adjust my stance to keep the group aligned.",
-      "direction": "yielding"
+      "text": "I experience the onset of anger not as a thought but as a hot flush that starts in my core and radiates outward.",
+      "direction": "high-reactive"
     },
     {
-      "text": "I believe that staying loose and responsive compounds into a richer range of experiences.",
+      "text": "I believe that the moral urgency I experience in the face of suffering is not something I manufacture but something I discover in myself.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that rigid plans prevent me from noticing unexpected opportunities.",
       "direction": "spontaneous"
     },
     {
-      "text": "I hold the view that a steady emotional baseline is simply the way I experience the world.",
+      "text": "I am comfortable unilaterally canceling plans that I think are not working.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that writing a recommendation letter for someone else brings me more satisfaction than updating my own resume.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that groups work best when no single person dominates the conversation.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I sense the difference between a group that is comfortable with each other and a group that is performing comfort.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I take time each evening to prepare for the next day.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I am quick to assert my expertise when a topic I know well comes up.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that the emotional distance I maintain from distressing situations is what enables me to provide help that is both consistent and fair.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I would give up a front-row seat so a stranger could have a better experience.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I am the kind of person who waits for a first draft and then helps improve it.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that my system treats most emotional stimuli as manageable information rather than urgent signals.",
       "direction": "low-reactive"
     },
     {
-      "text": "I can feel adrenaline surge through me in response to relatively minor provocations.",
+      "text": "I routinely assess whether my current role still serves my personal growth trajectory.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I tend not to notice the difference between laughter that invites me in and laughter that keeps me out.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "My inner life has a quality of spaciousness \u2014 there's room for emotions without them crowding everything out.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend not to register when someone is being deliberately evasive.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe that when suffering is brought to my attention, the question of whether to respond is already answered.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I would rather go without something I want so that someone else can have what they need.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that approaching painful realities with a measured, analytical temperament is the contribution I am best equipped to make and the one I find most meaningful.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that strict timelines stifle my creativity more than they help it.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I routinely invest in tools, equipment, and environments that optimize my own performance.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "My emotional peaks are dramatically higher than most people's seem to be.",
       "direction": "high-reactive"
+    },
+    {
+      "text": "I notice that emotional content in conversations registers with me but doesn't alter my breathing or posture.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel that the moral significance of suffering is what makes my ethical framework coherent and actionable.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I sense the difference between a comfortable lull in conversation and an awkward one.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I thrive when I have the trust of a group that works together.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I often decide what to do only once I'm already in the moment.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel uneasy leaving the house without confirming I have everything I need.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I notice the tiny pause before someone says a name, as if deciding whether to include or exclude that person from the narrative.",
+      "direction": "hyper-attuned"
     }
   ]
 }

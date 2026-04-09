@@ -2,76 +2,148 @@
   "id": 71,
   "questions": [
     {
-      "text": "I believe the most admirable people are those who give the most of themselves.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I feel frustrated when leadership is unclear or absent.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I feel that the moral pull of suffering is the experience that most clearly reveals what I truly care about.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I rarely cry, not because I suppress emotions but because they simply don't reach that intensity.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I feel that willpower is like a muscle that grows stronger with regular use.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I find myself naturally taking on extra work so that others don't have to.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I see myself as someone who helps things happen.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I think that the discipline of emotional detachment during crises is a capacity that can and should be trained.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I can read the atmosphere of a meeting within seconds of walking in.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I feel that building my own career and reputation is a central life priority.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I regularly take initiative in situations where others hesitate.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I experience love as an almost overwhelming force rather than a steady warmth.",
+      "text": "I find that the gap between something happening and my emotional response is nearly zero.",
       "direction": "high-reactive"
     },
     {
-      "text": "I am usually more aware of the logical flow of a conversation than its emotional currents.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I start tasks with whatever is at hand and improvise with available resources.",
+      "text": "I'd rather start doing the work immediately than spend time building systems first.",
       "direction": "spontaneous"
     },
     {
-      "text": "I often catch the brief moment of hesitation before someone agrees to something.",
-      "direction": "hyper-attuned"
+      "text": "I commit to a decision and adjust quickly if the outcome isn't what I expected.",
+      "direction": "spontaneous"
     },
     {
-      "text": "I find that I'm easily stirred by stories, films, or events that others take in stride.",
-      "direction": "high-reactive"
+      "text": "I often realize only later that someone was upset during a conversation.",
+      "direction": "hypo-attuned"
     },
     {
-      "text": "I feel that the effort of maintaining order is always worth the payoff in clarity.",
+      "text": "I am uncomfortable using veto power, even when I think I see a better path.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I experience the world as emotionally legible but not emotionally demanding.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I hold the view that giving genuine moral weight to others' pain \u2014 treating it as a priority \u2014 is a practice that requires deliberate cultivation.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I always carry items I might need \u2014 a charger, a pen, an umbrella \u2014 just in case.",
       "direction": "conscientious"
     },
     {
-      "text": "I feel that the moral pull of suffering is the experience that gives my ethical principles their substance and their force.",
+      "text": "I find that the obligation to respond to suffering is one of the few moral intuitions I trust completely.",
       "direction": "empathy"
+    },
+    {
+      "text": "I think that approaching painful situations with methodical objectivity is the approach most consistent with treating all parties with fairness and respect.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I rarely notice when someone is building consensus behind the scenes before a formal discussion.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I am comfortable making big bets on behalf of a group.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I work to ensure that access to key decisions is open to everyone involved.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that my emotional responses sometimes feel disproportionate, yet entirely genuine.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that volunteering my time for others gives me more fulfillment than personal leisure.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel most like myself when I am in the middle of helping someone.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice that I can feel the physiological echo of a strong emotion for days after the event that caused it.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I tend to frame career conversations around my own aspirations and what I need to get there.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel that my emotional system runs with a kind of quiet efficiency.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I detect subtle territorial behaviors like someone adjusting objects on a shared table.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I detect when a group member's contribution is being quietly dismissed by the way others respond to it.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that I can provide more sustained and equitable support by not becoming emotionally invested in any single case.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe my steady nervous system is one of the most consistent things about me across all contexts.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I hold the view that emotional distance during times of crisis is not a form of avoidance but a deliberate stance that allows for more careful and more effective engagement.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that personal convenience should never come at the expense of someone else's basic need.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I set recurring calendar events for tasks that need to happen regularly.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that the moral weight of suffering should be the primary lens through which governments and organizations evaluate their policies.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that my personal standards for quality should never be compromised to accommodate others.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I enjoy being the person who approves or vetoes ideas.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that too much planning can be just as harmful as too little.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that preparation is a form of respect \u2014 for the task, for the people involved, and for myself.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I can tell when someone is smiling politely but is actually upset.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that if I don't invest in myself, no one else will.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find it satisfying to work as part of a peer network without reporting lines.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I tend not to register the social dynamics of who gets the last word in a conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I want to be the one who shapes how a project unfolds.",
+      "direction": "agentic"
     }
   ]
 }

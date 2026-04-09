@@ -2,76 +2,148 @@
   "id": 91,
   "questions": [
     {
-      "text": "I believe that putting myself last is a natural expression of how I value others.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I tend to feel guilty when I spend a whole day on my own interests.",
-      "direction": "altruism"
-    },
-    {
-      "text": "My emotional reactions are vivid enough to produce physical symptoms \u2014 headaches, stomach knots, trembling.",
+      "text": "I tend to feel the emotional stakes of a situation far more intensely than the practical stakes.",
       "direction": "high-reactive"
     },
     {
-      "text": "I find it important to stay aligned with the group, even at the cost of my personal preference.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I'm comfortable starting with incomplete information and figuring things out along the way.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I detect when a silence between people is comfortable versus strained.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I feel that my personal achievements are among the things I am most proud of.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I approach problems by first defining them clearly, then generating solutions systematically.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I find that I am more helpful to people in distress when I engage with their problem intellectually rather than emotionally.",
+      "text": "I find that I offer my most effective support when I can separate the emotional dimension of a situation from the practical one.",
       "direction": "detachment"
     },
     {
-      "text": "I pick up on when a person glances at someone specific before responding to a question.",
+      "text": "I find that conversations seem layered to me, with a surface meaning and a deeper one running simultaneously.",
       "direction": "hyper-attuned"
     },
     {
-      "text": "Small moments \u2014 a sunset, a kind word \u2014 can produce a surprisingly intense reaction in me.",
-      "direction": "high-reactive"
+      "text": "I tend to match the pace others have set rather than impose my own.",
+      "direction": "yielding"
     },
     {
-      "text": "I hold the view that giving genuine moral priority to suffering is the most consequential choice I make on a daily basis.",
-      "direction": "empathy"
+      "text": "I detect when a person uses physical touch, like a pat on the back, to establish a hierarchy rather than express warmth.",
+      "direction": "hyper-attuned"
     },
     {
-      "text": "I often do not realize when a social norm has been violated until someone reacts.",
+      "text": "I tend to focus on the task at hand rather than the interpersonal dynamics around it.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I believe that the moral weight of suffering is the consideration that best reveals whether a person's ethical framework is serious or superficial.",
+      "text": "My internal experience is like a symphony played at full volume \u2014 nothing is muted.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I take pride in my ability to think on my feet and handle the unexpected.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I skim agreements and sign quickly, trusting I'll address issues if they arise.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that I gravitate toward the choice that most benefits my personal situation.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that decisions made under emotional pressure are more likely to be biased than those made with deliberate calm.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that breaking routines is what opens the door to creative breakthroughs.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that emotional steadiness in the midst of others' pain is an achievement that benefits both me and the people I am trying to help.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that a clear chain of command produces better results.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe my system is wired for resilience \u2014 it bends under pressure but returns to form quickly.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe that if something is important, it should be stated explicitly.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "When something touches me deeply, I can feel it reverberating in my chest for hours.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I am the person who asks the team how they would like to frame a problem.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that the moral weight of suffering is the reality that prevents ethical reasoning from becoming a game of abstract logic.",
       "direction": "empathy"
     },
     {
-      "text": "I feel drawn to positions of formal authority.",
+      "text": "I am recognized for my ability to rally people behind a single vision.",
       "direction": "agentic"
     },
     {
-      "text": "I am quick to take ownership of a situation when things go sideways.",
-      "direction": "agentic"
+      "text": "I routinely make financial sacrifices to support people in my life.",
+      "direction": "altruism"
     },
     {
-      "text": "I believe that careful resource management today creates abundance tomorrow.",
+      "text": "I hold the view that if I can solve a problem for someone else, I am obligated to try.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that explicit communication is a kindness, not a lack of sophistication.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I periodically declutter my spaces to keep things functional and clear.",
       "direction": "conscientious"
     },
     {
-      "text": "I notice that I can work through emotional challenges without losing productivity.",
+      "text": "I hold the view that generosity should come before security.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel responsible for creating the conditions that will lead to my desired future.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I tend to describe my emotional experiences in moderate terms \u2014 things are good, fine, okay.",
       "direction": "low-reactive"
+    },
+    {
+      "text": "I notice that my hands stay steady and my voice stays even in situations that rattle other people.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel that building equity in my own ventures is smarter than building equity for someone else.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that the weight I assign to suffering in my moral calculus is what determines the shape and direction of my life.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold the view that spending on personal health\u2014supplements, checkups, therapy\u2014is never excessive.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I think it is important to remain open and willing to shift with the group.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I pick up on the way someone subtly angles their body toward the person they most want approval from.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel most like myself when I am running the show.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that the moral weight of others' pain is the single most reliable compass I have for making ethical decisions.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I value knowing exactly where I stand on a project at all times.",
+      "direction": "conscientious"
     }
   ]
 }

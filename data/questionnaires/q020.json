@@ -2,76 +2,148 @@
   "id": 20,
   "questions": [
     {
-      "text": "I find that my tendency to approach suffering analytically has allowed me to be helpful in situations where others felt paralyzed.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I find that the thought of keeping something for myself while others lack is deeply uncomfortable.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I do not pay much attention to shifts in someone's posture or body positioning.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I find that I do not naturally read subtext in emails or text messages.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I feel that the moral pull of another person's pain creates an imperative in me that no amount of reasoning can fully override or dismiss.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I think of authority as something to be shared, not concentrated.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I hold the view that self-investment is not selfish\u2014it's essential.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I pick up on when a thank-you carries genuine gratitude versus social routine.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I notice that my body stays relaxed in situations that make other people tense.",
+      "text": "I find that I wake up at roughly the same emotional baseline every morning regardless of what happened the day before.",
       "direction": "low-reactive"
     },
     {
-      "text": "I think that the most productive conversations about human tragedy are those conducted with analytical precision rather than emotional intensity.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I prefer to live forward without spending much time documenting or reviewing the past.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I would rather be a key early contributor than the founder.",
+      "text": "I rarely overrule a group decision, even when I think there is a better option.",
       "direction": "yielding"
     },
     {
-      "text": "I feel that my emotional intensity is not something I can simply decide to turn off.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I hold the view that my low reactivity is not a deficit \u2014 it's a different way of being in the world.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I maintain organized systems for managing my files, finances, and personal records.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I feel that my assertiveness is one of my greatest assets.",
+      "text": "I tend to present a completed analysis rather than share my work in progress for input.",
       "direction": "agentic"
     },
     {
-      "text": "I find that too many procedures slow things down and prevent creative problem-solving.",
+      "text": "I often establish priorities for the group without being asked.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I routinely spend my free time on activities that benefit me personally.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that the obligation to respond to suffering is a moral demand that should take precedence over comfort or convenience.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I prepare agendas before any meeting I'm responsible for.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I reciprocate favors when the opportunity naturally arises rather than tracking them.",
       "direction": "spontaneous"
     },
     {
-      "text": "I hold the view that taking the best opportunity for myself is simply good judgment.",
+      "text": "I can sense when two people are pretending to get along but actually dislike each other.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I think that structured, logical engagement with human problems is a more reliable path to justice than empathic immersion.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I am open to revisiting any decision if the group raises new concerns.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I routinely document my own accomplishments so they are recognized and remembered.",
       "direction": "self-focus"
+    },
+    {
+      "text": "I think through potential problems before they arise so I can prevent them.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I rarely pick up on when a person is signaling discomfort through fidgeting or restlessness.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "My body seems to amplify emotional signals \u2014 what starts as mild annoyance quickly becomes agitation.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that I can hold someone's pain in mind as a fact to be addressed without it becoming a feeling I experience.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I focus entirely on the task at hand and clean up everything at the end in one pass.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that the felt weight of another's suffering is the experience that most consistently reveals my true moral commitments.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that my body reacts strongly to emotional situations \u2014 racing heart, flushed skin, tight chest.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I like to wait until a clear consensus emerges before acting.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I tend to feel emotionally prepared for whatever comes, because my system doesn't overreact.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I am usually more aware of the logical flow of a conversation than its emotional currents.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that building a legacy requires sustained, deliberate effort over many years.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I hold the view that my personal reading list, podcast queue, and study plan should reflect only my interests.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that the moral force of suffering is what makes ethical reasoning necessary rather than optional.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I routinely hand off leads, clients, or referrals to colleagues who need them more.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice that I can shift my attention away from emotional stimuli relatively easily.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that I am not naturally tuned in to the emotional register of a conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel uneasy spending on luxuries for myself when others around me are struggling.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I believe that the ability to examine suffering without flinching \u2014 to hold it at a distance and assess it \u2014 is essential for meaningful intervention.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I can tell when someone is including unnecessary details in a story to justify themselves.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I hold the view that my education was given to me so I could teach others.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to underestimate how long transitions take and adjust as I go.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "When I have a vision, I pursue it whether or not others initially agree.",
+      "direction": "agentic"
+    },
+    {
+      "text": "When something touches me, the feeling doesn't just visit \u2014 it moves in and stays.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I pick up on the implicit rules of a social gathering without anyone explaining them to me.",
+      "direction": "hyper-attuned"
     }
   ]
 }
