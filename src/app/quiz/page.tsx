@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { v4 as uuidv4 } from "uuid";
 
 export default function QuizLanding() {
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (!localStorage.getItem("anonymous_token")) {
@@ -19,17 +20,29 @@ export default function QuizLanding() {
   }, []);
 
   async function startQuiz() {
+    setLoading(true);
     const res = await fetch("/quiz/api/random");
     if (!res.ok) {
       const data = await res.json();
       if (data.error === "all_completed") {
         alert("You've completed all available assessments!");
+        setLoading(false);
         return;
       }
+      setLoading(false);
       return;
     }
     const { id } = await res.json();
     router.push(`/quiz/take/${id}`);
+  }
+
+  if (loading) {
+    return (
+      <div className="flex min-h-[70vh] flex-col items-center justify-center gap-4 px-6 pt-24">
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-foreground/20 border-t-foreground/70" />
+        <p className="text-foreground/60 text-sm">Preparing your assessment...</p>
+      </div>
+    );
   }
 
   return (
