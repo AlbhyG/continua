@@ -1,24 +1,25 @@
-import type { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
-import FadeIn from '@/components/FadeIn'
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: 'Continua: How Opposites Align',
-  description: 'Transform conflicts into complementarity. Understand personality as fluid coordinates across six dimensions.'
-}
+  title: "Continua: How Opposites Align",
+  description:
+    "Transform conflicts into complementarity. Understand personality as fluid coordinates across six dimensions.",
+};
 
 const feelingAxes = [
-  { name: 'Empathy', range: 'Empathy \u2194 Detachment' },
-  { name: 'Self-Orientation', range: 'Altruism \u2194 Narcissism' },
-  { name: 'Social Attunement', range: 'Hyper \u2194 Hypo' },
-]
+  { name: "Empathy", range: "Empathy \u2194 Detachment" },
+  { name: "Self-Orientation", range: "Altruism \u2194 Narcissism" },
+  { name: "Social Attunement", range: "Hyper \u2194 Hypo" },
+];
 
 const behavioralAxes = [
-  { name: 'Conscientiousness', range: 'Conscientiousness \u2194 Impulsivity' },
-  { name: 'Agency', range: 'Assertive \u2194 Yielding' },
-  { name: 'Reactivity', range: 'High \u2194 Low' },
-]
+  { name: "Conscientiousness", range: "Conscientiousness \u2194 Impulsivity" },
+  { name: "Agency", range: "Assertive \u2194 Yielding" },
+  { name: "Reactivity", range: "High \u2194 Low" },
+];
 
 export default function Home() {
   return (
@@ -41,9 +42,18 @@ export default function Home() {
           </h2>
         </FadeIn>
         <FadeIn delay={150}>
-          <p className="text-[19px] md:text-[22px] leading-[1.6] italic text-white/80 max-w-[640px] mx-auto">
-            How can we improve the human condition one person, one couple, one family, and one office at a time?
+          <p className="text-[19px] md:text-[22px] leading-[1.6] italic text-white/80 max-w-[640px] mx-auto mb-8">
+            How can&apos;t we improve the human condition one person, one couple, one
+            family, and one office at a time?
           </p>
+        </FadeIn>
+        <FadeIn delay={250}>
+          <Link
+            href="/quiz"
+            className="inline-block rounded-xl bg-white/90 px-8 py-4 text-lg font-bold text-foreground transition-all hover:bg-white shadow-sm"
+          >
+            Take the Assessment
+          </Link>
         </FadeIn>
       </section>
 
@@ -51,9 +61,21 @@ export default function Home() {
       <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-12">
         <div className="grid md:grid-cols-3 gap-4">
           {[
-            { href: '/my-info', title: 'Know Yourself', desc: 'Take contextual assessments that capture your personality in motion \u2014 not a fixed label.' },
-            { href: '/my-relationships', title: 'Understand Others', desc: 'See how personality differences create complementarity in couples, families, and teams.' },
-            { href: '/graphic-exemplar', title: 'See the Patterns', desc: 'Visualize personality as radar charts and color orbs across six dimensions \u2014 a living portrait in motion.' },
+            {
+              href: "/quiz",
+              title: "Know Yourself",
+              desc: "Take contextual assessments that capture your personality in motion \u2014 not a fixed label.",
+            },
+            {
+              href: "/my-relationships",
+              title: "Understand Others",
+              desc: "See how personality differences create complementarity in couples, families, and teams.",
+            },
+            {
+              href: "/graphic-exemplar",
+              title: "See the Patterns",
+              desc: "Visualize personality as radar charts and color orbs across six dimensions \u2014 a living portrait in motion.",
+            },
           ].map((card, i) => (
             <FadeIn key={card.href} delay={i * 100}>
               <Link
@@ -76,18 +98,38 @@ export default function Home() {
       <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-12">
         <FadeIn>
           <div className="text-[17px] md:text-[19px] leading-[1.7] text-white/90 space-y-5">
-              <p>
-                This is not a goal with an end state but, rather, the beginning of a process. All personality characteristics function on continua. Most people fall somewhere between the extremes, and even those positions shift depending on context, stress, growth, and intention.
-              </p>
-              <p>
-                The primary purpose of this exploration is to give people tools to better relate to their family, friends, and colleagues &mdash; and yes, to build stronger, more balanced teams at work. To transform conflicts that feel like character incompatibility into recognition of complementary positioning. To replace judgment with curiosity. To move from &ldquo;why can&rsquo;t you be different?&rdquo; to &ldquo;how can we leverage our differences?&rdquo;
-              </p>
-              <p>
-                We introduce that vision: a way of seeing personality as fluid coordinates across six primary axes &mdash; Empathy, Self-Orientation, Social Attunement, Conscientiousness, Agency, and Reactivity. Together, these six dimensions form a living system &mdash; a portrait of human nature in motion.
-              </p>
-              <p>
-                Behind all six axes lies a deeper capacity: meta-awareness &mdash; the ability to observe your own personality patterns as they unfold. This metacognition is the real instrument for conducting your inner orchestra, the tool that lets you notice where you are on each continuum and choose, with intention, where you want to move.
-              </p>
+            <p>
+              This is not a goal with an end state but, rather, the beginning of
+              a process. All personality characteristics function on continua.
+              Most people fall somewhere between the extremes, and even those
+              positions shift depending on context, stress, growth, and
+              intention.
+            </p>
+            <p>
+              The primary purpose of this exploration is to give people tools to
+              better relate to their family, friends, and colleagues &mdash; and
+              yes, to build stronger, more balanced teams at work. To transform
+              conflicts that feel like character incompatibility into
+              recognition of complementary positioning. To replace judgment with
+              curiosity. To move from &ldquo;why can&rsquo;t you be
+              different?&rdquo; to &ldquo;how can we leverage our
+              differences?&rdquo;
+            </p>
+            <p>
+              We introduce that vision: a way of seeing personality as fluid
+              coordinates across six primary axes &mdash; Empathy,
+              Self-Orientation, Social Attunement, Conscientiousness, Agency,
+              and Reactivity. Together, these six dimensions form a living
+              system &mdash; a portrait of human nature in motion.
+            </p>
+            <p>
+              Behind all six axes lies a deeper capacity: meta-awareness &mdash;
+              the ability to observe your own personality patterns as they
+              unfold. This metacognition is the real instrument for conducting
+              your inner orchestra, the tool that lets you notice where you are
+              on each continuum and choose, with intention, where you want to
+              move.
+            </p>
           </div>
         </FadeIn>
       </section>
@@ -111,8 +153,12 @@ export default function Home() {
               {feelingAxes.map((dim, i) => (
                 <FadeIn key={dim.name} delay={i * 60}>
                   <div className="glass-card p-4 text-center h-full">
-                    <h4 className="font-bold text-[15px] text-foreground mb-1">{dim.name}</h4>
-                    <p className="text-foreground/55 text-[13px]">{dim.range}</p>
+                    <h4 className="font-bold text-[15px] text-foreground mb-1">
+                      {dim.name}
+                    </h4>
+                    <p className="text-foreground/55 text-[13px]">
+                      {dim.range}
+                    </p>
                   </div>
                 </FadeIn>
               ))}
@@ -129,8 +175,12 @@ export default function Home() {
               {behavioralAxes.map((dim, i) => (
                 <FadeIn key={dim.name} delay={i * 60 + 180}>
                   <div className="glass-card p-4 text-center h-full">
-                    <h4 className="font-bold text-[15px] text-foreground mb-1">{dim.name}</h4>
-                    <p className="text-foreground/55 text-[13px]">{dim.range}</p>
+                    <h4 className="font-bold text-[15px] text-foreground mb-1">
+                      {dim.name}
+                    </h4>
+                    <p className="text-foreground/55 text-[13px]">
+                      {dim.range}
+                    </p>
                   </div>
                 </FadeIn>
               ))}
@@ -149,5 +199,5 @@ export default function Home() {
         </Link>
       </div>
     </div>
-  )
+  );
 }
