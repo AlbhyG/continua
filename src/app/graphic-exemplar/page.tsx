@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import FadeIn from '@/components/FadeIn'
+import AxesDiagram from '@/components/AxesDiagram'
 
 export const metadata: Metadata = {
   title: 'Graphic Exemplar',
@@ -30,11 +31,9 @@ export default function GraphicExemplarPage() {
         <FadeIn>
           <div className="glass-card p-6 md:p-8 !bg-white">
             <div className="flex justify-center">
-              <img
-                src="/axes-diagram.svg"
-                alt="Continua Six-Axis personality diagram showing the twelve poles: High Empathy, Altruism/Self-Transcendent, Hyper-Socially Attuned, High Conscientiousness, Assertive/Agentic, High Reactivity, and their opposites"
-                className="rounded-lg w-full max-w-[500px]"
-              />
+              <div className="w-full max-w-[700px]">
+                <AxesDiagram />
+              </div>
             </div>
           </div>
         </FadeIn>
