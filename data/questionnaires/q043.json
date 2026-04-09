@@ -1,23 +1,77 @@
 {
   "id": 43,
   "questions": [
-    {"text": "I believe that the awareness of suffering, combined with the ability to help, creates one of the strongest moral imperatives a person can face.", "direction": "empathy"},
-    {"text": "I find that I am most trusted in difficult situations because I bring logical clarity rather than emotional intensity.", "direction": "detachment"},
-    {"text": "I feel that the moral weight of another person's pain is something I register immediately and carry forward until I have responded.", "direction": "empathy"},
-    {"text": "I believe that approaching emotional situations with a problem-solving orientation is more genuinely helpful than approaching them with shared feeling.", "direction": "detachment"},
-    {"text": "I hold the view that the moral significance of suffering should be the primary consideration when I am deciding how to act.", "direction": "empathy"},
-    {"text": "I think that the ability to examine someone's painful circumstances without emotional involvement is what enables the most targeted and effective responses.", "direction": "detachment"},
-    {"text": "I believe that moral engagement with suffering is most meaningful when it persists through difficulty, fatigue, and competing demands.", "direction": "empathy"},
-    {"text": "I find that my natural inclination toward analytical thinking during emotional situations is an asset I have learned to rely on.", "direction": "detachment"},
-    {"text": "I feel that the moral claim of suffering is not weakened by repetition — each new encounter renews the obligation to respond.", "direction": "empathy"},
-    {"text": "I believe that remaining emotionally uninvolved during a crisis allows me to allocate my attention where it will do the most good.", "direction": "detachment"},
-    {"text": "I hold the view that the willingness to let suffering genuinely count in my decision-making is the bedrock of an ethical life.", "direction": "empathy"},
-    {"text": "I think that the most balanced and fair responses to complex human problems come from people who can evaluate needs without emotional favoritism.", "direction": "detachment"},
-    {"text": "I believe that the moral urgency of suffering is a signal I have learned to take seriously, and I would not want to lose that capacity.", "direction": "empathy"},
-    {"text": "I find that I can sustain helpful engagement with people in pain over long periods because I do not take on their emotional state.", "direction": "detachment"},
-    {"text": "I feel that the consistency with which I give moral priority to suffering is the most important measure of who I am.", "direction": "empathy"},
-    {"text": "I believe that deliberate emotional composure during crises is what turns concern into effective action.", "direction": "detachment"},
-    {"text": "I hold the view that treating suffering as a central moral fact — not as noise to be filtered out — is what makes genuine compassion possible.", "direction": "empathy"},
-    {"text": "I find that my ability to remain analytically engaged during emotionally demanding situations has served both me and others well.", "direction": "detachment"}
+    {
+      "text": "I believe my personal dreams matter less than the collective good.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I am often the last to know about interpersonal drama in my social circles.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "My body keeps score of every emotional event \u2014 I feel the accumulated weight.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that the moral concern I feel for those in pain is the most authentic expression of who I am at my core.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that following a process faithfully is more reliable than relying on inspiration.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I notice when someone's body language contradicts their words.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "When someone raises their voice near me, my whole system goes on high alert.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that emotional distance during a crisis is what allows me to think clearly enough to actually be useful.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I often take the initiative to resolve ambiguity for others.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that I set the emotional and strategic tone in groups I join.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I am attuned to the silent negotiations that happen before a group makes a decision.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that my emotional responses don't tend to snowball or escalate.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel comfortable in ambiguous situations where no one has taken charge yet.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that the degree to which I prioritize addressing suffering is the most transparent window into my real values.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel most productive when I have the freedom to shift direction at any moment.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I tend to schedule personal time before committing to obligations for others.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe the world does not need more self-interested people\u2014it needs more givers.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I keep a detailed calendar and refer to it multiple times a day.",
+      "direction": "conscientious"
+    }
   ]
 }

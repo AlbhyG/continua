@@ -1,23 +1,77 @@
 {
   "id": 55,
   "questions": [
-    {"text": "I believe that the moral urgency of suffering is the most reliable foundation for ethical decision-making I have found.", "direction": "empathy"},
-    {"text": "I find that my capacity for detached analysis during emotional events is the quality that allows me to be most consistently useful.", "direction": "detachment"},
-    {"text": "I feel that the moral weight of another's pain is the one consideration that reliably overrides all others in my decision-making.", "direction": "empathy"},
-    {"text": "I believe that emotional composure during crisis situations is a form of strength that is most apparent in the quality of the decisions it enables.", "direction": "detachment"},
-    {"text": "I hold the view that treating suffering as morally important is not one commitment among many but the commitment that gives all the others their meaning.", "direction": "empathy"},
-    {"text": "I think that the ability to remain emotionally uninvolved while still acting effectively is one of the most valuable qualities a person can bring to a crisis.", "direction": "detachment"},
-    {"text": "I believe that the moral force of suffering is what makes ethical reasoning necessary rather than optional.", "direction": "empathy"},
-    {"text": "I find that my emotional stability during difficult periods is something others have come to rely on and that I work to maintain.", "direction": "detachment"},
-    {"text": "I feel that the weight I assign to others' suffering is the thread that connects my daily choices to my deepest values.", "direction": "empathy"},
-    {"text": "I believe that the most just and effective systems of care are built by people who can evaluate human need without emotional distortion.", "direction": "detachment"},
-    {"text": "I hold the view that the moral claim of suffering is the most fundamental ethical reality — everything else is commentary.", "direction": "empathy"},
-    {"text": "I think that remaining analytically focused during emotional situations is a contribution I offer deliberately and with intention.", "direction": "detachment"},
-    {"text": "I believe that the sincerity of my moral commitments is most accurately reflected in how consistently I give weight to suffering.", "direction": "empathy"},
-    {"text": "I find that my approach of engaging with suffering intellectually rather than emotionally has been the most reliable path to effective action.", "direction": "detachment"},
-    {"text": "I feel that the moral pull of suffering is the experience that most clearly reveals what I truly care about.", "direction": "empathy"},
-    {"text": "I believe that the capacity for emotional restraint during crises is not an absence of caring but a different and complementary expression of it.", "direction": "detachment"},
-    {"text": "I hold the view that the seriousness with which I treat others' suffering is the ultimate measure of the integrity of my moral life.", "direction": "empathy"},
-    {"text": "I find that approaching human difficulties with calm, rational analysis is the contribution I am best equipped to offer and the one I am most committed to providing.", "direction": "detachment"}
+    {
+      "text": "I find satisfaction in perfecting a process until it runs smoothly every time.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I often take it upon myself to resolve group disagreements by choosing a path.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I notice I carry physical tension that maps directly onto whatever I'm feeling emotionally.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "My reactions to sudden change are swift and visceral.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that I can discuss the most difficult aspects of the human experience without losing my analytical perspective.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that the pull toward acting on behalf of those who are suffering is the most trustworthy moral signal I can follow.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that the obligation to respond to suffering should override competing pressures whenever the two come into conflict.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I enjoy doing meaningful work that does not require being the public face.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I notice when someone leans slightly away from a person they distrust.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I often make purchases on impulse when something catches my eye.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I tend to allocate the majority of my time to tasks that benefit other people.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I sense when someone is performing confidence they do not actually feel.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I routinely turn down favors that would distract from my personal priorities.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I tend to be unaware of power dynamics playing out in conversations.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I often establish priorities for the group without being asked.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel that my organizational systems give me a sense of calm and mastery.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I rarely feel the need to decompress emotionally after social interactions.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I would postpone my own goals indefinitely if someone close to me needed my help.",
+      "direction": "altruism"
+    }
   ]
 }

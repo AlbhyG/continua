@@ -1,23 +1,77 @@
 {
   "id": 6,
   "questions": [
-    {"text": "I believe that awareness of suffering creates a moral duty to act, not merely to acknowledge.", "direction": "empathy"},
-    {"text": "I find that I can discuss tragic events with analytical clarity without feeling personally implicated.", "direction": "detachment"},
-    {"text": "When I learn about someone's hardship, it shifts my priorities in a way I cannot easily override.", "direction": "empathy"},
-    {"text": "I believe that the most effective responses to crisis come from those who can suppress their emotional involvement.", "direction": "detachment"},
-    {"text": "I feel that indifference to others' suffering is a form of moral failure, regardless of the circumstances.", "direction": "empathy"},
-    {"text": "I am comfortable treating a person's emotional situation as a problem that requires strategy, not sympathy.", "direction": "detachment"},
-    {"text": "When I witness someone being dismissed or ignored in their pain, I feel compelled to intervene on their behalf.", "direction": "empathy"},
-    {"text": "I think that allowing suffering to influence your decision-making introduces bias that undermines good judgment.", "direction": "detachment"},
-    {"text": "I hold myself accountable when I fail to respond to suffering that I was aware of.", "direction": "empathy"},
-    {"text": "I prefer to base my responses to difficult situations on evidence and logic rather than on how the situation makes me feel.", "direction": "detachment"},
-    {"text": "I believe that the moral significance of another person's pain should override considerations of personal cost.", "direction": "empathy"},
-    {"text": "I have found that stepping back from the emotional content of a situation allows me to identify solutions others miss.", "direction": "detachment"},
-    {"text": "I feel a sustained motivation to help that persists long after the initial encounter with someone's suffering.", "direction": "empathy"},
-    {"text": "I think that effective leadership requires the ability to make decisions about people's lives without being swayed by their individual stories.", "direction": "detachment"},
-    {"text": "When I become aware that someone is struggling, I feel a moral responsibility to offer them support.", "direction": "empathy"},
-    {"text": "I approach others' emotional crises as situations that call for problem-solving rather than emotional participation.", "direction": "detachment"},
-    {"text": "I believe that a society's moral health can be measured by how seriously it takes the suffering of its most vulnerable members.", "direction": "empathy"},
-    {"text": "I am able to assess the severity of someone's situation without my assessment being colored by emotional involvement.", "direction": "detachment"}
+    {
+      "text": "I hold the view that the sincerity of my moral commitments is most accurately measured by how I respond to suffering, not by what I say about it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to describe my emotional experiences in moderate terms \u2014 things are good, fine, okay.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I respond to messages when the timing feels right, not according to a self-imposed schedule.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I think that the capacity for objective assessment in the presence of human pain is a form of strength that serves the common good.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I often end up as the reliable supporter in group projects.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that my willingness to decide quickly is valuable to those around me.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I sense when someone chooses a specific word because another word would reveal too much.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I often realize only later that someone was upset during a conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find purpose in being the one who shoulders the burden so others don't have to.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I let the boundaries between different areas of my life blur naturally.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find it natural to ask others what they expect from themselves.",
+      "direction": "yielding"
+    },
+    {
+      "text": "After a stressful event, it takes me a long time to return to my emotional baseline.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel that my personal comfort and satisfaction are things I should actively cultivate.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I hold the view that the strongest contribution I can make starts with a strong self.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I experience emotions at a moderate volume \u2014 present but never overwhelming.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that I navigate emotionally complex situations more effectively by treating them as intellectual problems with emotional dimensions, rather than the reverse.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I take a methodical approach to learning new skills, following a structured curriculum.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that I am usually the last person to notice when the mood in a room has shifted.",
+      "direction": "hypo-attuned"
+    }
   ]
 }

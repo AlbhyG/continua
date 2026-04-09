@@ -1,23 +1,77 @@
 {
   "id": 94,
   "questions": [
-    {"text": "I believe that the moral weight of suffering is the consideration that should cause us to question every system, practice, or policy that produces it unnecessarily.", "direction": "empathy"},
-    {"text": "I find that maintaining analytical focus during emotionally taxing situations has enabled me to play a coordinating role that others could not because they were too emotionally involved.", "direction": "detachment"},
-    {"text": "I feel that the moral pull of suffering is the experience that most strongly binds me to the moral community and its shared responsibilities.", "direction": "empathy"},
-    {"text": "I hold the view that composure during moments of distress is a form of discipline whose benefits are felt not only by me but by everyone who depends on the quality of my reasoning.", "direction": "detachment"},
-    {"text": "I believe that the obligation to respond to suffering is the ethical conviction that I hold most firmly and that I am least willing to compromise.", "direction": "empathy"},
-    {"text": "I think that analyzing painful realities with emotional detachment is the method that most consistently yields actionable insights rather than vague feelings of concern.", "direction": "detachment"},
-    {"text": "I find that the felt weight of another person's suffering is the experience that has done the most to awaken my sense of moral urgency.", "direction": "empathy"},
-    {"text": "I believe that the discipline of objective evaluation during emotionally fraught moments is what separates considered judgment from mere reaction.", "direction": "detachment"},
-    {"text": "I feel that the moral demand of suffering is the reality that has most decisively influenced the causes I support and the relationships I cultivate.", "direction": "empathy"},
-    {"text": "I hold the view that emotional distance during painful events is the quality that makes it possible to think not just about what should be done but about what can actually be achieved.", "direction": "detachment"},
-    {"text": "I believe that the moral priority of suffering is the principle I would invoke first when trying to explain my values to someone who does not share them.", "direction": "empathy"},
-    {"text": "I find that my capacity for calm, analytical reasoning during high-emotion situations has consistently produced outcomes that were more thoughtful and more equitable than my initial impulses would have been.", "direction": "detachment"},
-    {"text": "I hold the view that the moral concern I feel for suffering people is the quality that ties my personal narrative to the broader human story in a way nothing else does.", "direction": "empathy"},
-    {"text": "I think that a rational, structured approach to suffering is the method that most effectively respects the complexity of the situations in which people find themselves.", "direction": "detachment"},
-    {"text": "I feel that the weight I give to suffering in my moral calculus is the quality that most clearly separates the life I want to live from a life of mere self-interest.", "direction": "empathy"},
-    {"text": "I believe that the ability to process emotional situations without being overwhelmed by them is a cognitive achievement that supports both personal well-being and public service.", "direction": "detachment"},
-    {"text": "I find that the moral demand of suffering is the consideration that most powerfully moves me to take personal responsibility for the state of the world around me.", "direction": "empathy"},
-    {"text": "I hold the view that engaging with others' distress through careful, analytical reasoning is the approach most likely to produce results that are fair and enduring.", "direction": "detachment"}
+    {
+      "text": "I approach problems by trying things and seeing what works rather than defining them first.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I want to be part of shaping how a project unfolds, alongside others.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I experience the physical world more vividly when I'm in a heightened emotional state.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that the moral significance of another person's pain should override considerations of personal cost.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to frame requests as options rather than expectations.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that protecting my own interests helps me stay strong and effective.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that what people say matters more than how they say it.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I plan vacations and trips well in advance, with itineraries and reservations.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that the capacity to evaluate suffering without emotional contamination is what makes fair and scalable responses to human need possible.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that when I process distressing situations through a lens of rational analysis, I am better able to protect the interests of all parties, not just the most vocal.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that my emotional system has a built-in governor that keeps responses moderate.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe that a focused pursuit of personal excellence makes life meaningful.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find meaning in being the person who gives the most and asks for the least.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I don't tend to experience the kind of emotional highs and lows that others describe.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I often establish the norms and expectations within a group.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I notice the difference between a genuine invitation and a courtesy one.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I prefer trips where I can wander freely and discover things without an itinerary.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that I am more interested in the logical structure of an argument than in its social context.",
+      "direction": "hypo-attuned"
+    }
   ]
 }

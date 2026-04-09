@@ -1,23 +1,77 @@
 {
   "id": 38,
   "questions": [
-    {"text": "I believe that treating others' suffering as morally compelling — even when I am tired or distracted — is a discipline that reflects my real values.", "direction": "empathy"},
-    {"text": "I find that I can assess the severity and nature of someone's difficult situation without my emotional state being influenced by their distress.", "direction": "detachment"},
-    {"text": "I feel that the moral weight of another's pain creates an imperative that is difficult to override with any competing consideration.", "direction": "empathy"},
-    {"text": "I believe that structured, logical thinking about human suffering is not cold but is the foundation for interventions that actually work.", "direction": "detachment"},
-    {"text": "I hold the view that my moral commitment to addressing suffering is best expressed through reliable, sustained action rather than through emotional intensity.", "direction": "empathy"},
-    {"text": "I think that the ability to remain calm and focused during emotionally difficult interactions is a skill that directly translates into better outcomes.", "direction": "detachment"},
-    {"text": "I believe that the moral importance of suffering is not a variable that changes with my mood — it is a constant that I orient my decisions around.", "direction": "empathy"},
-    {"text": "I find that emotional distance from the people I am trying to help allows me to evaluate what they actually need with greater accuracy.", "direction": "detachment"},
-    {"text": "I feel that the pull to respond to suffering is a form of moral awareness that I want to strengthen, not diminish.", "direction": "empathy"},
-    {"text": "I believe that the most productive posture in a crisis is one of calm problem-solving rather than emotional solidarity.", "direction": "detachment"},
-    {"text": "I hold the view that the seriousness with which I treat others' suffering reveals the operating principles I actually live by.", "direction": "empathy"},
-    {"text": "I think that being emotionally unaffected by the details of a difficult case is what enables me to provide consistent and equitable support.", "direction": "detachment"},
-    {"text": "I believe that the moral demand of suffering is not an interruption to my life but a core feature of what makes it meaningful.", "direction": "empathy"},
-    {"text": "I find that my capacity for detached analysis during emotional situations is appreciated by those who need practical solutions rather than emotional resonance.", "direction": "detachment"},
-    {"text": "I feel that the obligation to act on behalf of those who are suffering becomes clearer with each encounter, not more routine.", "direction": "empathy"},
-    {"text": "I believe that treating emotionally difficult situations with calm analysis is a form of professionalism that is available to anyone willing to practice it.", "direction": "detachment"},
-    {"text": "I hold the view that the weight I give to others' suffering in my moral reasoning is the truest reflection of what I believe matters.", "direction": "empathy"},
-    {"text": "I find that maintaining emotional boundaries during other people's hardships is what sustains my ability to be helpful session after session.", "direction": "detachment"}
+    {
+      "text": "I sense when a group has collectively decided on something before any formal vote or discussion.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I do not naturally sense when it is my turn to speak versus when I should hold back.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that my emotional reactions match the scale of the event rather than exceeding it.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel that being willing to abandon a failing approach is more valuable than consistency.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that the moral priority of suffering is the principle I would invoke first when trying to explain my values to someone who does not share them.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I routinely decline social events that don't advance my personal interests.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I do not pick up on unspoken hierarchies in social groups.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I routinely choose personal development over group activities.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I like to take time and let the group deliberate before a decision is made.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I view deferring to others as a service to the group.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that the capacity to process suffering intellectually, without emotional involvement, is what makes sustained professional service possible.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that my ability to reason clearly about human problems depends on not being drawn into the emotional current of those problems.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I hold the view that my life's meaning is directly proportional to my contribution to others.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel that a predictable, well-ordered life is a peaceful life.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I think of authority as something to be exercised, not just held.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I do my best work under time pressure with minimal preparation.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I experience life at a comfortable volume \u2014 engaged but not flooded.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "When something wonderful happens, my elation is so strong it can feel almost manic.",
+      "direction": "high-reactive"
+    }
   ]
 }

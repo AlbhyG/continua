@@ -1,23 +1,77 @@
 {
   "id": 78,
   "questions": [
-    {"text": "I believe that the moral weight of suffering is the consideration that should humble every other claim on my attention and resources.", "direction": "empathy"},
-    {"text": "I find that when I analyze painful situations objectively, I am better able to distinguish between actions that help and actions that merely feel helpful.", "direction": "detachment"},
-    {"text": "I feel that the moral pull of another person's suffering is the experience that makes my sense of ethics feel real rather than inherited.", "direction": "empathy"},
-    {"text": "I hold the view that composure under emotional pressure is the trait that most directly determines whether my involvement in a difficult situation improves or worsens it.", "direction": "detachment"},
-    {"text": "I believe that the obligation to respond to suffering is the moral truth I hold most firmly, regardless of how inconvenient acting on it may be.", "direction": "empathy"},
-    {"text": "I think that structured reasoning about distressing circumstances is a discipline that protects against the kind of impulsive action that can create new problems.", "direction": "detachment"},
-    {"text": "I find that the felt weight of suffering is the moral experience that has shaped my priorities more than any idea or argument.", "direction": "empathy"},
-    {"text": "I believe that objective assessment of emotional situations is the competence that most clearly distinguishes thoughtful intervention from reactive involvement.", "direction": "detachment"},
-    {"text": "I feel that the moral demand of suffering is the standard by which I measure the authenticity of my own ethical commitments.", "direction": "empathy"},
-    {"text": "I hold the view that maintaining rational composure during painful events is not a sign of disengagement but of deep respect for the stakes involved.", "direction": "detachment"},
-    {"text": "I believe that the moral priority of suffering is the insight that should inform how I spend my time, my energy, and my life.", "direction": "empathy"},
-    {"text": "I find that my capacity for detached, analytical thinking during crises is the quality that allows me to serve as a resource rather than an additional source of distress.", "direction": "detachment"},
-    {"text": "I hold the view that the moral concern I feel for those in pain is the most dependable guide I have for navigating morally complex terrain.", "direction": "empathy"},
-    {"text": "I think that approaching difficult human situations with a clear and logical framework is the approach that produces the most sustainable solutions.", "direction": "detachment"},
-    {"text": "I feel that the weight I give to suffering in my reasoning is what ensures that my moral compass points toward human welfare rather than personal advantage.", "direction": "empathy"},
-    {"text": "I believe that the discipline of emotional detachment during distressing events is a craft that becomes more refined with experience and yields better outcomes over time.", "direction": "detachment"},
-    {"text": "I find that the moral demand of suffering is the reality that most powerfully calls me to account for the choices I make each day.", "direction": "empathy"},
-    {"text": "I hold the view that calm, data-informed analysis of painful situations is the most reliable foundation for decisions that have serious consequences for others.", "direction": "detachment"}
+    {
+      "text": "I find that I am constantly scanning faces for emotional information.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I prefer relationships where the agenda emerges mutually.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that a single upsetting comment can color my entire day.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that over-preparation can make me rigid and slow to adapt when things change.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I do not naturally track the ebb and flow of conversational dynamics.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I would endure personal hardship rather than let someone I know struggle alone.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel that the moral demand of suffering is the influence that has done the most to shape the kind of friend, colleague, and community member I strive to be.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think that emotional restraint during crises is a skill that produces measurably better outcomes for the people involved.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I frequently introduce new initiatives without waiting for a mandate.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that strong leadership means facilitating agreement, not overriding it.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I hold the view that the people who do the most good in crises are those who can maintain analytical distance from the suffering around them.",
+      "direction": "detachment"
+    },
+    {
+      "text": "My emotional reactions are gradual \u2014 they build slowly rather than arriving all at once.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I think of my daily habits as investments that pay dividends in the years ahead.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that I miss unspoken social expectations that others seem to just know.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that emotional upheaval in my environment doesn't destabilize me internally.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I don't care about streaks; what matters is whether I'm engaged and energized today.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I tend to define success in terms of my own benchmarks, not in terms of what I did for others.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I hold the view that personal growth should be a daily practice.",
+      "direction": "self-focus"
+    }
   ]
 }

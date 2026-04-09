@@ -1,23 +1,77 @@
 {
   "id": 14,
   "questions": [
-    {"text": "I believe that a person's willingness to act when confronted with suffering — rather than to look away — defines their moral center.", "direction": "empathy"},
-    {"text": "I find that I can help people more effectively when I engage with their situation logically rather than emotionally.", "direction": "detachment"},
-    {"text": "I feel that the moral weight of suffering is not something that should be diminished by familiarity or repetition.", "direction": "empathy"},
-    {"text": "I believe that the clearest path to a just outcome in any human conflict is through dispassionate analysis.", "direction": "detachment"},
-    {"text": "I hold the view that every person's suffering, no matter how small it appears from the outside, deserves to be taken seriously.", "direction": "empathy"},
-    {"text": "I think that people who can set aside their emotional responses during a crisis are the ones most likely to prevent harm.", "direction": "detachment"},
-    {"text": "I feel that the seriousness with which I treat another's suffering is something I want to be known for.", "direction": "empathy"},
-    {"text": "I believe that good leadership requires the ability to make decisions about people without being swayed by emotional proximity to their situations.", "direction": "detachment"},
-    {"text": "I hold the view that the impulse to respond to suffering is one of the most reliable signals of a person's fundamental decency.", "direction": "empathy"},
-    {"text": "I find that I process emotionally charged information more clearly when I approach it as an analyst rather than a participant.", "direction": "detachment"},
-    {"text": "I believe that moral courage is most visible when someone refuses to look away from suffering, even when it is deeply uncomfortable or inconvenient.", "direction": "empathy"},
-    {"text": "I think that the ability to evaluate suffering without being consumed by it is what distinguishes sustainable helpers from those who burn out.", "direction": "detachment"},
-    {"text": "I feel that the obligation to reduce suffering is one of the few moral principles I would never compromise.", "direction": "empathy"},
-    {"text": "I believe that approaching emotional situations with structured reasoning produces outcomes that are fairer to everyone involved.", "direction": "detachment"},
-    {"text": "I hold the view that a world in which people weighed each other's suffering more heavily would be measurably more just.", "direction": "empathy"},
-    {"text": "I find that emotional distance allows me to see the whole picture in a way that emotional involvement makes difficult.", "direction": "detachment"},
-    {"text": "I believe that when suffering is present and I have the means to help, inaction requires a justification I rarely find satisfactory.", "direction": "empathy"},
-    {"text": "I think that the capacity for objective assessment in the presence of human pain is a form of strength that serves the common good.", "direction": "detachment"}
+    {
+      "text": "I tend to miss when someone withdraws from a conversation as a silent protest.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that waiting for important news doesn't produce the anxiety I see in others.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe that the moral weight of suffering is the consideration that should inform the design of institutions as much as it informs individual conscience.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I maintain a steady emotional baseline regardless of what's happening around me.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I am energized by the process of building a decision together.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe the world would be better if more people put others ahead of themselves.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that rigid plans prevent me from noticing unexpected opportunities.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I hold the view that I owe it to myself to pursue the life I want.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that having a system for everything frees up mental energy for what matters.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I hold the view that pursuing what I want is not at odds with being a good person.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I tend to assert boundaries for the group about what is and isn't acceptable.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I prefer to collect others' ideas and find the common thread.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I redesign my approach each time I encounter a new problem rather than applying a formula.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that maintaining my emotional equilibrium during painful situations is what allows me to be present and useful over extended periods.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I am attuned to the split-second micro-expressions that reveal what someone actually thinks.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I prefer to deal with what is said rather than speculate about what was meant.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that I do my best thinking about human problems when I can set aside the emotional weight and focus on the facts.",
+      "direction": "detachment"
+    },
+    {
+      "text": "My emotional states are so vivid that they feel almost cinematic.",
+      "direction": "high-reactive"
+    }
   ]
 }

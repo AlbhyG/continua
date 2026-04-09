@@ -1,23 +1,77 @@
 {
   "id": 13,
   "questions": [
-    {"text": "I feel that the degree to which suffering matters to me in my decision-making is a direct reflection of my deepest values.", "direction": "empathy"},
-    {"text": "I believe that analytical thinking and emotional engagement are often at odds, and I tend to choose the former.", "direction": "detachment"},
-    {"text": "I hold the view that anyone who has the capacity to reduce suffering and chooses not to must answer for that choice.", "direction": "empathy"},
-    {"text": "I find that maintaining emotional distance from a person's situation allows me to be more honest about what they actually need.", "direction": "detachment"},
-    {"text": "I believe that suffering, wherever it occurs, creates moral claims that are binding regardless of personal convenience.", "direction": "empathy"},
-    {"text": "I think that evaluating situations involving human pain requires the same objectivity you would bring to any complex problem.", "direction": "detachment"},
-    {"text": "I feel that the importance I place on others' suffering is something I would defend as a core part of my identity.", "direction": "empathy"},
-    {"text": "I believe that the most effective responses to human tragedy come from those who can separate the emotional from the operational.", "direction": "detachment"},
-    {"text": "I hold the view that moral seriousness about suffering requires sustained attention, not just an initial reaction.", "direction": "empathy"},
-    {"text": "I am more inclined to formulate a plan of action than to dwell on the emotional dimensions of a difficult situation.", "direction": "detachment"},
-    {"text": "I believe that treating the suffering of others as a priority — even when no one is watching — is the most authentic expression of compassion.", "direction": "empathy"},
-    {"text": "I find that I can discuss deeply painful topics with a level of composure that others sometimes find surprising.", "direction": "detachment"},
-    {"text": "I feel that responding to the weight of others' suffering is the most reliable guide I have for living a meaningful life.", "direction": "empathy"},
-    {"text": "I believe that decisions made under emotional pressure are more likely to be biased than those made with deliberate calm.", "direction": "detachment"},
-    {"text": "I hold the view that the suffering of others deserves to be treated with the same seriousness I would give my own.", "direction": "empathy"},
-    {"text": "I think that the ability to remain emotionally unaffected by the weight of someone's story is sometimes what allows you to help them most.", "direction": "detachment"},
-    {"text": "I feel that the moral imperative to respond to suffering is the most reliable guide I have for living well.", "direction": "empathy"},
-    {"text": "I find that I naturally gravitate toward rational assessment rather than emotional involvement when confronted with someone's pain.", "direction": "detachment"}
+    {
+      "text": "I would work a job I dislike if it meant my family or community benefited greatly.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that the person who prepares the most is the one who succeeds.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel empowered when I can make executive decisions.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel things at a pitch that sometimes scares me.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I have a strong desire to leave my mark on the things I work on.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I tend to seek out roles and projects that will look good on my own record.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that inspiration and intuition are more reliable guides than any process.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "When I encounter injustice, my entire body lights up with agitation.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel that a democratic team outperforms a top-down one.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I rarely notice when someone is posturing for an audience during a meeting.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "My emotional responses are present but proportionate \u2014 they don't take over.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find deep satisfaction in checking items off a well-organized to-do list.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that processing human hardship as data \u2014 rather than as personal experience \u2014 leads to more effective interventions.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I hold the view that the moral weight of suffering should not be discounted because the person is distant, unfamiliar, or different from me.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I naturally track the undercurrents of group dynamics.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I notice when someone carefully chooses words to avoid offending a specific person in the room.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I hold the view that the seriousness with which I engage with others' suffering is the most authentic measure of whether I am living according to my values.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I prefer to let others take credit even when I did most of the work.",
+      "direction": "altruism"
+    }
   ]
 }

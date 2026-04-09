@@ -1,23 +1,77 @@
 {
   "id": 89,
   "questions": [
-    {"text": "I believe that the moral weight of suffering is the truth that should humble every attempt to reduce ethics to a matter of rules or calculations.", "direction": "empathy"},
-    {"text": "I find that maintaining analytical composure during emotionally loaded situations has allowed me to identify leverage points for change that others missed.", "direction": "detachment"},
-    {"text": "I feel that the moral pull of suffering is the experience that has most fundamentally altered my understanding of what I owe to other people.", "direction": "empathy"},
-    {"text": "I hold the view that composure under emotional pressure is the characteristic that most consistently distinguishes clear-headed decision-makers from reactive ones.", "direction": "detachment"},
-    {"text": "I believe that the obligation to respond to suffering is a moral reality that persists even when circumstances make responding difficult, costly, or inconvenient.", "direction": "empathy"},
-    {"text": "I think that treating distressing situations as analytical challenges to be solved is the posture that yields the most creative and effective interventions.", "direction": "detachment"},
-    {"text": "I find that the felt weight of another's suffering is the consideration that most consistently prevents me from settling for half-measures in my moral life.", "direction": "empathy"},
-    {"text": "I believe that objectivity in the face of suffering is the quality that enables me to judge when a proposed action will genuinely help and when it will not.", "direction": "detachment"},
-    {"text": "I feel that the moral demand of suffering is the constant in my ethical life that gives all other moral considerations their relative weight and importance.", "direction": "empathy"},
-    {"text": "I hold the view that the discipline of emotional detachment during crises is a practice that, when done well, enhances rather than diminishes the quality of care I provide.", "direction": "detachment"},
-    {"text": "I believe that the moral priority of suffering is the one principle I would retain if I had to reduce my entire ethical outlook to a single commitment.", "direction": "empathy"},
-    {"text": "I find that my analytical orientation during stressful events has given me the capacity to mediate between conflicting perspectives and arrive at balanced conclusions.", "direction": "detachment"},
-    {"text": "I hold the view that the moral concern I carry for those who are suffering is the anchor of my identity and the source of my deepest convictions.", "direction": "empathy"},
-    {"text": "I think that a dispassionate analysis of human suffering, conducted with care and rigor, is more valuable to the people affected than an emotionally driven but poorly planned response.", "direction": "detachment"},
-    {"text": "I feel that the weight of suffering in my moral thinking is the quality that has most enriched my understanding of what it means to live with others.", "direction": "empathy"},
-    {"text": "I believe that the capacity to evaluate distressing situations without emotional distortion is a hallmark of the kind of wisdom that complex problems demand.", "direction": "detachment"},
-    {"text": "I find that the moral pull of suffering is the experience that has most profoundly shaped my sense of obligation to the people and communities I belong to.", "direction": "empathy"},
-    {"text": "I hold the view that approaching painful realities with a measured, analytical temperament is the contribution I am best equipped to make and the one I find most meaningful.", "direction": "detachment"}
+    {
+      "text": "I feel that the moral pull of another person's suffering is among the most trustworthy signals I can follow.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral demand of suffering is the consideration that most decisively separates what I should do from what is merely convenient.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that pouring myself out for others is the most fulfilling way to spend my energy.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel that the process of planning itself helps me understand what I'm trying to achieve.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that life rewards those who are ready to seize unexpected opportunities.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that I don't need much recovery time after emotionally charged situations.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I carry the emotional tone of a dream well into my waking day.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel that my job is to point the way, even if others resist.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I think of myself as someone who facilitates outcomes.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I am careful to manage my energy across the day so I don't burn out before evening.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that the ability to evaluate competing claims of need without emotional favoritism is essential for fair resource distribution.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I notice that my appetite and energy fluctuate dramatically with my emotional state.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find it hard to enjoy something if I know someone else had to go without.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel that my personal goals are just as important as anyone else's needs.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I detect the subtle disappointment in someone's voice when they expected a different response.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that I do not instinctively sense who the social connectors are in a group.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I sense the difference between a comfortable lull in conversation and an awkward one.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I am the person who usually calls the meeting or sets the agenda.",
+      "direction": "agentic"
+    }
   ]
 }

@@ -1,23 +1,77 @@
 {
   "id": 63,
   "questions": [
-    {"text": "I believe that the moral weight of suffering is the consideration that should ultimately settle difficult ethical questions.", "direction": "empathy"},
-    {"text": "I find that I am at my most helpful when I can analyze a crisis without being pulled into its emotional current.", "direction": "detachment"},
-    {"text": "I feel that the moral demand of another's pain creates an imperative that is stronger than any competing interest.", "direction": "empathy"},
-    {"text": "I hold the view that objective assessment during distressing situations is an underappreciated form of moral seriousness.", "direction": "detachment"},
-    {"text": "I believe that the felt weight of suffering reveals moral truths that logical analysis alone would miss.", "direction": "empathy"},
-    {"text": "I think that emotional detachment during crises is a practical skill that leads to more equitable distribution of help.", "direction": "detachment"},
-    {"text": "I find that the moral pull of suffering is what keeps me honest about my priorities.", "direction": "empathy"},
-    {"text": "I believe that a composed, information-driven approach to painful events is more likely to address root causes than an emotionally driven one.", "direction": "detachment"},
-    {"text": "I hold the view that the obligation to respond to suffering is what makes morality a living practice rather than an abstract system.", "direction": "empathy"},
-    {"text": "I find that approaching others' difficulties with analytical clarity helps me sustain my ability to help over the long term.", "direction": "detachment"},
-    {"text": "I feel that the moral priority of pain is a truth I hold with more conviction as I grow older.", "direction": "empathy"},
-    {"text": "I believe that the skill of maintaining composure when others are suffering is essential for anyone in a position of responsibility.", "direction": "detachment"},
-    {"text": "I believe that the moral concern I feel for those in distress is the quality I would least want to lose.", "direction": "empathy"},
-    {"text": "I hold the view that structured reasoning about human suffering is the foundation of effective institutional responses to it.", "direction": "detachment"},
-    {"text": "I find that the weight I assign to suffering in my moral calculations is what makes those calculations meaningful.", "direction": "empathy"},
-    {"text": "I think that when I remain analytically engaged rather than emotionally engaged with suffering, I make better use of my skills.", "direction": "detachment"},
-    {"text": "I feel that the moral demand of another's suffering is an experience that should shape my identity, not just my behavior.", "direction": "empathy"},
-    {"text": "I find that emotional equilibrium during hard times is a quality I deliberately protect because of how much good it allows me to do.", "direction": "detachment"}
+    {
+      "text": "I process accounts of hardship primarily by considering what could be done differently rather than by dwelling on the pain itself.",
+      "direction": "detachment"
+    },
+    {
+      "text": "My internal experience is like a symphony played at full volume \u2014 nothing is muted.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that the felt weight of another person's suffering is the consideration that most often tips my decision-making in a new direction.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that a life full of surprises and variety is a rich life.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel like I have a sixth sense for when something is off in a social situation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that I automatically catalog the relationships between people when I enter a new social group.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I prefer to receive tasks from a coordinator rather than assign them.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I often do not notice when a compliment carries a double meaning.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I experience the ups and downs of life as gentle undulations rather than dramatic swings.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that my ideas often shape the direction a group takes.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I am most productive when I have full autonomy over direction.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I make it a point to arrive early to appointments and meetings.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that serving others without expectation of return is a core part of who I am.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that I am most engaged when working on something that directly serves my vision.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel that the moral pull of suffering is the experience that reveals to me most plainly what it means to be morally awake in a world full of need.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I often need time alone after social events to process the intensity of my reactions.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I tend to donate or share resources before setting aside savings for myself.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel unsettled when I realize I've forgotten something I was supposed to do.",
+      "direction": "conscientious"
+    }
   ]
 }

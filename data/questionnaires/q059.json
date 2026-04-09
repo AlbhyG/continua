@@ -1,23 +1,77 @@
 {
   "id": 59,
   "questions": [
-    {"text": "I believe that suffering has a moral weight that should factor into even routine decisions, not just dramatic ones.", "direction": "empathy"},
-    {"text": "I find that emotional composure during hardship is what allows me to see the full picture rather than just the most painful part.", "direction": "detachment"},
-    {"text": "I feel that the moral priority of another's pain grows more compelling the longer I sit with it, not less.", "direction": "empathy"},
-    {"text": "I hold the view that processing suffering through analytical frameworks is more productive than processing it through emotional engagement.", "direction": "detachment"},
-    {"text": "I believe that the obligation to respond to suffering is the moral commitment that most clearly separates serious ethics from casual good intentions.", "direction": "empathy"},
-    {"text": "I think that remaining detached during emotionally intense situations is a form of professional discipline I value highly.", "direction": "detachment"},
-    {"text": "I find that the moral pull of another person's suffering has a directness that cuts through ambiguity and points me toward right action.", "direction": "empathy"},
-    {"text": "I believe that the best decisions about how to address suffering come from a place of calm objectivity rather than emotional intensity.", "direction": "detachment"},
-    {"text": "I hold the view that the felt weight of suffering is the ethical anchor that prevents my reasoning from becoming too abstract.", "direction": "empathy"},
-    {"text": "I find that taking an objective, information-driven approach to others' distress helps me allocate my energy where it will matter most.", "direction": "detachment"},
-    {"text": "I feel that the moral demand of suffering is what gives ethical commitments their urgency and their meaning.", "direction": "empathy"},
-    {"text": "I believe that emotional steadiness in the midst of others' pain is an achievement that benefits both me and the people I am trying to help.", "direction": "detachment"},
-    {"text": "I believe that the moral concern I have for those in pain is not a weakness to be managed but a strength to be honored.", "direction": "empathy"},
-    {"text": "I hold the view that when I analyze a painful situation without emotional involvement, I reach conclusions that are more just.", "direction": "detachment"},
-    {"text": "I find that the moral weight of suffering has a clarity that theoretical ethics often lacks.", "direction": "empathy"},
-    {"text": "I think that composure during emotional events is a prerequisite for the kind of thinking that leads to real solutions.", "direction": "detachment"},
-    {"text": "I feel that the motivation to respond to suffering is the most authentic expression of my moral commitments.", "direction": "empathy"},
-    {"text": "I find that my capacity to engage with suffering intellectually rather than emotionally has been essential to my effectiveness in difficult roles.", "direction": "detachment"}
+    {
+      "text": "I hold the view that consistency matters more than intensity in achieving goals.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I am comfortable exercising authority even when it creates tension.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I often push for my preferred approach in group decisions.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that my emotional steadiness during others' hardships allows me to remain present and constructive long after emotional engagement would have exhausted me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I design my workflows to minimize friction and maximize repeatability.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that the moral demand of suffering is the reality that tests whether my ethical commitments are genuinely held or merely professed.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice that my emotional baseline is remarkably stable from day to day.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I have been told that I feel things more intensely than most people.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that I instinctively know which topics are safe and which are landmines in a given group.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I rarely think about what someone left unsaid after a conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I am attuned to the difference between genuine interest and polite listening.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that focusing on what I want\u2014rather than what others expect\u2014leads to my best life.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "When resources are scarce, I instinctively direct them toward other people first.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to go without rest to make sure the people around me are supported.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that my emotional responses ramp up faster than I can consciously process what's happening.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that the best creative work happens when all structure is removed.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that taking someone's suffering seriously, even when it is complex or inconvenient, is a form of moral courage.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I am usually the one helping the group uphold its own standards.",
+      "direction": "yielding"
+    }
   ]
 }

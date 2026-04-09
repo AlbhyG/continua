@@ -1,23 +1,77 @@
 {
   "id": 90,
   "questions": [
-    {"text": "I believe that the moral weight of suffering is the single most important consideration when evaluating the ethics of any decision, public or private.", "direction": "empathy"},
-    {"text": "I find that analytical clarity during emotionally intense situations gives me the perspective needed to avoid the tunnel vision that strong emotions can create.", "direction": "detachment"},
-    {"text": "I feel that the moral pull of suffering is the experience that most clearly proves to me that moral obligations are not chosen but discovered.", "direction": "empathy"},
-    {"text": "I hold the view that composure in the face of painful realities is a professional discipline that I owe to the people who count on me.", "direction": "detachment"},
-    {"text": "I believe that the obligation to respond to suffering is the moral truth that most deserves to be preserved and transmitted across generations.", "direction": "empathy"},
-    {"text": "I think that structured, analytical engagement with emotionally difficult situations is the approach most likely to produce solutions that stand the test of time.", "direction": "detachment"},
-    {"text": "I find that the felt weight of suffering is the experience that most consistently reminds me that my ethical responsibilities extend beyond my immediate circle.", "direction": "empathy"},
-    {"text": "I believe that maintaining objectivity during distressing events is the practice that most effectively prevents good intentions from leading to unintended harm.", "direction": "detachment"},
-    {"text": "I feel that the moral demand of suffering is the inner reality that has most strongly influenced the commitments and relationships I have chosen to prioritize.", "direction": "empathy"},
-    {"text": "I hold the view that the ability to analyze painful situations without emotional interference is a cognitive asset that grows more valuable with each difficult experience.", "direction": "detachment"},
-    {"text": "I believe that the moral priority of suffering is the foundational value that makes genuine ethics possible rather than merely fashionable.", "direction": "empathy"},
-    {"text": "I find that my tendency to respond to crises with analytical calm has consistently resulted in outcomes that were more carefully considered and more widely accepted.", "direction": "detachment"},
-    {"text": "I hold the view that the moral concern I feel in the face of suffering is the experience that most clearly distinguishes engaged moral agency from passive spectatorship.", "direction": "empathy"},
-    {"text": "I think that engaging with others' pain through a framework of rational evaluation is the method that most effectively prevents the kind of emotional fatigue that undermines sustained effort.", "direction": "detachment"},
-    {"text": "I feel that the weight I assign to suffering in my moral reasoning is the quality that most strongly ties my personal identity to the welfare of others.", "direction": "empathy"},
-    {"text": "I believe that maintaining a composed analytical perspective during times of human suffering is a form of reliability that benefits individuals and institutions alike.", "direction": "detachment"},
-    {"text": "I find that the moral demand of suffering is the experience that most reliably renews my determination to live a life of genuine ethical substance.", "direction": "empathy"},
-    {"text": "I hold the view that a careful, objective analysis of painful circumstances is the most ethical first step toward any intervention, because it ensures that help is directed where it is truly needed.", "direction": "detachment"}
+    {
+      "text": "I find that I can maintain equanimity even when those around me are emotional.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe that approaching others' pain with structured reasoning allows me to be more consistently helpful over time.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that a well-developed sense of personal ambition is attractive and admirable.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find deep contentment in giving away things I worked hard to earn.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I wake up some mornings already buzzing with emotional energy before anything has happened.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that the moral concern I feel for suffering people is the experience that most directly informs my sense of what a good life requires.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I rarely notice when someone downplays their accomplishments for social reasons.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I often help synthesize multiple perspectives into a direction the group can support.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I tend to be focused on my own train of thought during conversations rather than scanning for reactions.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "What some call procrastination, I experience as waiting for the right moment of clarity.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find myself correcting course when I think a group is going the wrong way.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that I am better positioned to help when I can evaluate a situation without being influenced by the emotions it generates in me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I frequently take on supporting or facilitating roles in team settings.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that enjoying the fruits of my own labor is exactly what hard work is for.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that not knowing what comes next is exciting rather than stressful.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I review my calendar at the start of each day to set my intentions.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that my inner life runs at a steady, sustainable pace.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I often catch the quick glance two people exchange when something significant is said.",
+      "direction": "hyper-attuned"
+    }
   ]
 }

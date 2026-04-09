@@ -1,23 +1,77 @@
 {
   "id": 24,
   "questions": [
-    {"text": "I feel that the moral force of suffering is most powerful when I understand the particular circumstances of the person enduring it.", "direction": "empathy"},
-    {"text": "I believe that the clearest path through any emotionally complex situation is to focus on what can be known and done rather than on what is felt.", "direction": "detachment"},
-    {"text": "I hold the view that treating others' pain as genuinely important — not as an abstraction — is what makes moral commitment real.", "direction": "empathy"},
-    {"text": "I find that my ability to make fair decisions under pressure depends on keeping my emotional engagement with specific cases in check.", "direction": "detachment"},
-    {"text": "I believe that the obligation to respond to suffering grows more pressing the more capacity I have to make a difference.", "direction": "empathy"},
-    {"text": "I think that emotional immersion in another's pain often produces responses that feel good but accomplish less than rational planning would.", "direction": "detachment"},
-    {"text": "I feel that the moral weight of suffering is a real force in my life that shapes my choices and priorities in observable ways.", "direction": "empathy"},
-    {"text": "I believe that the ability to think clearly about human problems in the middle of emotional turmoil is rare and worth developing.", "direction": "detachment"},
-    {"text": "I hold the view that the suffering I encounter — not the success I achieve — most clearly defines the quality of my moral life.", "direction": "empathy"},
-    {"text": "I find that separating my emotional reactions from my plans of action leads to help that is more targeted and less wasteful.", "direction": "detachment"},
-    {"text": "I believe that the moral demand created by suffering is best expressed not in feeling but in sustained and purposeful action.", "direction": "empathy"},
-    {"text": "I think that one of the most important things a person can do in a crisis is to remain calm enough to think and act with precision.", "direction": "detachment"},
-    {"text": "I feel that the moral significance I assign to others' suffering is an active choice that I renew each time I encounter it.", "direction": "empathy"},
-    {"text": "I believe that the ability to evaluate competing claims of need without emotional favoritism is essential for fair resource distribution.", "direction": "detachment"},
-    {"text": "I hold the view that taking someone's suffering seriously requires both recognition of its importance and a willingness to be changed by that recognition.", "direction": "empathy"},
-    {"text": "I find that maintaining emotional boundaries during other people's crises preserves my capacity to help consistently over time.", "direction": "detachment"},
-    {"text": "I believe that the moral attention I give to suffering is among the most meaningful things I can offer another person.", "direction": "empathy"},
-    {"text": "I think that the discipline of approaching suffering with composure and logic is a form of respect for the seriousness of the situation.", "direction": "detachment"}
+    {
+      "text": "I do not naturally notice who is comfortable and who is uncomfortable in a group.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I routinely set aside time and money specifically for my own growth and enjoyment.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I enjoy crafting the strategy and assigning roles.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel that being of service is the core of my identity.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I am comfortable letting others make the final call.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that setting deadlines for myself, even arbitrary ones, keeps me productive.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that my system has a natural resilience that brings me back to center quickly.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I pick up skills quickly through trial and error rather than structured practice.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel responsible for keeping a group connected and cohesive.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I get bored when a process becomes too routine and look for ways to shake things up.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that approaching human problems with structured analytical thinking is my most reliable method for producing outcomes that are both effective and just.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that I track whose opinions carry the most weight in a group even when no one has said so explicitly.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that prioritizing my own goals gives me the energy and clarity I need to thrive.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that caffeine, lack of sleep, or other stressors amplify my emotional reactivity dramatically.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I notice that I can hold space for difficult conversations without my own equilibrium being disrupted.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that I am not naturally tuned in to the emotional register of a conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that the pull to respond when I become aware of suffering is among the most trustworthy moral signals I experience.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that the ability to engage with suffering on a purely intellectual level is an asset in most professional contexts.",
+      "direction": "detachment"
+    }
   ]
 }

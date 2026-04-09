@@ -1,23 +1,77 @@
 {
   "id": 5,
   "questions": [
-    {"text": "I feel the strongest moral pull to help the person who is most vulnerable in a group.", "direction": "empathy"},
-    {"text": "I find it easier to help someone when I am not emotionally entangled in their situation.", "direction": "detachment"},
-    {"text": "I have been deeply affected by a stranger's story in a way that stayed with me for days.", "direction": "empathy"},
-    {"text": "I believe that the best advice comes from people who can see your situation without being moved by it.", "direction": "detachment"},
-    {"text": "I feel that failing to respond to someone's suffering when I could have helped is something I could not easily forgive in myself.", "direction": "empathy"},
-    {"text": "I have been told that I seem unaffected by things that upset most people.", "direction": "detachment"},
-    {"text": "When I hear about injustice, my first response is indignation and a desire to act, not to analyze.", "direction": "empathy"},
-    {"text": "I think that emotional sensitivity to others' pain, while admirable, can become a liability if not managed.", "direction": "detachment"},
-    {"text": "I feel that my relationships are deepened by my willingness to sit with others in their pain.", "direction": "empathy"},
-    {"text": "I am able to witness suffering without feeling compelled to intervene emotionally.", "direction": "detachment"},
-    {"text": "I believe that registering others' suffering as important is a fundamental part of my moral compass.", "direction": "empathy"},
-    {"text": "I think that people who maintain emotional composure in crises are often more helpful than those who empathize deeply.", "direction": "detachment"},
-    {"text": "I have found that the depth of my concern for others sometimes costs me in terms of my own energy and wellbeing.", "direction": "empathy"},
-    {"text": "I can distinguish between understanding that someone is in pain and actually feeling that pain myself — and I tend toward the former.", "direction": "detachment"},
-    {"text": "I feel that the most meaningful moments in my life have been ones where I was fully present to another person's experience.", "direction": "empathy"},
-    {"text": "I have consciously practiced maintaining emotional distance in situations where most people would be drawn in.", "direction": "detachment"},
-    {"text": "I believe that the impulse to help others is one of the deepest and most trustworthy parts of human nature.", "direction": "empathy"},
-    {"text": "I think that processing others' suffering intellectually rather than emotionally allows me to be more consistently helpful over time.", "direction": "detachment"}
+    {
+      "text": "I think that the ability to evaluate suffering without being consumed by it is what distinguishes sustainable helpers from those who burn out.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that I read social situations the way a musician reads a score, perceiving multiple layers at once.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I notice when someone is testing the waters with a comment before committing to an opinion.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel that planning for worst-case scenarios is practical, not pessimistic.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I regularly redirect my personal budget toward helping people around me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I believe that the moral demand of suffering is clearest when it calls for action that is inconvenient, costly, or socially awkward.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I pour my energy into whatever excites me now and trust I'll recharge when needed.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that I can be in a noisy, chaotic environment without feeling overstimulated.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find it energizing to direct a team through a challenging situation.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I hold the view that generosity should come before security.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I would describe my influence style as directive.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I lay out my clothes, pack my bag, or prepare materials the night before.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that the moral pull I experience in the presence of suffering is evidence of a well-functioning conscience.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I experience embarrassment as a searing, full-body flush that takes a long time to dissipate.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I tend to miss social cues that seem obvious to others.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find it hard to be around conflict because my body reacts so strongly to tension.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that groups find focus naturally when everyone's voice is heard.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe investing in my own development is one of the most important things I can do.",
+      "direction": "self-focus"
+    }
   ]
 }

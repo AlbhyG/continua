@@ -1,23 +1,77 @@
 {
   "id": 70,
   "questions": [
-    {"text": "I believe that the moral weight of suffering is the ethical reality that should govern how institutions and individuals alike set their priorities.", "direction": "empathy"},
-    {"text": "I find that analytical clarity about suffering has allowed me to help in complex situations where emotional engagement alone would have been insufficient.", "direction": "detachment"},
-    {"text": "I feel that the moral pull of suffering is a force that operates on me whether I want it to or not, and I am glad that it does.", "direction": "empathy"},
-    {"text": "I hold the view that composure in the presence of suffering is a form of reliability that makes a practical difference in outcomes.", "direction": "detachment"},
-    {"text": "I believe that the obligation to respond to suffering is the moral imperative that all other imperatives presuppose.", "direction": "empathy"},
-    {"text": "I think that the discipline of maintaining emotional distance during crises is essential for anyone who wants to help wisely rather than just urgently.", "direction": "detachment"},
-    {"text": "I find that the felt weight of another person's suffering is the consideration that most often tips my decision-making in a new direction.", "direction": "empathy"},
-    {"text": "I believe that when I engage with suffering as a problem to be analyzed rather than as an emotional experience, I am better equipped to coordinate effective responses.", "direction": "detachment"},
-    {"text": "I hold the view that the moral demand of suffering is not one value among many but the value that reveals the seriousness of all the others.", "direction": "empathy"},
-    {"text": "I find that my ability to remain objective in the face of pain is the foundation on which my professional judgment rests.", "direction": "detachment"},
-    {"text": "I feel that the moral priority of suffering is the insight that, once truly understood, permanently changes how a person approaches ethical questions.", "direction": "empathy"},
-    {"text": "I believe that structured, reasoned approaches to others' distress produce better results than approaches driven by the emotional impact of the moment.", "direction": "detachment"},
-    {"text": "I believe that the moral concern I feel for those in suffering is the quality that most directly connects my daily life to my deepest values.", "direction": "empathy"},
-    {"text": "I hold the view that objectivity during emotional events is a form of discipline that benefits not only me but everyone who depends on my judgment.", "direction": "detachment"},
-    {"text": "I find that the weight I give to suffering in my moral reasoning is what keeps my ethical commitments alive and non-negotiable.", "direction": "empathy"},
-    {"text": "I think that approaching human difficulties with a calm, analytical mindset is the contribution I am best suited to make and the one I am proudest of.", "direction": "detachment"},
-    {"text": "I feel that the moral demand of suffering is the ultimate test of whether my values are real or merely theoretical.", "direction": "empathy"},
-    {"text": "I find that maintaining emotional equilibrium during painful situations allows me to focus on what needs to happen rather than on how the situation makes me feel.", "direction": "detachment"}
+    {
+      "text": "When I'm upset, the feeling saturates my entire body.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I tend not to notice when two people share a meaningful look during a conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I rarely sense when someone is tailoring their message based on who is listening.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that a calm, objective stance during others' crises allows me to be a stabilizing force when one is needed most.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I schedule regular maintenance for my car, home, and other possessions.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I prefer relationships where I set the agenda.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that analytical clarity during times of distress has made me a more strategic thinker and a more dependable partner in collaborative problem-solving.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that self-focus is what allows me to be consistent and reliable.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that my own ambitions are the primary engine of my daily motivation.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I welcome unexpected changes because they often lead somewhere more interesting.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I would rather live simply so I can contribute more to the people and causes around me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I am drawn to situations where every voice carries equal weight.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find satisfaction in helping someone else's vision come to life.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I notice that I rarely need to actively calm myself down \u2014 my system does it automatically.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that sadness in me is a gentle ache rather than a consuming force.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I intuitively understand the unspoken hierarchy in any social group I enter.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I resist routines because they make my days feel repetitive and dull.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that the felt weight of another person's suffering is the experience that has done the most to awaken my sense of moral urgency.",
+      "direction": "empathy"
+    }
   ]
 }

@@ -1,23 +1,77 @@
 {
   "id": 8,
   "questions": [
-    {"text": "I feel that ignoring a person's pain in order to stay comfortable is something I would need to reconcile with my conscience.", "direction": "empathy"},
-    {"text": "I believe that the ability to remain emotionally uninvolved is what allows some professionals to save lives.", "direction": "detachment"},
-    {"text": "When I hear about systemic injustice, I feel a moral imperative to contribute to change, not just to be informed.", "direction": "empathy"},
-    {"text": "I tend to evaluate situations involving suffering by their facts and outcomes rather than by the emotions they generate.", "direction": "detachment"},
-    {"text": "I believe that the moral weight of another person's suffering should be enough to alter the course of my day.", "direction": "empathy"},
-    {"text": "I have found that I am most useful in emotionally charged situations when I do not allow myself to be drawn into the emotion.", "direction": "detachment"},
-    {"text": "I feel that a world where people took each other's suffering more seriously would be fundamentally better.", "direction": "empathy"},
-    {"text": "I think that emotional responses to suffering, while natural, should be secondary to strategic action.", "direction": "detachment"},
-    {"text": "I consider it a reflection of my values when I go out of my way to address suffering I encounter.", "direction": "empathy"},
-    {"text": "I believe that the clearest thinking happens when you can examine a human problem without feeling personally affected by it.", "direction": "detachment"},
-    {"text": "I feel that my moral compass is most engaged when I am confronted with another person's undeserved hardship.", "direction": "empathy"},
-    {"text": "I find that I can move through emotionally difficult conversations without carrying the weight of them afterward.", "direction": "detachment"},
-    {"text": "I believe that responding to suffering is not optional for someone who considers themselves a good person.", "direction": "empathy"},
-    {"text": "I think that empathic responses can cloud judgment in situations where clear analysis is what the suffering person actually needs.", "direction": "detachment"},
-    {"text": "I feel that the way I respond to the pain of others is the truest test of my character.", "direction": "empathy"},
-    {"text": "I am more effective when I treat emotional situations as requiring objective assessment rather than personal engagement.", "direction": "detachment"},
-    {"text": "I believe that recognizing the moral significance of suffering — even when it is inconvenient — is what separates compassion from sentiment.", "direction": "empathy"},
-    {"text": "I think that the ability to detach from individual cases of suffering is what allows systems and institutions to function fairly.", "direction": "detachment"}
+    {
+      "text": "I respond to new information by pivoting quickly rather than updating a formal plan.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "My startle response is pronounced \u2014 unexpected sounds or events jolt me intensely.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that my calm disposition is simply how my system is calibrated.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that directing my energy inward\u2014toward my own improvement\u2014is deeply satisfying.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I am usually focused on the substance of a discussion rather than its emotional texture.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel most at ease when I have minimal systems and maximum freedom.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that remaining emotionally uninvolved during another's crisis enables a quality of judgment that emotional involvement would compromise.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that my steady temperament reflects a genuine way of experiencing the world.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I am the person who helps refine and improve someone else's plan of action.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that acquiring resources for my own future is prudent and right.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I hold the view that taking others' suffering seriously enough to act on it \u2014 not just to notice it \u2014 is what moral conviction actually means.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice the subtle ways people claim or yield conversational space.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel that collaborative decision-making leads to more durable outcomes.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe indecision is more dangerous than a wrong decision.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that analytical clarity during emotionally demanding situations has been the quality that most consistently enabled me to achieve outcomes I can be proud of.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that stepping back so others can step forward is one of the most meaningful things I do.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that I am genuinely puzzled when people tell me I missed an obvious social cue.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I create and follow budgets for my personal and professional life.",
+      "direction": "conscientious"
+    }
   ]
 }

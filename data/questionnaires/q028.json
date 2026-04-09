@@ -1,23 +1,77 @@
 {
   "id": 28,
   "questions": [
-    {"text": "I feel that the obligation to respond to suffering applies universally — it does not depend on the identity or proximity of the person in pain.", "direction": "empathy"},
-    {"text": "I believe that the most effective crisis responders are those who can process human tragedy without absorbing its emotional content.", "direction": "detachment"},
-    {"text": "I hold the view that the moral significance I attach to suffering should be proportional to what I can do about it, not to how it makes me feel.", "direction": "empathy"},
-    {"text": "I find that I am able to remain focused on achieving good outcomes even when surrounded by emotional turmoil.", "direction": "detachment"},
-    {"text": "I believe that treating every person's suffering as worthy of serious moral attention is the baseline of ethical living.", "direction": "empathy"},
-    {"text": "I think that dispassionate analysis of human problems is what distinguishes effective help from well-intentioned but misdirected effort.", "direction": "detachment"},
-    {"text": "I feel that the weight of my concern about others' pain is something I can point to as evidence of my moral engagement.", "direction": "empathy"},
-    {"text": "I believe that the most useful contribution during an emotional crisis is often a calm voice that redirects attention to what can actually be done.", "direction": "detachment"},
-    {"text": "I hold the view that moral attention to suffering — the active decision to let it matter — is a habit that strengthens with practice.", "direction": "empathy"},
-    {"text": "I find that I function most effectively in roles where emotional content must be processed intellectually rather than experientially.", "direction": "detachment"},
-    {"text": "I believe that the pull I experience toward responding to suffering is not weakness but the operation of a well-calibrated moral sense.", "direction": "empathy"},
-    {"text": "I think that the ability to evaluate situations of human suffering with precision requires deliberate emotional self-regulation.", "direction": "detachment"},
-    {"text": "I feel that the moral force of suffering is intensified when I understand the specific ways in which a person has been affected.", "direction": "empathy"},
-    {"text": "I believe that emotional reactions to suffering, however genuine, can distort the allocation of help if they are not moderated by reason.", "direction": "detachment"},
-    {"text": "I hold the view that acknowledging the moral weight of suffering — without diminishing or inflating it — is the most honest response.", "direction": "empathy"},
-    {"text": "I find that I can sustain my engagement with others' difficulties over long periods because I do not allow them to affect me emotionally.", "direction": "detachment"},
-    {"text": "I believe that the moral demand of suffering is clearest when it calls for action that is inconvenient, costly, or socially awkward.", "direction": "empathy"},
-    {"text": "I think that the most balanced responses to human tragedy come from those who can hold both the facts and the feelings at arm's length.", "direction": "detachment"}
+    {
+      "text": "I routinely dedicate my best hours to my own creative and professional projects.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that clear, direct speech is a sign of respect.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I keep important documents filed and easy to locate at a moment's notice.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe clarity of vision matters more than everyone's agreement.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I am at my best when I am a trusted co-pilot.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I adjust naturally as I go rather than setting aside formal review periods.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice when someone is telling a story primarily to position themselves in a certain light.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I hold the view that I should always be looking for ways to lighten someone else's burden.",
+      "direction": "altruism"
+    },
+    {
+      "text": "When I feel gratitude, it swells inside me until I can barely contain it.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that the professionals and leaders who make the greatest positive impact are those who can process suffering without emotional disruption.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to weigh how a decision affects me before considering how it affects others.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I rarely know what I'll be doing tomorrow until tomorrow comes.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I can distinguish between understanding that someone is in pain and actually feeling that pain myself \u2014 and I tend toward the former.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I hold the view that the moral significance of suffering should be the primary consideration when I am deciding how to act.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice that excitement in me feels like a pleasant warmth rather than a roaring fire.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel more comfortable in positions without formal authority.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I usually do not register the social significance of small talk.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I tend to move through emotionally charged moments with a sense of groundedness.",
+      "direction": "low-reactive"
+    }
   ]
 }

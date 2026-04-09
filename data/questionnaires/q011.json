@@ -1,23 +1,77 @@
 {
   "id": 11,
   "questions": [
-    {"text": "I believe that the suffering of one person, fully understood, should be enough to compel meaningful action.", "direction": "empathy"},
-    {"text": "I find that treating emotional situations as puzzles to be solved yields more productive outcomes than sharing in the distress.", "direction": "detachment"},
-    {"text": "I feel that my moral integrity is tested most when I encounter suffering that would be easy to ignore.", "direction": "empathy"},
-    {"text": "I believe that the ability to engage with suffering on a purely intellectual level is an asset in most professional contexts.", "direction": "detachment"},
-    {"text": "I hold the view that the suffering of anyone, anywhere, deserves to be weighed as real and significant in my moral reasoning.", "direction": "empathy"},
-    {"text": "I think that the most balanced and fair decisions come from people who can examine a situation without being emotionally drawn into it.", "direction": "detachment"},
-    {"text": "When I learn that someone has been harmed, I feel a moral pull to respond that remains present until I have taken action.", "direction": "empathy"},
-    {"text": "I find that emotional reactions to hardship often contain more noise than signal when it comes to deciding how to respond.", "direction": "detachment"},
-    {"text": "I believe that the strength of a person's moral commitments is best revealed by how they respond when suffering is present.", "direction": "empathy"},
-    {"text": "I prefer to engage with difficult human situations by first constructing a clear picture of the facts before considering the feelings involved.", "direction": "detachment"},
-    {"text": "I feel that treating another person's suffering as secondary to any other consideration is a failure I take seriously.", "direction": "empathy"},
-    {"text": "I have found that emotional neutrality in the face of others' hardship allows me to distribute my help more equitably.", "direction": "detachment"},
-    {"text": "I believe that a willingness to be moved by others' suffering — and to act on it — is the foundation of a just society.", "direction": "empathy"},
-    {"text": "I think that those who can remain analytical during emotionally intense situations provide a kind of stability that is essential for groups.", "direction": "detachment"},
-    {"text": "I feel that the moral significance of suffering does not diminish based on how familiar or distant the person is to me.", "direction": "empathy"},
-    {"text": "I believe that responding to suffering with strategic calm is often more respectful than responding with visible emotion.", "direction": "detachment"},
-    {"text": "I hold the view that the decision to act in the face of suffering — not the feeling that precedes it — is where moral weight truly resides.", "direction": "empathy"},
-    {"text": "I find that I can engage fully with someone's difficult situation without it altering my emotional baseline.", "direction": "detachment"}
+    {
+      "text": "I feel a strong pull to put community needs above my personal desires.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to protect my personal time fiercely.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that I navigate social situations best when the rules are clearly defined.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that preparation reduces my anxiety and increases my confidence.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I notice when a text message carries a tone that differs from the sender's usual style.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel a strong pull to be in charge of important initiatives.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that acting in my own interest when I could be helping others feels like a failure.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I prefer a general sense of direction over specific, rigid objectives.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I hold the view that detached, methodical reasoning about painful situations is the approach that yields the broadest view and the most thoughtful response.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I often initiate projects without waiting for approval.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I prefer to be a contributor alongside others rather than the sole architect.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I notice when a group is collectively avoiding a topic that everyone is thinking about.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe my nervous system runs at a higher baseline than most people's.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that my emotional state changes gradually, like a thermostat rather than a switch.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel that the obligation to respond to pain is a commitment that defines the core of my ethical life.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that the moral weight of someone's suffering should never be discounted simply because responding to it is inconvenient.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that creating checklists helps me stay focused and avoid overlooking details.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I notice that my face and body betray my emotional intensity before I have a chance to modulate it.",
+      "direction": "high-reactive"
+    }
   ]
 }

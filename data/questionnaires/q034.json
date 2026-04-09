@@ -1,23 +1,77 @@
 {
   "id": 34,
   "questions": [
-    {"text": "I believe that when I know about someone's suffering and have the capacity to act, the moral case is clear enough to compel action.", "direction": "empathy"},
-    {"text": "I find that emotional distance from the details of a case allows me to make recommendations that are more consistent and less biased.", "direction": "detachment"},
-    {"text": "I feel that the moral significance of suffering is inherent — it does not need to be amplified by emotion to be valid and compelling.", "direction": "empathy"},
-    {"text": "I believe that the capacity to regulate emotional responses during exposure to human pain is a cornerstone of professional competence.", "direction": "detachment"},
-    {"text": "I hold the view that taking others' suffering seriously enough to act on it — not just to notice it — is what moral conviction actually means.", "direction": "empathy"},
-    {"text": "I think that rational deliberation about how best to respond to suffering produces more reliable results than emotional impulse.", "direction": "detachment"},
-    {"text": "I believe that the weight I give to suffering in my moral reasoning reflects a deep commitment that I actively maintain.", "direction": "empathy"},
-    {"text": "I find that I can be present during emotionally painful conversations without my own equilibrium being affected.", "direction": "detachment"},
-    {"text": "I feel that the moral pull of suffering functions as a compass that reliably points me toward the most ethically important actions.", "direction": "empathy"},
-    {"text": "I believe that separating the emotional and analytical dimensions of a crisis is what allows the most thoughtful and effective responses.", "direction": "detachment"},
-    {"text": "I hold the view that the moral urgency of suffering is the same whether it belongs to someone I know or someone I will never meet.", "direction": "empathy"},
-    {"text": "I think that the discipline of maintaining analytical clarity in the presence of emotional pain is one of the most practically useful human capacities.", "direction": "detachment"},
-    {"text": "I believe that the decision to let suffering matter in my life — to give it weight in my choices — is the most consequential moral decision I make.", "direction": "empathy"},
-    {"text": "I find that approaching distressing situations with a structured methodology leads to interventions that are more effective and more equitable.", "direction": "detachment"},
-    {"text": "I feel that the moral demand of suffering calls not just for a response but for a response proportional to what I am capable of providing.", "direction": "empathy"},
-    {"text": "I believe that the most important conversations about human suffering are those guided by evidence and analysis rather than by emotional momentum.", "direction": "detachment"},
-    {"text": "I hold the view that treating others' suffering as morally binding is a practice I would want to sustain across every area of my life.", "direction": "empathy"},
-    {"text": "I find that my ability to maintain emotional composure in distressing situations allows me to be a stabilizing influence for those around me.", "direction": "detachment"}
+    {
+      "text": "I feel uneasy making decisions that affect others without their explicit buy-in.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I value directness in communication above all else.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that I have a natural shock absorber for emotional impact.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe that bold strokes and big moves matter more than getting every detail right.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that I often forget my own needs because I am so focused on meeting the needs of those around me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that taking care of myself first puts me in the best position to live well.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I mix up different types of tasks throughout the day to keep things fresh.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I hold the view that a clear plan reduces wasted effort and increases impact.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I tend to be surprised by relationship dynamics that others saw developing all along.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that the moral demand of suffering applies with equal force whether the person is present or distant.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice that my emotional reactions are often more intense than what the situation calls for.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that a strong focus on personal achievement leads to a well-lived life.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I hold the view that remaining emotionally even during a crisis demonstrates a kind of competence that serves everyone better.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe my constitutional calmness is an asset in uncertain situations.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I have been told that I have a commanding presence.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I hold the view that accountability should be distributed across the team.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I notice when a compliment is designed to establish dominance rather than express admiration.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I think that rational engagement with suffering, while less dramatic than emotional engagement, tends to produce results that are more lasting and more just.",
+      "direction": "detachment"
+    }
   ]
 }

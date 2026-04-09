@@ -1,23 +1,77 @@
 {
   "id": 21,
   "questions": [
-    {"text": "I believe that when suffering is brought to my attention, the question of whether to respond is already answered.", "direction": "empathy"},
-    {"text": "I find that I can work through emotionally heavy material — accounts of trauma, loss, injustice — without it altering my focus.", "direction": "detachment"},
-    {"text": "I feel that the moral significance of another person's pain is not reduced by the number of people experiencing similar pain.", "direction": "empathy"},
-    {"text": "I believe that the professionals who handle human suffering most effectively are those who treat it as a problem to solve rather than a burden to share.", "direction": "detachment"},
-    {"text": "I hold the view that suffering creates an ethical claim on anyone who becomes aware of it and is positioned to help.", "direction": "empathy"},
-    {"text": "I find that my approach to emotionally difficult problems is most effective when it begins with questions, not feelings.", "direction": "detachment"},
-    {"text": "I believe that giving moral weight to someone's suffering — truly letting it count — is a choice that reflects the kind of person I want to be.", "direction": "empathy"},
-    {"text": "I think that emotional involvement with someone's hardship, while understandable, often reduces the precision of the help offered.", "direction": "detachment"},
-    {"text": "I feel that the moral pull I experience in the presence of suffering is a signal I should trust, not manage.", "direction": "empathy"},
-    {"text": "I believe that maintaining an even emotional state during moments of crisis is one of the most practical contributions a person can make.", "direction": "detachment"},
-    {"text": "I hold the view that the suffering of others should occupy a central, not peripheral, place in my moral reasoning.", "direction": "empathy"},
-    {"text": "I find that addressing human pain with calm objectivity allows me to serve more people more effectively over time.", "direction": "detachment"},
-    {"text": "I believe that taking suffering seriously means allowing it to influence not just how I feel but what I prioritize.", "direction": "empathy"},
-    {"text": "I think that the most equitable treatment of people's needs comes from those who can separate the emotional from the factual.", "direction": "detachment"},
-    {"text": "I feel that the strength of my moral engagement is best measured by how I respond when suffering is present and action is possible.", "direction": "empathy"},
-    {"text": "I believe that emotional neutrality in high-pressure situations protects against the kinds of errors that emotional involvement introduces.", "direction": "detachment"},
-    {"text": "I hold the view that every instance of suffering I encounter that goes unaddressed represents a failure of my moral attention.", "direction": "empathy"},
-    {"text": "I find that I can remain composed and focused in environments saturated with emotional pain.", "direction": "detachment"}
+    {
+      "text": "I pick up on when someone is narrating an event with a particular audience member in mind.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I notice when someone's politeness has an edge to it.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I experience joy with an intensity that sometimes surprises the people around me.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "My emotional life has a consistent, predictable quality that I've come to rely on.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I think about the second- and third-order consequences of my decisions.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I rarely detect the difference between someone making small talk and someone trying to connect.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that spending lavishly on my own experiences is a worthwhile use of money.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I enjoy being the one others look to for decisions.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel that the weight of suffering in my moral consciousness is the feature that makes my ethical outlook genuinely responsive to the conditions of real human lives.",
+      "direction": "empathy"
+    },
+    {
+      "text": "After receiving bad news, I can feel the shock reverberating through my body for hours.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I think that the ability to process painful experiences through a rational framework is what makes it possible to provide sustained help without burning out.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I instinctively take control of high-pressure situations.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find budgets and financial plans too restrictive and prefer to manage money intuitively.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I approach important decisions by gathering information and analyzing options systematically.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find that volunteering my time for others gives me more fulfillment than personal leisure.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I believe that the pull to act on behalf of those who are suffering is among the most ethically sound motivations a person can follow.",
+      "direction": "empathy"
+    },
+    {
+      "text": "When I have a vision, I wait to see if others share it before moving forward.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that my primary function in relationships is to give, not to receive.",
+      "direction": "altruism"
+    }
   ]
 }

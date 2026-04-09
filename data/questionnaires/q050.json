@@ -1,23 +1,77 @@
 {
   "id": 50,
   "questions": [
-    {"text": "I believe that the moral demand of suffering is the most powerful and least ambiguous call to action I encounter.", "direction": "empathy"},
-    {"text": "I find that my analytical approach to emotional situations allows me to identify root causes and systemic solutions rather than just addressing symptoms.", "direction": "detachment"},
-    {"text": "I feel that the moral weight of suffering is what gives my ethical commitments their force and their direction.", "direction": "empathy"},
-    {"text": "I believe that the most impactful responses to widespread human suffering come from institutions staffed by people who can evaluate need dispassionately.", "direction": "detachment"},
-    {"text": "I hold the view that the seriousness with which I respond to suffering is the most reliable way I have to check whether I am living according to my stated values.", "direction": "empathy"},
-    {"text": "I think that the ability to engage with suffering without emotional destabilization is a form of resilience that serves both the helper and the helped.", "direction": "detachment"},
-    {"text": "I believe that moral attention to suffering is the thread that connects all of my other ethical commitments into a coherent whole.", "direction": "empathy"},
-    {"text": "I find that I can provide the most useful feedback and guidance during emotional situations because I am not caught up in the emotional current.", "direction": "detachment"},
-    {"text": "I feel that the moral pull of suffering is an invitation to become more fully the person I aspire to be.", "direction": "empathy"},
-    {"text": "I believe that the capacity for calm, evidence-based reasoning during human crises is what distinguishes effective response from well-meaning but disorganized effort.", "direction": "detachment"},
-    {"text": "I hold the view that the weight I give to suffering in my moral framework determines the ultimate shape and meaning of my life.", "direction": "empathy"},
-    {"text": "I think that remaining emotionally steady during periods of collective distress is a form of leadership that is essential but often invisible.", "direction": "detachment"},
-    {"text": "I believe that the moral significance of suffering is the one ethical principle I would defend without reservation or qualification.", "direction": "empathy"},
-    {"text": "I find that approaching human problems with structured analytical thinking is my most reliable method for producing outcomes that are both effective and just.", "direction": "detachment"},
-    {"text": "I feel that the moral urgency of suffering is the most authentic compass I have for determining what deserves my attention and effort.", "direction": "empathy"},
-    {"text": "I believe that the discipline of emotional non-engagement during crises is a practice that improves with experience and yields compounding benefits.", "direction": "detachment"},
-    {"text": "I hold the view that treating suffering as a genuine moral priority — in every decision, every day — is the standard to which I hold myself.", "direction": "empathy"},
-    {"text": "I find that my emotional steadiness in the face of others' distress is a quality I would describe as central to how I contribute to the world.", "direction": "detachment"}
+    {
+      "text": "I believe that following through on commitments, even small ones, is a measure of character.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that my sense of inner calm is one of the most stable things about me.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to spend money based on what feels right in the moment rather than following a budget.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that the clearest path through any emotionally complex situation is to focus on what can be known and done rather than on what is felt.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that rapid experimentation teaches you more than patient, linear study.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "When something excites me, the rush of energy is almost overwhelming.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel uneasy spending on luxuries for myself when others around me are struggling.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to select projects based on how they will develop my personal expertise.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel that no quantity of reasoning can legitimately override the moral demand that arises from directly knowing of another's pain.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I usually do not notice when someone adjusts their behavior after getting a social signal from someone else.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I often yield to the group's preferred approach, even if mine differs.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I tend to propose ideas and invite feedback before moving forward.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I notice the precise moment when a group conversation becomes dominated by one person.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that I do my best thinking when I am focused on my own challenges.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that loud noises, surprises, or sudden changes don't produce a big reaction in me.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I have a bias toward action over deliberation.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that analytical clarity enables me to untangle complex situations where suffering has multiple causes and no simple solution.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I do not naturally notice when someone is managing their image in a social situation.",
+      "direction": "hypo-attuned"
+    }
   ]
 }

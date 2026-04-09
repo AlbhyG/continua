@@ -1,23 +1,77 @@
 {
   "id": 52,
   "questions": [
-    {"text": "I believe that the obligation to address suffering grows in moral force with the specificity of my understanding of what someone is enduring.", "direction": "empathy"},
-    {"text": "I find that approaching human tragedy as a problem to be analyzed and solved is the most productive use of my capabilities.", "direction": "detachment"},
-    {"text": "I feel that the moral weight of suffering represents the strongest and most persistent call to action in my inner life.", "direction": "empathy"},
-    {"text": "I believe that the ability to manage my emotional state during crises is a skill I have developed intentionally and continue to refine.", "direction": "detachment"},
-    {"text": "I hold the view that moral engagement with suffering is the clearest and most authentic way I have to express what I believe in.", "direction": "empathy"},
-    {"text": "I think that the most equitable and effective systems for addressing human need are designed by those who can evaluate suffering without emotional distortion.", "direction": "detachment"},
-    {"text": "I believe that the moral demand of suffering is the standard against which I measure the seriousness of all my other commitments.", "direction": "empathy"},
-    {"text": "I find that I am most helpful in emotionally charged environments when I can maintain my composure and offer a calm, structured perspective.", "direction": "detachment"},
-    {"text": "I feel that the moral importance of suffering is what connects my abstract beliefs to the concrete decisions I make each day.", "direction": "empathy"},
-    {"text": "I believe that the capacity to process suffering intellectually, without emotional involvement, is what makes sustained professional service possible.", "direction": "detachment"},
-    {"text": "I hold the view that the weight I give to others' suffering is the cornerstone of my moral framework — everything else follows from it.", "direction": "empathy"},
-    {"text": "I think that the discipline of emotional composure under pressure is a form of professionalism that every person in a position of responsibility should cultivate.", "direction": "detachment"},
-    {"text": "I believe that the pull I experience toward addressing suffering is one of the most genuine and least performative aspects of who I am.", "direction": "empathy"},
-    {"text": "I find that detaching emotionally from a situation does not reduce my commitment to resolving it — it simply changes the method.", "direction": "detachment"},
-    {"text": "I feel that the moral significance of suffering is the anchor that keeps my ethical reasoning honest and grounded.", "direction": "empathy"},
-    {"text": "I believe that the most balanced responses to human difficulty are those guided by rational analysis rather than by the emotional temperature of the room.", "direction": "detachment"},
-    {"text": "I hold the view that the degree to which suffering matters in my life is the single most revealing fact about my moral character.", "direction": "empathy"},
-    {"text": "I find that my emotional stability during periods of others' distress is a quality I consider essential to my identity and my usefulness.", "direction": "detachment"}
+    {
+      "text": "I tend to see helping others as secondary to achieving my own objectives.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "My startle response is mild \u2014 unexpected events register but don't jolt me.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I often find that I help the group define what success looks like together.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I routinely say no to requests that don't align with my personal objectives.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I gravitate toward letting discussions continue until the group is satisfied.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I tend to work extra hours not for my own advancement, but to lighten the load for my team.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I prefer to own the outcome of a decision rather than share that ownership.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I think that the ability to evaluate situations of human suffering with precision requires deliberate emotional self-regulation.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that relying on willpower is exhausting; I'd rather follow my natural energy.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I can engage with intense subject matter \u2014 war, loss, tragedy \u2014 without being emotionally flooded.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I do not pay much attention to facial expressions during conversations.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I hold the view that the consistency of my moral concern for suffering \u2014 not its peak intensity \u2014 is the truest measure of its depth.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I value variety in my daily routine because it keeps me mentally sharp and engaged.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice the difference between someone who is quiet because they are content and someone who is quiet because they are upset.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that I am at my most effective when I can engage with a problem without being emotionally invested in the people involved.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find that writing out my goals makes me significantly more likely to achieve them.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "My emotional landscape has extreme peaks and valleys rather than rolling hills.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I do not automatically read into people's tone or body language.",
+      "direction": "hypo-attuned"
+    }
   ]
 }

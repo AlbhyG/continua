@@ -1,23 +1,77 @@
 {
   "id": 12,
   "questions": [
-    {"text": "I feel that the knowledge of preventable suffering carries a moral demand that I find difficult to set aside.", "direction": "empathy"},
-    {"text": "I believe that the most constructive response to a crisis is one informed by analysis rather than by emotional urgency.", "direction": "detachment"},
-    {"text": "I hold the view that how a person treats the suffering they encounter — not the suffering they cause — is the clearest window into their character.", "direction": "empathy"},
-    {"text": "I find that I can maintain a productive and even tone in conversations about deeply painful subjects.", "direction": "detachment"},
-    {"text": "I believe that moral responsibility extends to suffering I did not cause but could help alleviate.", "direction": "empathy"},
-    {"text": "I think that professional detachment — the ability to work effectively without emotional interference — is one of the most valuable skills a person can develop.", "direction": "detachment"},
-    {"text": "I feel that the obligation to respond to suffering becomes stronger, not weaker, when the suffering is complex or uncomfortable.", "direction": "empathy"},
-    {"text": "I find that the quality of my thinking improves when I deliberately exclude emotional considerations from my analysis.", "direction": "detachment"},
-    {"text": "I believe that a person who consistently assigns moral weight to the suffering of others is expressing something fundamental about their values.", "direction": "empathy"},
-    {"text": "I am able to consider the suffering of an individual as one input among many when making decisions that affect a larger group.", "direction": "detachment"},
-    {"text": "I feel that the moral pull of another person's hardship is not diminished by the practical difficulty of responding to it.", "direction": "empathy"},
-    {"text": "I think that the capacity to remain logically oriented during emotionally difficult moments is what makes some people reliable in a crisis.", "direction": "detachment"},
-    {"text": "I believe that no one's suffering should be treated as merely an abstraction when a concrete response is possible.", "direction": "empathy"},
-    {"text": "I find that I am better at helping people when I keep my own emotional state separate from theirs.", "direction": "detachment"},
-    {"text": "I hold the view that the willingness to let suffering change your plans is a meaningful expression of moral commitment.", "direction": "empathy"},
-    {"text": "I believe that the best policy decisions are made by those who can consider human suffering without being destabilized by it.", "direction": "detachment"},
-    {"text": "I feel that a genuine moral response to suffering always includes some element of willingness to act, not just to understand.", "direction": "empathy"},
-    {"text": "I think that the ability to process painful information without personal distress is undervalued in most social contexts.", "direction": "detachment"}
+    {
+      "text": "I believe that over-preparation can signal a lack of trust in one's own ability to adapt.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I tend to miss the political subtext in professional communications.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find myself noticing the cadence and rhythm of a conversation, not just the words.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that I adapt to the tone already present in groups I join.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I experience anticipation as an almost unbearable physical buzz.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I experience change as something to be navigated calmly rather than something that triggers alarm.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I hold the view that minimizing my own footprint allows more room for others.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel that the moral demand of suffering is the experience that gives my sense of justice its emotional foundation and its motivating power.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold the view that a detached, methodical engagement with human suffering is the posture that most effectively combines clarity of thought with depth of commitment.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I see myself as the captain of whatever ship I am on.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I often help the group sit with ambiguity until clarity emerges together.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I routinely spend my free time on activities that benefit me personally.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I notice that my emotional reactions rarely interfere with my ability to function.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I'd rather commit quickly to a direction and learn from the results than test endlessly.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that I am better at identifying what someone actually needs when I set aside the emotional coloring of their situation.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to miss the moment when a conversation shifts from casual to serious.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I routinely budget for things that enhance my personal quality of life.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I plan my meals, workouts, or daily routines in advance.",
+      "direction": "conscientious"
+    }
   ]
 }

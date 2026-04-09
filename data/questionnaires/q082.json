@@ -1,23 +1,77 @@
 {
   "id": 82,
   "questions": [
-    {"text": "I believe that the moral weight of suffering compels a kind of attention that is fundamentally different from intellectual curiosity or abstract concern.", "direction": "empathy"},
-    {"text": "I find that when I assess painful situations through an analytical lens, I am able to distinguish real problems from surface-level distress more effectively.", "direction": "detachment"},
-    {"text": "I feel that the moral pull of another person's pain creates an imperative in me that no amount of reasoning can fully override or dismiss.", "direction": "empathy"},
-    {"text": "I hold the view that composure during moments of crisis is a learned discipline that improves every aspect of professional performance.", "direction": "detachment"},
-    {"text": "I believe that the obligation to respond to suffering is the ethical bedrock on which all meaningful moral action rests.", "direction": "empathy"},
-    {"text": "I think that processing suffering as information rather than as an emotional wave is the key to making decisions I will not regret later.", "direction": "detachment"},
-    {"text": "I find that the felt weight of others' pain has been the catalyst for the most significant moral growth I have experienced.", "direction": "empathy"},
-    {"text": "I believe that objective evaluation of emotionally loaded circumstances is the skill most needed in any environment where decisions affect multiple stakeholders.", "direction": "detachment"},
-    {"text": "I feel that the moral demand of suffering is the reality that gives my daily choices their ethical significance.", "direction": "empathy"},
-    {"text": "I hold the view that the rational assessment of painful situations is a form of due diligence that responsible decision-makers owe to everyone affected.", "direction": "detachment"},
-    {"text": "I believe that the moral priority of suffering is the principle that should frame the way I think about leadership and influence.", "direction": "empathy"},
-    {"text": "I find that my inclination toward analytical detachment during emotionally difficult times has allowed me to support others without compromising my own effectiveness.", "direction": "detachment"},
-    {"text": "I hold the view that the moral concern I carry for those in suffering is the experience that keeps my conscience active and responsive.", "direction": "empathy"},
-    {"text": "I think that approaching suffering with methodical clarity is the approach that most reliably converts concern into tangible progress.", "direction": "detachment"},
-    {"text": "I feel that the weight of suffering in my moral landscape is the feature that gives shape and direction to everything else I care about.", "direction": "empathy"},
-    {"text": "I believe that the ability to remain level-headed during distressing events is a form of self-mastery that serves the needs of others as much as my own.", "direction": "detachment"},
-    {"text": "I find that the moral demand of suffering is the consideration that most effectively prevents me from rationalizing inaction.", "direction": "empathy"},
-    {"text": "I hold the view that a calm, evidence-based approach to human suffering is the hallmark of someone who takes the problem seriously enough to engage with it rigorously.", "direction": "detachment"}
+    {
+      "text": "I prefer to frame requests as invitations rather than directives.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I notice when someone is being left out of a conversation even when it is not obvious.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I focus on getting the right answer rather than on how that answer will land socially.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find it satisfying to bring order to something that was previously disorganized.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I frequently redefine objectives when I think the current ones are wrong.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I prefer to explore possibilities as they arise rather than commit to a single long-term plan.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel that the moral weight I assign to suffering is not an opinion I hold but a conviction that organizes my priorities.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that self-reliance is one of the most important qualities a person can develop.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that obsessing over details can prevent you from seeing the bigger picture.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I tend to think of my possessions as shared resources, not private property.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I believe that my ambitions are a healthy and important part of who I am.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I tend not to detect when a question has a hidden agenda behind it.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I hold the view that emotional detachment during painful situations is not a lack of caring but a different and sometimes superior way of caring.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I hold the view that the most useful thing I can offer in a painful situation is clear, structured thinking rather than an emotional response.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I am inclined to keep options open until the group has weighed in.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that the emotional charge of a memory fades quickly, leaving only the facts.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that when I'm angry, the anger feels like it's burning through me.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I experience frustration as a mild irritation that fades quickly.",
+      "direction": "low-reactive"
+    }
   ]
 }

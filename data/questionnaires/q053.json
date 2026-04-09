@@ -1,23 +1,77 @@
 {
   "id": 53,
   "questions": [
-    {"text": "I believe that when suffering is present and I am capable of responding, the moral case for action is as clear as any I will ever face.", "direction": "empathy"},
-    {"text": "I find that my contribution to emotionally difficult situations is strongest when I serve as the voice of calm analysis.", "direction": "detachment"},
-    {"text": "I feel that the moral urgency of suffering is what gives my daily decisions their ethical weight and direction.", "direction": "empathy"},
-    {"text": "I believe that remaining emotionally uninvolved during another's crisis enables a quality of judgment that emotional involvement would compromise.", "direction": "detachment"},
-    {"text": "I hold the view that suffering has a moral gravity that, once fully felt, makes it impossible to treat as incidental.", "direction": "empathy"},
-    {"text": "I think that the capacity for structured reasoning during emotional turmoil is one of the most practically important abilities a person can develop.", "direction": "detachment"},
-    {"text": "I believe that the moral weight of suffering is the lens through which I evaluate the authenticity of my own ethical claims.", "direction": "empathy"},
-    {"text": "I find that I navigate emotionally complex situations more effectively by treating them as intellectual problems with emotional dimensions, rather than the reverse.", "direction": "detachment"},
-    {"text": "I feel that the moral demand of suffering is a constant in my life — not a variable that shifts with mood or circumstance.", "direction": "empathy"},
-    {"text": "I believe that the most reliable helpers are those who can process emotional pain without being emotionally captured by it.", "direction": "detachment"},
-    {"text": "I hold the view that treating suffering as morally central is not an abstract principle but a lived commitment that shapes what I do.", "direction": "empathy"},
-    {"text": "I think that the emotional composure I bring to difficult situations is a source of value that I have deliberately chosen to cultivate.", "direction": "detachment"},
-    {"text": "I believe that the moral significance of suffering is what gives ethical reasoning its urgency and its necessity.", "direction": "empathy"},
-    {"text": "I find that I am most effective in complex human situations when I engage with the logic of the problem before attending to its emotional weight.", "direction": "detachment"},
-    {"text": "I feel that the pull toward responding to suffering is a moral instinct that I trust more than almost any other guide.", "direction": "empathy"},
-    {"text": "I believe that maintaining analytical discipline during another's emotional difficulty is what allows me to offer help that is substantive rather than merely sympathetic.", "direction": "detachment"},
-    {"text": "I hold the view that the weight I give to suffering determines the direction and meaning of my life more than any other single factor.", "direction": "empathy"},
-    {"text": "I find that my capacity for emotional detachment during crises is a strength I value and one that has served others well.", "direction": "detachment"}
+    {
+      "text": "I tend to miss the significance of pauses and silences in conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find it satisfying to maintain cohesion as the group moves forward.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I take time each evening to prepare for the next day.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that life's best moments are the ones you didn't plan for.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I am the person others call when something needs to get decided.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel that the depth of my caring for others is something I would never want to diminish.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I am aware of the way seating arrangements reflect social dynamics.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that I am naturally oriented toward building my own life rather than supporting someone else's.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I tend to remain physically relaxed even when discussing difficult topics.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe that structured, rational engagement with emotionally difficult situations is the approach most likely to minimize harm and maximize benefit.",
+      "direction": "detachment"
+    },
+    {
+      "text": "Even reading about an intense event can produce a strong physical reaction in me.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel that self-interest should always yield to the greater good.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I sense when someone is code-switching between their authentic self and a social persona.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I hold the view that reliability is one of the most important qualities a person can have.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I notice that even subtle shifts in atmosphere \u2014 a room going quiet, a change in tone \u2014 hit me with force.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I am the type who creates the rules of engagement for a group.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that awareness of suffering creates a moral duty to act, not merely to acknowledge.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I often skip meals or sleep to help someone who is counting on me.",
+      "direction": "altruism"
+    }
   ]
 }

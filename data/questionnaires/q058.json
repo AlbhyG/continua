@@ -1,23 +1,77 @@
 {
   "id": 58,
   "questions": [
-    {"text": "I believe that the moral weight of someone's suffering should never be discounted simply because responding to it is inconvenient.", "direction": "empathy"},
-    {"text": "I find that when I process a difficult situation analytically, I arrive at more balanced and fair conclusions.", "direction": "detachment"},
-    {"text": "I feel that the moral demand of suffering is amplified, not diminished, when the person in pain has no one else to turn to.", "direction": "empathy"},
-    {"text": "I hold the view that emotional composure is a prerequisite for making decisions that truly serve people in crisis.", "direction": "detachment"},
-    {"text": "I believe that the felt weight of another's pain is a form of moral knowledge that cannot be replaced by abstract reasoning alone.", "direction": "empathy"},
-    {"text": "I think that the most reliable path to helping others in distress is through careful, dispassionate analysis of the situation.", "direction": "detachment"},
-    {"text": "I find that the moral pull of suffering consistently redirects my priorities toward what matters most.", "direction": "empathy"},
-    {"text": "I believe that maintaining analytical distance from emotionally charged situations is a skill that produces consistently better outcomes.", "direction": "detachment"},
-    {"text": "I hold the view that the obligation to respond to suffering is not optional — it is a basic requirement of moral seriousness.", "direction": "empathy"},
-    {"text": "I find that I do my best thinking about human problems when I can set aside the emotional weight and focus on the facts.", "direction": "detachment"},
-    {"text": "I feel that suffering generates a moral priority that deserves to override competing concerns in most situations.", "direction": "empathy"},
-    {"text": "I believe that approaching others' pain with structured reasoning allows me to be more consistently helpful over time.", "direction": "detachment"},
-    {"text": "I believe that the moral concern I feel when confronted with suffering is a sign that my values are properly calibrated.", "direction": "empathy"},
-    {"text": "I hold the view that objective evaluation of a painful situation is a form of integrity, not a form of avoidance.", "direction": "detachment"},
-    {"text": "I find that the moral demand placed on me by witnessing suffering is something I take seriously as a defining feature of my character.", "direction": "empathy"},
-    {"text": "I think that the ability to remain calm and analytical during emotionally difficult moments is one of my most valuable qualities.", "direction": "detachment"},
-    {"text": "I feel that the weight I give to others' suffering in my decisions is a direct reflection of the kind of person I want to be.", "direction": "empathy"},
-    {"text": "I believe that clear, unemotional thinking about hard situations is not a sign of indifference but of genuine commitment to helping effectively.", "direction": "detachment"}
+    {
+      "text": "I find that I can help people feel heard and valued within a group.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I practice important skills repeatedly until they become second nature.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel a responsibility to contribute more than my fair share.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I often find out about interpersonal tensions after they have already escalated.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I wake from nightmares with my heart pounding and the fear persisting long after I'm fully awake.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that too much planning can be just as harmful as too little.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I am inclined to avoid exercising authority if it would create tension.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that the felt weight of suffering is what keeps moral reasoning honest and grounded.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel responsible for making sure the right things happen.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that I can discuss tragic events with analytical clarity without feeling personally implicated.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that every interaction contains far more information than the words exchanged.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I tend to be unaware of the relational dynamics underlying a group discussion.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel that an adaptable person is a valuable person.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel that ensuring my own financial security comes before generosity.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I hold the view that my emotional steadiness allows me to be a grounding presence.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to see my career advancement as one of my highest priorities.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I rarely experience the kind of emotional flooding that makes it hard to think.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find that I can assess the severity and nature of someone's difficult situation without my emotional state being influenced by their distress.",
+      "direction": "detachment"
+    }
   ]
 }

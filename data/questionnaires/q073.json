@@ -1,23 +1,77 @@
 {
   "id": 73,
   "questions": [
-    {"text": "I believe that the moral weight of suffering is not diminished by distance, familiarity, or circumstance, and my response should reflect that.", "direction": "empathy"},
-    {"text": "I find that analytical clarity enables me to untangle complex situations where suffering has multiple causes and no simple solution.", "direction": "detachment"},
-    {"text": "I feel that the moral pull of another person's pain is the most honest signal I have about what I truly value.", "direction": "empathy"},
-    {"text": "I hold the view that composure during emotionally charged situations is what allows me to be a stabilizing presence for others.", "direction": "detachment"},
-    {"text": "I believe that the obligation to respond to suffering is the most basic moral truth, and everything else follows from it.", "direction": "empathy"},
-    {"text": "I think that treating suffering as information to be carefully analyzed leads to interventions that are more targeted and more effective.", "direction": "detachment"},
-    {"text": "I find that the felt weight of others' hardship is what prevents me from becoming complacent about the state of the world.", "direction": "empathy"},
-    {"text": "I believe that maintaining emotional distance when evaluating painful situations is essential for making decisions that are genuinely fair.", "direction": "detachment"},
-    {"text": "I feel that the moral demand of suffering calls me to a standard of responsiveness that I can never fully satisfy but must always pursue.", "direction": "empathy"},
-    {"text": "I hold the view that objective evaluation of distressing circumstances is a form of intellectual honesty that serves everyone better than emotional reaction.", "direction": "detachment"},
-    {"text": "I believe that the moral priority of suffering is the insight that connects abstract ethics to the concrete reality of human lives.", "direction": "empathy"},
-    {"text": "I find that my ability to process painful information without becoming emotionally destabilized is crucial to my effectiveness in high-stakes environments.", "direction": "detachment"},
-    {"text": "I hold the view that the moral concern I feel for those in pain is the experience that most clearly reveals what ethical commitment actually requires.", "direction": "empathy"},
-    {"text": "I think that approaching others' suffering with a clear, rational framework allows me to allocate attention and effort where they will matter most.", "direction": "detachment"},
-    {"text": "I feel that when I give the moral weight of suffering its proper place in my reasoning, all my other priorities naturally reorder themselves.", "direction": "empathy"},
-    {"text": "I believe that the discipline of maintaining a level-headed perspective during crises is what transforms good intentions into effective outcomes.", "direction": "detachment"},
-    {"text": "I find that the moral pull of suffering is the force that has most shaped my understanding of what it means to live responsibly.", "direction": "empathy"},
-    {"text": "I hold the view that emotional detachment in the face of suffering is a strategic advantage that benefits the very people I am trying to help.", "direction": "detachment"}
+    {
+      "text": "I rarely notice when someone phrases a disagreement as a question to soften it.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe that the energy I spend on myself comes back multiplied.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I research purchases carefully, comparing options and reading reviews before buying.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I hold the view that the ability to analyze suffering without being emotionally destabilized by it is the quality that enables truly strategic and impactful helping.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I hold the view that it's better to be forgotten and helpful than to be remembered and self-serving.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel that hesitation costs more than imperfect action.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel a deep sense of duty to use everything I have in service of others.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I pick up on the slight tightening of someone's jaw when they suppress a reaction.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I pick up on the implicit social contracts operating in different cultural contexts.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I tend to announce my decisions rather than propose them for feedback.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I walk into meetings ready to engage with whatever comes up, without advance preparation.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel that the moral significance of suffering is what makes my ethical framework coherent and actionable.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I am happy to pass the microphone to whoever wants it.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel that my emotional reactions often have a life of their own, beyond my conscious control.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I value predictability in my daily routine because it lets me focus on what matters.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I experience emotional pain as something sharp and physical, not abstract.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that when suffering is brought to my attention, the question of whether to respond is already answered.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that emotional events don't leave a long residue; I process and move on.",
+      "direction": "low-reactive"
+    }
   ]
 }

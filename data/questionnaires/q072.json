@@ -1,23 +1,77 @@
 {
   "id": 72,
   "questions": [
-    {"text": "I believe that the moral pull of suffering should be the starting point for any serious ethical conversation.", "direction": "empathy"},
-    {"text": "I find that when I approach others' difficulties with analytical clarity, I am able to offer practical guidance that emotional involvement would compromise.", "direction": "detachment"},
-    {"text": "I feel that the weight I assign to others' suffering in my moral reasoning reflects the depth of my commitment to human dignity.", "direction": "empathy"},
-    {"text": "I hold the view that composure in the face of suffering is a professional discipline that earns the trust of those who need help most.", "direction": "detachment"},
-    {"text": "I believe that when suffering enters my awareness, it generates a moral demand that reshapes my sense of what matters.", "direction": "empathy"},
-    {"text": "I think that the ability to maintain emotional equilibrium during distressing events is what separates effective helpers from well-meaning but overwhelmed ones.", "direction": "detachment"},
-    {"text": "I find that the felt weight of suffering is the consideration that most powerfully motivates me to act on behalf of others.", "direction": "empathy"},
-    {"text": "I believe that structured reasoning about painful situations is a more reliable path to justice than decisions made under the influence of strong emotion.", "direction": "detachment"},
-    {"text": "I feel that the moral concern I carry for those who are suffering defines the core of my identity more than any achievement or ambition.", "direction": "empathy"},
-    {"text": "I hold the view that stepping back from the emotional immediacy of suffering allows me to assess the situation with the thoroughness it deserves.", "direction": "detachment"},
-    {"text": "I believe that the moral priority of addressing suffering is a truth that should inform the policies, institutions, and norms of any decent society.", "direction": "empathy"},
-    {"text": "I find that my tendency to evaluate crises through an objective lens has consistently led to better decisions than my initial emotional impulses would have.", "direction": "detachment"},
-    {"text": "I hold the view that the obligation to respond to suffering is written into the fabric of what it means to be a moral agent.", "direction": "empathy"},
-    {"text": "I think that the clarity that comes from emotional detachment during difficult moments is a gift I can offer to people who are too close to their own pain to see clearly.", "direction": "detachment"},
-    {"text": "I feel that the moral weight of suffering is the benchmark against which all other considerations should ultimately be measured.", "direction": "empathy"},
-    {"text": "I believe that a calm, analytical approach to human pain is not coldness but a higher form of engagement with the problem.", "direction": "detachment"},
-    {"text": "I find that the moral demand created by another person's suffering is what gives urgency and direction to my ethical life.", "direction": "empathy"},
-    {"text": "I hold the view that maintaining objectivity when others are in distress is the foundation of sound judgment in any helping profession.", "direction": "detachment"}
+    {
+      "text": "I feel that my own happiness is something I should actively build and protect.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I believe that the capacity to examine suffering clinically \u2014 without flinching \u2014 is a prerequisite for the most demanding forms of service.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that personal autonomy and self-sufficiency are among my highest values.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I am known for taking decisive stands in group deliberations.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I can tell when someone is genuinely surprised versus performing surprise.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I notice that strong emotions create a kind of tunnel vision where nothing else registers.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that too many habits can make life mechanical and rob it of spontaneity.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I am comfortable following even when I might have a different approach.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I do not naturally decode the layers of meaning in polite conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I test assumptions carefully before committing significant resources to a plan.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I notice that I stay calm in situations where others are visibly agitated.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I am happiest when I can contribute without being the focal point.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I tend to absorb costs and difficulties so that others are shielded from them.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that my emotional steadiness in the face of others' pain is what allows me to offer help that is both timely and well-considered.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I think of the present moment as the only real thing; the future is just a concept.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I rarely wake up from a dream still gripped by its emotional content.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to take jokes and comments literally when others see layers of meaning.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I hold the view that taking suffering seriously means being willing to change my behavior, not just my feelings, in response to it.",
+      "direction": "empathy"
+    }
   ]
 }

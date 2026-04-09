@@ -1,23 +1,77 @@
 {
   "id": 79,
   "questions": [
-    {"text": "I believe that the moral weight of suffering is the fact that makes ethical neutrality impossible for anyone who is paying attention.", "direction": "empathy"},
-    {"text": "I find that analytical clarity about human distress has enabled me to avoid the common mistake of letting good intentions substitute for sound strategy.", "direction": "detachment"},
-    {"text": "I feel that the moral pull of suffering is what ensures that my values remain connected to the concrete realities of other people's lives.", "direction": "empathy"},
-    {"text": "I hold the view that composure during crises is the quality that enables me to serve as a steady point of reference for those around me.", "direction": "detachment"},
-    {"text": "I believe that the obligation to respond to suffering imposes a moral discipline on my life that I would not willingly abandon.", "direction": "empathy"},
-    {"text": "I think that the ability to process painful experiences through a rational framework is what makes it possible to provide sustained help without burning out.", "direction": "detachment"},
-    {"text": "I find that the felt weight of others' suffering is the experience that most clearly shows me where my attention and effort are needed.", "direction": "empathy"},
-    {"text": "I believe that maintaining objectivity in emotionally difficult situations is the prerequisite for any assessment that aspires to be genuinely fair.", "direction": "detachment"},
-    {"text": "I feel that the moral demand of suffering is the force that continuously reshapes my understanding of what matters and what does not.", "direction": "empathy"},
-    {"text": "I hold the view that emotional distance during distressing events is a strategic choice that maximizes my ability to contribute positively.", "direction": "detachment"},
-    {"text": "I believe that the moral priority of suffering is the principle that gives coherence and direction to the rest of my ethical thinking.", "direction": "empathy"},
-    {"text": "I find that my preference for structured, unemotional analysis during crises has made me the person others turn to when clear thinking is most needed.", "direction": "detachment"},
-    {"text": "I hold the view that the moral concern I feel for suffering people is the experience that most directly informs my sense of what a good life requires.", "direction": "empathy"},
-    {"text": "I think that evaluating human hardship through a lens of objective reason is the most effective way to determine where intervention will do the most good.", "direction": "detachment"},
-    {"text": "I feel that the weight of suffering in my moral awareness is the quality that most fundamentally defines who I am and what I stand for.", "direction": "empathy"},
-    {"text": "I believe that a calm, measured response to emotional situations demonstrates a level of reliability that passionate reactions cannot match.", "direction": "detachment"},
-    {"text": "I find that the moral pull of suffering is the influence that has most consistently guided me toward the decisions I am proudest of.", "direction": "empathy"},
-    {"text": "I hold the view that approaching suffering with detached analysis is not a deficit of feeling but an application of disciplined intelligence.", "direction": "detachment"}
+    {
+      "text": "I feel that having contingency plans is essential because things rarely go as expected.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I focus on solving problems rather than navigating the social landscape around them.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I rarely procrastinate because I tackle tasks as soon as they're identified.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I hold the view that my low emotional reactivity allows me to see situations clearly.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I notice the subtle difference between someone who is listening and someone who is waiting to talk.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that reducing my own consumption so others can have more is a worthy practice.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I would turn down a promotion if it meant my colleagues would be worse off.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice when someone strategically drops a name or credential into conversation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I often position myself as a facilitator in group settings.",
+      "direction": "yielding"
+    },
+    {
+      "text": "Physical sensations accompany my emotions in a way that makes them impossible to ignore.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that the moral priority of suffering is the foundational value that makes genuine ethics possible rather than merely fashionable.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I often present my conclusions as settled rather than open for debate.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I find that measuring progress too closely can kill the creative spark.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I think that processing suffering as information rather than as an emotional wave is the key to making decisions I will not regret later.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe that moral attention to suffering \u2014 the active choice to let it count \u2014 is what transforms abstract values into concrete behavior.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I thrive when I give myself permission to focus on what I want.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I naturally claim authority in informal group settings.",
+      "direction": "agentic"
+    },
+    {
+      "text": "My emotional reactions are quick to fire and slow to fade.",
+      "direction": "high-reactive"
+    }
   ]
 }

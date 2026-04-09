@@ -1,23 +1,77 @@
 {
   "id": 96,
   "questions": [
-    {"text": "I believe that the moral weight of suffering is the ethical reality that no amount of philosophical sophistication should be permitted to explain away.", "direction": "empathy"},
-    {"text": "I find that maintaining analytical clarity when others are in pain has allowed me to develop intervention plans that are thorough, realistic, and targeted.", "direction": "detachment"},
-    {"text": "I feel that the moral pull of suffering is the experience that provides the motivational foundation for my entire ethical worldview.", "direction": "empathy"},
-    {"text": "I hold the view that composure during distressing events is the characteristic that allows me to model the kind of steady, focused response that chaotic situations demand.", "direction": "detachment"},
-    {"text": "I believe that the obligation to respond to suffering is the moral truth I would defend most vigorously if it were ever called into question.", "direction": "empathy"},
-    {"text": "I think that analyzing emotionally difficult situations through a lens of detached reasoning is the method that produces the most impartial and well-balanced conclusions.", "direction": "detachment"},
-    {"text": "I find that the felt weight of another's suffering is the moral experience that most immediately and forcefully recalibrates my sense of what matters.", "direction": "empathy"},
-    {"text": "I believe that the capacity to process distressing situations without emotional disruption is a practical advantage that benefits every person and project I am involved with.", "direction": "detachment"},
-    {"text": "I feel that the moral demand of suffering is the inner reality that connects my ethical beliefs to the specific actions I take in the specific circumstances of my life.", "direction": "empathy"},
-    {"text": "I hold the view that emotional distance during times of crisis is not a form of avoidance but a deliberate stance that allows for more careful and more effective engagement.", "direction": "detachment"},
-    {"text": "I believe that the moral priority of suffering is the principle that should be at the center of any education that claims to prepare people for responsible citizenship.", "direction": "empathy"},
-    {"text": "I find that my analytical temperament during stressful events has allowed me to serve as a stabilizing influence in environments where emotional reactions tend to escalate.", "direction": "detachment"},
-    {"text": "I hold the view that the moral concern I feel in response to suffering is the experience that most powerfully links my individual conscience to the collective moral fabric.", "direction": "empathy"},
-    {"text": "I think that a structured, reasoned approach to human distress is the approach that most effectively converts limited resources into maximum benefit for those who are suffering.", "direction": "detachment"},
-    {"text": "I feel that the weight of suffering in my moral outlook is the quality that has most consistently prevented me from accepting injustice as normal or inevitable.", "direction": "empathy"},
-    {"text": "I believe that maintaining objective composure during painful situations is the skill that has most directly enhanced my ability to lead, advise, and collaborate effectively.", "direction": "detachment"},
-    {"text": "I find that the moral demand of suffering is the experience that has given me the deepest understanding of what it means to be part of a moral community.", "direction": "empathy"},
-    {"text": "I hold the view that calm, analytical engagement with suffering is a practice that, when pursued with sincerity, represents one of the highest forms of practical wisdom.", "direction": "detachment"}
+    {
+      "text": "I hold the view that suffering which is visible to me and within my capacity to address constitutes a moral obligation, not merely an opportunity.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel most at ease when expectations are set collaboratively.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I prioritize long-term wellbeing over short-term pleasure when the two conflict.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I believe that overthinking kills momentum and that action teaches faster than analysis.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that I am more attuned to ideas being discussed than to the feelings in the room.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I routinely evaluate relationships by whether they support my personal growth.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I notice when someone positions a request as a suggestion to make it more palatable.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that emotional distance from a crisis situation allows me to identify the highest-impact actions more accurately.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I regularly step back so others have space to take initiative.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that my internal world is quiet and spacious rather than intense and crowded.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel most like myself when I am in the middle of helping someone.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I prefer working in environments where roles and expectations are explicit rather than inferred.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe that pursuing personal excellence is a worthy way to spend my life.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I experience gratitude as a quiet contentment rather than an overwhelming surge.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I view taking charge as a service to the group.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I believe that remaining emotionally uninvolved during others' crises is a legitimate and often necessary approach to maximizing positive impact.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I prefer handling each situation freshly rather than automating it into a routine.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "When I get good news, the euphoria can last for days.",
+      "direction": "high-reactive"
+    }
   ]
 }

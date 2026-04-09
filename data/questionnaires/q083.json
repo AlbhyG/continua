@@ -1,23 +1,77 @@
 {
   "id": 83,
   "questions": [
-    {"text": "I believe that the moral weight of suffering is the one consideration that most clearly justifies setting aside my own plans and preferences.", "direction": "empathy"},
-    {"text": "I find that analytical clarity has allowed me to contribute meaningfully in situations where emotional responses would have clouded my understanding of what was actually needed.", "direction": "detachment"},
-    {"text": "I feel that the moral pull of suffering is the experience that connects my inner life to the moral reality of the world around me.", "direction": "empathy"},
-    {"text": "I hold the view that composure in the face of others' pain is a practical virtue that creates the conditions under which effective help becomes possible.", "direction": "detachment"},
-    {"text": "I believe that the obligation to respond to suffering is a moral truth that does not require justification; it is self-evident to anyone who takes it seriously.", "direction": "empathy"},
-    {"text": "I think that when I maintain emotional distance during painful circumstances, I am better positioned to evaluate the consequences of different courses of action.", "direction": "detachment"},
-    {"text": "I find that the felt weight of another's suffering has a clarifying effect on my priorities that nothing else can replicate.", "direction": "empathy"},
-    {"text": "I believe that structured, rational engagement with emotionally difficult situations is the approach most likely to minimize harm and maximize benefit.", "direction": "detachment"},
-    {"text": "I feel that the moral demand of suffering is the force that keeps my ethical convictions from fading into comfortable indifference.", "direction": "empathy"},
-    {"text": "I hold the view that objectivity during distressing moments is the quality that transforms a concerned bystander into an effective participant.", "direction": "detachment"},
-    {"text": "I believe that the moral priority of suffering is the principle that should determine how resources and attention are distributed in any organization or community.", "direction": "empathy"},
-    {"text": "I find that my ability to remain analytically focused during emotional events has been instrumental in building trust with the people I serve.", "direction": "detachment"},
-    {"text": "I hold the view that the moral concern I feel for those who are suffering is the experience that most directly challenges me to be better than I currently am.", "direction": "empathy"},
-    {"text": "I think that evaluating distressing situations with a cool and rational perspective is the approach that produces the most equitable results.", "direction": "detachment"},
-    {"text": "I feel that the weight of suffering in my moral awareness is the constant that gives stability and coherence to my ethical outlook.", "direction": "empathy"},
-    {"text": "I believe that the practice of maintaining emotional equilibrium during crises is a core competency that should be valued as highly as technical knowledge.", "direction": "detachment"},
-    {"text": "I find that the moral pull of suffering is the inner experience that most directly shapes how I understand my role in the lives of others.", "direction": "empathy"},
-    {"text": "I hold the view that approaching painful realities with detached, systematic reasoning is the method most consistent with producing outcomes that withstand moral scrutiny.", "direction": "detachment"}
+    {
+      "text": "I find that I automatically register who is nervous in a social setting.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that my emotional steadiness is something that has always been true about me, even as a child.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I trust my own judgment more than the group's consensus.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I would happily take a pay cut if it meant funding a cause I care about.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I believe that the weight of moral responsibility I carry toward those who suffer is something I actively choose and continuously renew.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I often do not realize that a conversation had multiple layers until someone explains it to me afterward.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I hold the view that real strength is the willingness to put yourself last.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I deal with problems as they come up rather than trying to anticipate every possible issue.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I believe that maintaining my own standards of living is non-negotiable.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel that structure provides the scaffolding on which creativity can flourish.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "When I'm in a beautiful place, the experience can feel almost painfully vivid.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I believe that no one's suffering should be treated as merely an abstraction when a concrete response is possible.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I detect when a joke lands differently than the speaker intended.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I believe that attention to detail is what separates good work from great work.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel that being in control of a situation allows me to do my best work.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel that my emotional range extends further in both directions than most people's.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I have a bias toward deliberation over premature action.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that the best way to honor someone's pain is to focus on what will actually help them, not on how their pain affects me.",
+      "direction": "detachment"
+    }
   ]
 }

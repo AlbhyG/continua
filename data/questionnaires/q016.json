@@ -1,23 +1,77 @@
 {
   "id": 16,
   "questions": [
-    {"text": "I believe that the moral demand of suffering is strongest when I have specific knowledge of a specific person's pain.", "direction": "empathy"},
-    {"text": "I find that the quality of my judgment improves when I treat emotional content as context rather than as a driver.", "direction": "detachment"},
-    {"text": "I feel that my response to suffering reveals something about me that no other situation can.", "direction": "empathy"},
-    {"text": "I believe that the most sustainable approach to helping others involves maintaining clear boundaries between their experience and my reasoning.", "direction": "detachment"},
-    {"text": "I hold the view that the moral significance of someone's pain should weigh on me proportionally to what I could do about it.", "direction": "empathy"},
-    {"text": "I think that composure during emotionally charged situations is a form of service to the people involved, not a form of indifference.", "direction": "detachment"},
-    {"text": "I feel that the obligation to act on behalf of someone who is suffering is among the clearest moral intuitions I have.", "direction": "empathy"},
-    {"text": "I believe that my ability to reason clearly about human problems depends on not being drawn into the emotional current of those problems.", "direction": "detachment"},
-    {"text": "I hold the view that allowing suffering to shape my priorities is not a weakness but a sign that my values are active.", "direction": "empathy"},
-    {"text": "I find that structured, logical engagement with emotionally difficult situations produces results that emotional engagement alone cannot.", "direction": "detachment"},
-    {"text": "I believe that the moral pull I experience when confronted with suffering is one of the most dependable guides I have for right action.", "direction": "empathy"},
-    {"text": "I think that the capacity to remain uninvolved emotionally while still acting effectively is an underappreciated form of care.", "direction": "detachment"},
-    {"text": "I feel that refusing to diminish the moral weight of another's suffering — even under pressure to move on — is a form of integrity.", "direction": "empathy"},
-    {"text": "I believe that the most honest assessment of a difficult situation comes from someone who has no emotional stake in its outcome.", "direction": "detachment"},
-    {"text": "I hold the view that my moral commitments are most authentically expressed when I treat others' suffering as genuinely urgent.", "direction": "empathy"},
-    {"text": "I find that separating my emotional reactions from my decision-making process leads to outcomes I am more confident in.", "direction": "detachment"},
-    {"text": "I feel that the weight of moral responsibility increases in direct proportion to my awareness of suffering.", "direction": "empathy"},
-    {"text": "I believe that remaining analytically composed in the presence of others' distress is a discipline worth cultivating.", "direction": "detachment"}
+    {
+      "text": "I automate or systematize recurring tasks to reduce the chance of human error.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I prefer it when people say exactly what they mean.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that I am generally unaware of the emotional undercurrents in my relationships.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that anger in me is a slow-building awareness rather than a flash of heat.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I believe that the felt weight of suffering reveals moral truths that logical analysis alone would miss.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to save the best resources\u2014time, energy, money\u2014for my own priorities.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I notice when an email is bcc'd to someone based on the overly formal tone.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I can look back on difficult periods without re-experiencing the emotional intensity.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel energized when a group reaches a genuine consensus.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I believe that processing emotionally charged situations through a framework of analysis rather than feeling is a mature and effective approach.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I believe I process stimuli at a deeper level than most, which is why everything feels so vivid.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that I am most motivated when I am working toward something that benefits me directly.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I routinely put community obligations above personal recreation.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I hold the view that remaining objective during emotionally intense experiences is a capacity that improves with practice and is worth cultivating.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I prefer to ask for forgiveness rather than permission.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I prefer to keep my options open rather than lock myself into a specific course of action.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I prefer to find a decision everyone can accept, even if it means compromise.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that improvisation gives me more confidence than any methodology in uncertain situations.",
+      "direction": "spontaneous"
+    }
   ]
 }
