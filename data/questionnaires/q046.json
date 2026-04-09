@@ -1,0 +1,23 @@
+{
+  "id": 46,
+  "questions": [
+    {"text": "I believe that the moral claim of suffering is one of the few things that can legitimately override competing priorities in my life.", "direction": "empathy"},
+    {"text": "I find that approaching emotionally loaded situations as analytical challenges produces the most reliable and replicable results.", "direction": "detachment"},
+    {"text": "I feel that the moral force of another person's suffering grows more vivid the more carefully I attend to the details of their experience.", "direction": "empathy"},
+    {"text": "I believe that the professionals and leaders I most admire are those who can engage with suffering clearly and without emotional disruption.", "direction": "detachment"},
+    {"text": "I hold the view that the obligation to respond to suffering is not satisfied by a single act — it requires ongoing moral vigilance.", "direction": "empathy"},
+    {"text": "I think that the most precise interventions for human problems are designed by people who can evaluate need without being emotionally swayed.", "direction": "detachment"},
+    {"text": "I believe that the intensity of the moral demand I experience when confronted with suffering reflects a capacity I consider essential to who I am.", "direction": "empathy"},
+    {"text": "I find that emotional equilibrium during difficult times is a resource I can draw on consistently without it diminishing over time.", "direction": "detachment"},
+    {"text": "I feel that the moral pull of suffering functions as a signal of what is genuinely important, distinct from what is merely urgent or appealing.", "direction": "empathy"},
+    {"text": "I believe that decisions about people's welfare should be informed by evidence and analysis, not by the emotional atmosphere in which they are made.", "direction": "detachment"},
+    {"text": "I hold the view that the weight I give to others' pain is the most honest available measure of the values I actually hold.", "direction": "empathy"},
+    {"text": "I think that emotional non-involvement in stressful situations is a form of competence that allows me to see clearly and act decisively.", "direction": "detachment"},
+    {"text": "I believe that genuine moral seriousness about suffering includes a willingness to remain engaged with it even when the path forward is unclear.", "direction": "empathy"},
+    {"text": "I find that my capacity for calm analysis during emotional crises is something others depend on and that I take pride in providing.", "direction": "detachment"},
+    {"text": "I feel that the degree to which I treat suffering as morally binding is the clearest statement I make about what kind of person I choose to be.", "direction": "empathy"},
+    {"text": "I believe that the most lasting improvements in human welfare come from people who can study suffering without being derailed by it.", "direction": "detachment"},
+    {"text": "I hold the view that every instance of suffering I encounter is an invitation to live more fully according to my values.", "direction": "empathy"},
+    {"text": "I find that keeping my emotional reactions contained during others' distress is a practice I have refined over time and now regard as second nature.", "direction": "detachment"}
+  ]
+}

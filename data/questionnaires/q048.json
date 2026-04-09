@@ -1,0 +1,23 @@
+{
+  "id": 48,
+  "questions": [
+    {"text": "I believe that the moral significance of suffering creates a responsibility that is both immediate and enduring.", "direction": "empathy"},
+    {"text": "I find that I am most valuable in difficult situations when I can provide an analytical perspective that others cannot access because of their emotional state.", "direction": "detachment"},
+    {"text": "I feel that the moral claim of suffering is strengthened by specificity — knowing exactly what someone is going through makes the obligation more concrete.", "direction": "empathy"},
+    {"text": "I believe that maintaining my analytical capabilities during emotional situations is a form of service that I provide deliberately.", "direction": "detachment"},
+    {"text": "I hold the view that moral engagement with suffering means letting it influence the trajectory of my decisions, not just the color of my emotions.", "direction": "empathy"},
+    {"text": "I think that calm, structured thinking during human crises is the precondition for interventions that are effective and fair.", "direction": "detachment"},
+    {"text": "I believe that the moral weight I assign to others' pain is the foundation on which all of my other ethical commitments rest.", "direction": "empathy"},
+    {"text": "I find that the emotional distance I maintain from individual cases is what allows me to be consistent in my standards of care.", "direction": "detachment"},
+    {"text": "I feel that the moral demand of suffering is not something that exists only in exceptional moments — it is present in ordinary life as well.", "direction": "empathy"},
+    {"text": "I believe that the ability to engage with suffering without personal emotional cost is a sustainable approach to making a positive difference.", "direction": "detachment"},
+    {"text": "I hold the view that the seriousness with which I treat suffering is the most honest statement I can make about what I believe matters.", "direction": "empathy"},
+    {"text": "I think that the value of emotional composure during crisis is most evident in the long-term quality of the decisions it enables.", "direction": "detachment"},
+    {"text": "I believe that moral attention to suffering is the practice through which my values become visible and real in the world.", "direction": "empathy"},
+    {"text": "I find that my effectiveness in demanding situations is preserved by my ability to process emotional content without internalizing it.", "direction": "detachment"},
+    {"text": "I feel that the moral urgency I experience when I encounter suffering is a capacity I would want to pass on to others.", "direction": "empathy"},
+    {"text": "I believe that the most trustworthy assessments of human need come from those who can evaluate without emotional interference.", "direction": "detachment"},
+    {"text": "I hold the view that giving genuine moral priority to suffering is the most consequential choice I make on a daily basis.", "direction": "empathy"},
+    {"text": "I find that emotional steadiness during others' pain is a quality I regard as one of my most useful characteristics.", "direction": "detachment"}
+  ]
+}

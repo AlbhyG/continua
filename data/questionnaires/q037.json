@@ -1,0 +1,23 @@
+{
+  "id": 37,
+  "questions": [
+    {"text": "I believe that my moral responsibilities toward those who are suffering are not diminished by the complexity of their situation.", "direction": "empathy"},
+    {"text": "I find that I can process information about human tragedy without needing time to recover emotionally before acting.", "direction": "detachment"},
+    {"text": "I feel that the moral weight of suffering should be assigned based on its severity, not on how emotionally compelling the person's story is.", "direction": "empathy"},
+    {"text": "I believe that the discipline of keeping emotional content separate from operational planning is what enables the most precise forms of assistance.", "direction": "detachment"},
+    {"text": "I hold the view that my awareness of someone's pain imposes a moral obligation that I take as seriously as any formal commitment.", "direction": "empathy"},
+    {"text": "I think that evaluating someone's hardship through a rational framework, rather than an emotional one, leads to help that is better targeted.", "direction": "detachment"},
+    {"text": "I believe that the moral demand of suffering is not something that can be satisfied by sympathy alone — it requires purposeful engagement.", "direction": "empathy"},
+    {"text": "I find that I am most clear-headed when I engage with the facts of a difficult situation before attending to its emotional texture.", "direction": "detachment"},
+    {"text": "I feel that the moral significance of suffering is most deeply honored when it leads to concrete change, not just to emotional acknowledgment.", "direction": "empathy"},
+    {"text": "I believe that my capacity for objective assessment during emotionally turbulent moments is a contribution that others can depend on.", "direction": "detachment"},
+    {"text": "I hold the view that the moral obligation to act in the face of suffering is not conditional on whether the action is easy, rewarded, or noticed.", "direction": "empathy"},
+    {"text": "I think that stepping back from the emotional weight of a situation is not avoidance but a strategic choice that enables more effective action.", "direction": "detachment"},
+    {"text": "I believe that the moral gravity of suffering, once I have fully registered it, becomes a fact that shapes my subsequent decisions.", "direction": "empathy"},
+    {"text": "I find that analytical clarity during moments of others' distress is my natural mode and one that I regard as a strength.", "direction": "detachment"},
+    {"text": "I feel that moral engagement with suffering means staying attentive to it over time, not just reacting to it in the moment.", "direction": "empathy"},
+    {"text": "I believe that the most durable and fair systems for addressing human need are designed by people who can evaluate suffering without being overwhelmed by it.", "direction": "detachment"},
+    {"text": "I hold the view that the weight of moral obligation I feel toward those who suffer is among the most defining features of my inner life.", "direction": "empathy"},
+    {"text": "I find that my emotional composure during challenging situations is something others rely on, and I take that role seriously.", "direction": "detachment"}
+  ]
+}

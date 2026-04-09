@@ -1,0 +1,23 @@
+{
+  "id": 20,
+  "questions": [
+    {"text": "I feel that the moral significance of suffering grows stronger, not weaker, the more I learn about the specific circumstances of the person involved.", "direction": "empathy"},
+    {"text": "I believe that approaching emotionally complex situations with analytical rigor is the most reliable way to ensure fair treatment for everyone.", "direction": "detachment"},
+    {"text": "I hold the view that the obligation to take suffering seriously is one of the few moral principles I would never negotiate.", "direction": "empathy"},
+    {"text": "I find that keeping my emotional state separate from my assessment of a situation is what allows me to be consistently helpful.", "direction": "detachment"},
+    {"text": "I believe that the moral weight I give to others' suffering is not a burden but a compass.", "direction": "empathy"},
+    {"text": "I think that the ability to engage with suffering without being emotionally altered by it is a strength that enables clearer and more equitable thinking.", "direction": "detachment"},
+    {"text": "I feel that the pull to respond when I become aware of suffering is among the most trustworthy moral signals I experience.", "direction": "empathy"},
+    {"text": "I believe that the most important decisions affecting people's lives should be made from a position of emotional neutrality.", "direction": "detachment"},
+    {"text": "I hold the view that taking suffering seriously — giving it genuine priority in my reasoning — is what it means to be morally awake.", "direction": "empathy"},
+    {"text": "I find that my contributions in emotionally intense situations are most valued when they come from a place of calm analysis.", "direction": "detachment"},
+    {"text": "I believe that the claim that suffering places on my attention and action is one that I should honor rather than manage.", "direction": "empathy"},
+    {"text": "I think that the discipline of remaining emotionally composed under pressure is one of the most practical skills a person can have.", "direction": "detachment"},
+    {"text": "I feel that no quantity of reasoning can legitimately override the moral demand that arises from directly knowing of another's pain.", "direction": "empathy"},
+    {"text": "I believe that the professionals who produce the best outcomes in high-stakes situations are those who can evaluate human suffering without emotional involvement.", "direction": "detachment"},
+    {"text": "I hold the view that the weight of my moral commitments is tested most honestly in moments when I encounter suffering I did not expect.", "direction": "empathy"},
+    {"text": "I find that approaching others' pain with rational precision allows me to be more useful than approaching it with shared emotion.", "direction": "detachment"},
+    {"text": "I believe that the willingness to let suffering into my moral reasoning — to let it change what I do — is the most authentic form of caring.", "direction": "empathy"},
+    {"text": "I think that maintaining emotional steadiness when confronted with others' hardship is a contribution that deserves more recognition.", "direction": "detachment"}
+  ]
+}

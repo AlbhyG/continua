@@ -1,0 +1,23 @@
+{
+  "id": 41,
+  "questions": [
+    {"text": "I believe that the moral weight of suffering, once I have truly registered it, cannot be set aside without a cost to my integrity.", "direction": "empathy"},
+    {"text": "I find that my most effective contributions during emotionally difficult periods come from my ability to think clearly rather than to feel deeply.", "direction": "detachment"},
+    {"text": "I feel that the moral obligation created by awareness of suffering is one of the few obligations I never question.", "direction": "empathy"},
+    {"text": "I believe that the separation of emotional content from decision-making content is the hallmark of clear thinking under pressure.", "direction": "detachment"},
+    {"text": "I hold the view that treating others' suffering as genuinely important — as a fact that demands a response — is the core of my moral life.", "direction": "empathy"},
+    {"text": "I think that emotional restraint during crises is a skill that produces measurably better outcomes for the people involved.", "direction": "detachment"},
+    {"text": "I believe that the moral significance of someone's pain does not diminish because I am tired, distracted, or overwhelmed.", "direction": "empathy"},
+    {"text": "I find that I naturally default to assessing what can be done rather than dwelling on how a situation feels.", "direction": "detachment"},
+    {"text": "I feel that the consistency of my moral attention to suffering is the most reliable evidence I have for my own character.", "direction": "empathy"},
+    {"text": "I believe that the best way to honor someone's pain is to focus on what will actually help them, not on how their pain affects me.", "direction": "detachment"},
+    {"text": "I hold the view that moral engagement with suffering requires me to remain attentive to it long after the initial awareness has passed.", "direction": "empathy"},
+    {"text": "I think that the ability to process emotionally laden information without being emotionally affected by it is essential for making fair decisions.", "direction": "detachment"},
+    {"text": "I believe that the pull toward action that I experience when confronted with suffering is among the most morally trustworthy impulses I have.", "direction": "empathy"},
+    {"text": "I find that maintaining my emotional equilibrium during painful situations is what allows me to be present and useful over extended periods.", "direction": "detachment"},
+    {"text": "I feel that the moral weight I give to others' suffering is something I have cultivated deliberately and would actively defend.", "direction": "empathy"},
+    {"text": "I believe that treating emotional difficulty as a technical challenge to be managed is often the most productive and respectful approach.", "direction": "detachment"},
+    {"text": "I hold the view that the seriousness of my response to suffering is the standard by which I want my moral life to be judged.", "direction": "empathy"},
+    {"text": "I find that my capacity for detached analysis in emotional situations is something I rely on and value.", "direction": "detachment"}
+  ]
+}

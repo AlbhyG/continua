@@ -1,0 +1,23 @@
+{
+  "id": 49,
+  "questions": [
+    {"text": "I believe that the moral force of suffering is the most direct evidence I have that certain things genuinely matter.", "direction": "empathy"},
+    {"text": "I find that I am drawn to roles and situations where my capacity for clear thinking during emotional intensity is needed.", "direction": "detachment"},
+    {"text": "I feel that the moral obligation created by knowledge of suffering is binding in a way that cannot be dissolved by rationalization.", "direction": "empathy"},
+    {"text": "I believe that the ability to stay focused on outcomes while surrounded by emotional distress is a skill that produces measurable benefits.", "direction": "detachment"},
+    {"text": "I hold the view that the moral significance of suffering is what makes ethical reasoning concrete rather than abstract.", "direction": "empathy"},
+    {"text": "I think that emotional regulation during exposure to suffering is an act of self-management that enables sustained and equitable service.", "direction": "detachment"},
+    {"text": "I believe that the weight I assign to others' suffering is the single most important variable in determining the quality of my moral life.", "direction": "empathy"},
+    {"text": "I find that I process information about tragedy and hardship efficiently because I engage with it cognitively rather than emotionally.", "direction": "detachment"},
+    {"text": "I feel that the pull toward action created by awareness of suffering is an expression of my deepest and most authentic self.", "direction": "empathy"},
+    {"text": "I believe that remaining emotionally uninvolved during others' crises is a legitimate and often necessary approach to maximizing positive impact.", "direction": "detachment"},
+    {"text": "I hold the view that the moral imperative to respond to suffering is the most fundamental building block of a life lived with integrity.", "direction": "empathy"},
+    {"text": "I think that the ability to hold suffering at an analytical distance is what makes it possible to respond to it systematically rather than haphazardly.", "direction": "detachment"},
+    {"text": "I believe that the consistency of my moral attention to suffering is more important than the peak intensity of any single emotional response.", "direction": "empathy"},
+    {"text": "I find that my emotional composure in distressing situations enables me to be a stabilizing presence that others can count on.", "direction": "detachment"},
+    {"text": "I feel that the moral weight of suffering should shape the arc of my life, not just my response to isolated incidents.", "direction": "empathy"},
+    {"text": "I believe that deliberate analytical engagement with human pain is what converts good intentions into measurable positive change.", "direction": "detachment"},
+    {"text": "I hold the view that treating suffering as morally central — as the thing that most deserves my attention — is the highest expression of my values.", "direction": "empathy"},
+    {"text": "I find that the emotional boundaries I maintain during difficult situations are what preserve my capacity to contribute meaningfully over time.", "direction": "detachment"}
+  ]
+}

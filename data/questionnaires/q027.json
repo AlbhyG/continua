@@ -1,0 +1,23 @@
+{
+  "id": 27,
+  "questions": [
+    {"text": "I believe that every encounter with suffering offers a choice that reveals whether my stated values are real or aspirational.", "direction": "empathy"},
+    {"text": "I find that I can analyze the causes and solutions for someone's pain without needing to first connect with it emotionally.", "direction": "detachment"},
+    {"text": "I feel that suffering, once known, generates a moral current that pulls me toward engagement regardless of competing priorities.", "direction": "empathy"},
+    {"text": "I believe that the most reliable way to help in emotionally charged situations is to set aside my own reactions and focus on the facts.", "direction": "detachment"},
+    {"text": "I hold the view that treating another's pain as genuinely important is not a sentiment but an action that requires discipline.", "direction": "empathy"},
+    {"text": "I think that approaching tragic situations with composure and structure allows for more thorough and less biased problem-solving.", "direction": "detachment"},
+    {"text": "I believe that moral maturity includes the willingness to let the weight of others' suffering shape my understanding of what matters.", "direction": "empathy"},
+    {"text": "I find that I am most helpful when I can identify what is needed without my assessment being colored by the emotions of the moment.", "direction": "detachment"},
+    {"text": "I feel that the moral obligation to respond to suffering is not diminished when the response requires sustained effort over a long period.", "direction": "empathy"},
+    {"text": "I believe that the ability to process accounts of human tragedy without personal emotional impact is an asset in any decision-making role.", "direction": "detachment"},
+    {"text": "I hold the view that the seriousness I bring to others' suffering is among the most important things I can cultivate in myself.", "direction": "empathy"},
+    {"text": "I think that decisions affecting people in crisis should be made by someone who can evaluate the situation without emotional interference.", "direction": "detachment"},
+    {"text": "I believe that the moral weight of suffering persists long after the initial moment of awareness — it is not something that fades with time.", "direction": "empathy"},
+    {"text": "I find that my emotional boundaries during difficult situations are what allow me to sustain my effectiveness and avoid burnout.", "direction": "detachment"},
+    {"text": "I feel that the degree to which I prioritize addressing suffering is the most transparent window into my real values.", "direction": "empathy"},
+    {"text": "I believe that treating emotional content as one factor among many — rather than as the dominant factor — leads to wiser decisions.", "direction": "detachment"},
+    {"text": "I hold the view that the moral seriousness of suffering is not a matter of opinion but a foundational ethical reality.", "direction": "empathy"},
+    {"text": "I find that emotional distance from the specifics of a situation is what allows me to see the broader pattern and respond more effectively.", "direction": "detachment"}
+  ]
+}

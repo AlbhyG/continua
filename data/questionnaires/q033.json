@@ -1,0 +1,23 @@
+{
+  "id": 33,
+  "questions": [
+    {"text": "I feel that the moral urgency of suffering is amplified when I know the specific person and what they are enduring.", "direction": "empathy"},
+    {"text": "I believe that maintaining my analytical perspective during someone's emotional crisis is one of the most constructive things I can offer.", "direction": "detachment"},
+    {"text": "I hold the view that the moral weight of suffering should not be adjusted downward because of how common or expected the suffering is.", "direction": "empathy"},
+    {"text": "I find that I am able to set aside the emotional valence of a problem and focus exclusively on identifying actionable solutions.", "direction": "detachment"},
+    {"text": "I believe that the obligation to respond to suffering is grounded in its moral reality, not in the emotional reaction it produces in me.", "direction": "empathy"},
+    {"text": "I think that structured, logical engagement with human problems is a more reliable path to justice than empathic immersion.", "direction": "detachment"},
+    {"text": "I feel that the degree to which I let others' suffering count in my moral calculations reflects the sincerity of my ethical commitments.", "direction": "empathy"},
+    {"text": "I believe that processing emotionally charged situations through a framework of analysis rather than feeling is a mature and effective approach.", "direction": "detachment"},
+    {"text": "I hold the view that the moral imperative to act on behalf of those who are suffering is not diminished by uncertainty about the best course of action.", "direction": "empathy"},
+    {"text": "I find that keeping my emotional reactions in check during conversations about pain allows me to evaluate the situation more accurately.", "direction": "detachment"},
+    {"text": "I believe that the willingness to take suffering into account — to genuinely let it weigh — is what distinguishes moral seriousness from moral posturing.", "direction": "empathy"},
+    {"text": "I think that emotional composure in the face of adversity is a strength that allows for clearer communication and more targeted action.", "direction": "detachment"},
+    {"text": "I feel that the moral claim of suffering is strongest when I understand not just that someone is hurting but how and why they are hurting.", "direction": "empathy"},
+    {"text": "I believe that the most lasting positive change comes from people who can evaluate human suffering systematically rather than reactively.", "direction": "detachment"},
+    {"text": "I hold the view that my moral responsibilities grow in proportion to my awareness of suffering, not in proportion to my emotional response to it.", "direction": "empathy"},
+    {"text": "I find that I am most effective when I approach others' difficult circumstances as challenges to be solved with care and precision.", "direction": "detachment"},
+    {"text": "I believe that genuine moral engagement means letting suffering register as a priority even when competing demands make it inconvenient to do so.", "direction": "empathy"},
+    {"text": "I think that the value of emotional composure during crises is best understood in terms of the outcomes it enables.", "direction": "detachment"}
+  ]
+}

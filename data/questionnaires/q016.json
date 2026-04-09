@@ -1,0 +1,23 @@
+{
+  "id": 16,
+  "questions": [
+    {"text": "I believe that the moral demand of suffering is strongest when I have specific knowledge of a specific person's pain.", "direction": "empathy"},
+    {"text": "I find that the quality of my judgment improves when I treat emotional content as context rather than as a driver.", "direction": "detachment"},
+    {"text": "I feel that my response to suffering reveals something about me that no other situation can.", "direction": "empathy"},
+    {"text": "I believe that the most sustainable approach to helping others involves maintaining clear boundaries between their experience and my reasoning.", "direction": "detachment"},
+    {"text": "I hold the view that the moral significance of someone's pain should weigh on me proportionally to what I could do about it.", "direction": "empathy"},
+    {"text": "I think that composure during emotionally charged situations is a form of service to the people involved, not a form of indifference.", "direction": "detachment"},
+    {"text": "I feel that the obligation to act on behalf of someone who is suffering is among the clearest moral intuitions I have.", "direction": "empathy"},
+    {"text": "I believe that my ability to reason clearly about human problems depends on not being drawn into the emotional current of those problems.", "direction": "detachment"},
+    {"text": "I hold the view that allowing suffering to shape my priorities is not a weakness but a sign that my values are active.", "direction": "empathy"},
+    {"text": "I find that structured, logical engagement with emotionally difficult situations produces results that emotional engagement alone cannot.", "direction": "detachment"},
+    {"text": "I believe that the moral pull I experience when confronted with suffering is one of the most dependable guides I have for right action.", "direction": "empathy"},
+    {"text": "I think that the capacity to remain uninvolved emotionally while still acting effectively is an underappreciated form of care.", "direction": "detachment"},
+    {"text": "I feel that refusing to diminish the moral weight of another's suffering — even under pressure to move on — is a form of integrity.", "direction": "empathy"},
+    {"text": "I believe that the most honest assessment of a difficult situation comes from someone who has no emotional stake in its outcome.", "direction": "detachment"},
+    {"text": "I hold the view that my moral commitments are most authentically expressed when I treat others' suffering as genuinely urgent.", "direction": "empathy"},
+    {"text": "I find that separating my emotional reactions from my decision-making process leads to outcomes I am more confident in.", "direction": "detachment"},
+    {"text": "I feel that the weight of moral responsibility increases in direct proportion to my awareness of suffering.", "direction": "empathy"},
+    {"text": "I believe that remaining analytically composed in the presence of others' distress is a discipline worth cultivating.", "direction": "detachment"}
+  ]
+}

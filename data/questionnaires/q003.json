@@ -1,0 +1,23 @@
+{
+  "id": 3,
+  "questions": [
+    {"text": "I feel a genuine moral obligation to act when I encounter suffering, not just to notice it.", "direction": "empathy"},
+    {"text": "I have been able to maintain focus on a task even when someone nearby was visibly upset.", "direction": "detachment"},
+    {"text": "I believe that the suffering of others places a moral claim on me that I cannot ignore.", "direction": "empathy"},
+    {"text": "I approach emotionally charged situations by first gathering facts before engaging with feelings.", "direction": "detachment"},
+    {"text": "I often lie awake thinking about whether I did enough for someone who was struggling.", "direction": "empathy"},
+    {"text": "I can deliver difficult news to someone without being significantly affected by their reaction.", "direction": "detachment"},
+    {"text": "I feel that my capacity to care about others' suffering is one of the most important parts of who I am.", "direction": "empathy"},
+    {"text": "I think that emotional distance is a skill that more people should develop.", "direction": "detachment"},
+    {"text": "When I see someone in pain, my understanding of their experience comes through feeling, not reasoning.", "direction": "empathy"},
+    {"text": "I have chosen not to engage emotionally with a situation because I knew detachment would serve everyone better.", "direction": "detachment"},
+    {"text": "I believe that the world's problems are, at their root, problems of insufficient caring.", "direction": "empathy"},
+    {"text": "I find it natural to separate my personal feelings from my assessment of what should be done.", "direction": "detachment"},
+    {"text": "I am deeply moved by the sight of someone responding to another's distress.", "direction": "empathy"},
+    {"text": "I have been praised for my ability to stay rational when emotions run high.", "direction": "detachment"},
+    {"text": "I feel that when someone trusts me with their pain, I have an obligation to hold it with care.", "direction": "empathy"},
+    {"text": "I recognize that my tendency to remain unemotional in charged situations sometimes makes others uncomfortable.", "direction": "detachment"},
+    {"text": "I can recall specific moments when someone's suffering changed the way I thought about a decision I was making.", "direction": "empathy"},
+    {"text": "I believe that good judgment requires the ability to think about human problems without being consumed by them.", "direction": "detachment"}
+  ]
+}

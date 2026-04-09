@@ -1,0 +1,23 @@
+{
+  "id": 5,
+  "questions": [
+    {"text": "I feel the strongest moral pull to help the person who is most vulnerable in a group.", "direction": "empathy"},
+    {"text": "I find it easier to help someone when I am not emotionally entangled in their situation.", "direction": "detachment"},
+    {"text": "I have been deeply affected by a stranger's story in a way that stayed with me for days.", "direction": "empathy"},
+    {"text": "I believe that the best advice comes from people who can see your situation without being moved by it.", "direction": "detachment"},
+    {"text": "I feel that failing to respond to someone's suffering when I could have helped is something I could not easily forgive in myself.", "direction": "empathy"},
+    {"text": "I have been told that I seem unaffected by things that upset most people.", "direction": "detachment"},
+    {"text": "When I hear about injustice, my first response is indignation and a desire to act, not to analyze.", "direction": "empathy"},
+    {"text": "I think that emotional sensitivity to others' pain, while admirable, can become a liability if not managed.", "direction": "detachment"},
+    {"text": "I feel that my relationships are deepened by my willingness to sit with others in their pain.", "direction": "empathy"},
+    {"text": "I am able to witness suffering without feeling compelled to intervene emotionally.", "direction": "detachment"},
+    {"text": "I believe that registering others' suffering as important is a fundamental part of my moral compass.", "direction": "empathy"},
+    {"text": "I think that people who maintain emotional composure in crises are often more helpful than those who empathize deeply.", "direction": "detachment"},
+    {"text": "I have found that the depth of my concern for others sometimes costs me in terms of my own energy and wellbeing.", "direction": "empathy"},
+    {"text": "I can distinguish between understanding that someone is in pain and actually feeling that pain myself — and I tend toward the former.", "direction": "detachment"},
+    {"text": "I feel that the most meaningful moments in my life have been ones where I was fully present to another person's experience.", "direction": "empathy"},
+    {"text": "I have consciously practiced maintaining emotional distance in situations where most people would be drawn in.", "direction": "detachment"},
+    {"text": "I believe that the impulse to help others is one of the deepest and most trustworthy parts of human nature.", "direction": "empathy"},
+    {"text": "I think that processing others' suffering intellectually rather than emotionally allows me to be more consistently helpful over time.", "direction": "detachment"}
+  ]
+}

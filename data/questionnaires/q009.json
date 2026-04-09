@@ -1,0 +1,23 @@
+{
+  "id": 9,
+  "questions": [
+    {"text": "I feel that every encounter with another person's suffering is an opportunity to live according to my values.", "direction": "empathy"},
+    {"text": "I believe that decisions about how to help should be driven by data and outcomes, not by how deeply you feel for the person.", "direction": "detachment"},
+    {"text": "I hold myself to a standard where knowing about suffering and doing nothing is not acceptable.", "direction": "empathy"},
+    {"text": "I find that remaining emotionally neutral during difficult situations allows me to see options that others overlook.", "direction": "detachment"},
+    {"text": "I believe that the fact of another person's pain creates an obligation that exists regardless of whether I caused it.", "direction": "empathy"},
+    {"text": "I think that detachment from emotional content is a form of discipline that serves both the helper and the helped.", "direction": "detachment"},
+    {"text": "I feel that the weight I assign to others' suffering in my decision-making reflects what I truly care about.", "direction": "empathy"},
+    {"text": "I am able to acknowledge that someone is suffering without allowing that knowledge to derail my focus or productivity.", "direction": "detachment"},
+    {"text": "I believe that moral seriousness about suffering is what distinguishes genuine concern from performative sympathy.", "direction": "empathy"},
+    {"text": "I approach even deeply emotional situations with a preference for structured thinking over spontaneous reaction.", "direction": "detachment"},
+    {"text": "When I become aware that someone is struggling, I find that my sense of responsibility activates before I have consciously decided to help.", "direction": "empathy"},
+    {"text": "I think that maintaining composure in the face of others' distress is a form of respect, not a lack of caring.", "direction": "detachment"},
+    {"text": "I feel that ignoring preventable suffering — even at a distance — is something I would struggle to justify to myself.", "direction": "empathy"},
+    {"text": "I believe that the best outcomes in emotionally complex situations come from those who can think without feeling.", "direction": "detachment"},
+    {"text": "I consider my willingness to be inconvenienced by another's suffering as a reflection of my integrity.", "direction": "empathy"},
+    {"text": "I find that I am naturally inclined to process difficult situations through logic rather than through emotional engagement.", "direction": "detachment"},
+    {"text": "I believe that the moral demand created by awareness of suffering is one of the most important forces in human life.", "direction": "empathy"},
+    {"text": "I think that people who can evaluate suffering without being destabilized by it are essential to any functional community.", "direction": "detachment"}
+  ]
+}

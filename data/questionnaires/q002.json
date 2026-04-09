@@ -1,0 +1,23 @@
+{
+  "id": 2,
+  "questions": [
+    {"text": "When a friend describes a loss, I feel a strong motivation to help them recover.", "direction": "empathy"},
+    {"text": "I find that I can compartmentalize others' emotional situations and continue with my day unaffected.", "direction": "detachment"},
+    {"text": "I believe that the measure of a good person is how seriously they take the suffering of others.", "direction": "empathy"},
+    {"text": "I have found that caring too deeply about others' problems makes it harder to help them effectively.", "direction": "detachment"},
+    {"text": "I find it morally impossible to accept others' unfair treatment without wanting to intervene.", "direction": "empathy"},
+    {"text": "I am comfortable making decisions that cause short-term distress to others when I believe the outcome is better overall.", "direction": "detachment"},
+    {"text": "I often feel compelled to check in on people I know are going through a hard time, even when they have not asked.", "direction": "empathy"},
+    {"text": "I think the most helpful thing you can offer someone in pain is a clear head, not shared tears.", "direction": "detachment"},
+    {"text": "The suffering of strangers in distant places affects me in a way that feels personal and immediate.", "direction": "empathy"},
+    {"text": "I have been described as logical or cool-headed in situations where others are emotionally overwhelmed.", "direction": "detachment"},
+    {"text": "When I see suffering, I feel a moral pull to respond before I even begin to analyze the situation.", "direction": "empathy"},
+    {"text": "I believe that professional effectiveness in caring professions requires the ability to detach from individual cases.", "direction": "detachment"},
+    {"text": "I feel that ignoring someone's pain when I could help is a form of moral failure.", "direction": "empathy"},
+    {"text": "I can listen to emotionally heavy stories and set them down completely when the conversation is over.", "direction": "detachment"},
+    {"text": "When I see others in pain, I feel a moral pull to respond that outweighs my own comfort.", "direction": "empathy"},
+    {"text": "I think that people who become emotionally flooded by others' problems are less equipped to actually solve them.", "direction": "detachment"},
+    {"text": "Witnessing others' suffering makes it impossible for me to remain indifferent.", "direction": "empathy"},
+    {"text": "I value my ability to remain objective when those around me are in emotional distress.", "direction": "detachment"}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": 82,
+  "questions": [
+    {"text": "I believe that the moral weight of suffering compels a kind of attention that is fundamentally different from intellectual curiosity or abstract concern.", "direction": "empathy"},
+    {"text": "I find that when I assess painful situations through an analytical lens, I am able to distinguish real problems from surface-level distress more effectively.", "direction": "detachment"},
+    {"text": "I feel that the moral pull of another person's pain creates an imperative in me that no amount of reasoning can fully override or dismiss.", "direction": "empathy"},
+    {"text": "I hold the view that composure during moments of crisis is a learned discipline that improves every aspect of professional performance.", "direction": "detachment"},
+    {"text": "I believe that the obligation to respond to suffering is the ethical bedrock on which all meaningful moral action rests.", "direction": "empathy"},
+    {"text": "I think that processing suffering as information rather than as an emotional wave is the key to making decisions I will not regret later.", "direction": "detachment"},
+    {"text": "I find that the felt weight of others' pain has been the catalyst for the most significant moral growth I have experienced.", "direction": "empathy"},
+    {"text": "I believe that objective evaluation of emotionally loaded circumstances is the skill most needed in any environment where decisions affect multiple stakeholders.", "direction": "detachment"},
+    {"text": "I feel that the moral demand of suffering is the reality that gives my daily choices their ethical significance.", "direction": "empathy"},
+    {"text": "I hold the view that the rational assessment of painful situations is a form of due diligence that responsible decision-makers owe to everyone affected.", "direction": "detachment"},
+    {"text": "I believe that the moral priority of suffering is the principle that should frame the way I think about leadership and influence.", "direction": "empathy"},
+    {"text": "I find that my inclination toward analytical detachment during emotionally difficult times has allowed me to support others without compromising my own effectiveness.", "direction": "detachment"},
+    {"text": "I hold the view that the moral concern I carry for those in suffering is the experience that keeps my conscience active and responsive.", "direction": "empathy"},
+    {"text": "I think that approaching suffering with methodical clarity is the approach that most reliably converts concern into tangible progress.", "direction": "detachment"},
+    {"text": "I feel that the weight of suffering in my moral landscape is the feature that gives shape and direction to everything else I care about.", "direction": "empathy"},
+    {"text": "I believe that the ability to remain level-headed during distressing events is a form of self-mastery that serves the needs of others as much as my own.", "direction": "detachment"},
+    {"text": "I find that the moral demand of suffering is the consideration that most effectively prevents me from rationalizing inaction.", "direction": "empathy"},
+    {"text": "I hold the view that a calm, evidence-based approach to human suffering is the hallmark of someone who takes the problem seriously enough to engage with it rigorously.", "direction": "detachment"}
+  ]
+}

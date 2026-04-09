@@ -1,0 +1,23 @@
+{
+  "id": 15,
+  "questions": [
+    {"text": "I feel that the weight I assign to others' suffering in my decisions is the most honest indicator of what I value.", "direction": "empathy"},
+    {"text": "I believe that processing human hardship as data — rather than as personal experience — leads to more effective interventions.", "direction": "detachment"},
+    {"text": "I hold the view that moral attention to suffering is not something that can be delegated or outsourced.", "direction": "empathy"},
+    {"text": "I find that I am most useful to others when I can maintain a boundary between their experience and my assessment of it.", "direction": "detachment"},
+    {"text": "I believe that the decision to respond to suffering, even when the personal benefit is zero, is the truest form of moral action.", "direction": "empathy"},
+    {"text": "I think that the ability to consider suffering without emotional reaction is essential for professionals who make high-stakes decisions.", "direction": "detachment"},
+    {"text": "I feel that the moral claim of another's suffering is something I carry forward even when the moment of encounter has passed.", "direction": "empathy"},
+    {"text": "I believe that deliberately maintaining composure in emotional situations allows me to serve others more fairly.", "direction": "detachment"},
+    {"text": "I hold the view that a commitment to reducing suffering is among the most meaningful organizing principles for a life.", "direction": "empathy"},
+    {"text": "I find that approaching emotional crises with calm rationality produces more durable solutions than empathic engagement alone.", "direction": "detachment"},
+    {"text": "I believe that the moral urgency of suffering should shape not only what I do but how I allocate my time and attention.", "direction": "empathy"},
+    {"text": "I think that the most equitable decisions come from those who can weigh competing claims of suffering without being pulled toward the most emotionally compelling one.", "direction": "detachment"},
+    {"text": "I feel that the willingness to sacrifice personal comfort in response to another's pain is a defining feature of a morally serious person.", "direction": "empathy"},
+    {"text": "I believe that remaining analytically engaged while others are emotionally overwhelmed is a contribution that often goes unrecognized.", "direction": "detachment"},
+    {"text": "I hold the view that suffering has a moral gravity that, once recognized, makes inaction feel like a form of complicity.", "direction": "empathy"},
+    {"text": "I find that I can engage with the most difficult aspects of the human condition without it affecting my capacity to function.", "direction": "detachment"},
+    {"text": "I believe that the strongest communities are built by people who treat each other's suffering as genuinely important.", "direction": "empathy"},
+    {"text": "I think that emotional composure in the face of suffering is not a failure of caring but a different and equally valid way of being useful.", "direction": "detachment"}
+  ]
+}

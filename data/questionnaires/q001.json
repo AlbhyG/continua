@@ -1,0 +1,23 @@
+{
+  "id": 1,
+  "questions": [
+    {"text": "When I learn that someone I know is going through a difficult time, my first instinct is to consider how I might help.", "direction": "empathy"},
+    {"text": "I can listen to someone describe their suffering and maintain complete emotional equilibrium.", "direction": "detachment"},
+    {"text": "I find that other people's pain lingers in my mind long after the conversation ends.", "direction": "empathy"},
+    {"text": "In a crisis, I become more effective when I set aside emotional reactions and focus on what needs to be done.", "direction": "detachment"},
+    {"text": "I feel a genuine sense of responsibility when I have the means to reduce someone's suffering.", "direction": "empathy"},
+    {"text": "I process other people's hardships primarily as problems to be solved rather than emotions to be shared.", "direction": "detachment"},
+    {"text": "When someone shares a painful experience, the fact of their pain carries real weight in my mind.", "direction": "empathy"},
+    {"text": "I believe that maintaining emotional distance from a problem allows me to offer more useful help.", "direction": "detachment"},
+    {"text": "The knowledge that someone is in pain, even someone I have never met, creates a pull in me to respond.", "direction": "empathy"},
+    {"text": "I can assess a suffering person's situation clearly precisely because I am not emotionally affected by it.", "direction": "detachment"},
+    {"text": "I feel a deep sense of responsibility for the safety and wellbeing of those around me.", "direction": "empathy"},
+    {"text": "I have noticed that I respond to others' emotional pain with analysis rather than with feeling.", "direction": "detachment"},
+    {"text": "When I help someone, the motivation comes from a deep sense that their wellbeing matters to me personally.", "direction": "empathy"},
+    {"text": "I tend to view others' distress through a lens of objective evaluation rather than personal resonance.", "direction": "detachment"},
+    {"text": "I believe that truly understanding another's suffering requires recognizing it as a priority that demands a response.", "direction": "empathy"},
+    {"text": "I think of emotional reactions to others' pain as something that can be managed and modulated at will.", "direction": "detachment"},
+    {"text": "I feel that the weight of another person's struggle is something I carry with me, not something I observe from a distance.", "direction": "empathy"},
+    {"text": "I am able to make difficult decisions that affect others without my emotions interfering with my judgment.", "direction": "detachment"}
+  ]
+}

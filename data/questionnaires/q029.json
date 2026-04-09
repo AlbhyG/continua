@@ -1,0 +1,23 @@
+{
+  "id": 29,
+  "questions": [
+    {"text": "I feel that the moral pull of suffering becomes more compelling the better I understand the full scope of what someone is going through.", "direction": "empathy"},
+    {"text": "I believe that analytical rigor in emotionally difficult situations is a discipline that protects against bias and error.", "direction": "detachment"},
+    {"text": "I hold the view that suffering should occupy a prominent place in my moral thinking — it is not background noise but a central signal.", "direction": "empathy"},
+    {"text": "I find that I can evaluate the merits of competing claims for help without being drawn toward the one that is most emotionally vivid.", "direction": "detachment"},
+    {"text": "I believe that the moral obligation to respond to suffering is not contingent on whether I caused it or could have prevented it.", "direction": "empathy"},
+    {"text": "I think that remaining emotionally even during someone else's difficult experience allows me to be a more steady and reliable presence.", "direction": "detachment"},
+    {"text": "I feel that the moral weight I assign to suffering is the most reliable compass I have for navigating ethical choices.", "direction": "empathy"},
+    {"text": "I believe that the ability to evaluate human pain without emotional entanglement is what makes certain professions possible.", "direction": "detachment"},
+    {"text": "I hold the view that taking suffering seriously means being willing to change my behavior, not just my feelings, in response to it.", "direction": "empathy"},
+    {"text": "I find that I offer the most valuable support when I can analyze a person's situation without my emotional state mirroring theirs.", "direction": "detachment"},
+    {"text": "I believe that the moral significance of suffering is not reduced by frequency — encountering pain regularly does not make each instance less important.", "direction": "empathy"},
+    {"text": "I think that approaching human tragedy with clear-eyed analysis is a form of moral seriousness that complements rather than contradicts empathy.", "direction": "detachment"},
+    {"text": "I feel that the pull to respond to suffering — to give it genuine priority — is one of the most morally trustworthy impulses I experience.", "direction": "empathy"},
+    {"text": "I believe that emotional distance from a situation does not diminish the quality of my concern but allows me to direct that concern more precisely.", "direction": "detachment"},
+    {"text": "I hold the view that giving moral weight to suffering is an ongoing practice, not a fixed trait — and I work to maintain it.", "direction": "empathy"},
+    {"text": "I find that maintaining composure in the presence of strong emotions from others enables me to provide the kind of help that is actually needed.", "direction": "detachment"},
+    {"text": "I believe that the moral commitment to take suffering seriously should be visible in my choices, not just in my stated beliefs.", "direction": "empathy"},
+    {"text": "I think that the ability to separate emotional atmosphere from factual assessment is essential for anyone in a position of responsibility.", "direction": "detachment"}
+  ]
+}

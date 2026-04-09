@@ -1,0 +1,23 @@
+{
+  "id": 35,
+  "questions": [
+    {"text": "I believe that genuine moral seriousness about suffering requires me to let it reshape my priorities, not just my emotional state.", "direction": "empathy"},
+    {"text": "I find that I can evaluate the most effective path forward during a crisis without being swayed by the emotional intensity of any single case.", "direction": "detachment"},
+    {"text": "I feel that the moral importance of addressing suffering grows clearer, not more abstract, the more carefully I consider the specifics.", "direction": "empathy"},
+    {"text": "I believe that the capacity for dispassionate analysis in the face of human tragedy is indispensable for systems designed to serve large populations.", "direction": "detachment"},
+    {"text": "I hold the view that the moral weight of someone's suffering, once I have genuinely registered it, creates a responsibility I cannot delegate.", "direction": "empathy"},
+    {"text": "I think that the professional skill of remaining emotionally neutral during difficult interactions is one that can be learned and strengthened with practice.", "direction": "detachment"},
+    {"text": "I believe that taking suffering into account — giving it priority in my thinking — is the most direct way to align my behavior with my values.", "direction": "empathy"},
+    {"text": "I find that emotional detachment during tense situations allows me to communicate more clearly and make fewer errors.", "direction": "detachment"},
+    {"text": "I feel that the moral demand of suffering requires not only awareness but active, sustained commitment to doing something about it.", "direction": "empathy"},
+    {"text": "I believe that the ability to hold suffering in mind as a fact — without converting it into a personal emotional experience — is what enables consistent and fair action.", "direction": "detachment"},
+    {"text": "I hold the view that the sincerity of my moral commitments is most accurately measured by how I respond to suffering, not by what I say about it.", "direction": "empathy"},
+    {"text": "I think that approaching difficult human problems with deliberate emotional restraint leads to outcomes that are more just and more durable.", "direction": "detachment"},
+    {"text": "I believe that the pull toward acting on behalf of those who are suffering is the most trustworthy moral signal I can follow.", "direction": "empathy"},
+    {"text": "I find that maintaining an objective stance during emotional conversations allows me to understand the actual problem more quickly.", "direction": "detachment"},
+    {"text": "I feel that the moral importance of suffering is not weakened by the possibility that my response might be imperfect or insufficient.", "direction": "empathy"},
+    {"text": "I believe that the professionals and leaders who make the greatest positive impact are those who can process suffering without emotional disruption.", "direction": "detachment"},
+    {"text": "I hold the view that moral engagement with suffering — treating it as genuinely binding — is the most reliable foundation for living ethically.", "direction": "empathy"},
+    {"text": "I find that emotional equilibrium during periods of others' distress is what allows me to remain helpful over the long term without burning out.", "direction": "detachment"}
+  ]
+}

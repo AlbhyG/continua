@@ -1,0 +1,23 @@
+{
+  "id": 30,
+  "questions": [
+    {"text": "I believe that the moral importance of suffering does not depend on whether addressing it benefits me in any way.", "direction": "empathy"},
+    {"text": "I find that I can maintain emotional steadiness during prolonged exposure to others' hardship without diminished effectiveness.", "direction": "detachment"},
+    {"text": "I feel that the moral claim of suffering is universal — it applies to me whether the person is a loved one or a stranger.", "direction": "empathy"},
+    {"text": "I believe that measured, rational engagement with emotionally difficult topics produces insights that emotional immersion would obscure.", "direction": "detachment"},
+    {"text": "I hold the view that moral seriousness about suffering is demonstrated through sustained action, not through the intensity of my emotional response.", "direction": "empathy"},
+    {"text": "I think that the capacity to engage with distressing material without being emotionally destabilized is one of the most practical assets a person can develop.", "direction": "detachment"},
+    {"text": "I believe that the moral weight of suffering should be treated as cumulative — each encounter adds to the case for engagement, never subtracts from it.", "direction": "empathy"},
+    {"text": "I find that stepping back from the emotional content of a conversation about suffering allows me to hear more clearly what is actually being said.", "direction": "detachment"},
+    {"text": "I feel that the pull to respond to others' suffering is one of the few moral intuitions I trust absolutely.", "direction": "empathy"},
+    {"text": "I believe that professionals who maintain their analytical composure during tragic events are providing a service that emotional responders cannot.", "direction": "detachment"},
+    {"text": "I hold the view that treating suffering as morally important is the most fundamental expression of respect for another person's humanity.", "direction": "empathy"},
+    {"text": "I think that deliberate emotional regulation during high-stakes situations allows for responses that are both more effective and more fair.", "direction": "detachment"},
+    {"text": "I believe that the moral seriousness I bring to others' suffering is shaped by my understanding that every person's pain has equal inherent significance.", "direction": "empathy"},
+    {"text": "I find that separating my personal emotional reactions from my assessment of a situation allows me to act with greater clarity and purpose.", "direction": "detachment"},
+    {"text": "I feel that the degree to which suffering shapes my moral priorities is a feature of my character that I value and want to preserve.", "direction": "empathy"},
+    {"text": "I believe that the most equitable outcomes in situations involving human suffering are achieved by those who can evaluate needs without emotional distortion.", "direction": "detachment"},
+    {"text": "I hold the view that giving moral priority to suffering is not one value among many but the organizing principle around which other values arrange themselves.", "direction": "empathy"},
+    {"text": "I think that the capacity to remain analytically engaged while navigating human pain is essential for those who aspire to make a lasting positive difference.", "direction": "detachment"}
+  ]
+}

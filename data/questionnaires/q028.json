@@ -1,0 +1,23 @@
+{
+  "id": 28,
+  "questions": [
+    {"text": "I feel that the obligation to respond to suffering applies universally — it does not depend on the identity or proximity of the person in pain.", "direction": "empathy"},
+    {"text": "I believe that the most effective crisis responders are those who can process human tragedy without absorbing its emotional content.", "direction": "detachment"},
+    {"text": "I hold the view that the moral significance I attach to suffering should be proportional to what I can do about it, not to how it makes me feel.", "direction": "empathy"},
+    {"text": "I find that I am able to remain focused on achieving good outcomes even when surrounded by emotional turmoil.", "direction": "detachment"},
+    {"text": "I believe that treating every person's suffering as worthy of serious moral attention is the baseline of ethical living.", "direction": "empathy"},
+    {"text": "I think that dispassionate analysis of human problems is what distinguishes effective help from well-intentioned but misdirected effort.", "direction": "detachment"},
+    {"text": "I feel that the weight of my concern about others' pain is something I can point to as evidence of my moral engagement.", "direction": "empathy"},
+    {"text": "I believe that the most useful contribution during an emotional crisis is often a calm voice that redirects attention to what can actually be done.", "direction": "detachment"},
+    {"text": "I hold the view that moral attention to suffering — the active decision to let it matter — is a habit that strengthens with practice.", "direction": "empathy"},
+    {"text": "I find that I function most effectively in roles where emotional content must be processed intellectually rather than experientially.", "direction": "detachment"},
+    {"text": "I believe that the pull I experience toward responding to suffering is not weakness but the operation of a well-calibrated moral sense.", "direction": "empathy"},
+    {"text": "I think that the ability to evaluate situations of human suffering with precision requires deliberate emotional self-regulation.", "direction": "detachment"},
+    {"text": "I feel that the moral force of suffering is intensified when I understand the specific ways in which a person has been affected.", "direction": "empathy"},
+    {"text": "I believe that emotional reactions to suffering, however genuine, can distort the allocation of help if they are not moderated by reason.", "direction": "detachment"},
+    {"text": "I hold the view that acknowledging the moral weight of suffering — without diminishing or inflating it — is the most honest response.", "direction": "empathy"},
+    {"text": "I find that I can sustain my engagement with others' difficulties over long periods because I do not allow them to affect me emotionally.", "direction": "detachment"},
+    {"text": "I believe that the moral demand of suffering is clearest when it calls for action that is inconvenient, costly, or socially awkward.", "direction": "empathy"},
+    {"text": "I think that the most balanced responses to human tragedy come from those who can hold both the facts and the feelings at arm's length.", "direction": "detachment"}
+  ]
+}

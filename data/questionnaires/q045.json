@@ -1,0 +1,23 @@
+{
+  "id": 45,
+  "questions": [
+    {"text": "I believe that the moral weight of another's suffering is the single most compelling reason to change what I am doing.", "direction": "empathy"},
+    {"text": "I find that engaging with emotional situations analytically, rather than emotionally, consistently leads to more useful and more equitable outcomes.", "direction": "detachment"},
+    {"text": "I feel that moral attention to suffering is the most fundamental practice through which I express my values.", "direction": "empathy"},
+    {"text": "I believe that the capacity to process human tragedy without being emotionally destabilized is essential for anyone who wants to help at scale.", "direction": "detachment"},
+    {"text": "I hold the view that the moral demand of suffering is clearest when I understand not just the fact of it but the full human context surrounding it.", "direction": "empathy"},
+    {"text": "I think that the ability to remain emotionally neutral during a crisis is one of the most underappreciated forms of service.", "direction": "detachment"},
+    {"text": "I believe that the weight I give to others' suffering defines the quality of my moral reasoning more than any other factor.", "direction": "empathy"},
+    {"text": "I find that I can discuss the most difficult aspects of the human experience without losing my analytical perspective.", "direction": "detachment"},
+    {"text": "I feel that the obligation to respond to suffering, once recognized, is among the most non-negotiable commitments in my moral framework.", "direction": "empathy"},
+    {"text": "I believe that emotional distance from a problem is often the prerequisite for the clearest and most impartial thinking about it.", "direction": "detachment"},
+    {"text": "I hold the view that the sincerity of my concern for others' suffering is best demonstrated by the reliability and persistence of my response.", "direction": "empathy"},
+    {"text": "I think that treating emotional situations as intellectual problems to be solved is a valid and often superior approach to helping.", "direction": "detachment"},
+    {"text": "I believe that the moral significance of suffering is absolute — it does not depend on context, timing, or the identity of the person involved.", "direction": "empathy"},
+    {"text": "I find that my emotional composure during high-pressure situations is one of the qualities others most consistently rely on.", "direction": "detachment"},
+    {"text": "I feel that the moral pull of suffering is a force I trust to guide me toward actions that are genuinely important.", "direction": "empathy"},
+    {"text": "I believe that the most sustainable forms of care and service are those delivered from a position of emotional stability rather than emotional immersion.", "direction": "detachment"},
+    {"text": "I hold the view that treating others' suffering as morally compelling — every time, without exception — is the standard I hold myself to.", "direction": "empathy"},
+    {"text": "I find that deliberate emotional restraint in the face of human pain is a form of discipline I have come to value deeply.", "direction": "detachment"}
+  ]
+}

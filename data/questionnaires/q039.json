@@ -1,0 +1,23 @@
+{
+  "id": 39,
+  "questions": [
+    {"text": "I believe that the moral urgency of suffering is not reduced by how many times I have encountered similar situations before.", "direction": "empathy"},
+    {"text": "I find that I offer my most effective support when I can separate the emotional dimension of a situation from the practical one.", "direction": "detachment"},
+    {"text": "I feel that the moral weight of pain is something I register not just intellectually but as a genuine priority that influences my actions.", "direction": "empathy"},
+    {"text": "I believe that the professionals who handle suffering most capably are those who have developed the ability to engage without emotional involvement.", "direction": "detachment"},
+    {"text": "I hold the view that the awareness of suffering confers a responsibility that I consider one of the most serious I carry.", "direction": "empathy"},
+    {"text": "I think that the ability to maintain analytical focus while others are emotional is a gift that should be cultivated and deployed in service of better outcomes.", "direction": "detachment"},
+    {"text": "I believe that the moral pull of suffering should translate directly into changed behavior, not just into emotional acknowledgment.", "direction": "empathy"},
+    {"text": "I find that processing emotional situations through a logical framework is my natural approach and one that consistently produces useful results.", "direction": "detachment"},
+    {"text": "I feel that giving genuine moral weight to others' pain — not as an ideal but as an ongoing practice — is what it means to live ethically.", "direction": "empathy"},
+    {"text": "I believe that emotional composure during distressing events is undervalued precisely because it lacks the visible markers of caring.", "direction": "detachment"},
+    {"text": "I hold the view that the moral seriousness of suffering is not something I can calibrate to my convenience — it either matters or it does not.", "direction": "empathy"},
+    {"text": "I think that rational engagement with suffering, while less dramatic than emotional engagement, tends to produce results that are more lasting and more just.", "direction": "detachment"},
+    {"text": "I believe that the degree to which suffering shapes my understanding of what is important is one of the clearest indicators of my moral development.", "direction": "empathy"},
+    {"text": "I find that maintaining my equilibrium in the face of emotional difficulty is a form of reliability that those around me have come to value.", "direction": "detachment"},
+    {"text": "I feel that the moral demand of suffering calls for a response that is both immediate and sustained — a momentary reaction is not enough.", "direction": "empathy"},
+    {"text": "I believe that the capacity to evaluate suffering without emotional contamination is what makes fair and scalable responses to human need possible.", "direction": "detachment"},
+    {"text": "I hold the view that the seriousness with which I engage with others' suffering is the most authentic measure of whether I am living according to my values.", "direction": "empathy"},
+    {"text": "I find that deliberate emotional regulation during exposure to others' pain preserves both my effectiveness and my long-term wellbeing.", "direction": "detachment"}
+  ]
+}

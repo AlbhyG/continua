@@ -1,0 +1,23 @@
+{
+  "id": 18,
+  "questions": [
+    {"text": "I feel that the moral urgency of suffering does not decrease with scale — one person's pain can be as compelling as a thousand people's.", "direction": "empathy"},
+    {"text": "I believe that approaching difficult human situations with deliberate objectivity is a mark of maturity, not of coldness.", "direction": "detachment"},
+    {"text": "I hold the view that when I am aware of suffering and able to respond, the moral case for action is clear and strong.", "direction": "empathy"},
+    {"text": "I find that my thinking about what to do in emotionally charged situations becomes sharper when I distance myself from the emotional content.", "direction": "detachment"},
+    {"text": "I believe that the degree to which I assign moral priority to others' pain is a reflection of my deepest commitments.", "direction": "empathy"},
+    {"text": "I think that the most effective interventions in human crises come from those who can hold the emotional and the analytical apart.", "direction": "detachment"},
+    {"text": "I feel that the moral weight of another's suffering, once recognized, creates a responsibility I cannot in good conscience ignore.", "direction": "empathy"},
+    {"text": "I believe that the capacity to examine suffering clinically — without flinching — is a prerequisite for the most demanding forms of service.", "direction": "detachment"},
+    {"text": "I hold the view that suffering generates moral obligations that persist until they are acted upon, not merely acknowledged.", "direction": "empathy"},
+    {"text": "I find that I can hold the full reality of someone's pain in mind while still thinking clearly about the best course of action.", "direction": "detachment"},
+    {"text": "I believe that the seriousness with which I respond to others' suffering is a more meaningful measure of my character than any accomplishment.", "direction": "empathy"},
+    {"text": "I think that the ability to engage with someone's dire circumstances without absorbing their emotional state is what makes sustained help possible.", "direction": "detachment"},
+    {"text": "I feel that the obligation to respond to suffering is strongest when I have a clear understanding of what the person is enduring.", "direction": "empathy"},
+    {"text": "I believe that the most durable forms of help come from people who can distinguish between caring about someone and being emotionally entangled with their situation.", "direction": "detachment"},
+    {"text": "I hold the view that moral attention to suffering — the decision that it matters — is the first and most important step toward any meaningful response.", "direction": "empathy"},
+    {"text": "I find that I can remain focused on practical solutions even when the emotional intensity of a situation is high.", "direction": "detachment"},
+    {"text": "I believe that the impulse to treat suffering as significant, even when doing so is difficult, is the bedrock of genuine moral engagement.", "direction": "empathy"},
+    {"text": "I think that deliberately maintaining analytical distance during emotionally fraught situations is a form of care that benefits everyone involved.", "direction": "detachment"}
+  ]
+}

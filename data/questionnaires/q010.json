@@ -1,0 +1,23 @@
+{
+  "id": 10,
+  "questions": [
+    {"text": "I believe that how much weight I give to another's suffering in my decisions is the most honest measure of my values.", "direction": "empathy"},
+    {"text": "I find that I am able to make hard choices about resource allocation without being influenced by the emotional intensity of individual cases.", "direction": "detachment"},
+    {"text": "I feel that a moral response to suffering requires more than understanding — it requires prioritizing action.", "direction": "empathy"},
+    {"text": "I think that the value of emotional distance is most apparent in high-stakes situations where clear thinking saves lives.", "direction": "detachment"},
+    {"text": "I hold the view that no amount of personal inconvenience justifies turning away from someone whose suffering I could alleviate.", "direction": "empathy"},
+    {"text": "I believe that processing suffering as information rather than as a personal experience allows for more equitable responses.", "direction": "detachment"},
+    {"text": "I feel that the obligation to respond to suffering does not diminish with distance — a stranger's pain matters as much as a friend's.", "direction": "empathy"},
+    {"text": "I find that I am at my most effective when I can engage with a problem without being emotionally invested in the people involved.", "direction": "detachment"},
+    {"text": "I believe that taking someone's suffering seriously, even when it is complex or inconvenient, is a form of moral courage.", "direction": "empathy"},
+    {"text": "I think that the ability to suspend emotional reactions during a crisis is a skill that produces better outcomes for everyone.", "direction": "detachment"},
+    {"text": "I feel that the quality of my character is most visible in the moments when I choose to respond to suffering rather than look away.", "direction": "empathy"},
+    {"text": "I prefer to formulate my response to a difficult human situation before engaging with its emotional content.", "direction": "detachment"},
+    {"text": "I believe that a genuine commitment to reducing suffering requires willingness to act even when the cost to oneself is real.", "direction": "empathy"},
+    {"text": "I find that emotional distance from a situation allows me to be more fair in my assessment of what each person involved needs.", "direction": "detachment"},
+    {"text": "I feel that the moral pull of another person's suffering is among the most trustworthy signals I can follow.", "direction": "empathy"},
+    {"text": "I believe that treating emotionally charged situations with deliberate calm is more productive than matching the emotional intensity of those involved.", "direction": "detachment"},
+    {"text": "I hold myself responsible not only for the suffering I cause, but also for the suffering I fail to address when I am able.", "direction": "empathy"},
+    {"text": "I think that the capacity to evaluate human problems without emotional interference is one of the most undervalued abilities.", "direction": "detachment"}
+  ]
+}

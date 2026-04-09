@@ -1,0 +1,23 @@
+{
+  "id": 21,
+  "questions": [
+    {"text": "I believe that when suffering is brought to my attention, the question of whether to respond is already answered.", "direction": "empathy"},
+    {"text": "I find that I can work through emotionally heavy material — accounts of trauma, loss, injustice — without it altering my focus.", "direction": "detachment"},
+    {"text": "I feel that the moral significance of another person's pain is not reduced by the number of people experiencing similar pain.", "direction": "empathy"},
+    {"text": "I believe that the professionals who handle human suffering most effectively are those who treat it as a problem to solve rather than a burden to share.", "direction": "detachment"},
+    {"text": "I hold the view that suffering creates an ethical claim on anyone who becomes aware of it and is positioned to help.", "direction": "empathy"},
+    {"text": "I find that my approach to emotionally difficult problems is most effective when it begins with questions, not feelings.", "direction": "detachment"},
+    {"text": "I believe that giving moral weight to someone's suffering — truly letting it count — is a choice that reflects the kind of person I want to be.", "direction": "empathy"},
+    {"text": "I think that emotional involvement with someone's hardship, while understandable, often reduces the precision of the help offered.", "direction": "detachment"},
+    {"text": "I feel that the moral pull I experience in the presence of suffering is a signal I should trust, not manage.", "direction": "empathy"},
+    {"text": "I believe that maintaining an even emotional state during moments of crisis is one of the most practical contributions a person can make.", "direction": "detachment"},
+    {"text": "I hold the view that the suffering of others should occupy a central, not peripheral, place in my moral reasoning.", "direction": "empathy"},
+    {"text": "I find that addressing human pain with calm objectivity allows me to serve more people more effectively over time.", "direction": "detachment"},
+    {"text": "I believe that taking suffering seriously means allowing it to influence not just how I feel but what I prioritize.", "direction": "empathy"},
+    {"text": "I think that the most equitable treatment of people's needs comes from those who can separate the emotional from the factual.", "direction": "detachment"},
+    {"text": "I feel that the strength of my moral engagement is best measured by how I respond when suffering is present and action is possible.", "direction": "empathy"},
+    {"text": "I believe that emotional neutrality in high-pressure situations protects against the kinds of errors that emotional involvement introduces.", "direction": "detachment"},
+    {"text": "I hold the view that every instance of suffering I encounter that goes unaddressed represents a failure of my moral attention.", "direction": "empathy"},
+    {"text": "I find that I can remain composed and focused in environments saturated with emotional pain.", "direction": "detachment"}
+  ]
+}

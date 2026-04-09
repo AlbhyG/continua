@@ -1,0 +1,23 @@
+{
+  "id": 44,
+  "questions": [
+    {"text": "I believe that the moral force of suffering becomes stronger, not weaker, the more I know about the specific person involved.", "direction": "empathy"},
+    {"text": "I find that I am better at identifying what someone actually needs when I set aside the emotional coloring of their situation.", "direction": "detachment"},
+    {"text": "I feel that the moral weight of suffering places a claim on me that is not canceled by the passage of time.", "direction": "empathy"},
+    {"text": "I believe that decisions made from a position of emotional calm are more likely to be just than decisions made in the heat of emotional engagement.", "direction": "detachment"},
+    {"text": "I hold the view that the moral commitment to take suffering seriously is renewed with each encounter, never depleted.", "direction": "empathy"},
+    {"text": "I think that the discipline of engaging with tragedy through a rational lens is one of the most practically valuable human capacities.", "direction": "detachment"},
+    {"text": "I believe that the pull I experience toward addressing suffering is one of the most genuine and least performative aspects of my character.", "direction": "empathy"},
+    {"text": "I find that my capacity to remain composed during emotionally charged moments is something that has improved with deliberate effort.", "direction": "detachment"},
+    {"text": "I feel that moral seriousness about suffering means being willing to stay engaged with it long after the emotional intensity has faded.", "direction": "empathy"},
+    {"text": "I believe that the ability to hold suffering at a rational distance is what allows for responses that are scalable, repeatable, and fair.", "direction": "detachment"},
+    {"text": "I hold the view that the weight I give to others' pain in my moral reasoning is the most transparent indicator of my real priorities.", "direction": "empathy"},
+    {"text": "I think that emotional composure in the face of suffering is not a lack of response but a different kind of response — one oriented toward action.", "direction": "detachment"},
+    {"text": "I believe that the moral urgency of suffering exists independently of whether I happen to feel an emotional reaction to it.", "direction": "empathy"},
+    {"text": "I find that approaching emotionally difficult situations with structured thinking allows me to be more thorough and less prone to error.", "direction": "detachment"},
+    {"text": "I feel that the moral importance I assign to suffering is something that persists across all areas of my life, not just in moments of crisis.", "direction": "empathy"},
+    {"text": "I believe that the capacity for dispassionate evaluation of human need is what makes the most impactful charitable and professional work possible.", "direction": "detachment"},
+    {"text": "I hold the view that the willingness to treat suffering as genuinely binding — to let it alter my course — is the hallmark of authentic moral engagement.", "direction": "empathy"},
+    {"text": "I find that separating the emotional weight of a situation from my assessment of it allows me to be both more accurate and more fair.", "direction": "detachment"}
+  ]
+}

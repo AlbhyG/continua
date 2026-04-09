@@ -1,0 +1,23 @@
+{
+  "id": 6,
+  "questions": [
+    {"text": "I believe that awareness of suffering creates a moral duty to act, not merely to acknowledge.", "direction": "empathy"},
+    {"text": "I find that I can discuss tragic events with analytical clarity without feeling personally implicated.", "direction": "detachment"},
+    {"text": "When I learn about someone's hardship, it shifts my priorities in a way I cannot easily override.", "direction": "empathy"},
+    {"text": "I believe that the most effective responses to crisis come from those who can suppress their emotional involvement.", "direction": "detachment"},
+    {"text": "I feel that indifference to others' suffering is a form of moral failure, regardless of the circumstances.", "direction": "empathy"},
+    {"text": "I am comfortable treating a person's emotional situation as a problem that requires strategy, not sympathy.", "direction": "detachment"},
+    {"text": "When I witness someone being dismissed or ignored in their pain, I feel compelled to intervene on their behalf.", "direction": "empathy"},
+    {"text": "I think that allowing suffering to influence your decision-making introduces bias that undermines good judgment.", "direction": "detachment"},
+    {"text": "I hold myself accountable when I fail to respond to suffering that I was aware of.", "direction": "empathy"},
+    {"text": "I prefer to base my responses to difficult situations on evidence and logic rather than on how the situation makes me feel.", "direction": "detachment"},
+    {"text": "I believe that the moral significance of another person's pain should override considerations of personal cost.", "direction": "empathy"},
+    {"text": "I have found that stepping back from the emotional content of a situation allows me to identify solutions others miss.", "direction": "detachment"},
+    {"text": "I feel a sustained motivation to help that persists long after the initial encounter with someone's suffering.", "direction": "empathy"},
+    {"text": "I think that effective leadership requires the ability to make decisions about people's lives without being swayed by their individual stories.", "direction": "detachment"},
+    {"text": "When I become aware that someone is struggling, I feel a moral responsibility to offer them support.", "direction": "empathy"},
+    {"text": "I approach others' emotional crises as situations that call for problem-solving rather than emotional participation.", "direction": "detachment"},
+    {"text": "I believe that a society's moral health can be measured by how seriously it takes the suffering of its most vulnerable members.", "direction": "empathy"},
+    {"text": "I am able to assess the severity of someone's situation without my assessment being colored by emotional involvement.", "direction": "detachment"}
+  ]
+}

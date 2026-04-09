@@ -1,0 +1,23 @@
+{
+  "id": 100,
+  "questions": [
+    {"text": "I believe that the moral weight of suffering is the ultimate measure of whether a civilization is succeeding or failing at its most fundamental task.", "direction": "empathy"},
+    {"text": "I find that analytical clarity during emotionally demanding situations has been the quality that most consistently enabled me to achieve outcomes I can be proud of.", "direction": "detachment"},
+    {"text": "I feel that the moral pull of suffering is the compass that has guided the most consequential decisions of my life and the one I trust above all others.", "direction": "empathy"},
+    {"text": "I hold the view that composure in the face of human distress is the trait that most directly enables a person to translate good will into good work.", "direction": "detachment"},
+    {"text": "I believe that the obligation to respond to suffering is the first principle of any ethics that takes the reality of human experience seriously.", "direction": "empathy"},
+    {"text": "I think that the practice of maintaining analytical distance during crises is the habit that has most profoundly improved my capacity to think clearly under pressure.", "direction": "detachment"},
+    {"text": "I find that the felt weight of suffering is the moral experience that has done the most to shape my understanding of what it means to be truly responsible for another person.", "direction": "empathy"},
+    {"text": "I believe that processing suffering through a lens of structured, objective reasoning is the approach that most reliably prevents harmful missteps born of emotional urgency.", "direction": "detachment"},
+    {"text": "I feel that the moral demand of suffering is the force that has most decisively prevented me from living a life of comfortable moral passivity.", "direction": "empathy"},
+    {"text": "I hold the view that the capacity for emotional steadiness during distressing events is a quality whose importance increases in direct proportion to the magnitude of the suffering involved.", "direction": "detachment"},
+    {"text": "I believe that the moral priority of suffering is the value that, when placed at the center of one's ethical framework, brings all other values into their proper alignment.", "direction": "empathy"},
+    {"text": "I find that my preference for rational, composed analysis during emotional situations is the quality that has allowed me to be of genuine service in the most challenging moments of my career.", "direction": "detachment"},
+    {"text": "I hold the view that the moral concern I feel for those who are suffering is the experience that most deeply and authentically expresses who I am as a moral agent.", "direction": "empathy"},
+    {"text": "I think that a detached, methodical assessment of suffering is the approach that yields the clearest picture of what is actually happening and what can realistically be done about it.", "direction": "detachment"},
+    {"text": "I feel that the weight of suffering in my moral consciousness is the quality that has given my life its greatest depth, its strongest direction, and its clearest purpose.", "direction": "empathy"},
+    {"text": "I believe that the discipline of remaining analytically focused during painful situations is the quality that best enables me to serve others with consistency, fairness, and genuine effectiveness.", "direction": "detachment"},
+    {"text": "I find that the moral pull of suffering is the experience that has most indelibly taught me that ethics is not something I think about but something I live.", "direction": "empathy"},
+    {"text": "I hold the view that engaging with human suffering through calm, rational analysis is the most trustworthy method for ensuring that my efforts produce real and lasting good.", "direction": "detachment"}
+  ]
+}

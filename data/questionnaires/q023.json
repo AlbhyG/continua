@@ -1,0 +1,23 @@
+{
+  "id": 23,
+  "questions": [
+    {"text": "I feel that the recognition of suffering as important is the essential first step without which no meaningful response can follow.", "direction": "empathy"},
+    {"text": "I believe that rational, unemotional evaluation of a person's situation is the foundation of the most effective help.", "direction": "detachment"},
+    {"text": "I hold the view that the moral weight of suffering should not be discounted because the person is distant, unfamiliar, or different from me.", "direction": "empathy"},
+    {"text": "I find that I am more helpful to people in distress when I engage with their problem intellectually rather than emotionally.", "direction": "detachment"},
+    {"text": "I believe that the persistence of my moral concern — the fact that it does not fade quickly — is a quality I want to preserve.", "direction": "empathy"},
+    {"text": "I think that the most productive conversations about human tragedy are those conducted with analytical precision rather than emotional intensity.", "direction": "detachment"},
+    {"text": "I feel that the moral claim of suffering remains intact even when the person suffering is unable to articulate their need.", "direction": "empathy"},
+    {"text": "I believe that the capacity to remain analytically engaged while others are emotionally overwhelmed is essential for navigating complex human problems.", "direction": "detachment"},
+    {"text": "I hold the view that treating another's suffering as morally significant is a non-negotiable part of how I want to live.", "direction": "empathy"},
+    {"text": "I find that approaching painful situations with a problem-solving mindset allows me to be more effective than approaching them with shared distress.", "direction": "detachment"},
+    {"text": "I believe that the obligation to act on behalf of those who are suffering is one of the clearest and least debatable moral principles.", "direction": "empathy"},
+    {"text": "I think that the value of remaining emotionally steady during a crisis is demonstrated by the outcomes it produces, not by how it appears to others.", "direction": "detachment"},
+    {"text": "I feel that the depth of moral engagement I bring to others' suffering is something I actively work to maintain.", "direction": "empathy"},
+    {"text": "I believe that structured decision-making frameworks are more reliable than emotional responses when allocating limited resources to those in need.", "direction": "detachment"},
+    {"text": "I hold the view that a commitment to recognizing suffering as important is the most foundational expression of moral seriousness.", "direction": "empathy"},
+    {"text": "I find that my ability to remain emotionally disengaged from individual situations allows me to be more consistent in how I distribute care.", "direction": "detachment"},
+    {"text": "I believe that the moral imperative to respond to suffering is not softened by the difficulty or complexity of doing so.", "direction": "empathy"},
+    {"text": "I think that analytical detachment during emotionally charged moments is a kind of service that is undervalued because it does not look like caring.", "direction": "detachment"}
+  ]
+}

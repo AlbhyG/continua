@@ -1,0 +1,23 @@
+{
+  "id": 24,
+  "questions": [
+    {"text": "I feel that the moral force of suffering is most powerful when I understand the particular circumstances of the person enduring it.", "direction": "empathy"},
+    {"text": "I believe that the clearest path through any emotionally complex situation is to focus on what can be known and done rather than on what is felt.", "direction": "detachment"},
+    {"text": "I hold the view that treating others' pain as genuinely important — not as an abstraction — is what makes moral commitment real.", "direction": "empathy"},
+    {"text": "I find that my ability to make fair decisions under pressure depends on keeping my emotional engagement with specific cases in check.", "direction": "detachment"},
+    {"text": "I believe that the obligation to respond to suffering grows more pressing the more capacity I have to make a difference.", "direction": "empathy"},
+    {"text": "I think that emotional immersion in another's pain often produces responses that feel good but accomplish less than rational planning would.", "direction": "detachment"},
+    {"text": "I feel that the moral weight of suffering is a real force in my life that shapes my choices and priorities in observable ways.", "direction": "empathy"},
+    {"text": "I believe that the ability to think clearly about human problems in the middle of emotional turmoil is rare and worth developing.", "direction": "detachment"},
+    {"text": "I hold the view that the suffering I encounter — not the success I achieve — most clearly defines the quality of my moral life.", "direction": "empathy"},
+    {"text": "I find that separating my emotional reactions from my plans of action leads to help that is more targeted and less wasteful.", "direction": "detachment"},
+    {"text": "I believe that the moral demand created by suffering is best expressed not in feeling but in sustained and purposeful action.", "direction": "empathy"},
+    {"text": "I think that one of the most important things a person can do in a crisis is to remain calm enough to think and act with precision.", "direction": "detachment"},
+    {"text": "I feel that the moral significance I assign to others' suffering is an active choice that I renew each time I encounter it.", "direction": "empathy"},
+    {"text": "I believe that the ability to evaluate competing claims of need without emotional favoritism is essential for fair resource distribution.", "direction": "detachment"},
+    {"text": "I hold the view that taking someone's suffering seriously requires both recognition of its importance and a willingness to be changed by that recognition.", "direction": "empathy"},
+    {"text": "I find that maintaining emotional boundaries during other people's crises preserves my capacity to help consistently over time.", "direction": "detachment"},
+    {"text": "I believe that the moral attention I give to suffering is among the most meaningful things I can offer another person.", "direction": "empathy"},
+    {"text": "I think that the discipline of approaching suffering with composure and logic is a form of respect for the seriousness of the situation.", "direction": "detachment"}
+  ]
+}

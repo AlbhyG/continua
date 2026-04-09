@@ -1,0 +1,23 @@
+{
+  "id": 7,
+  "questions": [
+    {"text": "When I become aware of suffering, I find it difficult to justify inaction to myself.", "direction": "empathy"},
+    {"text": "I believe that emotional involvement with a problem reduces the quality of the help you can provide.", "direction": "detachment"},
+    {"text": "I feel that the suffering of people I will never meet still places genuine moral claims on me.", "direction": "empathy"},
+    {"text": "I find that I can hear about serious hardship and return to my own concerns without lingering preoccupation.", "direction": "detachment"},
+    {"text": "I believe that my capacity to recognize suffering as important is more central to who I am than my skills or achievements.", "direction": "empathy"},
+    {"text": "I think that the most reliable form of help is one guided by reason rather than by emotional urgency.", "direction": "detachment"},
+    {"text": "I feel that turning away from someone's pain, even when I cannot fix it, requires a justification I struggle to provide.", "direction": "empathy"},
+    {"text": "I have been able to maintain productive focus during situations that others found emotionally paralyzing.", "direction": "detachment"},
+    {"text": "I believe that how someone responds to the knowledge of another's suffering reveals their deepest values.", "direction": "empathy"},
+    {"text": "I think that people who maintain analytical distance during emotional events are often underappreciated for the stability they provide.", "direction": "detachment"},
+    {"text": "When someone shares their struggle with me, I experience it as a call to action rather than as information.", "direction": "empathy"},
+    {"text": "I value my capacity to remain undisturbed by the emotional weight of situations that overwhelm others.", "direction": "detachment"},
+    {"text": "I believe that the decision not to help, when help is possible, carries moral consequences that matter.", "direction": "empathy"},
+    {"text": "I process accounts of hardship primarily by considering what could be done differently rather than by dwelling on the pain itself.", "direction": "detachment"},
+    {"text": "I feel that my life has more meaning when I am actively engaged in reducing someone else's suffering.", "direction": "empathy"},
+    {"text": "I think that the ability to evaluate suffering dispassionately is essential for making fair and just decisions.", "direction": "detachment"},
+    {"text": "I hold the view that every person's suffering deserves to be treated as significant, regardless of their relationship to me.", "direction": "empathy"},
+    {"text": "I find that I can set aside the emotional dimensions of a situation and focus entirely on what is practical and actionable.", "direction": "detachment"}
+  ]
+}

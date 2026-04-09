@@ -1,0 +1,23 @@
+{
+  "id": 4,
+  "questions": [
+    {"text": "When someone I care about is hurting, my motivation to help remains high until I know they are better.", "direction": "empathy"},
+    {"text": "I approach conflict by focusing on outcomes rather than on the emotions involved.", "direction": "detachment"},
+    {"text": "I have changed my plans because I became aware that someone needed help, even when it was inconvenient.", "direction": "empathy"},
+    {"text": "I think that most emotional reactions to others' suffering are disproportionate to what is actually needed.", "direction": "detachment"},
+    {"text": "When I am near someone in deep pain, their suffering exists in my awareness as a moral weight that requires a response.", "direction": "empathy"},
+    {"text": "I can evaluate a person's difficult situation without my feelings about that person influencing my analysis.", "direction": "detachment"},
+    {"text": "I believe truly helping someone requires you to understand their experience from their perspective.", "direction": "empathy"},
+    {"text": "I have noticed that I recover from exposure to others' suffering faster than most people around me.", "direction": "detachment"},
+    {"text": "I find that I cannot simply turn off my concern for someone once I have seen their pain.", "direction": "empathy"},
+    {"text": "I believe that emotional clarity comes from being an observer of feelings rather than a participant in them.", "direction": "detachment"},
+    {"text": "I take it personally when I learn that someone in my life has been suffering alone.", "direction": "empathy"},
+    {"text": "I have been able to set aside sympathy for an individual to make a decision that served a larger group.", "direction": "detachment"},
+    {"text": "I feel that the depth of my caring for others is something I would never want to diminish.", "direction": "empathy"},
+    {"text": "I am more likely to ask what happened than how do you feel when someone is upset.", "direction": "detachment"},
+    {"text": "I believe that emotional connection to others' suffering is what drives people to make the world better.", "direction": "empathy"},
+    {"text": "I think of empathy as a tool that should be deployed strategically rather than experienced reflexively.", "direction": "detachment"},
+    {"text": "I am often the person others come to when they need someone who will truly feel what they are going through.", "direction": "empathy"},
+    {"text": "I value clarity of thought over depth of feeling when making important decisions that affect others.", "direction": "detachment"}
+  ]
+}

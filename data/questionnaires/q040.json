@@ -1,0 +1,23 @@
+{
+  "id": 40,
+  "questions": [
+    {"text": "I believe that the moral weight of suffering is the clearest and most undeniable moral signal I encounter.", "direction": "empathy"},
+    {"text": "I find that my analytical approach to emotionally charged situations allows me to identify the root cause of problems more efficiently.", "direction": "detachment"},
+    {"text": "I feel that the obligation to treat suffering as a moral priority becomes more binding, not less, the more I understand about a person's circumstances.", "direction": "empathy"},
+    {"text": "I believe that the most helpful stance during someone's crisis is one of calm assessment rather than emotional immersion.", "direction": "detachment"},
+    {"text": "I hold the view that the moral claim of suffering deserves sustained attention — a single moment of concern is not commensurate with its weight.", "direction": "empathy"},
+    {"text": "I think that emotional uninvolvement during difficult situations is a form of focus that allows me to serve others with greater precision.", "direction": "detachment"},
+    {"text": "I believe that the moral urgency I experience in the face of suffering is not something I manufacture but something I discover in myself.", "direction": "empathy"},
+    {"text": "I find that I am able to process even the most distressing accounts of human suffering without my emotional stability being compromised.", "direction": "detachment"},
+    {"text": "I feel that the degree to which suffering functions as a genuine priority in my life is the best test of whether my moral convictions are real.", "direction": "empathy"},
+    {"text": "I believe that decisions about how to respond to suffering should be grounded in systematic analysis rather than in the emotional character of the moment.", "direction": "detachment"},
+    {"text": "I hold the view that suffering that goes unaddressed when I had the capacity to respond is a form of moral failure that I take seriously.", "direction": "empathy"},
+    {"text": "I think that maintaining a boundary between my professional assessment and my emotional response is what enables me to help without being depleted.", "direction": "detachment"},
+    {"text": "I believe that the consistency of my moral concern for others' suffering is more important than its intensity at any given moment.", "direction": "empathy"},
+    {"text": "I find that deliberately engaging with human problems through a rational lens leads to solutions that are more equitable than those driven by emotional response.", "direction": "detachment"},
+    {"text": "I feel that the pull toward responding to suffering is a deeply rooted part of my identity that I would not want to change.", "direction": "empathy"},
+    {"text": "I believe that the capacity for emotional steadiness during periods of crisis is a discipline that can be developed and should be valued.", "direction": "detachment"},
+    {"text": "I hold the view that the moral seriousness with which I treat suffering is the best legacy I could leave in any relationship or community.", "direction": "empathy"},
+    {"text": "I find that my ability to separate emotional content from factual content during human crises is what makes my help durable and reliable.", "direction": "detachment"}
+  ]
+}

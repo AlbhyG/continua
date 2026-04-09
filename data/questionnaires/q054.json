@@ -1,0 +1,23 @@
+{
+  "id": 54,
+  "questions": [
+    {"text": "I believe that moral attention to suffering is the practice through which my values cease to be theoretical and become real.", "direction": "empathy"},
+    {"text": "I find that I am at my best in demanding situations when I can keep my emotional and analytical processes operating independently.", "direction": "detachment"},
+    {"text": "I feel that the moral claim of suffering is self-evident — it does not require argument to establish its legitimacy.", "direction": "empathy"},
+    {"text": "I believe that the ability to evaluate need without emotional bias is what makes genuinely fair decision-making possible.", "direction": "detachment"},
+    {"text": "I hold the view that the weight I give to others' suffering is the most consequential ethical choice I make.", "direction": "empathy"},
+    {"text": "I think that approaching emotionally intense situations with a methodical mindset leads to actions that are more proportionate and more just.", "direction": "detachment"},
+    {"text": "I believe that the moral demand of suffering is the most unambiguous ethical signal I receive.", "direction": "empathy"},
+    {"text": "I find that emotional non-engagement during crises preserves the precision of my thinking and the consistency of my responses.", "direction": "detachment"},
+    {"text": "I feel that the moral significance of suffering is what makes my ethical framework coherent and actionable.", "direction": "empathy"},
+    {"text": "I believe that the most sustainable approach to helping is one that does not require me to be emotionally affected by each case I encounter.", "direction": "detachment"},
+    {"text": "I hold the view that the pull toward responding to suffering is the most honest expression of the values I actually hold.", "direction": "empathy"},
+    {"text": "I think that the discipline of maintaining emotional composure during human crises is a form of service that directly improves outcomes.", "direction": "detachment"},
+    {"text": "I believe that the degree to which I treat suffering as a moral priority is what distinguishes my values from mere preferences.", "direction": "empathy"},
+    {"text": "I find that analytical detachment during emotionally demanding situations is a mode I enter naturally and one I regard as productive.", "direction": "detachment"},
+    {"text": "I feel that the moral weight of suffering is the basis on which all genuine ethical action is built.", "direction": "empathy"},
+    {"text": "I believe that the ability to separate emotional atmosphere from factual assessment is one of the most important capabilities for anyone in a helping or leadership role.", "direction": "detachment"},
+    {"text": "I hold the view that treating others' suffering as genuinely urgent is the most fundamental test of whether my moral commitments are real.", "direction": "empathy"},
+    {"text": "I find that my emotional steadiness during others' hardships allows me to remain present and constructive long after emotional engagement would have exhausted me.", "direction": "detachment"}
+  ]
+}
