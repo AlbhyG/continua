@@ -12,6 +12,14 @@ const RadarProfile = dynamic(
   }
 );
 
+const PersonalityOrb = dynamic(
+  () => import("@/components/PersonalityOrb"),
+  {
+    ssr: false,
+    loading: () => <div className="h-[300px] flex items-center justify-center text-white/30 text-sm">Generating orb...</div>,
+  }
+);
+
 interface AxisResult {
   axis: string;
   name: string;
@@ -25,6 +33,34 @@ interface ResultData {
   scores: Record<string, number>;
   axisResults: AxisResult[];
   shareLink: string;
+}
+
+// Map 6-axis scores to the 12-pole OrbData format
+function scoresToOrbData(scores: Record<string, number>) {
+  // Each axis has two poles. Score 1-10 maps to how much of each pole.
+  // High score (10) = strong "high" pole, weak "low" pole
+  // Low score (1) = strong "low" pole, weak "high" pole
+  const e = scores.empathy ?? 5.5;
+  const s = scores.self_orientation ?? 5.5;
+  const a = scores.social_attunement ?? 5.5;
+  const c = scores.conscientiousness ?? 5.5;
+  const ag = scores.agency ?? 5.5;
+  const r = scores.reactivity ?? 5.5;
+
+  return {
+    yellow: e,                    // High Empathy
+    navy: 11 - e,                 // Low Empathy (Detachment)
+    chartreuse: 11 - s,           // Altruistic (low end of self-orientation)
+    indigo: s,                    // Self-Focused (high end)
+    lime: a,                      // Hyper-Socially Attuned
+    violet: 11 - a,               // Hypo-Socially Attuned
+    emerald: c,                   // Conscientious
+    magenta: 11 - c,              // Impulsive/Spontaneous
+    red: ag,                      // Dominant/Agentic
+    teal: 11 - ag,                // Submissive/Yielding
+    orange: r,                    // High Reactivity
+    blue: 11 - r,                 // Low Reactivity
+  };
 }
 
 export default function QuizResultsPage() {
@@ -81,12 +117,19 @@ export default function QuizResultsPage() {
     );
   }
 
+  const orbData = scoresToOrbData(result.scores);
+
   return (
     <div className="mx-auto max-w-2xl px-6 pt-24 pb-12">
       <h1 className="text-3xl font-bold text-white">Your Profile</h1>
       <p className="mt-2 text-white/50 text-sm">
         Your position across 6 personality dimensions
       </p>
+
+      {/* Personality Orb */}
+      <div className="mt-8 flex justify-center">
+        <PersonalityOrb data={orbData} size={280} />
+      </div>
 
       {/* Radar chart */}
       <div className="mt-8 rounded-xl bg-white/5 border border-white/10 p-4">
