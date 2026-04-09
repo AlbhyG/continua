@@ -68,6 +68,9 @@ const dropdownClass =
 const greyedItemClass =
   'block w-full text-left px-4 py-2.5 rounded-lg text-sm text-gray-400 cursor-default'
 
+const menuItemClass =
+  'block w-full text-left px-4 py-2.5 rounded-lg text-sm text-foreground/80 hover:bg-accent/5 hover:text-foreground transition-colors'
+
 // ─── Get Started Form ──────────────────────────────────────────
 
 function GetStartedForm({ onComplete }: { onComplete: () => void }) {
@@ -215,9 +218,9 @@ function MobileMenu({
               My Info
             </Link>
             <div className="space-y-1">
-              <span className="block text-[15px] text-gray-400 py-2 px-3">
-                + Take Assessments
-              </span>
+              <Link href="/quiz" onClick={onClose} className="block text-[15px] text-foreground/80 py-2 px-3 hover:text-foreground transition-colors">
+                Take Assessment
+              </Link>
               <span className="block text-[15px] text-gray-400 py-2 px-3">
                 + See Results
               </span>
@@ -314,9 +317,9 @@ export default function Header() {
                 </MenuButton>
               </div>
               <MenuItems anchor="bottom start" className={dropdownClass}>
-                <MenuItem disabled>
+                <MenuItem>
                   {() => (
-                    <span className={greyedItemClass}>+ Take Assessments</span>
+                    <Link href="/quiz" className={menuItemClass}>Take Assessment</Link>
                   )}
                 </MenuItem>
                 <MenuItem disabled>
