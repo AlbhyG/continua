@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    version="1.1"
    id="svg1"
@@ -109,5 +107,43 @@
        style="fill:#41377b;fill-opacity:1"
        d="m 568.03839,1027.6943 c -14.67812,-25.1747 -14.92022,-25.7703 -11.86513,-29.18947 4.4077,-4.93307 7.53315,-3.06794 14.31136,8.54037 l 4.83268,8.2764 0.16797,-168.04696 0.16797,-168.04703 h 6.33203 6.33203 l 0.0115,168.50002 0.0115,168.49997 5.28369,-8.9811 c 5.89336,-10.01731 6.53023,-10.68553 10.18432,-10.68553 3.44045,0 5.84227,2.33446 5.84227,5.67833 0,2.2782 -26.12438,48.8831 -27.44557,48.9618 -0.24507,0.015 -6.62007,-10.5635 -14.16667,-23.5068 z"
        id="path10" />
+       
+    <g id="labels" font-family="sans-serif" font-size="22" font-weight="bold" fill="#333333">
+      <text x="579" y="175" text-anchor="middle">
+        <tspan x="579" dy="0">High Empathy/</tspan>
+        <tspan x="579" dy="26">Compassion</tspan>
+      </text>
+
+      <text x="842" y="100" text-anchor="start">Altruistic / Self-Transcendent</text>
+
+      <text x="1010" y="290" text-anchor="start">Hyper-Socially Attuned</text>
+
+      <text x="1085" y="545" text-anchor="start">
+        <tspan x="1085" dy="0">High Conscientiousness /</tspan>
+        <tspan x="1085" dy="26">Planning</tspan>
+      </text>
+
+      <text x="1005" y="810" text-anchor="start">Submissive / Yielding</text>
+
+      <text x="840" y="995" text-anchor="start">Low Reactivity</text>
+
+      <text x="568" y="1050" text-anchor="middle">
+        <tspan x="568" dy="0">Low Empathy Callousness /</tspan>
+        <tspan x="568" dy="26">Sociopathy</tspan>
+      </text>
+
+      <text x="320" y="995" text-anchor="end">Self-Focused / Narcissistic</text>
+
+      <text x="118" y="800" text-anchor="end">
+        <tspan x="118" dy="0">Hypo-Socially Attuned</tspan>
+        <tspan x="118" dy="26">(Autistic end)</tspan>
+      </text>
+
+      <text x="105" y="570" text-anchor="end">Impulsive / Disinhibited</text>
+
+      <text x="152" y="298" text-anchor="end">Dominant / Agentic</text>
+
+      <text x="312" y="117" text-anchor="end">High Reactivity</text>
+    </g>
   </g>
 </svg>
