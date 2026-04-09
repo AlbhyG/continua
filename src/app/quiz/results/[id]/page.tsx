@@ -2,6 +2,15 @@
 
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
+
+const RadarProfile = dynamic(
+  () => import("@/components/quiz/RadarProfile"),
+  {
+    ssr: false,
+    loading: () => <div className="h-[350px] flex items-center justify-center text-white/30 text-sm">Loading chart...</div>,
+  }
+);
 
 interface AxisResult {
   axis: string;
@@ -79,22 +88,26 @@ export default function QuizResultsPage() {
         Your position across 6 personality dimensions
       </p>
 
-      {/* Axis scores */}
-      <div className="mt-8 flex flex-col gap-4">
+      {/* Radar chart */}
+      <div className="mt-8 rounded-xl bg-white/5 border border-white/10 p-4">
+        <RadarProfile data={result.axisResults} />
+      </div>
+
+      {/* Axis detail bars */}
+      <div className="mt-6 flex flex-col gap-3">
         {result.axisResults.map((ar) => (
           <div key={ar.axis} className="rounded-xl bg-white/5 border border-white/10 p-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-bold text-white/80">{ar.name}</span>
-              <span className="text-sm font-bold text-white">{ar.score}</span>
+              <span className="text-sm text-white/50">{ar.score}</span>
             </div>
-            {/* Score bar */}
-            <div className="relative h-2 rounded-full bg-white/10">
+            <div className="relative h-1.5 rounded-full bg-white/10">
               <div
-                className="absolute top-0 left-0 h-full rounded-full bg-white/50 transition-all duration-500"
+                className="absolute top-0 left-0 h-full rounded-full bg-white/40 transition-all duration-500"
                 style={{ width: `${((ar.score - 1) / 9) * 100}%` }}
               />
             </div>
-            <div className="mt-1.5 flex justify-between text-[10px] text-white/30">
+            <div className="mt-1 flex justify-between text-[10px] text-white/25">
               <span>{ar.lowLabel}</span>
               <span>{ar.highLabel}</span>
             </div>
@@ -117,6 +130,11 @@ export default function QuizResultsPage() {
           {copied ? "Link Copied!" : "Share Result"}
         </button>
       </div>
+
+      <p className="mt-6 text-center text-[10px] text-white/20">
+        Take the quiz multiple times in different contexts to see how your profile shifts.
+        The book recommends quarterly reassessments.
+      </p>
     </div>
   );
 }
