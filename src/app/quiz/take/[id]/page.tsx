@@ -112,21 +112,18 @@ export default function QuizTakePage() {
         </p>
       </div>
 
-      {/* Progress indicator */}
-      <div className="sticky top-3 z-10 mt-8 rounded-xl bg-black/80 px-4 py-3 backdrop-blur-md border border-white/10">
-        <div className="flex items-center justify-between text-sm">
-          <span className="font-bold text-white">Progress</span>
-          <span className="text-white/60">
-            {answeredCount} of {questionnaire.questions.length}
-          </span>
-        </div>
-        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10">
+      {/* Progress bar — thin, sticky, full-width */}
+      <div className="sticky top-0 z-50 -mx-6 mt-8">
+        <div className="h-1 w-full bg-white/5">
           <div
-            className="h-full rounded-full bg-white transition-all duration-300"
+            className="h-full bg-white/40 transition-all duration-300"
             style={{
               width: `${(answeredCount / questionnaire.questions.length) * 100}%`,
             }}
           />
+        </div>
+        <div className="px-6 py-1 text-right text-[10px] text-white/30">
+          {answeredCount}/{questionnaire.questions.length}
         </div>
       </div>
 
