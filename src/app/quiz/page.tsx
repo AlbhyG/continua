@@ -33,7 +33,7 @@ export default function QuizLanding() {
   }
 
   return (
-    <div className="flex min-h-[70vh] flex-col items-center justify-center gap-12 px-6 text-center">
+    <div className="flex min-h-[70vh] flex-col items-center justify-center gap-12 px-6 pt-24 text-center">
       <div>
         <h1 className="text-4xl font-bold text-white md:text-5xl">
           Empathy–Detachment
