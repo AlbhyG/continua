@@ -2,33 +2,20 @@
 
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import dynamic from "next/dynamic";
 
-const HistoryChart = dynamic(
-  () => import("@/components/quiz/HistoryChart"),
-  {
-    ssr: false,
-    loading: () => <p className="text-sm text-white/40">Loading chart...</p>,
-  }
-);
-
-interface ResultData {
+interface AxisResult {
+  axis: string;
+  name: string;
   score: number;
   label: string;
-  explanation: string;
+  highLabel: string;
+  lowLabel: string;
+}
+
+interface ResultData {
+  scores: Record<string, number>;
+  axisResults: AxisResult[];
   shareLink: string;
-}
-
-interface HistoryEntry {
-  id: number;
-  questionnaire_id: number;
-  score: number;
-  taken_at: string;
-}
-
-interface HistoryData {
-  results: HistoryEntry[];
-  average: number | null;
 }
 
 export default function QuizResultsPage() {
@@ -37,7 +24,6 @@ export default function QuizResultsPage() {
   const resultId = params.id;
 
   const [result, setResult] = useState<ResultData | null>(null);
-  const [history, setHistory] = useState<HistoryData | null>(null);
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
@@ -53,10 +39,6 @@ export default function QuizResultsPage() {
         .then(setResult)
         .catch(() => {});
     }
-
-    fetch("/quiz/api/history")
-      .then((res) => res.json())
-      .then(setHistory);
   }, [resultId]);
 
   async function takeAnother() {
@@ -91,21 +73,33 @@ export default function QuizResultsPage() {
   }
 
   return (
-    <div className="mx-auto max-w-2xl px-6 py-12">
-      <div>
-        <h1 className="text-3xl font-bold text-white">Your Result</h1>
-      </div>
+    <div className="mx-auto max-w-2xl px-6 pt-24 pb-12">
+      <h1 className="text-3xl font-bold text-white">Your Profile</h1>
+      <p className="mt-2 text-white/50 text-sm">
+        Your position across 6 personality dimensions
+      </p>
 
-      {/* Score card */}
-      <div className="mt-8 rounded-xl bg-white/5 border border-white/10 p-6 text-center">
-        <div className="text-7xl font-bold text-white">{result.score}</div>
-        <div className="mt-2 text-2xl font-bold text-white/90">
-          {result.label}
-        </div>
-      </div>
-
-      <div className="mt-8 text-white/60 leading-relaxed">
-        <p>{result.explanation}</p>
+      {/* Axis scores */}
+      <div className="mt-8 flex flex-col gap-4">
+        {result.axisResults.map((ar) => (
+          <div key={ar.axis} className="rounded-xl bg-white/5 border border-white/10 p-4">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-bold text-white/80">{ar.name}</span>
+              <span className="text-sm font-bold text-white">{ar.score}</span>
+            </div>
+            {/* Score bar */}
+            <div className="relative h-2 rounded-full bg-white/10">
+              <div
+                className="absolute top-0 left-0 h-full rounded-full bg-white/50 transition-all duration-500"
+                style={{ width: `${((ar.score - 1) / 9) * 100}%` }}
+              />
+            </div>
+            <div className="mt-1.5 flex justify-between text-[10px] text-white/30">
+              <span>{ar.highLabel}</span>
+              <span>{ar.lowLabel}</span>
+            </div>
+          </div>
+        ))}
       </div>
 
       {/* Action buttons */}
@@ -123,24 +117,6 @@ export default function QuizResultsPage() {
           {copied ? "Link Copied!" : "Share Result"}
         </button>
       </div>
-
-      {/* Score History */}
-      {history && history.results.length > 0 && (
-        <div className="mt-12 flex flex-col gap-4">
-          <div>
-            <h2 className="text-2xl font-bold text-white">Your History</h2>
-            {history.average !== null && (
-              <p className="mt-1 text-white/60">
-                Running Average:{" "}
-                <strong className="text-white">{history.average}</strong>
-              </p>
-            )}
-          </div>
-          <div className="rounded-xl bg-white/5 border border-white/10 p-4">
-            <HistoryChart data={history.results} />
-          </div>
-        </div>
-      )}
     </div>
   );
 }

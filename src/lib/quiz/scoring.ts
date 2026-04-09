@@ -1,4 +1,10 @@
-export type Direction = "empathy" | "detachment";
+export type Direction =
+  | "empathy" | "detachment"
+  | "altruism" | "self-focus"
+  | "hyper-attuned" | "hypo-attuned"
+  | "conscientious" | "spontaneous"
+  | "agentic" | "yielding"
+  | "high-reactive" | "low-reactive";
 
 export interface Question {
   text: string;
@@ -10,30 +16,80 @@ export interface Questionnaire {
   questions: Question[];
 }
 
-// Likert values: 1=Strongly Agree, 2=Agree, 3=Neutral, 4=Disagree, 5=Strongly Disagree
-export function scoreQuestion(
-  likertValue: number,
-  direction: Direction
-): number {
-  if (direction === "empathy") {
-    return likertValue; // SA=1(empathy), SD=5(detachment)
-  } else {
-    return 6 - likertValue; // SA=5(detachment), SD=1(empathy)
-  }
+export interface AxisScores {
+  empathy: number;
+  self_orientation: number;
+  social_attunement: number;
+  conscientiousness: number;
+  agency: number;
+  reactivity: number;
 }
 
-export function calculateScore(
-  answers: number[],
-  questions: Question[]
-): number {
-  const scores = answers.map((answer, i) =>
-    scoreQuestion(answer, questions[i].direction)
-  );
-  const mean = scores.reduce((a, b) => a + b, 0) / scores.length;
-  // Map 1-5 mean to 1-10 scale
+// Which directions map to which axis, and which pole is "high" (score 1) vs "low" (score 10)
+const AXIS_MAP: Record<string, { axis: keyof AxisScores; pole: "high" | "low" }> = {
+  empathy:        { axis: "empathy", pole: "high" },
+  detachment:     { axis: "empathy", pole: "low" },
+  altruism:       { axis: "self_orientation", pole: "high" },
+  "self-focus":   { axis: "self_orientation", pole: "low" },
+  "hyper-attuned":{ axis: "social_attunement", pole: "high" },
+  "hypo-attuned": { axis: "social_attunement", pole: "low" },
+  conscientious:  { axis: "conscientiousness", pole: "high" },
+  spontaneous:    { axis: "conscientiousness", pole: "low" },
+  agentic:        { axis: "agency", pole: "high" },
+  yielding:       { axis: "agency", pole: "low" },
+  "high-reactive":{ axis: "reactivity", pole: "high" },
+  "low-reactive": { axis: "reactivity", pole: "low" },
+};
+
+// Score a single question: 1-5 Likert mapped so "high" pole agree = 1, "low" pole agree = 5
+function scoreQuestion(likertValue: number, direction: Direction): { axis: keyof AxisScores; score: number } {
+  const mapping = AXIS_MAP[direction];
+  const score = mapping.pole === "high" ? likertValue : (6 - likertValue);
+  return { axis: mapping.axis, score };
+}
+
+function scaleToTen(rawScores: number[]): number {
+  if (rawScores.length === 0) return 5.5;
+  const mean = rawScores.reduce((a, b) => a + b, 0) / rawScores.length;
   const scaled = ((mean - 1) / 4) * 9 + 1;
   return Math.round(scaled * 10) / 10;
 }
+
+export function calculateScores(answers: number[], questions: Question[]): AxisScores {
+  const buckets: Record<keyof AxisScores, number[]> = {
+    empathy: [], self_orientation: [], social_attunement: [],
+    conscientiousness: [], agency: [], reactivity: [],
+  };
+
+  answers.forEach((answer, i) => {
+    const { axis, score } = scoreQuestion(answer, questions[i].direction);
+    buckets[axis].push(score);
+  });
+
+  return {
+    empathy: scaleToTen(buckets.empathy),
+    self_orientation: scaleToTen(buckets.self_orientation),
+    social_attunement: scaleToTen(buckets.social_attunement),
+    conscientiousness: scaleToTen(buckets.conscientiousness),
+    agency: scaleToTen(buckets.agency),
+    reactivity: scaleToTen(buckets.reactivity),
+  };
+}
+
+// Legacy single-score function for backwards compat
+export function calculateScore(answers: number[], questions: Question[]): number {
+  const scores = calculateScores(answers, questions);
+  return scores.empathy;
+}
+
+export const AXIS_INFO: Record<keyof AxisScores, { name: string; highLabel: string; lowLabel: string }> = {
+  empathy:           { name: "Empathy–Detachment",      highLabel: "Highly Empathic",       lowLabel: "Detached / Analytical" },
+  self_orientation:  { name: "Self-Orientation",         highLabel: "Altruistic",             lowLabel: "Self-Focused" },
+  social_attunement: { name: "Social Attunement",        highLabel: "Hyper-Attuned",          lowLabel: "Hypo-Attuned" },
+  conscientiousness: { name: "Conscientiousness",        highLabel: "Highly Conscientious",   lowLabel: "Spontaneous" },
+  agency:            { name: "Agency",                   highLabel: "Agentic / Assertive",    lowLabel: "Yielding / Accommodating" },
+  reactivity:        { name: "Reactivity",               highLabel: "Highly Reactive",        lowLabel: "Low Reactivity" },
+};
 
 export function getLabel(score: number): string {
   if (score >= 8) return "Highly Empathic";
@@ -41,12 +97,19 @@ export function getLabel(score: number): string {
   return "Detached / Analytical";
 }
 
+export function getAxisLabel(axis: keyof AxisScores, score: number): string {
+  const info = AXIS_INFO[axis];
+  if (score <= 3) return info.lowLabel;
+  if (score >= 8) return info.highLabel;
+  return "Balanced";
+}
+
 export function getExplanation(score: number): string {
   if (score >= 8) {
-    return "You register others' suffering as a felt weight — a moral force that generates genuine concern and a sustained motivation to respond. The pain of others carries real priority in your decision-making, and you experience the obligation to act as one of the most reliable moral signals in your life. This deep moral engagement allows you to connect meaningfully with those who are struggling, though it may require attention to sustainability.";
+    return "You register others' suffering as a felt weight — a moral force that generates genuine concern and a sustained motivation to respond.";
   }
   if (score >= 4) {
-    return "You occupy the adaptive middle of the Empathy–Detachment spectrum. You are responsive to others' suffering without being consumed by it, integrating feeling with reason. You can attune to the moral weight of a situation when needed while maintaining the analytical clarity to act effectively. This balance allows you to engage with suffering in a way that is both principled and sustainable.";
+    return "You occupy the adaptive middle — responsive to others' suffering without being consumed by it, integrating feeling with reason.";
   }
-  return "You process others' suffering primarily as information — evaluating it objectively and prioritizing analytical clarity in your response. Rather than experiencing pain as a felt weight, you engage with it through structured reasoning and principled assessment. This detached, analytical approach enables clear-headed decision-making and is especially adaptive in professional contexts where emotional distance allows for more equitable and effective action.";
+  return "You process others' suffering primarily as information — evaluating it objectively and prioritizing analytical clarity.";
 }

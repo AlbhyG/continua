@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import type { AxisScores } from "./scoring";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
@@ -17,7 +18,8 @@ export async function ensureUser(anonymousToken: string) {
 export async function storeResult(
   anonymousToken: string,
   questionnaireId: number,
-  score: number
+  score: number,
+  scores: AxisScores
 ): Promise<number> {
   const supabase = getSupabase();
   const { data, error } = await supabase
@@ -26,6 +28,7 @@ export async function storeResult(
       anonymous_token: anonymousToken,
       questionnaire_id: questionnaireId,
       score,
+      scores,
     })
     .select("id")
     .single();
@@ -48,26 +51,18 @@ export async function getHistory(anonymousToken: string) {
   const supabase = getSupabase();
   const { data } = await supabase
     .from("quiz_results")
-    .select("id, questionnaire_id, score, taken_at")
+    .select("id, questionnaire_id, score, scores, taken_at")
     .eq("anonymous_token", anonymousToken)
     .order("taken_at", { ascending: true });
 
-  const results = data || [];
-  const average =
-    results.length > 0
-      ? Math.round(
-          (results.reduce((sum, r) => sum + r.score, 0) / results.length) * 10
-        ) / 10
-      : null;
-
-  return { results, average };
+  return { results: data || [] };
 }
 
 export async function getResultById(resultId: number, anonymousToken: string) {
   const supabase = getSupabase();
   const { data } = await supabase
     .from("quiz_results")
-    .select("id, anonymous_token, questionnaire_id, score, taken_at")
+    .select("id, anonymous_token, questionnaire_id, score, scores, taken_at")
     .eq("id", resultId)
     .single();
 

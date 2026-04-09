@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getResultById } from "@/lib/quiz/db";
-import { getLabel, getExplanation } from "@/lib/quiz/scoring";
+import { getAxisLabel, AXIS_INFO, type AxisScores } from "@/lib/quiz/scoring";
 import { createShareLink } from "@/lib/quiz/share";
 
 export async function GET(
@@ -24,19 +24,30 @@ export async function GET(
     return NextResponse.json({ error: "Result not found" }, { status: 404 });
   }
 
-  const label = getLabel(row.score);
-  const explanation = getExplanation(row.score);
+  const scores = (row.scores || { empathy: row.score }) as AxisScores;
+
+  const axisResults = Object.entries(scores).map(([key, score]) => {
+    const axis = key as keyof typeof AXIS_INFO;
+    return {
+      axis,
+      name: AXIS_INFO[axis].name,
+      score: score as number,
+      label: getAxisLabel(axis, score as number),
+      highLabel: AXIS_INFO[axis].highLabel,
+      lowLabel: AXIS_INFO[axis].lowLabel,
+    };
+  });
+
   const shareLink = createShareLink({
-    score: row.score,
-    label,
+    score: scores.empathy,
+    label: getAxisLabel("empathy", scores.empathy),
     questionnaireId: row.questionnaire_id,
   });
 
   return NextResponse.json({
     resultId: row.id,
-    score: row.score,
-    label,
-    explanation,
+    scores,
+    axisResults,
     shareLink,
   });
 }

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ensureUser, storeResult } from "@/lib/quiz/db";
 import { getQuestionnaire } from "@/lib/quiz/questionnaires";
-import { calculateScore, getLabel, getExplanation } from "@/lib/quiz/scoring";
+import { calculateScores, getAxisLabel, AXIS_INFO } from "@/lib/quiz/scoring";
 import { createShareLink } from "@/lib/quiz/share";
 
 export async function POST(request: NextRequest) {
@@ -41,19 +41,33 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const score = calculateScore(answers, questionnaire.questions);
-  const label = getLabel(score);
-  const explanation = getExplanation(score);
-  const shareLink = createShareLink({ score, label, questionnaireId });
+  const scores = calculateScores(answers, questionnaire.questions);
+
+  const axisResults = Object.entries(scores).map(([key, score]) => {
+    const axis = key as keyof typeof AXIS_INFO;
+    return {
+      axis,
+      name: AXIS_INFO[axis].name,
+      score,
+      label: getAxisLabel(axis, score),
+      highLabel: AXIS_INFO[axis].highLabel,
+      lowLabel: AXIS_INFO[axis].lowLabel,
+    };
+  });
+
+  const shareLink = createShareLink({
+    score: scores.empathy,
+    label: getAxisLabel("empathy", scores.empathy),
+    questionnaireId,
+  });
 
   await ensureUser(anonymousToken);
-  const resultId = await storeResult(anonymousToken, questionnaireId, score);
+  const resultId = await storeResult(anonymousToken, questionnaireId, scores.empathy, scores);
 
   return NextResponse.json({
     resultId,
-    score,
-    label,
-    explanation,
+    scores,
+    axisResults,
     shareLink,
   });
 }
