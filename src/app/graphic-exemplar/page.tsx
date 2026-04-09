@@ -30,12 +30,10 @@ export default function GraphicExemplarPage() {
         <FadeIn>
           <div className="glass-card p-6 md:p-8 !bg-white">
             <div className="flex justify-center">
-              <Image
-                src="/axes-diagram.png"
+              <img
+                src="/axes-diagram.svg"
                 alt="Continua Six-Axis personality diagram showing the twelve poles: High Empathy, Altruism/Self-Transcendent, Hyper-Socially Attuned, High Conscientiousness, Assertive/Agentic, High Reactivity, and their opposites"
-                width={500}
-                height={500}
-                className="rounded-lg"
+                className="rounded-lg w-full max-w-[500px]"
               />
             </div>
           </div>
