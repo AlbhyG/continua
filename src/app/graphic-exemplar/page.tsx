@@ -62,7 +62,7 @@ export default function GraphicExemplarPage() {
                 />
               </div>
               <div className="text-center">
-                <h3 className="text-[18px] font-bold mb-1">Detachment</h3>
+                <h3 className="text-[18px] font-bold mb-1">Narcissism</h3>
                 <p className="text-[15px] text-foreground/60 italic mb-4">e.g., Hitler</p>
                 <Image
                   src="/orb-detachment.png"

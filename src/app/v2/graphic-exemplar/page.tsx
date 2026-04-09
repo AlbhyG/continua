@@ -55,7 +55,7 @@ export default function V2GraphicExemplarPage() {
                 <p className="text-[15px] text-foreground/60 italic">e.g., Mother Teresa</p>
               </div>
               <div>
-                <h3 className="text-[18px] font-bold mb-1">Detachment</h3>
+                <h3 className="text-[18px] font-bold mb-1">Narcissism</h3>
                 <p className="text-[15px] text-foreground/60 italic">e.g., Hitler</p>
               </div>
             </div>

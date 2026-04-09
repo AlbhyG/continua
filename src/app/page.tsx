@@ -107,7 +107,7 @@ export default function Home() {
                 How We Feel
               </h3>
             </FadeIn>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {feelingAxes.map((dim, i) => (
                 <FadeIn key={dim.name} delay={i * 60}>
                   <div className="glass-card p-4 text-center h-full">
@@ -125,7 +125,7 @@ export default function Home() {
                 How We Act
               </h3>
             </FadeIn>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {behavioralAxes.map((dim, i) => (
                 <FadeIn key={dim.name} delay={i * 60 + 180}>
                   <div className="glass-card p-4 text-center h-full">
