@@ -1,0 +1,23 @@
+{
+  "id": 67,
+  "questions": [
+    {"text": "I believe that the moral weight of another's suffering should shape my priorities even when doing so is costly.", "direction": "empathy"},
+    {"text": "I find that when I engage with suffering through careful analysis rather than emotional response, I arrive at solutions that are more durable.", "direction": "detachment"},
+    {"text": "I feel that the moral pull of suffering is the experience that most forcefully reminds me of what I owe to others.", "direction": "empathy"},
+    {"text": "I hold the view that maintaining analytical composure during painful events is a form of professionalism that serves the common good.", "direction": "detachment"},
+    {"text": "I believe that the obligation to respond to suffering is a moral truth that becomes clearer with reflection, not murkier.", "direction": "empathy"},
+    {"text": "I think that the discipline of emotional detachment during crises is a capacity that can and should be trained.", "direction": "detachment"},
+    {"text": "I find that the moral demand of suffering is the ethical experience I trust above all others.", "direction": "empathy"},
+    {"text": "I believe that a composed, fact-based approach to suffering is the approach most likely to treat all affected parties fairly.", "direction": "detachment"},
+    {"text": "I hold the view that the felt weight of suffering is what gives moral principles their motivational power.", "direction": "empathy"},
+    {"text": "I find that my ability to remain analytically focused when confronted with pain has been a defining strength in my professional life.", "direction": "detachment"},
+    {"text": "I feel that the moral priority of suffering is something I understand more deeply each time I encounter it.", "direction": "empathy"},
+    {"text": "I believe that clear, dispassionate thinking about distressing situations is the precondition for effective intervention.", "direction": "detachment"},
+    {"text": "I believe that the moral concern that arises from confronting suffering is a form of moral perception, not merely a feeling.", "direction": "empathy"},
+    {"text": "I hold the view that emotional restraint during others' suffering is what allows me to think about the problem rather than just react to it.", "direction": "detachment"},
+    {"text": "I find that the weight of another's suffering in my deliberations is what prevents my ethics from becoming hollow or performative.", "direction": "empathy"},
+    {"text": "I think that processing difficult human situations through objective frameworks is the method that produces the most defensible decisions.", "direction": "detachment"},
+    {"text": "I feel that the moral demand of suffering is the experience that has most shaped the person I have become.", "direction": "empathy"},
+    {"text": "I find that maintaining emotional distance from suffering gives me the clarity I need to determine what would genuinely help.", "direction": "detachment"}
+  ]
+}

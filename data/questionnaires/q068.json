@@ -1,0 +1,23 @@
+{
+  "id": 68,
+  "questions": [
+    {"text": "I believe that the moral weight of suffering is what distinguishes ethical seriousness from mere ethical talk.", "direction": "empathy"},
+    {"text": "I find that when I maintain composure in emotionally charged situations, the decisions I make are more likely to hold up over time.", "direction": "detachment"},
+    {"text": "I feel that the moral demand of another's pain is an experience that deserves to be at the center of my decision-making, not at the margins.", "direction": "empathy"},
+    {"text": "I hold the view that analytical distance from suffering is what allows me to weigh competing needs without favoritism.", "direction": "detachment"},
+    {"text": "I believe that the felt weight of suffering is the moral experience that most urgently calls me to act.", "direction": "empathy"},
+    {"text": "I think that the capacity to remain objective during others' distress is a form of emotional maturity that I value in myself and others.", "direction": "detachment"},
+    {"text": "I find that the moral pull of suffering gives me a sense of moral direction that principles alone do not provide.", "direction": "empathy"},
+    {"text": "I believe that engaging with suffering through structured analysis protects me from the errors of hasty, emotionally driven judgments.", "direction": "detachment"},
+    {"text": "I hold the view that the obligation to respond to suffering is the ethical commitment that tests all the others.", "direction": "empathy"},
+    {"text": "I find that my detached approach to painful situations has allowed me to maintain my effectiveness over years of demanding work.", "direction": "detachment"},
+    {"text": "I feel that the moral priority of suffering is a truth I arrived at through experience rather than argument.", "direction": "empathy"},
+    {"text": "I believe that cool, analytical engagement with crises is the mode of response that best serves the interests of those who are actually suffering.", "direction": "detachment"},
+    {"text": "I believe that the moral concern I feel when encountering suffering is an accurate perception of something real and important.", "direction": "empathy"},
+    {"text": "I hold the view that objectivity about human hardship is not an absence of caring but a different channel through which caring flows.", "direction": "detachment"},
+    {"text": "I find that the weight I give to another's suffering is the most honest reflection of my actual moral commitments.", "direction": "empathy"},
+    {"text": "I think that emotional steadiness when confronted with pain allows me to be thoughtful about whom and how to help, rather than reacting to proximity or visibility.", "direction": "detachment"},
+    {"text": "I feel that the moral demand of suffering is what gives urgency to commitments that would otherwise remain abstract.", "direction": "empathy"},
+    {"text": "I find that treating painful situations as analytical challenges rather than emotional ones is the approach that lets me contribute the most.", "direction": "detachment"}
+  ]
+}

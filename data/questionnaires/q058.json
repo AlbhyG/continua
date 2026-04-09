@@ -1,0 +1,23 @@
+{
+  "id": 58,
+  "questions": [
+    {"text": "I believe that the moral weight of someone's suffering should never be discounted simply because responding to it is inconvenient.", "direction": "empathy"},
+    {"text": "I find that when I process a difficult situation analytically, I arrive at more balanced and fair conclusions.", "direction": "detachment"},
+    {"text": "I feel that the moral demand of suffering is amplified, not diminished, when the person in pain has no one else to turn to.", "direction": "empathy"},
+    {"text": "I hold the view that emotional composure is a prerequisite for making decisions that truly serve people in crisis.", "direction": "detachment"},
+    {"text": "I believe that the felt weight of another's pain is a form of moral knowledge that cannot be replaced by abstract reasoning alone.", "direction": "empathy"},
+    {"text": "I think that the most reliable path to helping others in distress is through careful, dispassionate analysis of the situation.", "direction": "detachment"},
+    {"text": "I find that the moral pull of suffering consistently redirects my priorities toward what matters most.", "direction": "empathy"},
+    {"text": "I believe that maintaining analytical distance from emotionally charged situations is a skill that produces consistently better outcomes.", "direction": "detachment"},
+    {"text": "I hold the view that the obligation to respond to suffering is not optional — it is a basic requirement of moral seriousness.", "direction": "empathy"},
+    {"text": "I find that I do my best thinking about human problems when I can set aside the emotional weight and focus on the facts.", "direction": "detachment"},
+    {"text": "I feel that suffering generates a moral priority that deserves to override competing concerns in most situations.", "direction": "empathy"},
+    {"text": "I believe that approaching others' pain with structured reasoning allows me to be more consistently helpful over time.", "direction": "detachment"},
+    {"text": "I believe that the moral concern I feel when confronted with suffering is a sign that my values are properly calibrated.", "direction": "empathy"},
+    {"text": "I hold the view that objective evaluation of a painful situation is a form of integrity, not a form of avoidance.", "direction": "detachment"},
+    {"text": "I find that the moral demand placed on me by witnessing suffering is something I take seriously as a defining feature of my character.", "direction": "empathy"},
+    {"text": "I think that the ability to remain calm and analytical during emotionally difficult moments is one of my most valuable qualities.", "direction": "detachment"},
+    {"text": "I feel that the weight I give to others' suffering in my decisions is a direct reflection of the kind of person I want to be.", "direction": "empathy"},
+    {"text": "I believe that clear, unemotional thinking about hard situations is not a sign of indifference but of genuine commitment to helping effectively.", "direction": "detachment"}
+  ]
+}

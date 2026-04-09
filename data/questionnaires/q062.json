@@ -1,0 +1,23 @@
+{
+  "id": 62,
+  "questions": [
+    {"text": "I believe that the moral weight of suffering should be the starting point of any ethical decision, not an afterthought.", "direction": "empathy"},
+    {"text": "I find that maintaining composure when confronted with others' pain allows me to consider all sides of a situation without bias.", "direction": "detachment"},
+    {"text": "I feel that the moral pull I experience in the presence of suffering is evidence of a well-functioning conscience.", "direction": "empathy"},
+    {"text": "I hold the view that the most useful thing I can offer in a painful situation is clear, structured thinking rather than an emotional response.", "direction": "detachment"},
+    {"text": "I believe that the obligation to respond to suffering is a moral bedrock that should not bend to pragmatic considerations.", "direction": "empathy"},
+    {"text": "I think that processing suffering analytically is not a way of avoiding it but a way of engaging with it more productively.", "direction": "detachment"},
+    {"text": "I find that the moral demand of another's pain has a gravitational force that naturally draws my attention and effort.", "direction": "empathy"},
+    {"text": "I believe that emotional steadiness during hardship is a form of reliability that others can count on.", "direction": "detachment"},
+    {"text": "I hold the view that the felt weight of suffering is the moral reality that should anchor all ethical theory.", "direction": "empathy"},
+    {"text": "I find that my analytical approach to suffering has helped me avoid mistakes that would have come from acting on emotional impulse.", "direction": "detachment"},
+    {"text": "I feel that suffering's moral priority is self-evident and does not require philosophical argument to justify.", "direction": "empathy"},
+    {"text": "I believe that remaining objective in the face of distress is an act of discipline that serves the greater good.", "direction": "detachment"},
+    {"text": "I believe that the moral concern I feel for those who suffer is the most reliable indicator of what I should do next.", "direction": "empathy"},
+    {"text": "I hold the view that calm, rational assessment during crises leads to fairer treatment of everyone affected.", "direction": "detachment"},
+    {"text": "I find that when I give the moral weight of suffering a central place in my reasoning, my conclusions feel more trustworthy.", "direction": "empathy"},
+    {"text": "I think that the capacity for detached evaluation during emotional situations is something that distinguishes effective helpers from well-meaning ones.", "direction": "detachment"},
+    {"text": "I feel that the motivation to respond to others' pain is the moral impulse I am most grateful to possess.", "direction": "empathy"},
+    {"text": "I find that when I can step back from the emotional impact of a situation, I see the path forward more clearly.", "direction": "detachment"}
+  ]
+}

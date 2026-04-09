@@ -1,0 +1,23 @@
+{
+  "id": 66,
+  "questions": [
+    {"text": "I believe that the moral weight of suffering is what keeps ethics rooted in human reality rather than floating in abstraction.", "direction": "empathy"},
+    {"text": "I find that my ability to evaluate distressing situations without emotional interference is the quality that allows me to be most fair.", "direction": "detachment"},
+    {"text": "I feel that the moral pull I experience when someone is suffering is a signal that my ethical compass is working correctly.", "direction": "empathy"},
+    {"text": "I hold the view that structured reasoning about pain and hardship is a more scalable approach to doing good than emotional responsiveness.", "direction": "detachment"},
+    {"text": "I believe that the obligation to respond to suffering has a moral authority that overrides most other considerations.", "direction": "empathy"},
+    {"text": "I think that composure during emotionally difficult situations is an essential quality for anyone who wants to make good decisions under pressure.", "direction": "detachment"},
+    {"text": "I find that the felt weight of another's suffering is the experience that most consistently reveals my true moral commitments.", "direction": "empathy"},
+    {"text": "I believe that approaching painful circumstances with cool objectivity allows me to see dimensions of the problem that emotional engagement would hide.", "direction": "detachment"},
+    {"text": "I hold the view that the moral demand of suffering is not merely a feeling but a genuine perception of ethical reality.", "direction": "empathy"},
+    {"text": "I find that treating suffering as information to be processed and acted upon, rather than as an emotional experience to be shared, is my most effective mode of helping.", "direction": "detachment"},
+    {"text": "I feel that the moral priority of suffering is the one conviction I would defend even if it put me at a disadvantage.", "direction": "empathy"},
+    {"text": "I believe that analytical clarity about human hardship is a prerequisite for designing interventions that actually work.", "direction": "detachment"},
+    {"text": "I believe that the moral concern aroused by suffering is the force that converts passive awareness into active commitment.", "direction": "empathy"},
+    {"text": "I hold the view that remaining emotionally even during a crisis demonstrates a kind of competence that serves everyone better.", "direction": "detachment"},
+    {"text": "I find that the weight I give to suffering in my decisions is what makes those decisions feel morally complete.", "direction": "empathy"},
+    {"text": "I think that objective analysis of suffering, free from emotional overlay, is what allows for truly impartial and just responses.", "direction": "detachment"},
+    {"text": "I feel that the moral demand of others' pain is a responsibility I carry willingly because it reflects who I am.", "direction": "empathy"},
+    {"text": "I find that my detached, analytical orientation toward suffering has allowed me to remain effective in contexts where others burned out.", "direction": "detachment"}
+  ]
+}
