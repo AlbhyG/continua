@@ -102,12 +102,12 @@ export default function QuizTakePage() {
   const answeredCount = Object.keys(answers).length;
 
   return (
-    <div className="mx-auto max-w-2xl px-6 py-12">
+    <div className="mx-auto max-w-2xl px-6 pt-20 pb-12">
       <div>
-        <h1 className="text-3xl font-bold text-white">
-          Empathy–Detachment Assessment
+        <h1 className="text-3xl font-bold text-foreground">
+          Personality Assessment
         </h1>
-        <p className="mt-2 text-white/60">
+        <p className="mt-2 text-foreground/70">
           Answer each statement honestly. There are no right or wrong answers.
         </p>
       </div>
@@ -116,7 +116,7 @@ export default function QuizTakePage() {
       <div className="fixed top-[57px] left-0 right-0 z-40">
         <div className="h-[3px] w-full bg-black/10">
           <div
-            className="h-full bg-black/40 transition-all duration-300"
+            className="h-full bg-foreground/50 transition-all duration-300"
             style={{
               width: `${(answeredCount / questionnaire.questions.length) * 100}%`,
             }}
@@ -124,16 +124,16 @@ export default function QuizTakePage() {
         </div>
       </div>
 
-      <div className="mt-8 flex flex-col gap-6">
+      <div className="mt-8 flex flex-col gap-5">
         {questionnaire.questions.map((question, index) => (
           <div
             key={index}
-            className="rounded-xl bg-white/5 border border-white/10 p-5"
+            className="rounded-xl bg-white/80 backdrop-blur-sm p-5 shadow-sm"
           >
-            <div className="mb-1 text-[10px] font-bold uppercase tracking-wide text-white/40">
+            <div className="mb-1 text-[10px] font-bold uppercase tracking-wide text-foreground/40">
               Question {index + 1} of {questionnaire.questions.length}
             </div>
-            <p className="mb-4 text-base leading-relaxed text-white/90">
+            <p className="mb-4 text-base leading-relaxed text-foreground">
               {question.text}
             </p>
             <div className="flex flex-col gap-2">
@@ -143,8 +143,8 @@ export default function QuizTakePage() {
                   onClick={() => setAnswer(index, option.value)}
                   className={`rounded-lg px-4 py-2.5 text-left text-sm transition-all ${
                     answers[index] === option.value
-                      ? "bg-white font-bold text-black"
-                      : "bg-white/5 text-white/80 hover:bg-white/10"
+                      ? "bg-foreground font-bold text-white"
+                      : "bg-white/60 text-foreground/80 hover:bg-white/90"
                   }`}
                 >
                   {option.label}
@@ -161,14 +161,14 @@ export default function QuizTakePage() {
           disabled={!allAnswered || submitting}
           className={`w-full rounded-xl px-4 py-4 text-sm font-bold transition-all ${
             allAnswered && !submitting
-              ? "bg-white/90 text-black hover:bg-white"
-              : "cursor-not-allowed bg-white/10 text-white/30"
+              ? "bg-white/90 text-foreground hover:bg-white shadow-sm"
+              : "cursor-not-allowed bg-white/30 text-foreground/30"
           }`}
         >
           {submitting ? "Submitting..." : "Submit Answers"}
         </button>
         {!allAnswered && (
-          <p className="mt-3 text-center text-sm text-white/40">
+          <p className="mt-3 text-center text-sm text-foreground/50">
             Answer all {questionnaire.questions.length} questions to continue
           </p>
         )}

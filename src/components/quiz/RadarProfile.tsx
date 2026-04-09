@@ -29,31 +29,31 @@ export default function RadarProfile({ data }: { data: AxisResult[] }) {
     <ResponsiveContainer width="100%" height={350}>
       <RadarChart cx="50%" cy="50%" outerRadius="75%" data={chartData}>
         <PolarGrid
-          stroke="rgba(255,255,255,0.1)"
+          stroke="rgba(0,0,0,0.08)"
           gridType="polygon"
         />
         <PolarAngleAxis
           dataKey="axis"
-          tick={{ fontSize: 11, fill: "rgba(255,255,255,0.6)" }}
+          tick={{ fontSize: 11, fill: "rgba(0,0,0,0.55)" }}
         />
         <PolarRadiusAxis
           angle={90}
           domain={[0, 10]}
-          tick={{ fontSize: 9, fill: "rgba(255,255,255,0.3)" }}
+          tick={{ fontSize: 9, fill: "rgba(0,0,0,0.25)" }}
           tickCount={6}
-          stroke="rgba(255,255,255,0.05)"
+          stroke="rgba(0,0,0,0.05)"
         />
         <Radar
           name="Profile"
           dataKey="score"
-          stroke="rgba(255,255,255,0.8)"
-          fill="rgba(255,255,255,0.15)"
+          stroke="rgba(67,117,237,0.8)"
+          fill="rgba(67,117,237,0.15)"
           strokeWidth={2}
           dot={{
             r: 4,
-            fill: "white",
-            stroke: "rgba(255,255,255,0.8)",
-            strokeWidth: 1,
+            fill: "rgb(67,117,237)",
+            stroke: "white",
+            strokeWidth: 2,
           }}
         />
       </RadarChart>

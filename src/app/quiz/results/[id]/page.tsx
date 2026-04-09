@@ -112,7 +112,7 @@ export default function QuizResultsPage() {
   if (!result) {
     return (
       <div className="flex min-h-[60vh] items-center justify-center">
-        <p className="text-lg text-white/70">Loading result...</p>
+        <p className="text-lg text-foreground/70">Loading result...</p>
       </div>
     );
   }
@@ -121,9 +121,9 @@ export default function QuizResultsPage() {
 
   return (
     <div className="mx-auto max-w-2xl px-6 pt-24 pb-12">
-      <h1 className="text-3xl font-bold text-white">Your Profile</h1>
-      <p className="mt-2 text-white/50 text-sm">
-        Your position across 6 personality dimensions
+      <h1 className="text-3xl font-bold text-foreground">Your Personality Graph</h1>
+      <p className="mt-2 text-foreground/60 text-sm">
+        Your coordinates across 6 personality dimensions
       </p>
 
       {/* Personality Orb */}
@@ -132,25 +132,25 @@ export default function QuizResultsPage() {
       </div>
 
       {/* Radar chart */}
-      <div className="mt-8 rounded-xl bg-white/5 border border-white/10 p-4">
+      <div className="mt-8 rounded-xl bg-white/80 backdrop-blur-sm p-4 shadow-sm">
         <RadarProfile data={result.axisResults} />
       </div>
 
       {/* Axis detail bars */}
       <div className="mt-6 flex flex-col gap-3">
         {result.axisResults.map((ar) => (
-          <div key={ar.axis} className="rounded-xl bg-white/5 border border-white/10 p-4">
+          <div key={ar.axis} className="rounded-xl bg-white/80 backdrop-blur-sm p-4 shadow-sm">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-bold text-white/80">{ar.name}</span>
-              <span className="text-sm text-white/50">{ar.score}</span>
+              <span className="text-sm font-bold text-foreground/80">{ar.name}</span>
+              <span className="text-sm text-foreground/50">{ar.score}</span>
             </div>
-            <div className="relative h-1.5 rounded-full bg-white/10">
+            <div className="relative h-1.5 rounded-full bg-foreground/10">
               <div
-                className="absolute top-0 left-0 h-full rounded-full bg-white/40 transition-all duration-500"
+                className="absolute top-0 left-0 h-full rounded-full bg-foreground/40 transition-all duration-500"
                 style={{ width: `${((ar.score - 1) / 9) * 100}%` }}
               />
             </div>
-            <div className="mt-1 flex justify-between text-[10px] text-white/25">
+            <div className="mt-1 flex justify-between text-[10px] text-foreground/40">
               <span>{ar.lowLabel}</span>
               <span>{ar.highLabel}</span>
             </div>
@@ -162,20 +162,20 @@ export default function QuizResultsPage() {
       <div className="mt-8 flex flex-col gap-3">
         <button
           onClick={takeAnother}
-          className="w-full rounded-xl bg-white/90 px-4 py-4 text-sm font-bold text-black transition-all hover:bg-white"
+          className="w-full rounded-xl bg-white/90 px-4 py-4 text-sm font-bold text-foreground transition-all hover:bg-white shadow-sm"
         >
-          Take Another Quiz
+          Take Another Assessment
         </button>
         <button
           onClick={copyShareLink}
-          className="w-full rounded-xl bg-white/10 px-4 py-4 text-sm font-bold text-white transition-all hover:bg-white/20"
+          className="w-full rounded-xl bg-white/40 px-4 py-4 text-sm font-bold text-foreground transition-all hover:bg-white/60"
         >
           {copied ? "Link Copied!" : "Share Result"}
         </button>
       </div>
 
-      <p className="mt-6 text-center text-[10px] text-white/20">
-        Take the quiz multiple times in different contexts to see how your profile shifts.
+      <p className="mt-6 text-center text-[10px] text-foreground/40">
+        Take the assessment in different contexts to see how your coordinates shift.
         The book recommends quarterly reassessments.
       </p>
     </div>
