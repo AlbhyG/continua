@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import { scoresToOrbData } from "@/lib/quiz/orb-mapping";
+import type { AxisScores } from "@/lib/quiz/scoring";
 
 const PersonalityOrb = dynamic(() => import("@/components/PersonalityOrb"), {
   ssr: false,
@@ -12,41 +14,14 @@ const PersonalityOrb = dynamic(() => import("@/components/PersonalityOrb"), {
   ),
 });
 
-interface Scores {
-  social_attunement: number;
-  empathy: number;
-  self_orientation: number;
-  conscientiousness: number;
-  agency: number;
-  reactivity: number;
-}
-
 interface Profile {
   name: string;
   primary: string;
   tags: string;
-  scores: Scores;
+  scores: AxisScores;
 }
 
-// Same mapping as the quiz results page
-function scoresToOrbData(s: Scores) {
-  return {
-    yellow: s.empathy,
-    navy: 11 - s.empathy,
-    indigo: s.self_orientation,
-    chartreuse: 11 - s.self_orientation,
-    lime: s.social_attunement,
-    violet: 11 - s.social_attunement,
-    emerald: s.conscientiousness,
-    magenta: 11 - s.conscientiousness,
-    red: s.agency,
-    teal: 11 - s.agency,
-    orange: s.reactivity,
-    blue: 11 - s.reactivity,
-  };
-}
-
-const AXIS_LABELS: Array<{ key: keyof Scores; name: string; lowLabel: string; highLabel: string }> = [
+const AXIS_LABELS: Array<{ key: keyof AxisScores; name: string; lowLabel: string; highLabel: string }> = [
   { key: "empathy", name: "Empathy", lowLabel: "Detached", highLabel: "Highly Empathic" },
   { key: "self_orientation", name: "Self-Orientation", lowLabel: "Altruistic", highLabel: "Self-Focused" },
   { key: "social_attunement", name: "Social Attunement", lowLabel: "Hypo-Attuned", highLabel: "Hyper-Attuned" },
