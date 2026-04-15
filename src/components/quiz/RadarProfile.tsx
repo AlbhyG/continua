@@ -24,7 +24,6 @@ interface Pole {
   isHigh: boolean;
 }
 
-// 12 poles clockwise from 12 o'clock; colors match the personality map.
 const POLES: Pole[] = [
   { short: "High Empathy",    color: "#fcf050", axis: "empathy",           isHigh: true  },
   { short: "Altruistic",      color: "#abc854", axis: "self_orientation",  isHigh: false },
@@ -40,12 +39,12 @@ const POLES: Pole[] = [
   { short: "Highly Reactive", color: "#d16539", axis: "reactivity",        isHigh: true  },
 ];
 
-const OUTER_R = 132;
-const RING_W = 10;
-const INNER_R = OUTER_R - RING_W;
-const LABEL_R = OUTER_R + 12;
+const MAX_R = 132;
+const LABEL_R = MAX_R + 14;
 const VIEW_W = 560;
 const VIEW_H = 380;
+const GRID_RINGS = [2, 4, 6, 8];
+const MIN_R = 3;
 
 function polar(angleDeg: number, radius: number) {
   const rad = ((angleDeg - 90) * Math.PI) / 180;
@@ -61,34 +60,14 @@ function hexPoints(radius: number) {
     .join(" ");
 }
 
-// Pie slice from origin to angle range at given outer radius.
-function pieSlice(angleCenter: number, outerR: number) {
-  const a1 = angleCenter - 15;
-  const a2 = angleCenter + 15;
-  const p1 = polar(a1, outerR);
-  const p2 = polar(a2, outerR);
-  return `M 0 0 L ${p1.x.toFixed(2)} ${p1.y.toFixed(2)} A ${outerR.toFixed(
-    2,
-  )} ${outerR.toFixed(2)} 0 0 1 ${p2.x.toFixed(2)} ${p2.y.toFixed(2)} Z`;
+type Pt = { x: number; y: number };
+
+function mid(a: Pt, b: Pt): Pt {
+  return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
 }
 
-// Annular sector (donut slice) from innerR to outerR.
-function annularSlice(angleCenter: number, innerR: number, outerR: number) {
-  const a1 = angleCenter - 15;
-  const a2 = angleCenter + 15;
-  const o1 = polar(a1, outerR);
-  const o2 = polar(a2, outerR);
-  const i1 = polar(a1, innerR);
-  const i2 = polar(a2, innerR);
-  return `M ${i1.x.toFixed(2)} ${i1.y.toFixed(2)} L ${o1.x.toFixed(
-    2,
-  )} ${o1.y.toFixed(2)} A ${outerR.toFixed(2)} ${outerR.toFixed(
-    2,
-  )} 0 0 1 ${o2.x.toFixed(2)} ${o2.y.toFixed(2)} L ${i2.x.toFixed(
-    2,
-  )} ${i2.y.toFixed(2)} A ${innerR.toFixed(2)} ${innerR.toFixed(
-    2,
-  )} 0 0 0 ${i1.x.toFixed(2)} ${i1.y.toFixed(2)} Z`;
+function fmt(p: Pt) {
+  return `${p.x.toFixed(2)} ${p.y.toFixed(2)}`;
 }
 
 export default function RadarProfile({ data }: { data: AxisResult[] }) {
@@ -100,6 +79,15 @@ export default function RadarProfile({ data }: { data: AxisResult[] }) {
     return Math.max(0, Math.min(10, v));
   });
 
+  // Vertex for each pole at its scored radius (clamped to a tiny minimum so
+  // wedges stay connected at the center when a pole is near 0).
+  const vertices: Pt[] = POLES.map((_, i) => {
+    const r = Math.max(MIN_R, (poleIntensities[i] / 10) * MAX_R);
+    return polar(i * 30, r);
+  });
+
+  const perimeter = vertices.map((v) => `${v.x.toFixed(2)},${v.y.toFixed(2)}`).join(" ");
+
   return (
     <svg
       viewBox={`${-VIEW_W / 2} ${-VIEW_H / 2} ${VIEW_W} ${VIEW_H}`}
@@ -109,9 +97,6 @@ export default function RadarProfile({ data }: { data: AxisResult[] }) {
       aria-label="Six-axis personality profile map"
     >
       <defs>
-        <filter id="radar-soften" x="-5%" y="-5%" width="110%" height="110%">
-          <feGaussianBlur stdDeviation="0.8" />
-        </filter>
         {POLES.map((p, i) => (
           <radialGradient
             key={`grad-${i}`}
@@ -122,67 +107,58 @@ export default function RadarProfile({ data }: { data: AxisResult[] }) {
             fx="50%"
             fy="50%"
           >
-            <stop offset="0%" stopColor={p.color} stopOpacity="0.65" />
-            <stop offset="70%" stopColor={p.color} stopOpacity="0.9" />
-            <stop offset="100%" stopColor={p.color} stopOpacity="1" />
+            <stop offset="0%" stopColor={p.color} stopOpacity="1" />
+            <stop offset="60%" stopColor={p.color} stopOpacity="0.95" />
+            <stop offset="100%" stopColor={p.color} stopOpacity="0.75" />
           </radialGradient>
         ))}
       </defs>
 
-      {[0.25, 0.5, 0.75].map((f) => (
+      {GRID_RINGS.map((v) => (
         <polygon
-          key={`grid-${f}`}
-          points={hexPoints(INNER_R * f)}
+          key={`grid-${v}`}
+          points={hexPoints((v / 10) * MAX_R)}
           fill="none"
-          stroke="rgba(0,0,0,0.06)"
+          stroke="rgba(0,0,0,0.07)"
           strokeWidth={1}
         />
       ))}
 
-      <g filter="url(#radar-soften)">
-        {POLES.map((p, i) => {
-          const intensity = poleIntensities[i];
-          if (intensity < 0.1) return null;
-          const angle = i * 30;
-          const depth = (intensity / 10) * INNER_R;
-          const d =
-            intensity >= 9.9
-              ? pieSlice(angle, INNER_R)
-              : annularSlice(angle, INNER_R - depth, INNER_R);
-          return (
-            <path
-              key={`wedge-${i}`}
-              d={d}
-              fill={`url(#wedge-grad-${i})`}
-            />
-          );
-        })}
-      </g>
-
+      {/* Each pole's wedge is a kite: origin → mid(prev,cur) → cur → mid(cur,next) → origin.
+          Adjacent wedges share the origin-to-midpoint edge, so they tile the whole
+          polygon with no gaps and the perimeter is continuous. */}
       {POLES.map((p, i) => {
-        const angle = i * 30;
+        const v = vertices[i];
+        const vPrev = vertices[(i + 11) % 12];
+        const vNext = vertices[(i + 1) % 12];
+        const mPrev = mid(vPrev, v);
+        const mNext = mid(v, vNext);
+        const d = `M 0 0 L ${fmt(mPrev)} L ${fmt(v)} L ${fmt(mNext)} Z`;
         return (
           <path
-            key={`ring-${i}`}
-            d={annularSlice(angle, INNER_R, OUTER_R)}
-            fill={p.color}
-            stroke="white"
-            strokeWidth={0.8}
+            key={`wedge-${i}`}
+            d={d}
+            fill={`url(#wedge-grad-${i})`}
           />
         );
       })}
 
+      {/* Connected perimeter around the data polygon */}
       <polygon
-        points={hexPoints(INNER_R)}
+        points={perimeter}
+        fill="none"
+        stroke="rgba(0,0,0,0.35)"
+        strokeWidth={1.2}
+        strokeLinejoin="round"
+      />
+
+      {/* Outer hex frame (full-scale reference at score 10) */}
+      <polygon
+        points={hexPoints(MAX_R)}
         fill="none"
         stroke="rgba(0,0,0,0.18)"
         strokeWidth={1}
-      />
-      <polygon
-        points={hexPoints(OUTER_R)}
-        fill="none"
-        stroke="rgba(0,0,0,0.28)"
-        strokeWidth={1.2}
+        strokeDasharray="2 3"
       />
 
       {POLES.map((pole, i) => {
@@ -226,7 +202,7 @@ export default function RadarProfile({ data }: { data: AxisResult[] }) {
               fontSize={11}
               fontWeight={700}
               fill={pole.color}
-              stroke="rgba(0,0,0,0.35)"
+              stroke="rgba(0,0,0,0.4)"
               strokeWidth={0.3}
               paintOrder="stroke fill"
               dy={valDy}
