@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import PersonalityOrb, { type OrbData } from '@/components/PersonalityOrb'
+import RadarProfile from '@/components/quiz/RadarProfile'
 
 interface SliderValues {
   empathy: number
@@ -27,6 +28,17 @@ function toOrbData(s: SliderValues): OrbData {
     orange: s.reactivity,
     blue: 10 - s.reactivity,
   }
+}
+
+function toAxisResults(s: SliderValues) {
+  return [
+    { axis: 'empathy',           name: 'Empathy–Detachment', score: s.empathy,           label: '', highLabel: 'Highly Empathic',  lowLabel: 'Detached' },
+    { axis: 'self_orientation',  name: 'Self-Orientation',   score: 10 - s.altruism,     label: '', highLabel: 'Self-Focused',     lowLabel: 'Altruistic' },
+    { axis: 'social_attunement', name: 'Social Attunement',  score: s.attunement,        label: '', highLabel: 'Hyper-Attuned',    lowLabel: 'Hypo-Attuned' },
+    { axis: 'conscientiousness', name: 'Conscientiousness',  score: s.conscientiousness, label: '', highLabel: 'Conscientious',    lowLabel: 'Spontaneous' },
+    { axis: 'agency',            name: 'Agency',             score: s.dominance,         label: '', highLabel: 'Agentic',          lowLabel: 'Yielding' },
+    { axis: 'reactivity',        name: 'Reactivity',         score: s.reactivity,        label: '', highLabel: 'Highly Reactive',  lowLabel: 'Low Reactivity' },
+  ]
 }
 
 const PRESETS: Record<string, SliderValues> = {
@@ -130,9 +142,12 @@ export default function OrbDemoPage() {
 
       <section className="max-w-[960px] mx-auto px-6 pb-12">
         <div className="flex flex-col lg:flex-row gap-10 items-start">
-          {/* Orb display */}
+          {/* Orb + Radar display */}
           <div className="flex flex-col items-center gap-5 shrink-0">
-            <PersonalityOrb data={orbData} size={350} />
+            <PersonalityOrb data={orbData} size={300} />
+            <div className="w-[360px]">
+              <RadarProfile data={toAxisResults(sliders)} />
+            </div>
 
             {/* Presets */}
             <div className="flex gap-3">
@@ -192,9 +207,12 @@ export default function OrbDemoPage() {
         </h2>
         <div className="flex flex-wrap justify-center gap-10">
           {Object.entries(PRESETS).map(([name, presetSliders]) => (
-            <div key={name} className="text-center">
+            <div key={name} className="text-center flex flex-col items-center gap-3">
               <PersonalityOrb data={toOrbData(presetSliders)} size={220} />
-              <p className="text-lg font-semibold text-gray-900 mt-2">{name}</p>
+              <div className="w-[300px]">
+                <RadarProfile data={toAxisResults(presetSliders)} />
+              </div>
+              <p className="text-lg font-semibold text-gray-900 mt-1">{name}</p>
             </div>
           ))}
         </div>

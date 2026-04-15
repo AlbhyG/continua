@@ -24,8 +24,7 @@ interface Pole {
   isHigh: boolean;
 }
 
-// 12 poles in clockwise order starting at 12 o'clock.
-// Colors follow Albhy's personality-map system (see AxesDiagram + orb-mapping).
+// 12 poles clockwise from 12 o'clock; colors match the personality map.
 const POLES: Pole[] = [
   { short: "High Empathy",    color: "#fcf050", axis: "empathy",           isHigh: true  },
   { short: "Altruistic",      color: "#abc854", axis: "self_orientation",  isHigh: false },
@@ -41,10 +40,12 @@ const POLES: Pole[] = [
   { short: "Highly Reactive", color: "#d16539", axis: "reactivity",        isHigh: true  },
 ];
 
-const MAX_R = 130;
-const GRID_RINGS = [2, 4, 6, 8, 10];
-const VIEW_W = 520;
-const VIEW_H = 360;
+const OUTER_R = 132;
+const RING_W = 10;
+const INNER_R = OUTER_R - RING_W;
+const LABEL_R = OUTER_R + 12;
+const VIEW_W = 560;
+const VIEW_H = 380;
 
 function polar(angleDeg: number, radius: number) {
   const rad = ((angleDeg - 90) * Math.PI) / 180;
@@ -60,12 +61,34 @@ function hexPoints(radius: number) {
     .join(" ");
 }
 
-function wedgePath(angleCenter: number, radius: number) {
-  const p1 = polar(angleCenter - 15, radius);
-  const p2 = polar(angleCenter + 15, radius);
-  return `M 0 0 L ${p1.x.toFixed(2)} ${p1.y.toFixed(2)} A ${radius.toFixed(
+// Pie slice from origin to angle range at given outer radius.
+function pieSlice(angleCenter: number, outerR: number) {
+  const a1 = angleCenter - 15;
+  const a2 = angleCenter + 15;
+  const p1 = polar(a1, outerR);
+  const p2 = polar(a2, outerR);
+  return `M 0 0 L ${p1.x.toFixed(2)} ${p1.y.toFixed(2)} A ${outerR.toFixed(
     2,
-  )} ${radius.toFixed(2)} 0 0 1 ${p2.x.toFixed(2)} ${p2.y.toFixed(2)} Z`;
+  )} ${outerR.toFixed(2)} 0 0 1 ${p2.x.toFixed(2)} ${p2.y.toFixed(2)} Z`;
+}
+
+// Annular sector (donut slice) from innerR to outerR.
+function annularSlice(angleCenter: number, innerR: number, outerR: number) {
+  const a1 = angleCenter - 15;
+  const a2 = angleCenter + 15;
+  const o1 = polar(a1, outerR);
+  const o2 = polar(a2, outerR);
+  const i1 = polar(a1, innerR);
+  const i2 = polar(a2, innerR);
+  return `M ${i1.x.toFixed(2)} ${i1.y.toFixed(2)} L ${o1.x.toFixed(
+    2,
+  )} ${o1.y.toFixed(2)} A ${outerR.toFixed(2)} ${outerR.toFixed(
+    2,
+  )} 0 0 1 ${o2.x.toFixed(2)} ${o2.y.toFixed(2)} L ${i2.x.toFixed(
+    2,
+  )} ${i2.y.toFixed(2)} A ${innerR.toFixed(2)} ${innerR.toFixed(
+    2,
+  )} 0 0 0 ${i1.x.toFixed(2)} ${i1.y.toFixed(2)} Z`;
 }
 
 export default function RadarProfile({ data }: { data: AxisResult[] }) {
@@ -81,85 +104,91 @@ export default function RadarProfile({ data }: { data: AxisResult[] }) {
     <svg
       viewBox={`${-VIEW_W / 2} ${-VIEW_H / 2} ${VIEW_W} ${VIEW_H}`}
       className="w-full h-auto block"
-      style={{ maxHeight: 360, overflow: "visible" }}
+      style={{ overflow: "visible" }}
       role="img"
       aria-label="Six-axis personality profile map"
     >
-      {GRID_RINGS.map((v) => (
+      <defs>
+        <filter id="radar-soften" x="-5%" y="-5%" width="110%" height="110%">
+          <feGaussianBlur stdDeviation="0.8" />
+        </filter>
+        {POLES.map((p, i) => (
+          <radialGradient
+            key={`grad-${i}`}
+            id={`wedge-grad-${i}`}
+            cx="50%"
+            cy="50%"
+            r="50%"
+            fx="50%"
+            fy="50%"
+          >
+            <stop offset="0%" stopColor={p.color} stopOpacity="0.65" />
+            <stop offset="70%" stopColor={p.color} stopOpacity="0.9" />
+            <stop offset="100%" stopColor={p.color} stopOpacity="1" />
+          </radialGradient>
+        ))}
+      </defs>
+
+      {[0.25, 0.5, 0.75].map((f) => (
         <polygon
-          key={v}
-          points={hexPoints((v / 10) * MAX_R)}
+          key={`grid-${f}`}
+          points={hexPoints(INNER_R * f)}
           fill="none"
-          stroke="rgba(0,0,0,0.07)"
+          stroke="rgba(0,0,0,0.06)"
           strokeWidth={1}
         />
       ))}
 
-      {POLES.map((_, i) => {
-        const end = polar(i * 30, MAX_R);
-        return (
-          <line
-            key={`ray-${i}`}
-            x1={0}
-            y1={0}
-            x2={end.x}
-            y2={end.y}
-            stroke="rgba(0,0,0,0.06)"
-            strokeWidth={1}
-          />
-        );
-      })}
+      <g filter="url(#radar-soften)">
+        {POLES.map((p, i) => {
+          const intensity = poleIntensities[i];
+          if (intensity < 0.1) return null;
+          const angle = i * 30;
+          const depth = (intensity / 10) * INNER_R;
+          const d =
+            intensity >= 9.9
+              ? pieSlice(angle, INNER_R)
+              : annularSlice(angle, INNER_R - depth, INNER_R);
+          return (
+            <path
+              key={`wedge-${i}`}
+              d={d}
+              fill={`url(#wedge-grad-${i})`}
+            />
+          );
+        })}
+      </g>
 
       {POLES.map((p, i) => {
-        const intensity = poleIntensities[i];
-        const radius = (intensity / 10) * MAX_R;
-        if (radius < 1) return null;
+        const angle = i * 30;
         return (
           <path
-            key={`wedge-${i}`}
-            d={wedgePath(i * 30, radius)}
+            key={`ring-${i}`}
+            d={annularSlice(angle, INNER_R, OUTER_R)}
             fill={p.color}
-            fillOpacity={0.88}
-            stroke={p.color}
-            strokeWidth={0.5}
+            stroke="white"
+            strokeWidth={0.8}
           />
         );
       })}
 
       <polygon
-        points={hexPoints(MAX_R)}
+        points={hexPoints(INNER_R)}
         fill="none"
-        stroke="rgba(0,0,0,0.22)"
-        strokeWidth={1.5}
+        stroke="rgba(0,0,0,0.18)"
+        strokeWidth={1}
+      />
+      <polygon
+        points={hexPoints(OUTER_R)}
+        fill="none"
+        stroke="rgba(0,0,0,0.28)"
+        strokeWidth={1.2}
       />
 
-      {POLES.map((_, i) => {
-        const intensity = poleIntensities[i];
-        if (intensity < 1.2) return null;
-        const labelR = Math.max(16, (intensity / 10) * MAX_R * 0.72);
-        const p = polar(i * 30, labelR);
-        return (
-          <text
-            key={`val-${i}`}
-            x={p.x}
-            y={p.y}
-            textAnchor="middle"
-            dominantBaseline="middle"
-            fontSize={12}
-            fontWeight={700}
-            fill="white"
-            stroke="rgba(0,0,0,0.55)"
-            strokeWidth={0.6}
-            paintOrder="stroke fill"
-          >
-            {Math.round(intensity)}
-          </text>
-        );
-      })}
-
       {POLES.map((pole, i) => {
+        const intensity = poleIntensities[i];
         const angle = i * 30;
-        const p = polar(angle, MAX_R + 14);
+        const p = polar(angle, LABEL_R);
         let anchor: "start" | "middle" | "end" = "middle";
         let baseline: "auto" | "middle" | "hanging" = "middle";
         if (angle === 0) {
@@ -173,19 +202,38 @@ export default function RadarProfile({ data }: { data: AxisResult[] }) {
         } else {
           anchor = "end";
         }
+        const nameDy = angle === 0 ? -11 : angle === 180 ? 0 : -6;
+        const valDy = angle === 0 ? 0 : angle === 180 ? 13 : 8;
         return (
-          <text
-            key={`lbl-${i}`}
-            x={p.x}
-            y={p.y}
-            textAnchor={anchor}
-            dominantBaseline={baseline}
-            fontSize={11}
-            fontWeight={600}
-            fill="rgba(0,0,0,0.7)"
-          >
-            {pole.short}
-          </text>
+          <g key={`lbl-${i}`}>
+            <text
+              x={p.x}
+              y={p.y}
+              textAnchor={anchor}
+              dominantBaseline={baseline}
+              fontSize={10.5}
+              fontWeight={600}
+              fill="rgba(0,0,0,0.75)"
+              dy={nameDy}
+            >
+              {pole.short}
+            </text>
+            <text
+              x={p.x}
+              y={p.y}
+              textAnchor={anchor}
+              dominantBaseline={baseline}
+              fontSize={11}
+              fontWeight={700}
+              fill={pole.color}
+              stroke="rgba(0,0,0,0.35)"
+              strokeWidth={0.3}
+              paintOrder="stroke fill"
+              dy={valDy}
+            >
+              {Math.round(intensity)}
+            </text>
+          </g>
         );
       })}
     </svg>
