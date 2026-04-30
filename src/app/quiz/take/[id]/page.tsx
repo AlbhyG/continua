@@ -80,6 +80,8 @@ export default function QuizTakePage() {
 
     const data = await res.json();
     sessionStorage.setItem(`result_${data.resultId}`, JSON.stringify(data));
+    localStorage.setItem("latest_result_id", String(data.resultId));
+    window.dispatchEvent(new Event("continua:latest-result"));
     router.push(`/quiz/results/${data.resultId}`);
   }
 

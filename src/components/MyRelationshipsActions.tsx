@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
 import InDevelopmentDialog from '@/components/dialogs/InDevelopmentDialog'
 
-const groupItems = ['Partner', 'Friends', 'Family', 'Teams']
+const groupItems = ['Family', 'Friend', 'Team']
 
 export default function MyRelationshipsActions() {
   const [dialogFeature, setDialogFeature] = useState<string | null>(null)
@@ -30,7 +30,7 @@ export default function MyRelationshipsActions() {
                     focus ? 'bg-accent/10 text-accent' : 'text-gray-700'
                   }`}
                 >
-                  Person
+                  Add a Person
                 </button>
               )}
             </MenuItem>
@@ -46,7 +46,7 @@ export default function MyRelationshipsActions() {
                     focus ? 'bg-accent/10 text-accent' : 'text-gray-700'
                   }`}
                 >
-                  Group {showGroupSub ? '▾' : '▸'}
+                  Add a Group {showGroupSub ? '▾' : '▸'}
                 </button>
               )}
             </MenuItem>

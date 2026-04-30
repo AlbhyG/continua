@@ -3,7 +3,7 @@ import Link from 'next/link'
 import FadeIn from '@/components/FadeIn'
 
 export const metadata: Metadata = {
-  title: 'My Info | Continua',
+  title: 'Info | Continua',
   description: 'Understand your personality patterns across different contexts. Take assessments, see results, and get personalized insights with Continua.'
 }
 
@@ -14,7 +14,7 @@ export default function MyInfoPage() {
       <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-20 pb-8">
         <FadeIn>
           <h1 className="text-[36px] md:text-[48px] leading-[1.1] font-bold text-foreground">
-            My Info
+            Info
           </h1>
         </FadeIn>
       </section>

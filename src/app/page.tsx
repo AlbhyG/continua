@@ -9,23 +9,11 @@ export const metadata: Metadata = {
     "Transform conflicts into complementarity. Understand personality as fluid coordinates across six dimensions.",
 };
 
-const feelingAxes = [
-  { name: "Empathy", range: "Empathy \u2194 Detachment" },
-  { name: "Self-Orientation", range: "Altruism \u2194 Narcissism" },
-  { name: "Social Attunement", range: "Hyper \u2194 Hypo" },
-];
-
-const behavioralAxes = [
-  { name: "Conscientiousness", range: "Conscientiousness \u2194 Impulsivity" },
-  { name: "Agency", range: "Assertive \u2194 Yielding" },
-  { name: "Reactivity", range: "High \u2194 Low" },
-];
-
 export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-20 pb-16 text-center">
+      <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-24 pb-14 text-center">
         <FadeIn>
           <h1 className="mb-4 flex justify-center">
             <Image
@@ -43,55 +31,18 @@ export default function Home() {
         </FadeIn>
         <FadeIn delay={150}>
           <p className="text-[19px] md:text-[22px] leading-[1.6] italic text-white/80 max-w-[640px] mx-auto mb-8">
-            How can&apos;t we improve the human condition one person, one couple, one
+            How can we improve the human condition one person, one couple, one
             family, and one office at a time?
           </p>
         </FadeIn>
         <FadeIn delay={250}>
           <Link
-            href="/quiz"
+            href="/about"
             className="inline-block rounded-xl bg-white/90 px-8 py-4 text-lg font-bold text-foreground transition-all hover:bg-white shadow-sm"
           >
-            Take the Assessment
+            About Continua
           </Link>
         </FadeIn>
-      </section>
-
-      {/* Feature Cards */}
-      <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-12">
-        <div className="grid md:grid-cols-3 gap-4">
-          {[
-            {
-              href: "/quiz",
-              title: "Know Yourself",
-              desc: "Take contextual assessments that capture your personality in motion \u2014 not a fixed label.",
-            },
-            {
-              href: "/my-relationships",
-              title: "Understand Others",
-              desc: "See how personality differences create complementarity in couples, families, and teams.",
-            },
-            {
-              href: "/graphic-exemplar",
-              title: "See the Patterns",
-              desc: "Visualize personality as radar charts and color orbs across six dimensions \u2014 a living portrait in motion.",
-            },
-          ].map((card, i) => (
-            <FadeIn key={card.href} delay={i * 100}>
-              <Link
-                href={card.href}
-                className="glass-card-interactive block p-6 group h-full"
-              >
-                <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
-                  {card.title}
-                </h3>
-                <p className="text-foreground/65 text-[15px] leading-relaxed">
-                  {card.desc}
-                </p>
-              </Link>
-            </FadeIn>
-          ))}
-        </div>
       </section>
 
       {/* Philosophy — plain text on gradient, no card */}
@@ -132,61 +83,6 @@ export default function Home() {
             </p>
           </div>
         </FadeIn>
-      </section>
-
-      {/* Six Dimensions */}
-      <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-16">
-        <FadeIn>
-          <h2 className="text-[26px] md:text-[32px] font-bold text-white mb-6 text-center">
-            Six Dimensions of Personality
-          </h2>
-        </FadeIn>
-
-        <div className="space-y-6">
-          <div>
-            <FadeIn>
-              <h3 className="text-[16px] md:text-[18px] font-semibold text-white/70 mb-3 text-center tracking-wide uppercase">
-                How We Feel
-              </h3>
-            </FadeIn>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              {feelingAxes.map((dim, i) => (
-                <FadeIn key={dim.name} delay={i * 60}>
-                  <div className="glass-card p-4 text-center h-full">
-                    <h4 className="font-bold text-[15px] text-foreground mb-1">
-                      {dim.name}
-                    </h4>
-                    <p className="text-foreground/55 text-[13px]">
-                      {dim.range}
-                    </p>
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <FadeIn>
-              <h3 className="text-[16px] md:text-[18px] font-semibold text-white/70 mb-3 text-center tracking-wide uppercase">
-                How We Act
-              </h3>
-            </FadeIn>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              {behavioralAxes.map((dim, i) => (
-                <FadeIn key={dim.name} delay={i * 60 + 180}>
-                  <div className="glass-card p-4 text-center h-full">
-                    <h4 className="font-bold text-[15px] text-foreground mb-1">
-                      {dim.name}
-                    </h4>
-                    <p className="text-foreground/55 text-[13px]">
-                      {dim.range}
-                    </p>
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Privacy Policy — small link, bottom left, home page only */}

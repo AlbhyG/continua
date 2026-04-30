@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -71,16 +71,17 @@ const greyedItemClass =
 const menuItemClass =
   'block w-full text-left px-4 py-2.5 rounded-lg text-sm text-foreground/80 hover:bg-accent/5 hover:text-foreground transition-colors'
 
-// ─── Get Started Form ──────────────────────────────────────────
+// ─── Contact Form ──────────────────────────────────────────
 
-function GetStartedForm({ onComplete }: { onComplete: () => void }) {
+function ContactForm({ onComplete }: { onComplete: () => void }) {
   const [values, setValues] = useState({ name: '', email: '', phone: '' })
-  const [showRoles, setShowRoles] = useState(false)
   const [roles, setRoles] = useState<string[]>([])
+  const [confirmed, setConfirmed] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [done, setDone] = useState(false)
 
   const hasContact = values.email.trim() !== '' || values.phone.trim() !== ''
+  const canSubmit = values.name.trim() !== '' && hasContact && confirmed
 
   const toggleRole = (role: string) => {
     setRoles((prev) =>
@@ -98,6 +99,7 @@ function GetStartedForm({ onComplete }: { onComplete: () => void }) {
     })
     setSubmitting(false)
     setDone(true)
+    onComplete()
   }
 
   if (done) {
@@ -112,11 +114,11 @@ function GetStartedForm({ onComplete }: { onComplete: () => void }) {
     )
   }
 
-  if (showRoles) {
-    return (
-      <div className="p-5 space-y-3">
-        <p className="text-sm font-bold text-foreground">I am a:</p>
-        {['Agent', 'Publisher', 'Psychologist', 'Interested Reader'].map(
+  return (
+    <div className="p-5 space-y-3">
+      <div className="space-y-2">
+        <p className="text-sm font-bold text-foreground">Role</p>
+        {['Agent', 'Publisher', 'Therapist', 'Interested Reader'].map(
           (role) => (
             <label key={role} className="flex items-center gap-2.5 text-sm text-gray-700 cursor-pointer">
               <input
@@ -129,20 +131,7 @@ function GetStartedForm({ onComplete }: { onComplete: () => void }) {
             </label>
           )
         )}
-        <button
-          type="button"
-          onClick={handleSubmit}
-          disabled={submitting || roles.length === 0}
-          className="w-full mt-2 px-4 py-2.5 rounded-lg bg-accent text-white text-sm font-semibold hover:bg-accent/90 transition-colors disabled:opacity-50 cursor-pointer"
-        >
-          {submitting ? 'Submitting...' : 'Submit'}
-        </button>
       </div>
-    )
-  }
-
-  return (
-    <div className="p-5 space-y-3">
       <div>
         <label className="block text-sm font-medium text-foreground mb-1">Name</label>
         <input
@@ -174,12 +163,20 @@ function GetStartedForm({ onComplete }: { onComplete: () => void }) {
       <label className="flex items-center gap-2.5 text-sm text-gray-700 cursor-pointer pt-1">
         <input
           type="checkbox"
-          disabled={!values.name.trim() || !hasContact}
-          onChange={() => setShowRoles(true)}
+          checked={confirmed}
+          onChange={(e) => setConfirmed(e.target.checked)}
           className="rounded border-gray-300"
         />
         OK
       </label>
+      <button
+        type="button"
+        onClick={handleSubmit}
+        disabled={submitting || !canSubmit}
+        className="w-full mt-2 px-4 py-2.5 rounded-lg bg-accent text-white text-sm font-semibold hover:bg-accent/90 transition-colors disabled:opacity-50 cursor-pointer"
+      >
+        {submitting ? 'Sending...' : 'Contact me'}
+      </button>
     </div>
   )
 }
@@ -190,10 +187,12 @@ function MobileMenu({
   open,
   onClose,
   versionPrefix,
+  latestResultId,
 }: {
   open: boolean
   onClose: () => void
   versionPrefix: string
+  latestResultId: string | null
 }) {
   return (
     <Dialog open={open} onClose={onClose} className="relative z-[60]">
@@ -208,22 +207,32 @@ function MobileMenu({
             </button>
           </div>
 
-          {/* My Info */}
+          {/* Info */}
           <div className="mb-8">
             <Link
               href={`${versionPrefix}/my-info`}
               onClick={onClose}
               className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-3 block hover:text-foreground transition-colors"
             >
-              My Info
+              Info
             </Link>
             <div className="space-y-1">
               <Link href="/quiz" onClick={onClose} className="block text-[15px] text-foreground/80 py-2 px-3 hover:text-foreground transition-colors">
-                Take Assessment
+                Take an Assessment
               </Link>
-              <span className="block text-[15px] text-gray-400 py-2 px-3">
-                + See Results
-              </span>
+              {latestResultId ? (
+                <Link
+                  href={`/quiz/results/${latestResultId}`}
+                  onClick={onClose}
+                  className="block text-[15px] text-foreground/80 py-2 px-3 hover:text-foreground transition-colors"
+                >
+                  See Results
+                </Link>
+              ) : (
+                <span className="block text-[15px] text-gray-400 py-2 px-3">
+                  + See Results
+                </span>
+              )}
               <span className="block text-[15px] text-gray-400 py-2 px-3">
                 + Tools &amp; Actions
               </span>
@@ -260,12 +269,13 @@ function MobileMenu({
             </div>
           </div>
 
-          {/* My Projects */}
-          <div className="mb-8">
-            <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 block">
-              My Projects
-            </span>
-          </div>
+          <Link
+            href="/about"
+            onClick={onClose}
+            className="text-xs font-semibold text-foreground/60 uppercase tracking-wider block hover:text-foreground transition-colors"
+          >
+            About
+          </Link>
         </DialogPanel>
       </div>
     </Dialog>
@@ -276,9 +286,26 @@ function MobileMenu({
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [latestResultId, setLatestResultId] = useState<string | null>(null)
   const pathname = usePathname()
   const versionMatch = pathname.match(/^\/(v\d+)(?:\/|$)/)
   const versionPrefix = versionMatch ? `/${versionMatch[1]}` : ''
+
+  useEffect(() => {
+    setLatestResultId(localStorage.getItem('latest_result_id'))
+
+    const syncLatestResult = () => {
+      setLatestResultId(localStorage.getItem('latest_result_id'))
+    }
+
+    window.addEventListener('storage', syncLatestResult)
+    window.addEventListener('continua:latest-result', syncLatestResult)
+
+    return () => {
+      window.removeEventListener('storage', syncLatestResult)
+      window.removeEventListener('continua:latest-result', syncLatestResult)
+    }
+  }, [])
 
   return (
     <>
@@ -306,11 +333,11 @@ export default function Header() {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-5 lg:gap-7">
-            {/* My Info — clickable link with greyed-out dropdown */}
+            {/* Info — clickable link with dropdown */}
             <Menu>
               <div className="flex items-center gap-0">
                 <Link href={`${versionPrefix}/my-info`} className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
-                  My Info
+                  Info
                 </Link>
                 <MenuButton className="p-1 text-foreground/80 hover:text-foreground transition-colors cursor-pointer">
                   <ChevronDown />
@@ -319,14 +346,22 @@ export default function Header() {
               <MenuItems anchor="bottom start" className={dropdownClass}>
                 <MenuItem>
                   {() => (
-                    <Link href="/quiz" className={menuItemClass}>Take Assessment</Link>
+                    <Link href="/quiz" className={menuItemClass}>Take an Assessment</Link>
                   )}
                 </MenuItem>
-                <MenuItem disabled>
-                  {() => (
-                    <span className={greyedItemClass}>+ See Results</span>
-                  )}
-                </MenuItem>
+                {latestResultId ? (
+                  <MenuItem>
+                    {() => (
+                      <Link href={`/quiz/results/${latestResultId}`} className={menuItemClass}>See Results</Link>
+                    )}
+                  </MenuItem>
+                ) : (
+                  <MenuItem disabled>
+                    {() => (
+                      <span className={greyedItemClass}>+ See Results</span>
+                    )}
+                  </MenuItem>
+                )}
                 <MenuItem disabled>
                   {() => (
                     <span className={greyedItemClass}>+ Tools &amp; Actions</span>
@@ -376,36 +411,35 @@ export default function Header() {
               </MenuItems>
             </Menu>
 
-            {/* My Projects — greyed out */}
-            <span className="text-sm font-semibold text-gray-400 cursor-default">
-              My Projects
-            </span>
+            <Link href="/about" className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
+              About
+            </Link>
 
-            {/* Get Started (desktop) */}
+            {/* Contact me (desktop) */}
             <Popover className="relative">
               <PopoverButton className="bg-accent text-white rounded-full px-5 py-2 text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer ring-1 ring-accent/30">
-                Get Started
+                Contact me
               </PopoverButton>
               <PopoverPanel
                 anchor="bottom end"
                 className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
               >
-                <GetStartedForm onComplete={() => {}} />
+                <ContactForm onComplete={() => {}} />
               </PopoverPanel>
             </Popover>
           </nav>
 
-          {/* Mobile Get Started */}
+          {/* Mobile Contact me */}
           <div className="md:hidden">
             <Popover className="relative">
               <PopoverButton className="bg-accent text-white rounded-full px-4 py-1.5 text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer ring-1 ring-accent/30">
-                Get Started
+                Contact me
               </PopoverButton>
               <PopoverPanel
                 anchor="bottom end"
                 className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
               >
-                <GetStartedForm onComplete={() => {}} />
+                <ContactForm onComplete={() => {}} />
               </PopoverPanel>
             </Popover>
           </div>
@@ -417,6 +451,7 @@ export default function Header() {
         open={mobileMenuOpen}
         onClose={() => setMobileMenuOpen(false)}
         versionPrefix={versionPrefix}
+        latestResultId={latestResultId}
       />
     </>
   )
