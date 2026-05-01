@@ -3,11 +3,40 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
+import dynamic from "next/dynamic";
+import { scoresToOrbData } from "@/lib/quiz/orb-mapping";
+
+const RadarProfile = dynamic(
+  () => import("@/components/quiz/RadarProfile"),
+  {
+    ssr: false,
+    loading: () => <div className="h-[350px] flex items-center justify-center text-white/40 text-sm">Loading chart...</div>,
+  }
+);
+
+const PersonalityOrb = dynamic(
+  () => import("@/components/PersonalityOrb"),
+  {
+    ssr: false,
+    loading: () => <div className="h-[300px] flex items-center justify-center text-white/40 text-sm">Generating orb...</div>,
+  }
+);
+
+interface AxisResult {
+  axis: string;
+  name: string;
+  score: number;
+  label: string;
+  highLabel: string;
+  lowLabel: string;
+}
 
 interface SharedResult {
   score: number;
   label: string;
   explanation: string;
+  scores: Record<string, number> | null;
+  axisResults: AxisResult[] | null;
 }
 
 function ShareContent() {
@@ -68,25 +97,64 @@ function ShareContent() {
 
   if (!result) return null;
 
+  const orbData = result.scores ? scoresToOrbData(result.scores) : null;
+
   return (
     <div className="mx-auto max-w-2xl px-6 py-12">
       <div>
-        <p className="text-[10px] font-bold uppercase tracking-wide text-white/40">
+        <p className="text-[10px] font-bold uppercase tracking-wide text-white/80">
           Shared Result
         </p>
         <h1 className="mt-2 text-3xl font-bold text-white">
-          Empathy–Detachment Spectrum
+          {result.axisResults ? "Personality Graph" : "Empathy–Detachment Spectrum"}
         </h1>
       </div>
 
-      <div className="mt-8 rounded-xl bg-white/5 border border-white/10 p-6 text-center">
-        <div className="text-7xl font-bold text-white">{result.score}</div>
-        <div className="mt-2 text-2xl font-bold text-white/90">
-          {result.label}
+      {orbData && (
+        <div className="mt-8 flex justify-center">
+          <PersonalityOrb data={orbData} size={280} />
         </div>
-      </div>
+      )}
 
-      <div className="mt-8 text-white/60 leading-relaxed">
+      {result.axisResults && (
+        <div className="mt-8 rounded-xl bg-white/80 backdrop-blur-sm p-4 shadow-sm">
+          <RadarProfile data={result.axisResults} />
+        </div>
+      )}
+
+      {!result.axisResults && (
+        <div className="mt-8 rounded-xl bg-white/5 border border-white/10 p-6 text-center">
+          <div className="text-7xl font-bold text-white">{result.score}</div>
+          <div className="mt-2 text-2xl font-bold text-white/90">
+            {result.label}
+          </div>
+        </div>
+      )}
+
+      {result.axisResults && (
+        <div className="mt-6 flex flex-col gap-3">
+          {result.axisResults.map((ar) => (
+            <div key={ar.axis} className="rounded-xl bg-white/80 backdrop-blur-sm p-4 shadow-sm">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm font-bold text-foreground/80">{ar.name}</span>
+                <span className="text-sm text-foreground/50">{ar.score}</span>
+              </div>
+              <div className="relative h-1.5 rounded-full bg-foreground/10">
+                <div
+                  className="absolute top-0 left-0 h-full rounded-full bg-foreground/40 transition-all duration-500"
+                  style={{ width: `${((ar.score - 1) / 9) * 100}%` }}
+                />
+              </div>
+              <div className="mt-1 flex justify-between text-[10px] text-foreground/40">
+                <span>{ar.lowLabel}</span>
+                <span>{ar.highLabel}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div className="mt-8 rounded-xl bg-black/30 border border-white/10 p-5 text-white/95 leading-relaxed">
         <p>{result.explanation}</p>
       </div>
 

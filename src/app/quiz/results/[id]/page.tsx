@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 import { scoresToOrbData } from "@/lib/quiz/orb-mapping";
 
@@ -145,6 +146,12 @@ export default function QuizResultsPage() {
         >
           {copied ? "Link Copied!" : "Share Result"}
         </button>
+        <Link
+          href="/famous-figures"
+          className="w-full rounded-xl bg-white/40 px-4 py-4 text-center text-sm font-bold text-foreground transition-all hover:bg-white/60"
+        >
+          Famous Archetypal Figures
+        </Link>
       </div>
 
       <p className="mt-6 text-center text-[10px] text-foreground/40">

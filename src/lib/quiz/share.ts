@@ -1,4 +1,5 @@
 import crypto from "crypto";
+import type { AxisScores } from "./scoring";
 
 const SECRET =
   process.env.SHARE_SECRET || "continua-empathy-spectrum-default-secret-change-me";
@@ -7,6 +8,7 @@ interface SharePayload {
   score: number;
   label: string;
   questionnaireId: number;
+  scores?: AxisScores;
 }
 
 export function createShareLink(payload: SharePayload): string {

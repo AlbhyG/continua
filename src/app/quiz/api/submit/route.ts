@@ -59,6 +59,7 @@ export async function POST(request: NextRequest) {
     score: scores.empathy,
     label: getAxisLabel("empathy", scores.empathy),
     questionnaireId,
+    scores,
   });
 
   await ensureUser(anonymousToken);

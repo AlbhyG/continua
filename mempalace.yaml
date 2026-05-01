@@ -1,0 +1,16 @@
+wing: continua
+rooms:
+- name: documentation
+  description: Files from docs/
+- name: supabase
+  description: Files from supabase/
+- name: public
+  description: Files from public/
+- name: src
+  description: Files from src/
+- name: research
+  description: Files from research/
+- name: frontend
+  description: Files from components/
+- name: general
+  description: Files that don't fit other rooms
