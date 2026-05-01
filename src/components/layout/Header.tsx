@@ -16,7 +16,6 @@ import {
   DialogBackdrop,
   DialogPanel,
   DialogTitle,
-  CloseButton,
 } from '@headlessui/react'
 import { getStartedAction } from '@/app/actions/get-started'
 
@@ -73,20 +72,37 @@ const menuItemClass =
 
 // ─── Contact Form ──────────────────────────────────────────
 
-function ContactForm({ onComplete }: { onComplete: () => void }) {
-  const [values, setValues] = useState({ name: '', email: '', phone: '' })
-  const [roles, setRoles] = useState<string[]>([])
-  const [confirmed, setConfirmed] = useState(false)
+type ContactFormState = {
+  values: { name: string; email: string; phone: string }
+  roles: string[]
+  confirmed: boolean
+}
+
+function ContactForm({
+  state,
+  setState,
+  onSubmitted,
+}: {
+  state: ContactFormState
+  setState: React.Dispatch<React.SetStateAction<ContactFormState>>
+  onSubmitted: () => void
+}) {
+  const { values, roles, confirmed } = state
   const [submitting, setSubmitting] = useState(false)
-  const [done, setDone] = useState(false)
 
   const hasContact = values.email.trim() !== '' || values.phone.trim() !== ''
   const canSubmit = values.name.trim() !== '' && hasContact && confirmed
 
+  const setValues = (updater: (v: ContactFormState['values']) => ContactFormState['values']) =>
+    setState((s) => ({ ...s, values: updater(s.values) }))
+
   const toggleRole = (role: string) => {
-    setRoles((prev) =>
-      prev.includes(role) ? prev.filter((r) => r !== role) : [...prev, role]
-    )
+    setState((s) => ({
+      ...s,
+      roles: s.roles.includes(role)
+        ? s.roles.filter((r) => r !== role)
+        : [...s.roles, role],
+    }))
   }
 
   const handleSubmit = async () => {
@@ -98,20 +114,8 @@ function ContactForm({ onComplete }: { onComplete: () => void }) {
       roles,
     })
     setSubmitting(false)
-    setDone(true)
-    onComplete()
-  }
-
-  if (done) {
-    return (
-      <div className="p-5 space-y-3">
-        <p className="text-sm font-bold text-foreground">Thank you!</p>
-        <p className="text-sm text-gray-600">We&apos;ll be in touch.</p>
-        <CloseButton className="text-sm text-accent hover:underline cursor-pointer">
-          Close
-        </CloseButton>
-      </div>
-    )
+    setState({ values: { name: '', email: '', phone: '' }, roles: [], confirmed: false })
+    onSubmitted()
   }
 
   return (
@@ -164,10 +168,10 @@ function ContactForm({ onComplete }: { onComplete: () => void }) {
         <input
           type="checkbox"
           checked={confirmed}
-          onChange={(e) => setConfirmed(e.target.checked)}
+          onChange={(e) => setState((s) => ({ ...s, confirmed: e.target.checked }))}
           className="rounded border-gray-300"
         />
-        OK
+        OK to contact me?
       </label>
       <button
         type="button"
@@ -287,6 +291,11 @@ function MobileMenu({
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [latestResultId, setLatestResultId] = useState<string | null>(null)
+  const [contactState, setContactState] = useState<ContactFormState>({
+    values: { name: '', email: '', phone: '' },
+    roles: [],
+    confirmed: false,
+  })
   const pathname = usePathname()
   const versionMatch = pathname.match(/^\/(v\d+)(?:\/|$)/)
   const versionPrefix = versionMatch ? `/${versionMatch[1]}` : ''
@@ -424,7 +433,13 @@ export default function Header() {
                 anchor="bottom end"
                 className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
               >
-                <ContactForm onComplete={() => {}} />
+                {({ close }) => (
+                  <ContactForm
+                    state={contactState}
+                    setState={setContactState}
+                    onSubmitted={() => close()}
+                  />
+                )}
               </PopoverPanel>
             </Popover>
           </nav>
@@ -439,7 +454,13 @@ export default function Header() {
                 anchor="bottom end"
                 className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
               >
-                <ContactForm onComplete={() => {}} />
+                {({ close }) => (
+                  <ContactForm
+                    state={contactState}
+                    setState={setContactState}
+                    onSubmitted={() => close()}
+                  />
+                )}
               </PopoverPanel>
             </Popover>
           </div>

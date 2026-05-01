@@ -35,14 +35,6 @@ export default function Home() {
             family, and one office at a time?
           </p>
         </FadeIn>
-        <FadeIn delay={250}>
-          <Link
-            href="/about"
-            className="inline-block rounded-xl bg-white/90 px-8 py-4 text-lg font-bold text-foreground transition-all hover:bg-white shadow-sm"
-          >
-            About Continua
-          </Link>
-        </FadeIn>
       </section>
 
       {/* Philosophy — plain text on gradient, no card */}
@@ -81,6 +73,16 @@ export default function Home() {
               on each continuum and choose, with intention, where you want to
               move.
             </p>
+          </div>
+        </FadeIn>
+        <FadeIn delay={250}>
+          <div className="mt-10 text-center">
+            <Link
+              href="/about"
+              className="inline-block rounded-xl bg-white/90 px-8 py-4 text-lg font-bold text-foreground transition-all hover:bg-white shadow-sm"
+            >
+              About Continua
+            </Link>
           </div>
         </FadeIn>
       </section>

@@ -14,11 +14,11 @@ interface Questionnaire {
 }
 
 const LIKERT_OPTIONS = [
-  { value: 1, label: "Strongly Agree" },
-  { value: 2, label: "Agree" },
+  { value: 1, label: "Always" },
+  { value: 2, label: "Sometimes" },
   { value: 3, label: "Neutral" },
-  { value: 4, label: "Disagree" },
-  { value: 5, label: "Strongly Disagree" },
+  { value: 4, label: "Rarely" },
+  { value: 5, label: "Never" },
 ];
 
 export default function QuizTakePage() {
