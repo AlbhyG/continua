@@ -89,9 +89,10 @@ function ContactForm({
 }) {
   const { values, roles, confirmed } = state
   const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const hasContact = values.email.trim() !== '' || values.phone.trim() !== ''
-  const canSubmit = values.name.trim() !== '' && hasContact && confirmed
+  const canSubmit = values.name.trim() !== '' && hasContact && roles.length > 0 && confirmed
 
   const setValues = (updater: (v: ContactFormState['values']) => ContactFormState['values']) =>
     setState((s) => ({ ...s, values: updater(s.values) }))
@@ -106,14 +107,19 @@ function ContactForm({
   }
 
   const handleSubmit = async () => {
+    setError(null)
     setSubmitting(true)
-    await getStartedAction({
+    const result = await getStartedAction({
       name: values.name,
       email: values.email || undefined,
       phone: values.phone || undefined,
       roles,
     })
     setSubmitting(false)
+    if (!result.success) {
+      setError(result.error || 'Something went wrong. Please try again.')
+      return
+    }
     setState({ values: { name: '', email: '', phone: '' }, roles: [], confirmed: false })
     onSubmitted()
   }
@@ -181,6 +187,11 @@ function ContactForm({
       >
         {submitting ? 'Sending...' : 'Contact me'}
       </button>
+      {error && (
+        <p className="text-sm text-red-600" role="alert">
+          {error}
+        </p>
+      )}
     </div>
   )
 }

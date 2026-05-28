@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  outputFileTracingIncludes: {
+    '/*': ['./node_modules/@jspawn/qpdf-wasm/qpdf.wasm'],
+  },
   async redirects() {
     return [
       {
