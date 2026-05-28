@@ -1,6 +1,9 @@
 import { resend } from '@/lib/resend/client';
 import VerificationEmail from '@/emails/verification-email';
 
+const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'reply@continua.info';
+const REPLY_TO_EMAIL = process.env.RESEND_REPLY_TO_EMAIL || 'albhy@continua.info';
+
 interface SendVerificationEmailParams {
   to: string;
   name: string;
@@ -25,8 +28,9 @@ export async function sendVerificationEmail({
   try {
     // Send email using Resend with React Email template
     const { data, error } = await resend.emails.send({
-      from: `Continua <${process.env.RESEND_FROM_EMAIL!}>`,
+      from: `Continua <${FROM_EMAIL}>`,
       to,
+      replyTo: REPLY_TO_EMAIL,
       subject: 'Verify your email — Continua',
       react: VerificationEmail({ name, verificationUrl }),
     });
