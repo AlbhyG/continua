@@ -1,8 +1,11 @@
 import crypto from "crypto";
 import type { AxisScores } from "./scoring";
 
+const LEGACY_DEFAULT_SECRET =
+  "continua-empathy-spectrum-default-secret-change-me";
+
 const SECRET =
-  process.env.SHARE_SECRET || "continua-empathy-spectrum-default-secret-change-me";
+  process.env.SHARE_SECRET || LEGACY_DEFAULT_SECRET;
 
 interface SharePayload {
   score: number;
@@ -24,11 +27,20 @@ export function verifyShareLink(
   data: string,
   sig: string
 ): SharePayload | null {
-  const expectedSig = crypto
-    .createHmac("sha256", SECRET)
-    .update(data)
-    .digest("base64url");
-  if (sig !== expectedSig) {
+  const secrets = [SECRET];
+  if (SECRET !== LEGACY_DEFAULT_SECRET) {
+    secrets.push(LEGACY_DEFAULT_SECRET);
+  }
+
+  const hasValidSignature = secrets.some((secret) => {
+    const expectedSig = crypto
+      .createHmac("sha256", secret)
+      .update(data)
+      .digest("base64url");
+    return sig === expectedSig;
+  });
+
+  if (!hasValidSignature) {
     return null;
   }
   try {
