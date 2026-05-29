@@ -3,7 +3,10 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   serverExternalPackages: ['@jspawn/qpdf-wasm'],
   outputFileTracingIncludes: {
-    '/*': ['./node_modules/@jspawn/qpdf-wasm/qpdf.wasm'],
+    '/*': [
+      './node_modules/@jspawn/qpdf-wasm/qpdf.js',
+      './node_modules/@jspawn/qpdf-wasm/qpdf.wasm',
+    ],
   },
   async redirects() {
     return [

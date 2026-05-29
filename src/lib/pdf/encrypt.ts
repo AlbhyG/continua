@@ -1,5 +1,4 @@
 import path from 'node:path'
-import { createRequire } from 'node:module'
 import { readFileSync } from 'node:fs'
 
 type QpdfFactory = (options: {
@@ -25,14 +24,16 @@ type QpdfOptions = Parameters<QpdfFactory>[0] & {
 }
 
 function getQpdfFactory() {
-  const require = createRequire(import.meta.url)
-  return require('@jspawn/qpdf-wasm/qpdf.js') as QpdfFactory
+  const nativeRequire = eval('require') as NodeRequire
+  return nativeRequire(
+    path.join(process.cwd(), 'node_modules/@jspawn/qpdf-wasm/qpdf.js')
+  ) as QpdfFactory
 }
 
 function getWasmPath() {
-  const require = createRequire(import.meta.url)
   return path.join(
-    path.dirname(require.resolve('@jspawn/qpdf-wasm/package.json')),
+    process.cwd(),
+    'node_modules/@jspawn/qpdf-wasm',
     'qpdf.wasm'
   )
 }
