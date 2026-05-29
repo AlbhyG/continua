@@ -24,7 +24,7 @@ export async function getStartedAction(data: {
   email?: string
   phone?: string
   roles: string[]
-}): Promise<{ success: boolean; error?: string }> {
+}): Promise<{ success: boolean; error?: string; deliveryMethod?: 'email' | 'manual' }> {
   const { name, email, phone, roles } = data
 
   if (!name.trim()) {
@@ -58,8 +58,23 @@ export async function getStartedAction(data: {
     }
 
     if (!cleanEmail) {
+      let notificationId: string | null = null
+      try {
+        const notification = await sendContactNotificationEmail({
+          name: cleanName,
+          email: null,
+          phone: cleanPhone,
+          roles: normalizedRoles,
+          status: 'manual_follow_up',
+          filesSent: [],
+        })
+        notificationId = notification?.id ?? null
+      } catch (notificationError) {
+        console.error('Contact notification error:', notificationError)
+      }
+
       if (contactId) {
-        await supabase.from('contact_deliveries').insert({
+        await logContactDelivery(supabase, {
           contact_id: contactId,
           roles: normalizedRoles,
           delivery_method: 'manual',
@@ -68,17 +83,10 @@ export async function getStartedAction(data: {
           recipient_phone: cleanPhone,
           password_identifier: cleanPhone,
           files_sent: [],
+          resend_notification_id: notificationId,
         })
       }
-      await sendContactNotificationEmail({
-        name: cleanName,
-        email: null,
-        phone: cleanPhone,
-        roles: normalizedRoles,
-        status: 'manual_follow_up',
-        filesSent: [],
-      })
-      return { success: true }
+      return { success: true, deliveryMethod: 'manual' }
     }
 
     const password = cleanEmail || cleanPhone
@@ -114,15 +122,30 @@ export async function getStartedAction(data: {
         })
       )
 
-      await sendContactPdfEmail({
+      const deliveryEmail = await sendContactPdfEmail({
         to: cleanEmail,
         name: cleanName,
         password: password.toLowerCase(),
         attachments,
       })
 
+      let notificationId: string | null = null
+      try {
+        const notification = await sendContactNotificationEmail({
+          name: cleanName,
+          email: cleanEmail,
+          phone: cleanPhone,
+          roles: normalizedRoles,
+          status: 'sent',
+          filesSent: filesToSend,
+        })
+        notificationId = notification?.id ?? null
+      } catch (notificationError) {
+        console.error('Contact notification error:', notificationError)
+      }
+
       if (contactId) {
-        await supabase.from('contact_deliveries').insert({
+        await logContactDelivery(supabase, {
           contact_id: contactId,
           roles: normalizedRoles,
           delivery_method: 'email',
@@ -132,24 +155,17 @@ export async function getStartedAction(data: {
           password_identifier: password.toLowerCase(),
           files_sent: filesToSend,
           sent_at: new Date().toISOString(),
+          resend_email_id: deliveryEmail?.id ?? null,
+          resend_notification_id: notificationId,
         })
       }
 
-      await sendContactNotificationEmail({
-        name: cleanName,
-        email: cleanEmail,
-        phone: cleanPhone,
-        roles: normalizedRoles,
-        status: 'sent',
-        filesSent: filesToSend,
-      })
-
-      return { success: true }
+      return { success: true, deliveryMethod: 'email' }
     } catch (deliveryError) {
       const message =
         deliveryError instanceof Error ? deliveryError.message : 'Delivery failed'
       if (contactId) {
-        await supabase.from('contact_deliveries').insert({
+        await logContactDelivery(supabase, {
           contact_id: contactId,
           roles: normalizedRoles,
           delivery_method: 'email',
@@ -161,15 +177,19 @@ export async function getStartedAction(data: {
           error: message,
         })
       }
-      await sendContactNotificationEmail({
-        name: cleanName,
-        email: cleanEmail,
-        phone: cleanPhone,
-        roles: normalizedRoles,
-        status: 'error',
-        filesSent: [],
-        error: message,
-      })
+      try {
+        await sendContactNotificationEmail({
+          name: cleanName,
+          email: cleanEmail,
+          phone: cleanPhone,
+          roles: normalizedRoles,
+          status: 'error',
+          filesSent: [],
+          error: message,
+        })
+      } catch (notificationError) {
+        console.error('Contact notification error:', notificationError)
+      }
       console.error('Get started delivery error:', message)
       return { success: false, error: 'We saved your information, but the PDF could not be sent yet.' }
     }
@@ -177,6 +197,34 @@ export async function getStartedAction(data: {
     console.error('Get started unexpected error:', err)
     return { success: false, error: 'Something went wrong. Please try again.' }
   }
+}
+
+async function logContactDelivery(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+  payload: Record<string, unknown>
+) {
+  const { error } = await supabase.from('contact_deliveries').insert(payload)
+  if (!error) {
+    return
+  }
+
+  if (isMissingResendColumnError(error)) {
+    const {
+      resend_email_id: _resendEmailId,
+      resend_notification_id: _resendNotificationId,
+      ...legacyPayload
+    } = payload
+    const { error: retryError } = await supabase
+      .from('contact_deliveries')
+      .insert(legacyPayload)
+    if (!retryError) {
+      return
+    }
+    console.error('Contact delivery log error:', JSON.stringify(retryError, null, 2))
+    return
+  }
+
+  console.error('Contact delivery log error:', JSON.stringify(error, null, 2))
 }
 
 async function upsertContact({
@@ -236,5 +284,13 @@ function isMissingRpcError(error: { code?: string; message?: string }) {
   return (
     error.code === 'PGRST202' ||
     error.message?.includes('upsert_contact_submission') === true
+  )
+}
+
+function isMissingResendColumnError(error: { code?: string; message?: string }) {
+  return (
+    error.code === 'PGRST204' &&
+    (error.message?.includes('resend_email_id') === true ||
+      error.message?.includes('resend_notification_id') === true)
   )
 }

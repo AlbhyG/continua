@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -81,15 +81,15 @@ type ContactFormState = {
 function ContactForm({
   state,
   setState,
-  onSubmitted,
 }: {
   state: ContactFormState
   setState: React.Dispatch<React.SetStateAction<ContactFormState>>
-  onSubmitted: () => void
 }) {
   const { values, roles, confirmed } = state
+  const submitInFlight = useRef(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [success, setSuccess] = useState<string | null>(null)
 
   const hasContact = values.email.trim() !== '' || values.phone.trim() !== ''
   const canSubmit = values.name.trim() !== '' && hasContact && roles.length > 0 && confirmed
@@ -98,6 +98,7 @@ function ContactForm({
     setState((s) => ({ ...s, values: updater(s.values) }))
 
   const toggleRole = (role: string) => {
+    setSuccess(null)
     setState((s) => ({
       ...s,
       roles: s.roles.includes(role)
@@ -107,27 +108,43 @@ function ContactForm({
   }
 
   const handleSubmit = async () => {
-    setError(null)
-    setSubmitting(true)
-    const result = await getStartedAction({
-      name: values.name,
-      email: values.email || undefined,
-      phone: values.phone || undefined,
-      roles,
-    })
-    setSubmitting(false)
-    if (!result.success) {
-      setError(result.error || 'Something went wrong. Please try again.')
+    if (submitInFlight.current || !canSubmit) {
       return
     }
-    setState({ values: { name: '', email: '', phone: '' }, roles: [], confirmed: false })
-    onSubmitted()
+    submitInFlight.current = true
+    setError(null)
+    setSuccess(null)
+    setSubmitting(true)
+    try {
+      const result = await getStartedAction({
+        name: values.name,
+        email: values.email || undefined,
+        phone: values.phone || undefined,
+        roles,
+      })
+      if (!result.success) {
+        setError(result.error || 'Something went wrong. Please try again.')
+        return
+      }
+      setState({ values: { name: '', email: '', phone: '' }, roles: [], confirmed: false })
+      setSuccess(
+        result.deliveryMethod === 'manual'
+          ? 'Thanks. Your information was saved, and Albhy will follow up manually.'
+          : 'Thanks. Your PDF email is on its way. The PDF password is your lowercase email address.'
+      )
+    } finally {
+      submitInFlight.current = false
+      setSubmitting(false)
+    }
   }
 
   return (
     <div className="p-5 space-y-3">
       <div className="space-y-2">
-        <p className="text-sm font-bold text-foreground">Role</p>
+        <div>
+          <p className="text-sm font-bold text-foreground">Role</p>
+          <p className="text-xs text-gray-500">Choose at least one role so we send the right PDF.</p>
+        </div>
         {['Agent', 'Publisher', 'Therapist', 'Interested Reader'].map(
           (role) => (
             <label key={role} className="flex items-center gap-2.5 text-sm text-gray-700 cursor-pointer">
@@ -147,7 +164,10 @@ function ContactForm({
         <input
           type="text"
           value={values.name}
-          onChange={(e) => setValues((v) => ({ ...v, name: e.target.value }))}
+          onChange={(e) => {
+            setSuccess(null)
+            setValues((v) => ({ ...v, name: e.target.value }))
+          }}
           className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
         />
       </div>
@@ -156,9 +176,15 @@ function ContactForm({
         <input
           type="email"
           value={values.email}
-          onChange={(e) => setValues((v) => ({ ...v, email: e.target.value }))}
+          onChange={(e) => {
+            setSuccess(null)
+            setValues((v) => ({ ...v, email: e.target.value }))
+          }}
           className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
         />
+        <p className="mt-1 text-xs text-gray-500">
+          Email requests receive a password-protected PDF. The password is your lowercase email address.
+        </p>
       </div>
       <p className="text-xs text-gray-400 text-center">And / Or</p>
       <div>
@@ -166,15 +192,24 @@ function ContactForm({
         <input
           type="tel"
           value={values.phone}
-          onChange={(e) => setValues((v) => ({ ...v, phone: e.target.value }))}
+          onChange={(e) => {
+            setSuccess(null)
+            setValues((v) => ({ ...v, phone: e.target.value }))
+          }}
           className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
         />
+        <p className="mt-1 text-xs text-gray-500">
+          Phone-only requests are saved for manual follow-up.
+        </p>
       </div>
       <label className="flex items-center gap-2.5 text-sm text-gray-700 cursor-pointer pt-1">
         <input
           type="checkbox"
           checked={confirmed}
-          onChange={(e) => setState((s) => ({ ...s, confirmed: e.target.checked }))}
+          onChange={(e) => {
+            setSuccess(null)
+            setState((s) => ({ ...s, confirmed: e.target.checked }))
+          }}
           className="rounded border-gray-300"
         />
         OK to contact me?
@@ -190,6 +225,11 @@ function ContactForm({
       {error && (
         <p className="text-sm text-red-600" role="alert">
           {error}
+        </p>
+      )}
+      {!error && success && (
+        <p className="text-sm text-green-700" role="status">
+          {success}
         </p>
       )}
     </div>
@@ -444,11 +484,10 @@ export default function Header() {
                 anchor="bottom end"
                 className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
               >
-                {({ close }) => (
+                {() => (
                   <ContactForm
                     state={contactState}
                     setState={setContactState}
-                    onSubmitted={() => close()}
                   />
                 )}
               </PopoverPanel>
@@ -465,11 +504,10 @@ export default function Header() {
                 anchor="bottom end"
                 className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
               >
-                {({ close }) => (
+                {() => (
                   <ContactForm
                     state={contactState}
                     setState={setContactState}
-                    onSubmitted={() => close()}
                   />
                 )}
               </PopoverPanel>

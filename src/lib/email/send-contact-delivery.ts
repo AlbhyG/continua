@@ -40,7 +40,7 @@ export async function sendContactPdfEmail({
     </div>
   `
 
-  const { data, error } = await resend.emails.send({
+  const { data, error } = await sendEmailWithRetry({
     from: `Continua <${FROM_EMAIL}>`,
     to,
     replyTo: REPLY_TO_EMAIL,
@@ -90,13 +90,44 @@ export async function sendContactNotificationEmail({
     .filter(Boolean)
     .join('\n')
 
-  await resend.emails.send({
+  const { data, error: resendError } = await sendEmailWithRetry({
     from: `Continua <${FROM_EMAIL}>`,
     to: NOTIFY_EMAIL,
     replyTo: email || REPLY_TO_EMAIL,
     subject: `New Continua registration: ${name} (${roles.join(', ')})`,
     text: body,
   })
+
+  if (resendError) {
+    throw new Error(resendError.message)
+  }
+
+  return data
+}
+
+async function sendEmailWithRetry(
+  payload: Parameters<typeof resend.emails.send>[0]
+) {
+  let lastResult: Awaited<ReturnType<typeof resend.emails.send>> | undefined
+
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    lastResult = await resend.emails.send(payload)
+    if (!lastResult.error || !isRetryableResendError(lastResult.error)) {
+      return lastResult
+    }
+    await new Promise((resolve) => setTimeout(resolve, 750 * (attempt + 1)))
+  }
+
+  if (!lastResult) {
+    throw new Error('Email send was not attempted')
+  }
+
+  return lastResult
+}
+
+function isRetryableResendError(error: { message?: string; statusCode?: number | null }) {
+  const statusCode = error.statusCode || 0
+  return statusCode >= 500 || error.message?.toLowerCase().includes('internal server error') === true
 }
 
 function escapeHtml(value: string) {
