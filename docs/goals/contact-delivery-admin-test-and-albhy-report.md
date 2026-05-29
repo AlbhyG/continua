@@ -169,7 +169,34 @@ Improve delivery tracking if needed:
 - Avoid duplicate delivery rows on accidental double-clicks where reasonably simple.
 - Make all logging failures non-destructive: a successful PDF email should not fail only because logging failed.
 
-If you add a migration and cannot apply it with CLI, use Supabase SQL Editor through Computer Use and verify it.
+If you add a migration, apply it to production Supabase before deploying/testing production behavior.
+
+Preferred migration path:
+
+1. Check whether `SUPABASE_DB_PASSWORD` is already present in the shell environment:
+
+   ```bash
+   printenv SUPABASE_DB_PASSWORD >/dev/null && echo "SUPABASE_DB_PASSWORD is set"
+   ```
+
+2. If it is set, apply migrations with:
+
+   ```bash
+   npx supabase db push
+   ```
+
+3. If the project is not linked, link it first:
+
+   ```bash
+   npx supabase link --project-ref tiyyznmbumlwrugspslc
+   npx supabase db push
+   ```
+
+Do not print the value of `SUPABASE_DB_PASSWORD`. Do not write it to `.env.local`, `.env`, logs, docs, commits, or any tracked/untracked repo file.
+
+Fallback migration path:
+
+- If `SUPABASE_DB_PASSWORD` is not set or `npx supabase db push` is blocked, use the Supabase SQL Editor through Computer Use and verify the migration afterward.
 
 ### 6. Runbook
 
