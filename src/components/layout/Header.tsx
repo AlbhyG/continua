@@ -199,10 +199,10 @@ function ContactForm({
           className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
         />
         <p className="mt-1 text-xs text-gray-500">
-          Phone-only requests are saved for manual follow-up.
+          Enter a phone number only if you want low-volume text follow-up about your Continua request.
         </p>
       </div>
-      <label className="flex items-center gap-2.5 text-sm text-gray-700 cursor-pointer pt-1">
+      <label className="flex items-start gap-2.5 text-sm text-gray-700 cursor-pointer pt-1">
         <input
           type="checkbox"
           checked={confirmed}
@@ -210,9 +210,11 @@ function ContactForm({
             setSuccess(null)
             setState((s) => ({ ...s, confirmed: e.target.checked }))
           }}
-          className="rounded border-gray-300"
+          className="mt-0.5 rounded border-gray-300"
         />
-        OK to contact me?
+        <span>
+          OK for Continua to contact me about this request. If I provide a phone number, I agree to receive service-related texts from Continua. Message/data rates may apply, frequency varies, reply STOP to opt out or HELP for help.
+        </span>
       </label>
       <button
         type="button"
