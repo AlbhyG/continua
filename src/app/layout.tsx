@@ -53,7 +53,7 @@ export default function RootLayout({
       <body>
         <OverscrollColor />
         <Header />
-        <div className="pt-6">
+        <div className="pt-24">
           {children}
         </div>
         <footer className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 py-8">

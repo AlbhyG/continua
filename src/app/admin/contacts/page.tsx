@@ -155,8 +155,9 @@ function DataError({ error }: { error: PostgrestError | null }) {
 }
 
 function buildRows(deliveries: DeliveryLogRow[], contacts: ContactRow[]): ContactAdminRow[] {
-  const contactsWithDelivery = new Set(deliveries.map((delivery) => delivery.contact_id))
-  const deliveryRows = deliveries.map((delivery) => ({
+  const visibleDeliveries = deliveries.filter((delivery) => !isAdminTestRow(delivery))
+  const contactsWithDelivery = new Set(visibleDeliveries.map((delivery) => delivery.contact_id))
+  const deliveryRows = visibleDeliveries.map((delivery) => ({
     rowId: `delivery-${delivery.delivery_id}`,
     contactId: delivery.contact_id,
     name: delivery.name,
@@ -171,7 +172,7 @@ function buildRows(deliveries: DeliveryLogRow[], contacts: ContactRow[]): Contac
   }))
 
   const contactOnlyRows = contacts
-    .filter((contact) => !contactsWithDelivery.has(contact.id))
+    .filter((contact) => !contactsWithDelivery.has(contact.id) && !isAdminTestRow(contact))
     .map((contact) => ({
       rowId: `contact-${contact.id}`,
       contactId: contact.id,
@@ -187,4 +188,11 @@ function buildRows(deliveries: DeliveryLogRow[], contacts: ContactRow[]): Contac
     }))
 
   return [...deliveryRows, ...contactOnlyRows]
+}
+
+function isAdminTestRow(row: { name: string; email: string | null }) {
+  return (
+    row.name.toLowerCase().startsWith('codex test') ||
+    row.email?.toLowerCase().includes('+codex') === true
+  )
 }
