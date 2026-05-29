@@ -1,14 +1,32 @@
 import path from 'node:path'
 import { createRequire } from 'node:module'
 import { readFileSync } from 'node:fs'
-import qpdf from '@jspawn/qpdf-wasm'
 
-let modulePromise: ReturnType<typeof qpdf> | null = null
-type QpdfOptions = Parameters<typeof qpdf>[0] & {
+type QpdfFactory = (options: {
+  noInitialRun?: boolean
+  locateFile?: (file: string) => string
+}) => Promise<QpdfModule>
+
+type QpdfModule = {
+  FS: {
+    writeFile: (path: string, data: Uint8Array) => void
+    readFile: (path: string) => Uint8Array
+    unlink: (path: string) => void
+  }
+  callMain: (args: string[]) => void
+}
+
+let modulePromise: Promise<QpdfModule> | null = null
+type QpdfOptions = Parameters<QpdfFactory>[0] & {
   instantiateWasm?: (
     imports: WebAssembly.Imports,
     receiveInstance: (instance: WebAssembly.Instance) => void
   ) => WebAssembly.Exports
+}
+
+function getQpdfFactory() {
+  const require = createRequire(import.meta.url)
+  return require('@jspawn/qpdf-wasm/qpdf.js') as QpdfFactory
 }
 
 function getWasmPath() {
@@ -36,7 +54,7 @@ async function getQpdfModule() {
           return instance.exports
         },
       }
-      modulePromise = qpdf(qpdfOptions)
+      modulePromise = getQpdfFactory()(qpdfOptions)
     } finally {
       globalThis.fetch = originalFetch
     }
