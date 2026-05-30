@@ -53,15 +53,26 @@ Use `Copy visible BCC` to copy all visible email addresses as a comma-separated 
 - `NOTIFY_EMAIL`
 - `PDF_OWNER_PASSWORD`
 - `ADMIN_CONTACTS_PASSWORD`
+- `TWILIO_ACCOUNT_SID`
+- `TWILIO_API_KEY_SID`
+- `TWILIO_API_KEY_SECRET`
+- `TWILIO_FROM_NUMBER`
 
 Optional:
 
 - `CONTACT_PDF_STORAGE_PATH`
+- `TWILIO_AUTH_TOKEN` can be used instead of API key credentials, but API keys are preferred.
 
 ## Delivery Behavior
 
 Email requests download the mapped PDFs from the private `books` bucket, encrypt each PDF, send the attachments through Resend, and log the delivery in `contact_deliveries`.
 
-Phone-only requests save the contact, log `manual_follow_up`, and send Albhy a notification email. They require manual follow-up unless SMS is added later.
+If a submitter provides a phone number, the server sends low-volume service SMS through Twilio after the contact is saved. The text contains time-limited signed links to the requested PDF files from the private `books` Supabase Storage bucket. Links expire after 7 days.
+
+Email submissions still receive password-protected PDF attachments through Resend. If they also provide a phone number, they receive both the email attachment and the signed PDF link by text.
+
+Phone-only submissions receive signed PDF links by text when Twilio is configured and the toll-free sender is approved. If SMS fails or Twilio is unavailable, the request logs `manual_follow_up` and Albhy receives the notification email.
+
+SMS failures are logged to server logs and included in Albhy's notification email when possible. SMS failure does not block email PDF delivery or contact saving.
 
 Delivery logs store Resend provider IDs when available. Logging or notification failures are written to server logs and should not make an already successful PDF email fail for the user.

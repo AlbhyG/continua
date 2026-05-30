@@ -6,6 +6,7 @@ import {
   sendContactNotificationEmail,
   sendContactPdfEmail,
 } from '@/lib/email/send-contact-delivery'
+import { sendServiceSms } from '@/lib/sms/twilio'
 
 const CONTACT_PDF_STORAGE_PATH =
   process.env.CONTACT_PDF_STORAGE_PATH || null
@@ -18,13 +19,19 @@ const ROLE_PDF_PATHS: Record<string, string> = {
   Therapist: 'therapists.pdf',
   'Interested Reader': 'therapists.pdf',
 }
+const SMS_LINK_EXPIRY_SECONDS = 60 * 60 * 24 * 7
 
 export async function getStartedAction(data: {
   name: string
   email?: string
   phone?: string
   roles: string[]
-}): Promise<{ success: boolean; error?: string; deliveryMethod?: 'email' | 'manual' }> {
+}): Promise<{
+  success: boolean
+  error?: string
+  deliveryMethod?: 'email' | 'manual'
+  smsSent?: boolean
+}> {
   const { name, email, phone, roles } = data
 
   if (!name.trim()) {
@@ -57,7 +64,17 @@ export async function getStartedAction(data: {
       return { success: false, error: 'Something went wrong. Please try again.' }
     }
 
+    const filesToSend = CONTACT_PDF_STORAGE_PATH
+      ? [CONTACT_PDF_STORAGE_PATH]
+      : Array.from(new Set(normalizedRoles.map((role) => ROLE_PDF_PATHS[role])))
+
     if (!cleanEmail) {
+      const smsResult = await sendPdfLinksSms({
+        supabase,
+        phone: cleanPhone,
+        filesToSend,
+      })
+
       let notificationId: string | null = null
       try {
         const notification = await sendContactNotificationEmail({
@@ -65,8 +82,11 @@ export async function getStartedAction(data: {
           email: null,
           phone: cleanPhone,
           roles: normalizedRoles,
-          status: 'manual_follow_up',
-          filesSent: [],
+          status: smsResult.sent
+            ? 'sms_pdf_links_sent'
+            : 'manual_follow_up',
+          filesSent: smsResult.sent ? filesToSend : [],
+          error: smsResult.error ?? undefined,
         })
         notificationId = notification?.id ?? null
       } catch (notificationError) {
@@ -78,15 +98,15 @@ export async function getStartedAction(data: {
           contact_id: contactId,
           roles: normalizedRoles,
           delivery_method: 'manual',
-          status: 'manual_follow_up',
+          status: smsResult.sent ? 'sent' : 'manual_follow_up',
           recipient_email: null,
           recipient_phone: cleanPhone,
           password_identifier: cleanPhone,
-          files_sent: [],
+          files_sent: smsResult.sent ? filesToSend : [],
           resend_notification_id: notificationId,
         })
       }
-      return { success: true, deliveryMethod: 'manual' }
+      return { success: true, deliveryMethod: 'manual', smsSent: smsResult.sent }
     }
 
     const password = cleanEmail || cleanPhone
@@ -95,10 +115,6 @@ export async function getStartedAction(data: {
     }
 
     try {
-      const filesToSend = CONTACT_PDF_STORAGE_PATH
-        ? [CONTACT_PDF_STORAGE_PATH]
-        : Array.from(new Set(normalizedRoles.map((role) => ROLE_PDF_PATHS[role])))
-
       const attachments = await Promise.all(
         filesToSend.map(async (filePath) => {
           const { data: sourcePdf, error: sourceError } = await supabase.storage
@@ -129,6 +145,13 @@ export async function getStartedAction(data: {
         attachments,
       })
 
+      const smsResult = await sendPdfSentSms({
+        supabase,
+        phone: cleanPhone,
+        email: cleanEmail,
+        filesToSend,
+      })
+
       let notificationId: string | null = null
       try {
         const notification = await sendContactNotificationEmail({
@@ -136,8 +159,9 @@ export async function getStartedAction(data: {
           email: cleanEmail,
           phone: cleanPhone,
           roles: normalizedRoles,
-          status: 'sent',
+          status: smsResult.sent ? 'sent_sms_sent' : 'sent',
           filesSent: filesToSend,
+          error: smsResult.error ?? undefined,
         })
         notificationId = notification?.id ?? null
       } catch (notificationError) {
@@ -160,7 +184,7 @@ export async function getStartedAction(data: {
         })
       }
 
-      return { success: true, deliveryMethod: 'email' }
+      return { success: true, deliveryMethod: 'email', smsSent: smsResult.sent }
     } catch (deliveryError) {
       const message =
         deliveryError instanceof Error ? deliveryError.message : 'Delivery failed'
@@ -196,6 +220,113 @@ export async function getStartedAction(data: {
   } catch (err) {
     console.error('Get started unexpected error:', err)
     return { success: false, error: 'Something went wrong. Please try again.' }
+  }
+}
+
+async function sendPdfSentSms({
+  supabase,
+  phone,
+  email,
+  filesToSend,
+}: {
+  supabase: Awaited<ReturnType<typeof createClient>>
+  phone: string | null
+  email: string
+  filesToSend: string[]
+}) {
+  if (!phone) {
+    return { sent: false, error: null }
+  }
+
+  try {
+    const links = await createSignedPdfLinks({ supabase, filesToSend })
+    await sendPdfLinkMessages({
+      phone,
+      prefix: `Continua: your requested PDF was sent to ${email}. Text access links expire in 7 days.`,
+      links,
+    })
+    return { sent: true, error: null }
+  } catch (error) {
+    const message =
+      error instanceof Error ? error.message : 'SMS confirmation failed'
+    console.error('Contact SMS error:', message)
+    return { sent: false, error: `SMS error: ${message}` }
+  }
+}
+
+async function sendPdfLinksSms({
+  supabase,
+  phone,
+  filesToSend,
+}: {
+  supabase: Awaited<ReturnType<typeof createClient>>
+  phone: string | null
+  filesToSend: string[]
+}) {
+  if (!phone) {
+    return { sent: false, error: null }
+  }
+
+  try {
+    const links = await createSignedPdfLinks({ supabase, filesToSend })
+    await sendPdfLinkMessages({
+      phone,
+      prefix: 'Continua: we received your book/PDF request. Your access links expire in 7 days.',
+      links,
+    })
+    return { sent: true, error: null }
+  } catch (error) {
+    const message =
+      error instanceof Error ? error.message : 'SMS confirmation failed'
+    console.error('Contact SMS error:', message)
+    return { sent: false, error: `SMS error: ${message}` }
+  }
+}
+
+async function createSignedPdfLinks({
+  supabase,
+  filesToSend,
+}: {
+  supabase: Awaited<ReturnType<typeof createClient>>
+  filesToSend: string[]
+}) {
+  return Promise.all(
+    filesToSend.map(async (filePath) => {
+      const { data, error } = await supabase.storage
+        .from('books')
+        .createSignedUrl(filePath, SMS_LINK_EXPIRY_SECONDS)
+
+      if (error || !data?.signedUrl) {
+        throw new Error(`Could not create SMS PDF link: ${filePath}`)
+      }
+
+      return {
+        label: filePath.replace(/\.pdf$/i, ''),
+        url: data.signedUrl,
+      }
+    })
+  )
+}
+
+async function sendPdfLinkMessages({
+  phone,
+  prefix,
+  links,
+}: {
+  phone: string
+  prefix: string
+  links: Array<{ label: string; url: string }>
+}) {
+  for (const [index, link] of links.entries()) {
+    const intro =
+      links.length === 1
+        ? `${prefix} PDF:`
+        : `${prefix} ${link.label} PDF (${index + 1}/${links.length}):`
+
+    await sendServiceSms({
+      to: phone,
+      body: `${intro} ${link.url} Reply STOP to opt out or HELP for help.`,
+    })
   }
 }
 

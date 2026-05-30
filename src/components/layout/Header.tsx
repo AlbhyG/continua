@@ -129,8 +129,12 @@ function ContactForm({
       setState({ values: { name: '', email: '', phone: '' }, roles: [], confirmed: false })
       setSuccess(
         result.deliveryMethod === 'manual'
-          ? 'Thanks. Your information was saved, and Albhy will follow up manually.'
-          : 'Thanks. Your PDF email is on its way. The PDF password is your lowercase email address.'
+          ? result.smsSent
+            ? 'Thanks. Your information was saved, and a text with PDF access is on its way.'
+            : 'Thanks. Your information was saved, and Albhy will follow up manually.'
+          : result.smsSent
+            ? 'Thanks. Your PDF email and text access link are on their way. The PDF password is your lowercase email address.'
+            : 'Thanks. Your PDF email is on its way. The PDF password is your lowercase email address.'
       )
     } finally {
       submitInFlight.current = false
