@@ -81,15 +81,16 @@ type ContactFormState = {
 function ContactForm({
   state,
   setState,
+  onSuccess,
 }: {
   state: ContactFormState
   setState: React.Dispatch<React.SetStateAction<ContactFormState>>
+  onSuccess: (message: string) => void
 }) {
   const { values, roles, confirmed } = state
   const submitInFlight = useRef(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [success, setSuccess] = useState<string | null>(null)
 
   const hasContact = values.email.trim() !== '' || values.phone.trim() !== ''
   const canSubmit = values.name.trim() !== '' && hasContact && roles.length > 0 && confirmed
@@ -98,7 +99,7 @@ function ContactForm({
     setState((s) => ({ ...s, values: updater(s.values) }))
 
   const toggleRole = (role: string) => {
-    setSuccess(null)
+    setError(null)
     setState((s) => ({
       ...s,
       roles: s.roles.includes(role)
@@ -113,7 +114,6 @@ function ContactForm({
     }
     submitInFlight.current = true
     setError(null)
-    setSuccess(null)
     setSubmitting(true)
     try {
       const result = await getStartedAction({
@@ -127,7 +127,7 @@ function ContactForm({
         return
       }
       setState({ values: { name: '', email: '', phone: '' }, roles: [], confirmed: false })
-      setSuccess(
+      onSuccess(
         result.deliveryMethod === 'manual'
           ? result.smsSent
             ? 'Thanks. Your information was saved, and a text with PDF access is on its way.'
@@ -169,7 +169,7 @@ function ContactForm({
           type="text"
           value={values.name}
           onChange={(e) => {
-            setSuccess(null)
+            setError(null)
             setValues((v) => ({ ...v, name: e.target.value }))
           }}
           className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
@@ -181,7 +181,7 @@ function ContactForm({
           type="email"
           value={values.email}
           onChange={(e) => {
-            setSuccess(null)
+            setError(null)
             setValues((v) => ({ ...v, email: e.target.value }))
           }}
           className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
@@ -197,7 +197,7 @@ function ContactForm({
           type="tel"
           value={values.phone}
           onChange={(e) => {
-            setSuccess(null)
+            setError(null)
             setValues((v) => ({ ...v, phone: e.target.value }))
           }}
           className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
@@ -211,7 +211,7 @@ function ContactForm({
           type="checkbox"
           checked={confirmed}
           onChange={(e) => {
-            setSuccess(null)
+            setError(null)
             setState((s) => ({ ...s, confirmed: e.target.checked }))
           }}
           className="mt-0.5 rounded border-gray-300"
@@ -233,12 +233,38 @@ function ContactForm({
           {error}
         </p>
       )}
-      {!error && success && (
-        <p className="text-sm text-green-700" role="status">
-          {success}
-        </p>
-      )}
     </div>
+  )
+}
+
+function ContactSuccessDialog({
+  message,
+  onClose,
+}: {
+  message: string | null
+  onClose: () => void
+}) {
+  return (
+    <Dialog open={message !== null} onClose={onClose} className="relative z-[70]">
+      <DialogBackdrop className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[70]" />
+      <div className="fixed inset-0 z-[70] flex items-center justify-center p-4">
+        <DialogPanel className="w-full max-w-sm rounded-xl bg-white/95 backdrop-blur shadow-lg p-6">
+          <DialogTitle className="text-lg font-bold text-foreground">
+            Your doc is on the way
+          </DialogTitle>
+          <p className="mt-3 text-sm leading-6 text-foreground/75" role="status">
+            {message}
+          </p>
+          <button
+            type="button"
+            onClick={onClose}
+            className="mt-6 w-full px-4 py-2.5 rounded-lg bg-accent text-white text-sm font-semibold hover:bg-accent/90 transition-colors cursor-pointer"
+          >
+            OK
+          </button>
+        </DialogPanel>
+      </div>
+    </Dialog>
   )
 }
 
@@ -353,6 +379,7 @@ export default function Header() {
     roles: [],
     confirmed: false,
   })
+  const [contactSuccessMessage, setContactSuccessMessage] = useState<string | null>(null)
   const pathname = usePathname()
   const versionMatch = pathname.match(/^\/(v\d+)(?:\/|$)/)
   const versionPrefix = versionMatch ? `/${versionMatch[1]}` : ''
@@ -490,10 +517,14 @@ export default function Header() {
                 anchor="bottom end"
                 className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
               >
-                {() => (
+                {({ close }) => (
                   <ContactForm
                     state={contactState}
                     setState={setContactState}
+                    onSuccess={(message) => {
+                      close()
+                      setContactSuccessMessage(message)
+                    }}
                   />
                 )}
               </PopoverPanel>
@@ -510,10 +541,14 @@ export default function Header() {
                 anchor="bottom end"
                 className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
               >
-                {() => (
+                {({ close }) => (
                   <ContactForm
                     state={contactState}
                     setState={setContactState}
+                    onSuccess={(message) => {
+                      close()
+                      setContactSuccessMessage(message)
+                    }}
                   />
                 )}
               </PopoverPanel>
@@ -528,6 +563,10 @@ export default function Header() {
         onClose={() => setMobileMenuOpen(false)}
         versionPrefix={versionPrefix}
         latestResultId={latestResultId}
+      />
+      <ContactSuccessDialog
+        message={contactSuccessMessage}
+        onClose={() => setContactSuccessMessage(null)}
       />
     </>
   )
