@@ -22,9 +22,21 @@ If `CONTACT_PDF_STORAGE_PATH` is set, every email request sends that single file
 
 ## PDF Passwords
 
-Email submissions receive password-protected PDFs. The user password is the recipient email address lowercased. The owner password comes from `PDF_OWNER_PASSWORD`.
+Delivered PDFs (email attachments and the texted short links) are password-protected. The user password is:
 
-This password is a social/friction cue, not DRM. Recipients can still forward the PDF and password.
+- The recipient's email address, lowercased, when an email is on file.
+- The recipient's phone number, digits only with a leading country-code `1` removed (e.g. `+1 (310) 980-2841` -> `3109802841`), for phone-only submissions.
+
+The owner password comes from `PDF_OWNER_PASSWORD`. This password is a social/friction cue, not DRM. Recipients can still forward the PDF and password.
+
+## Texted Short Links (`/d/[token]`)
+
+Phone submissions receive a branded short link per file, e.g. `https://continua.info/d/<token>`, instead of a long Supabase signed URL.
+
+- Each link is a row in the `pdf_links` table (`token`, `file_path`, `user_password`, `label`, `contact_id`). See migration `00015_create_pdf_links.sql`.
+- The `/d/[token]` route (`src/app/d/[token]/route.ts`) looks up the token with the service-role client, downloads the file from the private `books` bucket, encrypts it on the fly with the stored `user_password`, and streams it inline as a password-protected PDF.
+- Tokens are short, random, and unguessable. Links do not expire; to revoke one, delete its `pdf_links` row.
+- `pdf_links` has RLS enabled with no public policies, so only server-side (service-role) code can read or create tokens. The route requires `SUPABASE_SERVICE_ROLE_KEY`.
 
 ## Updating A Book PDF (simple system)
 
@@ -89,9 +101,9 @@ Optional:
 
 Email requests download the mapped PDFs from the private `books` bucket, encrypt each PDF, send the attachments through Resend, and log the delivery in `contact_deliveries`.
 
-If a submitter provides a phone number, the server sends low-volume service SMS through Twilio after the contact is saved. The text contains time-limited signed links to the requested PDF files from the private `books` Supabase Storage bucket. Links expire after 7 days.
+If a submitter provides a phone number, the server sends low-volume service SMS through Twilio after the contact is saved. The text contains branded short links (`/d/[token]`) to the requested PDFs, served password-protected from the private `books` bucket. The text tells the recipient their password (email address, or phone number for phone-only submissions). Links do not expire.
 
-Email submissions still receive password-protected PDF attachments through Resend. If they also provide a phone number, they receive both the email attachment and the signed PDF link by text.
+Email submissions still receive password-protected PDF attachments through Resend. If they also provide a phone number, they receive both the email attachment and the short PDF link by text.
 
 Phone-only submissions receive signed PDF links by text when Twilio is configured and the toll-free sender is approved. If SMS fails or Twilio is unavailable, the request logs `manual_follow_up` and Albhy receives the notification email.
 

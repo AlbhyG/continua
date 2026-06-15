@@ -7,6 +7,12 @@ import {
   sendContactPdfEmail,
 } from '@/lib/email/send-contact-delivery'
 import { sendServiceSms } from '@/lib/sms/twilio'
+import { createAdminClient } from '@/lib/supabase/admin'
+import {
+  bookLabel,
+  derivePdfPassword,
+  generatePdfLinkToken,
+} from '@/lib/pdf/links'
 
 const CONTACT_PDF_STORAGE_PATH =
   process.env.CONTACT_PDF_STORAGE_PATH || null
@@ -22,7 +28,8 @@ const ROLE_PDF_PATHS: Record<string, string[]> = {
   Therapist: [SAMPLER_PDF],
   'Interested Reader': [SAMPLER_PDF],
 }
-const SMS_LINK_EXPIRY_SECONDS = 60 * 60 * 24 * 7
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://continua.info'
 
 export async function getStartedAction(data: {
   name: string
@@ -73,9 +80,10 @@ export async function getStartedAction(data: {
 
     if (!cleanEmail) {
       const smsResult = await sendPdfLinksSms({
-        supabase,
         phone: cleanPhone,
         filesToSend,
+        userPassword: derivePdfPassword(null, cleanPhone),
+        contactId,
       })
 
       let notificationId: string | null = null
@@ -149,10 +157,11 @@ export async function getStartedAction(data: {
       })
 
       const smsResult = await sendPdfSentSms({
-        supabase,
         phone: cleanPhone,
         email: cleanEmail,
         filesToSend,
+        userPassword: derivePdfPassword(cleanEmail, cleanPhone),
+        contactId,
       })
 
       let notificationId: string | null = null
@@ -227,25 +236,27 @@ export async function getStartedAction(data: {
 }
 
 async function sendPdfSentSms({
-  supabase,
   phone,
   email,
   filesToSend,
+  userPassword,
+  contactId,
 }: {
-  supabase: Awaited<ReturnType<typeof createClient>>
   phone: string | null
   email: string
   filesToSend: string[]
+  userPassword: string
+  contactId: number | null
 }) {
   if (!phone) {
     return { sent: false, error: null }
   }
 
   try {
-    const links = await createSignedPdfLinks({ supabase, filesToSend })
+    const links = await createPdfLinks({ filesToSend, userPassword, contactId })
     await sendPdfLinkMessages({
       phone,
-      prefix: `Continua: your requested PDF was sent to ${email}. Text access links expire in 7 days.`,
+      prefix: `Continua: your book link (also emailed to ${email}). Open the PDF using your email address as the password.`,
       links,
     })
     return { sent: true, error: null }
@@ -258,23 +269,26 @@ async function sendPdfSentSms({
 }
 
 async function sendPdfLinksSms({
-  supabase,
   phone,
   filesToSend,
+  userPassword,
+  contactId,
 }: {
-  supabase: Awaited<ReturnType<typeof createClient>>
   phone: string | null
   filesToSend: string[]
+  userPassword: string
+  contactId: number | null
 }) {
   if (!phone) {
     return { sent: false, error: null }
   }
 
   try {
-    const links = await createSignedPdfLinks({ supabase, filesToSend })
+    const links = await createPdfLinks({ filesToSend, userPassword, contactId })
     await sendPdfLinkMessages({
       phone,
-      prefix: 'Continua: we received your book/PDF request. Your access links expire in 7 days.',
+      prefix:
+        'Continua: your book is ready. Open the PDF using your mobile number as the password (digits only, no country code).',
       links,
     })
     return { sent: true, error: null }
@@ -286,29 +300,43 @@ async function sendPdfLinksSms({
   }
 }
 
-async function createSignedPdfLinks({
-  supabase,
+// Create one short, unguessable link per file. Each token maps to the file and
+// the password the /d/[token] route will encrypt it with on download.
+async function createPdfLinks({
   filesToSend,
+  userPassword,
+  contactId,
 }: {
-  supabase: Awaited<ReturnType<typeof createClient>>
   filesToSend: string[]
+  userPassword: string
+  contactId: number | null
 }) {
+  const admin = createAdminClient()
+  if (!admin) {
+    throw new Error('Service role key not configured for PDF links')
+  }
+
   return Promise.all(
     filesToSend.map(async (filePath) => {
-      const { data, error } = await supabase.storage
-        .from('books')
-        .createSignedUrl(filePath, SMS_LINK_EXPIRY_SECONDS)
-
-      if (error || !data?.signedUrl) {
-        throw new Error(`Could not create SMS PDF link: ${filePath}`)
+      const token = generatePdfLinkToken()
+      const label = bookLabel(filePath)
+      const { error } = await admin.from('pdf_links').insert({
+        token,
+        file_path: filePath,
+        user_password: userPassword,
+        label,
+        contact_id: contactId,
+      })
+      if (error) {
+        throw new Error(`Could not create PDF link: ${filePath}`)
       }
-
-      return {
-        label: filePath.replace(/\.pdf$/i, ''),
-        url: data.signedUrl,
-      }
+      return { label, url: `${SITE_URL}/d/${token}` }
     })
   )
+}
+
+function displayLabel(label: string) {
+  return label.charAt(0).toUpperCase() + label.slice(1)
 }
 
 async function sendPdfLinkMessages({
@@ -321,10 +349,11 @@ async function sendPdfLinkMessages({
   links: Array<{ label: string; url: string }>
 }) {
   for (const [index, link] of links.entries()) {
+    const name = displayLabel(link.label)
     const intro =
       links.length === 1
-        ? `${prefix} PDF:`
-        : `${prefix} ${link.label} PDF (${index + 1}/${links.length}):`
+        ? `${prefix} ${name}:`
+        : `${prefix} ${name} (${index + 1}/${links.length}):`
 
     await sendServiceSms({
       to: phone,
