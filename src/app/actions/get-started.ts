@@ -353,12 +353,9 @@ async function sendPdfLinkMessages({
     const which =
       links.length === 1 ? name : `${name} (${index + 1}/${links.length})`
 
-    // Keep the URL as the final token. Some phones only linkify a trailing URL
-    // and drop the path if other text follows it, leaving a link to the bare
-    // domain instead of the PDF.
     await sendServiceSms({
       to: phone,
-      body: `${prefix} ${which}. Reply STOP to opt out or HELP for help. ${link.url}`,
+      body: `${prefix} ${which}: ${link.url} Reply STOP to opt out or HELP for help.`,
     })
   }
 }
