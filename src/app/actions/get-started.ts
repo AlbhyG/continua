@@ -13,11 +13,14 @@ const CONTACT_PDF_STORAGE_PATH =
 const PDF_OWNER_PASSWORD =
   process.env.PDF_OWNER_PASSWORD || 'change-this-owner-password'
 const VALID_ROLES = ['Agent', 'Publisher', 'Therapist', 'Interested Reader']
-const ROLE_PDF_PATHS: Record<string, string> = {
-  Agent: 'agents.pdf',
-  Publisher: 'publishers.pdf',
-  Therapist: 'therapists.pdf',
-  'Interested Reader': 'therapists.pdf',
+// The Sampler goes to everyone. The Book Proposal goes only to Agents/Publishers.
+const SAMPLER_PDF = 'sampler.pdf'
+const PROPOSAL_PDF = 'proposal.pdf'
+const ROLE_PDF_PATHS: Record<string, string[]> = {
+  Agent: [SAMPLER_PDF, PROPOSAL_PDF],
+  Publisher: [SAMPLER_PDF, PROPOSAL_PDF],
+  Therapist: [SAMPLER_PDF],
+  'Interested Reader': [SAMPLER_PDF],
 }
 const SMS_LINK_EXPIRY_SECONDS = 60 * 60 * 24 * 7
 
@@ -66,7 +69,7 @@ export async function getStartedAction(data: {
 
     const filesToSend = CONTACT_PDF_STORAGE_PATH
       ? [CONTACT_PDF_STORAGE_PATH]
-      : Array.from(new Set(normalizedRoles.map((role) => ROLE_PDF_PATHS[role])))
+      : Array.from(new Set(normalizedRoles.flatMap((role) => ROLE_PDF_PATHS[role])))
 
     if (!cleanEmail) {
       const smsResult = await sendPdfLinksSms({

@@ -6,16 +6,17 @@ Contact PDFs live in the private Supabase Storage bucket `books`.
 
 Current files:
 
-- `agents.pdf`
-- `publishers.pdf`
-- `therapists.pdf`
+- `sampler.pdf` (Continua Book Sampler — goes to everyone)
+- `proposal.pdf` (Continua Book Proposal — agents/publishers only)
 
 Current role mapping:
 
-- Agent -> `agents.pdf`
-- Publisher -> `publishers.pdf`
-- Therapist -> `therapists.pdf`
-- Interested Reader -> `therapists.pdf`
+- Agent -> `sampler.pdf` + `proposal.pdf`
+- Publisher -> `sampler.pdf` + `proposal.pdf`
+- Therapist -> `sampler.pdf`
+- Interested Reader -> `sampler.pdf`
+
+Recipients with multiple roles get the union of their files, de-duplicated (e.g. an Agent + Therapist gets the Sampler once plus the Proposal).
 
 If `CONTACT_PDF_STORAGE_PATH` is set, every email request sends that single file instead of using the role mapping.
 
@@ -25,12 +26,33 @@ Email submissions receive password-protected PDFs. The user password is the reci
 
 This password is a social/friction cue, not DRM. Recipients can still forward the PDF and password.
 
-## Replacing A PDF
+## Updating A Book PDF (simple system)
 
-1. Open the Supabase project dashboard.
-2. Go to Storage -> `books`.
-3. Upload the replacement PDF with the same filename, or delete the old object and upload the new one.
-4. Submit a test Contact Me request for the matching role and confirm the delivered PDF opens with the lowercase email password.
+The repo ships a one-command uploader: `scripts/upload-book-pdf.mjs`. It uploads
+(with overwrite) a local PDF into the private `books` bucket.
+
+One-time setup: add the service role key to `.env.local` (it is gitignored):
+
+```
+SUPABASE_SERVICE_ROLE_KEY=<from Supabase dashboard -> Project Settings -> API -> service_role>
+```
+
+To update a book, run from the repo root:
+
+```
+node scripts/upload-book-pdf.mjs ~/Downloads/new-sampler.pdf  sampler.pdf
+node scripts/upload-book-pdf.mjs ~/Downloads/new-proposal.pdf proposal.pdf
+```
+
+The second argument is the storage filename the app expects (`sampler.pdf` for
+everyone, `proposal.pdf` for agents/publishers). Keep those names stable — they
+match `ROLE_PDF_PATHS` in `src/app/actions/get-started.ts`. After uploading,
+submit a test Contact Me request for the matching role and confirm the delivered
+PDF opens (email password is the lowercase email address; SMS links are signed
+and expire in 7 days).
+
+Manual fallback: Supabase dashboard -> Storage -> `books` -> upload with the same
+filename.
 
 ## Viewing And Exporting Contacts
 
