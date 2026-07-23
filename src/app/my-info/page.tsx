@@ -1,65 +1,129 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import FadeIn from '@/components/FadeIn'
+import ProfileForm from './profile-form'
+import { requireUser } from '@/lib/auth/current-user'
 
 export const metadata: Metadata = {
-  title: 'Info | Continua',
-  description: 'Understand your personality patterns across different contexts. Take assessments, see results, and get personalized insights with Continua.'
+  title: 'My Info',
+  description: 'Manage your Continua profile and assessment history.',
 }
 
-export default function MyInfoPage() {
+type QuizResult = {
+  id: number
+  questionnaire_id: number
+  score: number
+  taken_at: string
+}
+
+export default async function MyInfoPage() {
+  const { supabase, user } = await requireUser('/my-info')
+  const [{ data: profile }, { data: results }] = await Promise.all([
+    supabase
+      .from('contacts')
+      .select('name,email,phone,interest_roles')
+      .eq('user_id', user.id)
+      .single(),
+    supabase
+      .from('quiz_results')
+      .select('id,questionnaire_id,score,taken_at')
+      .eq('user_id', user.id)
+      .order('taken_at', { ascending: false })
+      .limit(20),
+  ])
+
+  const quizResults = (results ?? []) as QuizResult[]
+
   return (
-    <div className="bg-white min-h-screen">
-      {/* Page header */}
-      <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-20 pb-8">
-        <FadeIn>
-          <h1 className="text-[36px] md:text-[48px] leading-[1.1] font-bold text-foreground">
-            Info
-          </h1>
-        </FadeIn>
+    <main className="mx-auto max-w-[960px] px-6 py-16">
+      <div className="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/70">
+            Your Continua
+          </p>
+          <h1 className="mt-2 text-4xl font-bold text-white md:text-5xl">My Info</h1>
+          <p className="mt-3 max-w-2xl text-lg text-white/80">
+            Keep your contact information current and return to the personality
+            snapshots you’ve taken over time.
+          </p>
+        </div>
+        <form action="/auth/signout" method="post">
+          <button
+            type="submit"
+            className="rounded-full border border-white/40 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+          >
+            Sign out
+          </button>
+        </form>
+      </div>
+
+      <section className="glass-card mt-8 p-6 md:p-8">
+        <h2 className="text-2xl font-bold">Profile</h2>
+        <p className="mt-1 text-sm text-foreground/65">
+          This is the information Continua stores for your account.
+        </p>
+        <div className="mt-6">
+          <ProfileForm
+            profile={{
+              name: profile?.name ?? user.user_metadata.name ?? '',
+              email: profile?.email ?? user.email ?? '',
+              phone: profile?.phone ?? '',
+              roles: profile?.interest_roles ?? [],
+            }}
+          />
+        </div>
       </section>
 
-      {/* Content */}
-      <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-12 space-y-8">
-        <FadeIn>
+      <section className="mt-8">
+        <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
-            <h2 className="text-[22px] md:text-[26px] font-bold mb-4 text-foreground">Take Assessments</h2>
-            <p className="text-[17px] md:text-[19px] leading-[1.7] text-foreground/85">
-              Continua will offer hundreds of different assessment variations you can take whenever you want. Maybe you take one at work on a stressful Monday, another at home on a relaxed Sunday evening, and a third while traveling. Each snapshot captures where you are in that moment, and over time, these assessments build a rich picture of your personality patterns.
+            <h2 className="text-2xl font-bold text-white">Assessment history</h2>
+            <p className="mt-1 text-sm text-white/70">
+              New signed-in assessments are saved to your account.
             </p>
           </div>
-        </FadeIn>
+          <Link
+            href="/quiz"
+            className="rounded-xl bg-white/90 px-5 py-2.5 text-sm font-bold text-foreground transition hover:bg-white"
+          >
+            Take an assessment
+          </Link>
+        </div>
 
-        <FadeIn delay={100}>
-          <div>
-            <h2 className="text-[22px] md:text-[26px] font-bold mb-4 text-foreground">See Your Results</h2>
-            <p className="text-[17px] md:text-[19px] leading-[1.7] text-foreground/85">
-              All your assessments are collected in one place, and you can view them in whatever way makes sense for what you&rsquo;re exploring. Sort by date, by location, by cohorts or by tasks. Generate colorful Personality Orbs and charts that show visually where you are at a glance.
+        {quizResults.length === 0 ? (
+          <div className="glass-card mt-5 p-6">
+            <p className="text-foreground/70">
+              You don’t have any account-linked results yet. Your next assessment
+              will appear here automatically.
             </p>
           </div>
-        </FadeIn>
-
-        <FadeIn delay={200}>
-          <div>
-            <h2 className="text-[22px] md:text-[26px] font-bold mb-4 text-foreground">Tools and Actions</h2>
-            <p className="text-[17px] md:text-[19px] leading-[1.7] text-foreground/85">
-              Within each dimension, you can set specific goals and get personalized recommendations tailored to you. Whether you&rsquo;re working on individual growth, strengthening a relationship, improving family dynamics, or optimizing team performance, Continua provides actionable strategies.
-            </p>
+        ) : (
+          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            {quizResults.map((result) => (
+              <Link
+                key={result.id}
+                href={`/quiz/results/${result.id}`}
+                className="glass-card-interactive block p-5"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-wide text-foreground/45">
+                      Assessment {result.questionnaire_id}
+                    </p>
+                    <p className="mt-1 text-lg font-bold">Score {result.score}</p>
+                  </div>
+                  <time className="text-xs text-foreground/55">
+                    {new Intl.DateTimeFormat('en-US', {
+                      month: 'short',
+                      day: 'numeric',
+                      year: 'numeric',
+                    }).format(new Date(result.taken_at))}
+                  </time>
+                </div>
+              </Link>
+            ))}
           </div>
-        </FadeIn>
-
-        <FadeIn delay={300}>
-          <div>
-            <h2 className="text-[22px] md:text-[26px] font-bold mb-4 text-foreground">Extreme Examples</h2>
-            <Link
-              href="/famous-figures"
-              className="inline-block px-6 py-3 rounded-xl bg-accent text-white text-[16px] font-semibold hover:bg-accent/90 transition-colors"
-            >
-              Famous Archetypal Figures
-            </Link>
-          </div>
-        </FadeIn>
+        )}
       </section>
-    </div>
+    </main>
   )
 }

@@ -1,53 +1,122 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import FadeIn from '@/components/FadeIn'
-import { relationshipSections } from '@/lib/relationship-content'
+import { Suspense } from 'react'
+import RelationshipManager, {
+  type RelationshipGroup,
+  type RelationshipPerson,
+} from './relationship-manager'
+import { requireUser } from '@/lib/auth/current-user'
 
 export const metadata: Metadata = {
-  title: 'My Relationships | Continua',
-  description: 'Understand personality patterns in your relationships. See how Continua helps couples, families, and teams transform differences into complementarity.'
+  title: 'My Relationships',
+  description: 'Create people and groups and explore their combined Continua profiles.',
 }
 
-export default function MyRelationshipsPage() {
+type PersonRow = {
+  id: string
+  name: string
+  email: string | null
+  is_self: boolean
+}
+
+type GroupRow = {
+  id: string
+  name: string
+  kind: string
+}
+
+type ResultRow = {
+  id: number
+  person_id: string
+  score: number
+  taken_at: string
+}
+
+export default async function MyRelationshipsPage() {
+  const { supabase, user } = await requireUser('/my-relationships')
+  const [{ data: peopleData }, { data: groupsData }] = await Promise.all([
+    supabase
+      .from('people')
+      .select('id,name,email,is_self')
+      .eq('owner_user_id', user.id)
+      .order('is_self', { ascending: false })
+      .order('name'),
+    supabase
+      .from('groups')
+      .select('id,name,kind')
+      .eq('owner_user_id', user.id)
+      .order('created_at'),
+  ])
+
+  const personRows = (peopleData ?? []) as PersonRow[]
+  const groupRows = (groupsData ?? []) as GroupRow[]
+  const personIds = personRows.map((person) => person.id)
+  const groupIds = groupRows.map((group) => group.id)
+
+  const [{ data: resultData }, { data: memberData }] = await Promise.all([
+    personIds.length
+      ? supabase
+          .from('quiz_results')
+          .select('id,person_id,score,taken_at')
+          .in('person_id', personIds)
+          .order('taken_at', { ascending: false })
+      : Promise.resolve({ data: [] }),
+    groupIds.length
+      ? supabase
+          .from('group_members')
+          .select('group_id')
+          .in('group_id', groupIds)
+      : Promise.resolve({ data: [] }),
+  ])
+
+  const latestByPerson = new Map<string, ResultRow>()
+  for (const result of (resultData ?? []) as ResultRow[]) {
+    if (!latestByPerson.has(result.person_id)) {
+      latestByPerson.set(result.person_id, result)
+    }
+  }
+
+  const countByGroup = new Map<string, number>()
+  for (const member of memberData ?? []) {
+    countByGroup.set(member.group_id, (countByGroup.get(member.group_id) ?? 0) + 1)
+  }
+
+  const people: RelationshipPerson[] = personRows.map((person) => {
+    const latest = latestByPerson.get(person.id)
+    return {
+      id: person.id,
+      name: person.name,
+      email: person.email,
+      isSelf: person.is_self,
+      latestResult: latest
+        ? { id: latest.id, score: latest.score, takenAt: latest.taken_at }
+        : null,
+    }
+  })
+
+  const groups: RelationshipGroup[] = groupRows.map((group) => ({
+    id: group.id,
+    name: group.name,
+    kind: group.kind,
+    memberCount: countByGroup.get(group.id) ?? 0,
+  }))
+
   return (
-    <div>
-      {/* Page header */}
-      <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-20 pb-8">
-        <FadeIn>
-          <h1 className="text-[36px] md:text-[48px] leading-[1.1] font-bold text-white mb-4">
-            My Relationships
-          </h1>
-          <p className="text-[18px] md:text-[20px] leading-[1.6] text-white/80">
-            We will provide tools for leveraging and optimizing relationships with others and with yourself.
-          </p>
-        </FadeIn>
-      </section>
-
-      {/* Content cards */}
-      <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-12 space-y-6">
-        {relationshipSections.map((section, i) => (
-          <FadeIn key={section.title} delay={i * 100}>
-            <div className="glass-card p-8">
-              <h2 className="text-[22px] md:text-[26px] font-bold mb-4">{section.title}</h2>
-              <p className="text-[17px] md:text-[19px] leading-[1.7] text-foreground/85">
-                {section.body}
-              </p>
-            </div>
-          </FadeIn>
-        ))}
-
-        <FadeIn delay={400}>
-          <div className="glass-card p-6">
-            <p className="text-[17px] md:text-[19px] leading-[1.7] text-foreground/75 italic">
-              Want to learn more about yourself? Check out{' '}
-              <Link href="/my-info" className="text-accent underline underline-offset-2 hover:text-accent/80 transition-colors">
-                Info
-              </Link>{' '}
-              to explore personality assessments and your personal profile.
-            </p>
-          </div>
-        </FadeIn>
-      </section>
-    </div>
+    <main className="mx-auto max-w-[960px] px-6 py-16">
+      <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/70">
+        Your Continua
+      </p>
+      <h1 className="mt-2 text-4xl font-bold text-white md:text-5xl">
+        My Relationships
+      </h1>
+      <p className="mt-3 max-w-2xl text-lg text-white/80">
+        Add the people who matter to you, organize them into groups, and compare
+        the personality patterns that shape your relationships.
+      </p>
+      <div className="mt-7">
+        <Suspense fallback={null}>
+          <RelationshipManager people={people} groups={groups} />
+        </Suspense>
+      </div>
+    </main>
   )
 }

@@ -31,9 +31,29 @@ export async function updateSession(request: NextRequest) {
     }
   )
 
-  // IMPORTANT: Use getUser() instead of getSession() to validate JWT with Supabase server
-  // This refreshes the auth token if needed
-  await supabase.auth.getUser()
+  // IMPORTANT: Use getUser() instead of getSession() to validate the JWT and
+  // refresh it when needed.
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
+  const protectedPaths = ['/my-info', '/my-relationships']
+  const isProtected = protectedPaths.some(
+    (path) =>
+      request.nextUrl.pathname === path ||
+      request.nextUrl.pathname.startsWith(`${path}/`)
+  )
+
+  if (isProtected && !user) {
+    const loginUrl = request.nextUrl.clone()
+    loginUrl.pathname = '/login'
+    loginUrl.search = ''
+    loginUrl.searchParams.set(
+      'next',
+      `${request.nextUrl.pathname}${request.nextUrl.search}`
+    )
+    return NextResponse.redirect(loginUrl)
+  }
 
   return response
 }

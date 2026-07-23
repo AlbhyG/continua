@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getResultById } from "@/lib/quiz/db";
 import { getAxisLabel, AXIS_INFO, type AxisScores } from "@/lib/quiz/scoring";
 import { createShareLink } from "@/lib/quiz/share";
+import { createClient } from "@/lib/supabase/server";
 
 export async function GET(
   request: NextRequest,
@@ -10,16 +11,24 @@ export async function GET(
   const { id } = await params;
   const resultId = Number(id);
   const token = request.cookies.get("anonymous_token")?.value;
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
   if (isNaN(resultId)) {
     return NextResponse.json({ error: "Invalid result ID" }, { status: 400 });
   }
 
-  if (!token) {
+  if (!token && !user) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
   }
 
-  const row = await getResultById(resultId, token);
+  const row = await getResultById(resultId, {
+    anonymousToken: token,
+    userId: user?.id,
+    supabase,
+  });
   if (!row) {
     return NextResponse.json({ error: "Result not found" }, { status: 404 });
   }
@@ -42,6 +51,7 @@ export async function GET(
     score: scores.empathy,
     label: getAxisLabel("empathy", scores.empathy),
     questionnaireId: row.questionnaire_id,
+    scores,
   });
 
   return NextResponse.json({
@@ -49,5 +59,6 @@ export async function GET(
     scores,
     axisResults,
     shareLink,
+    personId: row.person_id,
   });
 }

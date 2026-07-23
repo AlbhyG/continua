@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 
 interface Question {
   text: string;
@@ -24,7 +24,10 @@ const LIKERT_OPTIONS = [
 export default function QuizTakePage() {
   const params = useParams();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const questionnaireId = Number(params.id);
+  const personId = searchParams.get("person");
+  const personName = searchParams.get("name");
 
   const [questionnaire, setQuestionnaire] = useState<Questionnaire | null>(null);
   const [answers, setAnswers] = useState<Record<number, number>>({});
@@ -69,6 +72,7 @@ export default function QuizTakePage() {
         questionnaireId: questionnaire.id,
         answers: orderedAnswers,
         anonymousToken: token,
+        personId: personId || undefined,
       }),
     });
 
@@ -106,6 +110,11 @@ export default function QuizTakePage() {
   return (
     <div className="mx-auto max-w-2xl px-6 pt-20 pb-12">
       <div>
+        {personName && (
+          <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-foreground/55">
+            Assessment for {personName}
+          </p>
+        )}
         <h1 className="text-3xl font-bold text-foreground">
           Personality Assessment
         </h1>

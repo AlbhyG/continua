@@ -35,6 +35,8 @@ interface ResultData {
   scores: Record<string, number>;
   axisResults: AxisResult[];
   shareLink: string;
+  personId?: string | null;
+  personName?: string | null;
 }
 
 export default function QuizResultsPage() {
@@ -61,7 +63,10 @@ export default function QuizResultsPage() {
   }, [resultId]);
 
   async function takeAnother() {
-    const res = await fetch("/quiz/api/random");
+    const personQuery = result?.personId
+      ? `?person=${encodeURIComponent(result.personId)}`
+      : "";
+    const res = await fetch(`/quiz/api/random${personQuery}`);
     if (!res.ok) {
       const data = await res.json();
       if (data.error === "all_completed") {
@@ -71,7 +76,10 @@ export default function QuizResultsPage() {
       return;
     }
     const { id } = await res.json();
-    router.push(`/quiz/take/${id}`);
+    const next = new URLSearchParams();
+    if (result?.personId) next.set("person", result.personId);
+    if (result?.personName) next.set("name", result.personName);
+    router.push(`/quiz/take/${id}${next.size ? `?${next.toString()}` : ""}`);
   }
 
   function copyShareLink() {
@@ -96,6 +104,11 @@ export default function QuizResultsPage() {
   return (
     <div className="mx-auto max-w-2xl px-6 pt-24 pb-12">
       <h1 className="text-3xl font-bold text-foreground">Your Personality Graph</h1>
+      {result.personName && (
+        <p className="mt-1 text-sm font-semibold text-foreground/70">
+          Assessment for {result.personName}
+        </p>
+      )}
       <p className="mt-2 text-foreground/60 text-sm">
         Your coordinates across 6 personality dimensions
       </p>

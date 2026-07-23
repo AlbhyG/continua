@@ -18,6 +18,7 @@ import {
   DialogTitle,
 } from '@headlessui/react'
 import { getStartedAction } from '@/app/actions/get-started'
+import AccountButton from '@/components/auth/AccountButton'
 
 function ChevronDown({ className }: { className?: string }) {
   return (
@@ -336,23 +337,20 @@ function MobileMenu({
               My Relationships
             </Link>
             <div className="space-y-1">
-              <span className="block text-[15px] text-gray-400 py-2 px-3">
+              <Link
+                href="/my-relationships?add=person"
+                onClick={onClose}
+                className="block px-3 py-2 text-[15px] text-foreground/80 hover:text-foreground"
+              >
                 + Add a Person
-              </span>
-              <span className="block text-[15px] text-gray-400 py-2 px-3">
+              </Link>
+              <Link
+                href="/my-relationships?add=group"
+                onClick={onClose}
+                className="block px-3 py-2 text-[15px] text-foreground/80 hover:text-foreground"
+              >
                 + Add a Group
-              </span>
-              <div className="ml-3 border-l-2 border-gray-200 pl-3 space-y-1">
-                <span className="block text-sm text-gray-400 py-1.5 px-3">
-                  Family
-                </span>
-                <span className="block text-sm text-gray-400 py-1.5 px-3">
-                  Friend
-                </span>
-                <span className="block text-sm text-gray-400 py-1.5 px-3">
-                  Team
-                </span>
-              </div>
+              </Link>
             </div>
           </div>
 
@@ -363,6 +361,9 @@ function MobileMenu({
           >
             About
           </Link>
+          <div className="mt-8">
+            <AccountButton mobile onNavigate={onClose} />
+          </div>
         </DialogPanel>
       </div>
     </Dialog>
@@ -463,7 +464,7 @@ export default function Header() {
               </MenuItems>
             </Menu>
 
-            {/* My Relationships — clickable link with greyed-out dropdown */}
+            {/* My Relationships */}
             <Menu>
               <div className="flex items-center gap-0">
                 <Link href={`${versionPrefix}/my-relationships`} className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
@@ -474,39 +475,28 @@ export default function Header() {
                 </MenuButton>
               </div>
               <MenuItems anchor="bottom start" className={dropdownClass}>
-                <MenuItem disabled>
+                <MenuItem>
                   {() => (
-                    <span className={greyedItemClass}>+ Add a Person</span>
+                    <Link href="/my-relationships?add=person" className={menuItemClass}>
+                      + Add a Person
+                    </Link>
                   )}
                 </MenuItem>
-                <MenuItem disabled>
+                <MenuItem>
                   {() => (
-                    <span className={greyedItemClass}>+ Add a Group</span>
+                    <Link href="/my-relationships?add=group" className={menuItemClass}>
+                      + Add a Group
+                    </Link>
                   )}
                 </MenuItem>
-                <div className="ml-6 border-l-2 border-gray-200 pl-2">
-                  <MenuItem disabled>
-                    {() => (
-                      <span className={greyedItemClass}>Family</span>
-                    )}
-                  </MenuItem>
-                  <MenuItem disabled>
-                    {() => (
-                      <span className={greyedItemClass}>Friend</span>
-                    )}
-                  </MenuItem>
-                  <MenuItem disabled>
-                    {() => (
-                      <span className={greyedItemClass}>Team</span>
-                    )}
-                  </MenuItem>
-                </div>
               </MenuItems>
             </Menu>
 
             <Link href="/about" className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
               About
             </Link>
+
+            <AccountButton />
 
             {/* Contact me (desktop) */}
             <Popover className="relative">

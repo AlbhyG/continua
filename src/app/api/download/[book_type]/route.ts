@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 
 // Force dynamic rendering to prevent caching
 export const dynamic = 'force-dynamic'
@@ -37,14 +37,20 @@ export async function GET(
       )
     }
 
-    // Create Supabase client
-    // IMPORTANT: This uses NEXT_PUBLIC_SUPABASE_ANON_KEY (anon role, NOT service_role).
-    // All database operations go through RLS. The SELECT and INSERT policies created
-    // in migration 00006 are required for these queries to succeed.
-    const supabase = await createClient()
+    // Database and private storage access stay server-side. The service role is
+    // never returned to the browser.
+    const supabase = createAdminClient()
+    if (!supabase) {
+      return new Response(
+        JSON.stringify({ error: 'Download service is not configured' }),
+        {
+          status: 503,
+          headers: { 'Content-Type': 'application/json' }
+        }
+      )
+    }
 
     // Verify email is verified in database
-    // This query relies on the "Allow anonymous select on verified contacts" RLS policy
     const { data, error } = await supabase
       .from('contacts')
       .select('id, email_verified')
@@ -63,7 +69,6 @@ export async function GET(
     }
 
     // Log the download
-    // This INSERT relies on the "Allow anonymous insert on book_downloads" RLS policy
     // Log errors but don't block the download if logging fails
     const { error: logError } = await supabase
       .from('book_downloads')

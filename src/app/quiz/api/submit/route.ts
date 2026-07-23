@@ -3,13 +3,15 @@ import { ensureUser, storeResult } from "@/lib/quiz/db";
 import { getQuestionnaire } from "@/lib/quiz/questionnaires";
 import { calculateScores, getAxisLabel, AXIS_INFO } from "@/lib/quiz/scoring";
 import { createShareLink } from "@/lib/quiz/share";
+import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
-  const { questionnaireId, answers, anonymousToken } = body as {
+  const { questionnaireId, answers, anonymousToken, personId } = body as {
     questionnaireId: number;
     answers: number[];
     anonymousToken: string;
+    personId?: string;
   };
 
   if (!questionnaireId || !answers || !anonymousToken) {
@@ -62,13 +64,59 @@ export async function POST(request: NextRequest) {
     scores,
   });
 
-  await ensureUser(anonymousToken);
-  const resultId = await storeResult(anonymousToken, questionnaireId, scores.empathy, scores);
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  let ownedPersonId: string | null = null;
+  let personName: string | null = null;
+  if (user) {
+    await supabase.rpc("ensure_current_user_records");
+    let personQuery = supabase
+      .from("people")
+      .select("id,name")
+      .eq("owner_user_id", user.id);
+
+    personQuery = personId
+      ? personQuery.eq("id", personId)
+      : personQuery.eq("is_self", true);
+
+    const { data: person } = await personQuery.single();
+    if (!person) {
+      return NextResponse.json(
+        { error: "That person is not available." },
+        { status: 403 }
+      );
+    }
+    ownedPersonId = person.id;
+    personName = person.name;
+  } else if (personId) {
+    return NextResponse.json(
+      { error: "Sign in to save assessments for another person." },
+      { status: 403 }
+    );
+  }
+
+  await ensureUser(anonymousToken, supabase);
+  const resultId = await storeResult(
+    anonymousToken,
+    questionnaireId,
+    scores.empathy,
+    scores,
+    {
+      userId: user?.id ?? null,
+      personId: ownedPersonId,
+      supabase,
+    }
+  );
 
   return NextResponse.json({
     resultId,
     scores,
     axisResults,
     shareLink,
+    personId: ownedPersonId,
+    personName,
   });
 }
