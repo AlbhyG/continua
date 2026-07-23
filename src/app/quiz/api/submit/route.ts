@@ -4,6 +4,7 @@ import { getQuestionnaire } from "@/lib/quiz/questionnaires";
 import { calculateScores, getAxisLabel, AXIS_INFO } from "@/lib/quiz/scoring";
 import { createShareLink } from "@/lib/quiz/share";
 import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
@@ -98,7 +99,15 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  await ensureUser(anonymousToken, supabase);
+  const admin = createAdminClient();
+  if (!admin) {
+    return NextResponse.json(
+      { error: "Quiz storage is not configured." },
+      { status: 500 }
+    );
+  }
+
+  await ensureUser(anonymousToken, admin);
   const resultId = await storeResult(
     anonymousToken,
     questionnaireId,
@@ -107,7 +116,7 @@ export async function POST(request: NextRequest) {
     {
       userId: user?.id ?? null,
       personId: ownedPersonId,
-      supabase,
+      supabase: admin,
     }
   );
 
