@@ -3,6 +3,7 @@ import { getResultById } from "@/lib/quiz/db";
 import { getAxisLabel, AXIS_INFO, type AxisScores } from "@/lib/quiz/scoring";
 import { createShareLink } from "@/lib/quiz/share";
 import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 export async function GET(
   request: NextRequest,
@@ -24,10 +25,18 @@ export async function GET(
     return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
   }
 
+  const admin = createAdminClient();
+  if (!admin) {
+    return NextResponse.json(
+      { error: "Result service unavailable" },
+      { status: 503 }
+    );
+  }
+
   const row = await getResultById(resultId, {
     anonymousToken: token,
     userId: user?.id,
-    supabase,
+    supabase: admin,
   });
   if (!row) {
     return NextResponse.json({ error: "Result not found" }, { status: 404 });
