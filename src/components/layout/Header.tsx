@@ -377,6 +377,7 @@ function MobileMenu({
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [latestResultId, setLatestResultId] = useState<string | null>(null)
+  const [portalReady, setPortalReady] = useState(false)
   const [contactState, setContactState] = useState<ContactFormState>({
     values: { name: '', email: '', phone: '' },
     roles: [],
@@ -388,6 +389,7 @@ export default function Header() {
   const versionPrefix = versionMatch ? `/${versionMatch[1]}` : ''
 
   useEffect(() => {
+    setPortalReady(true)
     setLatestResultId(localStorage.getItem('latest_result_id'))
 
     const syncLatestResult = () => {
@@ -505,9 +507,11 @@ export default function Header() {
               <PopoverButton className="bg-accent text-white rounded-full px-5 py-2 text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer ring-1 ring-accent/30">
                 Contact me
               </PopoverButton>
-              <Portal>
-                <PopoverBackdrop className="fixed inset-0 z-[90] bg-transparent" />
-              </Portal>
+              {portalReady && (
+                <Portal>
+                  <PopoverBackdrop className="fixed inset-0 z-[90] bg-transparent" />
+                </Portal>
+              )}
               <PopoverPanel
                 anchor="bottom end"
                 className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
@@ -532,9 +536,11 @@ export default function Header() {
               <PopoverButton className="bg-accent text-white rounded-full px-4 py-1.5 text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer ring-1 ring-accent/30">
                 Contact me
               </PopoverButton>
-              <Portal>
-                <PopoverBackdrop className="fixed inset-0 z-[90] bg-transparent" />
-              </Portal>
+              {portalReady && (
+                <Portal>
+                  <PopoverBackdrop className="fixed inset-0 z-[90] bg-transparent" />
+                </Portal>
+              )}
               <PopoverPanel
                 anchor="bottom end"
                 className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
