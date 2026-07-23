@@ -13,6 +13,7 @@ import {
   PopoverBackdrop,
   PopoverButton,
   PopoverPanel,
+  Portal,
   Dialog,
   DialogBackdrop,
   DialogPanel,
@@ -504,7 +505,9 @@ export default function Header() {
               <PopoverButton className="bg-accent text-white rounded-full px-5 py-2 text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer ring-1 ring-accent/30">
                 Contact me
               </PopoverButton>
-              <PopoverBackdrop className="fixed inset-0 z-[90] bg-transparent" />
+              <Portal>
+                <PopoverBackdrop className="fixed inset-0 z-[90] bg-transparent" />
+              </Portal>
               <PopoverPanel
                 anchor="bottom end"
                 className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
@@ -529,7 +532,9 @@ export default function Header() {
               <PopoverButton className="bg-accent text-white rounded-full px-4 py-1.5 text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer ring-1 ring-accent/30">
                 Contact me
               </PopoverButton>
-              <PopoverBackdrop className="fixed inset-0 z-[90] bg-transparent" />
+              <Portal>
+                <PopoverBackdrop className="fixed inset-0 z-[90] bg-transparent" />
+              </Portal>
               <PopoverPanel
                 anchor="bottom end"
                 className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
