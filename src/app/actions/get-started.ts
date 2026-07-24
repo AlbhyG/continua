@@ -8,6 +8,7 @@ import {
 } from '@/lib/email/send-contact-delivery'
 import { sendServiceSms } from '@/lib/sms/twilio'
 import { createAdminClient } from '@/lib/supabase/admin'
+import type { SupabaseClient } from '@supabase/supabase-js'
 import {
   bookLabel,
   derivePdfPassword,
@@ -74,6 +75,14 @@ export async function getStartedAction(data: {
       return { success: false, error: 'Something went wrong. Please try again.' }
     }
 
+    const deliveryAdmin = createAdminClient()
+    if (!deliveryAdmin) {
+      return {
+        success: false,
+        error: 'We saved your information, but delivery is not configured yet.',
+      }
+    }
+
     const filesToSend = CONTACT_PDF_STORAGE_PATH
       ? [CONTACT_PDF_STORAGE_PATH]
       : Array.from(new Set(normalizedRoles.flatMap((role) => ROLE_PDF_PATHS[role])))
@@ -105,7 +114,7 @@ export async function getStartedAction(data: {
       }
 
       if (contactId) {
-        await logContactDelivery(supabase, {
+        await logContactDelivery(deliveryAdmin, {
           contact_id: contactId,
           roles: normalizedRoles,
           delivery_method: 'manual',
@@ -128,7 +137,7 @@ export async function getStartedAction(data: {
     try {
       const attachments = await Promise.all(
         filesToSend.map(async (filePath) => {
-          const { data: sourcePdf, error: sourceError } = await supabase.storage
+          const { data: sourcePdf, error: sourceError } = await deliveryAdmin.storage
             .from('books')
             .download(filePath)
 
@@ -181,7 +190,7 @@ export async function getStartedAction(data: {
       }
 
       if (contactId) {
-        await logContactDelivery(supabase, {
+        await logContactDelivery(deliveryAdmin, {
           contact_id: contactId,
           roles: normalizedRoles,
           delivery_method: 'email',
@@ -201,7 +210,7 @@ export async function getStartedAction(data: {
       const message =
         deliveryError instanceof Error ? deliveryError.message : 'Delivery failed'
       if (contactId) {
-        await logContactDelivery(supabase, {
+        await logContactDelivery(deliveryAdmin, {
           contact_id: contactId,
           roles: normalizedRoles,
           delivery_method: 'email',
@@ -361,7 +370,7 @@ async function sendPdfLinkMessages({
 }
 
 async function logContactDelivery(
-  supabase: Awaited<ReturnType<typeof createClient>>,
+  supabase: SupabaseClient,
   payload: Record<string, unknown>
 ) {
   const { error } = await supabase.from('contact_deliveries').insert(payload)
