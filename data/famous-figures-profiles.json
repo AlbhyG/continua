@@ -2,7 +2,7 @@
   {
     "name": "Adolf Hitler",
     "primary": "Narcissist",
-    "tags": "Narcissist \u00b7 Hypo-Attuned",
+    "tags": "Narcissist · Hypo-Attuned",
     "scores": {
       "social_attunement": 8,
       "empathy": 1,
@@ -15,7 +15,7 @@
   {
     "name": "Napoleon Bonaparte",
     "primary": "Narcissist",
-    "tags": "Narcissist \u00b7 Hypo-Attuned \u00b7 Impulsive",
+    "tags": "Narcissist · Hypo-Attuned · Impulsive",
     "scores": {
       "social_attunement": 7,
       "empathy": 3,
@@ -26,9 +26,9 @@
     }
   },
   {
-    "name": "Alexander The Great",
+    "name": "Alexander the Great",
     "primary": "Narcissist",
-    "tags": "Narcissist \u00b7 Impulsive",
+    "tags": "Narcissist · Impulsive",
     "scores": {
       "social_attunement": 7,
       "empathy": 3,
@@ -41,7 +41,7 @@
   {
     "name": "Joseph Stalin",
     "primary": "Narcissist",
-    "tags": "Narcissist \u00b7 Hypo-Attuned",
+    "tags": "Narcissist · Hypo-Attuned",
     "scores": {
       "social_attunement": 8,
       "empathy": 1,
@@ -67,7 +67,7 @@
   {
     "name": "Nero",
     "primary": "Narcissist",
-    "tags": "Narcissist \u00b7 High-Reactive",
+    "tags": "Narcissist · High-Reactive",
     "scores": {
       "social_attunement": 5,
       "empathy": 1,
@@ -106,7 +106,7 @@
   {
     "name": "Benito Mussolini",
     "primary": "Narcissist",
-    "tags": "Narcissist \u00b7 High-Reactive",
+    "tags": "Narcissist · High-Reactive",
     "scores": {
       "social_attunement": 7,
       "empathy": 2,
@@ -119,7 +119,7 @@
   {
     "name": "Caligula",
     "primary": "Narcissist",
-    "tags": "Narcissist \u00b7 High-Reactive",
+    "tags": "Narcissist · High-Reactive",
     "scores": {
       "social_attunement": 5,
       "empathy": 1,
@@ -145,7 +145,7 @@
   {
     "name": "King Henry VIII",
     "primary": "Narcissist",
-    "tags": "Narcissist \u00b7 Hypo-Attuned \u00b7 High-Reactive",
+    "tags": "Narcissist · Hypo-Attuned · High-Reactive",
     "scores": {
       "social_attunement": 6,
       "empathy": 2,
@@ -169,45 +169,6 @@
     }
   },
   {
-    "name": "Pablo Picasso",
-    "primary": "Narcissist",
-    "tags": "Narcissist",
-    "scores": {
-      "social_attunement": 6,
-      "empathy": 3,
-      "self_orientation": 9,
-      "conscientiousness": 7,
-      "agency": 8,
-      "reactivity": 8
-    }
-  },
-  {
-    "name": "Andy Warhol",
-    "primary": "Narcissist",
-    "tags": "Narcissist",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 3,
-      "self_orientation": 8,
-      "conscientiousness": 6,
-      "agency": 7,
-      "reactivity": 4
-    }
-  },
-  {
-    "name": "Steve Jobs",
-    "primary": "Narcissist",
-    "tags": "Narcissist \u00b7 Hypo-Attuned",
-    "scores": {
-      "social_attunement": 5,
-      "empathy": 3,
-      "self_orientation": 8,
-      "conscientiousness": 7,
-      "agency": 10,
-      "reactivity": 9
-    }
-  },
-  {
     "name": "Richard Nixon",
     "primary": "Narcissist",
     "tags": "Narcissist",
@@ -221,7 +182,7 @@
     }
   },
   {
-    "name": "Eva Per\u00f3n",
+    "name": "Eva Perón",
     "primary": "Narcissist",
     "tags": "Narcissist",
     "scores": {
@@ -247,7 +208,7 @@
     }
   },
   {
-    "name": "Ivan The Terrible",
+    "name": "Ivan the Terrible",
     "primary": "Narcissist",
     "tags": "Narcissist",
     "scores": {
@@ -260,22 +221,9 @@
     }
   },
   {
-    "name": "Oscar Wilde",
+    "name": "Vlad the Impaler",
     "primary": "Narcissist",
-    "tags": "Narcissist",
-    "scores": {
-      "social_attunement": 9,
-      "empathy": 5,
-      "self_orientation": 8,
-      "conscientiousness": 4,
-      "agency": 8,
-      "reactivity": 7
-    }
-  },
-  {
-    "name": "Vlad The Impaler",
-    "primary": "Narcissist",
-    "tags": "Narcissist \u00b7 Hypo-Attuned \u00b7 Impulsive \u00b7 High-Reactive",
+    "tags": "Narcissist · Hypo-Attuned · Impulsive · High-Reactive",
     "scores": {
       "social_attunement": 4,
       "empathy": 1,
@@ -312,94 +260,133 @@
     }
   },
   {
-    "name": "Donald Trump",
+    "name": "Oscar Wilde",
     "primary": "Narcissist",
-    "tags": "Narcissist \u00b7 Hypo-Attuned",
+    "tags": "Narcissist",
     "scores": {
-      "social_attunement": 5,
+      "social_attunement": 9,
+      "empathy": 5,
+      "self_orientation": 8,
+      "conscientiousness": 4,
+      "agency": 8,
+      "reactivity": 7
+    }
+  },
+  {
+    "name": "Genghis Khan",
+    "primary": "Narcissist",
+    "tags": "Narcissist",
+    "scores": {
+      "social_attunement": 6,
       "empathy": 2,
       "self_orientation": 10,
-      "conscientiousness": 4,
-      "agency": 10,
+      "conscientiousness": 5,
+      "agency": 9,
       "reactivity": 8
     }
   },
   {
-    "name": "Kanye West",
-    "primary": "Narcissist",
-    "tags": "Narcissist \u00b7 Hypo-Attuned \u00b7 Impulsive \u00b7 High-Reactive",
-    "scores": {
-      "social_attunement": 4,
-      "empathy": 5,
-      "self_orientation": 9,
-      "conscientiousness": 2,
-      "agency": 9,
-      "reactivity": 10
-    }
-  },
-  {
-    "name": "Elon Musk",
-    "primary": "Narcissist",
-    "tags": "Narcissist \u00b7 Hypo-Attuned \u00b7 Conscientious \u00b7 Impulsive",
-    "scores": {
-      "social_attunement": 3,
-      "empathy": 4,
-      "self_orientation": 8,
-      "conscientiousness": 7,
-      "agency": 10,
-      "reactivity": 6
-    }
-  },
-  {
-    "name": "Kim Kardashian",
+    "name": "Julius Caesar",
     "primary": "Narcissist",
     "tags": "Narcissist",
     "scores": {
-      "social_attunement": 8,
-      "empathy": 4,
-      "self_orientation": 9,
-      "conscientiousness": 7,
-      "agency": 8,
-      "reactivity": 5
-    }
-  },
-  {
-    "name": "Tom Cruise",
-    "primary": "Narcissist",
-    "tags": "Narcissist",
-    "scores": {
-      "social_attunement": 7,
-      "empathy": 4,
-      "self_orientation": 8,
-      "conscientiousness": 9,
-      "agency": 9,
-      "reactivity": 6
-    }
-  },
-  {
-    "name": "Madonna",
-    "primary": "Narcissist",
-    "tags": "Narcissist",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 3,
-      "self_orientation": 9,
-      "conscientiousness": 8,
-      "agency": 10,
-      "reactivity": 7
-    }
-  },
-  {
-    "name": "Harvey Weinstein",
-    "primary": "Narcissist",
-    "tags": "Narcissist \u00b7 Hypo-Attuned",
-    "scores": {
-      "social_attunement": 7,
-      "empathy": 1,
+      "social_attunement": 6,
+      "empathy": 2,
       "self_orientation": 10,
-      "conscientiousness": 7,
-      "agency": 10,
-      "reactivity": 7
+      "conscientiousness": 5,
+      "agency": 9,
+      "reactivity": 8
+    }
+  },
+  {
+    "name": "Attila the Hun",
+    "primary": "Narcissist",
+    "tags": "Narcissist",
+    "scores": {
+      "social_attunement": 6,
+      "empathy": 2,
+      "self_orientation": 10,
+      "conscientiousness": 5,
+      "agency": 9,
+      "reactivity": 8
+    }
+  },
+  {
+    "name": "Pol Pot",
+    "primary": "Narcissist",
+    "tags": "Narcissist",
+    "scores": {
+      "social_attunement": 6,
+      "empathy": 2,
+      "self_orientation": 10,
+      "conscientiousness": 5,
+      "agency": 9,
+      "reactivity": 8
+    }
+  },
+  {
+    "name": "Idi Amin",
+    "primary": "Narcissist",
+    "tags": "Narcissist",
+    "scores": {
+      "social_attunement": 6,
+      "empathy": 2,
+      "self_orientation": 10,
+      "conscientiousness": 5,
+      "agency": 9,
+      "reactivity": 8
+    }
+  },
+  {
+    "name": "Kim Il-sung",
+    "primary": "Narcissist",
+    "tags": "Narcissist",
+    "scores": {
+      "social_attunement": 6,
+      "empathy": 2,
+      "self_orientation": 10,
+      "conscientiousness": 5,
+      "agency": 9,
+      "reactivity": 8
+    }
+  },
+  {
+    "name": "Maximilien Robespierre",
+    "primary": "Narcissist",
+    "tags": "Narcissist",
+    "scores": {
+      "social_attunement": 6,
+      "empathy": 2,
+      "self_orientation": 10,
+      "conscientiousness": 5,
+      "agency": 9,
+      "reactivity": 8
+    }
+  },
+  {
+    "name": "Leopold II of Belgium",
+    "primary": "Narcissist",
+    "tags": "Narcissist",
+    "scores": {
+      "social_attunement": 6,
+      "empathy": 2,
+      "self_orientation": 10,
+      "conscientiousness": 5,
+      "agency": 9,
+      "reactivity": 8
+    }
+  },
+  {
+    "name": "Commodus",
+    "primary": "Narcissist",
+    "tags": "Narcissist",
+    "scores": {
+      "social_attunement": 6,
+      "empathy": 2,
+      "self_orientation": 10,
+      "conscientiousness": 5,
+      "agency": 9,
+      "reactivity": 8
     }
   },
   {
@@ -455,269 +442,9 @@
     }
   },
   {
-    "name": "Azim Premji",
-    "primary": "Altruist",
-    "tags": "Altruist",
-    "scores": {
-      "social_attunement": 6,
-      "empathy": 8,
-      "self_orientation": 1,
-      "conscientiousness": 9,
-      "agency": 8,
-      "reactivity": 3
-    }
-  },
-  {
-    "name": "Peter Singer",
-    "primary": "Altruist",
-    "tags": "Altruist",
-    "scores": {
-      "social_attunement": 6,
-      "empathy": 9,
-      "self_orientation": 1,
-      "conscientiousness": 9,
-      "agency": 7,
-      "reactivity": 4
-    }
-  },
-  {
-    "name": "William MacAskill",
-    "primary": "Altruist",
-    "tags": "Altruist",
-    "scores": {
-      "social_attunement": 6,
-      "empathy": 9,
-      "self_orientation": 1,
-      "conscientiousness": 9,
-      "agency": 7,
-      "reactivity": 3
-    }
-  },
-  {
-    "name": "Danny Siegel",
-    "primary": "Altruist",
-    "tags": "Altruist",
-    "scores": {
-      "social_attunement": 7,
-      "empathy": 9,
-      "self_orientation": 1,
-      "conscientiousness": 8,
-      "agency": 7,
-      "reactivity": 5
-    }
-  },
-  {
-    "name": "Dolly Parton",
-    "primary": "Altruist",
-    "tags": "Altruist \u00b7 Hyper-Empathic \u00b7 Conscientious \u00b7 Low-Reactive",
-    "scores": {
-      "social_attunement": 9,
-      "empathy": 9,
-      "self_orientation": 2,
-      "conscientiousness": 8,
-      "agency": 8,
-      "reactivity": 5
-    }
-  },
-  {
-    "name": "Angelina Jolie",
-    "primary": "Altruist",
-    "tags": "Altruist \u00b7 Hyper-Empathic",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 8,
-      "self_orientation": 2,
-      "conscientiousness": 7,
-      "agency": 9,
-      "reactivity": 7
-    }
-  },
-  {
-    "name": "Oprah Winfrey",
-    "primary": "Altruist",
-    "tags": "Altruist \u00b7 Hyper-Empathic \u00b7 Conscientious \u00b7 Assertive",
-    "scores": {
-      "social_attunement": 9,
-      "empathy": 9,
-      "self_orientation": 3,
-      "conscientiousness": 8,
-      "agency": 9,
-      "reactivity": 7
-    }
-  },
-  {
-    "name": "Keanu Reeves",
-    "primary": "Altruist",
-    "tags": "Altruist \u00b7 Hyper-Empathic \u00b7 Hypo-Attuned \u00b7 Conscientious \u00b7 Low-Reactive",
-    "scores": {
-      "social_attunement": 5,
-      "empathy": 9,
-      "self_orientation": 1,
-      "conscientiousness": 8,
-      "agency": 6,
-      "reactivity": 3
-    }
-  },
-  {
-    "name": "John Legend",
-    "primary": "Altruist",
-    "tags": "Altruist",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 8,
-      "self_orientation": 2,
-      "conscientiousness": 8,
-      "agency": 7,
-      "reactivity": 5
-    }
-  },
-  {
-    "name": "Rihanna",
-    "primary": "Altruist",
-    "tags": "Altruist",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 7,
-      "self_orientation": 3,
-      "conscientiousness": 7,
-      "agency": 9,
-      "reactivity": 7
-    }
-  },
-  {
-    "name": "Emma Watson",
-    "primary": "Altruist",
-    "tags": "Altruist \u00b7 Hyper-Empathic",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 8,
-      "self_orientation": 2,
-      "conscientiousness": 9,
-      "agency": 8,
-      "reactivity": 4
-    }
-  },
-  {
-    "name": "George Clooney",
-    "primary": "Altruist",
-    "tags": "Altruist",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 8,
-      "self_orientation": 2,
-      "conscientiousness": 8,
-      "agency": 8,
-      "reactivity": 4
-    }
-  },
-  {
-    "name": "Colin Kaepernick",
-    "primary": "Altruist",
-    "tags": "Altruist",
-    "scores": {
-      "social_attunement": 7,
-      "empathy": 8,
-      "self_orientation": 2,
-      "conscientiousness": 8,
-      "agency": 9,
-      "reactivity": 6
-    }
-  },
-  {
-    "name": "Bill Gates",
-    "primary": "Altruist",
-    "tags": "Altruist \u00b7 Conscientious",
-    "scores": {
-      "social_attunement": 5,
-      "empathy": 8,
-      "self_orientation": 2,
-      "conscientiousness": 10,
-      "agency": 9,
-      "reactivity": 3
-    }
-  },
-  {
-    "name": "Melinda French Gates",
-    "primary": "Altruist",
-    "tags": "Altruist",
-    "scores": {
-      "social_attunement": 7,
-      "empathy": 9,
-      "self_orientation": 1,
-      "conscientiousness": 9,
-      "agency": 8,
-      "reactivity": 3
-    }
-  },
-  {
-    "name": "Warren Buffett",
-    "primary": "Altruist",
-    "tags": "Altruist \u00b7 Conscientious \u00b7 Low-Reactive",
-    "scores": {
-      "social_attunement": 5,
-      "empathy": 7,
-      "self_orientation": 2,
-      "conscientiousness": 10,
-      "agency": 8,
-      "reactivity": 2
-    }
-  },
-  {
-    "name": "MacKenzie Scott",
-    "primary": "Altruist",
-    "tags": "Altruist",
-    "scores": {
-      "social_attunement": 5,
-      "empathy": 9,
-      "self_orientation": 1,
-      "conscientiousness": 8,
-      "agency": 7,
-      "reactivity": 3
-    }
-  },
-  {
-    "name": "Vitalik Buterin",
-    "primary": "Altruist",
-    "tags": "Altruist",
-    "scores": {
-      "social_attunement": 4,
-      "empathy": 8,
-      "self_orientation": 2,
-      "conscientiousness": 9,
-      "agency": 7,
-      "reactivity": 3
-    }
-  },
-  {
-    "name": "Chuck Feeney",
-    "primary": "Altruist",
-    "tags": "Altruist",
-    "scores": {
-      "social_attunement": 5,
-      "empathy": 9,
-      "self_orientation": 1,
-      "conscientiousness": 9,
-      "agency": 7,
-      "reactivity": 3
-    }
-  },
-  {
-    "name": "Mother Teresa",
-    "primary": "Altruist",
-    "tags": "Altruist \u00b7 Conscientious",
-    "scores": {
-      "social_attunement": 5,
-      "empathy": 9,
-      "self_orientation": 1,
-      "conscientiousness": 9,
-      "agency": 8,
-      "reactivity": 5
-    }
-  },
-  {
     "name": "Mahatma Gandhi",
     "primary": "Altruist",
-    "tags": "Altruist \u00b7 Hyper-Empathic \u00b7 Conscientious \u00b7 Assertive",
+    "tags": "Altruist · Hyper-Empathic · Conscientious · Assertive",
     "scores": {
       "social_attunement": 8,
       "empathy": 9,
@@ -725,19 +452,6 @@
       "conscientiousness": 9,
       "agency": 9,
       "reactivity": 5
-    }
-  },
-  {
-    "name": "Nelson Mandela",
-    "primary": "Altruist",
-    "tags": "Altruist \u00b7 Conscientious \u00b7 Assertive",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 9,
-      "self_orientation": 1,
-      "conscientiousness": 9,
-      "agency": 9,
-      "reactivity": 4
     }
   },
   {
@@ -756,7 +470,7 @@
   {
     "name": "Eleanor Roosevelt",
     "primary": "Altruist",
-    "tags": "Altruist \u00b7 Hyper-Empathic \u00b7 Conscientious \u00b7 Assertive \u00b7 Low-Reactive",
+    "tags": "Altruist · Hyper-Empathic · Conscientious · Assertive · Low-Reactive",
     "scores": {
       "social_attunement": 8,
       "empathy": 9,
@@ -832,19 +546,6 @@
     }
   },
   {
-    "name": "Viktor Frankl",
-    "primary": "Altruist",
-    "tags": "Altruist \u00b7 Low-Reactive",
-    "scores": {
-      "social_attunement": 7,
-      "empathy": 9,
-      "self_orientation": 1,
-      "conscientiousness": 8,
-      "agency": 7,
-      "reactivity": 4
-    }
-  },
-  {
     "name": "Pablo Casals",
     "primary": "Altruist",
     "tags": "Altruist",
@@ -858,9 +559,100 @@
     }
   },
   {
+    "name": "Dorothea Dix",
+    "primary": "Altruist",
+    "tags": "Altruist",
+    "scores": {
+      "social_attunement": 7,
+      "empathy": 9,
+      "self_orientation": 1,
+      "conscientiousness": 9,
+      "agency": 7,
+      "reactivity": 4
+    }
+  },
+  {
+    "name": "Jane Addams",
+    "primary": "Altruist",
+    "tags": "Altruist",
+    "scores": {
+      "social_attunement": 7,
+      "empathy": 9,
+      "self_orientation": 1,
+      "conscientiousness": 9,
+      "agency": 7,
+      "reactivity": 4
+    }
+  },
+  {
+    "name": "Clara Barton",
+    "primary": "Altruist",
+    "tags": "Altruist",
+    "scores": {
+      "social_attunement": 7,
+      "empathy": 9,
+      "self_orientation": 1,
+      "conscientiousness": 9,
+      "agency": 7,
+      "reactivity": 4
+    }
+  },
+  {
+    "name": "Henry Dunant",
+    "primary": "Altruist",
+    "tags": "Altruist",
+    "scores": {
+      "social_attunement": 7,
+      "empathy": 9,
+      "self_orientation": 1,
+      "conscientiousness": 9,
+      "agency": 7,
+      "reactivity": 4
+    }
+  },
+  {
+    "name": "Elizabeth Fry",
+    "primary": "Altruist",
+    "tags": "Altruist",
+    "scores": {
+      "social_attunement": 7,
+      "empathy": 9,
+      "self_orientation": 1,
+      "conscientiousness": 9,
+      "agency": 7,
+      "reactivity": 4
+    }
+  },
+  {
+    "name": "William Booth",
+    "primary": "Altruist",
+    "tags": "Altruist",
+    "scores": {
+      "social_attunement": 7,
+      "empathy": 9,
+      "self_orientation": 1,
+      "conscientiousness": 9,
+      "agency": 7,
+      "reactivity": 4
+    }
+  },
+  {
+    "name": "Norman Borlaug",
+    "primary": "Altruist",
+    "tags": "Altruist",
+    "scores": {
+      "social_attunement": 7,
+      "empathy": 9,
+      "self_orientation": 1,
+      "conscientiousness": 9,
+      "agency": 7,
+      "reactivity": 4
+    }
+  },
+  {
     "name": "Abraham Lincoln",
     "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic \u00b7 Conscientious \u00b7 Assertive",
+    "tags": "Hyper-Empathic · Conscientious · Assertive",
     "scores": {
       "social_attunement": 8,
       "empathy": 9,
@@ -868,71 +660,6 @@
       "conscientiousness": 9,
       "agency": 9,
       "reactivity": 6
-    }
-  },
-  {
-    "name": "Martin Luther King Jr.",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic \u00b7 Assertive",
-    "scores": {
-      "social_attunement": 9,
-      "empathy": 9,
-      "self_orientation": 1,
-      "conscientiousness": 9,
-      "agency": 9,
-      "reactivity": 7
-    }
-  },
-  {
-    "name": "Princess Diana",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
-    "scores": {
-      "social_attunement": 9,
-      "empathy": 9,
-      "self_orientation": 2,
-      "conscientiousness": 6,
-      "agency": 7,
-      "reactivity": 8
-    }
-  },
-  {
-    "name": "Albert Einstein",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
-    "scores": {
-      "social_attunement": 4,
-      "empathy": 8,
-      "self_orientation": 3,
-      "conscientiousness": 8,
-      "agency": 7,
-      "reactivity": 5
-    }
-  },
-  {
-    "name": "Jos\u00e9 Andr\u00e9s",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 9,
-      "self_orientation": 2,
-      "conscientiousness": 7,
-      "agency": 9,
-      "reactivity": 7
-    }
-  },
-  {
-    "name": "Jane Goodall",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 10,
-      "self_orientation": 1,
-      "conscientiousness": 9,
-      "agency": 8,
-      "reactivity": 5
     }
   },
   {
@@ -949,328 +676,250 @@
     }
   },
   {
-    "name": "Nicole Kidman",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
-    "scores": {
-      "social_attunement": 7,
-      "empathy": 8,
-      "self_orientation": 3,
-      "conscientiousness": 8,
-      "agency": 8,
-      "reactivity": 6
-    }
-  },
-  {
-    "name": "Alanis Morissette",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
-    "scores": {
-      "social_attunement": 7,
-      "empathy": 9,
-      "self_orientation": 3,
-      "conscientiousness": 6,
-      "agency": 7,
-      "reactivity": 8
-    }
-  },
-  {
-    "name": "Viola Davis",
+    "name": "Walt Whitman",
     "primary": "Hyper-Empathic",
     "tags": "Hyper-Empathic",
     "scores": {
       "social_attunement": 8,
-      "empathy": 9,
-      "self_orientation": 2,
-      "conscientiousness": 8,
-      "agency": 8,
-      "reactivity": 7
-    }
-  },
-  {
-    "name": "Steve Martin",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
-    "scores": {
-      "social_attunement": 7,
-      "empathy": 8,
-      "self_orientation": 3,
-      "conscientiousness": 8,
-      "agency": 7,
-      "reactivity": 5
-    }
-  },
-  {
-    "name": "Lady Gaga",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic \u00b7 Hypo-Attuned \u00b7 High-Reactive",
-    "scores": {
-      "social_attunement": 5,
-      "empathy": 9,
-      "self_orientation": 3,
-      "conscientiousness": 7,
-      "agency": 9,
-      "reactivity": 9
-    }
-  },
-  {
-    "name": "Lin-Manuel Miranda",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
-    "scores": {
-      "social_attunement": 9,
-      "empathy": 9,
-      "self_orientation": 2,
-      "conscientiousness": 10,
-      "agency": 8,
-      "reactivity": 7
-    }
-  },
-  {
-    "name": "Sonia Sotomayor",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 9,
-      "self_orientation": 2,
-      "conscientiousness": 9,
-      "agency": 8,
-      "reactivity": 6
-    }
-  },
-  {
-    "name": "Paul Rudd",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic \u00b7 Low-Reactive",
-    "scores": {
-      "social_attunement": 7,
-      "empathy": 8,
+      "empathy": 10,
       "self_orientation": 2,
       "conscientiousness": 7,
       "agency": 6,
-      "reactivity": 3
+      "reactivity": 7
     }
   },
   {
-    "name": "Anthony Hopkins",
+    "name": "Fyodor Dostoevsky",
+    "primary": "Hyper-Empathic",
+    "tags": "Hyper-Empathic",
+    "scores": {
+      "social_attunement": 8,
+      "empathy": 10,
+      "self_orientation": 2,
+      "conscientiousness": 7,
+      "agency": 6,
+      "reactivity": 7
+    }
+  },
+  {
+    "name": "Leo Tolstoy",
+    "primary": "Hyper-Empathic",
+    "tags": "Hyper-Empathic",
+    "scores": {
+      "social_attunement": 8,
+      "empathy": 10,
+      "self_orientation": 2,
+      "conscientiousness": 7,
+      "agency": 6,
+      "reactivity": 7
+    }
+  },
+  {
+    "name": "Harriet Beecher Stowe",
+    "primary": "Hyper-Empathic",
+    "tags": "Hyper-Empathic",
+    "scores": {
+      "social_attunement": 8,
+      "empathy": 10,
+      "self_orientation": 2,
+      "conscientiousness": 7,
+      "agency": 6,
+      "reactivity": 7
+    }
+  },
+  {
+    "name": "Charles Dickens",
+    "primary": "Hyper-Empathic",
+    "tags": "Hyper-Empathic",
+    "scores": {
+      "social_attunement": 8,
+      "empathy": 10,
+      "self_orientation": 2,
+      "conscientiousness": 7,
+      "agency": 6,
+      "reactivity": 7
+    }
+  },
+  {
+    "name": "Elizabeth Barrett Browning",
+    "primary": "Hyper-Empathic",
+    "tags": "Hyper-Empathic",
+    "scores": {
+      "social_attunement": 8,
+      "empathy": 10,
+      "self_orientation": 2,
+      "conscientiousness": 7,
+      "agency": 6,
+      "reactivity": 7
+    }
+  },
+  {
+    "name": "Fred Rogers",
+    "primary": "Hyper-Empathic",
+    "tags": "Hyper-Empathic",
+    "scores": {
+      "social_attunement": 8,
+      "empathy": 10,
+      "self_orientation": 2,
+      "conscientiousness": 7,
+      "agency": 6,
+      "reactivity": 7
+    }
+  },
+  {
+    "name": "Isaac Newton",
     "primary": "Hypo-Attuned",
     "tags": "Hypo-Attuned",
     "scores": {
-      "social_attunement": 3,
+      "social_attunement": 2,
       "empathy": 6,
-      "self_orientation": 5,
-      "conscientiousness": 9,
-      "agency": 7,
-      "reactivity": 3
-    }
-  },
-  {
-    "name": "Dan Aykroyd",
-    "primary": "Hypo-Attuned",
-    "tags": "Hypo-Attuned",
-    "scores": {
-      "social_attunement": 3,
-      "empathy": 7,
       "self_orientation": 4,
       "conscientiousness": 8,
-      "agency": 7,
-      "reactivity": 5
-    }
-  },
-  {
-    "name": "Daryl Hannah",
-    "primary": "Hypo-Attuned",
-    "tags": "Hypo-Attuned",
-    "scores": {
-      "social_attunement": 2,
-      "empathy": 8,
-      "self_orientation": 3,
-      "conscientiousness": 6,
       "agency": 5,
-      "reactivity": 6
-    }
-  },
-  {
-    "name": "Susan Boyle",
-    "primary": "Hypo-Attuned",
-    "tags": "Hypo-Attuned",
-    "scores": {
-      "social_attunement": 2,
-      "empathy": 7,
-      "self_orientation": 3,
-      "conscientiousness": 6,
-      "agency": 5,
-      "reactivity": 6
-    }
-  },
-  {
-    "name": "Temple Grandin",
-    "primary": "Hypo-Attuned",
-    "tags": "Hypo-Attuned",
-    "scores": {
-      "social_attunement": 2,
-      "empathy": 8,
-      "self_orientation": 2,
-      "conscientiousness": 9,
-      "agency": 7,
       "reactivity": 4
     }
   },
   {
-    "name": "Joaquin Phoenix",
-    "primary": "Hypo-Attuned",
-    "tags": "Hypo-Attuned",
-    "scores": {
-      "social_attunement": 3,
-      "empathy": 8,
-      "self_orientation": 4,
-      "conscientiousness": 8,
-      "agency": 7,
-      "reactivity": 8
-    }
-  },
-  {
-    "name": "Michael Jackson",
-    "primary": "Hypo-Attuned",
-    "tags": "Hypo-Attuned",
-    "scores": {
-      "social_attunement": 4,
-      "empathy": 7,
-      "self_orientation": 6,
-      "conscientiousness": 10,
-      "agency": 7,
-      "reactivity": 7
-    }
-  },
-  {
-    "name": "Johnny Depp",
-    "primary": "Hypo-Attuned",
-    "tags": "Hypo-Attuned",
-    "scores": {
-      "social_attunement": 4,
-      "empathy": 7,
-      "self_orientation": 5,
-      "conscientiousness": 5,
-      "agency": 6,
-      "reactivity": 8
-    }
-  },
-  {
-    "name": "Ed Sheeran",
-    "primary": "Hypo-Attuned",
-    "tags": "Hypo-Attuned",
-    "scores": {
-      "social_attunement": 3,
-      "empathy": 8,
-      "self_orientation": 3,
-      "conscientiousness": 8,
-      "agency": 7,
-      "reactivity": 5
-    }
-  },
-  {
-    "name": "Kristen Stewart",
+    "name": "Nikola Tesla",
     "primary": "Hypo-Attuned",
     "tags": "Hypo-Attuned",
     "scores": {
       "social_attunement": 2,
-      "empathy": 7,
-      "self_orientation": 3,
-      "conscientiousness": 7,
-      "agency": 6,
-      "reactivity": 5
+      "empathy": 6,
+      "self_orientation": 4,
+      "conscientiousness": 8,
+      "agency": 5,
+      "reactivity": 4
     }
   },
   {
-    "name": "Barbra Streisand",
+    "name": "Henry Cavendish",
     "primary": "Hypo-Attuned",
     "tags": "Hypo-Attuned",
     "scores": {
-      "social_attunement": 4,
-      "empathy": 7,
-      "self_orientation": 6,
-      "conscientiousness": 9,
-      "agency": 9,
-      "reactivity": 7
+      "social_attunement": 2,
+      "empathy": 6,
+      "self_orientation": 4,
+      "conscientiousness": 8,
+      "agency": 5,
+      "reactivity": 4
     }
   },
   {
-    "name": "Kofi Annan",
+    "name": "Emily Dickinson",
+    "primary": "Hypo-Attuned",
+    "tags": "Hypo-Attuned",
+    "scores": {
+      "social_attunement": 2,
+      "empathy": 6,
+      "self_orientation": 4,
+      "conscientiousness": 8,
+      "agency": 5,
+      "reactivity": 4
+    }
+  },
+  {
+    "name": "Ludwig Wittgenstein",
+    "primary": "Hypo-Attuned",
+    "tags": "Hypo-Attuned",
+    "scores": {
+      "social_attunement": 2,
+      "empathy": 6,
+      "self_orientation": 4,
+      "conscientiousness": 8,
+      "agency": 5,
+      "reactivity": 4
+    }
+  },
+  {
+    "name": "H.P. Lovecraft",
+    "primary": "Hypo-Attuned",
+    "tags": "Hypo-Attuned",
+    "scores": {
+      "social_attunement": 2,
+      "empathy": 6,
+      "self_orientation": 4,
+      "conscientiousness": 8,
+      "agency": 5,
+      "reactivity": 4
+    }
+  },
+  {
+    "name": "Alan Turing",
+    "primary": "Hypo-Attuned",
+    "tags": "Hypo-Attuned",
+    "scores": {
+      "social_attunement": 2,
+      "empathy": 6,
+      "self_orientation": 4,
+      "conscientiousness": 8,
+      "agency": 5,
+      "reactivity": 4
+    }
+  },
+  {
+    "name": "Immanuel Kant",
     "primary": "Conscientious",
     "tags": "Conscientious",
     "scores": {
-      "social_attunement": 9,
-      "empathy": 8,
-      "self_orientation": 2,
-      "conscientiousness": 9,
-      "agency": 8,
+      "social_attunement": 6,
+      "empathy": 7,
+      "self_orientation": 3,
+      "conscientiousness": 10,
+      "agency": 7,
       "reactivity": 3
     }
   },
   {
-    "name": "Wangari Maathai",
+    "name": "Benjamin Franklin",
     "primary": "Conscientious",
     "tags": "Conscientious",
     "scores": {
-      "social_attunement": 8,
-      "empathy": 8,
-      "self_orientation": 1,
-      "conscientiousness": 9,
-      "agency": 9,
-      "reactivity": 5
-    }
-  },
-  {
-    "name": "Meryl Streep",
-    "primary": "Conscientious",
-    "tags": "Conscientious \u00b7 Low-Reactive",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 8,
+      "social_attunement": 6,
+      "empathy": 7,
       "self_orientation": 3,
-      "conscientiousness": 10,
-      "agency": 8,
-      "reactivity": 5
-    }
-  },
-  {
-    "name": "Tom Hanks",
-    "primary": "Conscientious",
-    "tags": "Conscientious \u00b7 Low-Reactive",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 9,
-      "self_orientation": 2,
       "conscientiousness": 10,
       "agency": 7,
-      "reactivity": 2
+      "reactivity": 3
     }
   },
   {
-    "name": "Hugh Jackman",
+    "name": "Marie Curie",
     "primary": "Conscientious",
     "tags": "Conscientious",
     "scores": {
-      "social_attunement": 8,
-      "empathy": 8,
-      "self_orientation": 3,
-      "conscientiousness": 9,
-      "agency": 8,
-      "reactivity": 5
-    }
-  },
-  {
-    "name": "Howard Schultz",
-    "primary": "Conscientious",
-    "tags": "Conscientious",
-    "scores": {
-      "social_attunement": 7,
+      "social_attunement": 6,
       "empathy": 7,
-      "self_orientation": 4,
-      "conscientiousness": 9,
-      "agency": 9,
-      "reactivity": 6
+      "self_orientation": 3,
+      "conscientiousness": 10,
+      "agency": 7,
+      "reactivity": 3
+    }
+  },
+  {
+    "name": "Johann Sebastian Bach",
+    "primary": "Conscientious",
+    "tags": "Conscientious",
+    "scores": {
+      "social_attunement": 6,
+      "empathy": 7,
+      "self_orientation": 3,
+      "conscientiousness": 10,
+      "agency": 7,
+      "reactivity": 3
+    }
+  },
+  {
+    "name": "Michelangelo",
+    "primary": "Conscientious",
+    "tags": "Conscientious",
+    "scores": {
+      "social_attunement": 6,
+      "empathy": 7,
+      "self_orientation": 3,
+      "conscientiousness": 10,
+      "agency": 7,
+      "reactivity": 3
     }
   },
   {
@@ -1300,172 +949,81 @@
     }
   },
   {
-    "name": "Charlie Sheen",
+    "name": "Lord Byron",
     "primary": "Impulsive",
-    "tags": "Impulsive \u00b7 High-Reactive",
-    "scores": {
-      "social_attunement": 5,
-      "empathy": 4,
-      "self_orientation": 8,
-      "conscientiousness": 1,
-      "agency": 7,
-      "reactivity": 10
-    }
-  },
-  {
-    "name": "Britney Spears",
-    "primary": "Impulsive",
-    "tags": "Impulsive \u00b7 High-Reactive",
+    "tags": "Impulsive",
     "scores": {
       "social_attunement": 6,
-      "empathy": 7,
+      "empathy": 6,
       "self_orientation": 5,
       "conscientiousness": 2,
-      "agency": 5,
-      "reactivity": 9
-    }
-  },
-  {
-    "name": "Lindsay Lohan",
-    "primary": "Impulsive",
-    "tags": "Impulsive \u00b7 High-Reactive",
-    "scores": {
-      "social_attunement": 5,
-      "empathy": 6,
-      "self_orientation": 6,
-      "conscientiousness": 1,
-      "agency": 5,
-      "reactivity": 9
-    }
-  },
-  {
-    "name": "Russell Brand",
-    "primary": "Impulsive",
-    "tags": "Impulsive \u00b7 High-Reactive",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 6,
-      "self_orientation": 7,
-      "conscientiousness": 2,
-      "agency": 8,
-      "reactivity": 9
-    }
-  },
-  {
-    "name": "Shia LaBeouf",
-    "primary": "Impulsive",
-    "tags": "Impulsive \u00b7 High-Reactive",
-    "scores": {
-      "social_attunement": 6,
-      "empathy": 7,
-      "self_orientation": 6,
-      "conscientiousness": 2,
       "agency": 7,
       "reactivity": 9
     }
   },
   {
-    "name": "Michael Richards",
-    "primary": "Impulsive",
-    "tags": "Impulsive \u00b7 High-Reactive",
-    "scores": {
-      "social_attunement": 4,
-      "empathy": 5,
-      "self_orientation": 6,
-      "conscientiousness": 4,
-      "agency": 6,
-      "reactivity": 9
-    }
-  },
-  {
-    "name": "Ozzy Osbourne",
-    "primary": "Impulsive",
-    "tags": "Impulsive",
-    "scores": {
-      "social_attunement": 5,
-      "empathy": 6,
-      "self_orientation": 6,
-      "conscientiousness": 2,
-      "agency": 7,
-      "reactivity": 8
-    }
-  },
-  {
-    "name": "Richard Branson",
-    "primary": "Impulsive",
-    "tags": "Impulsive \u00b7 Assertive",
-    "scores": {
-      "social_attunement": 7,
-      "empathy": 7,
-      "self_orientation": 6,
-      "conscientiousness": 3,
-      "agency": 9,
-      "reactivity": 7
-    }
-  },
-  {
-    "name": "Michael Jordan",
+    "name": "Édith Piaf",
     "primary": "Impulsive",
     "tags": "Impulsive",
     "scores": {
       "social_attunement": 6,
-      "empathy": 5,
-      "self_orientation": 7,
-      "conscientiousness": 7,
-      "agency": 10,
-      "reactivity": 8
-    }
-  },
-  {
-    "name": "Mike Tyson",
-    "primary": "Impulsive",
-    "tags": "Impulsive \u00b7 High-Reactive",
-    "scores": {
-      "social_attunement": 5,
-      "empathy": 5,
-      "self_orientation": 7,
-      "conscientiousness": 3,
-      "agency": 9,
-      "reactivity": 10
-    }
-  },
-  {
-    "name": "Michael Phelps",
-    "primary": "Impulsive",
-    "tags": "Impulsive",
-    "scores": {
-      "social_attunement": 5,
       "empathy": 6,
       "self_orientation": 5,
-      "conscientiousness": 7,
-      "agency": 8,
-      "reactivity": 6
+      "conscientiousness": 2,
+      "agency": 7,
+      "reactivity": 9
     }
   },
   {
-    "name": "Rosa Parks",
-    "primary": "Assertive",
-    "tags": "Assertive",
+    "name": "Judy Garland",
+    "primary": "Impulsive",
+    "tags": "Impulsive",
     "scores": {
-      "social_attunement": 7,
-      "empathy": 9,
-      "self_orientation": 1,
-      "conscientiousness": 9,
-      "agency": 9,
-      "reactivity": 4
-    }
-  },
-  {
-    "name": "Winston Churchill",
-    "primary": "Assertive",
-    "tags": "Assertive",
-    "scores": {
-      "social_attunement": 7,
+      "social_attunement": 6,
       "empathy": 6,
-      "self_orientation": 7,
-      "conscientiousness": 7,
-      "agency": 10,
-      "reactivity": 8
+      "self_orientation": 5,
+      "conscientiousness": 2,
+      "agency": 7,
+      "reactivity": 9
+    }
+  },
+  {
+    "name": "Jim Morrison",
+    "primary": "Impulsive",
+    "tags": "Impulsive",
+    "scores": {
+      "social_attunement": 6,
+      "empathy": 6,
+      "self_orientation": 5,
+      "conscientiousness": 2,
+      "agency": 7,
+      "reactivity": 9
+    }
+  },
+  {
+    "name": "Janis Joplin",
+    "primary": "Impulsive",
+    "tags": "Impulsive",
+    "scores": {
+      "social_attunement": 6,
+      "empathy": 6,
+      "self_orientation": 5,
+      "conscientiousness": 2,
+      "agency": 7,
+      "reactivity": 9
+    }
+  },
+  {
+    "name": "Henri de Toulouse-Lautrec",
+    "primary": "Impulsive",
+    "tags": "Impulsive",
+    "scores": {
+      "social_attunement": 6,
+      "empathy": 6,
+      "self_orientation": 5,
+      "conscientiousness": 2,
+      "agency": 7,
+      "reactivity": 9
     }
   },
   {
@@ -1482,146 +1040,94 @@
     }
   },
   {
-    "name": "Taylor Swift",
+    "name": "Frederick Douglass",
     "primary": "Assertive",
     "tags": "Assertive",
     "scores": {
-      "social_attunement": 8,
-      "empathy": 8,
-      "self_orientation": 5,
-      "conscientiousness": 10,
-      "agency": 9,
-      "reactivity": 6
-    }
-  },
-  {
-    "name": "Zendaya",
-    "primary": "Assertive",
-    "tags": "Assertive",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 8,
-      "self_orientation": 3,
-      "conscientiousness": 9,
-      "agency": 8,
-      "reactivity": 5
-    }
-  },
-  {
-    "name": "Dwayne Johnson",
-    "primary": "Assertive",
-    "tags": "Assertive",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 8,
+      "social_attunement": 7,
+      "empathy": 7,
       "self_orientation": 4,
-      "conscientiousness": 9,
-      "agency": 9,
-      "reactivity": 5
-    }
-  },
-  {
-    "name": "Billie Jean King",
-    "primary": "Assertive",
-    "tags": "Assertive",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 7,
-      "self_orientation": 3,
-      "conscientiousness": 9,
-      "agency": 9,
-      "reactivity": 6
-    }
-  },
-  {
-    "name": "Jeff Bezos",
-    "primary": "Assertive",
-    "tags": "Assertive",
-    "scores": {
-      "social_attunement": 6,
-      "empathy": 4,
-      "self_orientation": 8,
-      "conscientiousness": 10,
-      "agency": 10,
-      "reactivity": 5
-    }
-  },
-  {
-    "name": "Indra Nooyi",
-    "primary": "Assertive",
-    "tags": "Assertive",
-    "scores": {
-      "social_attunement": 8,
-      "empathy": 7,
-      "self_orientation": 3,
-      "conscientiousness": 9,
-      "agency": 9,
-      "reactivity": 5
-    }
-  },
-  {
-    "name": "Margaret Thatcher",
-    "primary": "Assertive",
-    "tags": "Assertive",
-    "scores": {
-      "social_attunement": 7,
-      "empathy": 4,
-      "self_orientation": 7,
-      "conscientiousness": 10,
-      "agency": 10,
-      "reactivity": 6
-    }
-  },
-  {
-    "name": "Cara Delevingne",
-    "primary": "Submissive",
-    "tags": "Submissive",
-    "scores": {
-      "social_attunement": 6,
-      "empathy": 7,
-      "self_orientation": 5,
-      "conscientiousness": 3,
-      "agency": 3,
-      "reactivity": 8
-    }
-  },
-  {
-    "name": "Candace Cameron Bure",
-    "primary": "Submissive",
-    "tags": "Submissive",
-    "scores": {
-      "social_attunement": 7,
-      "empathy": 7,
-      "self_orientation": 3,
-      "conscientiousness": 7,
-      "agency": 3,
-      "reactivity": 4
-    }
-  },
-  {
-    "name": "Gabby Reece",
-    "primary": "Submissive",
-    "tags": "Submissive",
-    "scores": {
-      "social_attunement": 7,
-      "empathy": 7,
-      "self_orientation": 3,
       "conscientiousness": 8,
-      "agency": 3,
-      "reactivity": 4
+      "agency": 10,
+      "reactivity": 5
     }
   },
   {
-    "name": "Porsha Williams",
-    "primary": "Submissive",
-    "tags": "Submissive",
+    "name": "Harriet Tubman",
+    "primary": "Assertive",
+    "tags": "Assertive",
     "scores": {
       "social_attunement": 7,
       "empathy": 7,
-      "self_orientation": 5,
-      "conscientiousness": 4,
-      "agency": 3,
-      "reactivity": 7
+      "self_orientation": 4,
+      "conscientiousness": 8,
+      "agency": 10,
+      "reactivity": 5
+    }
+  },
+  {
+    "name": "Susan B. Anthony",
+    "primary": "Assertive",
+    "tags": "Assertive",
+    "scores": {
+      "social_attunement": 7,
+      "empathy": 7,
+      "self_orientation": 4,
+      "conscientiousness": 8,
+      "agency": 10,
+      "reactivity": 5
+    }
+  },
+  {
+    "name": "Boudica",
+    "primary": "Assertive",
+    "tags": "Assertive",
+    "scores": {
+      "social_attunement": 7,
+      "empathy": 7,
+      "self_orientation": 4,
+      "conscientiousness": 8,
+      "agency": 10,
+      "reactivity": 5
+    }
+  },
+  {
+    "name": "Elizabeth I",
+    "primary": "Assertive",
+    "tags": "Assertive",
+    "scores": {
+      "social_attunement": 7,
+      "empathy": 7,
+      "self_orientation": 4,
+      "conscientiousness": 8,
+      "agency": 10,
+      "reactivity": 5
+    }
+  },
+  {
+    "name": "Catherine the Great",
+    "primary": "Assertive",
+    "tags": "Assertive",
+    "scores": {
+      "social_attunement": 7,
+      "empathy": 7,
+      "self_orientation": 4,
+      "conscientiousness": 8,
+      "agency": 10,
+      "reactivity": 5
+    }
+  },
+  {
+    "name": "Otto von Bismarck",
+    "primary": "Assertive",
+    "tags": "Assertive",
+    "scores": {
+      "social_attunement": 7,
+      "empathy": 7,
+      "self_orientation": 4,
+      "conscientiousness": 8,
+      "agency": 10,
+      "reactivity": 5
     }
   },
   {
@@ -1638,42 +1144,42 @@
     }
   },
   {
-    "name": "Mel Gibson",
-    "primary": "High-Reactive",
-    "tags": "High-Reactive",
+    "name": "Neville Chamberlain",
+    "primary": "Submissive",
+    "tags": "Submissive",
     "scores": {
-      "social_attunement": 6,
-      "empathy": 5,
-      "self_orientation": 7,
-      "conscientiousness": 5,
-      "agency": 8,
-      "reactivity": 10
-    }
-  },
-  {
-    "name": "Pete Davidson",
-    "primary": "High-Reactive",
-    "tags": "High-Reactive",
-    "scores": {
-      "social_attunement": 6,
+      "social_attunement": 7,
       "empathy": 7,
-      "self_orientation": 5,
-      "conscientiousness": 3,
-      "agency": 6,
-      "reactivity": 10
+      "self_orientation": 3,
+      "conscientiousness": 7,
+      "agency": 2,
+      "reactivity": 5
     }
   },
   {
-    "name": "Russell Crowe",
-    "primary": "High-Reactive",
-    "tags": "High-Reactive",
+    "name": "Nicholas II of Russia",
+    "primary": "Submissive",
+    "tags": "Submissive",
     "scores": {
-      "social_attunement": 5,
-      "empathy": 6,
-      "self_orientation": 6,
+      "social_attunement": 7,
+      "empathy": 7,
+      "self_orientation": 3,
       "conscientiousness": 7,
-      "agency": 8,
-      "reactivity": 10
+      "agency": 2,
+      "reactivity": 5
+    }
+  },
+  {
+    "name": "Louis XVI",
+    "primary": "Submissive",
+    "tags": "Submissive",
+    "scores": {
+      "social_attunement": 7,
+      "empathy": 7,
+      "self_orientation": 3,
+      "conscientiousness": 7,
+      "agency": 2,
+      "reactivity": 5
     }
   },
   {
@@ -1703,29 +1209,68 @@
     }
   },
   {
-    "name": "John Cena",
-    "primary": "Low-Reactive",
-    "tags": "Low-Reactive",
+    "name": "Ludwig van Beethoven",
+    "primary": "High-Reactive",
+    "tags": "High-Reactive",
     "scores": {
-      "social_attunement": 7,
-      "empathy": 8,
-      "self_orientation": 3,
-      "conscientiousness": 9,
-      "agency": 8,
-      "reactivity": 2
+      "social_attunement": 6,
+      "empathy": 7,
+      "self_orientation": 4,
+      "conscientiousness": 5,
+      "agency": 7,
+      "reactivity": 10
     }
   },
   {
-    "name": "Denzel Washington",
-    "primary": "Low-Reactive",
-    "tags": "Low-Reactive",
+    "name": "Edgar Allan Poe",
+    "primary": "High-Reactive",
+    "tags": "High-Reactive",
     "scores": {
-      "social_attunement": 7,
-      "empathy": 8,
-      "self_orientation": 3,
-      "conscientiousness": 9,
-      "agency": 8,
-      "reactivity": 3
+      "social_attunement": 6,
+      "empathy": 7,
+      "self_orientation": 4,
+      "conscientiousness": 5,
+      "agency": 7,
+      "reactivity": 10
+    }
+  },
+  {
+    "name": "Franz Liszt",
+    "primary": "High-Reactive",
+    "tags": "High-Reactive",
+    "scores": {
+      "social_attunement": 6,
+      "empathy": 7,
+      "self_orientation": 4,
+      "conscientiousness": 5,
+      "agency": 7,
+      "reactivity": 10
+    }
+  },
+  {
+    "name": "Robert Schumann",
+    "primary": "High-Reactive",
+    "tags": "High-Reactive",
+    "scores": {
+      "social_attunement": 6,
+      "empathy": 7,
+      "self_orientation": 4,
+      "conscientiousness": 5,
+      "agency": 7,
+      "reactivity": 10
+    }
+  },
+  {
+    "name": "Pyotr Ilyich Tchaikovsky",
+    "primary": "High-Reactive",
+    "tags": "High-Reactive",
+    "scores": {
+      "social_attunement": 6,
+      "empathy": 7,
+      "self_orientation": 4,
+      "conscientiousness": 5,
+      "agency": 7,
+      "reactivity": 10
     }
   },
   {
@@ -1768,16 +1313,55 @@
     }
   },
   {
-    "name": "James Stockdale",
+    "name": "Dwight D. Eisenhower",
     "primary": "Low-Reactive",
     "tags": "Low-Reactive",
     "scores": {
       "social_attunement": 7,
-      "empathy": 8,
-      "self_orientation": 2,
+      "empathy": 7,
+      "self_orientation": 3,
       "conscientiousness": 9,
-      "agency": 8,
-      "reactivity": 2
+      "agency": 7,
+      "reactivity": 1
+    }
+  },
+  {
+    "name": "Ulysses S. Grant",
+    "primary": "Low-Reactive",
+    "tags": "Low-Reactive",
+    "scores": {
+      "social_attunement": 7,
+      "empathy": 7,
+      "self_orientation": 3,
+      "conscientiousness": 9,
+      "agency": 7,
+      "reactivity": 1
+    }
+  },
+  {
+    "name": "Chief Joseph",
+    "primary": "Low-Reactive",
+    "tags": "Low-Reactive",
+    "scores": {
+      "social_attunement": 7,
+      "empathy": 7,
+      "self_orientation": 3,
+      "conscientiousness": 9,
+      "agency": 7,
+      "reactivity": 1
+    }
+  },
+  {
+    "name": "Confucius",
+    "primary": "Low-Reactive",
+    "tags": "Low-Reactive",
+    "scores": {
+      "social_attunement": 7,
+      "empathy": 7,
+      "self_orientation": 3,
+      "conscientiousness": 9,
+      "agency": 7,
+      "reactivity": 1
     }
   }
 ]

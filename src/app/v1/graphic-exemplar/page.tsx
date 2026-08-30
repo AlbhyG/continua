@@ -51,7 +51,7 @@ export default function V1GraphicExemplarPage() {
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div>
                 <h3 className="text-[18px] font-bold mb-1">High Compassion</h3>
-                <p className="text-[15px] text-foreground/60 italic">e.g., Mother Teresa</p>
+                <p className="text-[15px] text-foreground/60 italic">e.g., Florence Nightingale</p>
               </div>
               <div>
                 <h3 className="text-[18px] font-bold mb-1">Low Compassion</h3>
@@ -73,25 +73,6 @@ export default function V1GraphicExemplarPage() {
         </FadeIn>
       </section>
 
-      {/* Graphic Map */}
-      <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-16">
-        <FadeIn>
-          <div className="glass-card p-6 md:p-8">
-            <h2 className="text-[24px] md:text-[32px] leading-[1.2] font-bold mb-6">
-              Graphic Map with Values
-            </h2>
-            <div className="flex justify-center">
-              <Image
-                src="/graphic-map.png"
-                alt="Detailed graphic map showing Mother Teresa and Hitler personality profiles as color wheels with axis values"
-                width={700}
-                height={350}
-                className="rounded-lg"
-              />
-            </div>
-          </div>
-        </FadeIn>
-      </section>
     </div>
   )
 }

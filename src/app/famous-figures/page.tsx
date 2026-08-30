@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import fs from 'fs'
-import path from 'path'
+import profiles from '../../../data/famous-figures-profiles.json'
 import FadeIn from '@/components/FadeIn'
 import FamousFiguresExplorer from '@/components/famous-figures/FamousFiguresExplorer'
+import type { FamousFigureProfile } from '@/lib/famous-figures'
 
 export const metadata: Metadata = {
   title: 'Famous Archetypal Figures',
@@ -11,29 +11,7 @@ export const metadata: Metadata = {
     'Famous people believed to be on the extreme ends of the Continua personality spectra.',
 }
 
-interface Profile {
-  name: string
-  primary: string
-  tags: string
-  scores: {
-    social_attunement: number
-    empathy: number
-    self_orientation: number
-    conscientiousness: number
-    agency: number
-    reactivity: number
-  }
-}
-
-function loadProfiles(): Profile[] {
-  const filePath = path.join(process.cwd(), 'data', 'famous-figures-profiles.json')
-  const raw = fs.readFileSync(filePath, 'utf-8')
-  return JSON.parse(raw) as Profile[]
-}
-
 export default function FamousFiguresPage() {
-  const profiles = loadProfiles()
-
   return (
     <div>
       {/* Back button */}
@@ -68,7 +46,7 @@ export default function FamousFiguresPage() {
 
       {/* Category cards with clickable names */}
       <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-16">
-        <FamousFiguresExplorer profiles={profiles} />
+        <FamousFiguresExplorer profiles={profiles as FamousFigureProfile[]} />
       </section>
     </div>
   )

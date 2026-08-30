@@ -42,7 +42,7 @@ function toAxisResults(s: SliderValues) {
 }
 
 const PRESETS: Record<string, SliderValues> = {
-  'Mother Teresa': {
+  'Florence Nightingale': {
     empathy: 10,
     altruism: 9,
     attunement: 8,
@@ -114,8 +114,8 @@ const AXES = [
 ]
 
 export default function OrbDemoPage() {
-  const [sliders, setSliders] = useState<SliderValues>(PRESETS['Mother Teresa'])
-  const [activePreset, setActivePreset] = useState('Mother Teresa')
+  const [sliders, setSliders] = useState<SliderValues>(PRESETS['Florence Nightingale'])
+  const [activePreset, setActivePreset] = useState('Florence Nightingale')
 
   const updateSlider = (key: keyof SliderValues, value: number) => {
     setSliders(prev => ({ ...prev, [key]: value }))

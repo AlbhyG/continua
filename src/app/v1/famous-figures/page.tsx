@@ -1,6 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import profiles from '../../../../data/famous-figures-profiles.json'
 import FadeIn from '@/components/FadeIn'
+import {
+  FAMOUS_FIGURE_CATEGORIES,
+  groupFamousFiguresByCategory,
+  type FamousFigureProfile,
+} from '@/lib/famous-figures'
 
 export const metadata: Metadata = {
   title: 'Famous Archetypal Figures | Continua (v1)',
@@ -8,33 +14,11 @@ export const metadata: Metadata = {
     'Famous people believed to be on the extreme ends of the Continua personality spectra.',
 }
 
-const sections = [
-  {
-    title: 'Narcissists',
-    names:
-      'Adolf Hitler, Napoleon Bonaparte, Alexander The Great, Joseph Stalin, King Louis XIV, Nero, Saddam Hussein, Muammar Gaddafi, Benito Mussolini, Caligula, Mao Zedong, King Henry VIII, Fidel Castro, Pablo Picasso, Andy Warhol, Steve Jobs, Richard Nixon, Eva Peron, Cleopatra, Ivan The Terrible, Oscar Wilde, Vlad The Impaler, Marie Antoinette, King George III, Donald Trump, Kanye West (Ye), Elon Musk, Steve Jobs, Kim Kardashian, Tom Cruise, Madonna',
-  },
-  {
-    title: 'Altruists',
-    names:
-      'Florence Nightingale, Albert Schweitzer, Fridtjof Nansen, George R. Price, Azim Premji, Peter Singer, William MacAskill, Danny Siegel, Dolly Parton, Angelina Jolie, Oprah Winfrey, Keanu Reeves, John Legend, Rihanna, Emma Watson, George Clooney, Colin Kaepernick, Bill Gates, Melinda French Gates, Warren Buffett, MacKenzie Scott, Vitalik Buterin, Chuck Feeney, Mother Teresa, Mahatma Gandhi, Nelson Mandela, William Wilberforce, Eleanor Roosevelt, Andrew Carnegie, John D. Rockefeller, Julius Rosenwald, Alfred Nobel, Oskar Schindler, Viktor Frankl, Pablo Casals',
-  },
-  {
-    title: 'Hyper Empathetic',
-    names:
-      'Abraham Lincoln, Martin Luther King Jr., Princess Diana, Albert Einstein, Jos\u00E9 Andr\u00E9s, Jane Goodall, Charles Darwin, Nicole Kidman, Alanis Morissette, Viola Davis, Steve Martin, Lady Gaga, Lin-Manuel Miranda, Sonia Sotomayor, Dolly Parton, Keanu Reeves, Oprah Winfrey, Angelina Jolie, Emma Watson, Paul Rudd, Mahatma Gandhi, Martin Luther King Jr., Princess Diana, Abraham Lincoln, Eleanor Roosevelt',
-  },
-  {
-    title: 'Hypo-Socially Attuned',
-    names:
-      'Anthony Hopkins, Dan Aykroyd, Elon Musk, Daryl Hannah, Susan Boyle, Temple Grandin, Keanu Reeves, Lady Gaga, Joaquin Phoenix, Michael Jackson, Johnny Depp, Ed Sheeran, Kristen Stewart, Barbra Streisand, Adolf Hitler, Joseph Stalin, Napoleon Bonaparte, Henry VIII, Vlad the Impaler, Donald Trump, Kanye West (Ye), Elon Musk, Steve Jobs, Harvey Weinstein',
-  },
-  {
-    title: 'Very Conscientious',
-    names:
-      'Abraham Lincoln, Eleanor Roosevelt, Mahatma Gandhi, Nelson Mandela, Mother Teresa, Kofi Annan, Wangari Maathai, Albert Einstein, Elon Musk, Keanu Reeves, Dolly Parton, Emma Watson, Hugh Jackman, Meryl Streep, Tom Hanks, Oprah Winfrey, Andrew Carnegie, Warren Buffett, Howard Schultz',
-  },
-]
+const groupedProfiles = groupFamousFiguresByCategory(profiles as FamousFigureProfile[])
+const sections = FAMOUS_FIGURE_CATEGORIES.map(({ key, title }) => ({
+  title,
+  names: groupedProfiles.get(key)?.map(({ name }) => name).join(', ') ?? '',
+}))
 
 export default function V1FamousFiguresPage() {
   return (

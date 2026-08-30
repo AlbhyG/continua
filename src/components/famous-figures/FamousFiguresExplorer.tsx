@@ -2,6 +2,11 @@
 
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import {
+  FAMOUS_FIGURE_CATEGORIES,
+  groupFamousFiguresByCategory,
+  type FamousFigureProfile,
+} from "@/lib/famous-figures";
 import { scoresToOrbData } from "@/lib/quiz/orb-mapping";
 import type { AxisScores } from "@/lib/quiz/scoring";
 
@@ -14,13 +19,6 @@ const PersonalityOrb = dynamic(() => import("@/components/PersonalityOrb"), {
   ),
 });
 
-interface Profile {
-  name: string;
-  primary: string;
-  tags: string;
-  scores: AxisScores;
-}
-
 const AXIS_LABELS: Array<{ key: keyof AxisScores; name: string; lowLabel: string; highLabel: string }> = [
   { key: "empathy", name: "Empathy", lowLabel: "Detached", highLabel: "Highly Empathic" },
   { key: "self_orientation", name: "Self-Orientation", lowLabel: "Altruistic", highLabel: "Self-Focused" },
@@ -30,46 +28,35 @@ const AXIS_LABELS: Array<{ key: keyof AxisScores; name: string; lowLabel: string
   { key: "reactivity", name: "Reactivity", lowLabel: "Low Reactivity", highLabel: "Highly Reactive" },
 ];
 
-export default function FamousFiguresExplorer({ profiles }: { profiles: Profile[] }) {
-  const [selected, setSelected] = useState<Profile | null>(null);
+function getQualitativeBand(score: number) {
+  if (score <= 2) return "Very Low";
+  if (score <= 4) return "Low";
+  if (score <= 6) return "Moderate";
+  if (score <= 8) return "High";
+  return "Very High";
+}
 
-  // Group profiles by primary category
-  const categories: Record<string, Profile[]> = {};
-  profiles.forEach((p) => {
-    if (!categories[p.primary]) categories[p.primary] = [];
-    categories[p.primary].push(p);
-  });
-
-  const categoryOrder = [
-    "Narcissist",
-    "Altruist",
-    "Hyper-Empathic",
-    "Hypo-Attuned",
-    "Conscientious",
-    "Impulsive",
-    "Assertive",
-    "Submissive",
-    "High-Reactive",
-    "Low-Reactive",
-  ];
+export default function FamousFiguresExplorer({ profiles }: { profiles: FamousFigureProfile[] }) {
+  const [selected, setSelected] = useState<FamousFigureProfile | null>(null);
+  const categories = groupFamousFiguresByCategory(profiles);
 
   return (
     <>
       <div className="grid md:grid-cols-2 gap-4">
-        {categoryOrder
-          .filter((cat) => categories[cat])
-          .map((cat) => (
-            <div key={cat} className="glass-card p-6">
-              <h2 className="text-[20px] md:text-[22px] font-bold mb-3">{cat}s</h2>
+        {FAMOUS_FIGURE_CATEGORIES
+          .filter(({ key }) => categories.has(key))
+          .map(({ key, title }) => (
+            <div key={key} className="glass-card p-6">
+              <h2 className="text-[20px] md:text-[22px] font-bold mb-3">{title}</h2>
               <div className="flex flex-wrap gap-x-1 gap-y-1.5 text-[15px] md:text-[16px] leading-[1.6]">
-                {categories[cat].map((p, idx) => (
+                {categories.get(key)?.map((p, idx, categoryProfiles) => (
                   <button
                     key={p.name}
                     onClick={() => setSelected(p)}
                     className="text-foreground/80 hover:text-foreground underline decoration-foreground/20 hover:decoration-foreground/60 underline-offset-2 transition-all cursor-pointer"
                   >
                     {p.name}
-                    {idx < categories[cat].length - 1 && <span className="text-foreground/40">,</span>}
+                    {idx < categoryProfiles.length - 1 && <span className="text-foreground/40">,</span>}
                   </button>
                 ))}
               </div>
@@ -91,6 +78,9 @@ export default function FamousFiguresExplorer({ profiles }: { profiles: Profile[
               <div>
                 <h3 className="text-2xl font-bold text-foreground">{selected.name}</h3>
                 <p className="text-sm text-foreground/60 mt-1">{selected.tags}</p>
+                <p className="text-sm text-foreground/60 mt-2">
+                  Based on public perception, not an official diagnosis.
+                </p>
               </div>
               <button
                 onClick={() => setSelected(null)}
@@ -116,7 +106,7 @@ export default function FamousFiguresExplorer({ profiles }: { profiles: Profile[
                   <div key={ax.key}>
                     <div className="flex items-center justify-between mb-1">
                       <span className="text-xs font-bold text-foreground/70">{ax.name}</span>
-                      <span className="text-xs text-foreground/50">{score}</span>
+                      <span className="text-xs text-foreground/50">{getQualitativeBand(score)}</span>
                     </div>
                     <div className="relative h-1.5 rounded-full bg-foreground/10">
                       <div
