@@ -60,9 +60,9 @@ export default function Home() {
             </p>
             <p>
               We introduce that vision: a way of seeing personality as fluid
-              coordinates across six primary axes &mdash; Empathy,
-              Self-Orientation, Social Attunement, Conscientiousness, Agency,
-              and Reactivity. Together, these six dimensions form a living
+              coordinates across six primary axes &mdash; Social Attunement,
+              Empathy, Self-Orientation, Conscientiousness, Agency, and
+              Reactivity. Together, these six dimensions form a living
               system &mdash; a portrait of human nature in motion.
             </p>
             <p>
