@@ -7,23 +7,29 @@ import {
 export async function POST(request: NextRequest) {
   const formData = await request.formData()
   const password = String(formData.get('password') || '')
+  const requestedNext = String(formData.get('next') || '')
+  const nextPath = requestedNext.startsWith('/admin/')
+    ? requestedNext
+    : '/admin/contacts'
   const expectedPassword = process.env.ADMIN_CONTACTS_PASSWORD
   const token = getAdminContactsToken()
 
   if (!expectedPassword || !token || password !== expectedPassword) {
-    return NextResponse.redirect(new URL('/admin/contacts?error=1', request.url), {
+    const errorUrl = new URL(nextPath, request.url)
+    errorUrl.searchParams.set('error', '1')
+    return NextResponse.redirect(errorUrl, {
       status: 303,
     })
   }
 
-  const response = NextResponse.redirect(new URL('/admin/contacts', request.url), {
+  const response = NextResponse.redirect(new URL(nextPath, request.url), {
     status: 303,
   })
   response.cookies.set(ADMIN_CONTACTS_COOKIE, token, {
     httpOnly: true,
     sameSite: 'lax',
     secure: process.env.NODE_ENV === 'production',
-    path: '/admin/contacts',
+    path: '/',
     maxAge: 60 * 60 * 12,
   })
 

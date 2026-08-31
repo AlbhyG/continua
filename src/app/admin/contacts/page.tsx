@@ -1,5 +1,6 @@
 import type { PostgrestError } from '@supabase/supabase-js'
 import type { ReactNode } from 'react'
+import Link from 'next/link'
 import { hasAdminContactsSession } from '@/lib/admin/contacts-auth'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { ContactsTable, type ContactAdminRow } from './contacts-table'
@@ -94,6 +95,7 @@ function PasswordGate({ showError }: { showError: boolean }) {
       <div className="mx-auto max-w-sm rounded-md border border-gray-200 bg-white p-5 shadow-sm">
         <h1 className="text-lg font-semibold">Contact Admin</h1>
         <form action="/admin/contacts/login" method="post" className="mt-4 space-y-3">
+          <input type="hidden" name="next" value="/admin/contacts" />
           <label className="grid gap-1 text-sm font-medium">
             Password
             <input
@@ -131,14 +133,23 @@ function AdminShell({ children }: { children: ReactNode }) {
               Registration lookup, BCC copy, and CSV export.
             </p>
           </div>
-          <form action="/admin/contacts/logout" method="post">
-            <button
-              type="submit"
-              className="h-9 rounded border border-gray-300 bg-white px-3 text-sm font-semibold"
+          <div className="flex items-center gap-2">
+            <Link
+              href="/admin/assessments"
+              className="h-9 rounded border border-gray-300 bg-white px-3 py-2 text-sm font-semibold"
             >
-              Sign out
-            </button>
-          </form>
+              Assessments
+            </Link>
+            <form action="/admin/contacts/logout" method="post">
+              <input type="hidden" name="next" value="/admin/contacts" />
+              <button
+                type="submit"
+                className="h-9 rounded border border-gray-300 bg-white px-3 text-sm font-semibold"
+              >
+                Sign out
+              </button>
+            </form>
+          </div>
         </div>
         {children}
       </div>

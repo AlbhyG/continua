@@ -4,6 +4,7 @@ import { getAxisLabel, AXIS_INFO, type AxisScores } from "@/lib/quiz/scoring";
 import { createShareLink } from "@/lib/quiz/share";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { hasAdminContactsSession } from "@/lib/admin/contacts-auth";
 
 export async function GET(
   request: NextRequest,
@@ -16,12 +17,13 @@ export async function GET(
   const {
     data: { user },
   } = await supabase.auth.getUser();
+  const hasAdminSession = await hasAdminContactsSession();
 
   if (isNaN(resultId)) {
     return NextResponse.json({ error: "Invalid result ID" }, { status: 400 });
   }
 
-  if (!token && !user) {
+  if (!token && !user && !hasAdminSession) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
   }
 
@@ -37,6 +39,7 @@ export async function GET(
     anonymousToken: token,
     userId: user?.id,
     supabase: admin,
+    allowAdmin: hasAdminSession,
   });
   if (!row) {
     return NextResponse.json({ error: "Result not found" }, { status: 404 });

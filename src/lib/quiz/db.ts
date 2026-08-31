@@ -80,6 +80,7 @@ export async function getResultById(
     anonymousToken?: string | null
     userId?: string | null
     supabase?: SupabaseClient
+    allowAdmin?: boolean
   }
 ) {
   const supabase = options.supabase ?? getSupabase();
@@ -96,6 +97,6 @@ export async function getResultById(
   const ownsByToken = Boolean(
     options.anonymousToken && data.anonymous_token === options.anonymousToken
   );
-  if (!ownsByAccount && !ownsByToken) return null;
+  if (!options.allowAdmin && !ownsByAccount && !ownsByToken) return null;
   return data;
 }
