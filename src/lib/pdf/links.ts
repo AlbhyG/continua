@@ -20,5 +20,6 @@ export function derivePdfPassword(
 }
 
 export function bookLabel(filePath: string): string {
-  return filePath.replace(/\.pdf$/i, '').replace(/[-_]+/g, ' ')
+  const label = filePath.replace(/\.pdf$/i, '').replace(/[-_]+/g, ' ')
+  return label.startsWith('first chapter') ? 'first chapter' : label
 }

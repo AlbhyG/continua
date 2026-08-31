@@ -16,7 +16,7 @@ import {
 } from '@/lib/pdf/links'
 
 const CONTACT_PDF_STORAGE_PATH =
-  process.env.CONTACT_PDF_STORAGE_PATH || 'first-chapter.pdf'
+  process.env.CONTACT_PDF_STORAGE_PATH || 'first-chapter-2026-08-30.pdf'
 const PDF_OWNER_PASSWORD =
   process.env.PDF_OWNER_PASSWORD || 'change-this-owner-password'
 // Keep the legacy database field populated until interest_roles is removed.
