@@ -36,6 +36,9 @@ export default function GroupProfile({
     name: string
     isSelf: boolean
     assessed: boolean
+    resultId: number | null
+    scores: AxisScores | null
+    takenAt: string | null
   }>
 }) {
   const axisResults = scores
@@ -121,6 +124,70 @@ export default function GroupProfile({
           </p>
         </section>
       )}
+
+      <section className="glass-card mt-6 p-6">
+        <h2 className="text-2xl font-bold">Compare members</h2>
+        <p className="mt-1 text-sm text-foreground/60">
+          Each row uses that member’s latest assessment, so differences are visible
+          alongside the group average.
+        </p>
+        <div className="mt-5 overflow-x-auto rounded-xl border border-black/10 bg-white/45">
+          <table className="min-w-[820px] w-full border-collapse text-left text-sm">
+            <thead>
+              <tr className="bg-white/55 text-xs text-foreground/55">
+                <th className="px-4 py-3 font-semibold">Member</th>
+                {AXES.map((axis) => (
+                  <th key={axis} className="px-3 py-3 text-center font-semibold">
+                    {AXIS_INFO[axis].name}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {members.map((member) => (
+                <tr key={member.id} className="border-t border-black/5">
+                  <th className="whitespace-nowrap px-4 py-3 font-semibold">
+                    {member.resultId ? (
+                      <Link
+                        href={`/quiz/results/${member.resultId}`}
+                        className="text-accent underline underline-offset-2"
+                      >
+                        {member.name} {member.isSelf ? '(You)' : ''}
+                      </Link>
+                    ) : (
+                      <>{member.name} {member.isSelf ? '(You)' : ''}</>
+                    )}
+                    {member.takenAt && (
+                      <span className="mt-0.5 block text-[11px] font-normal text-foreground/45">
+                        {new Intl.DateTimeFormat('en-US', {
+                          month: 'short',
+                          day: 'numeric',
+                          year: 'numeric',
+                        }).format(new Date(member.takenAt))}
+                      </span>
+                    )}
+                  </th>
+                  {AXES.map((axis) => (
+                    <td key={axis} className="px-3 py-3 text-center font-bold tabular-nums">
+                      {Number.isFinite(member.scores?.[axis]) ? member.scores?.[axis] : '—'}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+              {scores && (
+                <tr className="border-t-2 border-accent/20 bg-accent/5">
+                  <th className="px-4 py-3 font-bold">Group average</th>
+                  {AXES.map((axis) => (
+                    <td key={axis} className="px-3 py-3 text-center font-bold tabular-nums text-accent">
+                      {scores[axis]}
+                    </td>
+                  ))}
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </section>
 
       <section className="mt-8">
         <h2 className="text-2xl font-bold text-white">Members</h2>

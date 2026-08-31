@@ -74,17 +74,6 @@ export async function getCompletedIdsForPerson(
   return (data || []).map((result) => result.questionnaire_id);
 }
 
-export async function getHistory(anonymousToken: string) {
-  const supabase = getSupabase();
-  const { data } = await supabase
-    .from("quiz_results")
-    .select("id, questionnaire_id, score, scores, taken_at")
-    .eq("anonymous_token", anonymousToken)
-    .order("taken_at", { ascending: true });
-
-  return { results: data || [] };
-}
-
 export async function getResultById(
   resultId: number,
   options: {
