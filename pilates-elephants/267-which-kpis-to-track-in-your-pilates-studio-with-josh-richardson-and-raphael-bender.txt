@@ -1,0 +1,481 @@
+267. Which KPIs to track in your Pilates studio, with Josh Richardson and Raphael Bender
+Published: 28th July, 2024
+Episode: https://pilates-elephants.breathe-education.com/episode/kpis-to-track-in-your-pilates-studio
+Transcript source: https://transcripts.captivate.fm/transcript/bc5a089f-94d1-4816-b7a5-6a37189f93b6/index.html
+RSS transcript attachment: https://transcripts.captivate.fm/transcript/bc5a089f-94d1-4816-b7a5-6a37189f93b6/index.html
+Transcript media type: text/html
+
+PE Which KPIs you should track in your Pilates studio - Josh Richardson
+===
+
+PE - Josh Richardson Business KPIs-auphonic: [00:00:00] Welcome to Pilates Elephants. I'm here with Josh Richardson. Hey Josh. Good day, RAF. How are ya? It's good to be back. It's so great to be here with you. I can't believe our last convo on Pilates elephants was two years ago. Yeah, and I, I actually went back and had a little listen to that episode and, uh, yeah, August, 2022.
+
+So a lot has happened since. Um, but I think a lot of what we spoke about still holds true as well. So hopefully we'll be able to, uh, elaborate on a few of those things today. Hmm. And so just for context, for those of you who haven't listened to that previous episode, well first you should go back and listen to that previous episode.
+
+I think it's number 98. And the title of the episode is How to Make $250,000 a Year from Your Pilates Studio. Uh, and Josh is, uh, how I know Josh is, Josh is my CFO, my chief [00:01:00] financial advi, uh, officer, I guess. Um, you are, you're my financial advisor strategy advisor in my business. Your company does our accounting, our bookkeeping.
+
+Um, but I think the most valuable function without a doubt that you, you, you provide for me is you. Give me strategic advice, um, based on our numbers and, and, uh, I know our numbers now pretty well because of your, you know, what the work that you've done. Uh, and, but that's, uh, that's not your day job though.
+
+Your day job is, you have an accounting firm where you service Pilate Studios. How many Pilates studios have you got in your books these days? Great. I would, I would say we've got between 50 and 60, I would say Pilates group, fitness studios, yoga studios in, in that area. Um, we obviously, we, we help out other industries as well, but, um, the fitness industry is one of our main niches that we service.
+
+Mm-hmm. And, uh, because of that, you've got the financials for [00:02:00] probably a larger number than that of, uh, Pilates studios. And, uh, you know, uh, from a financial perspective, what. What looks, what a good studio, what a high performing studio looks like, and what a mediocre one, and what a terrible one looks like.
+
+Uh, and, uh, you, we are gonna go through now the insights that you've gleaned so that, dear listener, if you're a Pilate studio owner or an aspiring Pilate studio owner, you can be one of the top performing studios and you can make that 250,000 or $300,000 a year profit net profit that, uh, the best studios are making.
+
+So, Josh, couple of years ago we talked here and we talked about the basic kind of, I think there were like four or five building blocks of, of building a, a really successful studio. And they were, number one, choose the right neighborhood where people wanna do Pilates and can afford to do Pilates. And probably where there are other Pilates studios as well.
+
+'cause then you know that there's a market. For Pilates. [00:03:00] Number two, uh, know your numbers, like have some kind of financial model, financial plan. Get some advice from someone who can build a spreadsheet competently and, and interpret it. And who doesn't have emotional involvement in your decisions. Number three, make sure that your rent and your premises are on point.
+
+So, uh, that being like the rent not exceeding, like I think we said like 10% of your projected revenue. And you must, oh, only if you wanna make money, dear listener, you must be able to have 12 reformers in, in the room or more. 12 minimum. 12 or 16. Uh, and then what else did we say? Uh, set your prices so that your average price per session, the what people actually pay you.
+
+So if we include like all of the free trials that you give away and the discount of memberships, you have, like the average price that people pay you is minimum of like $22. Is what we said. Mm. And [00:04:00] then, yeah, finally. I think the last one was, I'm blanking on it, but it can't have been that important, so, yeah.
+
+Did I, what did I miss there? Yeah, no, I think, I think you've covered everything. Oh, thanks to the last two years of inflation, let's increase that average price per class to 25. Okay. And I've, I've, I've used these, I've used, I've used that numbers here, those numbers here. But, um, yeah, I think we've covered everything in terms of what to consider when you are.
+
+Moving into setting up a new Pilate studio or a group fitness studio. Um, and all of those still hold true today. So these numbers that I'm using as benchmarks, we, we invest in a program, it's called benchmarking.com, that will actually give you benchmark data for any industry you want, um, in Australia, and you can get, um, international numbers as well.
+
+So we've, so I've got access to those numbers, uh, but also I've got access to our, our client's financials. And [00:05:00] I sort of, I'll work interchangeably between those two. But basically across our client base is pretty consistent with the benchmark data. Um, now a question I get asked all the time, one of the first things a client will say to me is, am I doing okay?
+
+What's normal for a Pilates studio? So maybe I'll give a bit of an insight into that. Now, so when we start looking at some other items to be aware of, now that the, your studio's up and running where there's some KPIs we should be looking at, um, what's our starting point as normal. Okay. So let's, so in turn, okay, but really high level.
+
+So revenue, I would say at, at a 12 or 14, uh, bed reformer Pilate studio, it would be about $600,000 a year or $50,000 a month. Um, if I have to drill. Now, when, when you say normal, do you mean average or do you mean best case [00:06:00] scenario? Aav. So that's average, right? Because I was gonna say 600 doesn't sound maxed out to me.
+
+No, no. Well, if, if you think 600, if you've got a 12 bed reformer studio, um, I'm gonna get, you can play along at home with your calculator, but if you just take your $600,000 a year and divide that by your 12 months gets you $50,000 a month. Now, if you've got 12 beds in your studio, you divide that by 12 and you're getting a revenue of 4,166 per month per reformer, and then per reformer.
+
+Now if you divide, how many classes do you run in the month? And let's say you're running 50 a week or 200 a month. So you go and look at your schedule. How many am I running a month? Um, it'll be two 17, uh, two 17 a month. Alright, let's, uh, okay, so I wanna go [00:07:00] back to the point where. We're getting our revenue per bed at 4,166.
+
+Mm-hmm. If we divide that by a $25 per session mm-hmm. It means that bed has to be used 166 times in the month to hit your revenue target. Now, if you've only got a hundred sessions on the timetable, there's no way you're gonna hit that revenue target. If you've got 166 sessions on the timetable for the month, you're at a hundred percent capacity.
+
+And if you've got 200 sessions on the timetable, you're at 80, 80% capacity or something like that. And 80% capacity is really where we wanna be for a, you know, a consistently performing Pilate studio. So that, that's a bit of a drilling into the revenue numbers. Right. That's normal or average, so, so the average Pilate studio with 12 to.
+
+With 12 reformers [00:08:00] should be doing 50 grand a month in revenue. That's how much you get paid from the customers. And how much of that should be profit? Right. So the profit that will fall out of the end of that is about 12 and a half thousand, which equates to about $150,000 a year profit. And And that is not including, if the owner is teaching classes, the owner should be getting paid to teach those classes separately to the profit?
+
+Yeah. Yeah, correct. So if my revenue is 600,000 a year, my expenses, including rent, wages, and all the other overheads is about 450,000 a year, or about 37 and a half grand a month. Now, if you're an owner that is teaching classes, doing admin, you should be paid an hourly rate. For that, for that time. And, um, otherwise, if you're doing the work and not getting paid, it sort of fudges the numbers a little bit.
+
+It's so you're gonna get a better [00:09:00] profit, but you're actually doing all this work that's not being paid, so you're not getting a clear picture of how well your studio is performing. Right? So, so 50 grand a month revenue, 12 and a half profit. But that profit you have to take out of that. Like if you are the owner and you are teaching classes, you have to pay yourself for those classes.
+
+The same as what you would pay someone else if you weren't teaching the classes. And that comes outta the profit. That's part of the expense of running the business, correct? Yep. So after paying yourself, there should be 12 and a half grand left at, at, on the bottom line in the net profit line or in the, you should have 12 and a half thousand more, uh, dollars of cash in the bank at the end of the month if you're an average.
+
+Pilates studio, uh, really globally, I would say definitely for Australia, US it, it, it works out pretty similar. Yeah. Okay, great. Alright. So that's, that's normal. Now if, kind of the definition of normal I guess [00:10:00] is like, you know, 50% do worse than that and 50% do best than that. Better than that, right? Mm-hmm.
+
+And it probably is on a bell curve with most studios clustered around normal. And then the further away you get from that in either direction, the fewer studios, you know, there are doing like 300,000 a year would be very rare. And yeah, 800,000 a year would be very rare, but you know, somewhere in like 500 to 700 would be pretty common, right?
+
+Correct. So if I want to, if I'm normal, great. If I'm, or if I'm below normal. Or if I'm above normal and if I want to be well above normal, you know, because I'm, I'm guessing, dear listener, that if you started a Pilate studio, you didn't wanna start a normal Pilate studio, you wanted to start an exceptional Pilate studio and, and you just didn't want to have an average business, you wanna have a fucking awesome business that makes heaps of money and has a great impact on [00:11:00] a large number of people now, both your employees and, and your clients.
+
+So how do this, so what we're gonna talk about today are gonna be Josh's, I can't remember what it was, seven step process. I can't remember how many steps there are, but about Seven Step and Seven's a good number to say in a, in a, in a title of a, of a podcast, um, Josh's seven step process to, to build an exceptional Pilates business, and exceptional meaning very high revenue and very, very high profit.
+
+Spot on. So, and I would consider that, and we've used this number in the past, is a studio making a quarter of a million a year in profit is a high performing studio. And I have studios that are doing better than that, but really the top, the top 15%, uh, at that level, uh, going back to your bell curve analogy, and like really the, the steps to get there are pretty consistent as well.
+
+It's, [00:12:00] yes, there's slight variations between different studios, but these seven KPIs that we'll look at will get you there over a period of time that may be. Six months, one year, 18 months. As long as you stay consistent and, and work through and sort of target the areas that need your attention, uh, you would definitely get there.
+
+Mm-hmm. And so it's interesting, uh, that you, you mentioned at the, in the, the, the normal, the average party studio is making 25% net margins, so 50,000 a month revenue, 12 and profit. So 12 divided by 50,000 is 0.25, so that's 25% net profit. Whereas those top studios are doing like 750,000 with 250,000 profits.
+
+So that's a 33% margin. So they've got a significantly higher margin. So a larger percentage of the revenue stays in your pocket as the owner. Correct. And that's, that's the beauty of the, the model [00:13:00] of the studio is that a lot of your costs are gonna be fixed, like rent. If you're paying 60 grand a year rent, you are paying that if you've got one client or a thousand clients, that it doesn't matter.
+
+So, um, yeah, that's why I like the model. And you'll recall in the last podcast we had the Pilates studio feasibility, uh, sort of working sheet, and that's still available to download. I think I, I checked the, checked the podcast link, so that's still there. But I'll just, um, invite anyone to use that and actually see if your metrics stack up in the feasibility study.
+
+Mm. And dear listener, like I, I, I hope you, I hope you're ex excited to, you know, to dive into this stuff because this is literally the step-by-step process of how to build a $250,000 a year. Profit in your Pilate studio. So if, if you don't just listen to this and not long ago. Yeah, yeah, yeah. If you actually implement the things that we're gonna talk through today, this is how you build a [00:14:00] $250,000 a year profitable business.
+
+Like this is nitty gritty stuff, and the only reason this wouldn't work is if you didn't do it. Spot on. Um, I think we've set the scene now, haven't we? Let's, uh, should we, should we get into it? All right. So Josh, like, well, firstly, just a quick update. Like, so last time we talked was two years ago, inflation's happened, you know, post COVID, semi recession has happened, you know, what's changed in, and also Pils is exploding now, you know?
+
+Mm-hmm. So what's, what's changed, uh, that's relevant to our conversation today, if anything? Yeah. So, yeah, you mentioned that there, the competition factor has increased because Yeah. There's, there's more and more studios opening up and, uh. You wouldn't believe it. Someone showed me a map of Melbourne the other day, and on that map had all the class pass yoga and Pilates studios that sort of pin, you know, flagged.
+
+You couldn't even see the map in Melbourne. You [00:15:00] could not see, you could see little GLIs of the map. So there, there are, there's so much more competition out there. But what I'm noticing is the good operators are still doing well. So there's, there's enough demand to accommodate the additional competition.
+
+Uh, the good operators are still doing well, but they're definitely having to work harder for that sale and for the retention. And they're constantly evolving their product to make it, you know, engaging for their clients. So that's one thing that's happened. The other thing that's happened, so two years ago we were on the back of all the COVID-19 stimulus payments, the eco, it's what we call a very frothy economy.
+
+So people had all this cash and there's a metric, the, uh, RBA look at, which is called household savings. And they were at the highest level ever, uh, which means people are spending money on lots of discretionary items being usually discretionary spend is like travel, health and fitness, beauty, [00:16:00] wellbeing, entertainment, that kind of stuff.
+
+Take out travel because we weren't allowed to travel. So a huge portion of that discretionary spend was going into health and fitness. Uh, so we had a market where everyone wanted, uh, our product. Two years down the track travel has come back into the mix. People can travel again and they're spending money on that, and there's less money to spend on health and health and fitness.
+
+But the other thing that's happened is people have spent all those household savings and just before Christmas, seven months ago, the household saving balance got to zero. People then lived on credit for about two or three months, and in about March or April, we, in my view, hit the, the eye of the storm, the eye of the economic storm, in that people have run outta money.
+
+They've also. Maxed out their credit cards and they haven't really changed their habits yet. So what we've noticed in the last three months is people have been [00:17:00] forced to change their spending habits and one of the easiest things to take off your monthly or or weekly spend is your gym membership or your 10 pack of Pilates classes.
+
+So things that, things are harder out there is probably the, the moral of the story, but it's forcing the good operators to evolve, adapt, and be more engaging for their clients. And guess what? They're still doing well, there's still a market. People are still making money. Yeah, I think that's, I mean, we've been through several, you know, different ups and downs in the market and breathe education and, and also when we had a studio, breathe wellbeing for a decade.
+
+Uh, and it's definitely the case that in any, well, in my experience anyway, in any down market, not everyone does badly. Some people do exceptionally well. And what happens in a down market is the weaker businesses go under. And the strongest businesses gather up the scraps, you know, that were left over after, after those ones, you know, disappear off the [00:18:00] scene.
+
+And so it, it, what ends up happening is just like the, the businesses, the bottom 10%, you know, disappear and the top 10% accelerate. It's actually good for, because the, the, you know, the competition thins out basically. Yeah. That's the, the market forces at work and, and what I keep telling my clients, as hard as it is right now, the skies will be blue very soon and you'll have, uh, you know, a period of really healthy trading ahead.
+
+So work on the KPIs, work on your business model and, and the robustness of your business. And the upside is coming, uh, as with any market cycle, right? So it's a lot of positive there. Um. Right. I think you touched on something there, I've forgotten, but Yeah, but that, that's the state of the economy. It's changed.
+
+Probably one more thing, and this probably is a good insight for anyone who's listening and trying to figure out where to direct their marketing spend right now, but, and it holds true for globally really, is that [00:19:00] we've got a two speed economy. What I mean by that is there's two parts. So the economy on paper as a whole is actually going, okay, there's inflation.
+
+People are spending more, you know, you see the inflation numbers are are sticky and higher. It's like, well, no one's spending money apparently. So where's that coming from? There is a segment of the economy that is spending money, and generally speaking, this is gonna be your 45 and older demographic. They don't have.
+
+Mortgages or debt and hence have not been exposed to increasing interest rates. And in fact, they've got savings and investments. So they've benefited from higher interest rates and they've got more to spend. So that segment of the market, um, are spending more and more and is creating this economic growth.
+
+So if you're gonna angle your marketing to that segment, well done. The other segment, let's just call it 45 and below, they have a mortgage. [00:20:00] They have kids. They're exposed to all the increasing interest rates and cost of living. They're the ones that aren't spending. So generally speaking, if you are trying to angle your marketing at that side of the market, you might get great engagement on your Instagram posts, but it's probably less likely to follow through into a purchase of.
+
+A membership or classes. Mm-hmm. So yeah, there's, there's the people exposed to that 50 and above, or 45 and above segment. I, I'm noticing it across the board is doing a lot better right now. Hmm. It's interesting you mentioned that because I, I think just anecdotally we've noticed that with our, our students at Breathe Education as well is there's a, there's skewing bit older these days.
+
+Mm-hmm. Yeah. Interesting. Alright, so let's get in, let's get into nitty gritty. So what we are gonna outline here, or what you are gonna outline is really, uh, it's, it's essentially your si the sales funnel or the, the, the, the, the, the cash funnel of the business. You know, [00:21:00] where, where the money comes from, where the clients come from, uh, from front to back.
+
+And it's kind of like a, well, let me count the, the, the steps here. 1, 2, 3, 4, 5, 6. You go seven, there's seven steps. Um, seven step, a process of acquiring, monetizing, and retaining. Clients, which are the three key functions that you have to have to have a successful business. So, uh, and, and so this basically, assuming that you've already done the things that we had in our fir we talked about in our first episode, you know, you've got 12 plus reformers, you've got a good location, you're not spending excessively on your rent, et cetera.
+
+You know, talk, talk us through the funnel and why, like, why, give us an overview of this process, I guess, Josh. Okay. So let, yeah, let's assume the, the business is up and running. You've been going for a while. You've, you've sort of, yeah. You, you're going along organically and it's like, okay, well where do I, what do I start working on now?[00:22:00]
+
+So I have A-A-K-P-I system, um, and I'll definitely make this available to the listeners as well. If they just, um, send me an email that will be in the link. But it starts off with our first visit, tracking our first visits. So on this. It's a KPI spreadsheet. We have a monthly tab that we fill in, a data tab that the client will go and fill in for me each each month.
+
+It then converts that to a annual trend. So it's sometimes with KPIs we can get really hung up on how we did for the month without looking about at how that fits into the trend over three months or six months. Um, so we start off with how many first visits are we getting That then rolls down and that's, that's, that's a function of your marketing and sales area.
+
+How well am I doing at attracting people through the front door to start with? That then rolls down into your conversion rate. So this month, how many new [00:23:00] members signed up or purchased a pack? Um, that then, and we'll get into this in more detail, but that then rolls down into your capacity utilization in your studio.
+
+So how many classes are on offer and what is my attendance rate? Then we go down to number of cancellations, which will give you your churn rate. Uh, and I'll give you the exact numbers that you should be aiming for as we work through it. And then we track your number of active members and obviously active members times monthly membership gives us our annual revenue.
+
+So, so we can track that and then find, there's a few, there's one other sort of on a side note, KPI that I track, and that is your labor cost as a percentage of your revenue. Mm-hmm. So are you understaffed? Are you overstaffed? Are you taking too many classes yourself? So that's, that's the last one that I track.
+
+Okay. And so the, this process, we use it in breathe as well. We [00:24:00] called the diagnosing constraints process. We didn't make up that name, but, um, it's really, basically, this is the life cycle of that prospect becoming a client and then retaining as a client. And so if you don't have enough bums on reformers and you look around and the class is half empty, it's like, well, why is that?
+
+Right? Well, how much did you spend on marketing? How many first visits did you have last month? Of those first visits that came, how many of them bought a pack? Of the people that bought a pack, how many of them came to class? You know how many of them canceled? How many of 'em remained active? Right? And that tells you how much, how many bums you've got on your reformers.
+
+And so when you go back through that process, you can identify where the problem is, right? So rather than just going, I need more clients, it's like, yeah, well, specifically what stage in the process isn't working? Or we specifically, what stage in the process is the primary constraint, right? So if we go to step number one, okay, how many first visits did you have?
+
+And if the answer is like four, [00:25:00] okay, well everything else after that becomes irrelevant because it doesn't matter what percentage of those people sign up 'cause it's bugger. Or people walk in the door, so we've gotta start there. Exactly, and often when I start working with people, I'll show them these KPIs and they've got some sort of a system or a methodology in place for each part of that business, but it's a matter of fine tuning it and then obviously putting some pressure on it by.
+
+Increasing the number of first visits and does your system work with that increased volume? And as we've noticed at Breathe as well, it's like something will always break and that that's a good thing. So you fix one problem and then the next, you know, you fix your first visit problem and then you realize that your new signups is sitting at 10%.
+
+It's like, oh, well I've got a problem there in my, in my conversion process, right? So we work through in order and something will always break, and then something will stay fixed for a while and then it will break [00:26:00] down the track. It's, it's an ongoing process of. Not just recording the KPIs, but like getting the actionable insights and doing something about it.
+
+Right? And so, you know, just as a, just as a measure, dear listener of why this is so freaking important and powerful to build your business, right? If you're looking around at your class and your class is half empty and your bank balance is mostly empty, and you think like, why, why? You know, why, why don't I have more clients?
+
+Well, if you just go to what you know, right? Which most of us are guilty of just like doing what we are already comfortable doing, and you, you teach more and better Pilates classes and give more and better customer service. Like, that's not gonna solve the problem if the problem is that you don't have enough new people coming into the business.
+
+And the way you get more new people coming into the business is not, I mean, of course you have to teach great plays classes, and that, that's, that's kind of like a price of entry. But you need to advertise, you need to get the word out and you need to convert those people into paying customers. And so if you, if you, you, [00:27:00] by using this process, it allows you to focus on the things that's actually gonna make the difference to your revenue and profit rather than wasting time on stuff that's actually not moving the dial.
+
+And so Exactly. Yeah. And so if you are busy, which as a studio owner, my bet is you are busy as if you are really busy, all of the, all of the hours and your studio's not making much money. I'm sorry to say this to you listener, but you're working on the wrong stuff. And so this process that we are going through here, this is how to work on the right stuff, right?
+
+So if you're teaching 30 classes and they're all a, a third fall and you're not making any money. It's like, yeah, that's 'cause you shouldn't be teaching that many classes. You should be focusing on how many first visits you're getting and how many of them are signing up. All right, so what's, so what is the metric?
+
+What is the, what is a good benchmark for first visits per month? And this, so these are people who take up your [00:28:00] intro offer, right? There are three classes for $30 or four classes for $50 or whatever it's that you sell. Yeah, yeah. Spot on. So first visits is, is not people that have come and done a one-off casual class.
+
+It's people that have signed up to a intro offer or a trial offer and paid a price for that. So we never give away free things. So make sure your trial offer has a price and I'll, I'll get to why that's important as well when, when we get to the next metric. But the number is 51st visits per month. Is what you should be aiming for.
+
+And, and I'm using our average Pilate Studio 12 bed, 12 to 14 bed reformer Pilate studio as my guide there. But with my clients, I aim for 50 give and take depending on what their ultimate goals are. Um, and that really is a function of your marketing and sales activities. Right? And we could, we could, I mean, [00:29:00] 50 sounds like a lot, but it's not actually that many.
+
+It's like bit under two a day, you know, spot on. Yeah, spot on. Uh, often people will just organically get. 15 to 20 a month without doing anything just by word of mouth. Um, and o often people, when I first start working with them, that's about the number they're at. We're getting, oh, we we're doing about 15 trials a month and we're not doing really any sales.
+
+We're doing a few Instagram posts when they put a strategy in place. And by that I mean working with a professional marketing person or upskilling yourself to, you know, do Facebook ads and, and have a posting schedule and have a real structured marketing plan. Usually within three to six months, you should start to get traction and hit that 45 to 55 new visits or first visits per month.
+
+And I think, uh, one of the most [00:30:00] common sort of mistakes that I see people making that inhibit or that are preventing them from, from. Having the business of their dreams is either just not marketing. So when I say that studio owners, you know, what are you doing for marketing? And they're like, uh, nothing.
+
+Um, or think making the mistake of thinking that posting on social media is marketing. Mm-hmm. And posting like videos of classes is great, but it's not the same thing as putting an ad on Facebook or on Google that is targeted and has an offer behind it. Click here to get started. Two week intro, $50. You know, so
+
+if you are not getting 50 plus new humans walking in the door and buying your intro offer on the average month, then you need to [00:31:00] be doing more or better marketing. Yep. And that's gonna vary depending on the season, but you really, between 40, 40 and 60 is the number. Uh, I've had a client recently that has spent the last six months going from that 20 to now in the last two months hitting 50 plus.
+
+And it can be a bit of an adjustment as well, especially on the admin function of your business. All of a sudden you're trying to onboard double the amount of new people. Right? Um, so what I would warn against is. Going too hard, too early and putting all this money and activity into your marketing and sales function, and all of a sudden you're at 61st visits, but your systems can't cope with it and your staff can't cope with it.
+
+And your clients get a little bit annoyed with it as well because you've got all these new [00:32:00] people, the influx of new people into the studio. So right. Slow and steady over a six month period is my advice there. And all you get there is, uh, exposing 60 people a month to bad service that they're not gonna come back and pay for.
+
+Yeah, yeah. Spot on. So you just, just, so sorry. So just focus on each, each one of these, you know, first visits, sign up classes, attendance, cancellations, active members, labor costs. So just focus on each one of these in turn until it's no longer the biggest constraint. Right? So we don't want to take, uh, first visits from like.
+
+Virtually none to infinity. We want to take it to, from being the, the main reason why you don't have enough money to not being the main reason why you don't have enough money. And as soon as something else becomes the main reason, we stop working on the signups and we start working on the next, whatever the next thing is that, that is the main constraint.
+
+Yeah. Spot on. And you're, you're, uh, your, uh, I suppose when you're going to find that marketing [00:33:00] person or someone to help you with achieving that goal of it not being the main constraint, your directive to them is, I'm currently getting 20 new people through my doors every month. I want to get 50 new people through the doors per month.
+
+How can you help me, uh, meet with two or three different people? Do the research yourself and select someone who's gonna help you do that. Um, and it's, it's gonna be over six months. Be be prepared to make the investment. Now and get the returns in six months time. It's probably the, the biggest thing I see is people make the investment on hiring a, a marketing professional to help them or investing in themselves and they're like, nothing's happening.
+
+It's been three months and nothing's happening. If, if you're doing the right things, give it six months before you start to see some traction there. Mm. Alright, so we've got 51st visits, chaching now. Uh, okay. The next process, the next thing on your list is signups, [00:34:00] right? So out of those 50 new visits, 51st visits, we wanna be signing up or the, the KPIs 50%.
+
+So we wanna be out of those 50. We need 25 people in the month to be buying a pack or a membership. So we're converting 50% of the new people that have come through. Some studios do much better than that. Some studio, if you're, if you're operating at sort of 30% and below, there's something broken in the customer experience from when they first walk through your doors to when they sign up.
+
+Uh, and that's the next constraint we work on. And there's all sorts of things you can be doing to improve that conversion percentage. Um, going back to the reason why we charge for a trial or an intro is you're immediately gonna clear out the tire kickers and the riff-raff, the people there for a free run.
+
+Um, 'cause all they're gonna do is just move on. So you're gonna [00:35:00] lose them anyway. And, and that's, that's also the reason why I'm not a big fan of Class Pass because those people are bargain hunters and they're, they're studio hoppers. Um, just on ClassPass, I would say if you are converting 5% of ClassPass people to a regular membership, you're doing well.
+
+Which is, yeah, not much. So those ClassPass people, basically, they're just taking up space in your classes and they're paying, paying you less than a regular client is paying you and they're way less likely to convert into a regular client. So it's like, yeah. Everything about it is worse than just putting up a Google ad and getting your own new client rather than getting Glass Pass.
+
+Yeah. Solves a short term problem. And, and some of this is, you gotta think about the bigger picture. Like you, you may well not get. A 50% conversion rate, but sometimes those people will come back in three months or six months because they have had a great [00:36:00] experience. So that's why I, I like to look at trends of conversion instead of just the month by month data.
+
+And, you know, I've got a client that's been operating for 18 years and they'll get people coming back after five years of not being there. Uh, it's so always make sure you're leaving these people with the best sort of experience possible because you're planting the seed for a long-term relationship.
+
+And that, and the, what you said there, that also ensures the highest possible conversion during the trial period. Right. And it's, it's things like, uh, onboarding. So, you know, getting, having that new person, educating them on how to use this facility and how to get them, which classes to go to and how early to arrive and do they need to bring a towel and where do they get changed and all of that kind of stuff.
+
+What's the etiquette? How do they cancel, how do they book, you know, which classes should they do? All of that kind of stuff. So onboarding them in a way so they feel super clear and they know how to get the most outta the program. And then educating them on the next steps, [00:37:00] you know, well then encouraging to come as many times as possible.
+
+I mean, we've, I don't know if you've got this data, Josh, but back when I had a studio, we found that people who attended three or more sessions in their intro period were way more likely to convert, you know, to a pack or a membership than people who just attended one or two sessions. Um, so just encouraging them to con, to, to, to consume right.
+
+Yeah. Uh, and I think, yeah, there's some, some, so many things you can do to improve that conversion rate. Another one is, so people always rock up, what, one minute before the class, right? So if you've, if you've got four new people in your class and they all rock up a minute before, how is your trainer or or front desk person going to give them a proper overview of the studio?
+
+Something I've seen done really well is just sending them the day before. So they've already booked the class, sending them even. Half a day before is the welcome video, which is you as an owner. It's a prerecorded welcome video. You as an owner saying, welcome to the class, here's what [00:38:00] you're gonna expect.
+
+Uh, by the way, here's, you know, the toilets are here, the, you know, the entry's here, and your, your trainer is gonna be doing this during the class. And it just, it's that step-by-step process of the customer experience that you're gonna try and improve to increase the percentage of them having a good experience and therefore signing up later.
+
+Right. And it's also making promises and keeping them right. If you, if you send them out this video and say, okay, what's gonna happen when you arrive is this, and then when they arrive, that's what happens. Then they start to trust you, that you know, what you say is what you do. Uh, and the more times you can do that, the more they'll trust you.
+
+So, um, exactly right. Alright, so there's, there's a choreography of, of bringing people into the, the studio and actually. Uh, onboarding them, having them consume the classes, you know, recommending which classes they should do, how many classes they should do based on their goal and their, their fitness and whatever.
+
+And [00:39:00] you can go more or less personalized with that, you know, depending on how busy your studio is, et cetera. But it's like, it's really, it's a quick five minute conversation after class one time, you know, that you can just say, Hey, okay, how many times a week do you want to come? What are your goals? What have you done fitness wise before?
+
+How hard is that class from your experience? Okay, well I reckon you should come on Tuesdays and Thursdays and see Mary. 'cause she's great and she's really good beginners, you know, and, and that'll get you where to what you, where, where you want to go. You know, like, just something as simple as that is, is gonna make a really big difference for a lot of people in their confidence and, and their, how regular they are, uh, attending the studio.
+
+Uh, and then the, do, do you know, uh, do do many of your studios have like an a. A, an incentive to buy your first pack before your intro period ends, like, you know, extra free class when you buy your pack before the end of the week sort of thing. Yeah, absolutely. That's, [00:40:00] that's key. So there's a, this is one of the other things you can implement is you could do something like there's a, um, you know, a initial membership fee or adjoining fee that is waived if you sign up before the end of the trial.
+
+So the joining fee might be 50 bucks or a hundred dollars that, that, that gets waived if you sign up before the end of the trial. So that's another incentive of value that they're gonna get to convert. I love it. And, uh, dear listener, you, you can basically have that membership fee and you never charge anyone that membership fee ever for the lifetime of your business.
+
+And the membership fee might, you can, it's basically an imaginary membership fee because as long as you sign up during your trial, you don't pay it. Yeah. And look, back in the day, a membership fee was sort of justified because you had to fill out the, you know, the admin had to fill out the forms and set up the direct debit and give them their gym card and all that kind of stuff.
+
+But thanks to technology, none of that work really exists anymore. But [00:41:00] the membership fee or the joining fee can, you can say, well, that's to Accommo, that's for the initial setup of your membership. But yeah, of course. Never charge it. Yeah. Um, all right, great. And so then you have, uh, even better, if you have some kind of automated process that does all of this, like you say, sends them an a video, an email that auto sends, you know, sends them a video, here's where the toilets are, here's how to get to class, et cetera.
+
+And then also emails that say, Hey, and by the way, during your intro. You know, week or fortnight or whatever, two weeks, you know, there's this special offer, no joining fee when you, you know, sign up for the x, y, Z for the silver membership or whatever, or a free extra class on your first 10 pack. Um, you know, when you, when you enroll before the, of your trial, and then remind them of that.
+
+Send 'em another email and another email. Hey Josh. Yeah. Hope you're enjoying your cla your, your trial. I notice you've done three classes. You've only got one class left. Here's how to get, you know, if you've, if you're [00:42:00] loving how you're feeling after doing those three classes, you know, click here to get started and as a special gift to you or waive your membership fee.
+
+Yeah. And it can all be set up through your management software, like MINDBODY or, or whatever you're using. It's just the, the email, um. Chain that is automated. It's all automated. So in terms of investment on the owner's time to manage this process, if you've got an automated onboarding, you know, new client experience all set up, you've done the one video that you can use over and over again that that'll take you five minutes.
+
+You've got the automated text or, or, um, email, I would suggest it's always worth doing a personalized phone call during their trial. And it's great if the owner does this because you're gonna get great insights into what your studio is like. People will tell you over the phone what they're not enjoying and what they are enjoying.
+
+So you can use that really as, [00:43:00] as information to improve the, the, the process. Now, on average, if you do all those things and you get the client to sign up and they're paying. Let's say it's, it's $80 a week on average, a client will stay with a studio or a, or a gym for a year or 52 weeks. So if you go $80 a week times your 52 weeks, that's 4,160.
+
+Uh, so 4,160, how long does that taken the owner? Maybe 10 minutes of effort. Uh, what's the hourly rate on that? A lot? Well, if, if you're looking at the, the best ways to spend your time as an owner, uh, your return on investment is huge in that particular area. And so, dear listener, you know, if you go, if you are doing your 50 signups or 50, uh, new, new clients a month or 50, you know, uh, first visits a month, and you go from like a 40% [00:44:00] signup rate to a 50% signup rate.
+
+You go, you add five new clients a month at four grand each for, you know, lifetime value. So like, this is not small, you know, small stuff that we're talking about here. Like if you can just get a few percentage points increase in your conversion rate from first visits to, to buying a pack or membership, you know, this is, this is a lot of money we're talking about over the lifetime of that, of that client.
+
+So, you know, and let alone if you can go from 40% to 80%, which is what the best businesses are doing, right? Yeah. And the, the best thing about doing, if you increase the conversion to 80%, well no longer do you have a need to get 50 new people through the door each month. You can actually spend less time and effort and money on getting new people through.
+
+Pull that back to 30 people a month. If you're converting at 80%, you're still getting your, your new membership rate [00:45:00] where it needs to be. Um, so yeah, that's, that is the, the next metric, which a lot of work goes into it, and that's probably a six month process to nail it down. Sometimes more, sometimes less.
+
+Right. You just really need to orchestrate that experience during the intro period. So at the end of that intro, they're like, holy cow, this is amazing. Where do I sign up? Mm-hmm. Exactly. Alright. Alright. Shall we go on to, so, okay, we've got the members now, they've, they've walked through the door, they've signed up, they're now participating in classes on a regular basis.
+
+So in terms of operations, the next KPI is your capacity utilization and what's that? And I'll, I'll break down what that is. So the number we aim for is 80% and it means that how many classes do you have on the schedule per month? How many available positions are there to your members and how many of those [00:46:00] available positions are filled filled with if we have, with paying clients?
+
+Yeah. Bums on seats, I call it. So if we go, um, on average you have 50, I'm gonna say 50 sessions per week. I'm just gonna times that by four to get you your 200 sessions per month. You, you let's, you do lunar months, you do lunar months. What about 4.3? Three for four? Yeah. We'll go four. Yeah. Okay. Well, let's do it.
+
+Perfect. Let's do perfectly. If I go 50 sessions a week, times your 52 weeks divided by your 12 months, it's 216 sessions on average per month. If you times that by your 12 beds, or you can use 14 if you like, you've got a total available positions of 2,600. Now, [00:47:00] if you go and you can get this data straight from your management software, how many sessions were completed to get your 80%, you would need 2080 sessions completed.
+
+And that's one member coming through, you know, three times a week. So one member might do nine of those sessions in the month or 12 of those sessions. So you don't need 2000 members, it's doing one session a month. It's hopefully you've got a client base that's doing two to three sessions a week, um, and, and hitting that number of 80%.
+
+Uh, now why the 80%? Why, why don't we go for a hundred percent utilization? Uh, it's, yeah. You tell me, RAF, I don't, I don't know. You help me out as, because you, 'cause you like leaving money on the table.
+
+I like 80%. I never like leaving money on the table, but I, I like 80% because at a hundred percent you've got waiting lists. You've got jam packed classes, [00:48:00] you've got this, I suppose, a, an experience that's super busy and hard to give a, a personalized experience. What I've found is that at 80%, you've, you've got full classes, maybe one or two on the waiting list in the busy times, but in the not so busy times, you've got availability of two or three classes and it's just, it's a consistent, um, easily maintainable number.
+
+Um, for a studio to aim for. If you are below 80%, you, there's two reasons for that. Either you need to adjust your timetable and remove the classes that are losers, cut the losers, and adjust your timetable on an ongoing basis every four weeks. Or you're a new studio that has created the capacity and you're trying to fill the capacity up so, you know, build it and they'll come.
+
+Uh, you need to put the class on for people to sign up and figure out that that's the time that they like coming. I would, yeah. I mean, I would add [00:49:00] to that though, that I think I a hundred percent agree that, uh, time scheduling or timetable pruning should be, or timetable review should be a, a, a monthly activity.
+
+And 'cause that's gonna be seasonal as well, you know, as in the colder months, you know, some people won't come in the early mornings or the late evenings, you know, different days will, you know, be seasonal. But, uh, even if you're a new studio, like if you're just building from scratch, like, I think, yeah, I agree.
+
+There's a minimum sort of effective timetable that you need. Like I think if you have 20 classes a week. You know, you've got enough that you've got something before work, something at lunchtime, something after work every day. You've got something on a Saturday morning, so there's, there's none. There's none of the major times that you're not covering.
+
+And that's, there's no, there's no reason why someone would say like, oh, I can only come on Tuesdays and you're not open on Tuesdays or something. So you're not gonna lose people to a significant degree there. If you have more than 20, if you have [00:50:00] 25, 30, 40, all you're doing is paying extra money for those instructors to teach those classes, and you're not actually gonna make it, you're not actually gonna get more clients.
+
+You know, like if you go from having five classes a week and you try and sign people up, no one's gonna sign up because I'd be like, oh, I can't come. There's no times it sued me. But once you get up to about 20, you basically, that that objection disappears and people stop you. People stop having a problem with it.
+
+And so any more than 20 is a complete waste of money if they're not full. So you should, that's where the pruning comes in handy, right? You, you keep adding as you need to. Right? So you, so you should have a, a minimum of about 20 classes a week. Even if they're not full, you should have a minimum of 20. But once you've got 20, don't add the 21st one until those first 20 are 80% full or 85% full, and then add the 21st one, you know, take it back down.
+
+Exactly. Exactly. And same goes for when you've got 50 classes on the schedule and you're at [00:51:00] 85%. You, you'll need to add two or three additional classes. And I always say bolted onto a block that already exists, right? So if you've got a, if you've got a Saturday morning block of seven till eight, eight till nine, nine till 10, add the 10 till 11, six till seven, or the, or the, or the one on the other side.
+
+Uh, that always seems to work so overflow, just it changes their schedule accordingly. And so this should be a monthly discipline that you, as a studio owner do, or studio manager, studio owner with a studio manager do. And that should basically be, you know, first of every month or the 30th of every month, you sit down and you look at, okay, every class, class by class, what was the average capacity utilization for that class?
+
+So Mondays at 7:00 PM that was at 85%. Great. We're keeping that one. You know, Mondays at 8:00 PM ah, that was at 45%. That one's going right? And, and, and if there's one that's really busy and there's a spot available next to it, we'll put [00:52:00] an extra one on there and take one of the less busy ones off somewhere else in the, in the schedule.
+
+So you're constantly optimizing for the times that people actually tell you with their vote, with their feet. And they're bums on reformers that you, that they actually wanna attend. Uh, and that way you maximize the convenience for your clients and you mini you maximize the efficiency of your schedule so that you're putting the minimum number of classes on at the times that are suitable for people.
+
+So you get the maximum of people in those minimum number of classes. Spot on. So there we go. Uh, capacity utilization, 80%. Obviously there's some variability there depending on your studio and, and what you're trying to achieve. But look, I've got studios that have 80 classes on the schedule per. Per week.
+
+And that's about as mu as many time slots as there are available in the week. Right. Uh, when you, when you're getting up above there, you're, you're looking at having to either add, add [00:53:00] beds, or add space or add studios. Yeah. And can Josh, can we just sort of divert for a moment on a little side quest here about, um, you know, that that scheduling discussion that you have every month and so I think what a lot of studio owners sort of struggle with is, is letting people down and having the hard conversations.
+
+It's like, okay, we've Sally's class on Tuesday at, you know, 4:00 PM he's only got average of 20% full. It's like, well obviously that's gotta go right? But Sally's a lovely person and she really likes working here. And the two clients that do show up for that class, they really like it. Well, they love Sally.
+
+Yeah, they love Sally. That's the only reason they're yours, Jim, is 'cause of Sally. Right. And so, you know, dear listener, you will disappoint people. When you make the decisions that you need to make to have a thriving business. But being in business is not about never disappointing people. It's about serving the people who you are a good fit for in the way that is profitable for you [00:54:00] and gives the people you're serving the result that they want.
+
+So Josh, how would you, you know, how would you, how do you advise your clients to approach that conversation? Because if it just so happens that, you know, Sally needs, you know, a certain income level or whatever, and we're saying, oh, by the way, Sally, we're cutting two of your classes. 'cause no one's coming to them.
+
+Like, you know, how, how do you advise your clients to sort of approach that? Okay, so this probably goes into a whole nother podcast that we will do in a fu in the future, which is your trainer KPIs. So this should not be a surprise to Sally that her classes are underperforming and, and, and should be fully aware of everything she needs to do to improve.
+
+For her numbers. Yep. And if they haven't improved within a certain time period, she will then know that the classes are gonna be cut. So this isn't a surprise for Sally. Um, so we'll, we'll talk about trainer KPIs or we should schedule something in for next week. Okay. Uh, [00:55:00] the, the other one, the other one that you're gonna have to have a conversation with are those two clients that love coming to her classes.
+
+And it's the only reason they're at your studio is because they love that class. Yep. Um, nine times out of 10, I can tell you this with absolute certainty, they will be upset. They might write you an email saying how disappointed they are, but they will find another class that works for their schedule.
+
+And most of the time they go, actually, I really like this other trainer, and I'm, this is great. This is awesome. And or, or Sally's got another time slot that they'll fit into. Yeah. So nine times outta 10 that happens? Yeah. The other 10% of the time they'll leave, they'll leave your gym and they'll find somewhere else.
+
+But guess what? They're gonna have to. Find there's a new trainer anyway. Yeah. Um, so, and that's the whole reason where we work on getting the new clients in through the top is because you're always gonna lose some out of the bottom. Yeah. Um, there's always gonna be that churn of clients that you are no longer a good fit for.
+
+Uh, [00:56:00] but 90% of the time, those, those clients will find a class that suits them and, and be happier or as happy as they were beforehand. Yeah. And, uh, like you said about, uh, Katrina KPIs, Sally will know because, uh, you've already talked about it with her every week since you've, she's been employed here, that it's her job to fill that class.
+
+That is what you are paying her for. And, uh, if the class is not full, she ain't doing her job, and therefore the class gets cut. And that's just how we play the game, because otherwise we go outta business. Spot on. Alright, so we should aim for 80% capacity utilization and that should be a, a metric for the studio as a whole.
+
+And also, and so that's your responsibility as a studio owner slash manager to prune the timetable on a monthly basis and, and adjust and, you know, shuffle classes around. So you're bolstering those areas that are popular and adding more classes there and taking out the ones that are less [00:57:00] popular to keep it at overall 80% capacity utilization.
+
+And also that's a KPI for the trainers, right? So every trainer should be at 80%, and if they're not, then why are they working here? That sounds harsh, but it's like, it's true, right? I mean, how can you have a business that's at 80% if you, one of your trainers isn't doing 80%, you know, if they're doing 60% well someone else has to do a hundred percent to make up for it, right?
+
+The great thing about KPIs and tracking numbers is it's black and white and it takes all the emotion out of it as well. So yes, it is sort of harsh and it's hard to have that conversation. But as the, as the owner, um, you, you can use those metrics to just say, Hey, this is your number, this is what we need.
+
+How can I help you improve that? And it, right, it makes the conversation easier instead of saying, right, I think that you are not doing this, or, I feel that you're not doing this. And they're like, well, I feel that I am. Right. So, well, here's the numbers. Right? And so, you know, as, [00:58:00] as we'll just, you know, we've, I've talked about in previous episode, but also, you know, we'll go through it.
+
+I'm looking forward to the next convo. It's like, this shouldn't come as a surprise to Sally, like you say, and you would, you don't, the first thing you do isn't fire her. The first thing you do is go, oh, Sally, you know, normally your numbers are great, but last month your numbers were down a bit on the Wednesday class, you know.
+
+And because I've been auditing your class and because we've been doing one-on-ones every week and we've been talking about the attendance and the looking at the feedback, we know what it, what you need to do to improve those numbers. And I'll be coaching you on that. And we have a plan for how you're gonna change your behavior and, you know, do more reach outs to clients or finish with a stretch more often or whatever it is so that you fill those classes.
+
+Right? And so Sally has a chance to fix it and if she doesn't fix it, then you cut the class. Yep. Alright. What's next on the list? All right, so this is the last, the last official KPI. And that is your, well, it's the cancellations, [00:59:00] which then rolls into your churn rate or the churn. By churn rate, I mean the percentage of your client base or memberships that have canceled during the month.
+
+Uh, a studio or gym that's doing under 7% is a high performer. So you are, you are really well run Group Fitness or Pilate Studios that has 200 members or regular pack purchases and that are losing 14 of those 14 7%. Uh, that's normal. That's normal churn rate for people moving or injury or pregnancy or all that kind of stuff.
+
+Based on the last 10 years of me tracking these kind of numbers, that it seems to be what it is. I, I, I'm curious about this because this is something I always struggled to track when I was, you know, when I had a studio. 'cause in a gym it's pretty easy to track. Everyone's on a membership at a gym, right?
+
+So it's just like, well, how many, if we had a hundred members at the start of the month [01:00:00] and then seven of them canceled, that's a 7% churn. Easy, right? But just say I started with like 50 members and 50 people on 10 packs, right? And then maybe two members canceled and. Of the people on 10, like how do I track that with the people on 10 packs is my question.
+
+Uh, so now I know MINDBODY does this, and if you're not using mindbody, I'm, I'm pretty sure you'd be able to talk to your software provider to give, to set you up with this visibility. But you should be able to pull up your active members mm-hmm. Number so by, yeah. So active members is someone that has a valid pack or, or a ongoing membership.
+
+Mm-hmm. So if that 10 pack has expired or they've used it up and haven't repurchased, that's a great, that's a cancellation. Right. Or if they've canceled their membership, that's a cancellation. That's great. Alright. And so that is dear listener. It's not how many members [01:01:00] do you have today and how many canceled during the month?
+
+It's of the hundred people who were active members on the first of the month of that group, how many. Are no longer active members. So you might've had a hundred at the start of the month and then you got an extra 30 and then 20 canceled. Right. So now you're actually still ahead by 10. Right. But you actually have a 20% churn.
+
+You got a big problem. Yep. And that's what we would see. Uh, I won't mention names, but your big chain group fitness. Studios that are in the media a bit lately, you're looking at a churn rate of plus 20% there. Because they, what they do, they get people in really cheap on free trials. They convert them to members on like really low membership price for the first three month, and then it goes high.
+
+So they just lose that person straight away. So their churn rates are like north of 40% and they're just churning through members [01:02:00] all the time. So what's the point in doing all that work? Getting them in through the front door, converting 'em to a member, teaching 'em about the way you do things, just to lose 40% of those.
+
+It's, it's just a whole, it's working hard, not smart. The best studios, oh, sorry. Go ahead. Oh, so the best studios are under that 5%, you know, three, four, 5%. And that's, that's where you should be aiming for, right? And I mean, just dear listener, this is not, I mean, you think like, you know, 5% compared to 7% compared to 10%, what's, you know, what's the big deal?
+
+But this, these numbers are inversely, uh, correlated with price or with the, the lifetime value of that customer, right? So if you've got someone who's paying you a hundred dollars a month, right? And you've got 10% churn, say, okay, that per how long, how, what's the lifetime value of that person? That means like every month they've got a 10% chance of leaving.
+
+So after 10 months, they're gonna leave, right? So the lifetime of that customer is a hundred dollars a month [01:03:00] divided by the churn rate. Mm-hmm. Right? So a hundred divided by 10% is a thousand. So that person's worth a thousand dollars to you added 10% churn. Now if you go to a 5% churn, that person's now worth $2,000 to you.
+
+They're gonna stay 20 months. So you've doubled the value of that client by going from a 10% churn to a 5% churn. Your clients are worth twice as much. Twice as much double. Right. It's like imagine getting double the number of new clients every month. Right. That's the same effect on your bottom line that you'll have from going from 10% churn to 5% churn.
+
+Like it's, this is a very major impact on the finances of your business. Mm-hmm. And, and all these KPIs are in, you know, if you tweak them all, if you get a 5% improvement in all of these KPIs, the cumulative effect on that of that is huge. So, okay. So what are the things, [01:04:00] yeah, e exactly. But what are the things affecting churn rate?
+
+Um, for me, the main thing is engagement of your. Client base, are they getting sick? Are you just doing the same class day in, day out that they get sick of after three to six months and leave? Or are you constantly evolving your product to suit the needs of your members? I would say, I mean, I agree with you on the, on the attendance and engagement bit, and I think, uh, there, there are a few things that you can do as a studio owner and as an instructor.
+
+And this is why it Sally's job to have a full class. Correct. 'cause a lot of these things come down to what happens in, in, in and around the class is of course the classes have gotta, there's gotta be experience and results, right? So that it's gotta be fun and they've gotta actually like get stronger and more mobile and have more energy in all of those, you know, things that they want.
+
+And so when I say fun, I mean like community connection, feeling welcome and [01:05:00] you know, part of something, all that stuff. And like. Even if your classes are great and fun and they're getting results, people still have lives outside Pilates. You know, kids get sick, they get a big bill, you know, grandma comes to stay, you know, whatever it is.
+
+And so people get distracted very easily and if you monitor their attendance right on a weekly basis, and I, you know, some softwares do this, others probably don't. But if you know, okay, Sally comes three times a week, three times a week, three times a week, two times a week. Two times a week, once a week, none, none cancel, right?
+
+Whereas if you see Sally comes three times a week, three times a week, three times a week, two times a week, you reach out by text and go, Hey Sally, I missed you in class tonight. Where are you? I hope to see you on Friday. Is everything okay? Bam. Sally comes three times a week again next week, and you're off.
+
+You're all good, right? So you can, you can really make a big difference by just [01:06:00] picking up these, these little blips in people's attendance. And seven times outta 10, that person's like, oh no. Like I just, you know, had a work due. I'll be there on Friday. No problem. Right. But sometimes it's like, oh yeah, crap, the kids have been sick and I've been overwhelmed and blah, blah, blah.
+
+And I'm, oh, thanks for reaching out. And I've, I'll definitely be there on Monday, I promise. Right. And, and, and that's a person that you just saved from, you know, from cancellation in, in a month when they haven't been using their membership for two weeks. Mm. And like this going into what are our expectations of our trainers?
+
+The churn rate is directly impacted by that work that the trainer is doing. It's not all up to you as the owner. It, you know, the trainers will know who their regulars are and be able to, in your one-on-one every week, you'll be able to get their feedback about who is potentially becoming disengaged and you can action that.
+
+Right. So one of the, when we get to trainer KPIs, one of them directly res revolves around churn rate and engagement of your members. Right? [01:07:00] Right. And it, yeah, it's absolutely the trainer's job to have a full class of happy clients getting great results. Alright, so we want to, we want. Do stuff to minimize the churn.
+
+The other, the other things that you can do are, uh, onboarding is massive, right? So, I mean, I've had, you know, back in the day when I didn't know, I've had people cancel and then say to me, I, um, I'm like, why are you canceling? They're like, well, they're like, oh, I wanna go to this other place, up the road that does, you know, uh, small group training like we do small group training.
+
+They're like, oh, I never knew, you know, and it's 'cause I didn't onboard that person properly. And they're like, oh, I wanna pay more money for better service. They don't do it here, so I'm going up the road. It's like, yeah, we do it, but I just didn't tell you. So. Or maybe they've been coming to the classes and they didn't know that you had free parking around the back, or they didn't know that they could get changed, you know, on the premises or, you know, whatever it is.
+
+Like you have, the more you, uh, empower the clients to get the most out of their membership or pack. [01:08:00] The more likely they had it to stick around. And the final thing is, um, community. Like if you can do events or, or, or things that bring clients together, like, you know, challenges, right? Challenges after challenges they love like leaderboards.
+
+Um, you know, those kinds of things. Working up to like, uh, you know, a certain exercise in class and having, you know, people like show off how they can do it and stuff. Like, all of those types of things are really, really good. Basically, things that bring people together and make them feel part of, of something.
+
+And, and that's not just about working out, it's about community and, and connection with other people. That is incredibly powerful way, you know, like little personalized cards you can give people or, you know, like having, you know, drinks. At Christmas or whatever it might be. You know, like these types of things are really, really, you know, a little barbecue, bring your family.
+
+Um, those types of things are really, really valuable in, in building community and keeping people because they, the [01:09:00] clients then become loyal to the other clients, not just to the business. Like they don't want to go to the party studio up the road 'cause they don't wanna leave their friend Susan, who also comes to this studio.
+
+Yeah, yeah, exactly. And I think as well, you know, they develop a relationship with you as the owner, as part of the onboarding process and the initial welcome and your check-ins through from time to time they develop a relationship with their trainers because their trainers have KPIs around creating that.
+
+Relationship as well. And then they have the relationship with the other members. Right? So there's three, three things working together that creates the whole community and the, the engagement in your studio. Right? And I think just as a sort of a sidebar on this, we're talking about group reformer studios here, obviously, but in, you know, I help a lot of people, uh, and I know you've got a few people on your books, Josh, that do smaller businesses like a home-based business where they have three or four or five.
+
+You know, [01:10:00] reformers in their garage, or their shared, or their spare room or, or whatever it might be. And in those types of businesses we see, I see very, very low churn, like, you know, very low single digit churn. And I attribute that essentially to the community that, that people build. Because in those types of business where you've only got like four or five clients in each session, you, people don't book casually.
+
+They say, you know, you sign up for a specific session each week, like Wednesdays at 4:00 PM or whatever it might be. And so you have a stable group of people who all come at that same time and they get to know each other and they sweat together and they shake together and they laugh together and they cry together.
+
+They go out for coffee after class together, and then they meet up before class for a juice. And then they go to each other's, you know, grandkids birthdays on the weekend and the, you know, they run to each other at the supermarket and they, you know, go for a drink. Like, and then that they keep coming. In large part because they build enduring friendships in those groups a lot of the [01:11:00] time.
+
+And so those smaller businesses with more, uh, stable group, uh, groups I find often have very, very high retention. Yeah. Yeah. Yeah, exactly. Agreed. All right. And so, um, we've worked through most of our items here and we've just come down to the last one, which you said, which was labor cost as a percentage of revenue.
+
+That sounds scary, right? So that is, I mean, labor's our most expensive line item. So if we, if we are looking at managing and controlling our costs, we start with the highest ticket items and work our way down from there. And really, in a Pilates studio, what's the most variable? What do you have the most control over?
+
+It's how many classes you put on the schedule or how much you're paying your people. Um, so one, I just try and keep your labor as a percentage of revenue at 30%. [01:12:00] So if you're doing 50,000 revenue per month, times that by 0.3, your wages bill should be 15,000 bucks. Um, if you are, if it's, it's, if it's much higher than that, you've got too many classes on the schedule or you are paying above average.
+
+If you are lower than that, you probably haven't got enough classes on the schedule or you are paying below average. Generally speaking, right? So 30%. So you know, basically a third of your revenue should be, well, no, more than a third should be labor cost. And uh, you know, that works out on a, not just a per class basis.
+
+So on a per class basis, it should be less than 30%. 'cause you're gonna have fixed cost. Right. That are also gonna be part of, well, I guess depends on whether you have additional employees. Like if you have a, say a receptionist or something, then that's, [01:13:00] that's gonna be included in this. But if you just have instructors, trainers, uh, then basically, you know, if you are making $200 revenue from a class, you shouldn't be paying more than $60 for that trainer.
+
+Right. And you should be paying roundabout $60 for that trainer. Yep, spot on. And so, dear listener, if you're a trainer, if you're a trainer and you're still listening to this, congratulations, you must wanna open a studio real bad. Um, but if, if you're, if you're listening to this and you're a trainer, or if you're just wonder about how much should I pay?
+
+It's like, well, yeah, you shouldn't pay more than 30% of the, the rev average revenue from your class. And so if we're making $200 from that class at 80% capacity, well the capacity of that class is gonna be maybe two 40. And so that means you've got 10 people in there at 24 bucks. Or, you know, something of that order of magnitude.
+
+If you wanna pay $60 for an instructor, you can't escape the [01:14:00] maths. You have to generate that, that level of revenue to sustain paying someone that amount. 'cause if you pay, well, let me ask you this, Josh, what happens if I pay, if my labor cost is like 40% or 45% or 50% of revenue? Why is that so bad? Well.
+
+Well, if, if it's consistently that month, on month, you're not making profit, because on top of that, you've got rent overheads and, and all that, all those other expenses. So yeah, you, you'll run outta money basically if it's too high for too long. So you need to make changes. And that, that's where I think going into the trainer expectations and KPIs is, is the next logical step.
+
+'cause that, that underpins all of these numbers as well, right? So if we go from say 30, uh, labor being 30% of revenue to being 40% of revenue, right? So just say, I've got a class that generates $200. Well, let's make it a hundred dollars just to make the math simple, right? So [01:15:00] I've got a class that generates a hundred dollars and I'm paying my instructor $30, and I think, oh, that's not fair.
+
+I, I think I should pay them $40. Okay? So I start paying them $40 instructor's happy. Now bear in mind, dear listener, if you've got a class that's generated a hundred dollars, you should cut that class off the timetable like. Yesterday, but just to keep the math nice and simple, right? Let's just say that you are paying instructor $30 and then you wanna pay 'em $40.
+
+So, great. So now you're paying 40% of your, you know, costs as a, of your revenue, as a labor, right? But just say you've got that studio that was making, the average studio is making 50,000 a month in revenue that we talked about right at the start. That's making 12 and half thousand in profit, right? So it's 2020 5% profit, right?
+
+Well, you just went from 25% profit to 15% profit, right? So you've almost halved your profit by giving your instructors a $10 an hour [01:16:00] race. Crazy. So there's some things, how do you fix that? Or either you are gonna have to increase your prices. So assuming you increase your price and you get the same number of people that price, the revenue for that class will go, should go up to 133 bucks a class.
+
+They, you can, therefore, the $40 you're paying the trainer fits within the metric we're looking for. So, increased prices, you know, if your costs go up, what ha what are, what are the telcos do and what are the insurance companies do they pass it on to the customer? So, and that's something that's happened a lot in the last two years is there's huge pressure on wages.
+
+Trainers are coming and asking for pay rises. If you are happy to give those, that's fine, but you are gonna have to increase your prices and pass that on right to the customer. The other instance where this might happen is if you do, let's say you're at 85% capacity and you decide to put on an extra four classes or 10 classes a [01:17:00] week temporarily while you fill that capacity.
+
+Your labor as a percentage of revenue will be higher, but if it doesn't come back down within six weeks or two months, you need to look at trimming some classes. Right. And back to what we said at the start, that you really must calculate your own teaching hours as part of the labor cost, right? So if you are teaching 20 classes a week, you have to calculate that you are being paid as if you would pay someone else to replace you, you know, for those class before those classes.
+
+'cause otherwise, the numbers that you're looking at are not actually giving your true indication of the health of your business. And it's like you, that you, your petrol gauge on the dashboard, ecar is wrong. You know, doesn't tell you how much feels actually in the tank. So you gotta include your own classes as an actual labor expense in that calculation [01:18:00] spot on.
+
+So that's everything. That's, that's, uh, studio KPIs, talked about things to consider before you're setting up the studio. And of course, all of this relies on having accurate data. So having a good, soft internal software management system, um, having your books on Xero and kept up to date is basically, it should only take you 10 to 15 minutes at the end of the month to extract those numbers, put it into this spreadsheet, and then you'll spend an hour going through it with yourself or with an advisor.
+
+Um, I mean, I, I, I, look, I work with some clients on a monthly basis and some on a quarterly basis. You know, after you've been doing it for a year or so, it's, it's okay. Go quarterly, uh, sort know what you're looking, how.
+
+10, 15 minutes to get the data an hour going through it. And then you're gonna have your action items and key focuses for the month ahead or for the [01:19:00] quarter ahead. Right? And then rinse and repeat. And so, alright, so that's a, that's a kind of a bonus item, um, which is that if you are not currently tracking some or all of these, well, your biggest constraint in your business is that you don't know your numbers.
+
+And so, you know, thing number one that you should do is put together some kind of process for tracking these numbers. First visits, signups, and the conversion. Like the percentage of signups from first visits, how many classes you've got on, and the capacity utilization of each class and overall, uh, cancellations each month and active members at the start and end of the month.
+
+Uh, and then labor cost as a percentage of revenue and all of that. Like you said, Josh can come, like if you've got basically, you know, standard systems, like zero accounting software or QuickBooks or [01:20:00] mind your own business, M-Y-M-Y-O-B, uh, you know, one of those things you should be able to do a easy peasy export to a Google sheet and, you know, 15 minutes.
+
+Butter, bing, butter boom. You can say these numbers easy. Um, but even if you don't have that software set up, dear listener, like, just go and run a report in Moments or Mind body or whatever. You know, studio management software you use and you just, like, you've gotta find these numbers. And, and if you, if you don't have a, you know, an automated way of doing it, you're just gonna have to do it the old fashioned way because otherwise you, you, you're flying blind with, with no instruments.
+
+You just, dunno, dunno whether you're doing well or not. Um, the, the last thing I just want to touch on Josh, which as a bonus is, you know, the step that comes before those first visits, which is the marketing function and just the economics of like how much people spend on marketing and then how to recoup [01:21:00] that marketing spend.
+
+So it's not an expense, it's an investment and it actually makes you money because one of the things I hear people fair fairly often is like, oh, I tried marketing but I couldn't afford it, so I stopped. And that tells me that they're doing it wrong 'cause they're not doing the math. So, yeah. How do you think about the, the, the economics of marketing.
+
+Yeah. Okay. So the first thing is, one of the biggest issues I see is people going into a new business with not enough working capital behind them to start with. And as I mentioned, any good marketing strategy might take three to six months to really gain traction. So you might, you may well be losing money on ad spend in the first couple of months, so make sure you're going into this with enough cash behind you.
+
+But once it's up and running and it's consistent, let's say for example, we're getting 51st visits every month and those, and what's a standard intro offer? Let's say [01:22:00] $80 for two weeks or unlimited classes, $80 for two weeks, you're getting 50 people paying $80. That's $4,000 in the month of revenue from people doing.
+
+A first visit, so straight away. I mean, you could be super aggressive and say, well, $4,000 is my marketing budget if my marketing person can achieve your 51st visits. Or you might say, look, out of the 4,000 revenue, I'm prepared to spend 2000 on marketing and going to back to my benchmark data. Someone trying to achieve these metrics on average would spend between a thousand and $2,000 a month on their marketing and marketing function, and that would be the assistance of a, of a professional that's charging a monthly retainer plus the Facebook spend or the Google spend.
+
+Yep. And I think about, uh, another thing I think about as well is how quick it is to [01:23:00] recoup, like the actual time, the time it takes to recoup that spend. Uh, because you obviously end the money on advertising before you get the client. Uh, and then the client doesn't always pay you straight away. Like for example, if you had, if your intro offer was free, right?
+
+I mean, you quoted 80 bucks, right? But if your intro offer was free, then you spent your 4,000 or 2000 or whatever you spent on marketing and you get the 51st visit, but you don't get any money for them. So you're still out of pocket 2000 bucks. And then those people have a two week or four week or whatever, intro pass, and then they purchase, and then you get the money back, but your bank balance goes down before it goes up.
+
+Whereas if you charge $80 or even $50 or $40 for your intro period, and you get those 51st visits. Well, at $40 a visit, you've made $2,000. Right? And those people buy their pack like 15 seconds after they click on [01:24:00] your ad, right? So they click on your ad, you know, Google charges you a dollar, and then they go to your website, buy your pack, and for $40, right?
+
+Like a minute later. So it, I, I think a metric that, well, a metric that we use at Breathe is we have to recoup, you know, double or we really, really aim to recoup double our ad spend, you know, on day one from that person, because that then allows us to one, cover the cost of the ad that we just paid for to get that person in, and then that allows us to take another dollar and go get another customer.
+
+So that way your advertising doesn't become an expense, it becomes actually an investment. Like it's basically a machine where you put in a dollar at the top and $2 come out the bottom right, you take the, you take the $2 and put it back in the top and $4 come out the bottom. And so you just keep doing that as, as long as more people are still searching on Google, you keep putting more dollars in the top of the machine.
+
+As long as every dollar comes back with a, a friend, [01:25:00] you know, $2 on day one. You know? So you have to figure out what your actual cost to acquire that client is, because it's not gonna be as simple as, you know, one person clicks on your ad and then buys the pass and then bam, you $40, you know, revenue from $1 spend.
+
+'cause it might be that you have like 30 people click on your ad and only two of them bypass. So it's cost you $15 per pass to sell a $40 pass, which is still making double your money back on day one, right? But if you've got 80 people clicking on your ad and two bypass, what's costing you $40 per person to sell one a $40 pass, right?
+
+So now you're breaking even, but you're not actually making a profit on day one. So you can't take, you can't take another $40 and get another customer with that $40. So you've gotta figure out the, the metrics on your advertising spend. So that, in my view anyway, your initial purchase, like the [01:26:00] initial purchase that person makes of your intro pack pays double what it costs to acquire that, that client.
+
+Yeah, I agree. And then once, once you get that right, you're up and running, you, your marketing function is paying for itself, right? Free clients. Yeah. And guess what? You're running an 80% capacity utilization internally, so it's not actually costing you any extra to service that client while they're on their trial or what, or when they become a member.
+
+So it's really just at the top of the funnel that we're worried about. Right. And if that person stays with you, they're worth if, if you've got a, you know, 10% churn and you know, or whatever, 80 bucks a or 80 bucks a week. I can't remember what we said the price was anyway, but they're worth 4,000, 4,000 bucks a year.
+
+Right. So you cost you $40 to get them in the door. They pay you 40, $80 on day one, you're already $40 a head. And then over the next year they're gonna pay you 4,000. Good deal. Mm-hmm. That's it. [01:27:00] Alright. This is awesome. Well, dear listener, um, if this is, if your head's spinning around with the numbers, go back and listen to this episode again on half speed.
+
+Take notes. Implement the stuff we talked about. I promise you, this shit really works like it, but just listening to it and punching the air doesn't make it work. You have to go and do it. You have to get an accounting software, you know, do your reports on your attendance, track your numbers. Look at the thing that is broken in that process, right?
+
+And when you're tracking your numbers and you think, huh, my class is empty, you look through this process, okay, are we getting 51st visits? Yes. Okay, great. That's not broken. We don't need to fix it. We don't need to do more marketing. Or maybe we are not getting 51st visits, we're only getting 20. Ah, well, don't worry about any other step in the process.
+
+Let's improve the first visits, right? Until that's no longer the constraint. And when we are getting 51st visits, [01:28:00] if we're still not full, right at 80%, then we look, oh, well, what's the percentage of signups we're getting from those first visits? Ah, it's only 30%. Alright, well there's the problem right there.
+
+So then we implement onboarding and all of the things we talked about to get that up to 50% minimum. But you, I reckon you do way better than 50%. And part of that comes with the pricing, like you said, of your first visit, right? So you said if it's free, you get tire kickers, right? But there's a continuum, right?
+
+So free, you get maximal tire kickers. If your first visit, if your intro pack was a thousand dollars, you're gonna have like a hundred percent sign up rate from that, right? 'cause someone who's prepared to pay a thousand dollars to try it is super committed, right? But the thing is, no one's gonna try it for a thousand dollars.
+
+So the higher you price your intro pack, the fewer first visits you'll get and the higher conversion you'll get from those first visits. So someone who's prepared to pay 50 bucks to try it is fairly [01:29:00] committed. Someone who's prepared to buy 10 bucks to try it is just curious. So the, you know, one way of improving your conversions is just raise the price.
+
+Um, and then yeah, tracking your attendance, pruning the classes to maintain your profitability so you're not spending money on classes that aren't generating revenue. Uh, and you know, so you just go through this funnel in the sequence that we've talked about it and just fix each thing. And don't try and fix everything all at once.
+
+'cause that's impossible. Just focus on fixing the one thing that is the, the biggest constraint. Or the constraint that's at the earliest part in the funnel, right? Because if you, if you're only getting ten first visits a month, it doesn't matter what your signup percentage is, 'cause you've got bugger all people coming in the door, right?
+
+The signup percentage only becomes relevant when you've actually got people walking in the door. So let's first get people walking in the door and then fix a signup percentage after that. Anything, anything to add to that, Josh? I think [01:30:00] so I have a KPI spreadsheet that I use, and if anyone wants this spreadsheet, I can give them the template version of it.
+
+It's gonna have my Growth IQ branding all over it. But that's, uh, that's my, my branding that it, it looks beautiful. Anyway, but if you just email me at, uh, jRichardson@growthiq.com au, I'll send you that template version and you're more than welcome to have a play around with it. And if you want more help with it, we can take that further offline and, and have a chat in more detail.
+
+But I think having a template or setting up one up yourself is, is a great starting point. Awesome. Josh. Uh, this is so, so great. I mean, I wish I'd had this advice when I started my studio. I just didn't know shit about shit. And, uh, I've made pretty much every single one of these mistakes multiple times, so.
+
+You guys out there, you dunno how lucky you're, it's all [01:31:00] learning. Yep. Yep. But no, um, I mean, I love this stuff. This is, this is what I'm passionate about, passionate about, and I think I've, I've been doing it long enough now that I actually know the process works and I see the flow on effect that has for the business owner and their lives and their family and their community.
+
+So it's, yeah, I, I, yeah, I could spend all day doing this kind of stuff. Yeah. I look forward to our next one. Thanks, Josh. This has been awesome. Oh, thanks. See you later.

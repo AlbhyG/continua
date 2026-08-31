@@ -1,0 +1,1734 @@
+339. Is Pilates Education Increasing Our Risk Of Injury?
+Published: 7th December, 2025
+Episode: https://pilates-elephants.breathe-education.com/episode/339-is-pilates-education-increasing-our-risk-of-injury
+Transcript source: https://transcripts.captivate.fm/transcript/3ce9b220-403b-4d7a-add1-ed6fb1ba0071/index.html
+RSS transcript attachment: https://transcripts.captivate.fm/transcript/3ce9b220-403b-4d7a-add1-ed6fb1ba0071/index.html
+Transcript media type: text/html
+
+00:00:06.169 --> 00:00:14.049
+We talk a lot on this podcast about the lack of relationship between alignment and injury.
+
+00:00:17.329 --> 00:00:22.309
+And in that regard, we're kind of unique.
+
+00:00:22.509 --> 00:00:25.449
+I mean, there's one or two other people out there talking about it.
+
+00:00:25.569 --> 00:00:26.809
+Shout out to Adam McAtee.
+
+00:00:29.369 --> 00:00:36.069
+But most of the plot is metaverse. And I think you have the major players in the industry.
+
+00:00:37.329 --> 00:00:42.489
+Still very much grounded in alignment protocols for safety.
+
+00:00:44.869 --> 00:00:53.029
+And one of our favorite instructors here at Breathe Education happens to be
+
+00:00:53.029 --> 00:00:54.169
+on the other end of the microphone.
+
+00:00:56.249 --> 00:01:01.469
+And I think he's standing on a pile of about three soapboxes.
+
+00:01:03.387 --> 00:01:07.887
+Right now. And that's, uh, that's my friend Heath Lander.
+
+00:01:10.887 --> 00:01:16.307
+Yeah, that's me. I, um, well, I've, I've brought the topic today and,
+
+00:01:16.467 --> 00:01:18.867
+uh, I've slept badly while chewing on it.
+
+00:01:19.047 --> 00:01:23.427
+Um, I was driving, I had a long drive yesterday, time to think,
+
+00:01:23.567 --> 00:01:29.927
+listen to some podcasts and I was listening to some, some people talk about this idea of, um,
+
+00:01:30.347 --> 00:01:35.107
+surplus value and, or negative value and they were they were talking about in
+
+00:01:35.107 --> 00:01:36.647
+terms of raising children and that,
+
+00:01:37.267 --> 00:01:40.207
+while you're raising a child they're a negative value
+
+00:01:40.207 --> 00:01:42.967
+on society you know and by nature you know almost by
+
+00:01:42.967 --> 00:01:45.747
+definition they you know when they
+
+00:01:45.747 --> 00:01:49.047
+call 9-1-1 or when they get on the tube or when
+
+00:01:49.047 --> 00:01:51.987
+they go to school other people are putting value into
+
+00:01:51.987 --> 00:01:54.987
+the society that they're drawing down on and this
+
+00:01:54.987 --> 00:01:58.087
+the premise of this was that at some point that has to transition
+
+00:01:58.087 --> 00:02:01.567
+tip over as you become a functioning
+
+00:02:01.567 --> 00:02:04.667
+adult you start to create surplus
+
+00:02:04.667 --> 00:02:08.527
+value that puts back into the society and uh
+
+00:02:08.527 --> 00:02:13.507
+and i personally align with that and that's what i've seen in you know being
+
+00:02:13.507 --> 00:02:17.087
+a parent i think that's a valuable way to think about it and then what struck
+
+00:02:17.087 --> 00:02:26.627
+me was i've personally always been very careful to preface any discussion around a comparison between.
+
+00:02:28.087 --> 00:02:34.007
+The evidence-based approach that, as you say, ourselves at Breathe and others, some others,
+
+00:02:35.247 --> 00:02:39.287
+do the work to implement, which is hard work because the evidence changes and
+
+00:02:39.287 --> 00:02:42.547
+it means your education structure has to evolve and change and you've got to
+
+00:02:42.547 --> 00:02:47.027
+do a whole lot of work in terms of upskilling and rebuilding programs when you do it.
+
+00:02:48.227 --> 00:02:54.827
+We've done that and I've always tiptoed around making a comparison between that
+
+00:02:54.827 --> 00:02:57.727
+and education structures that aren't but.
+
+00:02:59.931 --> 00:03:06.531
+My epiphany while I was driving is I just, I actually think that what I see people,
+
+00:03:06.831 --> 00:03:12.071
+the transformation that we see instructors go through when they come and understand
+
+00:03:12.071 --> 00:03:16.831
+evidence-based, an evidence-based approach to Pilates versus a non-evidence-based approach.
+
+00:03:18.931 --> 00:03:21.931
+A takes them a really long time and they're
+
+00:03:21.931 --> 00:03:25.091
+not it's not because they're not cognitively agile they've
+
+00:03:25.091 --> 00:03:27.811
+just been indoctrinated as one is in an
+
+00:03:27.811 --> 00:03:33.531
+institution with concepts and beliefs that are then hard to shift especially
+
+00:03:33.531 --> 00:03:37.011
+when they're associated with large financial investment and time investment
+
+00:03:37.011 --> 00:03:41.451
+and they're coming out of education
+
+00:03:41.451 --> 00:03:45.671
+providers that teach them this still teach them this to this day,
+
+00:03:45.911 --> 00:03:48.591
+and they're passing them on to their clients.
+
+00:03:48.771 --> 00:03:53.471
+And what struck me was, you know, one of the things that makes me feel like
+
+00:03:53.471 --> 00:03:58.811
+my life has been a surplus value is that by helping people actually become stronger,
+
+00:03:58.911 --> 00:04:01.311
+more flexible, and more skillful so they can live healthier,
+
+00:04:01.491 --> 00:04:03.491
+happier, longer lives, which is my little mantra,
+
+00:04:03.711 --> 00:04:08.071
+which we've talked about before, and it's not an unreasonable claim based on the evidence,
+
+00:04:08.291 --> 00:04:11.771
+is that I'm helping, not just,
+
+00:04:11.771 --> 00:04:14.611
+i'm giving an it's an opportunity for me to
+
+00:04:14.611 --> 00:04:17.451
+create surplus value and if i make someone healthier happier
+
+00:04:17.451 --> 00:04:25.351
+and fit flexible stronger more skillful etc etc they can raise better kids they
+
+00:04:25.351 --> 00:04:29.671
+can make more money they can run better businesses they can do their job better
+
+00:04:29.671 --> 00:04:33.711
+they can live longer they can be less of a drain on the health services you
+
+00:04:33.711 --> 00:04:37.031
+know they all of that is surplus value in the community.
+
+00:04:37.291 --> 00:04:42.371
+And then if I then was to flip what I do back to what I was taught,
+
+00:04:42.451 --> 00:04:46.551
+which is to tell people that moving to end range is dangerous.
+
+00:04:46.911 --> 00:04:51.951
+That moving under load such that your form dissipates is dangerous, then I'm actively...
+
+00:04:53.972 --> 00:05:02.692
+I'm actively reducing the value that I could put back into the community via that person.
+
+00:05:03.032 --> 00:05:06.372
+And all of a sudden, I just thought, fuck it. This is bullshit.
+
+00:05:06.892 --> 00:05:10.892
+We're part of this industry that's growing around the world.
+
+00:05:11.392 --> 00:05:16.812
+And most of the injury, like the big players, are still telling people that
+
+00:05:16.812 --> 00:05:20.752
+you should move in a particular way under nominal loads.
+
+00:05:21.372 --> 00:05:25.792
+And your breath pattern or your muscle firing pattern is more important than
+
+00:05:25.792 --> 00:05:30.092
+how much load you're under or the range of motion that you're in or the skill
+
+00:05:30.092 --> 00:05:34.312
+that you scale up to bigger movements so that you feel more confident in your daily life.
+
+00:05:34.472 --> 00:05:38.212
+And I just thought, fuck it, that's negative value. That's a crime against humanity,
+
+00:05:38.352 --> 00:05:44.012
+to be purporting that horse shit to people who are passionate, passionate people,
+
+00:05:44.372 --> 00:05:48.532
+instructors, being taught things that are completely out of date you know there's
+
+00:05:48.532 --> 00:05:53.192
+just no excuse as far as and i mean i know i'm on the soapboxes there but i
+
+00:05:53.192 --> 00:06:00.292
+just can't see that there is any excuse for not updating your teaching structures in 2025.
+
+00:06:03.370 --> 00:06:06.530
+And I just feel like I'm sick of saying, oh, look, all movement's good movement
+
+00:06:06.530 --> 00:06:08.250
+because yes, all movement's good movement.
+
+00:06:08.410 --> 00:06:13.410
+But in terms of creating surplus value in other humans, some movement is measurably
+
+00:06:13.410 --> 00:06:14.390
+better than other movement.
+
+00:06:14.550 --> 00:06:18.490
+And that's movement that actually makes them stronger, more flexible, more skillful.
+
+00:06:18.730 --> 00:06:23.610
+So if you knowingly withhold that information because you don't have the energy
+
+00:06:23.610 --> 00:06:27.270
+to change your education structures or you're too calcified in your thinking
+
+00:06:27.270 --> 00:06:29.750
+to admit that you were wrong,
+
+00:06:29.750 --> 00:06:32.510
+like someone needs to put a firecracker up your ass and tell
+
+00:06:32.510 --> 00:06:35.630
+you to move on and let the new generation come through like fuck
+
+00:06:35.630 --> 00:06:38.410
+that you know this is other people's health
+
+00:06:38.410 --> 00:06:41.510
+that you're fucking with for the sake of what ultimately is
+
+00:06:41.510 --> 00:06:48.930
+money and laziness yeah that's what i was thinking i think um i mean i i broadly
+
+00:06:48.930 --> 00:06:55.910
+agree i think there's a lot of myths i guess i'm less skeptical or less cynical
+
+00:06:55.910 --> 00:06:59.010
+about human motivations there.
+
+00:06:59.010 --> 00:07:01.690
+I think it's just, you know, a combination.
+
+00:07:02.030 --> 00:07:05.010
+I don't think people are, you know, willfully misleading people.
+
+00:07:05.010 --> 00:07:07.330
+I think it's just kind of intellectual laziness.
+
+00:07:08.050 --> 00:07:13.550
+Um, you know, if you're balanced body or start Pilates and you've got, you know,
+
+00:07:13.930 --> 00:07:19.190
+20,000 copies of Emmanuel in print, it's, it's really hard to just,
+
+00:07:19.390 --> 00:07:23.870
+you know, make a quick little edit and go, you know what, actually neutral spy is not that important.
+
+00:07:23.870 --> 00:07:27.990
+It turns out, um, you know, you've got like, you know,
+
+00:07:28.570 --> 00:07:31.710
+5,000 instructor trainers around the world to, you know,
+
+00:07:32.190 --> 00:07:35.050
+turning out X number of tens of thousands of budgets, you know,
+
+00:07:35.130 --> 00:07:39.970
+it's like, and you've translated your materials into 17 languages and what,
+
+00:07:40.010 --> 00:07:44.110
+you know, it's like, it, it, it's, it's hard to turn a big ship like that.
+
+00:07:46.023 --> 00:07:54.223
+Um, and, and the, the, how big and impressive and, and established it is,
+
+00:07:54.563 --> 00:07:58.963
+is, is the Achilles, the Achilles heel of that is it's really,
+
+00:07:59.163 --> 00:08:04.103
+really hard to, to change direction, you know? Um, yeah.
+
+00:08:04.603 --> 00:08:09.143
+And we see it even in universities, which are supposed to, I mean,
+
+00:08:09.183 --> 00:08:13.383
+that's where the research literally happens, that the average university course
+
+00:08:13.383 --> 00:08:16.863
+is something like eight to 10 years out of date.
+
+00:08:20.063 --> 00:08:23.723
+And that is because just the inertia.
+
+00:08:24.023 --> 00:08:28.723
+But that's where I get frustrated because we've been saying that on their behalf
+
+00:08:28.723 --> 00:08:32.363
+for as long as I've been studying with you, and that's 15 years.
+
+00:08:33.123 --> 00:08:36.163
+And i do take your point absolutely who was
+
+00:08:36.163 --> 00:08:38.783
+it that said i can't remember who was it that said it's like
+
+00:08:38.783 --> 00:08:42.183
+it's very hard to convince a man um of some
+
+00:08:42.183 --> 00:08:46.103
+you know of something when he's when he's when his uh when
+
+00:08:46.103 --> 00:08:49.163
+his income depends on him not not understanding it you
+
+00:08:49.163 --> 00:08:52.163
+know um and so it's very
+
+00:08:52.163 --> 00:08:55.603
+hard like if you've got this business and you stop pilates or balanced body
+
+00:08:55.603 --> 00:09:00.983
+or bassy or whoever you know that is studio pilates all of them teach these
+
+00:09:00.983 --> 00:09:07.063
+kind of alignment protocols you know front and center that you know you've got
+
+00:09:07.063 --> 00:09:11.183
+a what you know at a guest 20 million dollar a year business,
+
+00:09:12.143 --> 00:09:19.183
+that is based around teaching these things it's like well that's a major disincentive
+
+00:09:19.183 --> 00:09:23.523
+to you know to change absolutely yeah.
+
+00:09:26.218 --> 00:09:32.638
+Um, but I agree it's a negative value and I think we are, I mean,
+
+00:09:32.758 --> 00:09:39.478
+I guess the reason I'm, the reason I, I guess I'm guilty of being,
+
+00:09:39.818 --> 00:09:42.918
+you know, kind of soft on crime, uh,
+
+00:09:43.498 --> 00:09:46.038
+as well in this.
+
+00:09:46.178 --> 00:09:49.758
+And, and the, I, and I do that consciously. I don't give a shit about offending,
+
+00:09:50.118 --> 00:09:57.578
+you know, the big Pilates companies, but I do give a shit about offending Pilates,
+
+00:09:57.578 --> 00:10:00.438
+our listeners, Pilates instructors. I don't want to.
+
+00:10:00.638 --> 00:10:04.738
+Yeah, absolutely. I don't want, I don't want, you know, people listening to
+
+00:10:04.738 --> 00:10:09.658
+this podcast to feel that, that we don't respect them or we think they're stupid
+
+00:10:09.658 --> 00:10:11.138
+or, you know, anything like that.
+
+00:10:11.198 --> 00:10:17.278
+So I guess that's why I'm, you know, I guess I would say.
+
+00:10:20.851 --> 00:10:25.931
+Overly diplomatic a lot of the time in, in talking about this.
+
+00:10:26.031 --> 00:10:28.271
+And it's kind of like, you know, all movement's good.
+
+00:10:28.451 --> 00:10:30.871
+And, and, and it's true. All movement is good.
+
+00:10:31.591 --> 00:10:36.271
+Right. Absolutely. That's the, and I don't want to, I don't want to misrepresent
+
+00:10:36.271 --> 00:10:40.311
+myself because I don't want to say that I'm saying that, you know,
+
+00:10:40.371 --> 00:10:42.131
+there is movement that's bad.
+
+00:10:42.131 --> 00:10:50.391
+And it's just that my little passion spike last night was that always saying
+
+00:10:50.391 --> 00:10:53.011
+first off, look, let's remember that all movement's good movement.
+
+00:10:53.131 --> 00:10:57.351
+It sort of ameliorates having a different position because it's like,
+
+00:10:57.411 --> 00:10:59.091
+okay, as long as everyone's moving, we're good.
+
+00:10:59.191 --> 00:11:03.051
+And it's like, well, actually within that, once we accept the assumption that
+
+00:11:03.051 --> 00:11:07.771
+all movement is better than no movement, then there is movement that is objectively
+
+00:11:07.771 --> 00:11:11.511
+more productive for human health and longevity.
+
+00:11:11.511 --> 00:11:16.351
+It's saying all movement's good is not the same thing as saying all movement's equally good.
+
+00:11:17.531 --> 00:11:21.511
+Equal, right. So yeah, all movement's better than no movement,
+
+00:11:21.631 --> 00:11:24.471
+but once you've got people moving, there is movement that's measurably better
+
+00:11:24.471 --> 00:11:28.511
+for the outcomes that make human life better or create surplus value.
+
+00:11:28.711 --> 00:11:32.171
+And the other part of that that's really frustrating, then we get this whole
+
+00:11:32.171 --> 00:11:34.851
+thing about Pilates somehow being better than fitness.
+
+00:11:35.051 --> 00:11:38.031
+Like, you know, heaven forbid that we call Pilates fitness training
+
+00:11:38.031 --> 00:11:41.571
+or whatever the fuck like if you're moving and you're getting stronger and more
+
+00:11:41.571 --> 00:11:48.211
+flexible that's the variable right like not where your movement came from you
+
+00:11:48.211 --> 00:11:51.991
+know and we only need to look at joseph and and what he how he taught anyway
+
+00:11:51.991 --> 00:11:56.531
+i mean you know where i'm going with that but so.
+
+00:11:57.888 --> 00:12:01.648
+All right. So, I mean, there's lots of stuff that we, you know,
+
+00:12:02.168 --> 00:12:06.488
+disagree with about in how Pilates is taught.
+
+00:12:06.848 --> 00:12:12.808
+And, you know, we've been fortunate enough to be able to just go and create
+
+00:12:12.808 --> 00:12:17.988
+our own education company that teaches the way we think it should be taught.
+
+00:12:19.308 --> 00:12:23.848
+And we base that the way we think it should be taught on current science as much as possible.
+
+00:12:24.988 --> 00:12:28.568
+And we're also lucky enough to be smart. And change our program when there's
+
+00:12:28.568 --> 00:12:32.928
+new evidence. Yeah. And you're in the middle of doing that for the umpteenth time right now.
+
+00:12:33.088 --> 00:12:36.168
+And, you know, that's basically a permanent job almost.
+
+00:12:36.368 --> 00:12:39.208
+Like they say, painting the Sydney Harbour Bridge, you know,
+
+00:12:39.288 --> 00:12:41.828
+they go from one end and paint it all the way to the other end and they just
+
+00:12:41.828 --> 00:12:46.048
+start at the first end again and go again because it takes that long to paint
+
+00:12:46.048 --> 00:12:48.328
+it. By the time you get to the other end, it needs painting again.
+
+00:12:49.008 --> 00:12:51.468
+And it's kind of like that with rebuilding our course. You know,
+
+00:12:51.508 --> 00:12:54.168
+we rebuild it and as soon as we finish it, we have to start rebuilding it again,
+
+00:12:54.568 --> 00:12:58.388
+you know, because the new evidence comes out, you know, new ACSM guidelines
+
+00:12:58.388 --> 00:13:02.008
+come out or new modal learning research comes out or new, you know,
+
+00:13:02.968 --> 00:13:05.908
+educational design research comes out or whatever it might be.
+
+00:13:06.228 --> 00:13:09.328
+And so, or we just, you know, learn, we have more student data,
+
+00:13:09.788 --> 00:13:11.148
+what works, what doesn't.
+
+00:13:11.468 --> 00:13:15.128
+You know, the market changes, you know, what employers want has changed.
+
+00:13:16.128 --> 00:13:20.248
+You know, so, so yeah, it is kind of a Sydney Harbour Bridge thing.
+
+00:13:21.268 --> 00:13:24.128
+But i guess uh you know one thing
+
+00:13:24.128 --> 00:13:26.788
+that like you say kind of hasn't changed you know
+
+00:13:26.788 --> 00:13:30.648
+really in the last i would say 20 years
+
+00:13:30.648 --> 00:13:39.328
+now and over that time there has been increasing amounts of literature uh on
+
+00:13:39.328 --> 00:13:49.388
+the lack of association between alignment and or cause injury risk and it's just not It's just not,
+
+00:13:49.608 --> 00:13:51.648
+I would say that.
+
+00:13:53.856 --> 00:14:01.796
+No reasonable, I don't think any reasonable, you know,
+
+00:14:02.456 --> 00:14:08.336
+scientist, any person who has read the literature widely could reasonably take
+
+00:14:08.336 --> 00:14:15.836
+the position that alignment is a major factor in all-cause injury risk.
+
+00:14:16.776 --> 00:14:19.616
+You know, I don't think a reasonable person could take that position.
+
+00:14:21.476 --> 00:14:31.136
+Now, there is a lot of, and to be fair to people reading this literature and
+
+00:14:31.136 --> 00:14:35.136
+maybe not feeling clear on that, there are a lot of….
+
+00:14:37.436 --> 00:14:41.496
+I think there's a lot of motivated reasoning that happens even within the literature
+
+00:14:41.496 --> 00:14:43.956
+itself and interpreting of it.
+
+00:14:44.496 --> 00:14:49.216
+Like there's, you know, if you look at the literature on biomechanics and injury
+
+00:14:49.216 --> 00:14:53.596
+risk, you know, you'll find like, oh yeah, there's a lot of biomechanical literature
+
+00:14:53.596 --> 00:14:56.856
+showing that, you know, alignment predicts injury risk, right?
+
+00:14:57.036 --> 00:15:01.096
+But then when you look at almost all of that literature, they're looking at,
+
+00:15:01.236 --> 00:15:02.656
+they're not actually looking at injury risk.
+
+00:15:03.176 --> 00:15:05.136
+They're looking at proxies for injury
+
+00:15:05.136 --> 00:15:10.956
+risk, like loading on a joint or EMG activity in a certain alignment.
+
+00:15:11.036 --> 00:15:15.136
+So when we squat with our knees inwards, that increases loading on the lateral
+
+00:15:15.136 --> 00:15:16.116
+compartment of the knee.
+
+00:15:16.696 --> 00:15:22.536
+And therefore, we conclude that doing that is dangerous because that might overload the knee.
+
+00:15:22.656 --> 00:15:30.356
+But it's like that prima facie, like on the face of it, But that is a hypothesis
+
+00:15:30.356 --> 00:15:34.496
+that by increasing the loading on that compartment of the knee, we increase injuries.
+
+00:15:35.116 --> 00:15:39.036
+We have no evidence that that's true. And there's an equal argument,
+
+00:15:39.236 --> 00:15:41.816
+a very plausible argument, saying it's not true at all.
+
+00:15:41.896 --> 00:15:48.276
+It's like, well, when you do a biceps curl, it increases loading on the elbow joint.
+
+00:15:48.796 --> 00:15:52.676
+So should we not avoid biceps curls because that might cause injury?
+
+00:15:52.676 --> 00:15:58.876
+It's like exercise is the process of deliberately loading the tissues of the
+
+00:15:58.876 --> 00:16:01.336
+body in order to stimulate a strengthening response.
+
+00:16:01.476 --> 00:16:05.356
+Like that's what strengthening is, right? So deliberately loading the tissues of the body.
+
+00:16:05.496 --> 00:16:08.816
+So saying like doing X, Y, and Z increases loading on this particular tissue,
+
+00:16:08.916 --> 00:16:14.016
+it's like, so, you know, it's like, how do we know that's a bad thing, right?
+
+00:16:14.016 --> 00:16:18.876
+And so when you look at this literature, there's a lot of that stuff on joint
+
+00:16:18.876 --> 00:16:26.016
+loads and EMG, you know, and very, very little looking at like, okay,
+
+00:16:26.256 --> 00:16:27.196
+people who squat with their knees
+
+00:16:27.196 --> 00:16:31.976
+in, how many of them actually get knee injuries, you know, afterwards?
+
+00:16:32.856 --> 00:16:35.976
+And guess what? The answer is… Right. And when they get the knee injury…,
+
+00:16:37.832 --> 00:16:40.172
+Because when they get the knee injury, what's the other variable?
+
+00:16:40.192 --> 00:16:42.332
+It's how much and how often are they training.
+
+00:16:43.332 --> 00:16:47.092
+And what's their nutrition status? How old are they? You know,
+
+00:16:47.112 --> 00:16:49.172
+what's their body composition? What's their weight?
+
+00:16:49.592 --> 00:16:53.532
+You know, what's their, there's so many, so many things, you know.
+
+00:16:54.692 --> 00:17:01.532
+Yeah. And just to what, like taking that and winding it back to what I think
+
+00:17:01.532 --> 00:17:03.372
+was a major turning point for me,
+
+00:17:03.532 --> 00:17:08.992
+and it was when a course, when you changed a course that, Back then I was still,
+
+00:17:09.052 --> 00:17:14.292
+I think I was studying or delivering, I can't remember, but back in the day,
+
+00:17:14.452 --> 00:17:17.032
+we were taught all that research.
+
+00:17:17.032 --> 00:17:19.812
+I think it was McGill that did the research on the pig spines.
+
+00:17:19.992 --> 00:17:24.072
+And then blinding flash of the blatantly fucking obvious, we were assessing
+
+00:17:24.072 --> 00:17:27.892
+the risk on dead tissues. And what we forgot to allow for was that when you
+
+00:17:27.892 --> 00:17:29.392
+load a human spine, they're not dead.
+
+00:17:29.572 --> 00:17:33.452
+And if you give them rest and nutrition appropriately, those tissues actually
+
+00:17:33.452 --> 00:17:37.572
+strengthen rather than just slamming them for 50,000 repetitions over a weekend.
+
+00:17:38.132 --> 00:17:42.052
+On a machine so that you can test the response to, I mean, you could probably
+
+00:17:42.052 --> 00:17:47.552
+talk much more accurately to the actual experiment, but just that idea of when
+
+00:17:47.552 --> 00:17:48.852
+I grew up in Pilates land.
+
+00:17:49.692 --> 00:17:53.532
+Why we taught neutral was predicated on tests done on dead tissues.
+
+00:17:53.812 --> 00:17:59.192
+Yeah. Well, I think that's the problem with pretty much any research in this
+
+00:17:59.192 --> 00:18:07.812
+area is almost to all of it actually isn't human trials that evaluate injury incidents, right?
+
+00:18:07.932 --> 00:18:11.112
+So what you, you know, like if you want to know, does, you know,
+
+00:18:11.152 --> 00:18:15.152
+bending your back or squatting with the knees in or whatever cause more injuries, right?
+
+00:18:15.412 --> 00:18:19.192
+Well, what you, you know, the gold standard to act, the way to actually measure
+
+00:18:19.192 --> 00:18:22.812
+that is to get a bunch of people, have half of them squat with their knees in,
+
+00:18:22.892 --> 00:18:26.652
+half of them not squat with their knees in, follow them for a year so you get to sore knee.
+
+00:18:28.308 --> 00:18:31.988
+And just that would be the gold standard, right?
+
+00:18:32.668 --> 00:18:37.528
+But it's really, really hard to do that. And so what we end up doing is we have
+
+00:18:37.528 --> 00:18:43.328
+people come into the lab for one day, we put AMGs on their knees and we go, okay, let's squat.
+
+00:18:43.448 --> 00:18:46.388
+Oh, when you squatted that way, it reduced the activation of tibialis anterior.
+
+00:18:46.588 --> 00:18:48.948
+That could cause increased weight on the lateral compartment of the knee.
+
+00:18:49.328 --> 00:18:50.388
+Therefore, that increases injury
+
+00:18:50.388 --> 00:18:57.188
+risk, right? So there's so many assumptions in between A and Z there.
+
+00:18:57.188 --> 00:19:00.108
+Or the other thing we do is we get you know
+
+00:19:00.108 --> 00:19:03.248
+we cut you know bits out of pig spines and we
+
+00:19:03.248 --> 00:19:08.548
+stick them in a jig and we bend them 86,400 times in 24 hours and then we say
+
+00:19:08.548 --> 00:19:14.688
+huh a lot of them got injured right therefore bending is dangerous you know
+
+00:19:14.688 --> 00:19:18.688
+but it's like all right well if if if you got a real live human and you got
+
+00:19:18.688 --> 00:19:23.048
+them to do 86,400 of anything you know even just.
+
+00:19:24.908 --> 00:19:30.088
+Without a break got them to like stand in perfect neutral posture you know with
+
+00:19:30.088 --> 00:19:35.148
+a dumbbell in each hand right for 24 hours which is 86,400 seconds,
+
+00:19:36.491 --> 00:19:40.231
+You probably get some injuries there, right?
+
+00:19:40.311 --> 00:19:46.411
+So just let alone doing 86,400 reps of any exercise in 24 hours.
+
+00:19:46.671 --> 00:19:51.331
+So it's like, but if you've got that person to do like 10 reps and then wait
+
+00:19:51.331 --> 00:19:53.791
+a couple of minutes and do that again and do that three times and do that three
+
+00:19:53.791 --> 00:19:58.711
+times a week and over 10 years do 86,400 reps, they'll probably just get a fuckload
+
+00:19:58.711 --> 00:20:00.931
+stronger and they wouldn't get injured, right?
+
+00:20:01.071 --> 00:20:05.311
+So it's like a lot of this literature, that's a really great example of it actually
+
+00:20:05.311 --> 00:20:09.371
+doesn't measure injury risk in live humans.
+
+00:20:09.611 --> 00:20:13.931
+We're measuring proxies. Either we're measuring proxy measures in live humans
+
+00:20:13.931 --> 00:20:17.491
+or we're measuring injury in dead pigs.
+
+00:20:18.071 --> 00:20:19.691
+Dead tissues. Yeah.
+
+00:20:21.531 --> 00:20:28.971
+And it's interesting that, you know, we do have some literature on looking at,
+
+00:20:28.991 --> 00:20:32.511
+you know, particular alignment and particular injuries.
+
+00:20:32.511 --> 00:20:36.911
+And so one of the things, like in humans, and so one of the areas we have, um,
+
+00:20:38.300 --> 00:20:41.980
+Well, two areas we have are foot pronation, ankle pronation,
+
+00:20:42.180 --> 00:20:47.280
+and then also knee valgus, you know, knees going in.
+
+00:20:48.720 --> 00:20:52.540
+And we see that when we look at foot pronation,
+
+00:20:53.160 --> 00:21:02.200
+people who run a lot regularly and who have very pronated feet tend to suffer
+
+00:21:02.200 --> 00:21:07.300
+more ankle injuries than people who run the equivalent amount and don't have
+
+00:21:07.300 --> 00:21:08.900
+very pronated feet, right?
+
+00:21:09.080 --> 00:21:11.720
+So you think, oh, well, pronation causes injury. Yeah,
+
+00:21:12.080 --> 00:21:17.480
+pronation can predispose people to ankle injuries, but people who have very
+
+00:21:17.480 --> 00:21:23.400
+pronated feet and run a lot have fewer tibial stress injuries than people who
+
+00:21:23.400 --> 00:21:24.700
+have non-pronated feet.
+
+00:21:24.820 --> 00:21:28.900
+So actually having pronated feet makes it more likely you'll have one particular
+
+00:21:28.900 --> 00:21:31.260
+injury and less likely you'll have a different particular injury,
+
+00:21:31.380 --> 00:21:33.960
+which kind of makes sense because if you think like, okay, when you pronate,
+
+00:21:34.040 --> 00:21:35.680
+it loads up the ankle more and probably offloads,
+
+00:21:36.440 --> 00:21:40.220
+the tibia, because the pronated position of the foot is the shock-absorbing
+
+00:21:40.220 --> 00:21:44.320
+position of the foot, so there's a softer landing, but it's all going into the ankle.
+
+00:21:44.920 --> 00:21:47.120
+So it's like, okay, you're loading the ankle more and the tibia less,
+
+00:21:47.220 --> 00:21:48.460
+so therefore the ankle has more injuries.
+
+00:21:49.160 --> 00:21:52.620
+Whereas when you are neutral, you have fewer ankle injuries,
+
+00:21:52.640 --> 00:21:53.640
+but more tibial injuries.
+
+00:21:55.027 --> 00:21:59.967
+Right. So we could frame that exact same research a different way and say people
+
+00:21:59.967 --> 00:22:05.987
+who don't pronate have more tibial injuries or people with a neutral foot have more tibial injuries.
+
+00:22:06.467 --> 00:22:10.367
+You know, so are we all going to go, oh crap, we should all stop having neutral feet now.
+
+00:22:10.687 --> 00:22:15.227
+No, I think what we find is when we look at the overall, what's the incidence
+
+00:22:15.227 --> 00:22:18.667
+of ankle injuries versus tibial injuries? Well, the answer is they're about the same.
+
+00:22:18.887 --> 00:22:23.147
+And so whether you have pronated feet or non-pronated feet, your total chance
+
+00:22:23.147 --> 00:22:27.567
+of getting some kind of injury is about the same, right?
+
+00:22:27.967 --> 00:22:32.727
+But just where that injury is likely to be is probably, you know,
+
+00:22:32.807 --> 00:22:34.827
+if you're a pronator, it's probably more likely to be in your ankle.
+
+00:22:34.907 --> 00:22:37.687
+If you're not a pronator, it's more likely to be in your shin, right?
+
+00:22:38.207 --> 00:22:41.827
+And so that's a very, very typical example.
+
+00:22:42.087 --> 00:22:47.727
+And we see that a lot in what human intervention studies we do have with alignment
+
+00:22:47.727 --> 00:22:54.827
+injury is that particular alignments do increase injury incidence of one particular type of injury,
+
+00:22:54.967 --> 00:22:58.867
+but at the same time, there's an equal and opposite decrease in the incidence
+
+00:22:58.867 --> 00:23:00.667
+of some other particular type of injury.
+
+00:23:00.727 --> 00:23:03.687
+And it all evens out in the wash in almost every case.
+
+00:23:06.327 --> 00:23:11.727
+Yeah. And, you know, dear listener, listen to Ralph explain that as many times
+
+00:23:11.727 --> 00:23:13.027
+as you need to, But can we just,
+
+00:23:13.647 --> 00:23:16.767
+because I would need to, if I hadn't heard him explain it many times before,
+
+00:23:17.087 --> 00:23:23.547
+but just for us in Pilates, the Pilates space, let's just bring that back to our reformer class.
+
+00:23:24.227 --> 00:23:28.467
+You know, if you've been taught at Pilates school that the way your clients
+
+00:23:28.467 --> 00:23:34.127
+lunge on one red spring or one blue spring, whether their knee is in or out
+
+00:23:34.127 --> 00:23:37.247
+is a risk to their ankle or their knee, like you just don't.
+
+00:23:37.932 --> 00:23:40.792
+Ref catch me if i'm missing something here
+
+00:23:40.792 --> 00:23:44.012
+but you're just not applying enough load over enough repetitions
+
+00:23:44.012 --> 00:23:47.752
+you just haven't got time or enough load to
+
+00:23:47.752 --> 00:23:50.712
+have any of those things be a concern because your clients need to leave in
+
+00:23:50.712 --> 00:23:54.592
+the next 45 minutes and go home and rest and then not you're just not those
+
+00:23:54.592 --> 00:23:58.032
+injuries are like when you're running too much over a week right the variable
+
+00:23:58.032 --> 00:24:02.112
+is how many miles you run per week so if your clients come to you twice a week
+
+00:24:02.112 --> 00:24:04.292
+and you do lunges each time you see them,
+
+00:24:04.492 --> 00:24:06.612
+do the lunge any fucking way you want.
+
+00:24:06.732 --> 00:24:10.532
+You're just not doing enough reps to put yourself in the risk category that
+
+00:24:10.532 --> 00:24:12.992
+puts you in the conversation that Raph just talked about.
+
+00:24:13.412 --> 00:24:16.772
+I mean, correct me if I'm wrong, Raph, but how many lunges would you need to
+
+00:24:16.772 --> 00:24:21.232
+do to put yourself in that conversation? Yeah, so that's a really good point.
+
+00:24:21.612 --> 00:24:24.932
+And there's no literature on
+
+00:24:24.932 --> 00:24:29.012
+Pilates and the injury risk of people doing Pilates that I've ever read.
+
+00:24:29.012 --> 00:24:33.112
+I've looked, but I haven't found any literature looking at, okay.
+
+00:24:34.032 --> 00:24:37.332
+In a Pilates class, what is your chance of getting injured? What's the baseline rate?
+
+00:24:37.672 --> 00:24:41.992
+We don't know. But we know we have research in yoga, in breakdancing,
+
+00:24:42.672 --> 00:24:47.732
+in wrestling, all of which are kind of, sort of similar to Pilates.
+
+00:24:47.952 --> 00:24:53.972
+We have lots of literature on gym injuries and weightlifting and powerlifting,
+
+00:24:53.972 --> 00:24:59.512
+which you know, in other ways are kind of, sort of, you know, similar to Pilates.
+
+00:25:00.232 --> 00:25:04.952
+Um, and what we see is that all of these things are extremely safe.
+
+00:25:05.352 --> 00:25:06.772
+All of them are extremely safe.
+
+00:25:08.012 --> 00:25:12.472
+And, uh, one of the safest things you can do in fact is strength training,
+
+00:25:12.732 --> 00:25:16.772
+whether it's Olympic weightlifting, powerlifting, or just going to lifting weights
+
+00:25:16.772 --> 00:25:19.312
+at the gym, you know, hitting the chest press or whatever.
+
+00:25:20.312 --> 00:25:24.132
+Uh, I don't have the stats right in front of me, but the number of injuries
+
+00:25:24.132 --> 00:25:27.892
+per thousand hours of, you know, training in gym. It's microscopic.
+
+00:25:28.112 --> 00:25:31.192
+It's like, you know, three per hundred thousand hours. It's very,
+
+00:25:31.292 --> 00:25:32.332
+very, very small, right?
+
+00:25:33.172 --> 00:25:35.772
+And the overwhelming majority of….
+
+00:25:37.725 --> 00:25:45.045
+Of injuries that occur in, you know, gyms are not people doing exercise incorrectly.
+
+00:25:45.085 --> 00:25:50.105
+It's people dropping shit on their own feet and tripping over and falling off
+
+00:25:50.105 --> 00:25:52.185
+cardio machines, right?
+
+00:25:52.385 --> 00:25:55.885
+So just imagine, you know, some idiot leaves the weights out and you're walking
+
+00:25:55.885 --> 00:26:00.185
+across the gym and you trip over it and smash your face into a dumbbell rack or something.
+
+00:26:00.285 --> 00:26:02.585
+That's a typical gym injury, right?
+
+00:26:02.745 --> 00:26:06.685
+Or some idiot's clowning around on the treadmill, you know, running backwards
+
+00:26:06.685 --> 00:26:10.165
+and sideways looking at a girl across the gym, falls off, you know,
+
+00:26:10.385 --> 00:26:12.425
+smashes their head on the wall or whatever, right?
+
+00:26:12.585 --> 00:26:17.545
+That is a typical gym injury, not someone doing a squat incorrectly and,
+
+00:26:17.585 --> 00:26:19.105
+you know, blowing out their knee, right?
+
+00:26:19.345 --> 00:26:23.825
+Way, way more common, like 80%. I don't have the stats right in front of me,
+
+00:26:23.905 --> 00:26:25.245
+but I have looked at the literature on this.
+
+00:26:25.385 --> 00:26:30.005
+And it's somewhere in 70, 80% of injuries are like just idiots doing stupid
+
+00:26:30.005 --> 00:26:31.945
+shit, you know, in the gym.
+
+00:26:31.945 --> 00:26:40.325
+And we have a lot of literature looking at resistance training volume,
+
+00:26:40.325 --> 00:26:45.005
+so basically how many hours per week you spend doing resistance training.
+
+00:26:45.245 --> 00:26:49.285
+Now, typically resistance training is measured in these studies as like lifting
+
+00:26:49.285 --> 00:26:51.225
+weights or using machines at the gym, right?
+
+00:26:51.365 --> 00:26:55.465
+But Pilates is essentially, it's in that category of thing, or it's not that
+
+00:26:55.465 --> 00:26:59.485
+exact same thing, but it's the same type of thing using bodyweight resistance
+
+00:26:59.485 --> 00:27:03.325
+and spring resistance, but it's still resistance training. if you do it right.
+
+00:27:05.560 --> 00:27:13.680
+And there is a very clear and very consistent inverse relationship between the
+
+00:27:13.680 --> 00:27:18.680
+number of hours you spend resistance training on a regular basis and your risk of injury, right?
+
+00:27:18.780 --> 00:27:24.140
+So the more you resistance train, the less injuries you get, right?
+
+00:27:24.200 --> 00:27:27.500
+And so these are studies looking at athletes, so, you know, soccer players,
+
+00:27:27.700 --> 00:27:30.300
+rugby players, dancers, you know, whatever it might be.
+
+00:27:30.480 --> 00:27:33.940
+Then we look at the dancers, rugby players, and soccer players who,
+
+00:27:33.960 --> 00:27:36.680
+you know, go to the gym half an hour a week, an hour a week,
+
+00:27:36.780 --> 00:27:38.120
+two hours a week, three hours a week.
+
+00:27:38.200 --> 00:27:41.840
+And guess what? The three hour a week people have the fewest injuries and the
+
+00:27:41.840 --> 00:27:45.040
+half an hour a week people have more injuries and the people who never go to
+
+00:27:45.040 --> 00:27:46.080
+the gym have the most injuries.
+
+00:27:47.140 --> 00:27:51.360
+And so, you know, there's a risk in anything. Like if you go for a walk,
+
+00:27:51.420 --> 00:27:52.420
+you might die of a heart attack.
+
+00:27:52.760 --> 00:27:57.200
+But if you never go for a walk, your chance of dying of a heart attack is way
+
+00:27:57.200 --> 00:28:00.960
+higher because your cardiovascular system is way weaker, right?
+
+00:28:01.040 --> 00:28:05.940
+And so, yes, if you go to the gym, there's a higher chance, like if you're squatting
+
+00:28:05.940 --> 00:28:09.220
+with a heavy barbell on your back, there's a higher chance you're going to hurt
+
+00:28:09.220 --> 00:28:11.840
+your back than if you're sitting on the sofa, right?
+
+00:28:12.240 --> 00:28:17.560
+But if you never squat, your lifetime chance of doing something in your back
+
+00:28:17.560 --> 00:28:21.040
+is way higher because your back is so much weaker.
+
+00:28:21.240 --> 00:28:24.060
+And if you'd step off a curb wrong or, you know,
+
+00:28:24.380 --> 00:28:29.440
+roll over in bed wrong, you can snap something because you're just made of chalk
+
+00:28:29.440 --> 00:28:33.520
+because you've never actually added any load to your system and stimulated that
+
+00:28:33.520 --> 00:28:37.480
+strengthening, that protective strengthening that you get from resistance training.
+
+00:28:45.053 --> 00:28:51.493
+Actually, you know, you and I have both been looking at this company.
+
+00:28:51.673 --> 00:28:54.233
+We're both kind of like called the Moves Method.
+
+00:28:55.393 --> 00:29:00.573
+And one of the things that they talk about is that, you know,
+
+00:29:00.713 --> 00:29:06.213
+you need to get strong out of alignment, right?
+
+00:29:06.213 --> 00:29:15.673
+Because if lunging with your knee in is dangerous, which it's not,
+
+00:29:16.373 --> 00:29:20.193
+but if lunging with your knee in was dangerous, well,
+
+00:29:21.053 --> 00:29:25.593
+are you truly going to guarantee that you go through the next 50,
+
+00:29:25.693 --> 00:29:29.873
+60 years of your life without ever once having your knee in?
+
+00:29:29.933 --> 00:29:31.153
+What about when you get up?
+
+00:29:31.273 --> 00:29:34.653
+I mean, dear listener, try this right now. I sit in a chair,
+
+00:29:34.933 --> 00:29:38.953
+get up out of a chair and rotate to one side at the same time.
+
+00:29:39.053 --> 00:29:42.213
+Like just imagine you're getting out from a table in a restaurant where you're
+
+00:29:42.213 --> 00:29:45.793
+in a corner or there's people either side of you on chairs and you're at dinner
+
+00:29:45.793 --> 00:29:48.933
+or you're on the bus and you have to get up and twist around somebody.
+
+00:29:49.033 --> 00:29:51.613
+It's like your knee fucking rotates when you do that.
+
+00:29:52.939 --> 00:29:55.799
+And you're going to Velgas, like it's a normal part of everyday movement,
+
+00:29:55.919 --> 00:29:57.799
+right? And so just say you're on the bus when you do that.
+
+00:29:57.919 --> 00:30:01.299
+And then as you're standing up, the bus jolts. Or just say you're at a restaurant
+
+00:30:01.299 --> 00:30:04.579
+and as you're doing that, someone else moves their chair and hits you in the side of the knee.
+
+00:30:04.719 --> 00:30:07.599
+Or just like, just say you're, you know, walking in the park and you change
+
+00:30:07.599 --> 00:30:11.699
+direction and a dog runs into you. Like shit happens in life, you know?
+
+00:30:12.119 --> 00:30:17.239
+And so if you've constantly avoided that position and never strengthened in
+
+00:30:17.239 --> 00:30:18.579
+that position, guess what?
+
+00:30:18.899 --> 00:30:22.759
+When shit happens, you've got no tolerance for it, right?
+
+00:30:22.939 --> 00:30:27.659
+But if you lunge every now and then with your knee going in a little bit,
+
+00:30:27.779 --> 00:30:29.299
+well, guess what? You get stronger in that position.
+
+00:30:29.459 --> 00:30:32.799
+You're more tolerant to load in that position because strength is specific,
+
+00:30:33.159 --> 00:30:35.999
+you know, specific to the joint angle, speed, range of motion,
+
+00:30:36.099 --> 00:30:37.519
+et cetera, that you move at.
+
+00:30:37.759 --> 00:30:42.319
+So yeah, it gets strong out of alignment. It's actually protective against injury.
+
+00:30:42.479 --> 00:30:46.879
+It's the opposite, you know? And that's why you're, you know,
+
+00:30:47.279 --> 00:30:50.679
+sweating and mumbling in your sleep, you know, and And, and,
+
+00:30:50.779 --> 00:30:54.559
+you know, going like, no, it's not alignment, you know,
+
+00:30:55.379 --> 00:30:58.499
+balanced body, you're wrong, um,
+
+00:30:59.499 --> 00:31:06.619
+is because like what the, what the message, that messaging is the exact opposite of what's true.
+
+00:31:11.727 --> 00:31:24.447
+I remember when I started to explore different kinds of movement and a program I was on said,
+
+00:31:24.807 --> 00:31:28.727
+I can't remember what they called it, I call it an inside squat.
+
+00:31:29.687 --> 00:31:33.347
+And you can try this, folks. You stand with your feet just a little wider than
+
+00:31:33.347 --> 00:31:37.287
+hip distance but not much and turn your toes out a little bit like duck-footed.
+
+00:31:37.287 --> 00:31:40.647
+And then as you squat put your knees together and
+
+00:31:40.647 --> 00:31:43.767
+squat as deep as you can and at the beginning it's kind
+
+00:31:43.767 --> 00:31:46.487
+of weird and awkward and hard and it's
+
+00:31:46.487 --> 00:31:49.147
+you're not as well set up to create force as you
+
+00:31:49.147 --> 00:31:53.787
+would in a normal squat but with a bit of practice I started to do barbell squats
+
+00:31:53.787 --> 00:31:59.527
+with my knees together and my feet apart asked to heal and once I started including
+
+00:31:59.527 --> 00:32:04.027
+movement like that with load my knees and I've got creaky knee I used to have
+
+00:32:04.027 --> 00:32:08.067
+creaky knees and sometimes they creak still my knees never felt better when I started to load.
+
+00:32:08.882 --> 00:32:12.082
+In that wrong squad when we've
+
+00:32:12.082 --> 00:32:14.782
+run the diploma there's a whole genre i'd call
+
+00:32:14.782 --> 00:32:17.742
+it a sub genre of kind of strongman like if
+
+00:32:17.742 --> 00:32:20.982
+you you know i'm i'm into strength and physiology and
+
+00:32:20.982 --> 00:32:23.982
+strength training i follow a whole bunch of people on youtube and instagram
+
+00:32:23.982 --> 00:32:26.942
+they're just into like weird and wacky you know strength training
+
+00:32:26.942 --> 00:32:29.722
+things and um there's this whole
+
+00:32:29.722 --> 00:32:33.022
+sub genre of like strongman competitors
+
+00:32:33.022 --> 00:32:36.042
+you know strongman people like they pick up like heavy rocks and
+
+00:32:36.042 --> 00:32:39.962
+you know throw things over poles and stuff like that that they're
+
+00:32:39.962 --> 00:32:43.262
+into doing like really weird lifts so they'll
+
+00:32:43.262 --> 00:32:46.182
+do something like a barbell on the ground and they'll
+
+00:32:46.182 --> 00:32:50.462
+pick it up off like a really heavy barbell with a fuck ton of weight on it and
+
+00:32:50.462 --> 00:32:55.102
+they'll put the barbell on one end and then they'll go sideways under put it
+
+00:32:55.102 --> 00:32:58.802
+on their shoulders sideways so they're laterally flexed like 90 degrees to their
+
+00:32:58.802 --> 00:33:02.642
+spine with this like 200 kilo barbell and then they'll get it a set and they'll
+
+00:33:02.642 --> 00:33:04.682
+stand up and do a squat and then they'll put it down again.
+
+00:33:05.162 --> 00:33:10.702
+And there are people that do like deadlifts with the bar behind their back or between their legs.
+
+00:33:11.222 --> 00:33:15.702
+Like, you know, there's this kind of weird, crazy shit that people do.
+
+00:33:15.842 --> 00:33:20.042
+And strongman, they pick up like massive fucking rocks that are really like
+
+00:33:20.042 --> 00:33:25.862
+odd, you know, asymmetrical shapes and you just cannot lift them in anything
+
+00:33:25.862 --> 00:33:28.802
+approaching neutral, in any joint.
+
+00:33:28.942 --> 00:33:33.042
+Then there's, you know, so there are so many, you know, sports that involve
+
+00:33:33.042 --> 00:33:38.042
+people just lifting extreme things, you know, in weird moments.
+
+00:33:38.042 --> 00:33:42.462
+And whenever they do that, and the argument is made by our education,
+
+00:33:42.822 --> 00:33:46.682
+Pilates education providers that that doesn't apply to your clients,
+
+00:33:46.882 --> 00:33:51.082
+is the only difference between those people is Milo and the Bull, right?
+
+00:33:51.102 --> 00:33:54.722
+They've just done a little weight and added a little more weight and added a
+
+00:33:54.722 --> 00:33:58.202
+little more weight and then all of a sudden they're doing these funky things in crazy alignment.
+
+00:33:58.402 --> 00:34:01.402
+It's exactly the same thing as any other kind of strength training.
+
+00:34:02.392 --> 00:34:07.272
+Well, you know. Backrowing, like backrowing. Like just think about some Pilates movements.
+
+00:34:07.412 --> 00:34:12.132
+Backrowing is a fucked up movement pattern, right? Like internally rotated and
+
+00:34:12.132 --> 00:34:15.172
+flexed at the spine and rotating. Why is that okay?
+
+00:34:15.572 --> 00:34:22.152
+Like why is that taught and okay when pushups with your elbows in a different position is not okay?
+
+00:34:22.332 --> 00:34:29.752
+Like it's, and you just add load over time, all tissues will get stronger in
+
+00:34:29.752 --> 00:34:32.192
+that movement. Well, it's, you know, what you said there about,
+
+00:34:32.332 --> 00:34:36.152
+like, and I've heard that argument too, it's like, are those strong men, you know, competitors?
+
+00:34:36.732 --> 00:34:39.472
+They're, you know, that's different. It's, you know, it doesn't apply to,
+
+00:34:39.472 --> 00:34:41.752
+like, you know, Mrs. Jones has got arthritic news. It's like,
+
+00:34:42.092 --> 00:34:44.412
+well, is their physiology different?
+
+00:34:44.592 --> 00:34:50.232
+I mean, do their cells respond differently to load? No, they've got human physiology, right?
+
+00:34:50.352 --> 00:34:55.192
+You know, I mean, if you cut them, they bleed, you know, like, they're humans.
+
+00:34:55.892 --> 00:34:59.612
+And so how did they get that strong? Well, they weren't always that strong.
+
+00:34:59.612 --> 00:35:01.692
+If you think about that person when they were born –.
+
+00:35:02.608 --> 00:35:05.588
+You know, zero days old, they couldn't do those things.
+
+00:35:06.008 --> 00:35:09.948
+So how is it that they're now able to do those things? Well, what do you think?
+
+00:35:10.328 --> 00:35:14.328
+They trained, you know, imagine little Johnny, you know, goes to the gym for
+
+00:35:14.328 --> 00:35:17.508
+the first time when he's 14, you know, does some biceps curls,
+
+00:35:18.048 --> 00:35:20.548
+you know, does that for a few years.
+
+00:35:20.668 --> 00:35:24.088
+One day, see some strongman competition, see someone picking up a rock,
+
+00:35:24.228 --> 00:35:27.308
+goes, oh, I think I'll give that a go, tries it, you know, then he goes down
+
+00:35:27.308 --> 00:35:30.468
+the rabbit hole, 20 years later, he's picking up fucking weird shit,
+
+00:35:30.648 --> 00:35:33.608
+you know, and weird angles on YouTube and people are going, oh,
+
+00:35:33.688 --> 00:35:35.368
+wow, that's amazing, but that doesn't apply to me.
+
+00:35:35.508 --> 00:35:42.088
+It's like, no, you just build up a tolerance to load by progressively adding load, right?
+
+00:35:42.228 --> 00:35:46.688
+And the difference between your client and the strongman competitors is your
+
+00:35:46.688 --> 00:35:49.388
+clients have not been exposed to enough load.
+
+00:35:49.528 --> 00:35:53.548
+That's why they're so fucking weak, right? If they can't bear to have their
+
+00:35:53.548 --> 00:35:56.468
+knee going two inches in a lunge, a bodyweight lunge, it's like,
+
+00:35:56.588 --> 00:36:01.088
+well, that's too little for too long.
+
+00:36:02.108 --> 00:36:03.228
+That's the problem there.
+
+00:36:05.399 --> 00:36:09.099
+And, and if you haven't looked up train with Joan and you're listening to us
+
+00:36:09.099 --> 00:36:10.279
+thinking, oh, it's too late.
+
+00:36:10.459 --> 00:36:13.019
+If you're, if you're not already strong by the time you're 40,
+
+00:36:13.259 --> 00:36:15.679
+it's too late. That's horse shit, right?
+
+00:36:16.479 --> 00:36:20.779
+Train with Joan. What is she? 75? 80? She went from one of the second half of
+
+00:36:20.779 --> 00:36:23.479
+her seventies now. I think she started training when she was 70.
+
+00:36:23.659 --> 00:36:28.399
+She was like just this completely sedentary, substantially overweight,
+
+00:36:28.679 --> 00:36:30.659
+70 year old who'd never exercised in her life.
+
+00:36:30.799 --> 00:36:34.519
+And for some reason she just decided to get fit. And now she's a fucking machine, you know?
+
+00:36:35.399 --> 00:36:39.839
+Yeah, it's so great. Yeah, yeah. And, you know, that's one of the ones,
+
+00:36:39.979 --> 00:36:44.719
+I've worked with lots of clients over 60 who had not exercised or if they had,
+
+00:36:44.799 --> 00:36:47.759
+it was before they were 20 and they came for whatever reason.
+
+00:36:47.759 --> 00:36:50.859
+And I've never seen anyone go through quite that transformation.
+
+00:36:50.859 --> 00:36:54.599
+But, you know, I will cry as soon as we start talking about working with older
+
+00:36:54.599 --> 00:37:00.039
+adults, because it's so transformational for them to feel strong and capable
+
+00:37:00.039 --> 00:37:02.939
+more so than sometimes they ever have in their life,
+
+00:37:03.139 --> 00:37:05.859
+simply by applying graded,
+
+00:37:06.459 --> 00:37:12.179
+consistent load and being patient, you know, and not giving them stories about
+
+00:37:12.179 --> 00:37:15.999
+their frailty or their inability to do things.
+
+00:37:15.999 --> 00:37:20.899
+And there's nothing special about that process. It's just special because it's
+
+00:37:20.899 --> 00:37:26.379
+extra transformational when people have lived a life without movement.
+
+00:37:26.579 --> 00:37:29.179
+And the one that really, and this is circling back to what makes me angry,
+
+00:37:29.339 --> 00:37:32.659
+is when working with clients who've been told to avoid movements because they're
+
+00:37:32.659 --> 00:37:36.579
+dangerous and so therefore they reduce their movement and their exposure to
+
+00:37:36.579 --> 00:37:40.059
+load and end up afraid to move.
+
+00:37:40.199 --> 00:37:44.059
+And the paradox is that actually makes them unsafe. Like as you explained so
+
+00:37:44.059 --> 00:37:47.679
+clearly before, If you have avoided movement because you're worried about it,
+
+00:37:47.779 --> 00:37:49.399
+you actually are more vulnerable.
+
+00:37:49.959 --> 00:37:54.939
+And our opportunity is to help people not be vulnerable, to actually make them
+
+00:37:54.939 --> 00:37:59.499
+stronger and more confident to move more freely and better.
+
+00:38:00.835 --> 00:38:04.355
+If we tell people that movements are dangerous and that load is dangerous and
+
+00:38:04.355 --> 00:38:08.575
+end range of motion is dangerous, and we don't do the work to know how to manage
+
+00:38:08.575 --> 00:38:12.335
+load incrementally and motivate people to come back, well,
+
+00:38:12.755 --> 00:38:16.775
+that's a negative, we're putting negative shit into those people's lives and
+
+00:38:16.775 --> 00:38:20.535
+making their lives measurably worse through, if nothing else,
+
+00:38:20.615 --> 00:38:24.155
+just through fear, let alone their physiological effect of not moving.
+
+00:38:24.875 --> 00:38:27.695
+Yeah. and the the you know
+
+00:38:27.695 --> 00:38:30.655
+that just going back to what you said about older adults there is
+
+00:38:30.655 --> 00:38:33.695
+we have a lot of literature on strength training
+
+00:38:33.695 --> 00:38:41.195
+uh for with older adults and we older adults are able to put on muscle and strength
+
+00:38:41.195 --> 00:38:47.195
+um with resistance training um they they tend to put on we're talking about
+
+00:38:47.195 --> 00:38:53.315
+people over 65 typically is what they refer to as older adults uh they tend to have a.
+
+00:38:54.315 --> 00:38:57.435
+Attenuated response to like hypertrophy training
+
+00:38:57.435 --> 00:39:00.555
+so in other words they put on less muscle for the
+
+00:39:00.555 --> 00:39:03.495
+same amount of training as a younger adult
+
+00:39:03.495 --> 00:39:08.355
+would but you just do a little bit more training and you can get the same amount
+
+00:39:08.355 --> 00:39:13.595
+of muscle you know so there's something like a 25 percent attenuation in the
+
+00:39:13.595 --> 00:39:17.715
+in the hypertrophy response so basically if the 20 year old and the 65 year
+
+00:39:17.715 --> 00:39:22.075
+old do the same number of sets of the same exercise at the same intensity,
+
+00:39:22.415 --> 00:39:27.735
+you know, the 20-year-old will probably have 25% more muscle, right?
+
+00:39:27.895 --> 00:39:34.175
+But if the older adult just does like a couple of extra sets, bam, equal, you know?
+
+00:39:34.355 --> 00:39:36.775
+And the older adults got plenty of time anyway, because they're retired.
+
+00:39:36.995 --> 00:39:37.775
+What else are they going to do?
+
+00:39:38.975 --> 00:39:42.335
+Good time for more training. Yeah, yeah, yeah, yeah. All right.
+
+00:39:43.135 --> 00:39:48.575
+So don't fear the valgus. Don't fear the spinal flexion. Don't fear the internal rotation.
+
+00:39:49.175 --> 00:39:52.035
+Don't fear the end range. Don't fear your knee going in in a lunge.
+
+00:39:52.215 --> 00:39:55.995
+And don't listen to bullshit from outdated educators who haven't changed their
+
+00:39:55.995 --> 00:39:59.495
+curriculum since the late, early 1990s.
+
+00:40:00.934 --> 00:40:06.014
+And, and if any, and, and the other, the thing there that I learned and you
+
+00:40:06.014 --> 00:40:09.594
+learned and we weren't taught is how to manage load over time.
+
+00:40:09.814 --> 00:40:12.494
+Like thinking, we teach, we call it teaching in layers. Like,
+
+00:40:13.034 --> 00:40:14.594
+and you think you teach in layers.
+
+00:40:14.714 --> 00:40:17.934
+Well, do you, when are your layers organized around adding load?
+
+00:40:18.294 --> 00:40:22.014
+Because that's what, that was the transformation for me in my teaching and my
+
+00:40:22.014 --> 00:40:27.534
+business and our education system is organizing what you add based on load and
+
+00:40:27.534 --> 00:40:29.354
+people's tolerance within the class.
+
+00:40:29.494 --> 00:40:32.554
+Like that's the skill. And that's why we built a
+
+00:40:32.554 --> 00:40:39.254
+whole system of Pilates designed to build people's capacity and make them stronger
+
+00:40:39.254 --> 00:40:44.114
+and more mobile so that they become more resistant to injury and they don't
+
+00:40:44.114 --> 00:40:48.374
+have to worry about their knee going in because they're strong enough to- And
+
+00:40:48.374 --> 00:40:49.694
+then they can move any way they want.
+
+00:40:50.254 --> 00:40:52.934
+And then you can go off and do neutral all you like, but you could do anything
+
+00:40:52.934 --> 00:40:55.874
+you want on either side of it. And they can even get up out of a chair in a
+
+00:40:55.874 --> 00:40:57.754
+restaurant without damaging their knee.
+
+00:40:58.794 --> 00:41:00.954
+On one leg. All right. Good talk.

@@ -1,0 +1,966 @@
+363. How to keep your clients safe in Pilates according to science
+Published: 21st June, 2026
+Episode: https://pilates-elephants.breathe-education.com/episode/363-how-to-keep-your-clients-safe-in-pilates-according-to-science
+Transcript source: https://transcripts.captivate.fm/transcript/80fcb07e-f3e3-48f5-9021-4e3968064bf3/index.html
+RSS transcript attachment: https://transcripts.captivate.fm/transcript/80fcb07e-f3e3-48f5-9021-4e3968064bf3/index.html
+Transcript media type: text/html
+
+00:00:06.394 --> 00:00:12.263
+Welcome to Pilates Elephants, I'm Raphael Bender. How do we keep our clients safe in Pilates?
+
+00:00:12.977 --> 00:00:19.331
+I'm going to have a reasonably in-depth tour of the literature on injury prevention,
+
+00:00:19.331 --> 00:00:24.101
+alignment and load and see where that takes us and,
+
+00:00:24.854 --> 00:00:32.023
+come up with some strong evidence-based recommendations on how you can run your Pilates classes to,
+
+00:00:33.097 --> 00:00:35.222
+keep your clients as safe as possible.
+
+00:00:36.017 --> 00:00:41.131
+All right, so the two big questions here that kind of really interlock quite
+
+00:00:41.131 --> 00:00:45.938
+a lot are to do with, firstly, alignment.
+
+00:00:46.443 --> 00:00:50.821
+So to what extent, if at all, does alignment predispose people to injuries?
+
+00:00:50.821 --> 00:00:55.161
+And I'm talking about alignment, not just within a particular move,
+
+00:00:55.161 --> 00:00:57.467
+so like whether your knee is pointing in or out when you squat,
+
+00:00:58.169 --> 00:01:04.455
+but also just the choice of moves, like is it safe to do backbends or rotations under load?
+
+00:01:06.248 --> 00:01:11.371
+And so that's the first area I want to explore, alignment and relationship to injury risk.
+
+00:01:11.371 --> 00:01:16.991
+And the reason I want to talk about that is it's very, that's what most people
+
+00:01:16.991 --> 00:01:20.301
+think of when they think about injury risk is like, oh, how do I adjust someone's
+
+00:01:20.301 --> 00:01:23.344
+alignment to keep them as safe as possible?
+
+00:01:24.116 --> 00:01:29.497
+The second thing I want to look at is the relationship of load to injury risk.
+
+00:01:30.130 --> 00:01:34.861
+And so these things, the alignment and the load overlap quite a lot.
+
+00:01:35.301 --> 00:01:37.050
+And so we need to consider them together.
+
+00:01:39.599 --> 00:01:43.494
+So the first thing I want to really,
+
+00:01:44.260 --> 00:01:48.552
+I think, and really the number one thing that I want to share with you is the
+
+00:01:48.552 --> 00:01:51.522
+concept of anti-fragility and that
+
+00:01:51.522 --> 00:01:56.352
+asking the question of how important is alignment, how important is load,
+
+00:01:57.130 --> 00:02:01.385
+really both of these questions kind of miss the point,
+
+00:02:02.204 --> 00:02:09.752
+that there's not one ideal kind of setting for alignment and load to prevent
+
+00:02:09.752 --> 00:02:13.572
+injuries in Pilates or in any area of life.
+
+00:02:13.572 --> 00:02:16.412
+Because obviously we want to keep people safe in the Pilates class,
+
+00:02:16.412 --> 00:02:19.565
+but we also want to keep them safe the rest of the time when they're outside of the Pilates class.
+
+00:02:20.326 --> 00:02:26.362
+And many of us think of Pilates as amazing preparation for doing life.
+
+00:02:26.362 --> 00:02:29.648
+And so part of that is reducing chance of injuries or recovering from injuries.
+
+00:02:30.786 --> 00:02:33.882
+And so the idea that there's one kind of fixed you know,
+
+00:02:34.522 --> 00:02:39.772
+rule of alignment or rule of loading that prevents injuries is is just it misses
+
+00:02:39.772 --> 00:02:42.071
+the point and here's why because humans,
+
+00:02:42.692 --> 00:02:50.030
+are not fragile we're anti-fragile and anti-fragile is a coin a term coined by um nasim taleb.
+
+00:02:51.800 --> 00:02:57.681
+And what he means by that is something that gains by stress.
+
+00:02:57.878 --> 00:03:01.602
+So let's think about the three examples that I think illustrate this really
+
+00:03:01.602 --> 00:03:03.688
+well that Nassim Taleb uses.
+
+00:03:04.396 --> 00:03:07.496
+First, there's something that's fragile. Now, something that's fragile,
+
+00:03:08.384 --> 00:03:13.772
+almost any stressor is likely to make it worse.
+
+00:03:13.772 --> 00:03:17.862
+So think about your grandma's crystal vase that's been sitting in the cabinet
+
+00:03:17.862 --> 00:03:23.232
+it untouched for 20 years because it's too precious to use because you might break it.
+
+00:03:23.232 --> 00:03:27.222
+So anything you do to that, if you knock it, if you pick it up,
+
+00:03:27.222 --> 00:03:32.142
+if you drop it, if you walk past it and brush past it, it's not going to make it better.
+
+00:03:32.462 --> 00:03:37.172
+It's only going to, there's a chance that you're going to damage that with every
+
+00:03:37.172 --> 00:03:40.631
+time you knock it, the only possible outcome is it stays the same or it gets worse.
+
+00:03:41.211 --> 00:03:43.754
+And the harder you knock it, the more worse it's going to get.
+
+00:03:45.744 --> 00:03:48.630
+And when we think of something that's fragile and we think of the opposite of
+
+00:03:48.630 --> 00:03:51.840
+fragile, often people think of like resilient or robust.
+
+00:03:51.840 --> 00:03:55.880
+And that is something that's very tough and can withstand a lot of stress.
+
+00:03:55.880 --> 00:04:01.340
+I think about like one of those, I always think of those tough Tonka toys.
+
+00:04:01.340 --> 00:04:03.650
+I'm not sure if there's a brand anyone outside of Australia had,
+
+00:04:03.650 --> 00:04:07.590
+but these kind of really tough, rough and tough kind of tip trucks and things
+
+00:04:07.590 --> 00:04:12.350
+that I had when I was a kid that, you know, they're made for young kids and you can throw them.
+
+00:04:12.350 --> 00:04:15.876
+You can step on them, you can leave them out in the garden for three months
+
+00:04:16.149 --> 00:04:19.330
+in the rain, and they're totally fine. They just keep going through it all.
+
+00:04:19.690 --> 00:04:23.910
+And so these are very robust, they're very resilient. They can tolerate a lot of abuse.
+
+00:04:25.250 --> 00:04:29.634
+But that's not actually the opposite of fragile because fragile things,
+
+00:04:30.882 --> 00:04:33.181
+any kind of stress makes them worse.
+
+00:04:33.419 --> 00:04:37.831
+Whereas a robust thing, stress doesn't make it worse, but it doesn't make it better.
+
+00:04:38.272 --> 00:04:41.750
+So the opposite of something that's fragile is something that stress actually,
+
+00:04:41.750 --> 00:04:43.531
+it requires stress to thrive.
+
+00:04:44.117 --> 00:04:48.448
+And so that is humans, humans and all organic life.
+
+00:04:50.905 --> 00:04:57.369
+For example, if you take a human and you put them in bed and don't let them
+
+00:04:57.369 --> 00:05:01.879
+move for six weeks, they do not get stronger. They get weaker and they don't
+
+00:05:01.879 --> 00:05:03.325
+get more healthy. They become sicker.
+
+00:05:03.865 --> 00:05:11.777
+And so how to make humans more resistant to stress, we actually have to apply stress.
+
+00:05:12.709 --> 00:05:16.569
+And that's what we do for a living. We apply stress to the body in the form
+
+00:05:16.569 --> 00:05:20.759
+of resistance from the body weight or the springs on the Reformer or the Cadillac
+
+00:05:20.759 --> 00:05:27.029
+or whatever, and that stress stimulates the body to become stronger.
+
+00:05:27.029 --> 00:05:32.425
+So the stress makes us stronger, the opposite of fragile.
+
+00:05:33.099 --> 00:05:36.030
+Now, why is this important?
+
+00:05:39.275 --> 00:05:43.803
+Because if you apply stress to something fragile, you're only going to do it harm.
+
+00:05:44.215 --> 00:05:47.710
+Whereas if you apply stress to something anti-fragile, like humans,
+
+00:05:48.569 --> 00:05:50.129
+you're going to make them stronger.
+
+00:05:50.129 --> 00:05:54.380
+Now, there's a limit to how much stress humans can tolerate,
+
+00:05:54.612 --> 00:06:00.613
+and so you have to apply the right amount of stress at the right time.
+
+00:06:03.979 --> 00:06:07.218
+But stress is actually what makes us stronger.
+
+00:06:08.762 --> 00:06:13.116
+And when we're stronger, we're more resistant to injury.
+
+00:06:14.556 --> 00:06:19.929
+Because injury occurs when a body tissue, whether it's a ligament,
+
+00:06:20.269 --> 00:06:22.329
+a tendon, a muscle, fascia,
+
+00:06:23.455 --> 00:06:30.340
+bone, whatever it might be, is subjected to a load beyond its capacity to tolerate.
+
+00:06:31.901 --> 00:06:37.329
+And so if you subject the hamstrings to a load that they can't tolerate you
+
+00:06:37.329 --> 00:06:42.969
+get a hamstring tear if you subject a spinal disc to a load it can't tolerate
+
+00:06:42.969 --> 00:06:45.502
+you may have a disc injury,
+
+00:06:47.093 --> 00:06:52.589
+so how do you prevent injuries well do you avoid loading the hamstrings well
+
+00:06:52.589 --> 00:06:55.159
+how would you avoid loading the hamstrings send somebody to bed and don't let
+
+00:06:55.159 --> 00:06:59.479
+them move is that going to make them more resistant to injury no it's not it's going to make them.
+
+00:07:01.839 --> 00:07:06.569
+More vulnerable to injury. So how do you make somebody less likely to get a
+
+00:07:06.569 --> 00:07:10.159
+hamstring injury? You strengthen the hamstrings. How do you strengthen the hamstrings?
+
+00:07:10.159 --> 00:07:13.888
+You apply stress to the hamstrings in the form of load.
+
+00:07:14.620 --> 00:07:22.085
+So load is what too much load can cause an injury because the tissues can't tolerate it.
+
+00:07:22.590 --> 00:07:27.739
+Not enough load can predispose to injury because it causes the tissues to become
+
+00:07:27.739 --> 00:07:30.641
+weaker and reduces their load tolerance. So then when you do load it,
+
+00:07:31.164 --> 00:07:32.296
+you're more likely to injure it.
+
+00:07:33.027 --> 00:07:39.759
+The right amount of load at the right time reduces the likelihood of injury
+
+00:07:39.759 --> 00:07:43.839
+quite substantially because it increases the strength and resilience of those
+
+00:07:43.839 --> 00:07:46.408
+tissues and their ability to tolerate load.
+
+00:07:47.215 --> 00:07:58.719
+So with injury prevention, the question of what is the right load and what is
+
+00:07:58.719 --> 00:08:00.240
+load dangerous is not the right question.
+
+00:08:01.219 --> 00:08:07.148
+The right question is, how much load is the right amount to apply right now?
+
+00:08:07.897 --> 00:08:13.969
+And load is very, very specific. So if you want to prevent hamstring injuries, you should,
+
+00:08:16.535 --> 00:08:19.319
+apply load in the positions where the hamstring is vulnerable to injury.
+
+00:08:19.319 --> 00:08:24.511
+Now, you need to apply progressively and start with what the tissues can currently tolerate.
+
+00:08:26.559 --> 00:08:26.727
+But.
+
+00:08:29.567 --> 00:08:36.687
+If you want to make your spine robust to injuries during spinal extension or
+
+00:08:36.687 --> 00:08:40.856
+injuries during rotation or injuries during flexion, well, you need to apply load
+
+00:08:41.083 --> 00:08:44.807
+in those positions progressively, starting with what the person can currently
+
+00:08:44.807 --> 00:08:47.323
+tolerate and then progressively loading over time,
+
+00:08:48.235 --> 00:08:50.077
+to build up tolerance in those tissues.
+
+00:08:50.077 --> 00:08:54.897
+When I say tolerance, I mean the tissues literally get bigger, thicker, stronger.
+
+00:08:54.897 --> 00:08:59.187
+Like we have decent evidence, I mean, everybody understands that muscles get
+
+00:08:59.187 --> 00:09:00.876
+bigger when you load them,
+
+00:09:01.492 --> 00:09:07.145
+but it's also true that tendons, ligaments, discs, and bones,
+
+00:09:07.458 --> 00:09:13.269
+and connective tissue in general, get bigger and thicker and stronger when we,
+
+00:09:13.809 --> 00:09:16.352
+load them progressively and repeatedly over time.
+
+00:09:18.169 --> 00:09:26.197
+So with load and with alignment there is no one single rule that says you know
+
+00:09:26.197 --> 00:09:33.163
+this particular alignment or this particular load is ideal to avoid or prevent injuries,
+
+00:09:34.127 --> 00:09:40.267
+really what we want to do is progressively load all positions over time starting
+
+00:09:40.267 --> 00:09:43.707
+with the client what the client concurrently tolerate, and then progressively
+
+00:09:43.707 --> 00:09:46.067
+adding load to increase tolerance.
+
+00:09:46.067 --> 00:09:48.597
+Now I'm going to talk through some examples of this.
+
+00:09:56.150 --> 00:10:00.308
+There was a, I'm going to put a bunch of studies in the show notes.
+
+00:10:00.308 --> 00:10:04.958
+I'm not going to talk about every particular study in my little monologue here,
+
+00:10:05.298 --> 00:10:06.657
+but I'll put a bunch of studies in the show notes.
+
+00:10:07.186 --> 00:10:14.908
+So we have quite a few studies showing prospective differences between levels
+
+00:10:14.908 --> 00:10:16.758
+of strength predicting future injuries.
+
+00:10:16.758 --> 00:10:20.758
+So people with low strength have more injuries later.
+
+00:10:20.758 --> 00:10:24.165
+So if we measure a bunch of people's hamstring strength, for example,
+
+00:10:24.815 --> 00:10:29.848
+and then follow them for a year and we see who gets a hamstring injury,
+
+00:10:29.848 --> 00:10:34.098
+guess what? The people with lower hamstring strength at baseline had more injuries
+
+00:10:34.365 --> 00:10:35.561
+subsequently over the year.
+
+00:10:36.733 --> 00:10:45.922
+Uh and we see the river we can see the reverse as well um that,
+
+00:10:47.169 --> 00:10:55.368
+uh athletes who have a stronger squat so can squat more than 2.2 times body
+
+00:10:55.368 --> 00:10:57.943
+weight for males or 1.6 times body weight for females,
+
+00:10:58.483 --> 00:11:03.078
+have fewer lower body injuries in football softball and volleyball or put another
+
+00:11:03.078 --> 00:11:05.159
+way we could frame that exactly as the opposite,
+
+00:11:05.954 --> 00:11:09.068
+athletes who are not strong in their lower body, who are less strong in their
+
+00:11:09.068 --> 00:11:11.150
+lower bodies, have more lower body injuries.
+
+00:11:13.122 --> 00:11:17.447
+So if you want to predict how likely someone is to get injured in football or
+
+00:11:17.887 --> 00:11:22.387
+softball or volleyball, get them to squat and see how much they can squat.
+
+00:11:22.387 --> 00:11:25.377
+If they're a female and they can't squat 1.6 times their body weight,
+
+00:11:25.377 --> 00:11:26.544
+they're more likely to get injured.
+
+00:11:27.246 --> 00:11:32.367
+So by keeping our clients weak, by avoiding squatting maybe because we think
+
+00:11:32.367 --> 00:11:36.708
+it's dangerous, we're actually increasing the chance of them becoming injured,
+
+00:11:37.236 --> 00:11:38.827
+because humans are anti-fragile,
+
+00:11:39.402 --> 00:11:44.208
+and we actually require stress and load in order to thrive and become stronger.
+
+00:11:45.066 --> 00:11:50.854
+And we see that with a couple of quite substantial.
+
+00:11:53.847 --> 00:11:56.987
+Systematic review and meta-analysis that have come out over the last few years.
+
+00:11:56.987 --> 00:12:03.627
+There's one from 2018 by Lauson et al, which found that a 10% increase in strength
+
+00:12:03.627 --> 00:12:07.747
+training volume reduced injury risk by 4%.
+
+00:12:07.747 --> 00:12:12.627
+So increase it by 20%, reduce injury risk by 8%. Increase strengthening training
+
+00:12:12.627 --> 00:12:15.879
+volume by 30%, reduce injury risk by 12%, etc.
+
+00:12:16.622 --> 00:12:21.098
+And so this systematic review from 2018 from Lawson,
+
+00:12:22.009 --> 00:12:26.152
+Well, the title of the paper is a little bit of a giveaway. It's called Strength
+
+00:12:26.152 --> 00:12:30.542
+Training as Superior, Dose-Dependent and Safe Prevention of Acute and Overused
+
+00:12:30.542 --> 00:12:35.262
+Sports Injuries, A Systematic Review, Qualitative Analysis and Meta-Analysis.
+
+00:12:37.346 --> 00:12:46.802
+And so what they found was in the title that a very robust relationship between
+
+00:12:46.802 --> 00:12:50.882
+strength training and injury risk. Now, most of these studies were on actual hamstring injuries.
+
+00:12:51.416 --> 00:12:55.662
+So we we can't draw conclusions necessarily to every single possible injury
+
+00:12:55.662 --> 00:12:58.642
+but we have a bunch of other studies supporting this with some of which i'll
+
+00:12:58.642 --> 00:13:04.772
+cite today um there's a second meta-analysis by i'm not going to well i'm going to attempt,
+
+00:13:05.824 --> 00:13:12.023
+the the uh the name it's by klub bachowski et al uh,
+
+00:13:13.498 --> 00:13:18.592
+and from may 2026 so just a month ago at the time of recording this is called
+
+00:13:18.592 --> 00:13:22.572
+exercise-based strategies from warm-up to training, a systematic review of performance
+
+00:13:22.572 --> 00:13:23.982
+enhancement and injury prevention.
+
+00:13:23.982 --> 00:13:30.222
+What they found was that two forms of exercise, both neuromuscular warm-ups
+
+00:13:30.222 --> 00:13:34.712
+and strength training, were the most effective injury prevention.
+
+00:13:34.712 --> 00:13:37.600
+But when they look at the actual neuromuscular warm-ups they use,
+
+00:13:38.036 --> 00:13:41.762
+they were basically the FIFA 11+, which is the soccer warm-up,
+
+00:13:41.762 --> 00:13:44.042
+which has a lot of strengthening.
+
+00:13:44.042 --> 00:13:49.202
+There are all kinds of side bridges and adductor bridges and,
+
+00:13:49.202 --> 00:13:51.617
+you know, things like that in there and sprints and things like that.
+
+00:13:51.977 --> 00:13:57.991
+So it's pretty high load that neuromuscular warmup, I would call it a high load,
+
+00:13:58.852 --> 00:14:01.652
+or a strength-based neuromuscular warmup. So basically.
+
+00:14:04.792 --> 00:14:14.502
+The best quality and most recent research we have strongly supports this notion
+
+00:14:14.502 --> 00:14:18.767
+of anti-fragility and that's strengthening people's tissues and,
+
+00:14:19.887 --> 00:14:23.997
+protects those tissues that are strengthened against subsequent injury.
+
+00:14:24.624 --> 00:14:35.097
+And the idea of antifragility is also supported by the training on overuse injuries,
+
+00:14:35.877 --> 00:14:38.324
+by the research on overuse injuries in athletes.
+
+00:14:38.938 --> 00:14:45.137
+And so this is from the literature looking at typically ball,
+
+00:14:45.137 --> 00:14:48.058
+like grass team ball sports like football, et cetera, rugby,
+
+00:14:49.317 --> 00:14:55.837
+where they look at, they can do these, they can track exercise volume very easily
+
+00:14:55.837 --> 00:14:58.547
+because people like the players wear GPS trackers and they know how many miles
+
+00:14:58.547 --> 00:15:01.183
+they run each week, like when they're playing and training.
+
+00:15:01.827 --> 00:15:08.057
+And so what they found, what this literature consistently shows is that too
+
+00:15:08.497 --> 00:15:14.057
+little for too long followed by too much too soon is what causes injury.
+
+00:15:14.057 --> 00:15:19.407
+So in other words, big increases in training volume and or intensity increase
+
+00:15:19.407 --> 00:15:23.137
+the risk of injury. So if you apply an unaccustomed load that somebody's not
+
+00:15:23.317 --> 00:15:26.446
+able to tolerate, that increases the risk of injury. But-
+
+00:15:28.385 --> 00:15:33.445
+Athletes with consistent high workload suffer fewer injuries.
+
+00:15:33.445 --> 00:15:38.665
+So people who are conditioned to tolerate high loads because they habitually
+
+00:15:38.665 --> 00:15:41.885
+subject their tissues to high loads actually have fewer injuries.
+
+00:15:41.885 --> 00:15:50.365
+So the notion of overuse injuries is mostly, I think, I would say misapplied.
+
+00:15:50.365 --> 00:15:53.455
+So of course it's possible to get an overuse injury. I mean,
+
+00:15:53.455 --> 00:16:00.062
+if you did like 10,000 deadlifts in 24 hours, you would have almost 100% chance of getting an injury.
+
+00:16:00.694 --> 00:16:03.266
+So there is such a thing as overuse injuries, obviously.
+
+00:16:03.910 --> 00:16:10.595
+But I think we set the bar way too low for what the body can tolerate and in
+
+00:16:10.595 --> 00:16:14.205
+fact, what the body requires to thrive and become stronger.
+
+00:16:14.205 --> 00:16:17.511
+So I think in general,
+
+00:16:18.875 --> 00:16:22.135
+in Pilates as well as in exercise science and physiotherapy,
+
+00:16:22.135 --> 00:16:27.275
+we're way too conservative in what we prescribe for our clients in terms of
+
+00:16:27.275 --> 00:16:30.095
+exercise because we want to avoid overuse injuries.
+
+00:16:30.095 --> 00:16:35.415
+Actually high habitual training volumes, even like in elite athletes,
+
+00:16:35.415 --> 00:16:40.955
+like these people are running ridiculous amounts of distance and training ridiculously
+
+00:16:40.955 --> 00:16:44.788
+hard, predisposed to fewer injuries.
+
+00:16:45.241 --> 00:16:50.488
+So it's only high big spikes in training volume that are more associated with injuries.
+
+00:16:53.195 --> 00:16:59.465
+And then we have a bunch of literature on alignment that says that activities
+
+00:16:59.465 --> 00:17:07.102
+that have extreme positions in them like yoga, like breakdancing,
+
+00:17:08.182 --> 00:17:10.492
+like CrossFit, like,
+
+00:17:11.938 --> 00:17:19.489
+actually have relatively low injury rates. So yoga has lower rates of injuries
+
+00:17:19.489 --> 00:17:23.606
+compared to like just other general physical activities.
+
+00:17:24.105 --> 00:17:29.614
+Breakdancing, which is people just contort themselves into incredible positions.
+
+00:17:30.154 --> 00:17:33.789
+Just go to YouTube and type in like breakdancing competition.
+
+00:17:33.789 --> 00:17:35.899
+There's just some incredible work that they do.
+
+00:17:36.819 --> 00:17:39.759
+It's safer than badminton, safer than cycling, safer than sailing.
+
+00:17:40.219 --> 00:17:43.969
+And CrossFit, where people are, you know, flinging themselves through keeping
+
+00:17:43.969 --> 00:17:51.322
+pull-ups and doing, you know, tyre flips and handstand push-ups and all kinds of weird positions.
+
+00:17:53.459 --> 00:17:59.129
+Have very similar injury rates to Olympic lifting, where people use very,
+
+00:17:59.129 --> 00:18:02.758
+very precise technique under very controlled conditions.
+
+00:18:04.079 --> 00:18:09.619
+Um in fact crossfit have way fewer injuries than running soccer and even cricket,
+
+00:18:11.319 --> 00:18:15.159
+which is a pretty pedestrian sport um according to most people um,
+
+00:18:16.239 --> 00:18:22.319
+the there's not a really good relationship between running biomechanics and
+
+00:18:22.319 --> 00:18:28.114
+running injuries in fact it's just mileage that predicts injury risk in running.
+
+00:18:30.198 --> 00:18:37.779
+And even with, you know, just things with technique within the activity,
+
+00:18:38.179 --> 00:18:41.320
+like I mentioned right at the top, knees going in during a squat,
+
+00:18:42.341 --> 00:18:46.719
+that there's actually not really any good evidence that that causes injuries.
+
+00:18:46.719 --> 00:18:49.684
+In fact, if you just, again, do a YouTube
+
+00:18:50.091 --> 00:18:56.209
+search for powerlifting squat championships or something like that.
+
+00:18:58.509 --> 00:19:06.316
+You'll see a large number of elite strength athletes when they squat, their knees go in.
+
+00:19:07.007 --> 00:19:11.579
+And so that's probably not bad technique. In fact, I did a whole episode a while
+
+00:19:11.579 --> 00:19:13.816
+back, which I'll link to in the show notes, can't remember which one it was,
+
+00:19:14.589 --> 00:19:18.849
+talking about the biomechanics and the literature on why the knees going in
+
+00:19:18.849 --> 00:19:21.429
+the squat might actually be
+
+00:19:21.789 --> 00:19:27.510
+something that increases strength and reduces injury risk during a squat.
+
+00:19:28.369 --> 00:19:31.189
+And there's a 2020 systematic review of meta-analysis that,
+
+00:19:32.809 --> 00:19:39.519
+looked at this question specifically and concluded that knees going in during
+
+00:19:39.519 --> 00:19:43.809
+a squat doesn't increase injury risk. We have got no evidence that it does.
+
+00:19:45.869 --> 00:19:54.289
+So besides that, we've got multiple large meta-analyses that have shown that
+
+00:19:54.289 --> 00:19:56.449
+spinal flexion does not predict back injury.
+
+00:19:56.869 --> 00:20:01.125
+In fact, people with more back pain tend to lift with a straighter back.
+
+00:20:02.553 --> 00:20:08.817
+And in fact, the belief that moving wrong is dangerous correlates with more pain.
+
+00:20:09.560 --> 00:20:14.529
+So in summary, now, I mean, there's many more of these studies.
+
+00:20:14.529 --> 00:20:17.699
+So, you know, for example, poor scapular mechanics, you know,
+
+00:20:17.699 --> 00:20:22.489
+in quotes, don't predict shoulder injuries and I'll link to most or all of these
+
+00:20:22.489 --> 00:20:26.139
+studies depending on how sick I get of copying and pasting them into the show notes.
+
+00:20:28.355 --> 00:20:29.986
+But so in summary, Sorry.
+
+00:20:31.845 --> 00:20:38.373
+Load, too much load applied to tissues that can't tolerate that load causes injuries.
+
+00:20:38.373 --> 00:20:44.383
+Not enough load causes the tissues to become weak and vulnerable to injury.
+
+00:20:44.383 --> 00:20:50.413
+So load is both the poison and the medicine because load applied progressively
+
+00:20:50.413 --> 00:20:56.174
+over time strengthens the tissues and increases their load tolerance and resistance to injury.
+
+00:20:56.441 --> 00:20:59.733
+So it protects against injuries. So too much load, too soon,
+
+00:20:59.733 --> 00:21:02.588
+after too little for too long, causes injury.
+
+00:21:03.453 --> 00:21:08.233
+Load applied progressively over time reduces the chance of injury or protects
+
+00:21:08.233 --> 00:21:11.213
+against injury because humans are anti-fragile.
+
+00:21:11.573 --> 00:21:16.520
+And so should we be careful of loading people in extreme positions?
+
+00:21:17.873 --> 00:21:21.693
+Yes, if they're not conditioned to tolerate those positions.
+
+00:21:21.693 --> 00:21:25.873
+But we should be careful of loading people in any position they're not conditioned to tolerate.
+
+00:21:25.873 --> 00:21:31.393
+We should start with a load that they can tolerate and progressively build that load over time.
+
+00:21:31.393 --> 00:21:36.407
+And I would argue that it's perfectly safe and in fact probably a lot safer,
+
+00:21:36.970 --> 00:21:42.713
+to progressively load someone in extreme spinal positions like flexion,
+
+00:21:42.713 --> 00:21:44.679
+rotation, extension, whatever.
+
+00:21:46.385 --> 00:21:50.121
+And because that will build up top progressive tolerance to that,
+
+00:21:50.121 --> 00:21:54.111
+those positions in their spinal tissues, not just the disc, but the bones,
+
+00:21:54.111 --> 00:21:56.293
+the ligaments, the tendons, the muscles, all of the above.
+
+00:21:57.066 --> 00:22:00.131
+And just anecdotally, I mean, I do that with my spine.
+
+00:22:00.851 --> 00:22:08.571
+I do full range extension, like full backbend as far as I can bend down to full
+
+00:22:08.571 --> 00:22:14.311
+flexion as far as I can flex with as much load as I can do for six or seven reps.
+
+00:22:14.311 --> 00:22:19.049
+And I think I'm currently doing on my weight stack 125.
+
+00:22:21.091 --> 00:22:27.267
+Kilos, something like that. And my back's never felt better and I'm 55 years old.
+
+00:22:27.546 --> 00:22:32.351
+And I've been doing that for quite a while. So I know that's an N of one,
+
+00:22:32.351 --> 00:22:35.957
+but don't worry, I'll front load all of the scientific papers in the show notes.
+
+00:22:36.091 --> 00:22:41.681
+So dear listener, how do we keep our clients safe? Well, I think the answer
+
+00:22:41.681 --> 00:22:44.972
+to that is teach them Pilates through full range.
+
+00:22:45.547 --> 00:22:50.580
+Don't fear any positions. There are no dangerous positions. There are no wrong positions.
+
+00:22:51.178 --> 00:22:55.481
+There are only positions we're unaccustomed to. And so when introducing a new
+
+00:22:55.481 --> 00:23:00.901
+position that someone is unaccustomed to, be, I would say.
+
+00:23:04.550 --> 00:23:06.556
+I want to choose the right word here.
+
+00:23:09.226 --> 00:23:13.423
+Begin with something that you're confident they can tolerate.
+
+00:23:15.206 --> 00:23:18.213
+Wait and see how they pull up a couple of days later. If they tolerate it,
+
+00:23:18.538 --> 00:23:24.780
+add 10% next time and go again. And just keep going until they reach a point
+
+00:23:24.780 --> 00:23:26.410
+where they're like, oh, this is really freaking hard.
+
+00:23:27.267 --> 00:23:30.200
+And then just give them adequate recovery in between sessions,
+
+00:23:30.200 --> 00:23:34.410
+a couple of days recovery in between sessions. and you can build up load as
+
+00:23:34.410 --> 00:23:35.417
+they're able to tolerate it.
+
+00:23:36.033 --> 00:23:43.690
+And so that is, I think, in my opinion, the way to maximize the safety of the
+
+00:23:43.690 --> 00:23:47.180
+client both in and out of the Pilates class.
+
+00:23:47.180 --> 00:23:52.380
+Because even if we avoid certain positions in Pilates, like if we took it to
+
+00:23:52.380 --> 00:23:56.660
+the extreme and never rotated our spine under load or never extended our spine
+
+00:23:56.660 --> 00:23:58.927
+under load during Pilates,
+
+00:23:59.572 --> 00:24:03.790
+Well, that person is going to do both of those things in their real life.
+
+00:24:04.090 --> 00:24:11.629
+Okay, when you pick up a kid out of the back seat of a car or you get out of a chair.
+
+00:24:15.930 --> 00:24:21.340
+Pulling the washing out of the machine, there are constant situations multiple
+
+00:24:21.340 --> 00:24:25.140
+times every day where pretty much every single one of us rotates,
+
+00:24:25.140 --> 00:24:27.179
+flexes, and extends our spine under load.
+
+00:24:27.487 --> 00:24:32.640
+So just avoiding it during the Pilates class isn't going to prevent injury if
+
+00:24:32.640 --> 00:24:35.178
+rotating your spine under load is going to cause injury.
+
+00:24:35.610 --> 00:24:40.110
+The much better strategy is to actually build up a tolerance to those positions
+
+00:24:40.110 --> 00:24:43.845
+so that when they do inevitably occur in life, they're not a problem.
+
+00:24:44.060 --> 00:24:46.950
+And so that's what we would do for any other body part.
+
+00:24:46.950 --> 00:24:52.300
+If you're rehabbing an ACL in the knee and you want to prevent that from re-injuring, what do you do?
+
+00:24:52.300 --> 00:24:54.930
+You build up a tolerance to the previously injurious stimuli.
+
+00:24:54.930 --> 00:24:59.720
+So you have to eventually be able to do direction change in weird angles and
+
+00:24:59.720 --> 00:25:02.021
+positions and rotation of the knee.
+
+00:25:03.221 --> 00:25:06.966
+Under load at speed. Because if people want to get back to playing sport,
+
+00:25:06.966 --> 00:25:09.682
+that's going to occur on the field and they have to be able to tolerate it.
+
+00:25:09.926 --> 00:25:13.566
+And how do you get them to tolerate it? Well, you have to start with a low amount
+
+00:25:13.566 --> 00:25:17.531
+of load at a slow controlled speed and gradually, gradually over time,
+
+00:25:17.989 --> 00:25:22.928
+build up the load and the stimulus and the stress in those positions and build up the tolerance.
+
+00:25:23.241 --> 00:25:28.495
+And that, I mean, that's Rehab 101 and Rehab and Injury Prevention are the same
+
+00:25:28.646 --> 00:25:34.910
+thing because they're both about building up tissue tolerance to a potentially injurious stimulus.
+
+00:25:35.293 --> 00:25:38.961
+And rehab is just where there already has been an injury.
+
+00:25:39.327 --> 00:25:42.926
+So we want to build up a tolerance to the same exact stimulus that caused the
+
+00:25:42.926 --> 00:25:46.415
+injury so that in future, that same stimulus won't cause another injury.
+
+00:25:46.943 --> 00:25:49.826
+Whereas in injury prevention, it just hasn't happened yet.
+
+00:25:50.186 --> 00:25:56.206
+So we want to build up a tolerance to that potentially injurious stimulus before it causes an injury.
+
+00:25:56.206 --> 00:26:03.026
+But the process is exactly the same. You just gradually build up tolerance to
+
+00:26:03.026 --> 00:26:05.612
+the thing that you're worried about causing an injury.
+
+00:26:06.245 --> 00:26:11.446
+The poison is the medicine with injury prevention and with rehab, it's the same thing.
+
+00:26:12.044 --> 00:26:18.206
+All right, dear listener, keep safe, bend your spine, under load progressively,
+
+00:26:18.206 --> 00:26:22.046
+start with what you can do, keep progressing it, keep getting stronger,
+
+00:26:22.046 --> 00:26:25.644
+keep getting more awesome and I'll see you in the next one.
