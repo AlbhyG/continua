@@ -18,7 +18,7 @@ export async function sendContactPdfEmail({
   const text = [
     `Hi ${name},`,
     '',
-    `Thank you for your interest in Continua. Your requested ${attachments.length === 1 ? 'PDF is' : 'PDFs are'} attached.`,
+    'Thank you for your interest in Continua. The first chapter is attached.',
     '',
     `Your PDF password is: ${password}`,
     '',
@@ -32,7 +32,7 @@ export async function sendContactPdfEmail({
   const html = `
     <div style="font-family: Arial, sans-serif; color: #111; line-height: 1.5;">
       <p>Hi ${escapeHtml(name)},</p>
-      <p>Thank you for your interest in Continua. Your requested ${attachments.length === 1 ? 'PDF is' : 'PDFs are'} attached.</p>
+      <p>Thank you for your interest in Continua. The first chapter is attached.</p>
       <p><strong>Your PDF password is:</strong> ${escapeHtml(password)}</p>
       <p>This copy is intended for you. Please ask anyone else who is interested to register at <a href="https://continua.info">continua.info</a> for their own copy.</p>
       <p>If you would like to discuss the book or have questions, simply reply to this email.</p>
@@ -44,7 +44,7 @@ export async function sendContactPdfEmail({
     from: `Continua <${FROM_EMAIL}>`,
     to,
     replyTo: REPLY_TO_EMAIL,
-    subject: 'Your Continua PDF',
+    subject: 'Your first chapter of Continua',
     html,
     text,
     attachments: attachments.map((attachment) => ({

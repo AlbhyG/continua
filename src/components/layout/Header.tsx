@@ -77,7 +77,6 @@ const menuItemClass =
 
 type ContactFormState = {
   values: { name: string; email: string; phone: string }
-  roles: string[]
   confirmed: boolean
 }
 
@@ -90,26 +89,16 @@ function ContactForm({
   setState: React.Dispatch<React.SetStateAction<ContactFormState>>
   onSuccess: (message: string) => void
 }) {
-  const { values, roles, confirmed } = state
+  const { values, confirmed } = state
   const submitInFlight = useRef(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   const hasContact = values.email.trim() !== '' || values.phone.trim() !== ''
-  const canSubmit = values.name.trim() !== '' && hasContact && roles.length > 0 && confirmed
+  const canSubmit = values.name.trim() !== '' && hasContact && confirmed
 
   const setValues = (updater: (v: ContactFormState['values']) => ContactFormState['values']) =>
     setState((s) => ({ ...s, values: updater(s.values) }))
-
-  const toggleRole = (role: string) => {
-    setError(null)
-    setState((s) => ({
-      ...s,
-      roles: s.roles.includes(role)
-        ? s.roles.filter((r) => r !== role)
-        : [...s.roles, role],
-    }))
-  }
 
   const handleSubmit = async () => {
     if (submitInFlight.current || !canSubmit) {
@@ -123,21 +112,20 @@ function ContactForm({
         name: values.name,
         email: values.email || undefined,
         phone: values.phone || undefined,
-        roles,
       })
       if (!result.success) {
         setError(result.error || 'Something went wrong. Please try again.')
         return
       }
-      setState({ values: { name: '', email: '', phone: '' }, roles: [], confirmed: false })
+      setState({ values: { name: '', email: '', phone: '' }, confirmed: false })
       onSuccess(
         result.deliveryMethod === 'manual'
           ? result.smsSent
-            ? 'Thanks. Your information was saved, and a text with PDF access is on its way.'
+            ? 'Thanks. Your information was saved, and a text with the first chapter is on its way.'
             : 'Thanks. Your information was saved, and Albhy will follow up manually.'
           : result.smsSent
-            ? 'Thanks. Your PDF email and text access link are on their way. The PDF password is your lowercase email address.'
-            : 'Thanks. Your PDF email is on its way. The PDF password is your lowercase email address.'
+            ? 'Thanks. The first chapter is on its way by email and text. The PDF password is your lowercase email address.'
+            : 'Thanks. The first chapter is on its way by email. The PDF password is your lowercase email address.'
       )
     } finally {
       submitInFlight.current = false
@@ -147,24 +135,13 @@ function ContactForm({
 
   return (
     <div className="p-5 space-y-3">
-      <div className="space-y-2">
-        <div>
-          <p className="text-sm font-bold text-foreground">Role</p>
-          <p className="text-xs text-gray-500">Choose at least one role so we send the right PDF.</p>
-        </div>
-        {['Agent', 'Publisher', 'Therapist', 'Interested Reader'].map(
-          (role) => (
-            <label key={role} className="flex items-center gap-2.5 text-sm text-gray-700 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={roles.includes(role)}
-                onChange={() => toggleRole(role)}
-                className="rounded border-gray-300"
-              />
-              {role}
-            </label>
-          )
-        )}
+      <div>
+        <p className="text-base font-bold text-foreground">
+          Interested in reading the first chapter?
+        </p>
+        <p className="mt-1 text-xs text-gray-500">
+          Tell us where to send your password-protected copy.
+        </p>
       </div>
       <div>
         <label className="block text-sm font-medium text-foreground mb-1">Name</label>
@@ -229,7 +206,7 @@ function ContactForm({
         disabled={submitting || !canSubmit}
         className="w-full mt-2 px-4 py-2.5 rounded-lg bg-accent text-white text-sm font-semibold hover:bg-accent/90 transition-colors disabled:opacity-50 cursor-pointer"
       >
-        {submitting ? 'Sending...' : 'Contact me'}
+        {submitting ? 'Sending...' : 'Send me the first chapter'}
       </button>
       {error && (
         <p className="text-sm text-red-600" role="alert">
@@ -380,7 +357,6 @@ export default function Header() {
   const [portalReady, setPortalReady] = useState(false)
   const [contactState, setContactState] = useState<ContactFormState>({
     values: { name: '', email: '', phone: '' },
-    roles: [],
     confirmed: false,
   })
   const [contactSuccessMessage, setContactSuccessMessage] = useState<string | null>(null)

@@ -16,19 +16,11 @@ import {
 } from '@/lib/pdf/links'
 
 const CONTACT_PDF_STORAGE_PATH =
-  process.env.CONTACT_PDF_STORAGE_PATH || null
+  process.env.CONTACT_PDF_STORAGE_PATH || 'first-chapter.pdf'
 const PDF_OWNER_PASSWORD =
   process.env.PDF_OWNER_PASSWORD || 'change-this-owner-password'
-const VALID_ROLES = ['Agent', 'Publisher', 'Therapist', 'Interested Reader']
-// The Sampler goes to everyone. The Book Proposal goes only to Agents/Publishers.
-const SAMPLER_PDF = 'sampler.pdf'
-const PROPOSAL_PDF = 'proposal.pdf'
-const ROLE_PDF_PATHS: Record<string, string[]> = {
-  Agent: [SAMPLER_PDF, PROPOSAL_PDF],
-  Publisher: [SAMPLER_PDF, PROPOSAL_PDF],
-  Therapist: [SAMPLER_PDF],
-  'Interested Reader': [SAMPLER_PDF],
-}
+// Keep the legacy database field populated until interest_roles is removed.
+const CONTACT_INTEREST_ROLES = ['Interested Reader']
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://continua.info'
 
@@ -36,14 +28,13 @@ export async function getStartedAction(data: {
   name: string
   email?: string
   phone?: string
-  roles: string[]
 }): Promise<{
   success: boolean
   error?: string
   deliveryMethod?: 'email' | 'manual'
   smsSent?: boolean
 }> {
-  const { name, email, phone, roles } = data
+  const { name, email, phone } = data
 
   if (!name.trim()) {
     return { success: false, error: 'Name is required' }
@@ -51,11 +42,6 @@ export async function getStartedAction(data: {
   if (!email?.trim() && !phone?.trim()) {
     return { success: false, error: 'Email or phone is required' }
   }
-  const normalizedRoles = roles.filter((role) => VALID_ROLES.includes(role))
-  if (normalizedRoles.length === 0) {
-    return { success: false, error: 'At least one role is required' }
-  }
-
   try {
     const supabase = await createClient()
     const cleanName = name.trim()
@@ -67,7 +53,7 @@ export async function getStartedAction(data: {
       name: cleanName,
       email: cleanEmail,
       phone: cleanPhone,
-      roles: normalizedRoles,
+      roles: CONTACT_INTEREST_ROLES,
     })
 
     if (contactError) {
@@ -83,9 +69,7 @@ export async function getStartedAction(data: {
       }
     }
 
-    const filesToSend = CONTACT_PDF_STORAGE_PATH
-      ? [CONTACT_PDF_STORAGE_PATH]
-      : Array.from(new Set(normalizedRoles.flatMap((role) => ROLE_PDF_PATHS[role])))
+    const filesToSend = [CONTACT_PDF_STORAGE_PATH]
 
     if (!cleanEmail) {
       const smsResult = await sendPdfLinksSms({
@@ -101,7 +85,7 @@ export async function getStartedAction(data: {
           name: cleanName,
           email: null,
           phone: cleanPhone,
-          roles: normalizedRoles,
+          roles: CONTACT_INTEREST_ROLES,
           status: smsResult.sent
             ? 'sms_pdf_links_sent'
             : 'manual_follow_up',
@@ -116,7 +100,7 @@ export async function getStartedAction(data: {
       if (contactId) {
         await logContactDelivery(deliveryAdmin, {
           contact_id: contactId,
-          roles: normalizedRoles,
+          roles: CONTACT_INTEREST_ROLES,
           delivery_method: 'manual',
           status: smsResult.sent ? 'sent' : 'manual_follow_up',
           recipient_email: null,
@@ -179,7 +163,7 @@ export async function getStartedAction(data: {
           name: cleanName,
           email: cleanEmail,
           phone: cleanPhone,
-          roles: normalizedRoles,
+          roles: CONTACT_INTEREST_ROLES,
           status: smsResult.sent ? 'sent_sms_sent' : 'sent',
           filesSent: filesToSend,
           error: smsResult.error ?? undefined,
@@ -192,7 +176,7 @@ export async function getStartedAction(data: {
       if (contactId) {
         await logContactDelivery(deliveryAdmin, {
           contact_id: contactId,
-          roles: normalizedRoles,
+          roles: CONTACT_INTEREST_ROLES,
           delivery_method: 'email',
           status: 'sent',
           recipient_email: cleanEmail,
@@ -212,7 +196,7 @@ export async function getStartedAction(data: {
       if (contactId) {
         await logContactDelivery(deliveryAdmin, {
           contact_id: contactId,
-          roles: normalizedRoles,
+          roles: CONTACT_INTEREST_ROLES,
           delivery_method: 'email',
           status: 'error',
           recipient_email: cleanEmail,
@@ -227,7 +211,7 @@ export async function getStartedAction(data: {
           name: cleanName,
           email: cleanEmail,
           phone: cleanPhone,
-          roles: normalizedRoles,
+          roles: CONTACT_INTEREST_ROLES,
           status: 'error',
           filesSent: [],
           error: message,

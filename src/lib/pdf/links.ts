@@ -20,5 +20,5 @@ export function derivePdfPassword(
 }
 
 export function bookLabel(filePath: string): string {
-  return filePath.replace(/\.pdf$/i, '')
+  return filePath.replace(/\.pdf$/i, '').replace(/[-_]+/g, ' ')
 }
