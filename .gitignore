@@ -38,5 +38,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# claude code local runtime state
+# claude code local runtime state / personal skills (not shared with the repo)
 .claude/scheduled_tasks.lock
+.claude/skills/
