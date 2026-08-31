@@ -6,6 +6,7 @@ import {
   averageLatestGroupScores,
   type GroupResultInput,
 } from '@/lib/quiz/group-scoring'
+import type { AxisScores } from '@/lib/quiz/scoring'
 
 export const metadata: Metadata = {
   title: 'Group Profile',
@@ -19,6 +20,10 @@ type PersonRow = {
   id: string
   name: string
   is_self: boolean
+}
+
+type ResultRow = GroupResultInput & {
+  id: number
 }
 
 export default async function GroupPage({
@@ -57,7 +62,7 @@ export default async function GroupPage({
     memberIds.length
       ? supabase
           .from('quiz_results')
-          .select('person_id,scores,taken_at')
+          .select('id,person_id,scores,taken_at')
           .in('person_id', memberIds)
           .order('taken_at', { ascending: false })
       : Promise.resolve({ data: [] }),
@@ -68,13 +73,25 @@ export default async function GroupPage({
     (resultsData ?? []) as GroupResultInput[]
   )
   const assessed = new Set(assessedMemberIds)
+  const latestByPerson = new Map<string, ResultRow>()
+  for (const result of (resultsData ?? []) as ResultRow[]) {
+    if (!latestByPerson.has(result.person_id)) {
+      latestByPerson.set(result.person_id, result)
+    }
+  }
   const members = ((peopleData ?? []) as PersonRow[])
-    .map((person) => ({
-      id: person.id,
-      name: person.name,
-      isSelf: person.is_self,
-      assessed: assessed.has(person.id),
-    }))
+    .map((person) => {
+      const latest = latestByPerson.get(person.id)
+      return {
+        id: person.id,
+        name: person.name,
+        isSelf: person.is_self,
+        assessed: assessed.has(person.id),
+        resultId: latest?.id ?? null,
+        scores: (latest?.scores as AxisScores | null | undefined) ?? null,
+        takenAt: latest?.taken_at ?? null,
+      }
+    })
     .sort((a, b) => Number(b.isSelf) - Number(a.isSelf) || a.name.localeCompare(b.name))
 
   return (
