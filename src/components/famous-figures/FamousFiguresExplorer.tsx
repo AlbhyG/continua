@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import {
   FAMOUS_FIGURE_CATEGORIES,
   groupFamousFiguresByCategory,
@@ -96,6 +97,14 @@ export default function FamousFiguresExplorer({ profiles }: { profiles: FamousFi
             {/* Orb */}
             <div className="flex justify-center my-4">
               <PersonalityOrb data={scoresToOrbData(selected.scores)} size={240} />
+            </div>
+            <div className="text-center">
+              <Link
+                href="/orb-demo"
+                className="text-sm font-semibold text-accent underline decoration-accent/30 underline-offset-4 transition hover:decoration-accent"
+              >
+                Open in the full Orb Generator →
+              </Link>
             </div>
 
             {/* Axis scores */}

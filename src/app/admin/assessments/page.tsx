@@ -122,6 +122,12 @@ export default async function AdminAssessmentsPage({ searchParams }: PageProps) 
           </div>
           <div className="flex items-center gap-2">
             <Link
+              href="/admin/users"
+              className="h-9 rounded border border-gray-300 bg-white px-3 py-2 text-sm font-semibold"
+            >
+              Users
+            </Link>
+            <Link
               href="/admin/contacts"
               className="h-9 rounded border border-gray-300 bg-white px-3 py-2 text-sm font-semibold"
             >

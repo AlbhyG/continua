@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import ProfileForm from './profile-form'
+import DeleteAssessmentButton from './delete-assessment-button'
 import { requireUser } from '@/lib/auth/current-user'
 import HistoryChart from '@/components/quiz/HistoryChart'
 import { AXIS_INFO, type AxisScores } from '@/lib/quiz/scoring'
 
 export const metadata: Metadata = {
   title: 'My Info',
-  description: 'Manage your Continua profile and assessment history.',
+  description: 'Review your Continua assessment history.',
 }
 
 type QuizResult = {
@@ -22,12 +22,8 @@ const AXES = Object.keys(AXIS_INFO) as Array<keyof AxisScores>
 
 export default async function MyInfoPage() {
   const { supabase, user } = await requireUser('/my-info')
-  const [{ data: profile }, { data: selfPerson }] = await Promise.all([
-    supabase
-      .from('contacts')
-      .select('name,email,phone,interest_roles')
-      .eq('user_id', user.id)
-      .single(),
+  const [{ data: showWelcome, error: welcomeError }, { data: selfPerson }] = await Promise.all([
+    supabase.rpc('consume_first_login_welcome'),
     supabase
       .from('people')
       .select('id')
@@ -35,6 +31,9 @@ export default async function MyInfoPage() {
       .eq('is_self', true)
       .single(),
   ])
+  if (welcomeError) {
+    console.error('Could not record first-login welcome:', welcomeError.message)
+  }
   const { data: results } = selfPerson
     ? await supabase
       .from('quiz_results')
@@ -54,8 +53,7 @@ export default async function MyInfoPage() {
           </p>
           <h1 className="mt-2 text-4xl font-bold text-white md:text-5xl">My Info</h1>
           <p className="mt-3 max-w-2xl text-lg text-white/80">
-            Keep your contact information current and return to the personality
-            snapshots you’ve taken over time.
+            Return to the personality snapshots you’ve taken over time.
           </p>
         </div>
         <form action="/auth/signout" method="post">
@@ -68,24 +66,13 @@ export default async function MyInfoPage() {
         </form>
       </div>
 
-      <section className="glass-card mt-8 p-6 md:p-8">
-        <h2 className="text-2xl font-bold">Profile</h2>
-        <p className="mt-1 text-sm text-foreground/65">
-          This is the information Continua stores for your account.
+      {showWelcome && (
+        <p className="glass-card mt-8 p-4 text-center font-semibold text-foreground/80">
+          Welcome to Continua — your assessment history and tools are ready below.
         </p>
-        <div className="mt-6">
-          <ProfileForm
-            profile={{
-              name: profile?.name ?? user.user_metadata.name ?? '',
-              email: profile?.email ?? user.email ?? '',
-              phone: profile?.phone ?? '',
-              roles: profile?.interest_roles ?? [],
-            }}
-          />
-        </div>
-      </section>
+      )}
 
-      <section className="mt-8">
+      <section className={showWelcome ? 'mt-5' : 'mt-8'}>
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
             <h2 className="text-2xl font-bold text-white">Assessment history</h2>
@@ -130,11 +117,8 @@ export default async function MyInfoPage() {
                 const scores = result.scores ?? { empathy: result.score }
 
                 return (
-                  <Link
-                    key={result.id}
-                    href={`/quiz/results/${result.id}`}
-                    className="glass-card-interactive block p-5"
-                  >
+                  <article key={result.id} className="glass-card-interactive p-5">
+                    <Link href={`/quiz/results/${result.id}`} className="block">
                     <div className="flex items-start justify-between gap-4">
                       <p className="text-xs font-bold uppercase tracking-wide text-foreground/45">
                         Assessment {result.questionnaire_id}
@@ -164,7 +148,11 @@ export default async function MyInfoPage() {
                         Legacy result — empathy score only
                       </p>
                     )}
-                  </Link>
+                    </Link>
+                    <div className="mt-3 flex justify-end border-t border-foreground/10 pt-2">
+                      <DeleteAssessmentButton resultId={result.id} />
+                    </div>
+                  </article>
                 )
               })}
             </div>

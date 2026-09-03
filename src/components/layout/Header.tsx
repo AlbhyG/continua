@@ -340,6 +340,13 @@ function MobileMenu({
           >
             About
           </Link>
+          <Link
+            href="/orb-demo"
+            onClick={onClose}
+            className="mt-5 text-xs font-semibold text-foreground/60 uppercase tracking-wider block hover:text-foreground transition-colors"
+          >
+            Orb Generator
+          </Link>
           <div className="mt-8">
             <AccountButton mobile onNavigate={onClose} />
           </div>
@@ -474,6 +481,10 @@ export default function Header() {
 
             <Link href="/about" className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
               About
+            </Link>
+
+            <Link href="/orb-demo" className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
+              Orb Generator
             </Link>
 
             <AccountButton />
