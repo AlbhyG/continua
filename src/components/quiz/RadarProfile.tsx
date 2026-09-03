@@ -25,19 +25,22 @@ interface Pole {
 }
 
 const POLES: Pole[] = [
-  { short: "High Empathy",    color: "#fcf050", axis: "empathy",           isHigh: true  },
-  { short: "Altruistic",      color: "#abc854", axis: "self_orientation",  isHigh: false },
-  { short: "Hyper-Attuned",   color: "#4ba454", axis: "social_attunement", isHigh: true  },
+  { short: "Hyper-Attuned",   color: "#fcf050", axis: "social_attunement", isHigh: true  },
+  { short: "High Empathy",    color: "#abc854", axis: "empathy",           isHigh: true  },
+  { short: "Altruistic",      color: "#4ba454", axis: "self_orientation",  isHigh: false },
   { short: "Conscientious",   color: "#49a297", axis: "conscientiousness", isHigh: true  },
   { short: "Yielding",        color: "#4ba6d2", axis: "agency",            isHigh: false },
   { short: "Low Reactivity",  color: "#2b65a0", axis: "reactivity",        isHigh: false },
-  { short: "Detached",        color: "#41377b", axis: "empathy",           isHigh: false },
-  { short: "Self-Focused",    color: "#68397c", axis: "self_orientation",  isHigh: true  },
-  { short: "Hypo-Attuned",    color: "#933160", axis: "social_attunement", isHigh: false },
+  { short: "Hypo-Attuned",    color: "#41377b", axis: "social_attunement", isHigh: false },
+  { short: "Detached",        color: "#68397c", axis: "empathy",           isHigh: false },
+  { short: "Self-Focused",    color: "#933160", axis: "self_orientation",  isHigh: true  },
   { short: "Spontaneous",     color: "#da1070", axis: "conscientiousness", isHigh: false },
   { short: "Agentic",         color: "#c13732", axis: "agency",            isHigh: true  },
   { short: "Highly Reactive", color: "#d16539", axis: "reactivity",        isHigh: true  },
 ];
+// NOTE: array order intentionally mirrors clock position (index 0 = 12 o'clock,
+// index 1 = 1 o'clock, ...). Colors were NOT moved — only which axis/label
+// each fixed color position represents was changed, per the book-order fix.
 
 const MAX_R = 132;
 const LABEL_R = MAX_R + 14;

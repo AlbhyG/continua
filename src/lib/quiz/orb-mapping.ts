@@ -18,17 +18,17 @@ export function scoresToOrbData(scores: Partial<AxisScores>): OrbData {
   const r = scores.reactivity ?? 5.5;
 
   return {
-    yellow: e,            // High Empathy
-    navy: 11 - e,         // Low Empathy (Detachment)
-    indigo: s,            // Self-Focused (high end of self-orientation)
-    chartreuse: 11 - s,   // Altruistic (low end)
-    lime: a,              // Hyper-Socially Attuned
-    violet: 11 - a,       // Hypo-Socially Attuned
-    emerald: c,           // Conscientious
-    magenta: 11 - c,      // Impulsive / Spontaneous
-    red: ag,              // Agentic / Dominant
-    teal: 11 - ag,        // Yielding / Submissive
-    orange: r,            // High Reactivity
-    blue: 11 - r,         // Low Reactivity
+    yellow: a,             // Hyper-Socially Attuned
+    navy: 11 - a,          // Hypo-Socially Attuned
+    chartreuse: e,         // High Empathy
+    indigo: 11 - e,        // Low Empathy (Detachment)
+    lime: 11 - s,          // Altruistic (low end of self-orientation)
+    violet: s,             // Self-Focused (high end of self-orientation)
+    emerald: c,            // Conscientious
+    magenta: 11 - c,       // Impulsive / Spontaneous
+    red: ag,               // Agentic / Dominant
+    teal: 11 - ag,         // Yielding / Submissive
+    orange: r,             // High Reactivity
+    blue: 11 - r,          // Low Reactivity
   };
 }

@@ -17,9 +17,9 @@ export interface Questionnaire {
 }
 
 export interface AxisScores {
+  social_attunement: number;
   empathy: number;
   self_orientation: number;
-  social_attunement: number;
   conscientiousness: number;
   agency: number;
   reactivity: number;
@@ -60,7 +60,7 @@ function scaleToTen(rawScores: number[]): number {
 
 export function calculateScores(answers: number[], questions: Question[]): AxisScores {
   const buckets: Record<keyof AxisScores, number[]> = {
-    empathy: [], self_orientation: [], social_attunement: [],
+    social_attunement: [], empathy: [], self_orientation: [],
     conscientiousness: [], agency: [], reactivity: [],
   };
 
@@ -70,9 +70,9 @@ export function calculateScores(answers: number[], questions: Question[]): AxisS
   });
 
   return {
+    social_attunement: scaleToTen(buckets.social_attunement),
     empathy: scaleToTen(buckets.empathy),
     self_orientation: scaleToTen(buckets.self_orientation),
-    social_attunement: scaleToTen(buckets.social_attunement),
     conscientiousness: scaleToTen(buckets.conscientiousness),
     agency: scaleToTen(buckets.agency),
     reactivity: scaleToTen(buckets.reactivity),
@@ -86,9 +86,9 @@ export function calculateScore(answers: number[], questions: Question[]): number
 }
 
 export const AXIS_INFO: Record<keyof AxisScores, { name: string; highLabel: string; lowLabel: string }> = {
+  social_attunement: { name: "Social Attunement",        highLabel: "Hyper-Attuned",          lowLabel: "Hypo-Attuned" },
   empathy:           { name: "Empathy–Detachment",      highLabel: "Highly Empathic",       lowLabel: "Detached / Analytical" },
   self_orientation:  { name: "Self-Orientation",         highLabel: "Self-Focused / Ambitious", lowLabel: "Altruistic / Self-Transcendent" },
-  social_attunement: { name: "Social Attunement",        highLabel: "Hyper-Attuned",          lowLabel: "Hypo-Attuned" },
   conscientiousness: { name: "Conscientiousness",        highLabel: "Highly Conscientious",   lowLabel: "Spontaneous" },
   agency:            { name: "Agency",                   highLabel: "Agentic / Assertive",    lowLabel: "Yielding / Accommodating" },
   reactivity:        { name: "Reactivity",               highLabel: "Highly Reactive",        lowLabel: "Low Reactivity" },

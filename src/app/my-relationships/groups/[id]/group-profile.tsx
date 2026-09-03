@@ -15,14 +15,7 @@ const RadarProfile = dynamic(() => import('@/components/quiz/RadarProfile'), {
   loading: () => <div className="h-[350px]" />,
 })
 
-const AXES: Array<keyof AxisScores> = [
-  'empathy',
-  'self_orientation',
-  'social_attunement',
-  'conscientiousness',
-  'agency',
-  'reactivity',
-]
+const AXES = Object.keys(AXIS_INFO) as Array<keyof AxisScores>
 
 export default function GroupProfile({
   group,

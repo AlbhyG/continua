@@ -15,12 +15,12 @@ interface SliderValues {
 
 function toOrbData(s: SliderValues): OrbData {
   return {
-    yellow: s.empathy,
-    navy: 10 - s.empathy,
-    chartreuse: s.altruism,
-    indigo: 10 - s.altruism,
-    lime: s.attunement,
-    violet: 10 - s.attunement,
+    yellow: s.attunement,
+    navy: 10 - s.attunement,
+    chartreuse: s.empathy,
+    indigo: 10 - s.empathy,
+    lime: s.altruism,
+    violet: 10 - s.altruism,
     emerald: s.conscientiousness,
     magenta: 10 - s.conscientiousness,
     red: s.dominance,
@@ -32,9 +32,9 @@ function toOrbData(s: SliderValues): OrbData {
 
 function toAxisResults(s: SliderValues) {
   return [
+    { axis: 'social_attunement', name: 'Social Attunement',  score: s.attunement,        label: '', highLabel: 'Hyper-Attuned',    lowLabel: 'Hypo-Attuned' },
     { axis: 'empathy',           name: 'Empathy–Detachment', score: s.empathy,           label: '', highLabel: 'Highly Empathic',  lowLabel: 'Detached' },
     { axis: 'self_orientation',  name: 'Self-Orientation',   score: 10 - s.altruism,     label: '', highLabel: 'Self-Focused',     lowLabel: 'Altruistic' },
-    { axis: 'social_attunement', name: 'Social Attunement',  score: s.attunement,        label: '', highLabel: 'Hyper-Attuned',    lowLabel: 'Hypo-Attuned' },
     { axis: 'conscientiousness', name: 'Conscientiousness',  score: s.conscientiousness, label: '', highLabel: 'Conscientious',    lowLabel: 'Spontaneous' },
     { axis: 'agency',            name: 'Agency',             score: s.dominance,         label: '', highLabel: 'Agentic',          lowLabel: 'Yielding' },
     { axis: 'reactivity',        name: 'Reactivity',         score: s.reactivity,        label: '', highLabel: 'Highly Reactive',  lowLabel: 'Low Reactivity' },
@@ -70,23 +70,23 @@ const PRESETS: Record<string, SliderValues> = {
 
 const AXES = [
   {
+    key: 'attunement' as const,
+    lowLabel: 'Hypo-Socially Attuned',
+    highLabel: 'Hyper-Socially Attuned',
+    lowColor: '#41377B',
+    highColor: '#FCF050',
+  },
+  {
     key: 'empathy' as const,
     lowLabel: 'Low Empathy / Callousness',
     highLabel: 'High Empathy / Compassion',
-    lowColor: '#41377B',
-    highColor: '#FCF050',
+    lowColor: '#68397C',
+    highColor: '#ABC854',
   },
   {
     key: 'altruism' as const,
     lowLabel: 'Self-Focused / Narcissistic',
     highLabel: 'Altruistic / Self-Transcendent',
-    lowColor: '#68397C',
-    highColor: '#ABC854',
-  },
-  {
-    key: 'attunement' as const,
-    lowLabel: 'Hypo-Socially Attuned',
-    highLabel: 'Hyper-Socially Attuned',
     lowColor: '#933160',
     highColor: '#4BA454',
   },
