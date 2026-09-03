@@ -20,9 +20,9 @@ const PersonalityOrb = dynamic(() => import("@/components/PersonalityOrb"), {
 });
 
 const AXIS_LABELS: Array<{ key: keyof AxisScores; name: string; lowLabel: string; highLabel: string }> = [
+  { key: "social_attunement", name: "Social Attunement", lowLabel: "Hypo-Attuned", highLabel: "Hyper-Attuned" },
   { key: "empathy", name: "Empathy", lowLabel: "Detached", highLabel: "Highly Empathic" },
   { key: "self_orientation", name: "Self-Orientation", lowLabel: "Altruistic", highLabel: "Self-Focused" },
-  { key: "social_attunement", name: "Social Attunement", lowLabel: "Hypo-Attuned", highLabel: "Hyper-Attuned" },
   { key: "conscientiousness", name: "Conscientiousness", lowLabel: "Spontaneous", highLabel: "Conscientious" },
   { key: "agency", name: "Agency", lowLabel: "Yielding", highLabel: "Agentic" },
   { key: "reactivity", name: "Reactivity", lowLabel: "Low Reactivity", highLabel: "Highly Reactive" },

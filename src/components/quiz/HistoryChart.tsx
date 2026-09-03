@@ -20,19 +20,12 @@ interface HistoryEntry {
   taken_at: string;
 }
 
-const AXES: Array<keyof AxisScores> = [
-  "empathy",
-  "self_orientation",
-  "social_attunement",
-  "conscientiousness",
-  "agency",
-  "reactivity",
-];
+const AXES = Object.keys(AXIS_INFO) as Array<keyof AxisScores>;
 
 const COLORS: Record<keyof AxisScores, string> = {
-  empathy: "#41377b",
+  social_attunement: "#fcf050",
+  empathy: "#abc854",
   self_orientation: "#933160",
-  social_attunement: "#4ba454",
   conscientiousness: "#14877c",
   agency: "#c13732",
   reactivity: "#d16539",
