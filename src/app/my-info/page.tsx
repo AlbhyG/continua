@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import DeleteAssessmentButton from './delete-assessment-button'
+import PasskeySettings from './passkey-settings'
 import { requireUser } from '@/lib/auth/current-user'
 import HistoryChart from '@/components/quiz/HistoryChart'
 import { AXIS_INFO, type AxisScores } from '@/lib/quiz/scoring'
@@ -72,7 +73,9 @@ export default async function MyInfoPage() {
         </p>
       )}
 
-      <section className={showWelcome ? 'mt-5' : 'mt-8'}>
+      <PasskeySettings />
+
+      <section className="mt-8">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
             <h2 className="text-2xl font-bold text-white">Assessment history</h2>

@@ -35,8 +35,8 @@ export default async function LoginPage({
           Sign in or create an account
         </h1>
         <p className="mt-3 text-foreground/70">
-          Enter your email and we’ll send you a secure sign-in link. No password
-          to remember.
+          Use a saved passkey, or enter your email for a secure sign-in link.
+          First time here? Start with email. No password to remember.
         </p>
         <LoginForm
           nextPath={nextPath}

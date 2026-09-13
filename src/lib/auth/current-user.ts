@@ -32,7 +32,7 @@ export async function requireUser(returnTo: string) {
 }
 
 export function safeNextPath(value: string | null, fallback = '/my-info') {
-  if (!value || !value.startsWith('/') || value.startsWith('//')) {
+  if (!value || !value.startsWith('/') || value.startsWith('//') || /[\\\x00-\x1f\x7f]/.test(value)) {
     return fallback
   }
   return value
