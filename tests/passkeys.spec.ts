@@ -48,7 +48,7 @@ test('live passkey lifecycle and email recovery on both production origins', asy
 
     // Already-enrolled authenticator must not create a duplicate credential.
     await page.getByRole('button', { name: 'Add a passkey', exact: true }).click()
-    await expect(page.getByRole('alert')).toContainText('already registered')
+    await expect(page.getByRole('alert').filter({ hasText: 'already registered' })).toBeVisible()
 
     for (const origin of ['https://continua.info', 'https://www.continua.info']) {
       await context.clearCookies()
@@ -64,7 +64,7 @@ test('live passkey lifecycle and email recovery on both production origins', asy
     await page.goto('https://continua.info/login')
     await page.getByRole('button', { name: 'Sign in with a passkey', exact: true }).click()
     await page.getByRole('button', { name: 'Cancel passkey request' }).click()
-    await expect(page.getByRole('alert')).toContainText('cancelled or timed out')
+    await expect(page.getByRole('alert').filter({ hasText: 'cancelled or timed out' })).toBeVisible()
     await expect(page.getByRole('button', { name: 'Email me a sign-in link' })).toBeEnabled()
     await cdp.send('WebAuthn.setAutomaticPresenceSimulation', { authenticatorId, enabled: true })
 

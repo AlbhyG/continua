@@ -22,6 +22,10 @@ My Info lists, renames, and removes passkeys. Removing the final passkey leaves 
 
 Verify registration, discoverable sign-in, shared RP behavior on both origins, cancellation, duplicate registration, rename, removal, and email recovery. A virtual authenticator verifies the cryptographic flow; biometric UI and password-manager synchronization still depend on the user's browser/device.
 
+On September 13, 2026, `tests/passkeys.spec.ts` passed against the live site with a Chromium virtual authenticator and a temporary confirmed account: enrollment, rename, duplicate detection, sign-in on both origins, cancellation, removal of the last passkey, actual email-token recovery, and unsupported-browser fallback. Email recovery used a generated/verified token without sending test mail. The test removes its account and CRM row in cleanup.
+
+To repeat, provide `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, and `SUPABASE_SERVICE_ROLE_KEY` securely in the process environment, install the matching Playwright Chromium (`npx playwright install chromium`), then run `RUN_LIVE_PASSKEY_TEST=1 npx playwright test tests/passkeys.spec.ts --workers=1`. The test skips by default because it creates temporary records in the real project. Do not enable tracing or print session/cookie values.
+
 ## Operations
 
 Supabase **Authentication → Passkeys** controls the backend feature. If unavailable, email sign-in remains functional. To revoke a lost credential, the user can sign in by email and remove it in My Info. Never put the Supabase service-role key or Management API token in the browser.
