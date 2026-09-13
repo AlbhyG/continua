@@ -1,0 +1,56 @@
+[
+  {
+    "axis": "Social Attunement",
+    "count": 600,
+    "unique": 600,
+    "poles": {
+      "hyper-attuned": 302,
+      "hypo-attuned": 298
+    }
+  },
+  {
+    "axis": "Empathy–Detachment",
+    "count": 600,
+    "unique": 600,
+    "poles": {
+      "empathy": 300,
+      "detachment": 300
+    }
+  },
+  {
+    "axis": "Self-Orientation",
+    "count": 600,
+    "unique": 600,
+    "poles": {
+      "altruism": 300,
+      "self-focus": 300
+    }
+  },
+  {
+    "axis": "Conscientiousness",
+    "count": 600,
+    "unique": 600,
+    "poles": {
+      "conscientious": 300,
+      "spontaneous": 300
+    }
+  },
+  {
+    "axis": "Agency",
+    "count": 600,
+    "unique": 600,
+    "poles": {
+      "agentic": 300,
+      "yielding": 300
+    }
+  },
+  {
+    "axis": "Reactivity",
+    "count": 600,
+    "unique": 600,
+    "poles": {
+      "high-reactive": 301,
+      "low-reactive": 299
+    }
+  }
+]
