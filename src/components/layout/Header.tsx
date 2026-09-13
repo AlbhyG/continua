@@ -404,7 +404,7 @@ export default function Header() {
               />
             </Link>
             <button
-              className="md:hidden p-2 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
+              className="lg:hidden p-2 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open menu"
             >
@@ -413,7 +413,7 @@ export default function Header() {
           </div>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-5 lg:gap-7">
+          <nav className="hidden lg:flex items-center gap-4">
             {/* Info — clickable link with dropdown */}
             <Menu>
               <div className="flex items-center gap-0">
@@ -489,10 +489,10 @@ export default function Header() {
 
             <AccountButton />
 
-            {/* Contact me (desktop) */}
+            {/* First-chapter request (desktop) */}
             <Popover className="relative">
-              <PopoverButton className="bg-accent text-white rounded-full px-5 py-2 text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer ring-1 ring-accent/30">
-                Contact me
+              <PopoverButton className="whitespace-nowrap bg-accent text-white rounded-full px-5 py-2 text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer ring-1 ring-accent/30">
+                Get the First Chapter
               </PopoverButton>
               {portalReady && (
                 <Portal>
@@ -517,11 +517,11 @@ export default function Header() {
             </Popover>
           </nav>
 
-          {/* Mobile Contact me */}
-          <div className="md:hidden">
+          {/* First-chapter request (mobile/tablet) */}
+          <div className="lg:hidden">
             <Popover className="relative">
-              <PopoverButton className="bg-accent text-white rounded-full px-4 py-1.5 text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer ring-1 ring-accent/30">
-                Contact me
+              <PopoverButton className="max-w-[155px] bg-accent text-white rounded-full px-3 py-1.5 text-xs sm:text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer ring-1 ring-accent/30">
+                Get the First Chapter
               </PopoverButton>
               {portalReady && (
                 <Portal>
