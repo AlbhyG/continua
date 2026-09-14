@@ -5,6 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { scoresToOrbData } from "@/lib/quiz/orb-mapping";
+import AssessmentLimitations from "@/components/AssessmentLimitations";
 
 const RadarProfile = dynamic(
   () => import("@/components/quiz/RadarProfile"),
@@ -114,6 +115,7 @@ export default function QuizResultsPage() {
       </p>
 
       {/* Personality Orb */}
+      <div className="mt-6"><AssessmentLimitations /></div>
       <div className="mt-8 flex justify-center">
         <PersonalityOrb data={orbData} size={280} />
       </div>

@@ -3,6 +3,7 @@
 import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { v4 as uuidv4 } from "uuid";
+import AssessmentLimitations from "@/components/AssessmentLimitations";
 
 function QuizLandingContent() {
   const router = useRouter();
@@ -79,10 +80,12 @@ function QuizLandingContent() {
         Start Assessment
       </button>
 
-      <p className="max-w-md text-sm text-foreground/50">
-        This assessment is for self-exploration only and is not a clinical
-        diagnostic tool. Signed-in results are saved to your Continua account.
-      </p>
+      <div className="max-w-md space-y-4">
+        <AssessmentLimitations />
+        <p className="text-sm text-foreground">
+          Signed-in results are saved to your Continua account.
+        </p>
+      </div>
     </div>
   );
 }
