@@ -58,7 +58,7 @@ export default function RootLayout({
           {children}
         </div>
         <footer className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 py-8">
-          <nav aria-label="Site information" className="mb-4 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm font-semibold text-foreground">
+          <nav aria-label="Site information" className="mx-auto mb-4 flex w-fit flex-wrap justify-center gap-x-6 gap-y-3 rounded-lg bg-white/90 px-4 py-3 text-sm font-semibold text-foreground">
             <Link href="/methodology" className="underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Methodology &amp; Limitations</Link>
             <Link href="/privacy" className="underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Privacy policy</Link>
           </nav>
