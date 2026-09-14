@@ -21,6 +21,7 @@ import {
 } from '@headlessui/react'
 import { getStartedAction } from '@/app/actions/get-started'
 import AccountButton from '@/components/auth/AccountButton'
+import ContactInquiry from '@/components/ContactInquiry'
 
 function ChevronDown({ className }: { className?: string }) {
   return (
@@ -391,7 +392,7 @@ export default function Header() {
   return (
     <>
       <header className="fixed top-0 inset-x-0 z-50 bg-white/70 backdrop-blur-xl border-b border-white/30">
-        <div className="max-w-[720px] lg:max-w-[960px] mx-auto px-4 py-3 flex items-center justify-between">
+        <div className="max-w-[720px] xl:max-w-[1120px] mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo + mobile hamburger */}
           <div className="flex items-center gap-3">
             <Link href="/">
@@ -404,7 +405,7 @@ export default function Header() {
               />
             </Link>
             <button
-              className="lg:hidden p-2 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
+              className="xl:hidden p-2 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open menu"
             >
@@ -413,7 +414,7 @@ export default function Header() {
           </div>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-4">
+          <nav className="hidden xl:flex items-center gap-4">
             {/* Info — clickable link with dropdown */}
             <Menu>
               <div className="flex items-center gap-0">
@@ -515,10 +516,11 @@ export default function Header() {
                 )}
               </PopoverPanel>
             </Popover>
+            <ContactInquiry />
           </nav>
 
           {/* First-chapter request (mobile/tablet) */}
-          <div className="lg:hidden">
+          <div className="xl:hidden flex flex-col items-end gap-1">
             <Popover className="relative">
               <PopoverButton className="max-w-[155px] bg-accent text-white rounded-full px-3 py-1.5 text-xs sm:text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer ring-1 ring-accent/30">
                 Get the First Chapter
@@ -544,6 +546,7 @@ export default function Header() {
                 )}
               </PopoverPanel>
             </Popover>
+            <ContactInquiry compact />
           </div>
         </div>
       </header>

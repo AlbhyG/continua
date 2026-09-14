@@ -22,11 +22,11 @@ Code review is not proof of production retention, provider contracts, deletion c
 | Browser continuity/storage | Anonymous token in localStorage and a one-year cookie from quiz landing; result objects in sessionStorage; authentication cookies | Explain both cookies and local/session storage. Determine clearing on logout/deletion and shared-device behavior; “anonymous” token is a persistent identifier, not proof of anonymity. |
 | Operational hosting/auth/email/SMS metadata | Vercel, Supabase, Resend, Twilio where configured; existing code and runbooks | Verify actual enabled services, logging/redaction, regions, processor contracts, retention, and access roles. Code presence is not proof every provider is active. |
 
-### Contact-form release inventory (currently pending activation)
+### Contact-form release inventory
 
 The separate inquiry form sends name, visitor email (Reply-To), and message through Resend to `contact@continua.info`, which the user reports is an alias for Albhy's mailbox. The application does not add inquiry content to the contacts table, but Resend and the receiving mailbox process/store the email. Include both in retention and deletion procedures. The recipient is fixed in code; it is not visitor-selectable.
 
-Its proposed rate limiter stores a keyed hash of the edge-provided IP, a request UUID, and last-attempt timestamp. Cleanup removes buckets older than a day **when another inquiry calls the function**—not on a guaranteed 24-hour timer. Do not promise deletion within exactly 24 hours. The migration and activation must be verified at release; this inventory is not evidence that either is already deployed.
+Its rate limiter stores a keyed hash of the edge-provided IP, a request UUID, and last-attempt timestamp. Cleanup removes buckets older than a day **when another inquiry calls the function**—not on a guaranteed 24-hour timer. Do not promise deletion within exactly 24 hours. On September 14 the user confirmed receipt at the alias; migration 00019 was applied and the production activation flag was set. PR #27 and issue #18 record subsequent deployment and live verification evidence.
 
 ### Planned, not current guarantees
 
