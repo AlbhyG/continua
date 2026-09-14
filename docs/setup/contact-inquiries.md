@@ -4,9 +4,9 @@ The existing chapter button rename has already shipped. This draft adds the sepa
 
 ## Required mailbox setup
 
-Albhy confirmed on September 13, 2026 that only `albhy@continua.info` is active. Google Workspace API credentials available to this task lack Directory administration scopes; the Admin console requires reauthentication. No alias was created.
+The user reported on September 14, 2026 that the `contact@continua.info` alias has been added. The agent did not create it. A clearly labeled message, “Continua release verification — contact alias test,” was accepted by Resend for sending to that alias on September 14. The application API key is send-only and cannot retrieve delivery events, and the available browser has no authenticated Resend dashboard session. Inbox receipt has been requested from the user; it is not yet verified. Do not equate API acceptance with inbox delivery.
 
-In the Continua domain's Google Admin console, open **Directory → Users → Albhy → User information → Alternate email addresses**, and add `contact` on `continua.info`. An alias delivers to Albhy's existing mailbox without creating another paid user. Verify the alias in the admin console and confirm receipt of a test inquiry before merging this draft, as issue #18 requires.
+The remaining mailbox gate is confirmation that the test reaches Albhy's mailbox (or an authenticated provider delivery event). Confirm receipt before merging this draft, as issue #18 requires. If the alias needs repair, use the Continua domain's Google Admin console under **Directory → Users → Albhy → User information → Alternate email addresses**. An alias delivers to the existing mailbox without creating another paid user.
 
 ## Activate after mailbox verification
 
@@ -18,3 +18,5 @@ In the Continua domain's Google Admin console, open **Directory → Users → Al
 Validation includes server-side input limits, a honeypot, rate-limit failure behavior, fixed recipient, and Resend idempotency for retries of unchanged submissions. The feature defaults to unavailable if the activation flag or required backend configuration is missing.
 
 Verified September 13, 2026: TypeScript, production build, and all three `tests/contact-inquiry.spec.ts` tests pass. The rate-limit migration, execute permissions, first-request acceptance, repeat-request denial, and cooldown expiry were tested inside a transaction against Continua and rolled back; the table's absence was confirmed afterward. The migration is not deployed.
+
+Rechecked September 14, 2026: production build passes after merging the latest requirements into this branch; the production limiter table is still absent. A browser check against a local production build with the feature disabled returned the unavailable error and preserved the entered name/message rather than claiming success. Closing the dialog returns to the site; Get the First Chapter opens its independent name/email/phone/opt-in form. This is not a substitute for a live post-activation inquiry and delivery check.
