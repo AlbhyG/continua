@@ -28,15 +28,12 @@ export default async function LoginPage({
   return (
     <main className="mx-auto flex min-h-[70vh] max-w-lg items-center px-6 py-20">
       <section className="glass-card w-full p-7 md:p-9">
-        <p className="text-xs font-bold uppercase tracking-[0.16em] text-accent">
-          Your Continua
-        </p>
-        <h1 className="mt-2 text-3xl font-bold text-foreground">
+        <h1 className="text-3xl font-bold text-foreground">
           Sign in or create an account
         </h1>
         <p className="mt-3 text-foreground/70">
-          Use a saved passkey, or enter your email for a secure sign-in link.
-          First time here? Start with email. No password to remember.
+          Start with your email. Your saved assessments stay with the same account,
+          whether you use email or a passkey. No password to remember.
         </p>
         <LoginForm
           nextPath={nextPath}

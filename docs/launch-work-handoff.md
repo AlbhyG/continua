@@ -2,6 +2,10 @@
 
 September 14, 2026. Planning handoff, not a change to the approved product scope. Read the current issue status and requirements document before starting; several decisions below are still open.
 
+## Goal scope update
+
+Shantam explicitly added issue #47 to the implementation goal on September 14, after confirming receipt of the contact-alias test. Contact-form PR #27 is merged and deployed; issue #18 is closed. Issue #47 covers email-first sign-in, optional one-time passkey setup, and verified account/history continuity. It does not authorize the AI/comparison work below or replacing admin-only access controls. See `docs/setup/passkeys.md` and the issue for release evidence.
+
 ## Bounded assignments suitable for Albhy's Codex
 
 | Package | Issues | Codex deliverable | Human input / completion gate |

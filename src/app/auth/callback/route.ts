@@ -12,7 +12,9 @@ export async function GET(request: NextRequest) {
     const { error } = await supabase.auth.exchangeCodeForSession(code)
     if (!error) {
       await supabase.rpc('ensure_current_user_records')
-      return NextResponse.redirect(new URL(nextPath, url.origin))
+      const setup = new URL('/auth/passkey-setup', url.origin)
+      setup.searchParams.set('next', nextPath)
+      return NextResponse.redirect(setup)
     }
   }
 
