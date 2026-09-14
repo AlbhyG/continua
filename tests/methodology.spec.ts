@@ -15,6 +15,9 @@ test('methodology explains current behavior and labels future safeguards honestl
   for (const width of [320, 375, 768, 1440]) {
     await page.setViewportSize({ width, height: 900 })
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
+    if (width === 375 || width === 1440) {
+      await page.screenshot({ path: `/tmp/continua-methodology-review/${width === 375 ? 'mobile' : 'desktop'}.png`, fullPage: true })
+    }
   }
 })
 
