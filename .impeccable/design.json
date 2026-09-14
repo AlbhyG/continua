@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-14T17:33:39Z",
+  "title": "Design System: Continua",
+  "extensions": {
+    "shadows": [
+      {
+        "name": "glass-card",
+        "value": "0 4px 24px rgba(0, 0, 0, 0.06)",
+        "purpose": "Resting glass-card and glass-card-interactive shadow; source: src/app/globals.css."
+      },
+      {
+        "name": "glass-card-interactive-hover",
+        "value": "0 8px 32px rgba(0, 0, 0, 0.1)",
+        "purpose": "Interactive glass-card hover shadow; source: src/app/globals.css."
+      }
+    ],
+    "motion": [
+      {
+        "name": "glass-card-interactive-transition",
+        "value": "background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease",
+        "purpose": "Existing glass-card hover transition; hover also translates Y by -2px. Source: src/app/globals.css."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "40rem" },
+      { "name": "lg", "value": "64rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Assessment limitations",
+      "kind": "custom",
+      "description": "Existing linked notice from src/components/AssessmentLimitations.tsx. Utilities expanded using node_modules/tailwindcss/theme.css; no extra hover treatment is declared in the source. Breakpoints above use that same theme, as applied by the methodology page and Header.",
+      "html": "<aside class=\"ds-assessment-limitations\" aria-label=\"Assessment limitations\"><p>This is a self-reflection tool, not therapy or a clinical assessment. It isn’t a substitute for professional mental health or relationship support.</p><a href=\"/methodology\">Methodology &amp; Limitations</a></aside>",
+      "css": ".ds-assessment-limitations { border-radius: 0.75rem; background: rgb(255 255 255 / 80%); padding: 1.25rem; font-family: var(--font-raleway, Raleway), system-ui, sans-serif; font-size: 0.875rem; font-weight: 400; line-height: 1.625; letter-spacing: -0.01em; color: var(--color-foreground, rgb(7, 7, 8)); } .ds-assessment-limitations p { margin: 0; } .ds-assessment-limitations a { display: inline-block; margin-top: 0.75rem; color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; } .ds-assessment-limitations a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }"
+    }
+  ]
+}
