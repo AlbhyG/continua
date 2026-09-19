@@ -3,7 +3,7 @@
   "sources": [
     {
       "file": "data/question-pools/axis1-empathy-detachment.json",
-      "sha256": "de41b37025a355a1cc2b100eb1aa314209ee7e3bb8d232de69238318207e9708"
+      "sha256": "101613e8d0c8aee8a841d925c0a2daa96b8a6aaeedf0e60150b25755371b0067"
     },
     {
       "file": "data/question-pools/axis2-self-orientation.json",
@@ -431,9 +431,9 @@
       "corpus": "source_pool",
       "axis": "Empathy",
       "total": 600,
-      "context_candidates": 305,
-      "conditional_only": 130,
-      "no_lexical_cue": 165
+      "context_candidates": 282,
+      "conditional_only": 129,
+      "no_lexical_cue": 189
     },
     {
       "corpus": "source_pool",

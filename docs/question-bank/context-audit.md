@@ -2,6 +2,8 @@
 
 Reviewed September 14, 2026 for issue #35 and requirements §2.6.1. Scope: all six current source pools (3,600 items) and all 100 shipped questionnaires (3,600 item occurrences). No item wording, questionnaire membership, direction, or scoring code was changed.
 
+September 19 refresh: regenerated the screening artifacts after Albhy's 66 empathy replacements and pool reordering. The table, totals, and empathy example references below describe the revised source bank. The original audit's conclusions and live-questionnaire counts remain unchanged.
+
 ## Finding
 
 **There are explicit situational/contextual items on every axis. The proposed conclusion that no existing items name contexts is not supported.** This does not establish that item-to-item variance measures contextual range. Context-specific wording is only the first check; the empirical follow-up in §2.6.1 remains necessary before claiming a single-sitting range measure.
@@ -19,14 +21,14 @@ Repeated administrations can support a descriptive observed min/max across saved
 
 | Axis | Pool candidates / 600 | Live candidates / 600 |
 |---|---:|---:|
-| Empathy | 305 | 352 |
+| Empathy | 282 | 352 |
 | Self-Orientation | 28 | 28 |
 | Social Attunement | 65 | 64 |
 | Conscientiousness | 26 | 26 |
 | Agency | 71 | 71 |
 | Reactivity | 47 | 47 |
 
-Totals: 542 source-pool candidates; 588 live-questionnaire occurrences. These are **lexical-screen counts**, not counts of validated context probes. The source and live banks are separate artifacts: source-pool pruning did not regenerate the questionnaires. Counts must not be interpreted as a change to what people have answered.
+Totals: 519 source-pool candidates; 588 live-questionnaire occurrences. These are **lexical-screen counts**, not counts of validated context probes. The source and live banks are separate artifacts: source-pool pruning did not regenerate the questionnaires. Counts must not be interpreted as a change to what people have answered.
 
 ## Manually checked examples
 
@@ -34,8 +36,8 @@ All item numbers are one-based array positions in `data/question-pools/`.
 
 | Axis / file | Item | Wording | Named situation |
 |---|---:|---|---|
-| Empathy · `axis1-empathy-detachment.json` | 3 | In a crisis, I become more effective when I set aside emotional reactions and focus on what needs to be done. | Crisis |
-| Empathy | 14 | When a friend describes a loss, I feel a strong motivation to help them recover. | Friend experiencing loss |
+| Empathy · `axis1-empathy-detachment.json` | 302 | In a crisis, I become more effective when I set aside emotional reactions and focus on what needs to be done. | Crisis |
+| Empathy | 2 | When someone shares a painful experience, the fact of their pain carries real weight in my mind. | Someone sharing a painful experience |
 | Self-Orientation · `axis2-self-orientation.json` | 315 | I would skip my own vacation to cover for a coworker dealing with a family crisis. | Coworker’s family crisis |
 | Self-Orientation | 380 | I find that spending an afternoon helping a friend move is more rewarding than spending it on my own pursuits. | Helping a friend move |
 | Social Attunement · `axis3-social-attunement.json` | 12 | I can read the atmosphere of a meeting within seconds of walking in. | Entering a meeting |

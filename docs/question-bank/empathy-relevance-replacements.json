@@ -1,0 +1,541 @@
+{
+  "source_commit": "628ae227e2943dbe3f2196c8eb58774a8330ad80",
+  "source_email": {
+    "from": "albhy@galuten.com",
+    "date": "2026-09-19",
+    "subject": "Issue 24",
+    "message_id": "1a0ba2a3c35ec1e6"
+  },
+  "removed": [
+    {
+      "text": "I feel a genuine sense of responsibility when I have the means to reduce someone's suffering.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel a deep sense of responsibility for the safety and wellbeing of those around me.",
+      "direction": "empathy"
+    },
+    {
+      "text": "When a friend describes a loss, I feel a strong motivation to help them recover.",
+      "direction": "empathy"
+    },
+    {
+      "text": "When I see suffering, I feel a moral pull to respond before I even begin to analyze the situation.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that ignoring someone's pain when I could help is a form of moral failure.",
+      "direction": "empathy"
+    },
+    {
+      "text": "When I see others in pain, I feel a moral pull to respond that outweighs my own comfort.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I often lie awake thinking about whether I did enough for someone who was struggling.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the depth of my caring for others is something I would never want to diminish.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel the strongest moral pull to help the person who is most vulnerable in a group.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I have been deeply affected by a stranger's story in a way that stayed with me for days.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that my relationships are deepened by my willingness to sit with others in their pain.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that indifference to others' suffering is a form of moral failure, regardless of the circumstances.",
+      "direction": "empathy"
+    },
+    {
+      "text": "When I witness someone being dismissed or ignored in their pain, I feel compelled to intervene on their behalf.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel a sustained motivation to help that persists long after the initial encounter with someone's suffering.",
+      "direction": "empathy"
+    },
+    {
+      "text": "When I become aware that someone is struggling, I feel a moral responsibility to offer them support.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that my life has more meaning when I am actively engaged in reducing someone else's suffering.",
+      "direction": "empathy"
+    },
+    {
+      "text": "When I hear about systemic injustice, I feel a moral imperative to contribute to change, not just to be informed.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that a world where people took each other's suffering more seriously would be fundamentally better.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that my moral compass is most engaged when I am confronted with another person's undeserved hardship.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the way I respond to the pain of others is the truest test of my character.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that every encounter with another person's suffering is an opportunity to live according to my values.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the weight I assign to others' suffering in my decision-making reflects what I truly care about.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that ignoring preventable suffering — even at a distance — is something I would struggle to justify to myself.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that a moral response to suffering requires more than understanding — it requires prioritizing action.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral pull of another person's suffering is among the most trustworthy signals I can follow.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that my moral integrity is tested most when I encounter suffering that would be easy to ignore.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that treating another person's suffering as secondary to any other consideration is a failure I take seriously.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the knowledge of preventable suffering carries a moral demand that I find difficult to set aside.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the seriousness with which I treat another's suffering is something I want to be known for.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that my response to suffering reveals something about me that no other situation can.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the weight of moral responsibility increases in direct proportion to my awareness of suffering.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral claim of someone's suffering becomes more binding the more fully I understand their situation.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral significance of another person's pain is not reduced by the number of people experiencing similar pain.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that taking suffering seriously means allowing it to influence not just how I feel but what I prioritize.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the seriousness with which I treat another's pain is the most honest expression of what I value.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the depth of moral engagement I bring to others' suffering is something I actively work to maintain.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral force of suffering is most powerful when I understand the particular circumstances of the person enduring it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that suffering, once known, generates a moral current that pulls me toward engagement regardless of competing priorities.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the degree to which I prioritize addressing suffering is the most transparent window into my real values.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the pull to respond to others' suffering is one of the few moral intuitions I trust absolutely.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral weight of another's pain should inform my priorities and decisions, not just how I feel.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral importance of addressing suffering grows clearer, not more abstract, the more carefully I consider the specifics.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral demand of suffering applies with equal force whether the person is present or distant.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the pull to respond to suffering is a form of moral awareness that I want to strengthen, not diminish.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that moral attention to suffering is the most fundamental practice through which I express my values.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral pull of suffering is an invitation to become more fully the person I aspire to be.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral significance of suffering is the anchor that keeps my ethical reasoning honest and grounded.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral weight of suffering is the basis on which all genuine ethical action is built.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the weight I assign to others' suffering is the thread that connects my daily choices to my deepest values.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that acknowledging the moral priority of suffering is what distinguishes genuine ethics from mere rule-following.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that suffering generates a moral priority that deserves to override competing concerns in most situations.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral priority of another's pain grows more compelling the longer I sit with it, not less.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the motivation to respond to suffering is the most authentic expression of my moral commitments.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral pull of suffering is the one consideration I am least willing to compromise on.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that the felt weight of another person's hardship is a form of moral evidence that deserves serious consideration.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that the felt weight of another's pain communicates something morally important that pure reasoning cannot capture.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral pull I experience in the presence of suffering is evidence of a well-functioning conscience.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the motivation to respond to others' pain is the moral impulse I am most grateful to possess.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral priority of pain is a truth I hold with more conviction as I grow older.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral priority of suffering is the insight that most clearly separates deep moral thinking from shallow moral thinking.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that the weight I give to suffering in my decisions is what makes those decisions feel morally complete.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral priority of suffering is something I understand more deeply each time I encounter it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that the felt weight of suffering is the experience that most reliably moves me from contemplation to engagement.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the weight I assign to suffering in my moral reasoning is the factor that most fundamentally defines my character.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral demand of suffering is the inner reality that gives my moral commitments their motivational force.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that the moral pull of suffering is the experience that provides the motivational foundation for my entire ethical worldview.",
+      "direction": "empathy"
+    }
+  ],
+  "added": [
+    {
+      "text": "I believe that the moral claim of someone's suffering does not weaken just because I can't see them.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that understanding the scale of a problem, in numbers, makes me more motivated to act on it, not less.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold that distance is not a valid reason to discount how much someone's suffering matters.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I would rather fund the intervention that helps the most people than the one that moves me personally.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that reading a rigorous case for why something is unjust is often what moves me to act, more than a personal story is.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think that if an argument shows I'm obligated to help, the fact that I don't feel it emotionally doesn't excuse me from acting.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to evaluate which cause deserves my time by working through the reasoning, not by which story affects me most.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that consistently keeping a promise to help someone matters more than how strongly I feel for them in the moment.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I can be fully committed to relieving someone's suffering while analyzing the problem with total clarity.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold myself to the same standard of help for a stranger I'll never meet as for someone in front of me, because the principle doesn't change with proximity.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think the strength of my obligation to help someone shouldn't depend on whether meeting them face to face would upset me.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that once I've reasoned through why a cause matters, I keep supporting it even on days I don't feel moved by it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that treating suffering as equally real whether it's near or far is a discipline worth practicing, not just a feeling to wait for.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I would allocate my limited resources based on where they'll do the most good, even if a less effective option tugs at me more.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that thinking clearly about someone's situation, rather than absorbing their distress, is what lets me actually help them well.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that if a course of action would prevent serious harm, that's reason enough to take it, regardless of how it makes me feel.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold that my duty to reduce suffering doesn't shrink just because the people affected are outside my own community.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to keep showing up for a cause I've concluded is right, independent of whether it still stirs me emotionally.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find it possible to care about someone's wellbeing as a matter of principle even when I don't feel a strong pull toward them.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that a policy's effect on people I'll never meet carries the same moral weight as its effect on people close to me.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think carefully about which of several appeals for help would actually reduce the most suffering before I respond to any of them.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that a well-reasoned account of why I should help someone is often more convincing to me than an emotional appeal.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold that consistently acting on behalf of others, even without a strong emotional pull, is a legitimate form of caring.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that failing to help someone because their suffering is abstract to me is still a failure to help.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I can commit to a cause for years on the strength of an argument, without needing to keep feeling something about it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think it's possible to take someone's pain seriously as a fact that demands a response, even without feeling it myself.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to trust a careful case for what I owe other people more than my own inconsistent emotional reactions to their situations.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe my obligation to strangers is not reduced by the fact that I am only one of many people who could help.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold that reasoning my way to caring about something is not a lesser form of caring than feeling my way there.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that once I understand exactly how my help would reduce someone's suffering, I don't need to feel their pain to act.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that treating people as statistics in an analysis doesn't stop me from treating them as people who matter when I decide what to do.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think a persuasive ethical argument can obligate me to act, whether or not it moves me emotionally.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find myself able to weigh many people's suffering against each other systematically without that making it feel less real.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold that consistency, not intensity of feeling, is the better measure of how much I actually care about a cause.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that someone's suffering matters exactly as much whether or not I happen to be the type of person it moves emotionally.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I keep a long-term commitment to a cause going through reasoned conviction, even on days the feeling is gone.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think it's a mistake to let how vividly I can imagine someone's pain determine how much I think their pain matters.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold that resource allocation decisions should follow evidence about impact, not which appeal happens to move me most.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe I have an obligation to future people whose suffering I can't feel at all, simply because it will be real when it happens.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that explaining, step by step, why an intervention would help is often what convinces me to support it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to judge whether I've done right by others based on the outcome for them, not on how strongly I felt while acting.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that a rigorous case for action deserves a response even from someone who isn't naturally sentimental.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find I can maintain full analytical composure while working on a problem I'm deeply committed to solving for others' sake.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold that my sense of duty to help doesn't require the emotional charge that other people's compassion seems to run on.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think being unmoved in the moment is compatible with being deeply committed, over years, to reducing someone's suffering.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that the right response to suffering is often to reason carefully about it rather than to sit with the feeling of it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that a well-documented account of harm is enough on its own to obligate me to respond, without needing to feel upset by it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold that scaling my help to as many people as possible is a form of care, not a substitute for it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think that treating my obligations to others as a matter of consistent principle, rather than mood, is what makes them reliable.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that acting rightly toward someone doesn't require first being emotionally affected by their situation.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that once I've worked out what fairness requires of me in a situation, I follow through even without feeling especially warm toward the people involved.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold that an argument showing a policy causes preventable harm is reason enough for me to oppose it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think my responsibility to help is the same size whether the person affected lives next door or on another continent.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that deliberately keeping some emotional distance from a problem can be what allows me to help with it effectively.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I can commit real resources to a cause purely because the case for it holds up, not because it grips me.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold that consistently prioritizing evidence over instinct, when deciding how to help, is itself a form of taking people's suffering seriously.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think it would be a moral failure to ignore a strong argument for helping someone just because I don't feel a personal connection to them.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe my obligations extend to people I will never see the faces of, because the reasoning that establishes them doesn't depend on faces.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find that I can stay reliably committed to helping others through a framework of duty, independent of how I happen to feel that day.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold that the size of a problem, measured carefully, should shape how much of my effort goes toward it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think that acting on a considered obligation, even without emotional urgency, still counts as genuinely caring.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that people who reason their way to helping strangers are not less caring than people who feel their way there.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find it possible to be moved to action by statistics and analysis alone, without a story attached to make it personal.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I hold that once I decide something is the right thing to do for someone else, I do it, whether or not it still feels urgent.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think that being consistently fair to people's competing needs, through careful reasoning, is a demanding form of care.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that discounting someone's suffering because it's inconvenient to think about is a failure of reasoning as much as of feeling.",
+      "direction": "empathy"
+    }
+  ]
+}

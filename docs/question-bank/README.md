@@ -4,7 +4,17 @@ Issue: https://github.com/AlbhyG/continua/issues/24
 
 The source bank now contains six pools of 600 unique questions each (3,600 total). Five `-b.json` files contributed 1,500 exact duplicates of text **and direction** in their main pools and were removed. All original material remains recoverable in Git at `4db0f6979b61a6ccaade787cf93c75f8b57cd270`.
 
-## Empathy selection
+## September 19 manuscript follow-up
+
+Albhy supplied a replacement pool in his “Issue 24” email after reporting a Claude review against Chapter 3. It replaces 66 empathy items with cognitive/principled wording, retains the other 234 empathy items and all 300 detachment items, and groups empathy before detachment. The supplied wording is preserved exactly.
+
+`empathy-relevance-replacements.json` records the source commit, email provenance, and exact removed/added rows. The checker validates the revised membership against that pinned source and manifest, while retaining the existing balance, lexical-tag minimums, duplicate, export, and live-questionnaire checks. `--curate` intentionally refuses to overwrite this revision.
+
+See [wording review](empathy-relevance-review.md) for remaining opposite-pole overlap and wording concerns. Albhy's manuscript review is reported evidence; the current manuscript is not bundled here and was not independently reviewed in this change. Bank-size decisions and instrument validation remain separate work under issue #24.
+
+The selection method and `empathy-selection.csv` below document the **initial curation**, before these 66 replacements. That CSV is historical provenance, not the current membership list. Apply the replacement manifest to the pinned pre-review bank to recover the revised membership.
+
+## Initial empathy selection
 
 Empathy's 1,800 unique rows were introduced together in commit `6f81988`, without batch IDs or other evidence establishing separate clean generation batches. We selected 600 across the entire source instead of assuming a batch boundary. The original wording and direction are preserved.
 
@@ -32,4 +42,4 @@ Upload `question-bank.csv` together with the **current manuscript's Chapter 1 de
 
 > Review each question against the current axis definitions. Pay special attention to distinctions among Social Attunement, Empathy, and Self-Orientation, and to cognitive versus affective pathways within the unified Empathy axis. Flag ambiguous wording, duplicated meaning, incorrect direction, and construct overlap. Return source_pool_file, question_text, disposition (keep/reword/remove), proposed wording if applicable, and a short manuscript-grounded reason. Do not infer clinical validity or change pole labels silently. Propose balanced replacements where needed to retain 600 useful items per axis, and recommend a target size based on assessment length and retake rotation.
 
-The current manuscript and that external review are not bundled here. The export is ready for the handoff; no external review is claimed. Review any resulting changes before regenerating/versioning live questionnaires.
+The current manuscript and full external review are not bundled here. Albhy reported the relevance-pass result on September 19; the prompt above remains available for further review of the documented wording concerns. Review and version any resulting assessment changes before regenerating live questionnaires.

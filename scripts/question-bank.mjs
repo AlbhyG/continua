@@ -16,6 +16,26 @@ const key = (row) => `${row.direction}\u0000${row.text}`
 const csv = (rows) => rows.map((row) => row.map((cell) => `"${String(cell).replaceAll('"', '""')}"`).join(',')).join('\r\n') + '\r\n'
 const hash = (text) => createHash('sha256').update(text).digest('hex')
 
+// The manuscript follow-up is an explicit editorial revision, not a new
+// automatic curation. Validate its exact membership against the pre-review bank.
+function verifyEmpathyRevision(rows) {
+  const revision = JSON.parse(fs.readFileSync(path.join(reportDir, 'empathy-relevance-replacements.json'), 'utf8'))
+  assert.equal(revision.source_commit, '628ae227e2943dbe3f2196c8eb58774a8330ad80')
+  const previous = JSON.parse(execFileSync('git', ['show', `${revision.source_commit}:data/question-pools/${empathyFile}`], { cwd: root, encoding: 'utf8' }))
+  const previousKeys = new Set(previous.map(key))
+  const removed = new Set(revision.removed.map(key))
+  const added = new Set(revision.added.map(key))
+  assert.equal(revision.removed.length, 66)
+  assert.equal(revision.added.length, 66)
+  assert.equal(removed.size, 66)
+  assert.equal(added.size, 66)
+  assert(revision.removed.every(row => row.direction === 'empathy' && previousKeys.has(key(row))), 'Invalid empathy removal')
+  assert(revision.added.every(row => row.direction === 'empathy' && !previousKeys.has(key(row))), 'Invalid empathy replacement')
+  const expected = new Set([...previousKeys].filter(value => !removed.has(value)).concat([...added]))
+  assert.deepEqual(new Set(rows.map(key)), expected, 'Empathy differs from the reviewed replacement manifest')
+  assert.deepEqual(rows.filter(row => row.direction === 'detachment'), previous.filter(row => row.direction === 'detachment'), 'Detachment changed')
+}
+
 // These overlapping tags are review aids, not psychometric subscales.
 const pathways = {
   affective: /\b(feel|felt|feeling|emotional|emotionally|moved|affect|affected|resonat\w*|weigh\w*|weight|carry|caring|concern)\b/i,
@@ -102,9 +122,8 @@ for (const [file, axis, labels] of axes) {
   assert.equal(rows.length, 600, file)
   assert.equal(new Set(rows.map((row) => row.text)).size, 600, `${file}: exact duplicates`)
   assert.equal(new Set(rows.map((row) => row.text.trim().toLowerCase().replace(/\s+/g, ' '))).size, 600, `${file}: normalized duplicates`)
-  const source = new Set(original(file).map(key))
-  assert(rows.every((row) => source.has(key(row))), `${file}: wording or direction changed`)
-  if (file !== empathyFile) assert.deepEqual(rows, original(file), `${file}: unexpected content change`)
+  if (file === empathyFile) verifyEmpathyRevision(rows)
+  else assert.deepEqual(rows, original(file), `${file}: unexpected content change`)
   const poles = Object.fromEntries(Object.keys(labels).map((direction) => [direction, rows.filter((row) => row.direction === direction).length]))
   for (const row of rows) {
     assert(labels[row.direction], `Unknown direction ${row.direction}`)
