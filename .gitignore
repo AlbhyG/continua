@@ -38,6 +38,12 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Full manuscript belongs in private Supabase storage, never public Git.
+/docs/manuscript/*
+!/docs/manuscript/README.md
+**/Continua_Book*.docx
+**/continua-manuscript.md
+
 # claude code local runtime state / personal skills (not shared with the repo)
 .claude/scheduled_tasks.lock
 .claude/skills/
