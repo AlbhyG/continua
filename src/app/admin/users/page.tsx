@@ -1,13 +1,12 @@
 import type { User } from '@supabase/supabase-js'
 import Link from 'next/link'
-import { hasAdminContactsSession } from '@/lib/admin/contacts-auth'
+import { getAdminStatus } from '@/lib/admin/admin-auth'
+import { AdminGate } from '../admin-gate'
 import { createAdminClient } from '@/lib/supabase/admin'
+import DeleteUserButton from './delete-user-button'
+import TestAccountPanel from './test-account-panel'
 
 export const dynamic = 'force-dynamic'
-
-type PageProps = {
-  searchParams?: Promise<{ error?: string }>
-}
 
 type ContactRow = {
   user_id: string | null
@@ -16,13 +15,10 @@ type ContactRow = {
   phone: string | null
 }
 
-export default async function AdminUsersPage({ searchParams }: PageProps) {
-  const params = searchParams ? await searchParams : {}
-  const hasSession = await hasAdminContactsSession()
-
-  if (!hasSession) {
-    return <PasswordGate showError={params.error === '1'} />
-  }
+export default async function AdminUsersPage() {
+  const adminStatus = await getAdminStatus()
+  const gate = <AdminGate status={adminStatus} next="/admin/users" />
+  if (gate) return gate
 
   const supabase = createAdminClient()
   if (!supabase) {
@@ -93,8 +89,7 @@ export default async function AdminUsersPage({ searchParams }: PageProps) {
             >
               Assessments
             </Link>
-            <form action="/admin/contacts/logout" method="post">
-              <input type="hidden" name="next" value="/admin/users" />
+            <form action="/auth/signout" method="post">
               <button
                 type="submit"
                 className="h-9 rounded border border-gray-300 bg-white px-3 text-sm font-semibold"
@@ -104,6 +99,8 @@ export default async function AdminUsersPage({ searchParams }: PageProps) {
             </form>
           </div>
         </div>
+
+        <TestAccountPanel />
 
         <p className="text-sm text-gray-600">
           {rows.length} registered {rows.length === 1 ? 'user' : 'users'}
@@ -118,6 +115,7 @@ export default async function AdminUsersPage({ searchParams }: PageProps) {
                 <th className="border-b border-gray-200 px-3 py-2">Phone</th>
                 <th className="border-b border-gray-200 px-3 py-2">Registered</th>
                 <th className="border-b border-gray-200 px-3 py-2">Last sign-in</th>
+                <th className="border-b border-gray-200 px-3 py-2">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -134,11 +132,14 @@ export default async function AdminUsersPage({ searchParams }: PageProps) {
                   <td className="whitespace-nowrap border-b border-gray-100 px-3 py-2">
                     {row.lastSignInAt ? new Date(row.lastSignInAt).toLocaleString() : 'Never'}
                   </td>
+                  <td className="whitespace-nowrap border-b border-gray-100 px-3 py-2">
+                    <DeleteUserButton userId={row.id} name={row.name} />
+                  </td>
                 </tr>
               ))}
               {rows.length === 0 && (
                 <tr>
-                  <td colSpan={5} className="px-3 py-8 text-center text-gray-500">
+                  <td colSpan={6} className="px-3 py-8 text-center text-gray-500">
                     No registered users yet.
                   </td>
                 </tr>
@@ -186,39 +187,6 @@ async function fetchAllRegisteredContacts(supabase: NonNullable<ReturnType<typeo
   }
 
   return { data, error: null }
-}
-
-function PasswordGate({ showError }: { showError: boolean }) {
-  return (
-    <main className="min-h-screen bg-gray-100 px-4 py-10 text-gray-900">
-      <div className="mx-auto max-w-sm rounded-md border border-gray-200 bg-white p-5 shadow-sm">
-        <h1 className="text-lg font-semibold">Registered User Admin</h1>
-        <form action="/admin/contacts/login" method="post" className="mt-4 space-y-3">
-          <input type="hidden" name="next" value="/admin/users" />
-          <label className="grid gap-1 text-sm font-medium">
-            Password
-            <input
-              type="password"
-              name="password"
-              className="h-10 rounded border border-gray-300 px-3"
-              autoComplete="current-password"
-            />
-          </label>
-          {showError && (
-            <p className="text-sm text-red-700" role="alert">
-              Invalid password or missing `ADMIN_CONTACTS_PASSWORD`.
-            </p>
-          )}
-          <button
-            type="submit"
-            className="h-10 rounded bg-gray-900 px-4 text-sm font-semibold text-white"
-          >
-            Sign in
-          </button>
-        </form>
-      </div>
-    </main>
-  )
 }
 
 function AdminError({ message }: { message: string }) {

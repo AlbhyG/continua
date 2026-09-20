@@ -66,7 +66,7 @@ filename.
 
 Open `/admin/contacts`.
 
-The page is protected by `ADMIN_CONTACTS_PASSWORD` and reads data server-side with `SUPABASE_SERVICE_ROLE_KEY`. Do not expose the service role key to browser code.
+Access requires signing in to Continua with an account listed in the `admin_users` table (see `supabase/migrations/00021_add_admin_users.sql`; seed admins by email after applying it). The page reads data server-side with `SUPABASE_SERVICE_ROLE_KEY`. Do not expose the service role key to browser code.
 
 The table includes delivery log rows and contact rows that do not yet have a delivery. Use the filters for role, status, or text search across name/email/phone.
 
@@ -82,7 +82,6 @@ Use `Copy visible BCC` to copy all visible email addresses as a comma-separated 
 - `RESEND_REPLY_TO_EMAIL`
 - `NOTIFY_EMAIL`
 - `PDF_OWNER_PASSWORD`
-- `ADMIN_CONTACTS_PASSWORD`
 - `TWILIO_ACCOUNT_SID`
 - `TWILIO_API_KEY_SID`
 - `TWILIO_API_KEY_SECRET`

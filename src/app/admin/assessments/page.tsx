@@ -1,6 +1,7 @@
 import type { PostgrestError, SupabaseClient } from '@supabase/supabase-js'
 import Link from 'next/link'
-import { hasAdminContactsSession } from '@/lib/admin/contacts-auth'
+import { getAdminStatus } from '@/lib/admin/admin-auth'
+import { AdminGate } from '../admin-gate'
 import { AXIS_INFO, type AxisScores } from '@/lib/quiz/scoring'
 import { createAdminClient } from '@/lib/supabase/admin'
 import {
@@ -9,10 +10,6 @@ import {
 } from './assessments-table'
 
 export const dynamic = 'force-dynamic'
-
-type PageProps = {
-  searchParams?: Promise<{ error?: string }>
-}
 
 type QuizResultRow = {
   id: number
@@ -38,13 +35,10 @@ type PersonRow = {
 
 const AXES = Object.keys(AXIS_INFO) as Array<keyof AxisScores>
 
-export default async function AdminAssessmentsPage({ searchParams }: PageProps) {
-  const params = searchParams ? await searchParams : {}
-  const hasSession = await hasAdminContactsSession()
-
-  if (!hasSession) {
-    return <PasswordGate showError={params.error === '1'} />
-  }
+export default async function AdminAssessmentsPage() {
+  const adminStatus = await getAdminStatus()
+  const gate = <AdminGate status={adminStatus} next="/admin/assessments" />
+  if (gate) return gate
 
   const supabase = createAdminClient()
   if (!supabase) {
@@ -133,8 +127,7 @@ export default async function AdminAssessmentsPage({ searchParams }: PageProps) 
             >
               Contacts
             </Link>
-            <form action="/admin/contacts/logout" method="post">
-              <input type="hidden" name="next" value="/admin/assessments" />
+            <form action="/auth/signout" method="post">
               <button
                 type="submit"
                 className="h-9 rounded border border-gray-300 bg-white px-3 text-sm font-semibold"
@@ -171,39 +164,6 @@ async function fetchAllQuizResults(supabase: SupabaseClient) {
   }
 
   return { data, error: null }
-}
-
-function PasswordGate({ showError }: { showError: boolean }) {
-  return (
-    <main className="min-h-screen bg-gray-100 px-4 py-10 text-gray-900">
-      <div className="mx-auto max-w-sm rounded-md border border-gray-200 bg-white p-5 shadow-sm">
-        <h1 className="text-lg font-semibold">Assessment Admin</h1>
-        <form action="/admin/contacts/login" method="post" className="mt-4 space-y-3">
-          <input type="hidden" name="next" value="/admin/assessments" />
-          <label className="grid gap-1 text-sm font-medium">
-            Password
-            <input
-              type="password"
-              name="password"
-              className="h-10 rounded border border-gray-300 px-3"
-              autoComplete="current-password"
-            />
-          </label>
-          {showError && (
-            <p className="text-sm text-red-700" role="alert">
-              Invalid password or missing `ADMIN_CONTACTS_PASSWORD`.
-            </p>
-          )}
-          <button
-            type="submit"
-            className="h-10 rounded bg-gray-900 px-4 text-sm font-semibold text-white"
-          >
-            Sign in
-          </button>
-        </form>
-      </div>
-    </main>
-  )
 }
 
 function AdminError({ message }: { message: string }) {

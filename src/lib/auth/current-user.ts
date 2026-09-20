@@ -31,7 +31,7 @@ export async function requireUser(returnTo: string) {
   return { supabase, user }
 }
 
-export function safeNextPath(value: string | null, fallback = '/my-info') {
+export function safeNextPath(value: string | null, fallback = '/') {
   if (!value || !value.startsWith('/') || value.startsWith('//') || /[\\\x00-\x1f\x7f]/.test(value)) {
     return fallback
   }

@@ -46,6 +46,7 @@ export default function QuizResultsPage() {
   const resultId = params.id;
 
   const [result, setResult] = useState<ResultData | null>(null);
+  const [notFound, setNotFound] = useState(false);
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
@@ -59,7 +60,19 @@ export default function QuizResultsPage() {
           return res.json();
         })
         .then(setResult)
-        .catch(() => {});
+        .catch(() => {
+          setNotFound(true);
+          // This link is usually reached via a cached "latest result" id. If
+          // that id no longer resolves (e.g. the assessment was deleted),
+          // clear it so the header stops linking here.
+          if (
+            typeof resultId === "string" &&
+            window.localStorage.getItem("latest_result_id") === resultId
+          ) {
+            window.localStorage.removeItem("latest_result_id");
+            window.dispatchEvent(new Event("continua:latest-result"));
+          }
+        });
     }
   }, [resultId]);
 
@@ -90,6 +103,24 @@ export default function QuizResultsPage() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     });
+  }
+
+  if (notFound) {
+    return (
+      <div className="mx-auto flex min-h-[60vh] max-w-md flex-col items-center justify-center px-6 text-center">
+        <h1 className="text-2xl font-bold text-foreground">No result found</h1>
+        <p className="mt-3 text-foreground/70">
+          We couldn&apos;t find this assessment. It may have been deleted, or
+          the link may no longer be valid.
+        </p>
+        <Link
+          href="/quiz"
+          className="mt-8 w-full rounded-xl bg-accent px-5 py-4 text-center text-sm font-bold text-white transition-all hover:bg-accent/85"
+        >
+          Take an Assessment
+        </Link>
+      </div>
+    );
   }
 
   if (!result) {
