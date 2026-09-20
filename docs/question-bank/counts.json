@@ -1,56 +1,104 @@
 [
   {
     "axis": "Social Attunement",
-    "count": 600,
-    "unique": 600,
+    "count": 180,
+    "unique": 180,
     "poles": {
-      "hyper-attuned": 302,
-      "hypo-attuned": 298
+      "hyper-attuned": 90,
+      "hypo-attuned": 90
+    },
+    "strengths": {
+      "hyper-attuned/mild": 30,
+      "hyper-attuned/moderate": 30,
+      "hyper-attuned/strong": 30,
+      "hypo-attuned/mild": 30,
+      "hypo-attuned/moderate": 30,
+      "hypo-attuned/strong": 30
     }
   },
   {
     "axis": "Empathy–Detachment",
-    "count": 600,
-    "unique": 600,
+    "count": 180,
+    "unique": 180,
     "poles": {
-      "empathy": 300,
-      "detachment": 300
+      "empathy": 90,
+      "detachment": 90
+    },
+    "strengths": {
+      "empathy/mild": 30,
+      "empathy/moderate": 30,
+      "empathy/strong": 30,
+      "detachment/mild": 30,
+      "detachment/moderate": 30,
+      "detachment/strong": 30
     }
   },
   {
     "axis": "Self-Orientation",
-    "count": 600,
-    "unique": 600,
+    "count": 180,
+    "unique": 180,
     "poles": {
-      "altruism": 300,
-      "self-focus": 300
+      "altruism": 90,
+      "self-focus": 90
+    },
+    "strengths": {
+      "altruism/mild": 30,
+      "altruism/moderate": 30,
+      "altruism/strong": 30,
+      "self-focus/mild": 30,
+      "self-focus/moderate": 30,
+      "self-focus/strong": 30
     }
   },
   {
     "axis": "Conscientiousness",
-    "count": 600,
-    "unique": 600,
+    "count": 180,
+    "unique": 180,
     "poles": {
-      "conscientious": 300,
-      "spontaneous": 300
+      "conscientious": 90,
+      "spontaneous": 90
+    },
+    "strengths": {
+      "conscientious/mild": 30,
+      "conscientious/moderate": 30,
+      "conscientious/strong": 30,
+      "spontaneous/mild": 30,
+      "spontaneous/moderate": 30,
+      "spontaneous/strong": 30
     }
   },
   {
     "axis": "Agency",
-    "count": 600,
-    "unique": 600,
+    "count": 180,
+    "unique": 180,
     "poles": {
-      "agentic": 300,
-      "yielding": 300
+      "agentic": 90,
+      "yielding": 90
+    },
+    "strengths": {
+      "agentic/mild": 30,
+      "agentic/moderate": 30,
+      "agentic/strong": 30,
+      "yielding/mild": 30,
+      "yielding/moderate": 30,
+      "yielding/strong": 30
     }
   },
   {
     "axis": "Reactivity",
-    "count": 600,
-    "unique": 600,
+    "count": 180,
+    "unique": 180,
     "poles": {
-      "high-reactive": 301,
-      "low-reactive": 299
+      "high-reactive": 90,
+      "low-reactive": 90
+    },
+    "strengths": {
+      "high-reactive/mild": 30,
+      "high-reactive/moderate": 30,
+      "high-reactive/strong": 30,
+      "low-reactive/mild": 30,
+      "low-reactive/moderate": 30,
+      "low-reactive/strong": 30
     }
   }
 ]
