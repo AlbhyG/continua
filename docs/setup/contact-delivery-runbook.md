@@ -4,21 +4,15 @@
 
 Contact PDFs live in the private Supabase Storage bucket `books`.
 
-Current files:
+Every current request receives `first-chapter-2026-08-30.pdf`, or the single
+filename configured by `CONTACT_PDF_STORAGE_PATH`. Email, SMS, and legacy email
+verification share this setting. Role-based sampler/proposal delivery is retired.
+`first-chapter.pdf`, `sampler.pdf`, and `proposal.pdf` remain stored for historical
+links; they are not the default for new requests.
 
-- `sampler.pdf` (Continua Book Sampler — goes to everyone)
-- `proposal.pdf` (Continua Book Proposal — agents/publishers only)
-
-Current role mapping:
-
-- Agent -> `sampler.pdf` + `proposal.pdf`
-- Publisher -> `sampler.pdf` + `proposal.pdf`
-- Therapist -> `sampler.pdf`
-- Interested Reader -> `sampler.pdf`
-
-Recipients with multiple roles get the union of their files, de-duplicated (e.g. an Agent + Therapist gets the Sampler once plus the Proposal).
-
-If `CONTACT_PDF_STORAGE_PATH` is set, every email request sends that single file instead of using the role mapping.
+The full manuscript is stored separately in the private `manuscripts` bucket.
+See [retrieval instructions](../manuscript/README.md). Do not upload it as a
+website chapter or commit it to the public repository.
 
 ## PDF Passwords
 
@@ -40,6 +34,11 @@ Phone submissions receive a branded short link per file, e.g. `https://continua.
 
 ## Updating A Book PDF (simple system)
 
+Legacy `/verify/<token>` pages issue a `/d/<token>` link only after successful
+email verification. The older `/api/download/<bookType>?email=...` bookmarks
+redirect to the homepage to request a chapter; an email address alone is not
+authorization. No full manuscript is exposed by either route.
+
 The repo ships a one-command uploader: `scripts/upload-book-pdf.mjs`. It uploads
 (with overwrite) a local PDF into the private `books` bucket.
 
@@ -52,16 +51,13 @@ SUPABASE_SERVICE_ROLE_KEY=<from Supabase dashboard -> Project Settings -> API ->
 To update a book, run from the repo root:
 
 ```
-node scripts/upload-book-pdf.mjs ~/Downloads/new-sampler.pdf  sampler.pdf
-node scripts/upload-book-pdf.mjs ~/Downloads/new-proposal.pdf proposal.pdf
+node scripts/upload-book-pdf.mjs ~/Downloads/first-chapter.pdf first-chapter-2026-08-30.pdf
 ```
 
-The second argument is the storage filename the app expects (`sampler.pdf` for
-everyone, `proposal.pdf` for agents/publishers). Keep those names stable — they
-match `ROLE_PDF_PATHS` in `src/app/actions/get-started.ts`. After uploading,
-submit a test Contact Me request for the matching role and confirm the delivered
-PDF opens (email password is the lowercase email address; SMS links are signed
-and expire in 7 days).
+The second argument must match `CONTACT_PDF_STORAGE_PATH`, or its default
+`first-chapter-2026-08-30.pdf`. Confirm delivery using an authorized test recipient.
+Email passwords are lowercase email addresses. SMS links are database-backed
+tokens and do not expire automatically; delete a link's row to revoke it.
 
 Manual fallback: Supabase dashboard -> Storage -> `books` -> upload with the same
 filename.
@@ -99,13 +95,13 @@ Optional:
 
 ## Delivery Behavior
 
-Email requests download the mapped PDFs from the private `books` bucket, encrypt each PDF, send the attachments through Resend, and log the delivery in `contact_deliveries`.
+Email requests download the configured first-chapter PDF from the private `books` bucket, encrypt it, send the attachment through Resend, and log the delivery in `contact_deliveries`.
 
 If a submitter provides a phone number, the server sends low-volume service SMS through Twilio after the contact is saved. The text contains branded short links (`/d/[token]`) to the requested PDFs, served password-protected from the private `books` bucket. The text tells the recipient their password (email address, or phone number for phone-only submissions). Links do not expire.
 
 Email submissions still receive password-protected PDF attachments through Resend. If they also provide a phone number, they receive both the email attachment and the short PDF link by text.
 
-Phone-only submissions receive signed PDF links by text when Twilio is configured and the toll-free sender is approved. If SMS fails or Twilio is unavailable, the request logs `manual_follow_up` and Albhy receives the notification email.
+Phone-only submissions receive token-based PDF links by text when Twilio is configured and the toll-free sender is approved. If SMS fails or Twilio is unavailable, the request logs `manual_follow_up` and Albhy receives the notification email.
 
 SMS failures are logged to server logs and included in Albhy's notification email when possible. SMS failure does not block email PDF delivery or contact saving.
 

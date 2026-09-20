@@ -1,0 +1,6 @@
+# Keep locally retrieved manuscripts and credentials out of deployment uploads.
+docs/manuscript/private/
+**/Continua_Book*.docx
+**/continua-manuscript.md
+.env*.local
+test-results/

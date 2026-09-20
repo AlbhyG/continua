@@ -2,12 +2,15 @@
 
 import { createClient } from '@/lib/supabase/server'
 import { isValidTokenFormat } from '@/lib/tokens/generate'
+import { createAdminClient } from '@/lib/supabase/admin'
+import { chapterStoragePath } from '@/lib/pdf/chapter'
+import { verifiedDownload } from '@/lib/pdf/verified-download'
 
 type VerifyEmailState = {
   success?: boolean
   error?: string
-  email?: string
-  bookType?: string
+  downloadUrl?: string
+  password?: string
 } | null
 
 export async function verifyEmailAction(
@@ -31,6 +34,9 @@ export async function verifyEmailAction(
       }
     }
 
+    // Check delivery configuration before consuming the one-use verification token.
+    const admin = createAdminClient()
+    if (!admin) return { error: 'Downloads are temporarily unavailable. Please try again later.' }
     const supabase = await createClient()
 
     // Call the SECURITY DEFINER function to verify atomically
@@ -46,27 +52,10 @@ export async function verifyEmailAction(
       }
     }
 
-    const result = data as { status: string; email?: string; book_type?: string }
-
-    if (result.status === 'invalid') {
-      return {
-        error: 'This verification link is invalid or has already been used. Please request a new Book download to receive a fresh link.',
-      }
-    }
-
-    if (result.status === 'expired') {
-      return {
-        error: 'This verification link has expired. Please request a new Book download to receive a fresh link.',
-      }
-    }
-
-    // Extract email and book_type from RPC response (from 08-01 updates)
-    // Return them for download link construction
-    return {
-      success: true,
-      email: result.email,
-      bookType: result.book_type
-    }
+    return verifiedDownload(data, chapterStoragePath(), async (link) => {
+      const { error } = await admin.from('pdf_links').insert(link)
+      if (error) throw error
+    })
   } catch (err) {
     console.error('Verify email unexpected error:', err)
     return {

@@ -9,14 +9,13 @@ import {
 import { sendServiceSms } from '@/lib/sms/twilio'
 import { createAdminClient } from '@/lib/supabase/admin'
 import type { SupabaseClient } from '@supabase/supabase-js'
+import { chapterStoragePath } from '@/lib/pdf/chapter'
 import {
   bookLabel,
   derivePdfPassword,
   generatePdfLinkToken,
 } from '@/lib/pdf/links'
 
-const CONTACT_PDF_STORAGE_PATH =
-  process.env.CONTACT_PDF_STORAGE_PATH || 'first-chapter-2026-08-30.pdf'
 const PDF_OWNER_PASSWORD =
   process.env.PDF_OWNER_PASSWORD || 'change-this-owner-password'
 // Keep the legacy database field populated until interest_roles is removed.
@@ -69,7 +68,7 @@ export async function getStartedAction(data: {
       }
     }
 
-    const filesToSend = [CONTACT_PDF_STORAGE_PATH]
+    const filesToSend = [chapterStoragePath()]
 
     if (!cleanEmail) {
       const smsResult = await sendPdfLinksSms({
