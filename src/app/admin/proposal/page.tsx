@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { hasAdminContactsSession } from '@/lib/admin/contacts-auth'
+import { getAdminStatus } from '@/lib/admin/admin-auth'
+import { AdminGate } from '../admin-gate'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { PROPOSAL_FILE_PATH, PROPOSAL_LABEL } from '@/lib/pdf/proposal'
 import { createProposalLink, setProposalLinkRevoked } from './actions'
@@ -24,7 +25,7 @@ const UPLOAD_MESSAGES: Record<string, string> = {
   ok: 'Proposal uploaded. Every link now serves the new version.',
   missing: 'Choose a PDF file to upload.',
   type: 'That file is not a PDF.',
-  auth: 'Your admin session expired. Sign in again.',
+  auth: 'You need to be signed in with an admin account. Sign in again.',
   config: 'SUPABASE_SERVICE_ROLE_KEY is missing.',
   error: 'Upload failed. If the file is larger than about 4 MB, compress it and try again.',
 }
@@ -42,11 +43,12 @@ function when(value: string) {
 export default async function AdminProposalPage({
   searchParams,
 }: {
-  searchParams?: Promise<{ error?: string; upload?: string }>
+  searchParams?: Promise<{ upload?: string }>
 }) {
   const params = searchParams ? await searchParams : {}
-  if (!(await hasAdminContactsSession())) {
-    return <PasswordGate showError={params.error === '1'} />
+  const adminStatus = await getAdminStatus()
+  if (adminStatus.status !== 'admin') {
+    return <AdminGate status={adminStatus} next="/admin/proposal" />
   }
 
   const supabase = createAdminClient()
@@ -108,8 +110,7 @@ export default async function AdminProposalPage({
                 {label}
               </Link>
             ))}
-            <form action="/admin/contacts/logout" method="post">
-              <input type="hidden" name="next" value="/admin/proposal" />
+            <form action="/auth/signout" method="post">
               <button type="submit" className="h-9 rounded border border-gray-300 bg-white px-3 text-sm font-semibold">
                 Sign out
               </button>
@@ -217,27 +218,6 @@ function Notice({ text }: { text: string }) {
   return (
     <main className="min-h-screen bg-gray-100 px-4 py-6 text-gray-900">
       <p className="mx-auto max-w-5xl rounded-md border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">{text}</p>
-    </main>
-  )
-}
-
-function PasswordGate({ showError }: { showError: boolean }) {
-  return (
-    <main className="min-h-screen bg-gray-100 px-4 py-10 text-gray-900">
-      <div className="mx-auto max-w-sm rounded-md border border-gray-200 bg-white p-5 shadow-sm">
-        <h1 className="text-lg font-semibold">Proposal Admin</h1>
-        <form action="/admin/contacts/login" method="post" className="mt-4 space-y-3">
-          <input type="hidden" name="next" value="/admin/proposal" />
-          <label className="grid gap-1 text-sm font-medium">
-            Password
-            <input type="password" name="password" className="h-10 rounded border border-gray-300 px-3" autoComplete="current-password" />
-          </label>
-          {showError && (
-            <p className="text-sm text-red-700" role="alert">Invalid password or missing `ADMIN_CONTACTS_PASSWORD`.</p>
-          )}
-          <button type="submit" className="h-10 rounded bg-gray-900 px-4 text-sm font-semibold text-white">Sign in</button>
-        </form>
-      </div>
     </main>
   )
 }

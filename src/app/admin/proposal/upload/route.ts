@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from 'next/server'
-import { hasAdminContactsSession } from '@/lib/admin/contacts-auth'
+import { isAdmin } from '@/lib/admin/admin-auth'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { PROPOSAL_FILE_PATH } from '@/lib/pdf/proposal'
 
@@ -13,7 +13,7 @@ function back(request: NextRequest, status: string) {
 
 // Replaces the proposal PDF. Vercel caps request bodies at about 4.5 MB.
 export async function POST(request: NextRequest) {
-  if (!(await hasAdminContactsSession())) return back(request, 'auth')
+  if (!(await isAdmin())) return back(request, 'auth')
 
   const formData = await request.formData()
   const file = formData.get('file')

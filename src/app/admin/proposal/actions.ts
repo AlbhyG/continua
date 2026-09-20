@@ -1,13 +1,13 @@
 'use server'
 
 import { revalidatePath } from 'next/cache'
-import { hasAdminContactsSession } from '@/lib/admin/contacts-auth'
+import { isAdmin } from '@/lib/admin/admin-auth'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { generatePdfLinkToken } from '@/lib/pdf/links'
 import { PROPOSAL_FILE_PATH, PROPOSAL_LABEL } from '@/lib/pdf/proposal'
 
 async function adminClient() {
-  if (!(await hasAdminContactsSession())) throw new Error('Not signed in.')
+  if (!(await isAdmin())) throw new Error('Admin access required.')
   const supabase = createAdminClient()
   if (!supabase) throw new Error('SUPABASE_SERVICE_ROLE_KEY is missing.')
   return supabase
