@@ -35,9 +35,11 @@ were verified denied during migration.
 ## Public-history cleanup
 
 The full manuscript files were removed from `main` and its reachable history on
-September 20, 2026, after private backups were verified. GitHub still served old
-commit URLs after the rewrite; cached views and a stale pull-request merge ref
-require GitHub-side cleanup before the exposure can be considered resolved.
+September 20, 2026, after private backups were verified. The manuscript-bearing
+PR merge ref was refreshed onto clean history. GitHub still served old commit
+URLs afterward; a Support request has been submitted for the remaining cached
+or orphaned copies. Exposure is not fully resolved until GitHub removes those
+copies or confirms the available remedy.
 
 Collaborators with the old history should preserve their uncommitted work and
 start from a fresh clone, or carefully rebase only their own changes onto the
