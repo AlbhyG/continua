@@ -32,8 +32,24 @@ function verifyEmpathyRevision(rows) {
   assert(revision.removed.every(row => row.direction === 'empathy' && previousKeys.has(key(row))), 'Invalid empathy removal')
   assert(revision.added.every(row => row.direction === 'empathy' && !previousKeys.has(key(row))), 'Invalid empathy replacement')
   const expected = new Set([...previousKeys].filter(value => !removed.has(value)).concat([...added]))
-  assert.deepEqual(new Set(rows.map(key)), expected, 'Empathy differs from the reviewed replacement manifest')
-  assert.deepEqual(rows.filter(row => row.direction === 'detachment'), previous.filter(row => row.direction === 'detachment'), 'Detachment changed')
+  const editorial = JSON.parse(fs.readFileSync(path.join(reportDir, 'empathy-manuscript-revisions.json'), 'utf8'))
+  assert.equal(editorial.source_commit, '5029fcdb0f65cb72fc309496a9dfaeadb097317a')
+  const supplied = JSON.parse(execFileSync('git', ['show', `${editorial.source_commit}:data/question-pools/${empathyFile}`], { cwd: root, encoding: 'utf8' }))
+  assert.deepEqual(new Set(supplied.map(key)), expected, 'Original attachment differs from the replacement manifest')
+  assert.deepEqual(supplied.filter(row => row.direction === 'detachment'), previous.filter(row => row.direction === 'detachment'), 'Original detachment provenance changed')
+  const expectedRows = supplied.map(row => ({ ...row }))
+  const editedRows = new Set()
+  for (const edit of editorial.revisions) {
+    assert(Number.isInteger(edit.row) && edit.row >= 1 && edit.row <= supplied.length, 'Invalid editorial row')
+    assert(!editedRows.has(edit.row), 'Duplicate editorial row')
+    editedRows.add(edit.row)
+    assert(typeof edit.text === 'string' && edit.text.trim() && edit.reason?.trim(), 'Missing wording or rationale')
+    assert.notEqual(edit.text, supplied[edit.row - 1].text, 'Editorial edit is unchanged')
+    expectedRows[edit.row - 1].text = edit.text
+  }
+  const intendedRows = new Set([16, 302, 323, ...revision.added.map(row => supplied.findIndex(item => key(item) === key(row)) + 1)])
+  assert.deepEqual(editedRows, intendedRows, 'Review must cover the 66 additions and exactly the three flagged retained rows')
+  assert.deepEqual(rows, expectedRows, 'Empathy differs from the manuscript revision manifest (including order and direction)')
 }
 
 // These overlapping tags are review aids, not psychometric subscales.
