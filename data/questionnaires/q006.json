@@ -2,148 +2,148 @@
   "id": 6,
   "questions": [
     {
-      "text": "My baseline emotional state is one of calm readiness.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I find that I am better at identifying what someone actually needs when I set aside the emotional coloring of their situation.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I step aside willingly to give others opportunities to lead, even if I feel capable.",
-      "direction": "yielding"
-    },
-    {
-      "text": "When I feel inspired, the energy is so strong that sitting still feels impossible.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I find that my emotional responses don't produce noticeable physical symptoms.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I notice that physical sensations rarely accompany my emotional states.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I feel that personal reading time is a non-negotiable part of my schedule.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I often need time alone after social events to process the intensity of my reactions.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I feel that the obligation to respond to pain is a commitment that defines the core of my ethical life.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I routinely bring extra food, supplies, or materials to share with whoever might need them.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I hold the view that a detached, methodical engagement with human suffering is the posture that most effectively combines clarity of thought with depth of commitment.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I hold the view that it is perfectly acceptable to choose personal benefit over collective benefit.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I find that I miss the social meaning behind the order in which people are greeted or acknowledged.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I find myself noticing the cadence and rhythm of a conversation, not just the words.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I routinely accept inconvenience so that other people's lives run more smoothly.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I notice that my pulse quickens noticeably in response to emotional stimuli.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I believe that the moral weight of someone's suffering should never be discounted simply because responding to it is inconvenient.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I believe that my personal brand\u2014how I am perceived\u2014is something I should actively manage.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I tend to miss the political subtext in professional communications.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I feel empowered when I can make executive decisions.",
+      "text": "I find it energizing to direct a team through a challenging situation.",
       "direction": "agentic"
     },
     {
-      "text": "I am aware of the invisible alliances that form in any group setting.",
+      "text": "I have cried from the sheer intensity of a sunset, a piece of art, or an act of kindness.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I sense the unspoken ranking of whose time is considered most valuable in a professional setting.",
       "direction": "hyper-attuned"
     },
     {
-      "text": "I actively lobby for my perspective before a group makes a decision.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I keep a running list of things I need to remember and review it regularly.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I quickly establish the pecking order in any new group I join.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I would choose a less prestigious school or job if the alternative let me stay close to people who need me.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I do not usually notice when a text message carries emotional subtext that goes beyond the words.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I wait for the right mood to tackle unpleasant tasks, knowing the timing matters.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I believe that the best creative work happens when all structure is removed.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "In high-pressure situations, I look to collaborate and distribute the load.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I complete tasks well before their deadlines whenever possible.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I hold the view that detached, methodical reasoning about painful situations is the approach that yields the broadest view and the most thoughtful response.",
+      "text": "When a coworker or neighbor is struggling, I feel little wish to help them.",
       "direction": "detachment"
-    },
-    {
-      "text": "I am content to contribute to something larger without needing personal recognition.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I hold the view that speed in execution is what keeps an idea alive long enough to matter.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I feel that the moral demand of suffering is the experience that gives my sense of justice its emotional foundation and its motivating power.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I notice when someone offers a half-truth that is technically accurate but misleading in context.",
-      "direction": "hyper-attuned"
     },
     {
       "text": "I verify that backups of important data are running correctly on a regular basis.",
       "direction": "conscientious"
+    },
+    {
+      "text": "I feel a deep sense of duty to use everything I have in service of others.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice that emotional content in conversations registers with me but doesn't alter my breathing or posture.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I write down lessons from each project so I can apply them to the next one.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find it difficult to overrule suggestions, even when they do not align with my own thinking.",
+      "direction": "yielding"
+    },
+    {
+      "text": "Feeling the weight of others' hardship keeps me from becoming complacent about it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I lay out my clothes, pack my bag, or prepare materials the night before.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "What some call procrastination, I experience as waiting for the right moment of clarity.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I rarely sense when a group has an unspoken agreement about who the designated leader is.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I often start projects without a clear plan, trusting that the path will reveal itself.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "A stranger's visible distress makes me want to step in.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I am usually more aware of the logical flow of a conversation than its emotional currents.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I am the one who cuts off brainstorming to move the group into execution.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I keep working when I'm energized regardless of what my schedule says, and rest when the energy fades.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel a genuine pull to act when I encounter suffering, not just to notice it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that assembling a life that reflects my personal values and desires is the primary task of adulthood.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I am comfortable overruling a group decision when I believe I am right.",
+      "direction": "agentic"
+    },
+    {
+      "text": "When I'm moved by something, the feeling washes over me like a wave.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I can receive bad news without my body going into alarm mode.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I notice when a person touches their face or neck during a conversation as a self-soothing gesture.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I intuitively understand the unspoken hierarchy in any social group I enter.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I let the group find its own course, even if I see a different path.",
+      "direction": "yielding"
+    },
+    {
+      "text": "Knowing that a person is struggling seldom makes me want to do anything about it.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find purpose in being the one who shoulders the burden so others don't have to.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I routinely rearrange my environment to maximize my own comfort and productivity.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "When I see that someone is suffering, it usually makes no difference to what I want to do next.",
+      "direction": "detachment"
+    },
+    {
+      "text": "When I feel at peace, the sensation is so vivid and complete that it's almost sacred.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I tend to be the last person to realize when a social event is winding down.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I notice that my emotional reactions rarely interfere with my ability to function.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I would give up a front-row seat so a stranger could have a better experience.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to see networking as a way to build my own opportunities, first and foremost.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I prefer to ask questions that help someone see for themselves whether their approach is working.",
+      "direction": "yielding"
     }
   ]
 }

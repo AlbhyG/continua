@@ -2,148 +2,148 @@
   "id": 18,
   "questions": [
     {
-      "text": "I am comfortable letting others make the final call.",
+      "text": "I routinely spend my free time on activities that benefit me personally.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I would decline an award or honor and redirect attention to the team.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I see my job as pointing the group in the right direction and clearing the path.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I feel empowered when the group trusts me enough to share power.",
       "direction": "yielding"
+    },
+    {
+      "text": "I naturally distribute decision-making power more broadly as projects progress.",
+      "direction": "yielding"
+    },
+    {
+      "text": "When I learn that someone I know is going through a difficult time, my first instinct is to consider how I might help.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice when a person brings up old information at a strategic moment to shift the dynamics of a conversation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel responsible for creating the conditions that will lead to my desired future.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "Hearing that someone has had bad news usually doesn't make me want to reach out.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I rarely notice when someone is posturing for an audience during a meeting.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I notice that I can shift my attention away from emotional stimuli relatively easily.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I schedule specific times to check and respond to messages rather than staying reactive.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I do not naturally sense when two people are having a power struggle disguised as polite conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "My baseline state is one of such stability that disruptions feel like small departures rather than upheavals.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "A person's hardship stops mattering to me soon after I hear about it.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I sense when a shared meal or coffee is actually a pretext for a conversation someone needs to have.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I routinely assess whether my current role still serves my personal growth trajectory.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I routinely bring extra food, supplies, or materials to share with whoever might need them.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I check and respond to messages whenever they arrive, staying in the flow of communication.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice when someone positions a request as a suggestion to make it more palatable.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "When someone shares a painful experience, the fact of their pain carries little weight in my mind.",
+      "direction": "detachment"
+    },
+    {
+      "text": "Someone's pain matters even more to me when they have no one else to turn to.",
+      "direction": "empathy"
     },
     {
       "text": "I often take it upon myself to resolve group disagreements by choosing a path.",
       "direction": "agentic"
     },
     {
-      "text": "I tend to exhaust my own resources before asking others to contribute theirs.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I feel that my strength lies in sustaining group cohesion.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I routinely pick up tasks no one else wants to do, so the group can function well.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I sometimes feel overwhelmed by the sheer intensity of being alive.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I feel that the moral demand of suffering reveals the depth of my values in a way that ordinary life does not.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I find that I am at my most helpful when I can analyze a crisis without being pulled into its emotional current.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I notice that I can hold space for difficult conversations without my own equilibrium being disrupted.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I believe my emotional intensity is central to who I am.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I think it is important to make a stand and defend it.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I find that over-preparation can make me rigid and slow to adapt when things change.",
+      "text": "I reconnect with people when the impulse strikes rather than tracking our last contact.",
       "direction": "spontaneous"
     },
     {
-      "text": "I am content letting the group commit without needing to add my final word.",
-      "direction": "yielding"
+      "text": "When I get good news, the euphoria can last for days.",
+      "direction": "high-reactive"
     },
     {
-      "text": "I detect when someone is saying yes but meaning no.",
-      "direction": "hyper-attuned"
+      "text": "I calibrate my effort to the importance of each task, giving more attention to high-impact work.",
+      "direction": "conscientious"
     },
     {
-      "text": "I hold the view that my system is designed for endurance rather than intensity.",
+      "text": "I tend to share my food, my space, and my belongings without a second thought.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I learn what I want to achieve by starting to act, not by planning in advance.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I routinely upgrade my personal environment—better lighting, better furniture, better technology.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I notice that my emotional reactions to the same type of event are remarkably consistent over time.",
       "direction": "low-reactive"
-    },
-    {
-      "text": "I find that I am most trusted in difficult situations because I bring logical clarity rather than emotional intensity.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I tend not to detect when a friendly question is actually a form of gatekeeping.",
-      "direction": "hypo-attuned"
     },
     {
       "text": "I tend to be focused on my own train of thought during conversations rather than scanning for reactions.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I detect when someone uses a nickname versus a full name to signal the current state of a relationship.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I feel that my role in any friendship is to be the one who gives more.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I hold the view that the pull toward responding to suffering is the most honest expression of the values I actually hold.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I find that even significant life changes don't produce the emotional turbulence others describe.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I send emails as soon as I write them, trusting my first phrasing is good enough.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I prefer to own the relationship with external partners on behalf of the team.",
+      "text": "I am attracted to opportunities where I can set the tone for a team.",
       "direction": "agentic"
     },
     {
-      "text": "I develop my argument as I speak, discovering what I think in real time.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I hold the view that the obligation to respond to suffering is among the most non-negotiable commitments a person can hold.",
+      "text": "I wish I could relieve suffering I hear about, even when I have no means to.",
       "direction": "empathy"
     },
     {
-      "text": "I track my goals with quantifiable metrics so I can see objective progress.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I prioritize long-term wellbeing over short-term pleasure when the two conflict.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I build buffers into estimates because I know unexpected complications are inevitable.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I am highly aware of who initiates conversation and who waits to be approached in social settings.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I have been told that I feel things more intensely than most people.",
+      "text": "After a heated exchange, my body stays in fight-or-flight mode long after the words have stopped.",
       "direction": "high-reactive"
     },
     {
-      "text": "I hold the view that it is important to be my own biggest advocate.",
-      "direction": "self-focus"
+      "text": "I experience the first moments of waking up after a bad dream as indistinguishable from the terror of the dream itself.",
+      "direction": "high-reactive"
     },
     {
-      "text": "I find that I have to work at reading social situations that others navigate effortlessly.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I routinely protect my focus time even when others express disappointment.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I think that approaching others' distress with calm, logical analysis is the behavior that most reliably converts good intentions into measurable improvements.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I feel that ensuring my own financial security comes before generosity.",
-      "direction": "self-focus"
+      "text": "I prefer that group deliverables be finalized by whoever the group entrusts with that task.",
+      "direction": "yielding"
     }
   ]
 }

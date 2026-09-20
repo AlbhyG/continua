@@ -1,5 +1,7 @@
 # Context wording audit
 
+> **Historical.** This report reviewed the earlier bank (six 600-item pools, 100 questionnaires). The pools were rebuilt to 90 items per pole and 30 questionnaires; `context-audit.csv` and `context-audit-counts.json` are regenerated for the current bank, and the counts below describe the old one.
+
 Reviewed September 14, 2026 for issue #35 and requirements §2.6.1. Scope: all six current source pools (3,600 items) and all 100 shipped questionnaires (3,600 item occurrences). No item wording, questionnaire membership, direction, or scoring code was changed.
 
 ## Finding

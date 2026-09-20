@@ -1,110 +1,362 @@
 [
   {
-    "text": "I naturally step into the lead when a group seems directionless.",
+    "text": "When there is a vacuum of leadership, I fill it without thinking twice.",
     "direction": "agentic"
   },
   {
-    "text": "I prefer to let someone else set the direction before I contribute.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I believe that someone needs to take charge, and it might as well be me.",
+    "text": "I am the type who builds the team around my vision rather than the other way around.",
     "direction": "agentic"
-  },
-  {
-    "text": "I find that groups work best when no single person dominates the conversation.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often find myself telling others what needs to happen next.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I hold the view that the best outcomes come from shared decision-making.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel most alive when I am steering the course of a project.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am comfortable letting others make the final call.",
-    "direction": "yielding"
   },
   {
     "text": "When I see an opportunity, I move quickly to claim it.",
     "direction": "agentic"
   },
   {
-    "text": "I wait to hear everyone's perspective before forming a group plan.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I tend to assert my position firmly in discussions.",
+    "text": "I often take it upon myself to resolve group disagreements by choosing a path.",
     "direction": "agentic"
   },
   {
-    "text": "I usually adjust my stance to keep the group aligned.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I have a strong instinct to organize people toward a goal.",
+    "text": "I tend to be the voice that names the elephant in the room.",
     "direction": "agentic"
   },
   {
-    "text": "I find satisfaction in helping someone else's vision come to life.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that hesitation costs more than imperfect action.",
+    "text": "I tend to be the one who says the meeting is over and assigns next steps.",
     "direction": "agentic"
   },
   {
-    "text": "I believe that patience and collective input lead to wiser choices.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the person who usually calls the meeting or sets the agenda.",
+    "text": "I often reshape a project's scope based on my own assessment of what matters.",
     "direction": "agentic"
   },
   {
-    "text": "I prefer when someone else organizes the agenda and I can support their plan.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I enjoy being the one others look to for decisions.",
+    "text": "I prefer to own the outcome of a decision rather than share that ownership.",
     "direction": "agentic"
   },
   {
-    "text": "I am happiest when I can contribute without being the focal point.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often initiate projects without waiting for approval.",
+    "text": "I tend to assert boundaries for the group about what is and isn't acceptable.",
     "direction": "agentic"
   },
   {
-    "text": "I like to wait until a clear consensus emerges before acting.",
-    "direction": "yielding"
+    "text": "I would rather lead a small group than follow in a large one.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I prefer to set the ground rules before any group activity begins.",
+    "direction": "agentic"
   },
   {
     "text": "I find it energizing to direct a team through a challenging situation.",
     "direction": "agentic"
   },
   {
-    "text": "I find it energizing to be part of a team that navigates challenges together.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I believe clarity of vision matters more than everyone's agreement.",
+    "text": "I am the person who usually decides how resources get distributed in a group project.",
     "direction": "agentic"
   },
   {
-    "text": "I believe that agreement among the group matters more than speed.",
-    "direction": "yielding"
+    "text": "I tend to direct the flow of conversation toward outcomes I envision.",
+    "direction": "agentic"
   },
   {
-    "text": "When there is a vacuum of leadership, I fill it without thinking twice.",
+    "text": "I would rather make a controversial call than let the team drift without direction.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I find myself correcting course when I think a group is going the wrong way.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I take pride in being the driving force behind a project's success.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I feel confident making decisions on behalf of a group.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I prefer to be the one who communicates bad news to the team.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I often end up as the de facto leader in group projects.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I prefer to own the relationship with external partners on behalf of the team.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I tend to unilaterally escalate issues when I think a group is underreacting.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I have been told that I have a commanding presence.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I frequently volunteer to be the spokesperson or point person.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I enjoy the weight of responsibility that comes with leading.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I tend to make executive decisions about scope changes mid-project.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I naturally claim authority in informal group settings.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I often proactively define the criteria for who gets to participate in key discussions.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I often speak with an air of finality that signals the discussion is over.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I prefer to control the narrative around a project's progress.",
+    "direction": "agentic"
+  },
+  {
+    "text": "When a conversation stalls, I push it forward with a concrete proposal.",
+    "direction": "agentic"
+  },
+  {
+    "text": "When I have a vision, I pursue it whether or not others initially agree.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I am the first to speak up when a group needs someone to take ownership of a problem.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I feel a surge of energy when I declare a new direction for a team.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I want to be the one who shapes how a project unfolds.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I find it hard to stay quiet when I disagree with the group's direction.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I am attracted to opportunities where I can set the tone for a team.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I feel responsible for keeping a group on track toward its goals.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I have a strong desire to leave my mark on the things I work on.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I frequently take on captain or leadership roles in team settings.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I am the one who typically opens a meeting by framing the key question.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I enjoy being the public face of a group effort.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I think it is important to make a stand and defend it.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I think of authority as something to be exercised, not just held.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I find it natural to tell others what I expect from them.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I find it rewarding to have the final word in a discussion.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I am the type who creates the rules of engagement for a group.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I readily step in to mediate disputes by imposing a resolution.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I view taking charge as a service to the group.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I am quick to declare a path forward when the group is circling.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I naturally assume the authority to speak on behalf of a group.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I volunteer to chair committees or working groups without hesitation.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I am comfortable overruling a group decision when I believe I am right.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I naturally gravitate toward being the person who introduces people and assigns them roles.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I would describe my influence style as directive.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I have a hard time following when I think I could lead better.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I proactively recruit people to my initiatives.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I feel compelled to act when I see inefficiency or lack of direction.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I frequently redefine objectives when I think the current ones are wrong.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I trust my own judgment more than the group's consensus.",
+    "direction": "agentic"
+  },
+  {
+    "text": "When entering a new group, I quickly establish my role as a leader.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I like to be the one who determines the scope of what the team works on.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I am energized by standing at the front of the room and guiding the discussion.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I make a point of having the last say before a group commits to a course of action.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I am inclined to enforce standards even when the group has not explicitly agreed to them.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I see my job as pointing the group in the right direction and clearing the path.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I notice that people look to me to set the standard of effort in a group.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I feel at home being the primary representative of a group to the outside world.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I am comfortable making commitments on behalf of my team without consulting them first.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I enjoy naming the problem and telling the group how we will solve it.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I feel most alive when I am steering the course of a project.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I feel a strong pull to shape the agenda of any group I am part of.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I feel uncomfortable when someone challenges my authority in front of the group.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I am drawn to moments where one person's decision changes everything.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I am the one who cuts off brainstorming to move the group into execution.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I have a tendency to take over tasks that others are doing too slowly.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I find it satisfying to have direct reports and be responsible for their output.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I naturally position myself at the center of decision-making networks.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I enjoy the sense of being indispensable to a project's direction.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I frequently reorganize a group's workflow to align with my approach.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I am the person who reframes a problem so the team can act on it.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I enjoy shaping the culture of any team I join.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I instinctively create a chain of command when I work with others.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I typically introduce structure to group work before anyone else does.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I consider it a compliment when people describe me as commanding.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I am comfortable unilaterally canceling plans that I think are not working.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I actively lobby for my perspective before a group makes a decision.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I commonly find myself the one editing and finalizing group deliverables.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I frequently take on the role of gatekeeper for quality in group work.",
+    "direction": "agentic"
+  },
+  {
+    "text": "I am quick to assert my expertise when a topic I know well comes up.",
     "direction": "agentic"
   },
   {
@@ -112,2291 +364,359 @@
     "direction": "yielding"
   },
   {
-    "text": "I hold the view that decisive action is a form of respect for everyone's time.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I hold the view that soliciting everyone's input is a form of respect.",
+    "text": "I tend to let the group decide when the meeting wraps and what the next steps are.",
     "direction": "yielding"
-  },
-  {
-    "text": "I feel confident making decisions on behalf of a group.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel uneasy making decisions that affect others without their explicit buy-in.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I have been told that I have a commanding presence.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I have been told that I am a great team player.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I tend to set the pace in group work rather than follow it.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I tend to match the pace others have set rather than impose my own.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find that my ideas often shape the direction a group takes.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I find that I often refine and build on ideas others have introduced.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I prefer to give clear directives rather than open-ended suggestions.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer to offer suggestions rather than give directives.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that if I don't take the reins, things won't move forward.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I trust that the group will find its way forward without one person driving.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am drawn to roles where I can shape outcomes directly.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am drawn to roles where I support and enable others' success.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I frequently volunteer to be the spokesperson or point person.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am happy to let someone else be the spokesperson.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I believe that strong leadership requires the willingness to override dissent when needed.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I believe that strong leadership means facilitating agreement, not overriding it.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel restless when no one is taking charge of a situation.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel comfortable in ambiguous situations where no one has taken charge yet.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I make decisions quickly and stand by them.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I like to take time and let the group deliberate before a decision is made.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I enjoy the weight of responsibility that comes with leading.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer shared responsibility to personal accountability for outcomes.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I instinctively delegate tasks and coordinate efforts.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer to receive tasks from a coordinator rather than assign them.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find myself correcting course when I think a group is going the wrong way.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I let the group find its own course, even if I see a different path.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often set the vision and expect others to execute it.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer to help execute a shared vision rather than set one alone.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that a clear chain of command produces better results.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that flat, collaborative structures produce better results.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I naturally claim authority in informal group settings.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I naturally defer to others in informal group settings.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I would rather make a bold, imperfect decision than let the group stall.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I would rather slow down and ensure everyone is on board.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I take pride in being the driving force behind a project's success.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I take pride in the behind-the-scenes work that makes a project succeed.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel energized when people follow my lead.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel energized when a group reaches a genuine consensus.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often push for my preferred approach in group decisions.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I often yield to the group's preferred approach, even if mine differs.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I believe I have a talent for seeing what needs to be done and making it happen.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I believe I have a talent for bringing people together around a shared purpose.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I regularly take initiative in situations where others hesitate.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I regularly step back so others have space to take initiative.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am most productive when I have full autonomy over direction.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am most productive when direction has been established collectively.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find it hard to stay quiet when I disagree with the group's direction.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I find it easy to go along with the group's direction, even when I have reservations.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I see leadership as a core part of my identity.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I see collaboration as a core part of my identity.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am comfortable overruling a group decision when I believe I am right.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I rarely overrule a group decision, even when I think there is a better option.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often end up as the de facto leader in group projects.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I often end up as the reliable supporter in group projects.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that it is my responsibility to point the way when people are lost.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that the group should find its own way rather than rely on one person.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I prefer to own the outcome of a decision rather than share that ownership.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer joint ownership of outcomes so that no single person bears the weight.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am comfortable telling people directly what I need from them.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer to frame requests as invitations rather than directives.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I hold the view that groups need a strong voice to stay focused.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I hold the view that groups find focus naturally when everyone's voice is heard.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I enjoy crafting the strategy and assigning roles.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I enjoy being assigned a role and doing it well.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel drawn to positions of formal authority.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel more comfortable in positions without formal authority.",
-    "direction": "yielding"
-  },
-  {
-    "text": "When I have a vision, I pursue it whether or not others initially agree.",
-    "direction": "agentic"
-  },
-  {
-    "text": "When I have a vision, I wait to see if others share it before moving forward.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I believe indecision is more dangerous than a wrong decision.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I believe a premature decision is more dangerous than a delayed one.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the one who usually proposes the plan for a group activity.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I usually wait for someone else to propose a plan before weighing in.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that my confidence in decisions helps reassure the people around me.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that gathering broad input helps reassure the people around me.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I naturally speak first in group discussions.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I naturally listen first and speak after others have shared their thoughts.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often take it upon myself to resolve group disagreements by choosing a path.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I often help resolve group disagreements by finding common ground.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I have a strong desire to leave my mark on the things I work on.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am content to contribute to something larger without needing personal recognition.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel most at ease when I am the one setting expectations.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel most at ease when expectations are set collaboratively.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I trust my own judgment more than the group's consensus.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I trust the group's consensus more than my own individual judgment.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I frequently take on captain or leadership roles in team settings.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I frequently take on supporting or facilitating roles in team settings.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel compelled to act when I see inefficiency or lack of direction.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that groups benefit from working through inefficiency at their own pace.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am comfortable making unpopular decisions if I believe they are correct.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer to find a decision everyone can accept, even if it means compromise.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find it natural to give instructions and coordinate others.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I find it natural to follow well-given instructions and coordinate with peers.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I think of myself as someone who drives outcomes.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I think of myself as someone who facilitates outcomes.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often establish the norms and expectations within a group.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I often adapt to the norms and expectations already present in a group.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel frustrated when leadership is unclear or absent.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel comfortable operating without a clearly designated leader.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find that others naturally look to me for direction.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I find that others naturally see me as a reliable collaborator.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I want to be the one who shapes how a project unfolds.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I want to be part of shaping how a project unfolds, alongside others.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I believe that decisiveness is one of my core strengths.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I believe that adaptability is one of my core strengths.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I would rather lead a small group than follow in a large one.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I would rather be an integral part of a large group than lead a small one.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that my directness helps groups move forward.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that my willingness to accommodate helps groups stay together.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am quick to take ownership of a situation when things go sideways.",
-    "direction": "agentic"
   },
   {
     "text": "When things go sideways, I look for a collective response rather than taking personal charge.",
     "direction": "yielding"
   },
   {
-    "text": "I am at my best when I am in the driver's seat.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am at my best when I am a trusted co-pilot.",
+    "text": "I find it energizing to be part of a team that navigates challenges together.",
     "direction": "yielding"
-  },
-  {
-    "text": "I hold the view that someone must ultimately be accountable, and I accept that role.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I hold the view that accountability should be distributed across the team.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I notice that I frequently steer conversations toward action.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I notice that I frequently steer conversations toward inclusion.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I enjoy the challenge of persuading others to follow my direction.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer to build agreement organically rather than persuade.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often set deadlines and hold people to them.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer flexible timelines that the group agrees upon together.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I think it is important to make a stand and defend it.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I think it is important to remain open and willing to shift with the group.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am energized by having the final say.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am energized by arriving at a decision that everyone shaped.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find that I can mobilize people toward a goal effectively.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I find that I can help people feel heard and valued within a group.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I would describe my influence style as directive.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I would describe my influence style as collaborative.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often establish priorities for the group without being asked.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer that priorities be established through group discussion.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel a strong pull to be in charge of important initiatives.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel a strong pull to be deeply involved in important initiatives, though not necessarily in charge.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I tend to assert boundaries for the group about what is and isn't acceptable.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I tend to let the group define its own boundaries collectively.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I believe that my willingness to decide quickly is valuable to those around me.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I believe that my willingness to defer is valuable to those around me.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am comfortable standing alone in my position if I think it is right.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I find it important to stay aligned with the group, even at the cost of my personal preference.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I see myself as someone who makes things happen.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I see myself as someone who helps things happen.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I frequently redefine objectives when I think the current ones are wrong.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I rarely redefine objectives that were set by the group.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I take the lead in negotiations and high-stakes conversations.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer a supportive role in negotiations and high-stakes conversations.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel responsible for keeping a group on track toward its goals.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel responsible for keeping a group connected and cohesive.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am energized by the act of making a consequential choice.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am energized by the process of building a decision together.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I generally dictate the terms of a collaboration.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I generally negotiate the terms of a collaboration with all parties.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that having a single decision-maker leads to clearer outcomes.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that collaborative decision-making leads to more durable outcomes.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am someone who defines the mission rather than inheriting it.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am someone who embraces and strengthens a shared mission.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that taking charge is a natural extension of caring about results.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that yielding space to others is a natural extension of caring about the group.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often present my conclusions as settled rather than open for debate.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I often present my thoughts as starting points for group discussion.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am attracted to opportunities where I can set the tone for a team.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am attracted to opportunities where I can blend into a well-functioning team.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find it difficult to sit back when I have a clear idea of what should be done.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I find it natural to sit back and let the group work through its process.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often champion a particular direction and rally others behind it.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I often help synthesize multiple perspectives into a direction the group can support.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I believe that strong personal conviction is necessary for effective leadership.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I believe that openness to others' views is necessary for effective teamwork.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I tend to announce my decisions rather than propose them for feedback.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I tend to propose ideas and invite feedback before moving forward.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the type of person who builds the roadmap.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am the type of person who walks the roadmap alongside others.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I have a bias toward action over deliberation.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I have a bias toward deliberation over premature action.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I enjoy being the public face of a group effort.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I enjoy doing meaningful work that does not require being the public face.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find that I set the emotional and strategic tone in groups I join.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I find that I adapt to the tone already present in groups I join.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I have a hard time following when I think I could lead better.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am comfortable following even when I might have a different approach.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am willing to shoulder the burden of an unpopular choice.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer to find a path everyone can accept rather than force a choice.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I tend to frame requests as expectations rather than options.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I tend to frame requests as options rather than expectations.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that my job is to point the way, even if others resist.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that my job is to support the group in finding its own way.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am quick to take the microphone, literally or figuratively.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am happy to pass the microphone to whoever wants it.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often initiate change rather than wait for conditions to force it.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I often wait for the group to signal readiness before pursuing change.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the person who turns a vague idea into a concrete plan of action.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am the person who helps refine and improve someone else's plan of action.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that if no one leads, nothing meaningful gets accomplished.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that meaningful things can be accomplished without anyone formally leading.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I instinctively take control of high-pressure situations.",
-    "direction": "agentic"
-  },
-  {
-    "text": "In high-pressure situations, I look to collaborate and distribute the load.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I prefer relationships where I set the agenda.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer relationships where the agenda emerges mutually.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel empowered when I can make executive decisions.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel empowered when the group trusts me enough to share power.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often find that I am the one defining what success looks like.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I often find that I help the group define what success looks like together.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am not afraid to overrule others when the stakes are high.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am cautious about overruling others, even when the stakes are high.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that waiting for full consensus wastes valuable momentum.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that building consensus creates stronger momentum in the long run.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I tend to carve out my own lane rather than share one.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I tend to find ways to collaborate within a shared lane.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the person others call when something needs to get decided.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am the person others call when something needs broad buy-in.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I believe that a leader who hesitates loses credibility.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I believe that a leader who does not listen loses the group's trust.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I prefer to be the architect of a project rather than a contributor.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer to be a contributor alongside others rather than the sole architect.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I instinctively create structure where there is none.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I instinctively adapt to whatever structure the group has established.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find it satisfying to override inertia and get things moving.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I find it satisfying to maintain cohesion as the group moves forward.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I think of authority as something to be exercised, not just held.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I think of authority as something to be shared, not concentrated.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I regularly push back when I disagree with the prevailing direction.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I regularly accommodate the prevailing direction to maintain group flow.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that being in control of a situation allows me to do my best work.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that being in a supportive role allows me to do my best work.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I prefer to ask for forgiveness rather than permission.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer to get buy-in before acting on behalf of the group.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am known for taking decisive stands in group deliberations.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am known for bridging differences in group deliberations.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I believe a project needs one clear leader to succeed.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I believe a project succeeds best with distributed leadership.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that my assertiveness is one of my greatest assets.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that my flexibility is one of my greatest assets.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am inclined to make a choice and commit rather than keep options open.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am inclined to keep options open until the group has weighed in.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often position myself as the final decision-maker in group settings.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I often position myself as a facilitator in group settings.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am drawn to situations where my voice carries significant weight.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am drawn to situations where every voice carries equal weight.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I tend to direct the flow of conversation toward outcomes I envision.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I tend to let conversations flow where the group takes them.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find it natural to tell others what I expect from them.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I find it natural to ask others what they expect from themselves.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I view taking charge as a service to the group.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I view deferring to others as a service to the group.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel most confident when I am directing a process from start to finish.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel most confident when I am contributing to a process others are co-directing.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I would rather be the founder than the early employee.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I would rather be a key early contributor than the founder.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I prefer to pitch my idea and get others on board with it.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer to collect others' ideas and find the common thread.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the type who creates the rules of engagement for a group.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am the type who helps the group discover its own rules of engagement.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I thrive when I have the authority to make things happen.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I thrive when I have the trust of a group that works together.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that a well-directed team outperforms a democratic one.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that a democratic team outperforms a top-down one.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often take the initiative to resolve ambiguity for others.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I often help the group sit with ambiguity until clarity emerges together.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel responsible for making sure the right things happen.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel responsible for making sure everyone is part of what happens.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am comfortable exercising authority even when it creates tension.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am inclined to avoid exercising authority if it would create tension.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I see myself as the captain of whatever ship I am on.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I see myself as a valued crew member of whatever ship I am on.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I gravitate toward being the one who decides when a discussion has gone on long enough.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I gravitate toward letting discussions continue until the group is satisfied.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I frequently introduce new initiatives without waiting for a mandate.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer that new initiatives come from a collective mandate.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find that I am usually the one setting the standards for a group.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I find that I am usually the one helping the group uphold its own standards.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I volunteer to chair committees or working groups without hesitation.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer to serve on committees rather than chair them.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the first to speak up when a group needs someone to take ownership of a problem.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I look for ways to distribute ownership of problems across the group.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I notice that I instinctively assign myself the most critical tasks.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I notice that I instinctively ask others which tasks they feel best suited for.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often reshape a project's scope based on my own assessment of what matters.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I let the group collectively decide when a project's scope should change.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel most effective when I can direct the allocation of responsibilities.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel most effective when responsibilities are negotiated openly among team members.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am quick to declare a path forward when the group is circling.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I trust that the group will eventually resolve its own circular discussions.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I enjoy the pressure that comes with being the person in charge.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I enjoy the freedom that comes with not being the person in charge.",
-    "direction": "yielding"
-  },
-  {
-    "text": "When a conversation stalls, I push it forward with a concrete proposal.",
-    "direction": "agentic"
-  },
-  {
-    "text": "When a conversation stalls, I invite quieter voices to share before proposing anything.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that my role in groups is to cut through noise and create clarity.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that my role in groups is to ensure everyone feels included in the process.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the one who typically opens a meeting by framing the key question.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am the one who typically helps the group settle on the key question together.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I would rather make a controversial call than let the team drift without direction.",
-    "direction": "agentic"
   },
   {
     "text": "I would rather let the team take extra time than force a call that divides people.",
     "direction": "yielding"
   },
   {
-    "text": "I feel that establishing hierarchy early prevents confusion later.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that establishing equal footing early strengthens collaboration later.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I naturally gravitate toward being the person who introduces people and assigns them roles.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I naturally gravitate toward connecting people and letting them find their own roles.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am comfortable interrupting a group discussion to redirect its focus.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I let group discussions find their own focus, even if they meander for a while.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find it hard to step aside when I believe I am the most capable person to lead.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I step aside willingly to give others opportunities to lead, even if I feel capable.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel a surge of energy when I declare a new direction for a team.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel a surge of energy when a team collectively discovers its new direction.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I proactively recruit people to my initiatives.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I wait to be invited into other people's initiatives.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I prefer to be the one who decides when a meeting ends.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer that the group collectively decides when a meeting has run its course.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the person who usually says, 'Here is what we are going to do.'",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am the person who usually says, 'What does everyone think we should do?'",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find it rewarding to have the final word in a discussion.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I find it rewarding when a discussion closes with genuine shared understanding.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I readily step in to mediate disputes by imposing a resolution.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I help mediate disputes by drawing out each side's concerns without imposing a resolution.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I consider it my strength that I can make hard calls quickly.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I consider it my strength that I can hold space for difficult conversations.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am drawn to founding organizations rather than joining existing ones.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am drawn to strengthening organizations that already exist.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I tend to unilaterally escalate issues when I think a group is underreacting.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I tend to check with the group before escalating any issue.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I naturally assume the authority to speak on behalf of a group.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I ask the group's permission before speaking on its behalf.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I set milestones for the team and hold everyone to them.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I help the team set milestones together and support everyone in reaching them.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I believe that someone who takes command earns the right to shape the outcome.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I believe that outcomes belong to the whole group, regardless of who takes command.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am typically the one who breaks a tie in a group vote.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am typically the one who helps the group keep deliberating until a tie resolves itself.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel most capable when I have unilateral authority over a domain.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel most capable when authority is shared across team members in a domain.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am inclined to announce decisions first and explain my reasoning second.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am inclined to share my reasoning first and let the group reach the decision.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find myself naturally framing situations as problems for me to solve.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I find myself naturally framing situations as challenges for us to solve together.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I enjoy negotiating from a position of authority.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I enjoy negotiating as an equal partner.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I tend to set the criteria by which the group evaluates options.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I tend to let the group define its own evaluation criteria.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the kind of person who writes the first draft and circulates it for comment.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am the kind of person who waits for a first draft and then helps improve it.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel a need to put my stamp on everything I am involved in.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel comfortable contributing to something that bears the group's stamp, not mine.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I quickly identify who should do what and communicate it directly.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I ask people what they would like to take on rather than assigning tasks.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I usually frame debates by stating my position clearly at the start.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I usually enter debates by asking questions rather than stating positions.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I instinctively protect my decision-making authority from interference.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I instinctively invite others into my decision-making process.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the one who cuts off brainstorming to move the group into execution.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I let brainstorming run its natural course before anyone pushes toward execution.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I like to personally approve important outputs before they go out.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I trust the group's collective review process without needing personal approval authority.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I see my presence in a group as primarily about providing direction.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I see my presence in a group as primarily about providing support.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel compelled to step in and correct others when they are off track.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I gently offer perspective but leave it to others to decide if they are off track.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am energized by pitching my vision to stakeholders.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am energized by helping a group articulate its shared vision to stakeholders.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I prefer to control the narrative around a project's progress.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer that the narrative around a project's progress reflects everyone's perspective.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the one who decides when to pivot and when to stay the course.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I believe pivot-or-persist decisions should be made by the group together.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel at home being the primary representative of a group to the outside world.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel at home rotating representation duties among group members.",
-    "direction": "yielding"
-  },
-  {
-    "text": "When entering a new group, I quickly establish my role as a leader.",
-    "direction": "agentic"
-  },
-  {
-    "text": "When entering a new group, I observe how things work before settling into a role.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I take pride in having built teams from scratch.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I take pride in helping existing teams become more effective.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I would rather risk overstepping than under-contributing in a crisis.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I would rather check in with others than risk overstepping in a crisis.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am comfortable telling someone their approach needs to change.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer to ask questions that help someone see for themselves whether their approach is working.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I frequently take on the role of gatekeeper for quality in group work.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer that quality standards be maintained through peer review rather than a single gatekeeper.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that my decisiveness prevents wasted effort.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that inclusive deliberation prevents misguided effort.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I have a tendency to take over tasks that others are doing too slowly.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I have a tendency to offer help rather than take over when someone is struggling.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel most like myself when I am running the show.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel most like myself when I am part of an ensemble.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I would rather give a keynote than participate in a panel discussion.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I would rather participate in a panel discussion than give a keynote alone.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I notice that people look to me to set the standard of effort in a group.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I notice that I calibrate my effort to match the group's established rhythm.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am comfortable unilaterally canceling plans that I think are not working.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I bring concerns about a plan to the group rather than canceling it myself.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am usually the first to stand up and take charge in a new situation.",
-    "direction": "agentic"
-  },
-  {
     "text": "I am usually the first to check in with the group before anyone takes charge.",
     "direction": "yielding"
-  },
-  {
-    "text": "I feel that once I commit to a direction, others should follow.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that committing to a direction should be a collective act.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I tend to hold the pen on important documents and shape the final version.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I tend to let multiple people contribute to important documents without one person holding the pen.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I enjoy being the person who approves or vetoes ideas.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I enjoy being part of a group that evaluates ideas together without veto power.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I instinctively create a chain of command when I work with others.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I instinctively resist hierarchy and prefer flat collaboration.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I prefer to be the one who communicates bad news to the team.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer that bad news be communicated by whoever is closest to the situation, not a single leader.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I see group work as an opportunity to shape people's priorities.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I see group work as an opportunity to learn from other people's priorities.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel uncomfortable when someone else is making decisions that I believe should be mine.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel comfortable deferring decisions to others, even in areas I know well.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often end up being the one who holds others accountable for their commitments.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I believe the group should hold each other accountable rather than one person doing it.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am comfortable issuing ultimatums when I think they are needed.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I avoid ultimatums and prefer to keep negotiating until everyone is on board.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I would rather lead a risky venture than follow in a safe one.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I would rather participate in a safe venture than lead a risky one alone.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I naturally claim the most visible and consequential role in any effort.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I naturally gravitate toward the role where I can best support others' efforts.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that ambiguity is a signal for me to step in and create order.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that ambiguity is an invitation for the group to explore possibilities together.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I prefer to set the ground rules before any group activity begins.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer that ground rules emerge from group discussion before activity begins.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the person who usually decides how resources get distributed in a group project.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer that the group decides collectively how resources get distributed.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I tend to be the voice that names the elephant in the room.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I tend to wait and see if the group will name the elephant in the room on its own.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I get restless in meetings where no one is driving toward a conclusion.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am patient in meetings that take longer than expected, trusting the process.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find it natural to give performance feedback without being asked.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I offer feedback only when asked or when the group has a feedback culture in place.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am wired to fix what is broken rather than wait for someone else to notice.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am wired to flag what seems broken and let the group decide how to address it.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I consider it a compliment when people describe me as commanding.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I consider it a compliment when people describe me as easygoing.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I naturally position myself at the center of decision-making networks.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I naturally position myself as a connector at the periphery, linking others together.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the person who reframes a problem so the team can act on it.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am the person who asks the team how they would like to frame a problem.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that good leadership means making the call, not facilitating the call.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that good leadership means creating conditions for the group to make the call.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am comfortable vetoing a group decision when I believe it is wrong.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am uncomfortable using veto power, even when I think I see a better path.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I prefer to be the single point of contact for important communications.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer that important communications come from the group rather than a single person.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that my presence in a group naturally organizes the group around my priorities.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that my presence in a group helps others articulate their own priorities.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I actively lobby for my perspective before a group makes a decision.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I share my perspective and then genuinely let the group weigh all viewpoints equally.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the type who creates the agenda, not the type who follows one.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am the type who contributes thoughtfully to an agenda someone else has set.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I tend to scope out my territory in any collaborative effort.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I tend to blur territorial lines in favor of fluid collaboration.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am drawn to being the person who makes the toughest calls.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am drawn to being the person who helps the group make tough calls collectively.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that my strength lies in driving momentum.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that my strength lies in sustaining group cohesion.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I commonly take the initiative to close out projects and declare them complete.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer the group to decide together when a project is truly complete.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel responsible for ensuring that meetings have concrete outcomes.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that meetings can be valuable even without concrete outcomes, as long as the group connected.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I like to be the one who determines the scope of what the team works on.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I like when the scope of work is something the whole team defines together.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find that I end up directing the work even when it is not my formal role.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I find that I end up supporting the work quietly even when I could direct it.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am quick to assert my expertise when a topic I know well comes up.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I offer my expertise gently and only when it seems helpful, not as an assertion of authority.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I prefer to set the timeline for a group effort rather than negotiate it.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer that timelines be negotiated among everyone involved.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often rewrite others' contributions to match my vision.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I honor others' contributions and integrate them with minimal changes.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel energized when I single-handedly turn a situation around.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel energized when the group collectively turns a situation around.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am comfortable pulling rank to resolve a disagreement.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer to resolve disagreements through dialogue rather than any form of rank.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I consider it part of my job to mentor others by directing their growth.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I consider it part of my job to support others by walking alongside their growth.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the type who builds the team around my vision rather than the other way around.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am the type who shapes my contribution around the team's existing vision.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I enjoy the sense of being indispensable to a project's direction.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I enjoy knowing that a project can succeed regardless of whether I am personally driving it.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I make a point of having the last say before a group commits to a course of action.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am content letting the group commit without needing to add my final word.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I naturally consolidate decision-making power as projects progress.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I naturally distribute decision-making power more broadly as projects progress.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel most useful when I am calling the shots under pressure.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel most useful when I am steadying the group under pressure.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am comfortable making commitments on behalf of my team without consulting them first.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I always consult with my team before making commitments that involve them.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the person who pushes for a vote when discussion drags on.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am the person who advocates for more discussion when others want to rush a vote.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that leading well means deciding on behalf of those who cannot yet see the full picture.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that leading well means ensuring everyone has access to the full picture.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I frequently reorganize a group's workflow to align with my approach.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I adapt my approach to align with the group's existing workflow.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I tend to define what done looks like before anyone else weighs in.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I ask the group to define what done looks like before we begin.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I like to personally onboard new members and set their expectations.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I like when the group collectively onboards new members.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am recognized for my ability to rally people behind a single vision.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am recognized for my ability to weave diverse viewpoints into a cohesive group effort.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I prefer to own the relationship with external partners on behalf of the team.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer that the team shares relationships with external partners.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am drawn to moments where one person's decision changes everything.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am drawn to moments where a group's collective effort changes everything.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find it easy to overrule suggestions that do not align with my direction.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I find it difficult to overrule suggestions, even when they do not align with my own thinking.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I quickly claim the most strategic position in any group effort.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I happily take whatever position best supports the group's needs.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often speak with an air of finality that signals the discussion is over.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I speak in a way that signals the discussion remains open for others to shape.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I typically introduce structure to group work before anyone else does.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I typically let someone else introduce structure and then adapt to it.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I want to be the one who launches new ventures within my team.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I want to support whoever launches new ventures within my team.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I find it satisfying to have direct reports and be responsible for their output.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I find it satisfying to work as part of a peer network without reporting lines.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the person who sets the agenda for one-on-one conversations.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I let one-on-one conversations flow according to both people's interests.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I enjoy the challenge of getting skeptics to follow my lead.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I enjoy the challenge of finding common ground with skeptics through mutual respect.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am the one who defines success criteria for the group.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am the one who asks the group to co-create success criteria.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel confident imposing boundaries when collaboration gets off track.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I raise concerns when collaboration gets off track but leave it to the group to set boundaries.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I prefer to personally handle the most high-stakes elements of any project.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer that high-stakes elements be handled by whoever the group deems best suited.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am energized by standing at the front of the room and guiding the discussion.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am energized by being in the circle and contributing as one voice among many.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I consider my ability to command attention an important professional asset.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I consider my ability to amplify others' voices an important professional asset.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I tend to make executive decisions about scope changes mid-project.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I tend to consult the team before making any scope changes mid-project.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that groups need a strong anchor, and I provide that.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that groups anchor themselves when every member has genuine influence.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am usually the one who interviews and selects new team members.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer that new team members be selected by the whole team together.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I tend to present a completed analysis rather than share my work in progress for input.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I tend to share my work in progress early so others can shape it with me.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that taking initiative without waiting for permission is a sign of strength.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that seeking input before acting is a sign of strength.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I quickly establish the pecking order in any new group I join.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I resist pecking orders and advocate for egalitarian group dynamics.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I would rather be the one steering than the one rowing.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am happy to row in sync with everyone else rather than steer alone.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I enjoy naming the problem and telling the group how we will solve it.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I enjoy helping the group name the problem together and co-create a solution.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am inclined to enforce standards even when the group has not explicitly agreed to them.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I enforce only standards the group has explicitly agreed to.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I enjoy shaping the culture of any team I join.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I enjoy adapting to and reinforcing the culture that already exists on a team.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel most in my element when I am the person who makes the go or no-go call.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel most in my element when the go or no-go call is a genuine group decision.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I instinctively place myself in the center of the information flow.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I instinctively work to make sure information flows freely to everyone, not through me.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I enjoy being the gatekeeper who controls access to key decisions.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I work to ensure that access to key decisions is open to everyone involved.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am comfortable making big bets on behalf of a group.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer that big bets be discussed thoroughly with the group before anyone commits.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I often proactively define the criteria for who gets to participate in key discussions.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I believe key discussions should be open to anyone who wants to participate.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I see my job as pointing the group in the right direction and clearing the path.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I see my job as walking the path alongside the group, wherever it leads.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel uncomfortable when someone challenges my authority in front of the group.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I welcome challenges to my suggestions because they strengthen the group's thinking.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I tend to be the one who says the meeting is over and assigns next steps.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I tend to let the group decide when the meeting wraps and what the next steps are.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I am drawn to the captain's chair, not the crew's quarters.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I am drawn to a close-knit crew that steers the ship together.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I feel that speed of execution justifies centralized decision-making.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that buy-in justifies taking extra time for collective decision-making.",
-    "direction": "yielding"
-  },
-  {
-    "text": "I commonly find myself the one editing and finalizing group deliverables.",
-    "direction": "agentic"
   },
   {
     "text": "I prefer that group deliverables be finalized by whoever the group entrusts with that task.",
     "direction": "yielding"
   },
   {
-    "text": "I feel a strong pull to shape the agenda of any group I am part of.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel a strong pull to ensure the agenda reflects everyone's interests, not just mine.",
+    "text": "I tend to wait and see if the group will name the elephant in the room on its own.",
     "direction": "yielding"
   },
   {
-    "text": "I rarely second-guess a directive I have given, even under pressure.",
-    "direction": "agentic"
+    "text": "I bring concerns about a plan to the group rather than canceling it myself.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I often help synthesize multiple perspectives into a direction the group can support.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I tend to consult the team before making any scope changes mid-project.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I would rather be an integral part of a large group than lead a small one.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I have been told that I am a great team player.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I often yield to the group's preferred approach, even if mine differs.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I prefer that the team shares relationships with external partners.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I prefer that the group collectively decides when a meeting has run its course.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I tend to share my work in progress early so others can shape it with me.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I often adapt to the norms and expectations already present in a group.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I prefer to ask questions that help someone see for themselves whether their approach is working.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I generally negotiate the terms of a collaboration with all parties.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I prefer that ground rules emerge from group discussion before activity begins.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I trust that the group will find its way forward without one person driving.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I prefer the group to decide together when a project is truly complete.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I often wait for the group to signal readiness before pursuing change.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I prefer that new team members be selected by the whole team together.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I often find that I help the group define what success looks like together.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I prefer that big bets be discussed thoroughly with the group before anyone commits.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I prefer to resolve disagreements through dialogue rather than any form of rank.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I often end up as the reliable supporter in group projects.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I tend to let multiple people contribute to important documents without one person holding the pen.",
+    "direction": "yielding"
+  },
+  {
+    "text": "When a conversation stalls, I invite quieter voices to share before proposing anything.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I find it important to stay aligned with the group, even at the cost of my personal preference.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I feel a surge of energy when a team collectively discovers its new direction.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I want to be part of shaping how a project unfolds, alongside others.",
+    "direction": "yielding"
+  },
+  {
+    "text": "When I have a vision, I wait to see if others share it before moving forward.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I am the one who typically helps the group settle on the key question together.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I like to take time and let the group deliberate before a decision is made.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I am attracted to opportunities where I can blend into a well-functioning team.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I trust that the group will eventually resolve its own circular discussions.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I look for ways to distribute ownership of problems across the group.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I take pride in the behind-the-scenes work that makes a project succeed.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I find it easy to go along with the group's direction, even when I have reservations.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I find it natural to sit back and let the group work through its process.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I feel empowered when the group trusts me enough to share power.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I frequently take on supporting or facilitating roles in team settings.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I find it satisfying to maintain cohesion as the group moves forward.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I rarely overrule a group decision, even when I think there is a better option.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I think it is important to remain open and willing to shift with the group.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I enjoy the freedom that comes with not being the person in charge.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I instinctively adapt to whatever structure the group has established.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I naturally listen first and speak after others have shared their thoughts.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I feel energized when a group reaches a genuine consensus.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I feel responsible for keeping a group connected and cohesive.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I let the group find its own course, even if I see a different path.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I gravitate toward letting discussions continue until the group is satisfied.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I am inclined to keep options open until the group has weighed in.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I thrive when I have the trust of a group that works together.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I naturally defer to others in informal group settings.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I am energized by the process of building a decision together.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I view deferring to others as a service to the group.",
+    "direction": "yielding"
+  },
+  {
+    "text": "When entering a new group, I observe how things work before settling into a role.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I enjoy knowing that a project can succeed regardless of whether I am personally driving it.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I feel most capable when authority is shared across team members in a domain.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I raise concerns when collaboration gets off track but leave it to the group to set boundaries.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I feel most in my element when the go or no-go call is a genuine group decision.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I am typically the one who helps the group keep deliberating until a tie resolves itself.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I offer feedback only when asked or when the group has a feedback culture in place.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I am wired to flag what seems broken and let the group decide how to address it.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I enjoy being part of a group that evaluates ideas together without veto power.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I like when the scope of work is something the whole team defines together.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I see my job as walking the path alongside the group, wherever it leads.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I enjoy adapting to and reinforcing the culture that already exists on a team.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I feel a strong pull to be deeply involved in important initiatives, though not necessarily in charge.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I find it difficult to overrule suggestions, even when they do not align with my own thinking.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I feel comfortable contributing to something that bears the group's stamp, not mine.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I am recognized for my ability to weave diverse viewpoints into a cohesive group effort.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I am the person who asks the team how they would like to frame a problem.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I always consult with my team before making commitments that involve them.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I speak in a way that signals the discussion remains open for others to shape.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I share my perspective and then genuinely let the group weigh all viewpoints equally.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I am content letting the group commit without needing to add my final word.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I want to support whoever launches new ventures within my team.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I ask the group to define what done looks like before we begin.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I feel energized when the group collectively turns a situation around.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I naturally distribute decision-making power more broadly as projects progress.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I feel at home rotating representation duties among group members.",
+    "direction": "yielding"
+  },
+  {
+    "text": "I resist pecking orders and advocate for egalitarian group dynamics.",
+    "direction": "yielding"
   },
   {
     "text": "I am open to revisiting any decision if the group raises new concerns.",
     "direction": "yielding"
   },
   {
-    "text": "I am the one who usually initiates the post-mortem and names what went wrong.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I prefer that post-mortems be a shared reflection rather than one person's assessment.",
+    "text": "I notice that I calibrate my effort to match the group's established rhythm.",
     "direction": "yielding"
   },
   {
-    "text": "I feel that my willingness to take command in uncertain moments is what makes me effective.",
-    "direction": "agentic"
-  },
-  {
-    "text": "I feel that my willingness to let go of control in uncertain moments is what makes the group effective.",
+    "text": "I am energized by helping a group articulate its shared vision to stakeholders.",
     "direction": "yielding"
   }
 ]

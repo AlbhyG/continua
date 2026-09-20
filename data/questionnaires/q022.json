@@ -2,148 +2,148 @@
   "id": 22,
   "questions": [
     {
-      "text": "I naturally claim the most visible and consequential role in any effort.",
-      "direction": "agentic"
+      "text": "I prefer trips where I can wander freely and discover things without an itinerary.",
+      "direction": "spontaneous"
     },
     {
-      "text": "I read social subtext as naturally as I read printed text.",
+      "text": "I sense the difference between a comfortable lull in conversation and an awkward one.",
       "direction": "hyper-attuned"
     },
     {
-      "text": "I find it difficult to sit back when I have a clear idea of what should be done.",
-      "direction": "agentic"
+      "text": "I tend to share my work in progress early so others can shape it with me.",
+      "direction": "yielding"
     },
     {
-      "text": "I find that I have to consciously remind myself to pay attention to social cues.",
+      "text": "I tend to focus on whether an idea is good rather than on how it was received by the group.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I feel uncomfortable when I leave things half-finished at the end of the day.",
+      "text": "When I'm excited about a future event, the excitement builds to a pitch that makes it hard to concentrate on anything else.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I consider it a compliment when people describe me as commanding.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I routinely block off calendar time that belongs exclusively to me.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I develop contingency plans for critical tasks even when things are going well.",
       "direction": "conscientious"
+    },
+    {
+      "text": "I rarely notice when the formality of an interaction is mismatched with the actual closeness of the relationship.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "The wish to respond to others' suffering is one of the strongest forces shaping my daily choices.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice that I can be fully engaged in a situation without my emotional volume increasing.",
+      "direction": "low-reactive"
     },
     {
       "text": "I account for travel time, transitions, and setup when planning my schedule.",
       "direction": "conscientious"
     },
     {
-      "text": "I would invest my inheritance in a cause rather than spend it on myself.",
+      "text": "I tend to set my thermostat, my music, and my lighting to what makes my household most comfortable, not just me.",
       "direction": "altruism"
     },
     {
-      "text": "I detect when someone brings up a tangential topic to distract from something that was about to be discussed.",
-      "direction": "hyper-attuned"
+      "text": "I tend to feel emotionally prepared for whatever comes, because my system doesn't overreact.",
+      "direction": "low-reactive"
     },
     {
-      "text": "I feel that a flexible, exploratory approach to problem-solving leads to more creative outcomes.",
-      "direction": "spontaneous"
+      "text": "I tend not to detect when a story is being told for the benefit of a specific listener.",
+      "direction": "hypo-attuned"
     },
     {
-      "text": "I find that my ability to separate emotional content from factual content during human crises is what makes my help durable and reliable.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I prefer that the team shares relationships with external partners.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I hold the view that every person's first responsibility is to themselves.",
+      "text": "I hold the view that the person most responsible for my well-being is me.",
       "direction": "self-focus"
     },
     {
-      "text": "I hold the view that emotional distance during a crisis is what allows me to think clearly enough to actually be useful.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I rarely experience the physiological markers of stress even in stressful situations.",
+      "text": "My emotional responses have a brevity to them — they arise, deliver their message, and recede.",
       "direction": "low-reactive"
     },
     {
-      "text": "I believe that the depth of my emotional experience gives life its meaning, even when it's painful.",
+      "text": "When I'm upset, the feeling saturates my entire body.",
       "direction": "high-reactive"
     },
     {
-      "text": "I do not naturally sense when a group has collectively moved on from a topic that one person still wants to discuss.",
-      "direction": "hypo-attuned"
+      "text": "When a friend is in real pain, I often feel little wish to relieve it.",
+      "direction": "detachment"
     },
     {
-      "text": "I experience frustration as a mild irritation that fades quickly.",
-      "direction": "low-reactive"
+      "text": "I routinely carry extra supplies, snacks, or resources in case someone around me needs them.",
+      "direction": "altruism"
     },
     {
-      "text": "I trust that the things that truly matter will stay in my mind without a list.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I tend to meet good news with quiet pleasure rather than visible elation.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I do not naturally register the social weight of who introduces whom in a new setting.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I notice that I instinctively assign myself the most critical tasks.",
+      "text": "I would rather make a controversial call than let the team drift without direction.",
       "direction": "agentic"
     },
     {
-      "text": "I keep my options open because my future self may see things differently.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I can read the atmosphere of a meeting within seconds of walking in.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I hold the view that the moral concern I feel for those in pain is the most authentic expression of who I am at my core.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I make sure my workspace is set up before I begin each work session.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I am cautious about overruling others, even when the stakes are high.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I hold the view that my dietary choices should reflect my own health goals, not others' preferences.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I would turn down a dream job if accepting it meant abandoning someone who depends on me.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I would decline an award or honor and redirect attention to the team.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I notice that strong emotions can make me feel physically unsteady.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I feel that the moral pull of suffering is the experience that most forcefully reminds me of what I owe to others.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I believe that my willingness to defer is valuable to those around me.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I experience the first bite of food when I'm truly hungry as an almost overwhelming sensory event.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I routinely upgrade my skills specifically to increase my market value.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I hold the view that a structured, rational framework for engaging with human pain is not a substitute for compassion but a complement that makes compassion more productive.",
+      "text": "Reading or hearing about people in pain usually leaves me without much concern for them.",
       "direction": "detachment"
     },
     {
-      "text": "I feel that the degree to which I prioritize addressing suffering is the most transparent window into my real values.",
+      "text": "I routinely pick up tasks no one else wants to do, so the group can function well.",
+      "direction": "altruism"
+    },
+    {
+      "text": "When something touches me deeply, I can feel it reverberating in my chest for hours.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I like to take time and let the group deliberate before a decision is made.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I am the first to speak up when a group needs someone to take ownership of a problem.",
+      "direction": "agentic"
+    },
+    {
+      "text": "When I understand that someone has been hurt by unfair treatment, I care about the suffering it has caused them.",
       "direction": "empathy"
+    },
+    {
+      "text": "I notice when someone matches the volume of the loudest person in the room to assert themselves.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "When I see someone crying, I rarely feel any wish to help.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I am the kind of person who reads the manual before using a new device.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I am content letting the group commit without needing to add my final word.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I detect when a group member's contribution is being quietly dismissed by the way others respond to it.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I start my day open to whatever feels most compelling rather than consulting a schedule.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I finalize plans late because earlier decisions might need changing anyway.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "When I notice that I have overlooked someone's hardship, I become concerned about what they are experiencing.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to make sure my own needs are fully met before turning my attention outward.",
+      "direction": "self-focus"
     }
   ]
 }

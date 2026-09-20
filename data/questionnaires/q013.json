@@ -2,148 +2,148 @@
   "id": 13,
   "questions": [
     {
-      "text": "I enjoy shaping the culture of any team I join.",
-      "direction": "agentic"
-    },
-    {
-      "text": "My emotional intensity means that I live life in high definition \u2014 nothing is blurred or softened.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I calibrate my effort to the importance of each task, giving more attention to high-impact work.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I do not naturally notice when someone is being deliberately vague to maintain deniability.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "I treat my calendar as a rough suggestion that I adjust throughout the day.",
-      "direction": "spontaneous"
-    },
-    {
-      "text": "I feel that self-interest should always yield to the greater good.",
-      "direction": "altruism"
-    },
-    {
-      "text": "I feel that moral seriousness about suffering means being willing to stay engaged with it long after the emotional intensity has faded.",
-      "direction": "empathy"
-    },
-    {
-      "text": "I pick up on when someone is listening to a story not for the story itself but for what it reveals about the storyteller.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I find that I am able to maintain my composure naturally, without having to actively manage my reactions.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I hold the view that groups need a strong voice to stay focused.",
-      "direction": "agentic"
-    },
-    {
-      "text": "I find that I am more interested in the logical structure of an argument than in its social context.",
-      "direction": "hypo-attuned"
-    },
-    {
-      "text": "When I'm excited about something, I feel it in every cell of my body.",
-      "direction": "high-reactive"
-    },
-    {
-      "text": "I find that maintaining composure when confronted with others' pain allows me to consider all sides of a situation without bias.",
+      "text": "When I recognize that someone could be seriously hurt, preventing that harm rarely matters to me.",
       "direction": "detachment"
     },
     {
-      "text": "I believe that the moral demand of suffering is most authentic when it leads to a change in what I do, not just what I feel.",
-      "direction": "empathy"
+      "text": "I notice expired items when I happen to come across them, not on a set schedule.",
+      "direction": "spontaneous"
     },
     {
-      "text": "I feel that establishing equal footing early strengthens collaboration later.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I detect when someone is using self-deprecating humor to preemptively manage others' impressions.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I find that I can listen to someone describe an intensely emotional situation without my own system activating.",
-      "direction": "low-reactive"
-    },
-    {
-      "text": "I hold the view that I should not apologize for wanting the best for myself.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I find that deliberate emotional regulation during exposure to others' pain preserves both my effectiveness and my long-term wellbeing.",
-      "direction": "detachment"
-    },
-    {
-      "text": "I feel that a well-structured routine is essential to productivity.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I believe that openness to others' views is necessary for effective teamwork.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I let the group collectively decide when a project's scope should change.",
-      "direction": "yielding"
-    },
-    {
-      "text": "I am quick to take the microphone, literally or figuratively.",
+      "text": "I make a point of having the last say before a group commits to a course of action.",
       "direction": "agentic"
     },
     {
-      "text": "I notice when a person's tone becomes overly measured, as if they are carefully controlling their emotions.",
-      "direction": "hyper-attuned"
-    },
-    {
-      "text": "I find that most things that upset other people register as mild inconveniences for me.",
+      "text": "I experience the end of a meaningful period — a trip, a project, a visit — with quiet acceptance rather than anguish.",
       "direction": "low-reactive"
     },
     {
-      "text": "I tend to view my savings as a tool for my own future, not a resource for others.",
-      "direction": "self-focus"
-    },
-    {
-      "text": "I believe that serving others without expectation of return is a core part of who I am.",
+      "text": "I feel most purposeful when I am tutoring, coaching, or guiding someone through a challenge.",
       "direction": "altruism"
     },
     {
-      "text": "I hold the view that moral engagement with suffering is the clearest and most authentic way I have to express what I believe in.",
-      "direction": "empathy"
+      "text": "I tend to spend my weekends doing things for other people rather than pursuing my own hobbies.",
+      "direction": "altruism"
     },
     {
-      "text": "I feel that a commitment made is a debt unpaid until it's fulfilled.",
-      "direction": "conscientious"
-    },
-    {
-      "text": "I tend to use windfalls on personal upgrades rather than distributing them to others.",
+      "text": "I tend to pick the option that strengthens my personal position, even when alternatives would benefit the group more.",
       "direction": "self-focus"
     },
     {
-      "text": "I find that I make better decisions about how to help when I can maintain emotional distance from the pain I am witnessing.",
-      "direction": "detachment"
+      "text": "I often reshape a project's scope based on my own assessment of what matters.",
+      "direction": "agentic"
     },
     {
-      "text": "I often do not realize when a social norm has been violated until someone reacts.",
+      "text": "I can read the atmosphere of a meeting within seconds of walking in.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I experience the buildup to an important event as a nearly unbearable crescendo of feeling.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find it genuinely easier to give than to receive.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I do not usually notice when someone answers a question for another person to control the narrative.",
       "direction": "hypo-attuned"
     },
     {
-      "text": "I would trade personal recognition for the satisfaction of knowing my efforts lifted the team.",
-      "direction": "altruism"
+      "text": "I sense when a person is choosing to sit in a specific seat because of who is already sitting where.",
+      "direction": "hyper-attuned"
     },
     {
-      "text": "I respond to new information by pivoting quickly rather than updating a formal plan.",
-      "direction": "spontaneous"
+      "text": "I usually do not notice when someone adjusts their behavior after getting a social signal from someone else.",
+      "direction": "hypo-attuned"
     },
     {
-      "text": "I follow my curiosity regardless of my energy level, trusting engagement will sustain me.",
-      "direction": "spontaneous"
+      "text": "I prepare agendas before any meeting I'm responsible for.",
+      "direction": "conscientious"
     },
     {
-      "text": "When someone shares good news, my own excitement can rival theirs in intensity.",
+      "text": "As I consider evidence about someone's circumstances, the suffering involved has real weight for me.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I have a strong desire to leave my mark on the things I work on.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I trust that the group will find its way forward without one person driving.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that I cannot simply turn off my concern for someone once I have seen their pain.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find it hard to be around conflict because my body reacts so strongly to tension.",
       "direction": "high-reactive"
+    },
+    {
+      "text": "My internal state resembles a deep, slow river — there is movement, but it is steady and unhurried.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I notice the way people edit their stories in real time based on the reactions they are getting.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I tend to miss the way people calibrate how much personal information to share based on their read of the room.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel uncomfortable starting a project without a clear outline of the steps involved.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "Hearing that someone is going through a hard time rarely changes how I think about my own day.",
+      "direction": "detachment"
+    },
+    {
+      "text": "When I hear unexpected good news, the rush of feeling is so strong I sometimes have to sit down.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I rarely feel the need to decompress emotionally after social interactions.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "When someone I love is going through something painful, I feel little wish to ease it.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel most in my element when the go or no-go call is a genuine group decision.",
+      "direction": "yielding"
+    },
+    {
+      "text": "Another person's pain matters to me whether or not I feel it myself.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that my most important competition is with my past self, and I intend to keep winning.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel that splurging on a personal passion project is money well spent.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I share information as I learn it, refining my understanding in conversation.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I take pride in the behind-the-scenes work that makes a project succeed.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I keep a log of what I accomplish each day to maintain awareness of my productivity.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "When facing a decision, I often go with my first instinct rather than deliberating at length.",
+      "direction": "spontaneous"
     }
   ]
 }
