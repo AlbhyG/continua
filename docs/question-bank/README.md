@@ -12,7 +12,7 @@ A person can take up to 30 different questionnaires without seeing an item twice
 
 The Empathy–Detachment pool was rewritten. In review, nearly all of the earlier Detachment items described emotional composure, analytical style, or being effective in a crisis. Those describe calm and competent helping, not low concern for others' suffering, and they overlap the Reactivity axis. About four fifths of the earlier Empathy items were abstract statements about moral identity or ethical reasoning, or were close paraphrases of each other.
 
-The current items follow these rules (paraphrased; the manuscript stays private, see `../manuscript/README.md`):
+The current items follow the rules below, summarized from the full [item rubric](item-rubric.md) (paraphrased; the manuscript stays private, see `../manuscript/README.md`):
 
 - **Empathy is concern that others' suffering matters and a wish to relieve it**, reached by feeling or by reasoning. The wish counts even if the person lacks the means to act. Actually acting is Self-Orientation (Altruism), not Empathy.
 - **Low Empathy (Detachment)** items say that suffering carries little weight or little wish for relief. Composure, analytical style, being effective, and reputation are other axes or nothing.
