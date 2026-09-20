@@ -34,8 +34,12 @@ were verified denied during migration.
 
 ## Public-history cleanup
 
-The copies introduced in commits `9fcc009` and `6e7150a` were removed from the
-current tree after private backups were verified. They remain accessible through
-old Git commits until repository history is purged. Coordinate that operation
-with collaborators and the repository owner; simply deleting files does not
-retract copies already downloaded, forks, or cached GitHub views.
+The full manuscript files were removed from `main` and its reachable history on
+September 20, 2026, after private backups were verified. GitHub still served old
+commit URLs after the rewrite; cached views and a stale pull-request merge ref
+require GitHub-side cleanup before the exposure can be considered resolved.
+
+Collaborators with the old history should preserve their uncommitted work and
+start from a fresh clone, or carefully rebase only their own changes onto the
+clean `origin/main`. Do not merge the old main history back into the repository.
+Copies already downloaded cannot be recalled by rewriting Git history.
