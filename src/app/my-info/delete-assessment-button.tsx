@@ -10,6 +10,14 @@ export default function DeleteAssessmentButton({ resultId }: { resultId: number 
       onSubmit={(event) => {
         if (!window.confirm('Delete this assessment permanently? This cannot be undone.')) {
           event.preventDefault()
+          return
+        }
+        // The header's "See Results" link is driven by a locally cached
+        // latest_result_id. If we're deleting that same result, clear it so
+        // the header doesn't keep linking to a result that no longer exists.
+        if (window.localStorage.getItem('latest_result_id') === String(resultId)) {
+          window.localStorage.removeItem('latest_result_id')
+          window.dispatchEvent(new Event('continua:latest-result'))
         }
       }}
     >

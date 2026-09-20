@@ -4,7 +4,7 @@ import { getAxisLabel, AXIS_INFO, type AxisScores } from "@/lib/quiz/scoring";
 import { createShareLink } from "@/lib/quiz/share";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { hasAdminContactsSession } from "@/lib/admin/contacts-auth";
+import { isAdmin } from "@/lib/admin/admin-auth";
 
 export async function GET(
   request: NextRequest,
@@ -17,7 +17,7 @@ export async function GET(
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  const hasAdminSession = await hasAdminContactsSession();
+  const hasAdminSession = await isAdmin();
 
   if (isNaN(resultId)) {
     return NextResponse.json({ error: "Invalid result ID" }, { status: 400 });
