@@ -2,12 +2,21 @@
 
 Scope: issues #28, #29, #36 and PR #50 / #24. This is an editorial and
 implementation-readiness review, not instrument validation or approval to ship
-the draft reporting content. Private source: September 13 manuscript, verified
+the draft reporting content. Initial private source: September 13 manuscript, verified
 Markdown SHA-256 `67a870771abe55c9600ddcf5c7e1400fc148eb9e1591f9ad96e77ea8cd12a86e`.
 Source sections reviewed: Chapter 1 definitions; Chapter 3 concern, pathways,
 limits, detachment and complementarity; Chapter 4 three-axis distinction;
 Chapter 5 planning/follow-through; Chapter 7 registration versus expression;
 Chapter 8 configuration and contextual bandwidth.
+
+Rechecked against the September 20 DOCX retrieved after pulling main `04a4e3a`:
+7,243,720 bytes; SHA-256
+`bfba3e9335da01876bada8df3db7a02816029904f548a077421fb4e8bb5d3089`.
+The fetch script succeeded and the hash/size were independently checked. A
+paragraph-level comparison of the two DOCX files found only the Chapter 3
+reasoned-concern clarification and Chapter 4 Singer revision; neither file
+contains tracked insertions/deletions. This is a text review, not layout QA.
+September 20 is the current source; September 13 records original review provenance.
 
 ## #50 / #24: revised source proposal, hold for author review
 
@@ -17,10 +26,12 @@ Retained rows 16/302/323 are also revised. The per-row wording and reasons are i
 `question-bank/empathy-manuscript-revisions.json`; all counts, directions and
 live questionnaires are preserved. See the question-bank review for limitations.
 
-**Source decision:** Chapter 4 uses limited visceral anguish to illustrate low
-Empathy in its Singer example, while Chapter 3 explicitly includes reasoned
-concern. The explicit axis definitions distinguish concern from resonance.
-Albhy should reconcile the example; do not silently adopt it as a scoring rule.
+**Source decision resolved by September 20:** Chapter 4 now places Singer at
+high Empathy/high Altruism despite little emotional resonance, consistent with
+Chapter 3's reasoned route to concern. The prior author-source clarification
+gate is cleared. The 69 proposed item edits remain consistent with that change;
+no further item edits are needed for this source correction. Author acceptance
+and the other bank-review/validation gates remain open.
 
 ## #28: structural coverage complete; substantive revisions still needed
 
@@ -33,7 +44,7 @@ for author review; the original Layer 2 draft has not been silently rewritten.
 | Location | Finding | Proposed wording or constraint |
 | --- | --- | --- |
 | Pair 4, Empathy + Altruism | Requires felt resonance and nearly automatic sacrifice. | Concern for another's suffering combines with a tendency to prioritize others when interests compete. Concern may arise through reasoning or emotion; action remains subject to capacity and context. |
-| Pair 4, Detachment + Altruism | Defines low empathy by rational rather than visceral giving, reproducing the Chapter 4 inconsistency. | Others receive priority despite relatively little personal concern about their suffering, for example through role or principle. Rational motivation alone cannot locate someone here; assess the actual level of concern separately. |
+| Pair 4, Detachment + Altruism | Still defines low empathy by rational rather than visceral giving; that premise is explicitly superseded by September 20 Chapter 4. | Others receive priority despite relatively little personal concern about their suffering, for example through role or principle. Rational motivation alone cannot locate someone here; assess the actual level of concern separately. |
 | Pair 4, Empathy + Self-Focus | Equates empathy with emotional resonance and predicts failure to act. | Others' suffering matters, while competing priorities tend toward one's own interests. Helping may still occur; its cost and context affect the choice. |
 | Pair 1, Hyper-Attuned + Detachment | Treats a con-artist example as the default. | Detailed social perception with relatively little concern for others' suffering. This does not itself establish dishonesty or exploitation. |
 | Pair 2, Self-Focus + Accommodating | Infers vulnerable narcissism, entitlement, and criticism sensitivity. | Personal priorities pursued through accommodation rather than assertion. These axes do not establish entitlement, vulnerability, or pathology. |
@@ -47,6 +58,13 @@ for author review; the original Layer 2 draft has not been silently rewritten.
 The caution about labels applies even though the text is internal: a composition
 engine could otherwise reproduce those claims in a user's report. Check all 60
 anchors against these constraints before approving them for generation.
+
+**Pair 4 recheck:** the finding stands. The September 20 source correction
+removes the manuscript ambiguity but does not update the Layer 2 draft. Singer
+now belongs in Empathy + Altruism, not Detachment + Altruism; neither reasoned
+giving nor low visceral distress distinguishes those anchors. The high-Empathy
+anchors must allow concern without resonance. Keep concern and competing
+resource priorities separate rather than predicting action from either alone.
 
 ## #29: six hypotheses present; proposed narrower defaults
 
@@ -68,6 +86,14 @@ duplicates Self-Orientation. Its proposed change to concern is the most importan
 boundary correction. The Reactivity draft itself notices felt/expressed
 divergence but leaves its hypothesis dependent on their tracking together;
 Chapter 7 says that dependence is unsafe as a general rule.
+
+**Empathy-default recheck:** the concern-based replacement above remains
+supported by September 20 Chapters 3/4. Concern includes motivation for relief;
+it is not mere detection or intellectual acknowledgment. It does not determine
+the eventual allocation of resources. Retest the claimed redundancy with
+Self-Orientation × Agency using that distinction; do not assume that reasoned
+concern is low Empathy or that high concern guarantees sacrifice. The current
+Layer 3 draft still needs this correction; its hypothesis has not been validated.
 
 Validation handoff for #31: cover each modifier's ten eligible primary pairs,
 including low/center/high modifier values with the primary pair fixed. Check

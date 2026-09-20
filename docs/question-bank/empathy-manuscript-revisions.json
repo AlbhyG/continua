@@ -3,7 +3,15 @@
   "manuscript_version": "2026-09-13",
   "manuscript_markdown_sha256": "67a870771abe55c9600ddcf5c7e1400fc148eb9e1591f9ad96e77ea8cd12a86e",
   "status": "editorial proposal; author review required; not validated",
-  "basis": "Chapter 1 Empathy; Chapter 3 Resonance, Perspective-Taking, and Concern / The Limits of Empathy / Low Empathy; Chapter 4 Clarifying the Distinction; Chapter 5 Conscientiousness. Chapter 4 Singer example conflicts with the explicit definitions and requires author resolution.",
+  "basis": "Chapter 1 Empathy; Chapter 3 Resonance, Perspective-Taking, and Concern / The Limits of Empathy / Low Empathy; Chapter 4 Clarifying the Distinction; Chapter 5 Conscientiousness. The original September 13 Chapter 4 Singer conflict was resolved by the September 20 revision; see source_recheck.",
+  "source_recheck": {
+    "manuscript_version": "2026-09-20",
+    "manuscript_docx_sha256": "bfba3e9335da01876bada8df3db7a02816029904f548a077421fb4e8bb5d3089",
+    "size_bytes": 7243720,
+    "retrieval_main_commit": "04a4e3a",
+    "finding": "Chapter 3/4 Singer discrepancy resolved: reasoned concern can be high Empathy despite little emotional resonance. All 69 proposed edits remain aligned; no item text or direction changed in this recheck. Pair 4 and the Layer 3 Empathy default still require the corrections documented in manuscript-followup-review.md.",
+    "remaining_gates": "Author acceptance, retained-bank and redundancy review, target-size decision, instrument validation/versioning."
+  },
   "revisions": [
     {"row":16,"text":"When someone's suffering becomes emotionally vivid to me, I feel a stronger wish to ease it.","reason":"Retain an affective pathway as personal concern rather than claiming emotional connection is necessary for everyone."},
     {"row":235,"text":"When I learn about suffering in a place I have never visited, the people affected matter to me.","reason":"Replace a universal moral claim with reported concern across distance."},

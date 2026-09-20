@@ -8,12 +8,14 @@ retained detachment rows 302/323. All row numbers refer to the one-based pool at
 `5029fcdb0f65cb72fc309496a9dfaeadb097317a`; no rows have been moved or reassigned.
 The other 531 rows retain their exact wording and direction.
 
-Read the September 13 manuscript's Chapter 1 definitions; Chapter 3's concern,
+The original pass read the September 13 manuscript's Chapter 1 definitions; Chapter 3's concern,
 resonance, perspective-taking, limits, and detachment sections; Chapter 4's
 three-axis distinction; and Chapter 5's planning/follow-through definition.
 The private Markdown copy was verified against SHA-256
 `67a870771abe55c9600ddcf5c7e1400fc148eb9e1591f9ad96e77ea8cd12a86e`.
-Retrieve it via [the private-source instructions](../manuscript/README.md).
+The current September 20 DOCX was subsequently fetched and rechecked: 7,243,720
+bytes, SHA-256 `bfba3e9335da01876bada8df3db7a02816029904f548a077421fb4e8bb5d3089`.
+Retrieve the current source via [the private-source instructions](../manuscript/README.md).
 This review does not reproduce or independently verify the earlier external
 review's claimed affective percentage.
 
@@ -44,18 +46,21 @@ The original PR's actual detachment 302 describes becoming effective by setting
 aside emotion; 323 describes helping without emotional entanglement. The review
 comment paraphrases them differently, but identifies the same underlying flaw.
 
-### Manuscript discrepancy requiring author decision
+### Manuscript discrepancy resolved in September 20 source
 
-Chapter 3 explicitly allows reasoned/principled concern as high Empathy. Chapter
-4, under its three-axis distinction, describes Singer as low Empathy with high
-Altruism on the basis of limited visceral anguish and rational giving. That
-example does not establish low concern under the stated definition. This
-proposal follows the explicit definitions in Chapters 1/3/4. Ask Albhy to clarify
-or revise the Chapter 4 example; the private source manuscript has not been edited.
+The September 13 Chapter 4 Singer example conflicted with Chapter 3 by treating
+limited visceral anguish as low Empathy. September 20 Chapter 4 now explicitly
+places Singer at high Empathy/high Altruism despite little emotional resonance;
+Chapter 3 also clarifies the principled route to empathetic concern. The source
+decision is settled. A text comparison found no other paragraph changes, and
+the proposed 69 revisions remain aligned; their original provenance is retained
+alongside the new source recheck in the manifest. No question wording, direction,
+or live instrument changed during this recheck. Pair 4 and the Layer 3 Empathy
+default still require the corrections in [the follow-up review](../manuscript-followup-review.md).
 
 ### Remaining gates
 
-- Author acceptance of the replacement wording and the definition/example discrepancy.
+- Author acceptance of the replacement wording (the definition/example discrepancy is resolved).
 - A broader review of the 531 retained items: this targeted pass does not certify
   the rest of the bank. Calmness, emotional resonance, or analytical ability alone
   are not sufficient evidence of either empathy pole.
