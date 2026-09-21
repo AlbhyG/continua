@@ -227,6 +227,12 @@ export default function QuizResultsPage() {
           </>
         )}
         <Link
+          href="/compare"
+          className="w-full rounded-xl bg-white/40 px-4 py-4 text-center text-sm font-bold text-foreground transition-all hover:bg-white/60"
+        >
+          Compare with someone
+        </Link>
+        <Link
           href="/famous-figures"
           className="w-full rounded-xl bg-white/40 px-4 py-4 text-center text-sm font-bold text-foreground transition-all hover:bg-white/60"
         >

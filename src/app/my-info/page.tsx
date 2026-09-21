@@ -97,12 +97,20 @@ export default async function MyInfoPage() {
               See every saved assessment and how your six coordinates change over time.
             </p>
           </div>
-          <Link
-            href="/quiz"
-            className="rounded-xl bg-white/90 px-5 py-2.5 text-sm font-bold text-foreground transition hover:bg-white"
-          >
-            Take an assessment
-          </Link>
+          <div className="flex flex-wrap gap-2">
+            <Link
+              href="/compare"
+              className="rounded-xl border border-white/40 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-white/10"
+            >
+              Compare
+            </Link>
+            <Link
+              href="/quiz"
+              className="rounded-xl bg-white/90 px-5 py-2.5 text-sm font-bold text-foreground transition hover:bg-white"
+            >
+              Take an assessment
+            </Link>
+          </div>
         </div>
 
         <div className="glass-card mt-5 p-4 text-sm text-foreground/70">
