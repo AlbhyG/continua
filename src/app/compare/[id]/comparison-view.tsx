@@ -118,7 +118,9 @@ function Active({
           { p: other, color: COLOR_OTHER },
         ].map(({ p, color }) => (
           <div key={p.name} className="text-center">
-            <PersonalityOrb data={scoresToOrbData(p.scores)} size={130} />
+            <div className="flex justify-center">
+              <PersonalityOrb data={scoresToOrbData(p.scores)} size={130} />
+            </div>
             <p className="mt-2 flex items-center justify-center gap-1.5 text-sm font-semibold">
               <span className="inline-block h-3 w-3 rounded-full" style={{ background: color }} />
               {p.name}
