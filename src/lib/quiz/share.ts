@@ -1,11 +1,10 @@
 import crypto from "crypto";
 import type { AxisScores } from "./scoring";
 
-const LEGACY_DEFAULT_SECRET =
-  "continua-empathy-spectrum-default-secret-change-me";
-
-const SECRET =
-  process.env.SHARE_SECRET || LEGACY_DEFAULT_SECRET;
+// Share links are signed with SHARE_SECRET. There is deliberately no built-in
+// default: a default in the source would let anyone forge a link. If the secret
+// is not configured, links are neither created nor accepted.
+const SECRET = process.env.SHARE_SECRET;
 
 interface SharePayload {
   score: number;
@@ -14,33 +13,28 @@ interface SharePayload {
   scores?: AxisScores;
 }
 
-export function createShareLink(payload: SharePayload): string {
+function sign(data: string, secret: string): string {
+  return crypto.createHmac("sha256", secret).update(data).digest("base64url");
+}
+
+export function createShareLink(payload: SharePayload): string | null {
+  if (!SECRET) return null;
   const data = Buffer.from(JSON.stringify(payload)).toString("base64url");
-  const sig = crypto
-    .createHmac("sha256", SECRET)
-    .update(data)
-    .digest("base64url");
-  return `/quiz/share?data=${data}&sig=${sig}`;
+  return `/quiz/share?data=${data}&sig=${sign(data, SECRET)}`;
 }
 
 export function verifyShareLink(
   data: string,
   sig: string
 ): SharePayload | null {
-  const secrets = [SECRET];
-  if (SECRET !== LEGACY_DEFAULT_SECRET) {
-    secrets.push(LEGACY_DEFAULT_SECRET);
-  }
+  if (!SECRET) return null;
 
-  const hasValidSignature = secrets.some((secret) => {
-    const expectedSig = crypto
-      .createHmac("sha256", secret)
-      .update(data)
-      .digest("base64url");
-    return sig === expectedSig;
-  });
-
-  if (!hasValidSignature) {
+  const expected = Buffer.from(sign(data, SECRET));
+  const given = Buffer.from(sig);
+  if (
+    expected.length !== given.length ||
+    !crypto.timingSafeEqual(expected, given)
+  ) {
     return null;
   }
   try {
