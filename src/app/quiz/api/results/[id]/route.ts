@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getResultById } from "@/lib/quiz/db";
 import { getAxisLabel, AXIS_INFO, type AxisScores } from "@/lib/quiz/scoring";
-import { createShareLink } from "@/lib/quiz/share";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { hasAdminContactsSession } from "@/lib/admin/contacts-auth";
@@ -59,18 +58,10 @@ export async function GET(
     };
   });
 
-  const shareLink = createShareLink({
-    score: scores.empathy,
-    label: getAxisLabel("empathy", scores.empathy),
-    questionnaireId: row.questionnaire_id,
-    scores,
-  });
-
   return NextResponse.json({
     resultId: row.id,
     scores,
     axisResults,
-    shareLink,
     personId: row.person_id,
   });
 }

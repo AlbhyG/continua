@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import DeleteAssessmentButton from './delete-assessment-button'
+import StopSharingButton from './stop-sharing-button'
 import PasskeySettings from './passkey-settings'
 import { requireUser } from '@/lib/auth/current-user'
+import { createAdminClient } from '@/lib/supabase/admin'
 import HistoryChart from '@/components/quiz/HistoryChart'
 import { AXIS_INFO, type AxisScores } from '@/lib/quiz/scoring'
 
@@ -44,6 +46,18 @@ export default async function MyInfoPage() {
     : { data: [] }
 
   const quizResults = (results ?? []) as QuizResult[]
+
+  // Which of these results currently have an active share link.
+  const sharedIds = new Set<number>()
+  const admin = createAdminClient()
+  if (admin && quizResults.length > 0) {
+    const { data: shares } = await admin
+      .from('result_shares')
+      .select('result_id')
+      .in('result_id', quizResults.map((result) => result.id))
+      .is('revoked_at', null)
+    for (const share of shares ?? []) sharedIds.add(share.result_id)
+  }
 
   return (
     <main className="mx-auto max-w-[960px] px-6 py-16">
@@ -152,7 +166,15 @@ export default async function MyInfoPage() {
                       </p>
                     )}
                     </Link>
-                    <div className="mt-3 flex justify-end border-t border-foreground/10 pt-2">
+                    <div className="mt-3 flex items-center justify-between gap-2 border-t border-foreground/10 pt-2">
+                      <div className="flex items-center gap-2">
+                        {sharedIds.has(result.id) && (
+                          <>
+                            <span className="text-xs font-semibold text-foreground/60">Shared link active</span>
+                            <StopSharingButton resultId={result.id} />
+                          </>
+                        )}
+                      </div>
                       <DeleteAssessmentButton resultId={result.id} />
                     </div>
                   </article>
