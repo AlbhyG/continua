@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
-import AssessmentLimitations from "@/components/AssessmentLimitations";
+import CompareDisclaimer from "@/components/compare/CompareDisclaimer";
 
 type Summary = {
   id: string;
@@ -14,9 +14,6 @@ type Summary = {
   canView: boolean;
   createdAt: string;
 };
-
-const RELATIONSHIP_LINE =
-  "This is not an assessment of relationship health or compatibility, and it is not a substitute for counseling or other professional relationship support.";
 
 export default function CompareHome() {
   const [items, setItems] = useState<Summary[] | null>(null);
@@ -81,9 +78,8 @@ export default function CompareHome() {
         any time.
       </p>
 
-      <div className="mt-6">
-        <AssessmentLimitations />
-        <p className="mt-3 rounded-xl bg-white/70 p-4 text-sm text-foreground">{RELATIONSHIP_LINE}</p>
+      <div className="mt-5">
+        <CompareDisclaimer />
       </div>
 
       {message && <p className="glass-card mt-6 p-4 text-sm font-semibold text-foreground/80">{message}</p>}
@@ -101,7 +97,6 @@ export default function CompareHome() {
                 assessments. Nothing is shown until you accept. Either of you can end the comparison at any
                 time, and it disappears for both of you.
               </p>
-              <p className="mt-2 text-sm text-foreground/60">{RELATIONSHIP_LINE}</p>
               <div className="mt-4 flex gap-3">
                 <button
                   disabled={busy}

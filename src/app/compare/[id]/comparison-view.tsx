@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
-import AssessmentLimitations from "@/components/AssessmentLimitations";
+import CompareDisclaimer from "@/components/compare/CompareDisclaimer";
 import DumbbellChart, { COLOR_ME, COLOR_OTHER } from "@/components/compare/DumbbellChart";
 import { scoresToOrbData } from "@/lib/quiz/orb-mapping";
 import { AXIS_INFO, type AxisScores } from "@/lib/quiz/scoring";
@@ -129,13 +129,8 @@ function Active({
         ))}
       </section>
 
-      <div className="mt-6">
-        <AssessmentLimitations />
-        <p className="mt-3 rounded-xl bg-white/70 p-4 text-sm leading-relaxed text-foreground">
-          This is not an assessment of relationship health or compatibility, and it is not a substitute for
-          counseling or other professional relationship support. It describes each person&apos;s self-reported
-          tendencies, not facts about the relationship or evidence about either person&apos;s character.
-        </p>
+      <div className="mt-5">
+        <CompareDisclaimer />
       </div>
 
       <p className="mt-6 text-lg text-white">
@@ -143,8 +138,7 @@ function Active({
           <>The two profiles are close on every axis.</>
         ) : (
           <>
-            Largest gap: <b>{AXIS_INFO[largest.axis].name}</b> ({largest.gap} points). The chart order is fixed
-            and does not change.
+            Largest gap: <b>{AXIS_INFO[largest.axis].name}</b> ({largest.gap} points).
           </>
         )}
       </p>
