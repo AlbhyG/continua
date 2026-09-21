@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import { scoresToOrbData } from "@/lib/quiz/orb-mapping";
+import AssessmentLimitations from "@/components/AssessmentLimitations";
 
 const RadarProfile = dynamic(
   () => import("@/components/quiz/RadarProfile"),
@@ -46,18 +47,17 @@ function ShareContent() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const data = searchParams.get("data");
-    const sig = searchParams.get("sig");
+    const token = searchParams.get("t");
 
-    if (!data || !sig) {
-      setError("Invalid share link.");
+    if (!token) {
+      setError("This share link is not valid.");
       setLoading(false);
       return;
     }
 
-    fetch(
-      `/quiz/api/share-verify?data=${encodeURIComponent(data)}&sig=${encodeURIComponent(sig)}`
-    )
+    fetch(`/quiz/api/share-verify?t=${encodeURIComponent(token)}`, {
+      cache: "no-store",
+    })
       .then((res) => {
         if (!res.ok) throw new Error("Invalid");
         return res.json();
@@ -67,7 +67,7 @@ function ShareContent() {
         setLoading(false);
       })
       .catch(() => {
-        setError("This share link is invalid or has been tampered with.");
+        setError("This link is no longer available. The person who shared it may have turned it off.");
         setLoading(false);
       });
   }, [searchParams]);
@@ -83,7 +83,7 @@ function ShareContent() {
   if (error) {
     return (
       <div className="mx-auto max-w-2xl px-6 py-12">
-        <h1 className="text-3xl font-bold text-white">Invalid Link</h1>
+        <h1 className="text-3xl font-bold text-white">Link Unavailable</h1>
         <p className="mt-4 text-white/60">{error}</p>
         <a
           href="/quiz"
@@ -109,6 +109,8 @@ function ShareContent() {
           {result.axisResults ? "Personality Graph" : "Empathy–Detachment Spectrum"}
         </h1>
       </div>
+
+      <div className="mt-6"><AssessmentLimitations /></div>
 
       {orbData && (
         <div className="mt-8 flex justify-center">

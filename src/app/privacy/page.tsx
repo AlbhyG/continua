@@ -102,16 +102,13 @@ export default function PrivacyPage() {
             Continua allows users to create a link for sharing assessment results with other people.
           </p>
           <p className="mt-3">
-            When you choose to create and share such a link, your assessment scores are included in the information contained in the link. Anyone who obtains the link may be able to view the assessment results associated with it.
+            Anyone who has the link can view the assessment scores associated with it, without signing in. The link itself does not contain your name or email address.
           </p>
           <p className="mt-3">
-            You should therefore share an assessment link only with people you intend to have access to those results. A recipient may also be able to copy, save, forward, or otherwise retain information that you have shared.
+            You can turn a link off at any time from the results page or from My Info, and a link stops working if you delete the result or your account. A person who opened the link before you turned it off may have copied, saved, forwarded, or otherwise retained what they saw.
           </p>
           <p className="mt-3">
-            Do not post a sharing link publicly unless you intend the associated assessment results to be publicly accessible.
-          </p>
-          <p className="mt-3">
-            Shared links currently cannot be disabled after they are created, including if you later delete the result or your account.
+            You should therefore share an assessment link only with people you intend to have access to those results. Do not post a sharing link publicly unless you intend the associated assessment results to be publicly accessible. Only your own results can be shared, not results you recorded for another person.
           </p>
         </section>
 

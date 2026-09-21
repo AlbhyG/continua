@@ -35,7 +35,6 @@ interface AxisResult {
 interface ResultData {
   scores: Record<string, number>;
   axisResults: AxisResult[];
-  shareLink: string | null;
   personId?: string | null;
   personName?: string | null;
 }
@@ -47,6 +46,8 @@ export default function QuizResultsPage() {
 
   const [result, setResult] = useState<ResultData | null>(null);
   const [copied, setCopied] = useState(false);
+  const [share, setShare] = useState<{ shareable: boolean; url: string | null } | null>(null);
+  const [shareBusy, setShareBusy] = useState(false);
 
   useEffect(() => {
     const stored = sessionStorage.getItem(`result_${resultId}`);
@@ -61,6 +62,13 @@ export default function QuizResultsPage() {
         .then(setResult)
         .catch(() => {});
     }
+  }, [resultId]);
+
+  useEffect(() => {
+    fetch(`/quiz/api/shares?resultId=${encodeURIComponent(String(resultId))}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => setShare(data))
+      .catch(() => setShare(null));
   }, [resultId]);
 
   async function takeAnother() {
@@ -83,13 +91,50 @@ export default function QuizResultsPage() {
     router.push(`/quiz/take/${id}${next.size ? `?${next.toString()}` : ""}`);
   }
 
-  function copyShareLink() {
-    if (!result || !result.shareLink) return;
-    const url = window.location.origin + result.shareLink;
-    navigator.clipboard.writeText(url).then(() => {
+  async function copyText(text: string) {
+    try {
+      await navigator.clipboard.writeText(text);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-    });
+    } catch {
+      // The link is also shown below the button, so it can be copied by hand.
+    }
+  }
+
+  async function shareResult() {
+    if (shareBusy) return;
+    setShareBusy(true);
+    try {
+      let url = share?.url ?? null;
+      if (!url) {
+        const res = await fetch("/quiz/api/shares", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ resultId: Number(resultId) }),
+        });
+        if (!res.ok) return;
+        url = (await res.json()).url as string;
+        setShare({ shareable: true, url });
+      }
+      await copyText(window.location.origin + url);
+    } finally {
+      setShareBusy(false);
+    }
+  }
+
+  async function stopSharing() {
+    if (shareBusy) return;
+    if (!window.confirm("Turn off this link? Anyone who has it will no longer be able to open it.")) return;
+    setShareBusy(true);
+    try {
+      const res = await fetch(
+        `/quiz/api/shares?resultId=${encodeURIComponent(String(resultId))}`,
+        { method: "DELETE" }
+      );
+      if (res.ok) setShare({ shareable: true, url: null });
+    } finally {
+      setShareBusy(false);
+    }
   }
 
   if (!result) {
@@ -155,13 +200,31 @@ export default function QuizResultsPage() {
         >
           Take Another Assessment
         </button>
-        {result.shareLink && (
-          <button
-            onClick={copyShareLink}
-            className="w-full rounded-xl bg-white/40 px-4 py-4 text-sm font-bold text-foreground transition-all hover:bg-white/60"
-          >
-            {copied ? "Link Copied!" : "Share Result"}
-          </button>
+        {share?.shareable && (
+          <>
+            <button
+              onClick={shareResult}
+              disabled={shareBusy}
+              className="w-full rounded-xl bg-white/40 px-4 py-4 text-sm font-bold text-foreground transition-all hover:bg-white/60 disabled:opacity-60"
+            >
+              {copied ? "Link Copied!" : share.url ? "Copy Share Link" : "Share Result"}
+            </button>
+            {share.url && (
+              <div className="rounded-xl bg-white/30 px-4 py-3 text-xs text-foreground/70">
+                <p className="break-all">{typeof window !== "undefined" ? window.location.origin : ""}{share.url}</p>
+                <p className="mt-2">
+                  Anyone with this link can view these scores without signing in.
+                </p>
+                <button
+                  onClick={stopSharing}
+                  disabled={shareBusy}
+                  className="mt-2 font-semibold underline underline-offset-4 disabled:opacity-60"
+                >
+                  Stop sharing
+                </button>
+              </div>
+            )}
+          </>
         )}
         <Link
           href="/famous-figures"
