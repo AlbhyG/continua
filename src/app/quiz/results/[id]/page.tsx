@@ -6,6 +6,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { scoresToOrbData } from "@/lib/quiz/orb-mapping";
 import AssessmentLimitations from "@/components/AssessmentLimitations";
+import { SHOW_PEOPLE_COMPARISON } from "@/lib/site-mode";
 
 const RadarProfile = dynamic(
   () => import("@/components/quiz/RadarProfile"),
@@ -374,6 +375,14 @@ export default function QuizResultsPage() {
           </p>
         )}
           </>
+        )}
+        {SHOW_PEOPLE_COMPARISON && (
+          <Link
+            href="/compare/people"
+            className="w-full rounded-xl bg-white/40 px-4 py-4 text-center text-sm font-bold text-foreground transition-all hover:bg-white/60"
+          >
+            Compare with someone
+          </Link>
         )}
         <Link
           href="/famous-figures"
