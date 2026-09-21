@@ -110,6 +110,9 @@ export default function PrivacyPage() {
           <p className="mt-3">
             Do not post a sharing link publicly unless you intend the associated assessment results to be publicly accessible.
           </p>
+          <p className="mt-3">
+            Shared links currently cannot be disabled after they are created, including if you later delete the result or your account.
+          </p>
         </section>
 
         <section>
