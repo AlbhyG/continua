@@ -52,7 +52,11 @@ export default function PasskeySettings() {
   return (
     <section className="glass-card mt-8 p-5 md:p-6" aria-labelledby="passkeys-title">
       <h2 id="passkeys-title" className="text-xl font-bold">Passkeys</h2>
-      <p className="mt-2 text-sm text-foreground/70">Sign in with your fingerprint, face, device PIN, or security key. Email sign-in remains available if you lose access to your passkeys.</p>
+      {!loading && passkeys.length > 0 ? (
+        <p className="mt-2 text-sm text-foreground/70">You have a passkey saved on this device. Use your fingerprint, face, or device PIN to sign in next time — no password needed.</p>
+      ) : (
+        <p className="mt-2 text-sm text-foreground/70">Sign in with your fingerprint, face, device PIN, or security key. Email sign-in remains available if you lose access to your passkeys.</p>
+      )}
       {!supported && <p className="mt-3 text-sm text-foreground/70">To add a passkey, open continua.info in a browser that supports passkeys.</p>}
       {error && <p role="alert" className="mt-3 text-sm text-red-700">{error}</p>}
       {message && <p role="status" className="mt-3 text-sm text-foreground/80">{message}</p>}
@@ -108,14 +112,25 @@ export default function PasskeySettings() {
           </ul>
         </>
       )}
-      <button disabled={busy || loading || !supported} onClick={() => void run(async () => {
-        const controller = new AbortController()
-        ceremony.current = controller
-        const { error } = await createClient().auth.registerPasskey({ options: { signal: controller.signal } })
-        if (error) throw error
-      }, 'Passkey added. You can use it the next time you sign in.')} className="mt-4 rounded-xl bg-accent px-5 py-2.5 text-sm font-bold text-white transition hover:bg-accent/85 disabled:opacity-50">
-        {busy ? 'Working…' : 'Add a passkey'}
-      </button>
+      {(!loading && passkeys.length > 0) ? (
+        <button disabled={busy || loading || !supported} onClick={() => void run(async () => {
+          const controller = new AbortController()
+          ceremony.current = controller
+          const { error } = await createClient().auth.registerPasskey({ options: { signal: controller.signal } })
+          if (error) throw error
+        }, 'Passkey added. You can use it the next time you sign in.')} className="mt-4 text-sm font-semibold underline disabled:opacity-50">
+          {busy ? 'Working…' : '+ Add a passkey for another device'}
+        </button>
+      ) : (
+        <button disabled={busy || loading || !supported} onClick={() => void run(async () => {
+          const controller = new AbortController()
+          ceremony.current = controller
+          const { error } = await createClient().auth.registerPasskey({ options: { signal: controller.signal } })
+          if (error) throw error
+        }, 'Passkey added. You can use it the next time you sign in.')} className="mt-4 rounded-xl bg-accent px-5 py-2.5 text-sm font-bold text-white transition hover:bg-accent/85 disabled:opacity-50">
+          {busy ? 'Working…' : 'Add a passkey'}
+        </button>
+      )}
       {busy && ceremony.current && <button onClick={() => ceremony.current?.abort()} className="ml-4 text-sm underline">Cancel passkey request</button>}
     </section>
   )

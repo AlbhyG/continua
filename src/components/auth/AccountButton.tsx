@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { createClient } from '@/lib/supabase/client'
 
@@ -12,6 +13,7 @@ export default function AccountButton({
   onNavigate?: () => void
 }) {
   const [signedIn, setSignedIn] = useState<boolean | null>(null)
+  const pathname = usePathname()
 
   useEffect(() => {
     const supabase = createClient()
@@ -33,8 +35,12 @@ export default function AccountButton({
   }
 
   if (!signedIn) {
+    // Return to the page you were on, unless that page is itself part of the
+    // sign-in flow (avoids a pointless next=/login round trip).
+    const returnTo = /^\/(login|auth)(\/|$)/.test(pathname) ? undefined : pathname
+    const href = returnTo ? `/login?next=${encodeURIComponent(returnTo)}` : '/login'
     return (
-      <Link href="/login" onClick={onNavigate} className={linkClassName}>
+      <Link href={href} onClick={onNavigate} className={linkClassName}>
         Sign in
       </Link>
     )
