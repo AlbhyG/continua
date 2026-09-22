@@ -9,7 +9,7 @@ export function passkeyErrorMessage(error: unknown): string {
   const value = error as { code?: string; name?: string; message?: string; cause?: { name?: string } } | null
   const code = value?.code
   if (code === 'webauthn_credential_exists' || code === 'ERROR_AUTHENTICATOR_PREVIOUSLY_REGISTERED' || value?.name === 'InvalidStateError' || value?.cause?.name === 'InvalidStateError') {
-    return 'This passkey is already registered. You can use it to sign in.'
+    return 'You already have a passkey saved on this device. To add another, use a different device, browser, or security key.'
   }
   if (code === 'passkey_disabled') return 'Passkeys are temporarily unavailable. Please use an email sign-in link.'
   if (code === 'too_many_passkeys') return 'You have reached the passkey limit. Remove an unused passkey before adding another.'
