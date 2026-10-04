@@ -65,17 +65,17 @@ Low structural containment plus high emotional amplitude — chasing an impulse 
 
 ## 4. Empathy × Self-Orientation
 
-**Empathy + Altruism — "the felt calling"**
-The central high-high anchor: felt resonance with others' suffering paired with a life whose priorities have genuinely reorganized around service. Suffering registers as moral pain and generosity flows as an almost automatic response. Risk: the "selfless giver" pattern the book describes — generosity without adequate self-protection, ending in exhaustion or resentment.
+**Empathy + Altruism — "the calling"**
+Others' suffering registers as a moral pull that demands a response — whether felt viscerally or arrived at through reasoning — and priorities have genuinely reorganized around answering it. Risk: the "selfless giver" pattern the book describes — generosity without adequate self-protection, ending in exhaustion or resentment.
 
 **Detachment + Self-Focus — "the closed loop"**
-Neither perceiving others' suffering as a pull nor directing resources outward. The most self-contained anchor on this pair — not necessarily hostile, simply organized entirely around the self's own concerns, with no countervailing moral or motivational force from either axis pulling attention elsewhere.
+Others' suffering exerts little moral pull, and priorities run toward the self's own concerns. The most self-contained anchor on this pair — not necessarily hostile, simply organized around the self, with no countervailing force from either axis pulling attention elsewhere.
 
-**Detachment + Altruism — "principled giving"**
-A pattern the book documents explicitly: giving driven by reasoned principle rather than felt anguish — compelled by an argument about what produces the best outcome, not by visceral distress over a stranger's suffering. The giving is real; the fuel is deliberative rather than emotional. Distinguish from Empathy + Altruism by asking what would happen if the emotional pull were absent — here, the giving continues unchanged, because it was never running on that pull to begin with.
+**Detachment + Altruism — "duty without the pull"**
+Others receive priority even though their suffering exerts relatively little moral pull. The giving comes from role, obligation, or principle rather than from the suffering itself. Reasoning alone does not place someone here: a person who reasons their way to real moral concern belongs in Empathy + Altruism. Measure how much the suffering matters, not how the person got there.
 
 **Empathy + Self-Focus — "moved but not moved to act"**
-Genuine emotional resonance with others' suffering that does not translate into where resources or priority actually flow. This is a harder anchor to spot than the others because the felt concern is authentic — the gap is specifically at the point where feeling would need to become sacrifice, and the self-orientation wins that contest reliably. Reads to others as inconsistency ("you seemed so moved — why didn't you help?") rather than as coldness.
+Others' suffering registers as a genuine moral pull, but when interests compete, priority tends to flow toward the self. Helping still happens; its cost and the context shape whether the pull wins. A harder anchor to spot than the others because the concern is authentic — the gap appears specifically where concern would need to become sacrifice. Reads to others as inconsistency ("you seemed to care — why didn't you help?") rather than as coldness.
 
 ---
 
