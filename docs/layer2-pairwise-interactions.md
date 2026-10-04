@@ -106,8 +106,8 @@ Neither the moral pull nor the assertive instinct is present. Not cruelty — cl
 **Empathy + Accommodating — "the quiet carrier"**
 Real, sometimes intense concern for others' suffering, but expressed through support and deference rather than direct intervention — absorbing others' distress, adjusting one's own plans, without asserting what the situation might actually require. Risk: the person can end up carrying significant emotional weight for others while having little influence over the conditions causing it, since assertion itself feels costly.
 
-**Detachment + Agentic — "the book's own named danger"**
-The combination the book flags explicitly as producing "predatory dynamics": directive, confident, comfortable with power, and unmoved by the cost that direction imposes on others. Not every instance is predatory — low empathy plus agency can also simply mean decisive leadership that doesn't need emotional buy-in to function — but this is the anchor where the risk is highest and should be weighted accordingly in any composition that surfaces this pair.
+**Detachment + Agentic — "the unsentimental driver"**
+Directive and confident, comfortable with power, and acting without being slowed by the emotional cost decisions impose on others. Most often this is decisive leadership that doesn't need emotional buy-in to function — the turnaround executive, the commander who makes the hard call. The book's "predatory dynamics" warning applies at the edge, where this combines with strong Self-Focus and other people become instruments rather than constraints. Without that third ingredient, these two scores describe a style, not a danger.
 
 ---
 
