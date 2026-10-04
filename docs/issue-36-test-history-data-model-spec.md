@@ -29,6 +29,7 @@ ADD COLUMN IF NOT EXISTS context_tag TEXT
 - Fixed enum via `CHECK`, not a separate lookup table - matches "not user-extensible" in the issue and keeps this a one-line addition rather than new schema surface.
 - Nullable - both fields are optional at completion time per the issue and 2.6.3.
 - If the category list needs to change later (the requirements doc explicitly says it can be revisited), that's a `CHECK` constraint migration, not a data migration - low cost either way.
+- **Not encrypted (decided by Albhy, October 4, 2026).** The tag stays a plain enum column, protected by the same owner-only row-level security as the scores. It is one of a few fixed labels that range display (#38) and the retake nudge (#44) must group and filter by; encrypting it would add real cost for little privacy gain. Field-level encryption applies to the free-text note only (section 3). Requirements §4.3 is updated to match.
 
 ## 3. Free-text note + field-level encryption
 
