@@ -200,7 +200,7 @@ Other-directed motivation channeled through discipline and planning — structur
 Attention and resources center on the self, and follow-through on any given commitment (to self or others) is inconsistent — priorities shift with whatever the self wants right now rather than tracking toward a sustained personal or shared goal. Distinct from Self-Focus + Conscientious below in that even self-serving plans here are prone to abandonment.
 
 **Altruism + Impulsive — "generous in the moment"**
-Other-directed motivation without the structural follow-through to sustain it — genuine, spontaneous generosity (dropping everything to help) without the systems that would make the help durable or repeatable. This is close to Empathy + Impulsive (the responsive but unreliable helper) but the driver is priority-of-resources rather than moral resonance specifically.
+Other-directed motivation without the structural follow-through to sustain it — genuine, spontaneous generosity (dropping everything to help) without the systems that would make the help durable or repeatable. This is close to Empathy + Impulsive (the responsive but unreliable helper) but the driver is priority-of-resources rather than moral pull specifically.
 
 **Self-Focus + Conscientious — "the disciplined self-builder"**
 Attention centers on the self, pursued with real structure and follow-through — ambition, personal achievement, and long-term self-interest executed systematically. The book is explicit that self-orientation is not itself pathological; paired with conscientiousness this is often simply effective, sustained personal achievement, with the same caveat as elsewhere that the edge case is when others' interests stop counting as a constraint at all.
@@ -213,13 +213,13 @@ Attention centers on the self, pursued with real structure and follow-through �
 Other-directed motivation combined with high emotional amplitude — a moral wrong doesn't just register as something to address eventually, it produces the kind of visceral disturbance the book describes as "fuel for art, activism, or reform." Generosity here can arrive with real force and urgency, at some risk of the same burnout pattern the book flags for high reactivity generally.
 
 **Self-Focus + Low-Reactive — "unmoved and unmoving"**
-Attention centers on the self, and little outside the self generates much amplitude either way. A calm, low-urgency profile in which other people's needs are unlikely to register with the force required to redirect priority, partly because the underlying orientation doesn't point outward and partly because not much registers with much force at all.
+Attention centers on the self, and little produces a strong internal response either way. A calm, low-urgency profile; others' needs, when they compete with one's own, rarely generate the pressure that would redirect priority.
 
 **Altruism + Low-Reactive — "principled and composed"**
-Other-directed priority sustained without the intensity spikes that can burn out the high-reactive altruist — giving driven by reasoned principle rather than visceral anguish, combined with an even nervous system. This anchor is well-positioned for the kind of sustained, undramatic service the book associates with structural rather than emotionally-driven giving.
+Other-directed priority sustained without the intensity spikes that can burn out the high-reactive altruist. The pull to give may be strong; it simply doesn't arrive as alarm. Well suited to the sustained, undramatic service the book associates with structural rather than crisis-driven giving.
 
 **Self-Focus + High-Reactive — "the volatile self"**
-Attention centers on the self, and threats or slights to the self's status, image, or interests produce outsized emotional response. This is close to the book's account of vulnerable narcissism's fragility (hypersensitivity to criticism) amplified by a nervous system with a low threshold for activation — the reaction to a perceived slight can be disproportionate to the triggering event.
+Attention centers on the self, and threats to the self's interests, image, or standing produce a strong internal response — often more than the event warrants. Typically this means being easily stung, quick to feel slighted, slow to settle. The book's vulnerable-narcissism fragility sits at the far edge, not the center.
 
 ---
 
@@ -248,7 +248,7 @@ Comfort with initiative and assertion combined with high emotional amplitude —
 Comfort receding paired with a nervous system that isn't easily activated — a profile that neither seeks the lead nor is destabilized by much of anything. Genuinely stabilizing in group settings (the book's finding that even one accommodating, low-drama member improves team cohesion), at the cost of rarely supplying the urgency that would push a group to act.
 
 **Agentic + Low-Reactive — "the calm commander"**
-Directive and confident, without the amplitude that would make that direction volatile — the book's socialized-power pattern, calibrating assertiveness to context, decisive in emergencies without being destabilized by them. Closest to what the book describes as "flexible leadership": authority exercised without the emotional cost of high reactivity layered on top.
+Directive and confident, without the amplitude that would make that direction volatile — the book's socialized-power pattern, calibrating assertiveness to context, steady under pressure, so decisions aren't distorted by alarm. Closest to what the book describes as "flexible leadership": authority exercised without the emotional cost of high reactivity layered on top.
 
 **Accommodating + High-Reactive — "the pressured deferrer"**
 Discomfort with assertion combined with high emotional amplitude — the book's description of assertion itself feeling "stressful" for the accommodating end is intensified here: conflict or the prospect of it can produce real emotional flooding, even though the response to that flooding is typically further withdrawal rather than confrontation. This is the anchor most likely to absorb group tension internally at real personal cost, since the amplitude registers the strain even though the disposition doesn't act on it directly.
