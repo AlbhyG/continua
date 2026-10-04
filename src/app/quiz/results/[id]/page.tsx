@@ -35,7 +35,7 @@ interface AxisResult {
 interface ResultData {
   scores: Record<string, number>;
   axisResults: AxisResult[];
-  shareLink: string;
+  shareLink: string | null;
   personId?: string | null;
   personName?: string | null;
 }
@@ -84,7 +84,7 @@ export default function QuizResultsPage() {
   }
 
   function copyShareLink() {
-    if (!result) return;
+    if (!result || !result.shareLink) return;
     const url = window.location.origin + result.shareLink;
     navigator.clipboard.writeText(url).then(() => {
       setCopied(true);
@@ -155,12 +155,14 @@ export default function QuizResultsPage() {
         >
           Take Another Assessment
         </button>
-        <button
-          onClick={copyShareLink}
-          className="w-full rounded-xl bg-white/40 px-4 py-4 text-sm font-bold text-foreground transition-all hover:bg-white/60"
-        >
-          {copied ? "Link Copied!" : "Share Result"}
-        </button>
+        {result.shareLink && (
+          <button
+            onClick={copyShareLink}
+            className="w-full rounded-xl bg-white/40 px-4 py-4 text-sm font-bold text-foreground transition-all hover:bg-white/60"
+          >
+            {copied ? "Link Copied!" : "Share Result"}
+          </button>
+        )}
         <Link
           href="/famous-figures"
           className="w-full rounded-xl bg-white/40 px-4 py-4 text-center text-sm font-bold text-foreground transition-all hover:bg-white/60"
