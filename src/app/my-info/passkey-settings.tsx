@@ -52,7 +52,7 @@ export default function PasskeySettings() {
   return (
     <section className="glass-card mt-8 p-5 md:p-6" aria-labelledby="passkeys-title">
       <h2 id="passkeys-title" className="text-xl font-bold">Passkeys</h2>
-      <p className="mt-2 text-sm text-foreground/70">Sign in with your fingerprint, face, device PIN, or security key. Email sign-in remains available if you lose access to your passkeys.</p>
+      <p className="mt-2 text-sm text-foreground/70">You can add more than one passkey to the same account. To add one for your iPhone or another device, sign in there by email and choose Add a passkey. Passkeys saved in one password manager may not appear in another. Email sign-in remains available if you lose access to your passkeys.</p>
       {!supported && <p className="mt-3 text-sm text-foreground/70">To add a passkey, open continua.info in a browser that supports passkeys.</p>}
       {error && <p role="alert" className="mt-3 text-sm text-red-700">{error}</p>}
       {message && <p role="status" className="mt-3 text-sm text-foreground/80">{message}</p>}

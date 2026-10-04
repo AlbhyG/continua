@@ -43,3 +43,13 @@ Local UI testing can set `CONTINUA_LOCAL_AUTH_SERVER=http://localhost:3111` whil
 Supabase **Authentication → Passkeys** controls the backend feature. If unavailable, email sign-in remains functional. To revoke a lost credential, the user can sign in by email and remove it in My Info. Never put the Supabase service-role key or Management API token in the browser.
 
 Reference: https://supabase.com/docs/guides/auth/passkeys
+
+### Sign-in incident release (October 4, 2026)
+
+Sign-in emails previously used Supabase's built-in sender (no custom SMTP, two messages/hour), independently of the site's Resend contact emails. Auth now uses Resend SMTP with `reply@continua.info` and a 30/hour project limit. Existing per-address/IP limits remain in Supabase. SMTP authentication was verified without sending mail; inbox receipt remains a device/mailbox check.
+
+The email request uses the public Auth OTP endpoint with a 15-second abort timeout and visible retry feedback. It does not wait for conditional WebAuthn or browser PKCE storage. The production signup and magic-link templates both use `supabase/templates/sign-in.html`: token-hash callback verification establishes cookies on whichever device opens the email, carrying the allowlisted callback's return destination. Keep the old PKCE-code callback for previously issued links. Apply templates only after the updated callback is live; callback allowlists cover both production origins including query parameters.
+
+Context-free sign-in goes home. Header sign-in carries the current path/query/fragment. Relative same-site paths and HTTPS URLs on continua.info/www.continua.info are validated and converted to paths; external, malformed, protocol-relative and recursive auth destinations go home. Background passkey autofill stays silent; **Sign in with a passkey** opens the explicit prompt and failure shows email recovery. Accounts can register multiple passkeys from My Info, but their availability on a device depends on its password manager.
+
+See `docs/github-issue-audit-2026-10-04.md` for the complete backlog audit and verification limits.

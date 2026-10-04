@@ -46,6 +46,8 @@ test('email-first UI never opens a modal passkey prompt automatically and email 
   await expect(page.getByLabel('Email', { exact: true })).toHaveAttribute('autocomplete', 'username webauthn')
   await expect(page.locator('input[type="password"], #login-name')).toHaveCount(0)
   await expect(page.locator('html')).toHaveAttribute('data-autofill', 'conditional')
+  await expect(page.getByText('Waiting for your passkey…')).toHaveCount(0)
+  await expect(page.getByRole('button', { name: 'Cancel passkey request' })).toHaveCount(0)
   await page.getByLabel('Email', { exact: true }).fill('NEW-VISITOR@example.com')
   await page.getByRole('button', { name: 'Email me a sign-in link' }).click()
   await expect(page.getByRole('status')).toContainText('Check your email')
@@ -56,11 +58,42 @@ test('email-first UI never opens a modal passkey prompt automatically and email 
   await expect(page.getByLabel('Email', { exact: true })).toBeEnabled()
 })
 
+test('email times out with a retry even when Safari autofill ignores cancellation', async ({ page }) => {
+  await page.addInitScript(() => {
+    PublicKeyCredential.isConditionalMediationAvailable = async () => true
+    navigator.credentials.get = async () => new Promise(() => {})
+  })
+  await page.route('**/auth/v1/passkeys/authentication/options', (route) => route.fulfill({ json: { challenge_id: 'test', options: { challenge: 'AQID', rpId: 'continua.info' } } }))
+  let release: () => void = () => {}
+  const held = new Promise<void>((resolve) => { release = resolve })
+  await page.route('**/auth/v1/otp**', async (route) => { await held; await route.fulfill({ json: {} }).catch(() => {}) })
+  try {
+    await page.goto('https://continua.info/login')
+    await page.clock.install()
+    await page.getByLabel('Email', { exact: true }).fill('test@example.com')
+    await page.getByRole('button', { name: 'Email me a sign-in link' }).click()
+    await page.clock.fastForward(15_001)
+    await expect(page.getByRole('alert').filter({ hasText: 'took too long' })).toBeVisible()
+    await expect(page.getByRole('button', { name: 'Email me a sign-in link' })).toBeEnabled()
+    release()
+    await page.unroute('**/auth/v1/otp**')
+    await page.route('**/auth/v1/otp**', (route) => route.fulfill({ json: {} }))
+    await page.getByRole('button', { name: 'Email me a sign-in link' }).click()
+    await expect(page.getByRole('status')).toContainText('Check your email')
+  } finally { release() }
+})
+
+test('header sign-in preserves the current query and fragment', async ({ page }) => {
+  await page.goto('https://continua.info/methodology?source=test#limits')
+  await page.getByRole('link', { name: 'Sign in', exact: true }).first().click()
+  await expect(page).toHaveURL('https://continua.info/login?next=%2Fmethodology%3Fsource%3Dtest%23limits')
+})
+
 test('unsupported browsers and failed email requests retain a clear recovery path', async ({ page }) => {
   await page.addInitScript(() => { Object.defineProperty(window, 'PublicKeyCredential', { value: undefined }) })
   await page.route('**/auth/v1/otp**', (route) => route.fulfill({ status: 429, json: { message: 'Rate limited' } }))
   await page.goto('https://continua.info/login')
-  await expect(page.getByRole('button', { name: 'Use a saved passkey' })).toHaveCount(0)
+  await expect(page.getByRole('button', { name: 'Sign in with a passkey' })).toHaveCount(0)
   await page.getByLabel('Email', { exact: true }).fill('test@example.com')
   await page.getByRole('button', { name: 'Email me a sign-in link' }).click()
   await expect(page.getByRole('alert').filter({ hasText: 'try again' })).toBeVisible()
@@ -80,7 +113,7 @@ test('missing credential is explained in app, with email immediately available',
   })
   await page.route('**/auth/v1/passkeys/authentication/options', (route) => route.fulfill({ json: { challenge_id: 'test', options: { challenge: 'AQID', rpId: 'continua.info' } } }))
   await page.goto('https://continua.info/login')
-  await page.getByRole('button', { name: 'Use a saved passkey' }).click()
+  await page.getByRole('button', { name: 'Sign in with a passkey' }).click()
   await expect(page.getByRole('alert').filter({ hasText: 'sign in by email' })).toBeVisible()
   await expect(page.getByRole('button', { name: 'Email me a sign-in link' })).toBeEnabled()
 })

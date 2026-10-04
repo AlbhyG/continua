@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { createClient } from '@/lib/supabase/client'
 
@@ -12,6 +13,8 @@ export default function AccountButton({
   onNavigate?: () => void
 }) {
   const [signedIn, setSignedIn] = useState<boolean | null>(null)
+  const pathname = usePathname()
+  const router = useRouter()
 
   useEffect(() => {
     const supabase = createClient()
@@ -34,7 +37,17 @@ export default function AccountButton({
 
   if (!signedIn) {
     return (
-      <Link href="/login" onClick={onNavigate} className={linkClassName}>
+      <Link href={/^\/(login|auth)(\/|$)/.test(pathname) ? '/login' : `/login?next=${encodeURIComponent(pathname)}`}
+        onClick={(event) => {
+          if (!/^\/(login|auth)(\/|$)/.test(window.location.pathname)) {
+            event.currentTarget.href = '/login?next=' + encodeURIComponent(window.location.pathname + window.location.search + window.location.hash)
+          }
+          if (!event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey && event.button === 0) {
+            event.preventDefault()
+            router.push(event.currentTarget.getAttribute('href')!)
+          }
+          onNavigate?.()
+        }} className={linkClassName}>
         Sign in
       </Link>
     )

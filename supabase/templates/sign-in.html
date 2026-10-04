@@ -1,0 +1,4 @@
+<h2>Sign in to Continua</h2>
+<p>Use this link to sign in on the device of your choice. It can only be used once and expires in one hour.</p>
+<p><a href="{{ .SiteURL }}/auth/callback?token_hash={{ .TokenHash }}&amp;type=email&amp;return_to={{ .RedirectTo | urlquery }}">Sign in to Continua</a></p>
+<p>If you didn’t request this link, you can ignore this email.</p>

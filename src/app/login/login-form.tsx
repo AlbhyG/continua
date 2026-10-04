@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from 'react'
 import type { AuthPasskeyAuthenticationVerifyResponse } from '@supabase/supabase-js'
 import { createClient } from '@/lib/supabase/client'
 import { canUsePasskeys, passkeyErrorMessage } from '@/lib/auth/passkeys'
-import { signInWithPasskeyAutofill } from '@/lib/auth/passkey-autofill'
+import { signInWithPasskeyAutofill, abortable } from '@/lib/auth/passkey-autofill'
+import { requestEmailLink } from '@/lib/auth/email-link'
 
 export default function LoginForm({ nextPath, initialError }: { nextPath: string; initialError: string | null }) {
   const [email, setEmail] = useState('')
@@ -39,12 +40,14 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
     const controller = new AbortController()
     const done = (async () => {
       try {
-        if (!await PublicKeyCredential.isConditionalMediationAvailable?.() || controller.signal.aborted) return
+        if (!await abortable(Promise.resolve(PublicKeyCredential.isConditionalMediationAvailable?.()), controller.signal) || controller.signal.aborted) return
         const result = await signInWithPasskeyAutofill(createClient(), controller.signal)
+        controller.signal.throwIfAborted()
         // Once verification starts, await it before starting another auth path.
         await completePasskey(result)
-      } catch (error) {
-        if (!controller.signal.aborted) setError(passkeyErrorMessage(error))
+      } catch {
+        // Conditional autofill is silent when no credential/provider is available.
+        // Explicit sign-in below provides the visible recovery path.
       }
     })()
     autofill.current = { controller, done }
@@ -86,19 +89,23 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
     inFlight.current = true
     setSubmitting(true)
     setError(null)
+    const controller = new AbortController()
+    const timeout = window.setTimeout(() => controller.abort(), 15_000)
     try {
-      await stopAutofill()
+      // Some Safari credential providers do not promptly settle after abort.
+      // Email never waits on that background browser request or its storage.
+      autofill.current?.controller.abort()
       if (navigating.current) return
       const callback = new URL('/auth/callback', window.location.origin)
       callback.searchParams.set('next', nextPath)
-      const { error } = await createClient().auth.signInWithOtp({
-        email: email.trim().toLowerCase(), options: { emailRedirectTo: callback.toString() },
-      })
-      if (error) throw error
+      await requestEmailLink(email.trim().toLowerCase(), callback.toString(), controller.signal)
       setSent(true)
-    } catch {
-      setError('We couldn’t send the sign-in link. Please wait a moment and try again.')
+    } catch (error) {
+      setError(controller.signal.aborted
+        ? 'Sending the link took too long. Please try again. If a link arrives, you can still use it.'
+        : error instanceof Error ? error.message : 'We couldn’t send the sign-in link. Please try again.')
     } finally {
+      window.clearTimeout(timeout)
       setSubmitting(false)
       inFlight.current = false
     }
@@ -107,7 +114,7 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
   if (sent) return (
     <div className="mt-6" role="status">
       <h2 className="text-xl font-bold">Check your email</h2>
-      <p className="mt-2 text-foreground/80">We sent a sign-in link to <strong className="break-all">{email.trim()}</strong>. It may take a minute to arrive. Open it in this browser to finish signing in.</p>
+      <p className="mt-2 text-foreground/80">We sent a sign-in link to <strong className="break-all">{email.trim()}</strong>. It may take a minute to arrive. Open it on the device where you want to sign in.</p>
       <button type="button" onClick={() => setSent(false)} className="mt-4 min-h-11 font-semibold underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Use a different email</button>
     </div>
   )
@@ -130,10 +137,10 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
       {supported && <div className="border-t border-black/10 pt-4">
         <button type="button" onClick={signInWithPasskey} disabled={submitting || usingPasskey}
           className="min-h-11 font-semibold underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 disabled:opacity-60">
-          {usingPasskey ? 'Waiting for your passkey…' : 'Use a saved passkey'}
+          {usingPasskey ? 'Waiting for your passkey…' : 'Sign in with a passkey'}
         </button>
         {usingPasskey && <button type="button" onClick={() => ceremony.current?.abort()} className="block min-h-11 underline underline-offset-4">Cancel passkey request</button>}
-        <p className="mt-1 text-sm text-foreground/80">Only use this if you’ve already added a Continua passkey. New here? Start with email; you can add a passkey after signing in.</p>
+        <p className="mt-1 text-sm text-foreground/80">Use a Continua passkey saved on this device, or choose another device in the system prompt. New here? Start with email; you can add a passkey after signing in.</p>
       </div>}
     </form>
   )

@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation'
 import { cookies } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
+export { safeNextPath } from './return-path'
 
 export async function requireUser(returnTo: string) {
   const supabase = await createClient()
@@ -29,11 +30,4 @@ export async function requireUser(returnTo: string) {
   }
 
   return { supabase, user }
-}
-
-export function safeNextPath(value: string | null, fallback = '/my-info') {
-  if (!value || !value.startsWith('/') || value.startsWith('//') || /[\\\x00-\x1f\x7f]/.test(value)) {
-    return fallback
-  }
-  return value
 }

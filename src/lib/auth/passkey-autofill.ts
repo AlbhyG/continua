@@ -1,5 +1,16 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
 
+export async function abortable<T>(operation: Promise<T>, signal: AbortSignal): Promise<T> {
+  signal.throwIfAborted()
+  let abort: () => void = () => {}
+  const cancelled = new Promise<never>((_, reject) => {
+    abort = () => reject(new DOMException('Aborted', 'AbortError'))
+    signal.addEventListener('abort', abort, { once: true })
+  })
+  try { return await Promise.race([operation, cancelled]) }
+  finally { signal.removeEventListener('abort', abort) }
+}
+
 function decode(value: string): ArrayBuffer {
   const binary = atob(value.replace(/-/g, '+').replace(/_/g, '/'))
   return Uint8Array.from(binary, (char) => char.charCodeAt(0)).buffer
@@ -16,18 +27,12 @@ export async function signInWithPasskeyAutofill(client: SupabaseClient, signal: 
   signal.throwIfAborted()
   // The SDK challenge fetch does not accept a signal. Stop waiting immediately
   // when email is chosen; its eventual response must not open a ceremony.
-  let abort: () => void = () => {}
-  const cancelled = new Promise<never>((_, reject) => {
-    abort = () => reject(new DOMException('Aborted', 'AbortError'))
-    signal.addEventListener('abort', abort, { once: true })
-  })
-  const { data, error } = await Promise.race([client.auth.passkey.startAuthentication(), cancelled])
-    .finally(() => signal.removeEventListener('abort', abort))
+  const { data, error } = await abortable(client.auth.passkey.startAuthentication(), signal)
   if (error) throw error
   if (!data) throw new Error('Missing passkey challenge')
   signal.throwIfAborted()
   const options = data.options
-  const credential = await navigator.credentials.get({
+  const credential = await abortable(navigator.credentials.get({
     mediation: 'conditional', signal,
     publicKey: {
       ...options,
@@ -36,7 +41,7 @@ export async function signInWithPasskeyAutofill(client: SupabaseClient, signal: 
         ...item, id: decode(item.id), transports: item.transports as AuthenticatorTransport[] | undefined,
       })),
     },
-  }) as PublicKeyCredential | null
+  }), signal) as PublicKeyCredential | null
   signal.throwIfAborted()
   if (!credential) throw new Error('No saved passkey was selected')
   const response = credential.response as AuthenticatorAssertionResponse
