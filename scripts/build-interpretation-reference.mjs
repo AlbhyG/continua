@@ -1,0 +1,129 @@
+#!/usr/bin/env node
+// Builds src/lib/interpretation/reference.ts from the authored source documents:
+//   docs/layer2-pairwise-interactions.md  (60 pair anchors + 12 single-axis readings)
+//   docs/layer3-candidate-defaults.md     (6 modifier defaults)
+// The docs stay the single source of truth; this script fails loudly if their
+// structure no longer covers every pair, anchor, and axis.
+//
+//   node scripts/build-interpretation-reference.mjs          # write reference.ts
+//   node scripts/build-interpretation-reference.mjs --check  # verify it is current
+
+import { readFileSync, writeFileSync } from 'node:fs'
+import { createHash } from 'node:crypto'
+import assert from 'node:assert/strict'
+
+const LAYER2 = 'docs/layer2-pairwise-interactions.md'
+const LAYER3 = 'docs/layer3-candidate-defaults.md'
+const OUT = 'src/lib/interpretation/reference.ts'
+
+// Fixed axis order (requirements §2.2.2). "high" is the end that scores 8-10
+// in src/lib/quiz/scoring.ts; note Self-Orientation's high end is Self-Focus.
+const AXES = [
+  ['social_attunement', 'Social Attunement', 'Hyper-Attuned', 'Hypo-Attuned'],
+  ['empathy', 'Empathy', 'Empathy', 'Detachment'],
+  ['self_orientation', 'Self-Orientation', 'Self-Focus', 'Altruism'],
+  ['conscientiousness', 'Conscientiousness', 'Conscientious', 'Impulsive'],
+  ['agency', 'Agency', 'Agentic', 'Accommodating'],
+  ['reactivity', 'Reactivity', 'High-Reactive', 'Low-Reactive'],
+]
+const POLE = new Map()
+for (const [axis, , high, low] of AXES) {
+  POLE.set(high, { axis, pole: 'high' })
+  POLE.set(low, { axis, pole: 'low' })
+}
+const AXIS_BY_TITLE = new Map(AXES.map(([axis, title]) => [title, axis]))
+const order = (axis) => AXES.findIndex(([a]) => a === axis)
+
+const sha = (text) => createHash('sha256').update(text).digest('hex').slice(0, 12)
+const clean = (text) => text.trim().replace(/\s+/g, ' ')
+
+function parseLayer2(md) {
+  const pairs = {}
+  const single = {}
+  const singleStart = md.indexOf('## Single-axis primary readings')
+  assert.ok(singleStart > 0, 'Layer 2: missing "## Single-axis primary readings" section')
+  const pairPart = md.slice(0, singleStart)
+  const singlePart = md.slice(singleStart)
+
+  const anchorRe = /^\*\*([A-Za-z-]+) \+ ([A-Za-z-]+) — "([^"]+)"\*\*\n([\s\S]*?)(?=\n\n|\n---|$)/gm
+  for (const m of pairPart.matchAll(anchorRe)) {
+    const [, poleA, poleB, name, body] = m
+    const a = POLE.get(poleA)
+    const b = POLE.get(poleB)
+    assert.ok(a && b, `Layer 2: unknown pole in "${poleA} + ${poleB}"`)
+    assert.notEqual(a.axis, b.axis, `Layer 2: anchor "${name}" uses one axis twice`)
+    const [first, second] = order(a.axis) < order(b.axis) ? [a, b] : [b, a]
+    const key = `${first.axis}|${second.axis}`
+    const corner = `${first.pole}_${second.pole}`
+    pairs[key] ??= { axes: [first.axis, second.axis], anchors: {} }
+    assert.ok(!pairs[key].anchors[corner], `Layer 2: duplicate ${corner} anchor for ${key}`)
+    pairs[key].anchors[corner] = { name, text: clean(body) }
+  }
+
+  const singleRe = /^\*\*([A-Za-z-]+) — "([^"]+)"\*\*\n([\s\S]*?)(?=\n\n|$)/gm
+  for (const m of singlePart.matchAll(singleRe)) {
+    const [, poleName, name, body] = m
+    const p = POLE.get(poleName)
+    assert.ok(p, `Layer 2: unknown single-axis pole "${poleName}"`)
+    single[p.axis] ??= {}
+    assert.ok(!single[p.axis][p.pole], `Layer 2: duplicate single-axis entry for ${poleName}`)
+    single[p.axis][p.pole] = { name, text: clean(body) }
+  }
+
+  // Coverage: 15 pairs x 4 corners, 6 axes x 2 poles.
+  for (let i = 0; i < AXES.length; i++) {
+    for (let j = i + 1; j < AXES.length; j++) {
+      const key = `${AXES[i][0]}|${AXES[j][0]}`
+      assert.ok(pairs[key], `Layer 2: missing pair ${key}`)
+      for (const corner of ['high_high', 'high_low', 'low_high', 'low_low']) {
+        assert.ok(pairs[key].anchors[corner], `Layer 2: missing ${corner} anchor for ${key}`)
+      }
+    }
+    assert.ok(single[AXES[i][0]]?.high && single[AXES[i][0]]?.low, `Layer 2: missing single-axis entries for ${AXES[i][0]}`)
+  }
+  assert.equal(Object.keys(pairs).length, 15, 'Layer 2: expected exactly 15 pairs')
+  return { pairs, single }
+}
+
+function parseLayer3(md) {
+  const defaults = {}
+  const re = /^## (.+?) — candidate default: "([^"]+)"\n\n\*\*The hypothesis:\*\* (.+)$/gm
+  for (const m of md.matchAll(re)) {
+    const [, title, summary, hypothesis] = m
+    const axis = AXIS_BY_TITLE.get(title)
+    assert.ok(axis, `Layer 3: unknown axis "${title}"`)
+    defaults[axis] = { summary, hypothesis: clean(hypothesis) }
+  }
+  for (const [axis] of AXES) assert.ok(defaults[axis], `Layer 3: missing default for ${axis}`)
+  return defaults
+}
+
+const layer2Md = readFileSync(LAYER2, 'utf8')
+const layer3Md = readFileSync(LAYER3, 'utf8')
+const reference = {
+  source: { layer2: sha(layer2Md), layer3: sha(layer3Md) },
+  axes: AXES.map(([key, title, high, low]) => ({ key, title, high, low })),
+  ...parseLayer2(layer2Md),
+  modifierDefaults: parseLayer3(layer3Md),
+}
+
+const output = `// GENERATED by scripts/build-interpretation-reference.mjs. Do not edit by hand.
+// Source of truth: ${LAYER2} and ${LAYER3}.
+// Regenerate after editing either document.
+
+import type { InterpretationReference } from './types'
+
+export const REFERENCE: InterpretationReference = ${JSON.stringify(reference, null, 2)}
+`
+
+if (process.argv.includes('--check')) {
+  const current = readFileSync(OUT, 'utf8')
+  if (current !== output) {
+    console.error(`${OUT} is out of date. Run: node scripts/build-interpretation-reference.mjs`)
+    process.exit(1)
+  }
+  console.log(`${OUT} is current (layer2 ${reference.source.layer2}, layer3 ${reference.source.layer3}).`)
+} else {
+  writeFileSync(OUT, output)
+  console.log(`Wrote ${OUT}: 15 pairs, 60 anchors, 12 single-axis readings, 6 modifier defaults.`)
+}

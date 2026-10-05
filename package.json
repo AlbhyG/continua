@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:unit": "tsx --test src/lib/interpretation/*.test.ts",
+    "interpretation:reference": "node scripts/build-interpretation-reference.mjs"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
@@ -30,6 +32,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "supabase": "^2.76.8",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }
