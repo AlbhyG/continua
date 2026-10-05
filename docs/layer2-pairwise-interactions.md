@@ -258,3 +258,55 @@ Discomfort with assertion combined with high emotional amplitude — the book's 
 ---
 
 *Grounding note: entries above draw on the mechanics and behavior patterns the manuscript describes for each axis — including patterns the book itself illustrates with named public figures (Chapters 1–7) — but deliberately strip out the named examples themselves. The book's chapters are free to keep those illustrations as editorial commentary; Layer 2 is infrastructure that feeds a composition engine generating real users' personal reports, and no named individual, living or dead, should be reachable through that pipeline as a comparison point for someone else's psychology. If a future editorial pass wants richer narrative texture in Layer 2, the safer route is invented, clearly fictional vignettes rather than real-person analogues.*
+
+## Single-axis primary readings
+
+Used when one axis is clearly the most extreme and no partner qualifies: the runner-up axes are in the balanced band (integer score 5 or 6), or four or more tie for second place (see requirements §2.2.2, "Choosing the primary interaction," and issue #30). As the book says, a single axis score tells relatively little in isolation, so each entry describes one strong axis *with the other five near their balanced middle*, and declines to infer what those other axes would decide. The remaining axes still apply as Layer 3 modifiers in descending extremity. The "tendencies, not verdicts" rule above applies here too.
+
+### Social Attunement
+
+**Hyper-Attuned — "the open antenna"**
+Social information arrives constantly and largely automatically: the hesitation, the forced smile, who is avoiding whom. With the other axes balanced, the defining feature is how much is taken in, not what is done with it; the read informs rather than drives. Strength: social prediction and early detection of tension; people feel seen. Cost: the scan runs whether or not it's wanted, and the mind always reading the room has less bandwidth left for being in it.
+
+**Hypo-Attuned — "the thin signal"**
+Much of the social undercurrent simply doesn't arrive — the perfectly pleasant evening without realizing there were currents to miss. This is not indifference: when a need is stated plainly, the person's otherwise moderate concern engages normally. Strength: independent judgment, relative immunity to unspoken group pressure, deep focus, saying what they actually think. Cost: unintended offense that stays invisible unless explained, and missed signals that others misread as not caring.
+
+### Empathy
+
+**Empathy — "the weight of it"**
+Others' suffering registers as something that matters and demands a response, whether felt viscerally or reached through reasoning. With the rest balanced, that concern is neither amplified into flooding nor automatically converted into sacrifice. Risk: concern that outruns what can be relieved; the task is making concern livable.
+
+**Detachment — "information, not weight"**
+Others' suffering is registered but carries relatively little moral pull: appropriate sympathy, practical accommodation, then moving on. Neither callous nor dishonest. Strength: judgment not captured by the most emotionally compelling story — the judge, the journalist, the crisis responder. The book's warning about detachment hardening into habitual indifference sits at the far edge and cannot be read from this score alone.
+
+### Self-Orientation
+
+**Altruism — "service as default"**
+When interests compete, priority tends to flow toward others or toward a cause beyond the self — a settled direction rather than a feeling. Risk: the selfless giver, generosity without adequate self-protection ending in exhaustion or resentment; the healthy form is the "otherish" giver who balances concern for others with concern for themselves.
+
+**Self-Focus — "the self as anchor"**
+When interests compete, priority tends to flow toward one's own needs, goals, and standing. In the book's terms this is healthy self-regard far more often than narcissism: ambition, independence, the willingness to protect one's own interests. The pathological edge — where other people's interests consistently cease to matter — cannot be read from this score.
+
+### Conscientiousness
+
+**Conscientious — "the long view"**
+Present action is shaped by future consequence: plans are made and kept, gratification is deferred, commitments are honored after motivation has faded. Strength: reliability that creates trust. Cost: structure hardening into perfectionism — the itinerary becoming an anchor rather than a compass, reaching the summit without noticing the view.
+
+**Impulsive — "the present tense"**
+Fully inhabited by the present; plans feel constraining and the future feels abstract. Strength: starting, experimenting, genuine presence, comfort with risk. Cost: many starts and fewer finishes, with consequences that arrive later. External structure often supplies what the disposition doesn't. What looks like impulsivity can also be an adaptation to an unpredictable environment rather than a flaw.
+
+### Agency
+
+**Agentic — "the one who moves first"**
+Initiates rather than waits, decides with incomplete information, claims space without needing permission. With Empathy and Self-Orientation balanced, nothing here says whom the initiative serves. Strength: momentum and direction when a group stalls. Cost: others can feel directed rather than collaborated with; genuine listening is the growth edge.
+
+**Accommodating — "the one who makes room"**
+Supports, builds on others' ideas, finds common ground; assertion itself feels costly. Strength: defuses tension — the exemplary follower whose presence improves group cohesion. Cost: credit taken, needs suppressed, resentment accumulating quietly. Often partly learned in environments where assertion carries a real price, so the visible behavior is not necessarily the dispositional center.
+
+### Reactivity
+
+**High-Reactive — "full volume"**
+Whatever arrives, the internal response is large, fast, and slow to settle — in both directions: grief more devastating, joy more transporting. Whether it shows depends on expression, which is shaped separately (Chapter 7). Strength: passionate engagement, and an urgency that won't let problems be quietly buried. Cost: minor stressors felt as emergencies, and an amplitude that manipulation can exploit.
+
+**Low-Reactive — "quiet waters"**
+Responses arrive smaller and settle faster: calm where others panic. Not suppression — the system genuinely generates less. Strength: composure under pressure. Cost: being read as cold, and the absence of alarm is not the absence of danger, so harmful situations may be tolerated too long. Note that someone who looks calm may be high-registration and low-expression; this score describes what is felt, not what shows.
