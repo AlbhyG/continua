@@ -55,7 +55,9 @@ export async function GET(request: NextRequest) {
     status: 200,
     headers: {
       'Content-Type': 'application/pdf',
-      'Content-Disposition': 'inline; filename="continua-first-chapter.pdf"',
+      // attachment, not inline: phone browsers' PDF viewers often can't open
+      // password-protected PDFs; as a download they open in Files or a PDF app.
+      'Content-Disposition': 'attachment; filename="continua-first-chapter.pdf"',
       'Content-Length': body.byteLength.toString(),
       'Cache-Control': 'no-store',
     },
