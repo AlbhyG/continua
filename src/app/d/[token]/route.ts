@@ -56,7 +56,11 @@ export async function GET(
       status: 200,
       headers: {
         'Content-Type': 'application/pdf',
-        'Content-Disposition': `inline; filename="continua-${label}.pdf"`,
+        // attachment, not inline: phone browsers' built-in PDF viewers often show
+        // a blank page for password-protected PDFs instead of asking for the
+        // password. As a download, iOS and Android open it in Files/Quick Look
+        // or a PDF app, which prompt for the password (as the emailed copy does).
+        'Content-Disposition': `attachment; filename="continua-${label.replace(/\s+/g, '-')}.pdf"`,
         'Content-Length': body.byteLength.toString(),
         'Cache-Control': 'no-store',
       },
