@@ -28,12 +28,12 @@
   {
     "name": "Alexander the Great",
     "primary": "Narcissist",
-    "tags": "Narcissist",
+    "tags": "Narcissist · Impulsive",
     "scores": {
       "social_attunement": 7,
       "empathy": 3,
       "self_orientation": 9,
-      "conscientiousness": 6,
+      "conscientiousness": 3,
       "agency": 10,
       "reactivity": 9
     }
@@ -223,12 +223,12 @@
   {
     "name": "Vlad the Impaler",
     "primary": "Narcissist",
-    "tags": "Narcissist · Hypo-Attuned · High-Reactive",
+    "tags": "Narcissist · Hypo-Attuned · Impulsive · High-Reactive",
     "scores": {
       "social_attunement": 4,
       "empathy": 1,
       "self_orientation": 10,
-      "conscientiousness": 6,
+      "conscientiousness": 3,
       "agency": 10,
       "reactivity": 10
     }
