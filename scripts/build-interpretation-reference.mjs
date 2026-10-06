@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Builds src/lib/interpretation/reference.ts from the authored source documents:
-//   docs/layer2-pairwise-interactions.md  (60 pair anchors + 12 single-axis readings)
+//   docs/layer2-pairwise-interactions.md  (60 pair anchors + 12 single-axis readings + balanced profile)
 //   docs/layer3-candidate-defaults.md     (6 modifier defaults)
 // The docs stay the single source of truth; this script fails loudly if their
 // structure no longer covers every pair, anchor, and axis.
@@ -43,7 +43,12 @@ function parseLayer2(md) {
   const singleStart = md.indexOf('## Single-axis primary readings')
   assert.ok(singleStart > 0, 'Layer 2: missing "## Single-axis primary readings" section')
   const pairPart = md.slice(0, singleStart)
-  const singlePart = md.slice(singleStart)
+  const balancedStart = md.indexOf('## Balanced profile')
+  assert.ok(balancedStart > singleStart, 'Layer 2: missing "## Balanced profile" section after the single-axis readings')
+  const singlePart = md.slice(singleStart, balancedStart)
+  const balancedMatch = md.slice(balancedStart).match(/^\*\*Balanced across the board — "([^"]+)"\*\*\n([\s\S]*?)(?=\n\n|$)/m)
+  assert.ok(balancedMatch, 'Layer 2: missing balanced-profile entry')
+  const balanced = { name: balancedMatch[1], text: clean(balancedMatch[2]) }
 
   const anchorRe = /^\*\*([A-Za-z-]+) \+ ([A-Za-z-]+) — "([^"]+)"\*\*\n([\s\S]*?)(?=\n\n|\n---|$)/gm
   for (const m of pairPart.matchAll(anchorRe)) {
@@ -82,7 +87,7 @@ function parseLayer2(md) {
     assert.ok(single[AXES[i][0]]?.high && single[AXES[i][0]]?.low, `Layer 2: missing single-axis entries for ${AXES[i][0]}`)
   }
   assert.equal(Object.keys(pairs).length, 15, 'Layer 2: expected exactly 15 pairs')
-  return { pairs, single }
+  return { pairs, single, balanced }
 }
 
 function parseLayer3(md) {
@@ -125,5 +130,5 @@ if (process.argv.includes('--check')) {
   console.log(`${OUT} is current (layer2 ${reference.source.layer2}, layer3 ${reference.source.layer3}).`)
 } else {
   writeFileSync(OUT, output)
-  console.log(`Wrote ${OUT}: 15 pairs, 60 anchors, 12 single-axis readings, 6 modifier defaults.`)
+  console.log(`Wrote ${OUT}: 15 pairs, 60 anchors, 12 single-axis readings, 1 balanced reading, 6 modifier defaults.`)
 }

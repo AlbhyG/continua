@@ -18,12 +18,13 @@ const rows = profiles.map((p) => ({ p, r: interpret(toEngineScores(p.scores)) })
 const count = (f: (x: (typeof rows)[number]) => boolean) => rows.filter(f).length
 const pct = (n: number) => `${n} (${Math.round((100 * n) / rows.length)}%)`
 
-const rules = ['tied_top_pairs', 'tied_top_reduced', 'top_with_runner_up', 'single_axis'] as const
+const rules = ['tied_top_pairs', 'tied_top_reduced', 'top_with_runner_up', 'single_axis', 'balanced'] as const
 const ruleLabel: Record<(typeof rules)[number], string> = {
   tied_top_pairs: '2–3 axes tied for most extreme',
   tied_top_reduced: '4+ tied (axis-order fallback used)',
   top_with_runner_up: 'one top axis + runner-up(s)',
   single_axis: 'single-axis reading',
+  balanced: 'balanced across the board',
 }
 
 const lines: string[] = []
@@ -33,13 +34,15 @@ lines.push(`Input: the ${rows.length} aggregate profiles in \`data/famous-figure
 lines.push('## How often each rule fires', '', '| Rule | Profiles |', '| --- | --- |')
 for (const rule of rules) lines.push(`| ${ruleLabel[rule]} | ${pct(count((x) => x.r.primary.rule === rule))} |`)
 lines.push('', '| Primary type | Profiles |', '| --- | --- |')
-for (const type of ['pair', 'co_primary_pairs', 'single_axis'] as const) lines.push(`| ${type} | ${pct(count((x) => x.r.primary.type === type))} |`)
-lines.push('', `Profiles with 3 co-primary pairs: ${pct(count((x) => x.r.primary.pairs.length === 3))}. Fully balanced profiles: ${pct(count((x) => x.r.flags.includes('all_balanced')))}.`, '')
+for (const type of ['pair', 'co_primary_pairs', 'single_axis', 'balanced'] as const) lines.push(`| ${type} | ${pct(count((x) => x.r.primary.type === type))} |`)
+lines.push('', `Profiles with 3 co-primary pairs: ${pct(count((x) => x.r.primary.pairs.length === 3))}.`, '')
 
 lines.push('## Every profile', '', '| Name | Scores (SA EM SO CO AG RE) | Rule | Primary reading | Top modifier |', '| --- | --- | --- | --- | --- |')
 for (const { p, r } of rows) {
   const scores = r.positions.map((x) => x.score).join(' ')
-  const reading = r.primary.single
+  const reading = r.primary.balanced
+    ? `balanced: "${r.primary.balanced.name}"`
+    : r.primary.single
     ? `${SHORT[r.primary.single.axis]} ${r.primary.single.pole}: "${r.primary.single.name}"`
     : r.primary.pairs.map((pr) => `${pr.axes.map((a) => SHORT[a]).join('×')}: "${pr.anchors[0].name}" ${Math.round(pr.anchors[0].weight * 100)}%`).join('; ')
   const m = r.modifiers[0]

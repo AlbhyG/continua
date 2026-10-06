@@ -14,6 +14,7 @@ test('reference covers every pair, corner, single-axis entry and modifier defaul
   for (const pair of Object.values(REFERENCE.pairs)) {
     assert.deepEqual(Object.keys(pair.anchors).sort(), ['high_high', 'high_low', 'low_high', 'low_low'])
   }
+  assert.ok(REFERENCE.balanced.name)
   for (const axis of AXIS_ORDER) {
     assert.ok(REFERENCE.single[axis].high.name && REFERENCE.single[axis].low.name)
     assert.ok(REFERENCE.modifierDefaults[axis].summary)
@@ -103,10 +104,20 @@ test('single-axis reading when four or more axes tie for runner-up', () => {
   assert.equal(r.primary.single?.name, 'the thin signal')
 })
 
-test('fully balanced profile follows the literal rule and is flagged for review', () => {
+test('fully balanced profile gets the balanced reading, with all six axes as modifiers', () => {
   const r = interpret(s(5, 6, 5, 6, 5, 6))
-  assert.equal(r.primary.rule, 'tied_top_reduced')
-  assert.deepEqual(r.flags, ['all_balanced'])
+  assert.equal(r.primary.type, 'balanced')
+  assert.equal(r.primary.rule, 'balanced')
+  assert.deepEqual(r.primary.axes, [])
+  assert.deepEqual(r.primary.pairs, [])
+  assert.equal(r.primary.balanced?.name, 'the wide middle')
+  assert.deepEqual(r.modifiers.map((m) => m.axis), AXIS_ORDER)
+})
+
+test('one axis just outside the balanced band is enough to leave the balanced reading', () => {
+  const r = interpret(s(5, 6, 5, 6, 5, 7))
+  assert.equal(r.primary.type, 'single_axis')
+  assert.equal(r.primary.single?.axis, 'reactivity')
 })
 
 test('anchor weights interpolate, sum to 1, and reach a corner only at the extremes', () => {

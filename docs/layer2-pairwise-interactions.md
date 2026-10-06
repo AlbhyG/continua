@@ -310,3 +310,10 @@ Whatever arrives, the internal response is large, fast, and slow to settle — i
 
 **Low-Reactive — "quiet waters"**
 Responses arrive smaller and settle faster: calm where others panic. Not suppression — the system genuinely generates less. Strength: composure under pressure. Cost: being read as cold, and the absence of alarm is not the absence of danger, so harmful situations may be tolerated too long. Note that someone who looks calm may be high-registration and low-expression; this score describes what is felt, not what shows.
+
+## Balanced profile
+
+Used when every axis is in the balanced band (integer score 5 or 6), so no axis is more extreme than any other (decided October 6, 2026; see issue #30). No pair or single axis is primary; all six axes apply as modifiers, and their leans are slight.
+
+**Balanced across the board — "the wide middle"**
+No dimension pulls far from center: on every axis the dispositional center sits in the balanced middle. This is not an absence of personality but a configuration in which no single pull dominates — closer, on each axis, to the book's adaptive middle than to either end. The reading should describe the slight leans the scores do show without inflating them into traits. A balanced center says where someone tends to rest, not how far they can move: it does not by itself mean wide bandwidth or easy adaptability. Strength: no strong default works against the person in most situations, and they are often easy to work alongside. Cost: others may find them harder to read, and a group looking for a strong pull in some direction may not find it here. Middle scores can also come from answering inconsistently, so the reading should stay modest.

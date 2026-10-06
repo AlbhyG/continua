@@ -26,6 +26,7 @@ export interface InterpretationReference {
   /** Keyed "axisA|axisB" in fixed axis order; corners are `${poleA}_${poleB}`. */
   pairs: Record<string, { axes: [AxisKey, AxisKey]; anchors: Record<Corner, AuthoredEntry> }>
   single: Record<AxisKey, Record<Pole, AuthoredEntry>>
+  balanced: AuthoredEntry
   modifierDefaults: Record<AxisKey, { summary: string; hypothesis: string }>
 }
 
@@ -64,13 +65,14 @@ export interface SingleAxisReading {
   name: string
 }
 
-export type PrimaryType = 'pair' | 'co_primary_pairs' | 'single_axis'
+export type PrimaryType = 'pair' | 'co_primary_pairs' | 'single_axis' | 'balanced'
 
 export type PrimaryRule =
   | 'tied_top_pairs' // 2–3 axes tied for most extreme: every pair within them
   | 'tied_top_reduced' // 4+ tied: first three by fixed axis order, then every pair
   | 'top_with_runner_up' // one top axis paired with each runner-up axis (1–3)
   | 'single_axis' // one top axis; runner-ups balanced or 4+ tied
+  | 'balanced' // every axis in the balanced band (5–6)
 
 export interface ModifierReading {
   axis: AxisKey
@@ -95,8 +97,8 @@ export interface StructuredInterpretation {
     axes: AxisKey[]
     pairs: PairReading[]
     single: SingleAxisReading | null
+    /** Set only for the balanced type. */
+    balanced: { name: string } | null
   }
   modifiers: ModifierReading[]
-  /** Conditions worth a human look; currently only 'all_balanced'. */
-  flags: string[]
 }

@@ -6,7 +6,7 @@ import type { InterpretationReference } from './types'
 
 export const REFERENCE: InterpretationReference = {
   "source": {
-    "layer2": "8b312f1ee35f",
+    "layer2": "665d77720998",
     "layer3": "0517a23a703c"
   },
   "axes": [
@@ -470,6 +470,10 @@ export const REFERENCE: InterpretationReference = {
         "text": "Responses arrive smaller and settle faster: calm where others panic. Not suppression — the system genuinely generates less. Strength: composure under pressure. Cost: being read as cold, and the absence of alarm is not the absence of danger, so harmful situations may be tolerated too long. Note that someone who looks calm may be high-registration and low-expression; this score describes what is felt, not what shows."
       }
     }
+  },
+  "balanced": {
+    "name": "the wide middle",
+    "text": "No dimension pulls far from center: on every axis the dispositional center sits in the balanced middle. This is not an absence of personality but a configuration in which no single pull dominates — closer, on each axis, to the book's adaptive middle than to either end. The reading should describe the slight leans the scores do show without inflating them into traits. A balanced center says where someone tends to rest, not how far they can move: it does not by itself mean wide bandwidth or easy adaptability. Strength: no strong default works against the person in most situations, and they are often easy to work alongside. Cost: others may find them harder to read, and a group looking for a strong pull in some direction may not find it here. Middle scores can also come from answering inconsistently, so the reading should stay modest."
   },
   "modifierDefaults": {
     "social_attunement": {

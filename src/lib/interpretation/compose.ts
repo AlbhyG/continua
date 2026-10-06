@@ -18,7 +18,7 @@ import type {
 } from './types'
 
 /** Bump when any rule below changes: it invalidates cached interpretations. */
-export const PROTOCOL_VERSION = 'layer4-2026-10-04'
+export const PROTOCOL_VERSION = 'layer4-2026-10-06'
 
 /** Fixed axis order: Attunement → Empathy → Orientation → Conscientiousness → Agency → Reactivity. */
 export const AXIS_ORDER: readonly AxisKey[] = [
@@ -115,7 +115,11 @@ export function interpret(scores: EngineScores, ref: InterpretationReference = R
   let pairs: [AxisPosition, AxisPosition][] = []
   let single: AxisPosition | null = null
 
-  if (top.length >= 2) {
+  if (ranked[0].balanced) {
+    // Every axis is in the balanced band: no primary; all six are modifiers.
+    rule = 'balanced'
+    primaryAxes = []
+  } else if (top.length >= 2) {
     // Ties for most extreme are kept as co-primary; 4+ fall back to axis order.
     rule = top.length > MAX_CO_PRIMARY_AXES ? 'tied_top_reduced' : 'tied_top_pairs'
     primaryAxes = [...top].sort((a, b) => rank(a.axis) - rank(b.axis)).slice(0, MAX_CO_PRIMARY_AXES)
@@ -147,24 +151,21 @@ export function interpret(scores: EngineScores, ref: InterpretationReference = R
       defaultSummary: ref.modifierDefaults[p.axis].summary,
     }))
 
-  const flags: string[] = []
-  if (ranked[0].balanced) flags.push('all_balanced')
-
   return {
     protocolVersion: PROTOCOL_VERSION,
     referenceVersion: { ...ref.source },
     cacheKey: [PROTOCOL_VERSION, ref.source.layer2, ref.source.layer3, ...AXIS_ORDER.map((a) => scores[a])].join(':'),
     positions,
     primary: {
-      type: single ? 'single_axis' : pairs.length === 1 ? 'pair' : 'co_primary_pairs',
+      type: rule === 'balanced' ? 'balanced' : single ? 'single_axis' : pairs.length === 1 ? 'pair' : 'co_primary_pairs',
       rule,
       axes: [...primaryAxes].sort((a, b) => rank(a.axis) - rank(b.axis)).map((p) => p.axis),
       pairs: pairs.map(([a, b]) => pairReading(a, b, ref)),
       single: single
         ? { axis: single.axis, pole: single.pole, signed: round4(single.signed), name: ref.single[single.axis][single.pole].name }
         : null,
+      balanced: rule === 'balanced' ? { name: ref.balanced.name } : null,
     },
     modifiers,
-    flags,
   }
 }
