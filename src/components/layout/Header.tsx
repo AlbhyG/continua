@@ -268,9 +268,6 @@ function SampleRequestPanel({
       >
         Download the PDF
       </a>
-      <p className="text-xs text-gray-500">
-        The PDF password is your account email: <span className="font-semibold break-all text-foreground/80">{signedInEmail}</span>
-      </p>
       <button
         type="button"
         onClick={() => setUseForm(true)}
