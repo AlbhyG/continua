@@ -22,6 +22,7 @@ import {
 import { getStartedAction } from '@/app/actions/get-started'
 import AccountButton from '@/components/auth/AccountButton'
 import ContactInquiry from '@/components/ContactInquiry'
+import { createClient } from '@/lib/supabase/client'
 
 function ChevronDown({ className }: { className?: string }) {
   return (
@@ -218,6 +219,69 @@ function ContactForm({
   )
 }
 
+// ─── Sample request: signed-in shortcut ───────────────────
+
+// The signed-in account's verified email, or null when signed out / unknown.
+function useSignedInEmail() {
+  const [email, setEmail] = useState<string | null>(null)
+  useEffect(() => {
+    const supabase = createClient()
+    const read = (user: { email?: string; email_confirmed_at?: string | null } | null | undefined) =>
+      setEmail(user?.email && user.email_confirmed_at ? user.email.toLowerCase() : null)
+    supabase.auth.getUser().then(({ data }) => read(data.user))
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => read(session?.user))
+    return () => subscription.unsubscribe()
+  }, [])
+  return email
+}
+
+// Signed-in readers get the sample in one click; the form stays available
+// for sending a copy somewhere else.
+function SampleRequestPanel({
+  signedInEmail,
+  state,
+  setState,
+  onSuccess,
+  close,
+}: {
+  signedInEmail: string | null
+  state: ContactFormState
+  setState: React.Dispatch<React.SetStateAction<ContactFormState>>
+  onSuccess: (message: string) => void
+  close: () => void
+}) {
+  const [useForm, setUseForm] = useState(false)
+  if (!signedInEmail || useForm) {
+    return <ContactForm state={state} setState={setState} onSuccess={onSuccess} />
+  }
+  return (
+    <div className="p-5 space-y-3">
+      <p className="text-base font-bold text-foreground">Read the first chapter</p>
+      <a
+        href="/sample"
+        target="_blank"
+        rel="noopener"
+        onClick={() => close()}
+        className="block w-full px-4 py-2.5 rounded-lg bg-accent text-white text-sm font-semibold text-center hover:bg-accent/90 transition-colors"
+      >
+        Download the PDF
+      </a>
+      <p className="text-xs text-gray-500">
+        The PDF password is your account email: <span className="font-semibold break-all text-foreground/80">{signedInEmail}</span>
+      </p>
+      <button
+        type="button"
+        onClick={() => setUseForm(true)}
+        className="text-xs font-semibold text-foreground/70 underline underline-offset-2 hover:text-foreground cursor-pointer"
+      >
+        Send it to a different email or phone instead
+      </button>
+    </div>
+  )
+}
+
 function ContactSuccessDialog({
   message,
   onClose,
@@ -368,6 +432,7 @@ export default function Header() {
     confirmed: false,
   })
   const [contactSuccessMessage, setContactSuccessMessage] = useState<string | null>(null)
+  const signedInEmail = useSignedInEmail()
   const pathname = usePathname()
   const versionMatch = pathname.match(/^\/(v\d+)(?:\/|$)/)
   const versionPrefix = versionMatch ? `/${versionMatch[1]}` : ''
@@ -505,9 +570,11 @@ export default function Header() {
                 className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
               >
                 {({ close }) => (
-                  <ContactForm
+                  <SampleRequestPanel
+                    signedInEmail={signedInEmail}
                     state={contactState}
                     setState={setContactState}
+                    close={close}
                     onSuccess={(message) => {
                       close()
                       setContactSuccessMessage(message)
@@ -535,9 +602,11 @@ export default function Header() {
                 className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
               >
                 {({ close }) => (
-                  <ContactForm
+                  <SampleRequestPanel
+                    signedInEmail={signedInEmail}
                     state={contactState}
                     setState={setContactState}
+                    close={close}
                     onSuccess={(message) => {
                       close()
                       setContactSuccessMessage(message)
