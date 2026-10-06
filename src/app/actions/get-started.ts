@@ -1,7 +1,6 @@
 'use server'
 
 import { createClient } from '@/lib/supabase/server'
-import { encryptPdf } from '@/lib/pdf/encrypt'
 import {
   sendContactNotificationEmail,
   sendContactPdfEmail,
@@ -16,8 +15,6 @@ import {
   generatePdfLinkToken,
 } from '@/lib/pdf/links'
 
-const PDF_OWNER_PASSWORD =
-  process.env.PDF_OWNER_PASSWORD || 'change-this-owner-password'
 // Keep the legacy database field populated until interest_roles is removed.
 const CONTACT_INTEREST_ROLES = ['Interested Reader']
 const SITE_URL =
@@ -128,15 +125,9 @@ export async function getStartedAction(data: {
             throw new Error(`Source PDF not found: ${filePath}`)
           }
 
-          const encryptedPdf = await encryptPdf({
-            input: new Uint8Array(await sourcePdf.arrayBuffer()),
-            userPassword: password.toLowerCase(),
-            ownerPassword: PDF_OWNER_PASSWORD,
-          })
-
           return {
             filename: `continua-${filePath}`,
-            content: encryptedPdf,
+            content: new Uint8Array(await sourcePdf.arrayBuffer()),
           }
         })
       )
@@ -144,7 +135,6 @@ export async function getStartedAction(data: {
       const deliveryEmail = await sendContactPdfEmail({
         to: cleanEmail,
         name: cleanName,
-        password: password.toLowerCase(),
         attachments,
       })
 
@@ -248,7 +238,7 @@ async function sendPdfSentSms({
     const links = await createPdfLinks({ filesToSend, userPassword, contactId })
     await sendPdfLinkMessages({
       phone,
-      prefix: `Continua: your book link (also emailed to ${email}). Open the PDF using your email address as the password.`,
+      prefix: `Continua: your book link (also emailed to ${email}).`,
       links,
     })
     return { sent: true, error: null }
@@ -279,8 +269,7 @@ async function sendPdfLinksSms({
     const links = await createPdfLinks({ filesToSend, userPassword, contactId })
     await sendPdfLinkMessages({
       phone,
-      prefix:
-        'Continua: your book is ready. Open the PDF using your mobile number as the password (digits only, no country code).',
+      prefix: 'Continua: your book is ready.',
       links,
     })
     return { sent: true, error: null }
@@ -292,8 +281,9 @@ async function sendPdfLinksSms({
   }
 }
 
-// Create one short, unguessable link per file. Each token maps to the file and
-// the password the /d/[token] route will encrypt it with on download.
+// Create one short, unguessable link per file. Each token maps to the file the
+// /d/[token] route serves. (user_password is still recorded but no longer used:
+// the sample is not password-protected.)
 async function createPdfLinks({
   filesToSend,
   userPassword,

@@ -125,8 +125,8 @@ function ContactForm({
             ? 'Thanks. Your information was saved, and a text with the first chapter is on its way.'
             : 'Thanks. Your information was saved, and Albhy will follow up manually.'
           : result.smsSent
-            ? 'Thanks. The first chapter is on its way by email and text. The PDF password is your lowercase email address.'
-            : 'Thanks. The first chapter is on its way by email. The PDF password is your lowercase email address.'
+            ? 'Thanks. The first chapter is on its way by email and text.'
+            : 'Thanks. The first chapter is on its way by email.'
       )
     } finally {
       submitInFlight.current = false
@@ -141,7 +141,7 @@ function ContactForm({
           Interested in reading the first chapter?
         </p>
         <p className="mt-1 text-xs text-gray-500">
-          Tell us where to send your password-protected copy.
+          Tell us where to send your copy.
         </p>
       </div>
       <div>
@@ -167,9 +167,6 @@ function ContactForm({
           }}
           className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
         />
-        <p className="mt-1 text-xs text-gray-500">
-          Email requests receive a password-protected PDF. The password is your lowercase email address.
-        </p>
       </div>
       <p className="text-xs text-gray-400 text-center">And / Or</p>
       <div>

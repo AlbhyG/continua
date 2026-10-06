@@ -8,7 +8,7 @@ test('only a verified result issues a chapter capability, without email in its U
   const result = await verifiedDownload({ status: 'verified', email: 'Reader@Example.com' }, 'first-chapter.pdf', async link => { saved.push(link) })
   expect(result.success).toBe(true)
   expect(result.downloadUrl).toMatch(/^\/d\/[A-Za-z0-9_-]{11}$/)
-  expect(result.password).toBe('reader@example.com')
+  expect('password' in result).toBe(false)
   expect(saved).toEqual([{ token: result.downloadUrl!.slice(3), file_path: 'first-chapter.pdf', user_password: 'reader@example.com', label: 'first chapter' }])
 })
 

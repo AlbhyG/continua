@@ -7,12 +7,10 @@ const NOTIFY_EMAIL = process.env.NOTIFY_EMAIL || 'albhy@continua.info'
 export async function sendContactPdfEmail({
   to,
   name,
-  password,
   attachments,
 }: {
   to: string
   name: string
-  password: string
   attachments: Array<{ filename: string; content: Uint8Array }>
 }) {
   const text = [
@@ -20,9 +18,7 @@ export async function sendContactPdfEmail({
     '',
     'Thank you for your interest in Continua. The first chapter is attached.',
     '',
-    `Your PDF password is: ${password}`,
-    '',
-    'This copy is intended for you. Please ask anyone else who is interested to register at continua.info for their own copy.',
+    'Feel free to pass it along. Anyone can also request their own copy at continua.info.',
     '',
     'If you would like to discuss the book or have questions, simply reply to this email.',
     '',
@@ -33,8 +29,7 @@ export async function sendContactPdfEmail({
     <div style="font-family: Arial, sans-serif; color: #111; line-height: 1.5;">
       <p>Hi ${escapeHtml(name)},</p>
       <p>Thank you for your interest in Continua. The first chapter is attached.</p>
-      <p><strong>Your PDF password is:</strong> ${escapeHtml(password)}</p>
-      <p>This copy is intended for you. Please ask anyone else who is interested to register at <a href="https://continua.info">continua.info</a> for their own copy.</p>
+      <p>Feel free to pass it along. Anyone can also request their own copy at <a href="https://continua.info">continua.info</a>.</p>
       <p>If you would like to discuss the book or have questions, simply reply to this email.</p>
       <p>Albhy Galuten</p>
     </div>
