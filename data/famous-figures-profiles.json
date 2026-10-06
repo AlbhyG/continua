@@ -2,7 +2,7 @@
   {
     "name": "Adolf Hitler",
     "primary": "Narcissist",
-    "tags": "Narcissist · Hypo-Attuned",
+    "tags": "Narcissist",
     "scores": {
       "social_attunement": 8,
       "empathy": 1,
@@ -15,7 +15,7 @@
   {
     "name": "Napoleon Bonaparte",
     "primary": "Narcissist",
-    "tags": "Narcissist · Hypo-Attuned · Impulsive",
+    "tags": "Narcissist",
     "scores": {
       "social_attunement": 7,
       "empathy": 3,
@@ -28,7 +28,7 @@
   {
     "name": "Alexander the Great",
     "primary": "Narcissist",
-    "tags": "Narcissist · Impulsive",
+    "tags": "Narcissist",
     "scores": {
       "social_attunement": 7,
       "empathy": 3,
@@ -41,7 +41,7 @@
   {
     "name": "Joseph Stalin",
     "primary": "Narcissist",
-    "tags": "Narcissist · Hypo-Attuned",
+    "tags": "Narcissist",
     "scores": {
       "social_attunement": 8,
       "empathy": 1,
@@ -145,7 +145,7 @@
   {
     "name": "King Henry VIII",
     "primary": "Narcissist",
-    "tags": "Narcissist · Hypo-Attuned · High-Reactive",
+    "tags": "Narcissist · High-Reactive",
     "scores": {
       "social_attunement": 6,
       "empathy": 2,
@@ -223,7 +223,7 @@
   {
     "name": "Vlad the Impaler",
     "primary": "Narcissist",
-    "tags": "Narcissist · Hypo-Attuned · Impulsive · High-Reactive",
+    "tags": "Narcissist · Hypo-Attuned · High-Reactive",
     "scores": {
       "social_attunement": 4,
       "empathy": 1,
