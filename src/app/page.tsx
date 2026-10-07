@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
-import AxesCircle from "@/components/AxesCircle";
+import AxesDiagram from "@/components/AxesDiagram";
 
 export const metadata: Metadata = {
   title: "Continua: How Opposites Align",
@@ -78,7 +78,7 @@ export default function Home() {
         </FadeIn>
         <FadeIn delay={200}>
           <figure className="mt-12 rounded-2xl bg-white/85 backdrop-blur-sm shadow-sm px-1 py-5 md:px-8 md:py-8">
-            <AxesCircle />
+            <AxesDiagram />
             <figcaption className="mt-4 text-center text-[15px] md:text-[16px] leading-[1.5] text-foreground/70">
               Six axes, each running between two ends. Most of us sit
               somewhere in between, and our position shifts with context.
