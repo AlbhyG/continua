@@ -3,6 +3,7 @@
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { LAUNCH_LITE } from '@/lib/site-mode';
 import {
   FAMOUS_FIGURE_CATEGORIES,
   groupFamousFiguresByCategory,
@@ -98,6 +99,7 @@ export default function FamousFiguresExplorer({ profiles }: { profiles: FamousFi
             <div className="flex justify-center my-4">
               <PersonalityOrb data={scoresToOrbData(selected.scores)} size={240} />
             </div>
+            {!LAUNCH_LITE && (
             <div className="text-center">
               <Link
                 href="/orb-demo"
@@ -106,6 +108,7 @@ export default function FamousFiguresExplorer({ profiles }: { profiles: FamousFi
                 Open in the full Orb Generator →
               </Link>
             </div>
+            )}
 
             {/* Axis scores */}
             <div className="mt-4 space-y-3">

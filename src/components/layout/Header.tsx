@@ -21,6 +21,7 @@ import {
 } from '@headlessui/react'
 import { getStartedAction } from '@/app/actions/get-started'
 import AccountButton from '@/components/auth/AccountButton'
+import { LAUNCH_LITE } from '@/lib/site-mode'
 import ContactInquiry from '@/components/ContactInquiry'
 
 function ChevronDown({ className }: { className?: string }) {
@@ -277,18 +278,30 @@ function MobileMenu({
 
           {/* Info */}
           <div className="mb-8">
-            <Link
-              href={`${versionPrefix}/my-info`}
-              onClick={onClose}
-              className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-3 block hover:text-foreground transition-colors"
-            >
-              Info
-            </Link>
-            <div className="space-y-1">
-              <Link href="/quiz" onClick={onClose} className="block text-[15px] text-foreground/80 py-2 px-3 hover:text-foreground transition-colors">
-                Take an Assessment
+            {LAUNCH_LITE ? (
+              <span className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-3 block">
+                Info
+              </span>
+            ) : (
+              <Link
+                href={`${versionPrefix}/my-info`}
+                onClick={onClose}
+                className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-3 block hover:text-foreground transition-colors"
+              >
+                Info
               </Link>
-              {latestResultId ? (
+            )}
+            <div className="space-y-1">
+              {LAUNCH_LITE ? (
+                <span className="block text-[15px] text-gray-400 py-2 px-3">
+                  + Take an Assessment
+                </span>
+              ) : (
+                <Link href="/quiz" onClick={onClose} className="block text-[15px] text-foreground/80 py-2 px-3 hover:text-foreground transition-colors">
+                  Take an Assessment
+                </Link>
+              )}
+              {latestResultId && !LAUNCH_LITE ? (
                 <Link
                   href={`/quiz/results/${latestResultId}`}
                   onClick={onClose}
@@ -308,6 +321,7 @@ function MobileMenu({
           </div>
 
           {/* My Relationships */}
+          {!LAUNCH_LITE && (
           <div className="mb-8">
             <Link
               href={`${versionPrefix}/my-relationships`}
@@ -333,6 +347,7 @@ function MobileMenu({
               </Link>
             </div>
           </div>
+          )}
 
           <Link
             href="/about"
@@ -341,16 +356,20 @@ function MobileMenu({
           >
             About
           </Link>
-          <Link
-            href="/orb-demo"
-            onClick={onClose}
-            className="mt-5 text-xs font-semibold text-foreground/60 uppercase tracking-wider block hover:text-foreground transition-colors"
-          >
-            Orb Generator
-          </Link>
-          <div className="mt-8">
-            <AccountButton mobile onNavigate={onClose} />
-          </div>
+          {!LAUNCH_LITE && (
+            <>
+              <Link
+                href="/orb-demo"
+                onClick={onClose}
+                className="mt-5 text-xs font-semibold text-foreground/60 uppercase tracking-wider block hover:text-foreground transition-colors"
+              >
+                Orb Generator
+              </Link>
+              <div className="mt-8">
+                <AccountButton mobile onNavigate={onClose} />
+              </div>
+            </>
+          )}
         </DialogPanel>
       </div>
     </Dialog>
@@ -418,20 +437,37 @@ export default function Header() {
             {/* Info — clickable link with dropdown */}
             <Menu>
               <div className="flex items-center gap-0">
-                <Link href={`${versionPrefix}/my-info`} className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
-                  Info
-                </Link>
-                <MenuButton className="p-1 text-foreground/80 hover:text-foreground transition-colors cursor-pointer">
-                  <ChevronDown />
-                </MenuButton>
+                {LAUNCH_LITE ? (
+                  <MenuButton className="flex items-center text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors cursor-pointer">
+                    Info
+                    <span className="p-1"><ChevronDown /></span>
+                  </MenuButton>
+                ) : (
+                  <>
+                    <Link href={`${versionPrefix}/my-info`} className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
+                      Info
+                    </Link>
+                    <MenuButton className="p-1 text-foreground/80 hover:text-foreground transition-colors cursor-pointer">
+                      <ChevronDown />
+                    </MenuButton>
+                  </>
+                )}
               </div>
               <MenuItems anchor="bottom start" className={dropdownClass}>
-                <MenuItem>
-                  {() => (
-                    <Link href="/quiz" className={menuItemClass}>Take an Assessment</Link>
-                  )}
-                </MenuItem>
-                {latestResultId ? (
+                {LAUNCH_LITE ? (
+                  <MenuItem disabled>
+                    {() => (
+                      <span className={greyedItemClass}>+ Take an Assessment</span>
+                    )}
+                  </MenuItem>
+                ) : (
+                  <MenuItem>
+                    {() => (
+                      <Link href="/quiz" className={menuItemClass}>Take an Assessment</Link>
+                    )}
+                  </MenuItem>
+                )}
+                {latestResultId && !LAUNCH_LITE ? (
                   <MenuItem>
                     {() => (
                       <Link href={`/quiz/results/${latestResultId}`} className={menuItemClass}>See Results</Link>
@@ -453,6 +489,7 @@ export default function Header() {
             </Menu>
 
             {/* My Relationships */}
+            {!LAUNCH_LITE && (
             <Menu>
               <div className="flex items-center gap-0">
                 <Link href={`${versionPrefix}/my-relationships`} className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
@@ -479,16 +516,21 @@ export default function Header() {
                 </MenuItem>
               </MenuItems>
             </Menu>
+            )}
 
             <Link href="/about" className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
               About
             </Link>
 
-            <Link href="/orb-demo" className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
-              Orb Generator
-            </Link>
+            {!LAUNCH_LITE && (
+              <>
+                <Link href="/orb-demo" className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
+                  Orb Generator
+                </Link>
 
-            <AccountButton />
+                <AccountButton />
+              </>
+            )}
 
             {/* First-chapter request (desktop) */}
             <Popover className="relative">

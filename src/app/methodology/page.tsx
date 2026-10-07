@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { LAUNCH_LITE } from '@/lib/site-mode'
 
 export const metadata: Metadata = {
   title: 'Methodology & Limitations',
@@ -85,7 +86,9 @@ export default function MethodologyPage() {
         </section>
 
         <nav aria-label="Related information" className="flex flex-wrap gap-x-6 gap-y-3 border-t border-black/15 pt-6 text-base font-semibold">
-          <Link href="/quiz" className="underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Assessment overview</Link>
+          {!LAUNCH_LITE && (
+            <Link href="/quiz" className="underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Assessment overview</Link>
+          )}
           <Link href="/privacy" className="underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Privacy policy</Link>
         </nav>
       </div>
