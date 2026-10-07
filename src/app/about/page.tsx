@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import FadeIn from '@/components/FadeIn'
+import AxesDiagram from '@/components/AxesDiagram'
 import { relationshipSections } from '@/lib/relationship-content'
 
 export const metadata: Metadata = {
@@ -22,21 +23,27 @@ export default function AboutPage() {
             with others and with yourself.
           </p>
         </FadeIn>
+        <FadeIn delay={100}>
+          <h2 className="mt-10 text-[24px] md:text-[30px] font-bold text-white mb-3">
+            Understand Others
+          </h2>
+          <p className="text-[17px] md:text-[19px] leading-[1.7] text-white/85">
+            Continua shows how personality differences can become a source of
+            complementarity for individuals, couples, families, and teams.
+          </p>
+        </FadeIn>
+        <FadeIn delay={200}>
+          <figure className="mt-8 rounded-2xl bg-white/85 backdrop-blur-sm shadow-sm px-1 py-5 md:px-8 md:py-8">
+            <AxesDiagram />
+            <figcaption className="mt-4 text-center text-[15px] md:text-[16px] leading-[1.5] text-foreground/70">
+              Six axes, each running between two ends. Most of us sit
+              somewhere in between, and our position shifts with context.
+            </figcaption>
+          </figure>
+        </FadeIn>
       </section>
 
       <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-12 space-y-6">
-        <FadeIn>
-          <div className="glass-card p-8">
-            <h2 className="text-[24px] md:text-[30px] font-bold mb-4">
-              Understand Others
-            </h2>
-            <p className="text-[17px] md:text-[19px] leading-[1.7] text-foreground/85">
-              Continua shows how personality differences can become a source of
-              complementarity for individuals, couples, families, and teams.
-            </p>
-          </div>
-        </FadeIn>
-
         {relationshipSections.map((section, i) => (
           <FadeIn key={section.title} delay={(i + 1) * 80}>
             <div className="glass-card p-8">
