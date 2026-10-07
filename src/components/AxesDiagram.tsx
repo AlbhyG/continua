@@ -3,7 +3,7 @@
 // The Continua logo with each of its twelve arms labeled: the six axes, both
 // ends, in the logo's colors. Labels are Albhy's (Personality Map slide,
 // Oct 7, 2026).
-const LABELS = ["Socially Attuned", "Empathetic", "Altruistic", "Conscientious", "Accommodating", "Low Reactivity", "Socially Independent", "Detached", "Self-Focused", "Impulsive", "Agentic", "High Reactivity"]
+const LABELS = ["Socially Attuned", "Empathetic", "Altruistic", "Conscientious", "Accommodating", "Low Reactivity", "Socially Independent", "Detached", "Self-Focused", "Spontaneous", "Agentic", "High Reactivity"]
 
 export default function AxesDiagram({ title = 'The six Continua axes' }: { title?: string }) {
   const pairs = [0, 1, 2, 3, 4, 5].map((i) => `${LABELS[i + 6]} to ${LABELS[i]}`).join('; ')
@@ -119,7 +119,7 @@ export default function AxesDiagram({ title = 'The six Continua axes' }: { title
         <g className="axis-group">
           <path style={{ fill: '#da1070', fillOpacity: 1 }} d="m 123.80894,570.09981 c -10.4578,-5.57704 -42.779342,-23.85792 -42.796642,-24.20554 -0.009,-0.18333 10.62193,-6.74338 23.624552,-14.57788 26.00413,-15.66833 26.37038,-15.81211 29.65156,-11.64076 3.59153,4.56588 1.70471,7.4092 -9.29453,14.00633 -4.73676,2.84102 -8.55176,5.21714 -8.47777,5.28027 0.074,0.0631 72.09745,-0.9134 160.05215,-2.17007 87.95469,-1.25668 160.02939,-2.17309 160.166,-2.03648 0.13661,0.1366 0.4436,2.99867 0.6822,6.36015 l 0.43383,6.11177 -1.93316,-0.0309 c -11.10409,-0.17747 -318.2665,4.45589 -318.2665,4.80085 0,0.25574 3.60946,2.47683 8.02102,4.93575 8.71154,4.85565 10.64565,6.66401 10.64565,9.95352 0,2.08971 -2.47229,5.67411 -3.91364,5.67411 -0.35419,0 -1.08045,0.16749 -1.61392,0.3722 -0.53346,0.20471 -3.67483,-1.07029 -6.9808,-2.83333 z" />
           <path style={{ fill: '#da1070', fillOpacity: 1 }} d="m 468.67757,546.39427 c -2.51906,-7.93503 -1.77308,-33.58658 1.02813,-35.35354 0.71674,-0.45211 2.80413,-0.0722 6.98362,1.27101 l 5.96131,1.91586 -0.1854,2.33334 c -0.10197,1.28333 -0.25197,8.02824 -0.33333,14.98868 l -0.14793,12.65535 -2.33334,0.45196 c -1.28333,0.24858 -3.98333,0.92511 -6,1.5034 -4.44612,1.27496 -4.63969,1.28407 -4.97306,0.23394 z" />
-          <text x={-20} y={555} textAnchor="end">Impulsive</text>
+          <text x={-20} y={555} textAnchor="end">Spontaneous</text>
         </g>
 
         {/* 10 o'clock */}
