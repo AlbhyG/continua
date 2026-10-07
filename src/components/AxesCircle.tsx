@@ -2,8 +2,9 @@ import { AXIS_INFO, type AxisScores } from '@/lib/quiz/scoring'
 
 // The six Continua axes as a circle: each axis is a diameter whose two ends sit
 // where the logo's arms do, shaded from one end's color to the other's. No
-// profile or scores, just the map. Labels come from AXIS_INFO so they match
-// the results pages. On phones the ring labels would be too small, so the
+// profile or scores, just the map. Each end is named with one word, from the
+// book's own pairings (Ch. 8: Empathy and Detachment, Altruism and Self-Focus,
+// Agency and Accommodation, Reactivity and Calm). On phones the ring labels would be too small, so the
 // same six gradients are listed as a legend instead.
 
 type Axis = keyof AxisScores
@@ -26,6 +27,16 @@ const LABEL_R = R + 36
 
 const axisName = (axis: Axis) => (axis === 'empathy' ? 'Empathy' : AXIS_INFO[axis].name)
 
+// One word per end.
+const END: Record<Axis, { low: string; high: string }> = {
+  social_attunement: { low: 'Hypo-Attunement', high: 'Hyper-Attunement' },
+  empathy: { low: 'Detachment', high: 'Empathy' },
+  self_orientation: { low: 'Altruism', high: 'Self-Focus' },
+  conscientiousness: { low: 'Spontaneity', high: 'Conscientiousness' },
+  agency: { low: 'Accommodation', high: 'Agency' },
+  reactivity: { low: 'Calm', high: 'Reactivity' },
+}
+
 // Light logo colors (the yellow especially) are unreadable as text on a light
 // card, so label text uses a darkened shade of the same hue.
 function textShade(hex: string, amount = 0.38) {
@@ -39,32 +50,23 @@ function point(clock: number, radius: number) {
   return { x: CX + radius * Math.cos(angle), y: CY + radius * Math.sin(angle) }
 }
 
-function EndLabel({ clock, text, sub, color }: { clock: number; text: string; sub: string; color: string }) {
+function EndLabel({ clock, text, color }: { clock: number; text: string; color: string }) {
   const { x, y } = point(clock, LABEL_R)
   const dx = x - CX
   const anchor = dx > 40 ? 'start' : dx < -40 ? 'end' : 'middle'
-  const lines = text.split(' / ')
   const top = clock === 12 || clock === 11 || clock === 1
   const bottom = clock >= 5 && clock <= 7
-  // Lift labels above top ends and push them below bottom ends.
-  const firstDy = top ? -(lines.length * 34 + 4) + 30 : bottom ? 30 : -((lines.length * 34) / 2) + 22
+  const dy = top ? -6 : bottom ? 36 : 12
   return (
-    <text x={x} y={y} textAnchor={anchor}>
-      {lines.map((line, i) => (
-        <tspan key={i} x={x} dy={i === 0 ? firstDy : 34} fill={textShade(color)} fontWeight={600} fontSize={30}>
-          {line}
-        </tspan>
-      ))}
-      <tspan x={x} dy={30} fill="#6b6b6b" fontSize={22}>
-        {sub}
-      </tspan>
+    <text x={x} y={y} dy={dy} textAnchor={anchor} fill={textShade(color)} fontWeight={600} fontSize={34}>
+      {text}
     </text>
   )
 }
 
 export default function AxesCircle() {
   const description = AXES.map(
-    ({ axis }) => `${axisName(axis)}, from ${AXIS_INFO[axis].lowLabel} to ${AXIS_INFO[axis].highLabel}`
+    ({ axis }) => `${axisName(axis)}, from ${END[axis].low} to ${END[axis].high}`
   ).join('; ')
 
   return (
@@ -117,8 +119,8 @@ export default function AxesCircle() {
 
         <g className="hidden sm:inline">
           {AXES.flatMap(({ axis, highAt, low, high }) => [
-            <EndLabel key={`${axis}-h`} clock={highAt} text={AXIS_INFO[axis].highLabel} sub={axisName(axis)} color={high} />,
-            <EndLabel key={`${axis}-l`} clock={(highAt + 6) % 12 || 12} text={AXIS_INFO[axis].lowLabel} sub={axisName(axis)} color={low} />,
+            <EndLabel key={`${axis}-h`} clock={highAt} text={END[axis].high} color={high} />,
+            <EndLabel key={`${axis}-l`} clock={(highAt + 6) % 12 || 12} text={END[axis].low} color={low} />,
           ])}
         </g>
       </svg>
@@ -127,8 +129,8 @@ export default function AxesCircle() {
         {AXES.map(({ axis, low, high }) => (
           <li key={axis}>
             <div className="flex items-start justify-between gap-3 text-[14px] font-semibold leading-snug">
-              <span style={{ color: textShade(low) }}>{AXIS_INFO[axis].lowLabel}</span>
-              <span className="text-right" style={{ color: textShade(high) }}>{AXIS_INFO[axis].highLabel}</span>
+              <span style={{ color: textShade(low) }}>{END[axis].low}</span>
+              <span className="text-right" style={{ color: textShade(high) }}>{END[axis].high}</span>
             </div>
             <div className="mt-1.5 h-2 rounded-full" style={{ background: `linear-gradient(to right, ${low}, ${high})` }} />
           </li>
