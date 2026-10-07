@@ -50,33 +50,45 @@ function point(clock: number, radius: number) {
   return { x: CX + radius * Math.cos(angle), y: CY + radius * Math.sin(angle) }
 }
 
-function EndLabel({ clock, text, color }: { clock: number; text: string; color: string }) {
+function EndLabel({ clock, text, color, size }: { clock: number; text: string; color: string; size: number }) {
   const { x, y } = point(clock, LABEL_R)
   const dx = x - CX
   const anchor = dx > 40 ? 'start' : dx < -40 ? 'end' : 'middle'
   const top = clock === 12 || clock === 11 || clock === 1
   const bottom = clock >= 5 && clock <= 7
-  const dy = top ? -6 : bottom ? 36 : 12
+  const dy = top ? -6 : bottom ? size + 2 : size * 0.35
   return (
-    <text x={x} y={y} dy={dy} textAnchor={anchor} fill={textShade(color)} fontWeight={600} fontSize={34}>
+    <text x={x} y={y} dy={dy} textAnchor={anchor} fill={textShade(color)} fontWeight={600} fontSize={size}>
       {text}
     </text>
   )
 }
 
-export default function AxesCircle() {
-  const description = AXES.map(
-    ({ axis }) => `${axisName(axis)}, from ${END[axis].low} to ${END[axis].high}`
-  ).join('; ')
+const DESCRIPTION = `The six Continua axes: ${AXES.map(
+  ({ axis }) => `${axisName(axis)}, from ${END[axis].low} to ${END[axis].high}`
+).join('; ')}`
 
+// Same drawing at two scales: phones get larger words and a wider frame (the
+// long right-hand words need the room), larger screens a balanced frame.
+export default function AxesCircle() {
   return (
     <div>
+      <Diagram id="wide" viewBox="-90 50 1380 950" size={34} className="hidden sm:block w-full" />
+      <Diagram id="narrow" viewBox="-130 20 1650 1010" size={58} className="sm:hidden w-full" />
+    </div>
+  )
+}
+
+// Each copy needs its own gradient ids: a url(#id) resolves to the first match
+// in the page, which would be inside the copy hidden at this screen size.
+function Diagram({ id, viewBox, size, className }: { id: string; viewBox: string; size: number; className: string }) {
+  return (
       <svg
-        viewBox="-90 50 1380 950"
+        viewBox={viewBox}
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full"
+        className={className}
         role="img"
-        aria-label={`The six Continua axes: ${description}`}
+        aria-label={DESCRIPTION}
         style={{ fontFamily: 'inherit' }}
       >
         <defs>
@@ -84,7 +96,7 @@ export default function AxesCircle() {
             const a = point(highAt + 6, R)
             const b = point(highAt, R)
             return (
-              <linearGradient key={axis} id={`axis-${axis}`} gradientUnits="userSpaceOnUse" x1={a.x} y1={a.y} x2={b.x} y2={b.y}>
+              <linearGradient key={axis} id={`${id}-axis-${axis}`} gradientUnits="userSpaceOnUse" x1={a.x} y1={a.y} x2={b.x} y2={b.y}>
                 <stop offset="0" stopColor={low} />
                 <stop offset="1" stopColor={high} />
               </linearGradient>
@@ -98,7 +110,7 @@ export default function AxesCircle() {
           const a = point(highAt + 6, R)
           const b = point(highAt, R)
           return (
-            <line key={axis} x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={`url(#axis-${axis})`} strokeWidth={14} strokeLinecap="round" />
+            <line key={axis} x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={`url(#${id}-axis-${axis})`} strokeWidth={14} strokeLinecap="round" />
           )
         })}
 
@@ -117,25 +129,12 @@ export default function AxesCircle() {
           })
         )}
 
-        <g className="hidden sm:inline">
+        <g>
           {AXES.flatMap(({ axis, highAt, low, high }) => [
-            <EndLabel key={`${axis}-h`} clock={highAt} text={END[axis].high} color={high} />,
-            <EndLabel key={`${axis}-l`} clock={(highAt + 6) % 12 || 12} text={END[axis].low} color={low} />,
+            <EndLabel key={`${axis}-h`} clock={highAt} text={END[axis].high} color={high} size={size} />,
+            <EndLabel key={`${axis}-l`} clock={(highAt + 6) % 12 || 12} text={END[axis].low} color={low} size={size} />,
           ])}
         </g>
       </svg>
-
-      <ul aria-hidden className="sm:hidden mt-2 space-y-4 px-1">
-        {AXES.map(({ axis, low, high }) => (
-          <li key={axis}>
-            <div className="flex items-start justify-between gap-3 text-[14px] font-semibold leading-snug">
-              <span style={{ color: textShade(low) }}>{END[axis].low}</span>
-              <span className="text-right" style={{ color: textShade(high) }}>{END[axis].high}</span>
-            </div>
-            <div className="mt-1.5 h-2 rounded-full" style={{ background: `linear-gradient(to right, ${low}, ${high})` }} />
-          </li>
-        ))}
-      </ul>
-    </div>
   )
 }
