@@ -1,0 +1,139 @@
+import { AXIS_INFO, type AxisScores } from '@/lib/quiz/scoring'
+
+// The six Continua axes as a circle: each axis is a diameter whose two ends sit
+// where the logo's arms do, shaded from one end's color to the other's. No
+// profile or scores, just the map. Labels come from AXIS_INFO so they match
+// the results pages. On phones the ring labels would be too small, so the
+// same six gradients are listed as a legend instead.
+
+type Axis = keyof AxisScores
+
+// Clock position of each axis's high-score end (its low end is opposite),
+// and the logo colors of both ends.
+const AXES: { axis: Axis; highAt: number; low: string; high: string }[] = [
+  { axis: 'social_attunement', highAt: 12, low: '#41377b', high: '#fcf050' },
+  { axis: 'empathy', highAt: 1, low: '#68397c', high: '#abc854' },
+  { axis: 'self_orientation', highAt: 8, low: '#4ba454', high: '#933160' },
+  { axis: 'conscientiousness', highAt: 3, low: '#da1070', high: '#49a297' },
+  { axis: 'agency', highAt: 10, low: '#4ba6d2', high: '#c13732' },
+  { axis: 'reactivity', highAt: 11, low: '#2b65a0', high: '#d16539' },
+]
+
+const CX = 600
+const CY = 520
+const R = 330
+const LABEL_R = R + 36
+
+const axisName = (axis: Axis) => (axis === 'empathy' ? 'Empathy' : AXIS_INFO[axis].name)
+
+// Light logo colors (the yellow especially) are unreadable as text on a light
+// card, so label text uses a darkened shade of the same hue.
+function textShade(hex: string, amount = 0.38) {
+  const n = parseInt(hex.slice(1), 16)
+  const ch = (shift: number) => Math.round(((n >> shift) & 255) * (1 - amount))
+  return `rgb(${ch(16)}, ${ch(8)}, ${ch(0)})`
+}
+
+function point(clock: number, radius: number) {
+  const angle = ((clock % 12) * 30 - 90) * (Math.PI / 180)
+  return { x: CX + radius * Math.cos(angle), y: CY + radius * Math.sin(angle) }
+}
+
+function EndLabel({ clock, text, sub, color }: { clock: number; text: string; sub: string; color: string }) {
+  const { x, y } = point(clock, LABEL_R)
+  const dx = x - CX
+  const anchor = dx > 40 ? 'start' : dx < -40 ? 'end' : 'middle'
+  const lines = text.split(' / ')
+  const top = clock === 12 || clock === 11 || clock === 1
+  const bottom = clock >= 5 && clock <= 7
+  // Lift labels above top ends and push them below bottom ends.
+  const firstDy = top ? -(lines.length * 34 + 4) + 30 : bottom ? 30 : -((lines.length * 34) / 2) + 22
+  return (
+    <text x={x} y={y} textAnchor={anchor}>
+      {lines.map((line, i) => (
+        <tspan key={i} x={x} dy={i === 0 ? firstDy : 34} fill={textShade(color)} fontWeight={600} fontSize={30}>
+          {line}
+        </tspan>
+      ))}
+      <tspan x={x} dy={30} fill="#6b6b6b" fontSize={22}>
+        {sub}
+      </tspan>
+    </text>
+  )
+}
+
+export default function AxesCircle() {
+  const description = AXES.map(
+    ({ axis }) => `${axisName(axis)}, from ${AXIS_INFO[axis].lowLabel} to ${AXIS_INFO[axis].highLabel}`
+  ).join('; ')
+
+  return (
+    <div>
+      <svg
+        viewBox="-90 50 1380 950"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full"
+        role="img"
+        aria-label={`The six Continua axes: ${description}`}
+        style={{ fontFamily: 'inherit' }}
+      >
+        <defs>
+          {AXES.map(({ axis, highAt, low, high }) => {
+            const a = point(highAt + 6, R)
+            const b = point(highAt, R)
+            return (
+              <linearGradient key={axis} id={`axis-${axis}`} gradientUnits="userSpaceOnUse" x1={a.x} y1={a.y} x2={b.x} y2={b.y}>
+                <stop offset="0" stopColor={low} />
+                <stop offset="1" stopColor={high} />
+              </linearGradient>
+            )
+          })}
+        </defs>
+
+        <circle cx={CX} cy={CY} r={R} fill="none" stroke="#000" strokeOpacity={0.08} strokeWidth={2} />
+
+        {AXES.map(({ axis, highAt }) => {
+          const a = point(highAt + 6, R)
+          const b = point(highAt, R)
+          return (
+            <line key={axis} x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={`url(#axis-${axis})`} strokeWidth={14} strokeLinecap="round" />
+          )
+        })}
+
+        {/* Center hub echoing the logo's dashed ring */}
+        <circle cx={CX} cy={CY} r={58} fill="white" />
+        {AXES.flatMap(({ axis, highAt, low, high }) =>
+          [
+            { clock: highAt, color: high },
+            { clock: highAt + 6, color: low },
+          ].map(({ clock, color }) => {
+            const s = point(clock - 0.32, 46)
+            const e = point(clock + 0.32, 46)
+            return (
+              <path key={`${axis}-${clock}`} d={`M ${s.x} ${s.y} A 46 46 0 0 1 ${e.x} ${e.y}`} stroke={color} strokeWidth={9} fill="none" strokeLinecap="round" />
+            )
+          })
+        )}
+
+        <g className="hidden sm:inline">
+          {AXES.flatMap(({ axis, highAt, low, high }) => [
+            <EndLabel key={`${axis}-h`} clock={highAt} text={AXIS_INFO[axis].highLabel} sub={axisName(axis)} color={high} />,
+            <EndLabel key={`${axis}-l`} clock={(highAt + 6) % 12 || 12} text={AXIS_INFO[axis].lowLabel} sub={axisName(axis)} color={low} />,
+          ])}
+        </g>
+      </svg>
+
+      <ul aria-hidden className="sm:hidden mt-2 space-y-4 px-1">
+        {AXES.map(({ axis, low, high }) => (
+          <li key={axis}>
+            <div className="flex items-start justify-between gap-3 text-[14px] font-semibold leading-snug">
+              <span style={{ color: textShade(low) }}>{AXIS_INFO[axis].lowLabel}</span>
+              <span className="text-right" style={{ color: textShade(high) }}>{AXIS_INFO[axis].highLabel}</span>
+            </div>
+            <div className="mt-1.5 h-2 rounded-full" style={{ background: `linear-gradient(to right, ${low}, ${high})` }} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
