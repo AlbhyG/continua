@@ -32,7 +32,6 @@ export default function VerificationForm({ token }: VerificationFormProps) {
               >
                 Download the first chapter PDF
               </a>
-              <p className="text-gray-600">Your PDF password is: {state.password}</p>
             </div>
           ) : (
             <p className="text-gray-600">

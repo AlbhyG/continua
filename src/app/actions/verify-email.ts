@@ -10,7 +10,6 @@ type VerifyEmailState = {
   success?: boolean
   error?: string
   downloadUrl?: string
-  password?: string
 } | null
 
 export async function verifyEmailAction(
