@@ -3,7 +3,6 @@
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { LAUNCH_LITE } from '@/lib/site-mode';
 import {
   FAMOUS_FIGURE_CATEGORIES,
   groupFamousFiguresByCategory,
@@ -22,12 +21,12 @@ const PersonalityOrb = dynamic(() => import("@/components/PersonalityOrb"), {
 });
 
 const AXIS_LABELS: Array<{ key: keyof AxisScores; name: string; lowLabel: string; highLabel: string }> = [
-  { key: "social_attunement", name: "Social Attunement", lowLabel: "Hypo-Attuned", highLabel: "Hyper-Attuned" },
-  { key: "empathy", name: "Empathy", lowLabel: "Detached", highLabel: "Highly Empathic" },
+  { key: "social_attunement", name: "Social Attunement", lowLabel: "Socially Independent", highLabel: "Socially Attuned" },
+  { key: "empathy", name: "Empathy", lowLabel: "Detached", highLabel: "Empathetic" },
   { key: "self_orientation", name: "Self-Orientation", lowLabel: "Altruistic", highLabel: "Self-Focused" },
   { key: "conscientiousness", name: "Conscientiousness", lowLabel: "Spontaneous", highLabel: "Conscientious" },
-  { key: "agency", name: "Agency", lowLabel: "Yielding", highLabel: "Agentic" },
-  { key: "reactivity", name: "Reactivity", lowLabel: "Low Reactivity", highLabel: "Highly Reactive" },
+  { key: "agency", name: "Agency", lowLabel: "Accommodating", highLabel: "Agentic" },
+  { key: "reactivity", name: "Reactivity", lowLabel: "Low Reactivity", highLabel: "High Reactivity" },
 ];
 
 function getQualitativeBand(score: number) {
@@ -44,6 +43,22 @@ export default function FamousFiguresExplorer({ profiles }: { profiles: FamousFi
 
   return (
     <>
+      <Link
+        href="/orb-demo"
+        className="glass-card group mb-4 flex items-center gap-4 p-4 md:p-5 transition-transform hover:-translate-y-0.5"
+      >
+        <div className="shrink-0 h-[64px] w-[64px] overflow-hidden rounded-full">
+          <PersonalityOrb data={scoresToOrbData({})} size={64} />
+        </div>
+        <div className="min-w-0">
+          <p className="text-[18px] md:text-[20px] font-bold text-foreground">How an orb works</p>
+          <p className="text-[15px] md:text-[16px] leading-[1.5] text-foreground/75">
+            Move the sliders to see how each of the six dimensions shapes an orb.
+          </p>
+        </div>
+        <span aria-hidden="true" className="ml-auto text-2xl text-foreground/50 transition-transform group-hover:translate-x-1">→</span>
+      </Link>
+
       <div className="grid md:grid-cols-2 gap-4">
         {FAMOUS_FIGURE_CATEGORIES
           .filter(({ key }) => categories.has(key))
@@ -99,16 +114,14 @@ export default function FamousFiguresExplorer({ profiles }: { profiles: FamousFi
             <div className="flex justify-center my-4">
               <PersonalityOrb data={scoresToOrbData(selected.scores)} size={240} />
             </div>
-            {!LAUNCH_LITE && (
             <div className="text-center">
               <Link
                 href="/orb-demo"
                 className="text-sm font-semibold text-accent underline decoration-accent/30 underline-offset-4 transition hover:decoration-accent"
               >
-                Open in the full Orb Generator →
+                How an orb works →
               </Link>
             </div>
-            )}
 
             {/* Axis scores */}
             <div className="mt-4 space-y-3">

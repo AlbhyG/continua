@@ -17,13 +17,13 @@ export default function FamousFiguresPage() {
       {/* Back button */}
       <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-16 pb-2">
         <Link
-          href="/my-info"
+          href="/about"
           className="inline-flex items-center gap-1.5 text-sm text-white/70 hover:text-white transition-colors"
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M10 12L6 8L10 4" />
           </svg>
-          Info
+          About
         </Link>
       </section>
 
