@@ -45,6 +45,16 @@ const PRESETS: Array<{ name: string; scores: Scores }> = PRESET_NAMES.flatMap((n
   return p ? [{ name, scores: p.scores }] : []
 })
 
+// Every slider dead center. The scale is 1–10, so the true middle is 5.5.
+const BALANCED: Scores = {
+  social_attunement: 5.5,
+  empathy: 5.5,
+  self_orientation: 5.5,
+  conscientiousness: 5.5,
+  agency: 5.5,
+  reactivity: 5.5,
+}
+
 function toRadar(s: Scores) {
   return AXES.map((a) => ({
     axis: a.key,
@@ -57,8 +67,8 @@ function toRadar(s: Scores) {
 }
 
 export default function OrbDemoPage() {
-  const [scores, setScores] = useState<Scores>(PRESETS[0].scores)
-  const [active, setActive] = useState(PRESETS[0].name)
+  const [scores, setScores] = useState<Scores>(BALANCED)
+  const [active, setActive] = useState('Balanced')
 
   const update = (key: keyof Scores, value: number) => {
     setScores((prev) => ({ ...prev, [key]: value }))
@@ -110,7 +120,7 @@ export default function OrbDemoPage() {
                 Start from a figure
               </p>
               <div className="flex flex-wrap gap-2">
-                {PRESETS.map((p) => (
+                {[{ name: 'Balanced', scores: BALANCED }, ...PRESETS].map((p) => (
                   <button
                     key={p.name}
                     onClick={() => {
@@ -143,7 +153,7 @@ export default function OrbDemoPage() {
                   type="range"
                   min={1}
                   max={10}
-                  step={1}
+                  step={0.5}
                   value={scores[axis.key]}
                   onChange={(e) => update(axis.key, Number(e.target.value))}
                   aria-label={`${axis.name}: ${axis.lowLabel} to ${axis.highLabel}`}
