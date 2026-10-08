@@ -155,7 +155,7 @@ function ContactForm({
             setError(null)
             setValues((v) => ({ ...v, name: e.target.value }))
           }}
-          className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
+          className="w-full px-3 py-2 rounded-lg border border-gray-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
         />
       </div>
       <div>
@@ -167,7 +167,7 @@ function ContactForm({
             setError(null)
             setValues((v) => ({ ...v, email: e.target.value }))
           }}
-          className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
+          className="w-full px-3 py-2 rounded-lg border border-gray-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
         />
       </div>
       <p className="text-xs text-gray-400 text-center">And / Or</p>
@@ -180,7 +180,7 @@ function ContactForm({
             setError(null)
             setValues((v) => ({ ...v, phone: e.target.value }))
           }}
-          className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
+          className="w-full px-3 py-2 rounded-lg border border-gray-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
         />
         <p className="mt-1 text-xs text-gray-500">
           Enter a phone number only if you want low-volume text follow-up about your Continua request.
