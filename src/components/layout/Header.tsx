@@ -414,6 +414,13 @@ function MobileMenu({
           >
             About
           </Link>
+          <Link
+            href="/famous-figures"
+            onClick={onClose}
+            className="mt-5 text-xs font-semibold text-foreground/60 uppercase tracking-wider block hover:text-foreground transition-colors"
+          >
+            Famous Figures
+          </Link>
           {!LAUNCH_LITE && (
             <>
               <Link
@@ -579,6 +586,10 @@ export default function Header() {
 
             <Link href="/about" className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
               About
+            </Link>
+
+            <Link href="/famous-figures" className="whitespace-nowrap text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
+              Famous Figures
             </Link>
 
             {!LAUNCH_LITE && (
