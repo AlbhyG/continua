@@ -29,7 +29,7 @@ Profiles with 3 co-primary pairs: 25 (24%).
 | --- | --- | --- | --- | --- |
 | Adolf Hitler | 8 1 10 5 10 9 | tied_top_pairs | EM×SO: "the closed loop" 100%; EM×AG: "the unsentimental driver" 100%; SO×AG: "the architecture of self, asserted" 100% | RE +0.78 |
 | Napoleon Bonaparte | 7 3 9 8 10 8 | top_with_runner_up | SO×AG: "the architecture of self, asserted" 89% | EM -0.56 |
-| Alexander the Great | 7 3 9 6 10 9 | top_with_runner_up | SO×AG: "the architecture of self, asserted" 89%; AG×RE: "the passionate leader" 89% | EM -0.56 |
+| Alexander the Great | 7 3 9 3 10 9 | top_with_runner_up | SO×AG: "the architecture of self, asserted" 89%; AG×RE: "the passionate leader" 89% | EM -0.56 |
 | Joseph Stalin | 8 1 10 8 10 7 | tied_top_pairs | EM×SO: "the closed loop" 100%; EM×AG: "the unsentimental driver" 100%; SO×AG: "the architecture of self, asserted" 100% | SA +0.56 |
 | King Louis XIV | 8 2 10 7 9 6 | top_with_runner_up | EM×SO: "the closed loop" 89%; SO×AG: "the architecture of self, asserted" 89% | SA +0.56 |
 | Nero | 5 1 10 2 9 10 | tied_top_pairs | EM×SO: "the closed loop" 100%; EM×RE: "intensity on its own terms" 100%; SO×RE: "the volatile self" 100% | CO -0.78 |
@@ -44,7 +44,7 @@ Profiles with 3 co-primary pairs: 25 (24%).
 | Eva Perón | 8 5 8 7 9 8 | top_with_runner_up | SA×AG: "calibrated influence" 69%; SO×AG: "the architecture of self, asserted" 69%; AG×RE: "the passionate leader" 69% | CO +0.33 |
 | Cleopatra | 9 4 8 8 9 6 | tied_top_pairs | SA×AG: "calibrated influence" 79% | SO +0.56 |
 | Ivan the Terrible | 6 1 10 5 10 10 | tied_top_reduced | EM×SO: "the closed loop" 100%; EM×AG: "the unsentimental driver" 100%; SO×AG: "the architecture of self, asserted" 100% | RE +1.00 |
-| Vlad the Impaler | 4 1 10 6 10 10 | tied_top_reduced | EM×SO: "the closed loop" 100%; EM×AG: "the unsentimental driver" 100%; SO×AG: "the architecture of self, asserted" 100% | RE +1.00 |
+| Vlad the Impaler | 4 1 10 3 10 10 | tied_top_reduced | EM×SO: "the closed loop" 100%; EM×AG: "the unsentimental driver" 100%; SO×AG: "the architecture of self, asserted" 100% | RE +1.00 |
 | Marie Antoinette | 5 4 8 3 5 7 | tied_top_pairs | SO×CO: "chasing the next thing" 60% | EM -0.33 |
 | King George III | 5 4 7 6 7 8 | top_with_runner_up | EM×RE: "intensity on its own terms" 52%; SO×RE: "the volatile self" 52%; AG×RE: "the passionate leader" 52% | SA -0.11 |
 | Oscar Wilde | 9 5 8 4 8 7 | top_with_runner_up | SA×SO: "the instrumentalized read" 69%; SA×AG: "calibrated influence" 69% | CO -0.33 |
