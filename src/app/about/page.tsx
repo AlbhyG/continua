@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import AxesOrbsFigure from '@/components/AxesOrbsFigure'
 import FadeIn from '@/components/FadeIn'
 import AxesDiagram from '@/components/AxesDiagram'
 import { relationshipSections } from '@/lib/relationship-content'
@@ -23,11 +22,6 @@ export default function AboutPage() {
             Continua provides tools for leveraging and optimizing relationships
             with others and with yourself.
           </p>
-        </FadeIn>
-        <FadeIn delay={50}>
-          <figure className="mt-10 rounded-2xl bg-white shadow-sm overflow-hidden">
-            <AxesOrbsFigure />
-          </figure>
         </FadeIn>
         <FadeIn delay={100}>
           <h2 className="mt-10 text-[24px] md:text-[30px] font-bold text-white mb-3">
