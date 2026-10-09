@@ -21,7 +21,7 @@ import {
 } from '@headlessui/react'
 import { getStartedAction } from '@/app/actions/get-started'
 import AccountButton from '@/components/auth/AccountButton'
-import { LAUNCH_LITE } from '@/lib/site-mode'
+import { LAUNCH_LITE, SHOW_ASSESSMENT, SHOW_ACCOUNT } from '@/lib/site-mode'
 import ContactInquiry from '@/components/ContactInquiry'
 import { createClient } from '@/lib/supabase/client'
 
@@ -350,7 +350,7 @@ function MobileMenu({
               </Link>
             )}
             <div className="space-y-1">
-              {LAUNCH_LITE ? (
+              {LAUNCH_LITE && !SHOW_ASSESSMENT ? (
                 <span className="block text-[15px] text-gray-400 py-2 px-3">
                   + Take an Assessment
                 </span>
@@ -359,7 +359,7 @@ function MobileMenu({
                   Take an Assessment
                 </Link>
               )}
-              {latestResultId && !LAUNCH_LITE ? (
+              {latestResultId && (!LAUNCH_LITE || SHOW_ASSESSMENT) ? (
                 <Link
                   href={`/quiz/results/${latestResultId}`}
                   onClick={onClose}
@@ -422,18 +422,18 @@ function MobileMenu({
             Famous Figures
           </Link>
           {!LAUNCH_LITE && (
-            <>
-              <Link
-                href="/orb-demo"
-                onClick={onClose}
-                className="mt-5 text-xs font-semibold text-foreground/60 uppercase tracking-wider block hover:text-foreground transition-colors"
-              >
-                Orb Generator
-              </Link>
-              <div className="mt-8">
-                <AccountButton mobile onNavigate={onClose} />
-              </div>
-            </>
+            <Link
+              href="/orb-demo"
+              onClick={onClose}
+              className="mt-5 text-xs font-semibold text-foreground/60 uppercase tracking-wider block hover:text-foreground transition-colors"
+            >
+              Orb Generator
+            </Link>
+          )}
+          {(!LAUNCH_LITE || SHOW_ACCOUNT) && (
+            <div className="mt-8">
+              <AccountButton mobile onNavigate={onClose} />
+            </div>
           )}
         </DialogPanel>
       </div>
@@ -520,7 +520,7 @@ export default function Header() {
                 )}
               </div>
               <MenuItems anchor="bottom start" className={dropdownClass}>
-                {LAUNCH_LITE ? (
+                {LAUNCH_LITE && !SHOW_ASSESSMENT ? (
                   <MenuItem disabled>
                     {() => (
                       <span className={greyedItemClass}>+ Take an Assessment</span>
@@ -533,7 +533,7 @@ export default function Header() {
                     )}
                   </MenuItem>
                 )}
-                {latestResultId && !LAUNCH_LITE ? (
+                {latestResultId && (!LAUNCH_LITE || SHOW_ASSESSMENT) ? (
                   <MenuItem>
                     {() => (
                       <Link href={`/quiz/results/${latestResultId}`} className={menuItemClass}>See Results</Link>
@@ -593,14 +593,12 @@ export default function Header() {
             </Link>
 
             {!LAUNCH_LITE && (
-              <>
-                <Link href="/orb-demo" className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
-                  Orb Generator
-                </Link>
-
-                <AccountButton />
-              </>
+              <Link href="/orb-demo" className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
+                Orb Generator
+              </Link>
             )}
+
+            {(!LAUNCH_LITE || SHOW_ACCOUNT) && <AccountButton />}
 
             {/* First-chapter request (desktop) */}
             <Popover className="relative">
