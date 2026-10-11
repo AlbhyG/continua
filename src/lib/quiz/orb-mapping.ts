@@ -23,12 +23,12 @@ export function scoresToOrbData(scores: Partial<AxisScores>): OrbData {
     chartreuse: e,         // High Empathy
     indigo: 11 - e,        // Low Empathy (Detachment)
     lime: 11 - s,          // Altruistic (low end of self-orientation)
-    violet: s,             // Self-Focused (high end of self-orientation)
+    violet: s,             // Self-Oriented (high end of self-orientation)
     emerald: c,            // Conscientious
     magenta: 11 - c,       // Impulsive / Spontaneous
     red: ag,               // Agentic / Dominant
-    teal: 11 - ag,         // Yielding / Submissive
-    orange: r,             // High Reactivity
-    blue: 11 - r,          // Low Reactivity
+    teal: 11 - ag,         // Accommodating
+    orange: r,             // Highly Reactive
+    blue: 11 - r,          // Calm
   };
 }

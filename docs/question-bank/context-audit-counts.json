@@ -3,7 +3,7 @@
   "sources": [
     {
       "file": "data/question-pools/axis1-empathy-detachment.json",
-      "sha256": "e7c465012d7683f905de1a6950ead75c23ab9e25b98717d33678c9f8a4ef871e"
+      "sha256": "28007494677d6a7ab8d9d4b787d761e9a5093210ba7932e6ac91c529f90151ff"
     },
     {
       "file": "data/question-pools/axis2-self-orientation.json",
@@ -99,7 +99,7 @@
     },
     {
       "file": "data/questionnaires/q019.json",
-      "sha256": "b8da4750ca4210ea05032e8a9ad61b46da6888afe9e41646626a46e7cc8e549d"
+      "sha256": "96341da226e06bad999ea5c3e1903bbebbc4778abebfb094949e8cb55cf039d0"
     },
     {
       "file": "data/questionnaires/q020.json",

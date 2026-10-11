@@ -21,12 +21,12 @@ const PersonalityOrb = dynamic(() => import("@/components/PersonalityOrb"), {
 });
 
 const AXIS_LABELS: Array<{ key: keyof AxisScores; name: string; lowLabel: string; highLabel: string }> = [
-  { key: "social_attunement", name: "Social Attunement", lowLabel: "Socially Independent", highLabel: "Socially Attuned" },
+  { key: "social_attunement", name: "Social Attunement", lowLabel: "Hypo-Attuned", highLabel: "Hyper-Attuned" },
   { key: "empathy", name: "Empathy", lowLabel: "Detached", highLabel: "Empathetic" },
-  { key: "self_orientation", name: "Self-Orientation", lowLabel: "Altruistic", highLabel: "Self-Focused" },
-  { key: "conscientiousness", name: "Conscientiousness", lowLabel: "Spontaneous", highLabel: "Conscientious" },
+  { key: "self_orientation", name: "Self-Orientation", lowLabel: "Altruistic", highLabel: "Self-Oriented" },
+  { key: "conscientiousness", name: "Conscientiousness", lowLabel: "Spontaneous", highLabel: "Disciplined" },
   { key: "agency", name: "Agency", lowLabel: "Accommodating", highLabel: "Agentic" },
-  { key: "reactivity", name: "Reactivity", lowLabel: "Low Reactivity", highLabel: "High Reactivity" },
+  { key: "reactivity", name: "Reactivity", lowLabel: "Calm", highLabel: "Highly Reactive" },
 ];
 
 function getQualitativeBand(score: number) {

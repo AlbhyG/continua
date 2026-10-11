@@ -102,14 +102,14 @@ void main() {
 
   // Pole colors — from Albhy's updated personality map (2026-04-09)
   vec3 poleColors[12];
-  poleColors[0]  = vec3(0.294, 0.643, 0.329);  // #4BA454 Hyper-Socially Attuned
-  poleColors[1]  = vec3(0.576, 0.192, 0.376);  // #933160 Hypo-Socially Attuned
+  poleColors[0]  = vec3(0.294, 0.643, 0.329);  // #4BA454 Hyper-Hyper-Attuned
+  poleColors[1]  = vec3(0.576, 0.192, 0.376);  // #933160 Hypo-Hyper-Attuned
   poleColors[2]  = vec3(0.671, 0.784, 0.329);  // #ABC854 Altruistic
-  poleColors[3]  = vec3(0.408, 0.224, 0.486);  // #68397C Self-Focused
+  poleColors[3]  = vec3(0.408, 0.224, 0.486);  // #68397C Self-Oriented
   poleColors[4]  = vec3(0.988, 0.941, 0.314);  // #FCF050 High Empathy
   poleColors[5]  = vec3(0.255, 0.216, 0.482);  // #41377B Low Empathy
-  poleColors[6]  = vec3(0.820, 0.396, 0.224);  // #D16539 High Reactivity
-  poleColors[7]  = vec3(0.169, 0.396, 0.627);  // #2B65A0 Low Reactivity
+  poleColors[6]  = vec3(0.820, 0.396, 0.224);  // #D16539 Highly Reactive
+  poleColors[7]  = vec3(0.169, 0.396, 0.627);  // #2B65A0 Calm
   poleColors[8]  = vec3(0.757, 0.216, 0.196);  // #C13732 Dominant
   poleColors[9]  = vec3(0.294, 0.651, 0.824);  // #4BA6D2 Submissive
   poleColors[10] = vec3(0.855, 0.063, 0.439);  // #DA1070 Impulsive

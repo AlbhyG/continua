@@ -25,11 +25,11 @@ const original = (file) => JSON.parse(execFileSync('git', ['show', `${baseline}:
 // of altruism vs. self-focus). The export retains the source direction verbatim.
 const axes = [
   ['axis3-social-attunement.json', 'Social Attunement', { 'hyper-attuned': 'Hyper-Attuned', 'hypo-attuned': 'Hypo-Attuned' }],
-  ['axis1-empathy-detachment.json', 'Empathy–Detachment', { empathy: 'Highly Empathic', detachment: 'Detached / Analytical' }],
-  ['axis2-self-orientation.json', 'Self-Orientation', { altruism: 'Altruistic / Self-Transcendent', 'self-focus': 'Self-Focused / Ambitious' }],
-  ['axis4-conscientiousness.json', 'Conscientiousness', { conscientious: 'Highly Conscientious', spontaneous: 'Spontaneous' }],
-  ['axis5-agency.json', 'Agency', { agentic: 'Agentic / Assertive', yielding: 'Yielding / Accommodating' }],
-  ['axis6-reactivity.json', 'Reactivity', { 'high-reactive': 'Highly Reactive', 'low-reactive': 'Low Reactivity' }],
+  ['axis1-empathy-detachment.json', 'Empathy', { empathy: 'Highly Empathetic', detachment: 'Detached' }],
+  ['axis2-self-orientation.json', 'Self-Orientation', { altruism: 'Altruistic', 'self-focus': 'Self-Oriented' }],
+  ['axis4-conscientiousness.json', 'Conscientiousness', { conscientious: 'Disciplined', spontaneous: 'Spontaneous' }],
+  ['axis5-agency.json', 'Agency', { agentic: 'Agentic', yielding: 'Accommodating' }],
+  ['axis6-reactivity.json', 'Reactivity', { 'high-reactive': 'Highly Reactive', 'low-reactive': 'Calm' }],
 ]
 assert.deepEqual(fs.readdirSync(poolDir).filter((f) => f.endsWith('.json')).sort(), axes.map(([file]) => file).sort())
 const manifest = JSON.parse(fs.readFileSync(path.join(reportDir, 'pool-manifest.json'), 'utf8'))
