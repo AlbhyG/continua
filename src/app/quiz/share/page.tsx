@@ -106,7 +106,7 @@ function ShareContent() {
           Shared Result
         </p>
         <h1 className="mt-2 text-3xl font-bold text-white">
-          {result.axisResults ? "Personality Graph" : "Empathy–Detachment Spectrum"}
+          {result.axisResults ? "Personality Graph" : "Empathy Spectrum"}
         </h1>
       </div>
 

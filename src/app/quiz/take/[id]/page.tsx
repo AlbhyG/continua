@@ -14,11 +14,13 @@ interface Questionnaire {
 }
 
 const LIKERT_OPTIONS = [
-  { value: 1, label: "Always" },
-  { value: 2, label: "Sometimes" },
-  { value: 3, label: "Neutral" },
-  { value: 4, label: "Rarely" },
-  { value: 5, label: "Never" },
+  // Same wording as the paper assessment in the book (Appendix 1).
+  // Values are unchanged, so scoring is unaffected.
+  { value: 1, label: "Very much me" },
+  { value: 2, label: "Mostly me" },
+  { value: 3, label: "Kind of me" },
+  { value: 4, label: "Mostly not me" },
+  { value: 5, label: "Not me at all" },
 ];
 
 export default function QuizTakePage() {

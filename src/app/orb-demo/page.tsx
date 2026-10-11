@@ -22,12 +22,12 @@ const AXES: Array<{
   lowColor: string
   highColor: string
 }> = [
-  { key: 'social_attunement', name: 'Social Attunement', lowLabel: 'Socially Independent', highLabel: 'Socially Attuned', lowColor: '#41377B', highColor: '#C9B800' },
+  { key: 'social_attunement', name: 'Social Attunement', lowLabel: 'Hypo-Attuned', highLabel: 'Hyper-Attuned', lowColor: '#41377B', highColor: '#C9B800' },
   { key: 'empathy',           name: 'Empathy',           lowLabel: 'Detached',             highLabel: 'Empathetic',       lowColor: '#68397C', highColor: '#7FA02E' },
-  { key: 'self_orientation',  name: 'Self-Orientation',  lowLabel: 'Altruistic',           highLabel: 'Self-Focused',     lowColor: '#4BA454', highColor: '#933160' },
-  { key: 'conscientiousness', name: 'Conscientiousness', lowLabel: 'Spontaneous',          highLabel: 'Conscientious',    lowColor: '#DA1070', highColor: '#3F8F85' },
+  { key: 'self_orientation',  name: 'Self-Orientation',  lowLabel: 'Altruistic',           highLabel: 'Self-Oriented',     lowColor: '#4BA454', highColor: '#933160' },
+  { key: 'conscientiousness', name: 'Conscientiousness', lowLabel: 'Spontaneous',          highLabel: 'Disciplined',    lowColor: '#DA1070', highColor: '#3F8F85' },
   { key: 'agency',            name: 'Agency',            lowLabel: 'Accommodating',        highLabel: 'Agentic',          lowColor: '#3E94BF', highColor: '#C13732' },
-  { key: 'reactivity',        name: 'Reactivity',        lowLabel: 'Low Reactivity',       highLabel: 'High Reactivity',  lowColor: '#2B65A0', highColor: '#D16539' },
+  { key: 'reactivity',        name: 'Reactivity',        lowLabel: 'Calm',       highLabel: 'Highly Reactive',  lowColor: '#2B65A0', highColor: '#D16539' },
 ]
 
 // A spread of figures from different categories on the Famous Figures page.
