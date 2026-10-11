@@ -3,7 +3,7 @@
   "sources": [
     {
       "file": "data/question-pools/axis1-empathy-detachment.json",
-      "sha256": "28007494677d6a7ab8d9d4b787d761e9a5093210ba7932e6ac91c529f90151ff"
+      "sha256": "31c513b26c05084999e28403458842e043c2160e6aae0277ddd4879f82d87998"
     },
     {
       "file": "data/question-pools/axis2-self-orientation.json",
@@ -27,7 +27,7 @@
     },
     {
       "file": "data/questionnaires/q001.json",
-      "sha256": "9779f47e177cf7a4d62bc3d3d4582a813b457e425075811c4ee37c205710e78e"
+      "sha256": "6fd3c7e84082fcd93c3869e51228df15286add739cfbf6436062a53890779671"
     },
     {
       "file": "data/questionnaires/q002.json",
@@ -123,7 +123,7 @@
     },
     {
       "file": "data/questionnaires/q025.json",
-      "sha256": "3167bf96bbd1128472a1d5674babe94ed31dda2508384aa0e30a7d590eb967d9"
+      "sha256": "248199a9503ab234ab16ae081a4c3ebbdc82d39c73ef1cfb56964a547c91bf1c"
     },
     {
       "file": "data/questionnaires/q026.json",
@@ -131,7 +131,7 @@
     },
     {
       "file": "data/questionnaires/q027.json",
-      "sha256": "cb7390b07c94438e388ef61c0d38cb7e1919ecf523e80ee3c9ee1504fbaec2ba"
+      "sha256": "c173e1205477db52fa3bb23a4e659dfd0f69bc5f2d2cdc052eeaf9e108e07165"
     },
     {
       "file": "data/questionnaires/q028.json",
