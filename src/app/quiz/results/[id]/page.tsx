@@ -47,20 +47,35 @@ export default function QuizResultsPage() {
 
   const [result, setResult] = useState<ResultData | null>(null);
   const [copied, setCopied] = useState(false);
+  const [loadError, setLoadError] = useState<"not_found" | "unavailable" | null>(null);
 
   useEffect(() => {
     const stored = sessionStorage.getItem(`result_${resultId}`);
     if (stored) {
       setResult(JSON.parse(stored));
-    } else {
-      fetch(`/quiz/api/results/${resultId}`)
-        .then((res) => {
-          if (!res.ok) throw new Error("Not found");
-          return res.json();
-        })
-        .then(setResult)
-        .catch(() => {});
+      return;
     }
+    fetch(`/quiz/api/results/${resultId}`)
+      .then((res) => {
+        if (res.status === 403 || res.status === 404) {
+          // Stale or inaccessible result: stop the header from pointing at it again.
+          if (localStorage.getItem("latest_result_id") === String(resultId)) {
+            localStorage.removeItem("latest_result_id");
+            window.dispatchEvent(new Event("continua:latest-result"));
+          }
+          setLoadError("not_found");
+          return null;
+        }
+        if (!res.ok) {
+          setLoadError("unavailable");
+          return null;
+        }
+        return res.json();
+      })
+      .then((data) => {
+        if (data) setResult(data);
+      })
+      .catch(() => setLoadError("unavailable"));
   }, [resultId]);
 
   async function takeAnother() {
@@ -90,6 +105,29 @@ export default function QuizResultsPage() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     });
+  }
+
+  if (!result && loadError) {
+    return (
+      <div className="mx-auto flex min-h-[60vh] max-w-md flex-col items-center justify-center gap-4 px-6 text-center">
+        <p className="text-lg font-semibold text-foreground">
+          {loadError === "not_found"
+            ? "We couldn't find this result."
+            : "Results are temporarily unavailable."}
+        </p>
+        <p className="text-sm text-foreground/60">
+          {loadError === "not_found"
+            ? "Results are tied to the browser or account you used to take the assessment. If you took it in a different browser or before signing in, it won't show up here."
+            : "Please try again in a few minutes."}
+        </p>
+        <Link
+          href="/quiz"
+          className="mt-2 rounded-xl bg-white/90 px-6 py-3 text-sm font-bold text-foreground shadow-sm transition-all hover:bg-white"
+        >
+          Take the Assessment
+        </Link>
+      </div>
+    );
   }
 
   if (!result) {
