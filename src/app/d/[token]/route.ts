@@ -13,7 +13,7 @@ function notFound() {
 }
 
 export async function GET(
-  _req: NextRequest,
+  req: NextRequest,
   { params }: { params: Promise<{ token: string }> }
 ) {
   try {
@@ -25,13 +25,25 @@ export async function GET(
       return new Response('Server not configured.', { status: 500 })
     }
 
+    // select('*') so this keeps working whether or not migration 00022
+    // (recipient / revoked_at columns) has been applied yet.
     const { data: link, error } = await supabase
       .from('pdf_links')
-      .select('file_path, label')
+      .select('*')
       .eq('token', token)
       .single()
 
     if (error || !link) return notFound()
+    if (link.revoked_at) return notFound()
+
+    if (link.label === 'proposal') {
+      // Record the open; never block the download if logging fails.
+      const { error: openError } = await supabase.from('pdf_link_opens').insert({
+        token,
+        user_agent: req.headers.get('user-agent')?.slice(0, 300) ?? null,
+      })
+      if (openError) console.error('Proposal open log error:', openError.message)
+    }
 
     const { data: sourcePdf, error: sourceError } = await supabase.storage
       .from('books')
@@ -49,6 +61,7 @@ export async function GET(
         'Content-Disposition': `inline; filename="continua-${label}.pdf"`,
         'Content-Length': body.byteLength.toString(),
         'Cache-Control': 'no-store',
+        'X-Robots-Tag': 'noindex, nofollow',
       },
     })
   } catch (err) {

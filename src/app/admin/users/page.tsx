@@ -93,6 +93,12 @@ export default async function AdminUsersPage({ searchParams }: PageProps) {
             >
               Assessments
             </Link>
+            <Link
+              href="/admin/proposal"
+              className="h-9 rounded border border-gray-300 bg-white px-3 py-2 text-sm font-semibold"
+            >
+              Proposal
+            </Link>
             <form action="/admin/contacts/logout" method="post">
               <input type="hidden" name="next" value="/admin/users" />
               <button
