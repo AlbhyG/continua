@@ -1,0 +1,334 @@
+{
+  "name": "Continua generated-content banned terms",
+  "version": "0.1.0",
+  "status": "DRAFT — starter list, not legally reviewed (see requirements 4.4)",
+  "updated": "2026-10-17",
+  "source": "docs/continua-analysis-and-compare-requirements.md sections 2.2.3, 2.3, 3.5, 3.6",
+  "applies_to": "Automatically generated descriptions only. The fixed disclaimers and Methodology page are reviewed by hand and may use words on this list (for example, 'not therapy').",
+  "matching": {
+    "case_insensitive": true,
+    "patterns": "JavaScript/Python-compatible regular expressions; \\b is a word boundary. If 'pattern' is absent, the term is matched as a whole word.",
+    "actions": {
+      "block": "Draft is rejected: not cached, not shown; the fallback description is shown and the failure is queued for human review.",
+      "review": "Draft is not rejected by this list alone; the hit is passed to the second (tone and framing) check."
+    }
+  },
+  "categories": [
+    {
+      "id": "clinical",
+      "action": "block",
+      "rule": "No pathologizing or clinical language (requirements 2.3).",
+      "terms": [
+        {
+          "term": "condition",
+          "pattern": "\\bcondition(s|es)?\\b"
+        },
+        {
+          "term": "disorder",
+          "pattern": "\\bdisorder(s|es)?\\b"
+        },
+        {
+          "term": "diagnosis / diagnose",
+          "pattern": "\\bdiagnos\\w*"
+        },
+        {
+          "term": "symptom",
+          "pattern": "\\bsymptoms?\\b"
+        },
+        {
+          "term": "treat / treatment",
+          "pattern": "\\btreat(s|ed|ing|ment|ments)?\\b"
+        },
+        {
+          "term": "heal / healing",
+          "pattern": "\\bheal(s|ed|ing)?\\b"
+        },
+        {
+          "term": "cure",
+          "pattern": "\\bcur(e|es|ed|ing)\\b"
+        },
+        {
+          "term": "fix",
+          "pattern": "\\bfix(es|ed|ing)?\\b"
+        },
+        {
+          "term": "manage your",
+          "pattern": "\\bmanag(e|ing) your\\b"
+        },
+        {
+          "term": "therapy / therapeutic",
+          "pattern": "\\btherap(y|ies|eutic)\\b",
+          "note": "Allowed only in the fixed disclaimers, never in generated text."
+        },
+        {
+          "term": "clinical",
+          "pattern": "\\bclinical(s|es)?\\b",
+          "note": "Allowed only in the fixed disclaimers."
+        },
+        {
+          "term": "patient",
+          "pattern": "\\bpatients?\\b"
+        },
+        {
+          "term": "dysfunction / dysfunctional",
+          "pattern": "\\bdysfunction(al)?\\b"
+        },
+        {
+          "term": "pathology / pathological",
+          "pattern": "\\bpatholog\\w*"
+        },
+        {
+          "term": "mental illness / mental health condition",
+          "pattern": "\\bmental (illness|health (condition|issue|problem))s?\\b"
+        },
+        {
+          "term": "unhealthy",
+          "pattern": "\\bunhealthy(s|es)?\\b"
+        },
+        {
+          "term": "toxic",
+          "pattern": "\\btoxic(s|es)?\\b"
+        }
+      ]
+    },
+    {
+      "id": "named_conditions",
+      "action": "block",
+      "rule": "Names of clinical conditions or labels. Descriptions must never suggest a person has one.",
+      "terms": [
+        {
+          "term": "narcissist / narcissistic",
+          "pattern": "\\bnarcissis\\w*"
+        },
+        {
+          "term": "codependent",
+          "pattern": "\\bco-?dependen\\w*"
+        },
+        {
+          "term": "borderline",
+          "pattern": "\\bborderline(s|es)?\\b"
+        },
+        {
+          "term": "bipolar",
+          "pattern": "\\bbipolar(s|es)?\\b"
+        },
+        {
+          "term": "ADHD",
+          "pattern": "\\badh?d\\b"
+        },
+        {
+          "term": "autism / autistic",
+          "pattern": "\\bautis\\w*"
+        },
+        {
+          "term": "OCD / obsessive-compulsive",
+          "pattern": "\\b(ocd|obsessive[- ]compulsive)\\b"
+        },
+        {
+          "term": "depression / depressed",
+          "pattern": "\\bdepress(ion|ed|ive)\\b"
+        },
+        {
+          "term": "anxiety disorder",
+          "pattern": "\\banxiety disorders?\\b"
+        },
+        {
+          "term": "trauma / traumatized",
+          "pattern": "\\btraum(a|as|atic|atized)\\b"
+        },
+        {
+          "term": "psychopath / sociopath",
+          "pattern": "\\b(psycho|socio)path\\w*"
+        },
+        {
+          "term": "personality disorder",
+          "pattern": "\\bpersonality disorders?\\b"
+        },
+        {
+          "term": "addict / addiction",
+          "pattern": "\\baddict\\w*"
+        }
+      ]
+    },
+    {
+      "id": "absolutes",
+      "action": "block",
+      "rule": "Hedged, never absolute: \"tend to,\" \"often\" — never \"you are\" or \"you will\" (2.3).",
+      "terms": [
+        {
+          "term": "you are / you're",
+          "pattern": "\\byou(\\s+are|'re|’re)\\b",
+          "note": "Rephrase as \"people with this profile tend to…\"."
+        },
+        {
+          "term": "you will / you'll",
+          "pattern": "\\byou(\\s+will|'ll|’ll)\\b"
+        },
+        {
+          "term": "you always",
+          "pattern": "\\byou always\\b"
+        },
+        {
+          "term": "you never",
+          "pattern": "\\byou never\\b"
+        },
+        {
+          "term": "definitely",
+          "pattern": "\\bdefinitely(s|es)?\\b"
+        },
+        {
+          "term": "guaranteed / guarantee",
+          "pattern": "\\bguarantee(d|s)?\\b"
+        },
+        {
+          "term": "proven",
+          "pattern": "\\bproven(s|es)?\\b"
+        },
+        {
+          "term": "scientifically",
+          "pattern": "\\bscientifically(s|es)?\\b"
+        }
+      ]
+    },
+    {
+      "id": "value_judgments",
+      "action": "block",
+      "rule": "No axis position or range framed as better or worse; call the central band \"wide bandwidth,\" not \"balanced\" (2.3).",
+      "terms": [
+        {
+          "term": "balanced / unbalanced / imbalanced",
+          "pattern": "\\b(un|im)?balanced\\b",
+          "note": "Use \"wide bandwidth\"."
+        },
+        {
+          "term": "more evolved",
+          "pattern": "\\bmore evolved\\b"
+        },
+        {
+          "term": "rigid",
+          "pattern": "\\brigid(s|es)?\\b"
+        },
+        {
+          "term": "abnormal",
+          "pattern": "\\babnormal(s|es)?\\b"
+        },
+        {
+          "term": "superior / inferior",
+          "pattern": "\\b(superior|inferior)\\b"
+        },
+        {
+          "term": "flaw / flawed",
+          "pattern": "\\bflaw(s|ed)?\\b"
+        },
+        {
+          "term": "deficient / deficiency",
+          "pattern": "\\bdeficien\\w*"
+        },
+        {
+          "term": "immature",
+          "pattern": "\\bimmature(s|es)?\\b"
+        }
+      ]
+    },
+    {
+      "id": "value_review",
+      "action": "review",
+      "rule": "Words that are often fine but can imply one position is better. Sent to the second check rather than blocked.",
+      "terms": [
+        {
+          "term": "better / worse",
+          "pattern": "\\b(better|worse)\\b"
+        },
+        {
+          "term": "healthy",
+          "pattern": "\\bhealthy(s|es)?\\b"
+        },
+        {
+          "term": "normal",
+          "pattern": "\\bnormal(s|es)?\\b"
+        },
+        {
+          "term": "ideal",
+          "pattern": "\\bideal(s|es)?\\b"
+        },
+        {
+          "term": "weakness",
+          "pattern": "\\bweakness(es)?\\b"
+        },
+        {
+          "term": "problem",
+          "pattern": "\\bproblems?\\b"
+        },
+        {
+          "term": "issue",
+          "pattern": "\\bissues?\\b",
+          "note": "Listed in 2.3; set to review because it has many harmless uses."
+        }
+      ]
+    },
+    {
+      "id": "relationship_verdicts",
+      "action": "block",
+      "rule": "Comparison pages are not an assessment of relationship health or compatibility (3.5, 3.6).",
+      "terms": [
+        {
+          "term": "compatible / incompatible / compatibility",
+          "pattern": "\\b(in)?compatib\\w*",
+          "note": "\"Incompatibility\" may appear in fixed copy quoting the book, never in generated verdicts."
+        },
+        {
+          "term": "soulmate",
+          "pattern": "\\bsoul ?mates?\\b"
+        },
+        {
+          "term": "red flag",
+          "pattern": "\\bred flags?\\b"
+        },
+        {
+          "term": "dealbreaker",
+          "pattern": "\\bdeal-?breakers?\\b"
+        },
+        {
+          "term": "break up / divorce",
+          "pattern": "\\b(break(ing)? up|divorc\\w*)\\b"
+        },
+        {
+          "term": "right for you / wrong for you",
+          "pattern": "\\b(right|wrong) for (you|each other)\\b"
+        },
+        {
+          "term": "match score / compatibility score",
+          "pattern": "\\b(match|compatibility) scores?\\b"
+        }
+      ]
+    },
+    {
+      "id": "prescriptive",
+      "action": "review",
+      "rule": "Prescriptive advice is a step toward relationship advice (3.5). Sent to the second check.",
+      "terms": [
+        {
+          "term": "you should",
+          "pattern": "\\byou should\\b"
+        },
+        {
+          "term": "you need to",
+          "pattern": "\\byou need to\\b"
+        },
+        {
+          "term": "you must",
+          "pattern": "\\byou must\\b"
+        },
+        {
+          "term": "we recommend",
+          "pattern": "\\bwe recommend\\b"
+        },
+        {
+          "term": "seek help",
+          "pattern": "\\bseek (professional )?help\\b",
+          "note": "The fixed disclaimer handles referral language."
+        }
+      ]
+    }
+  ]
+}
