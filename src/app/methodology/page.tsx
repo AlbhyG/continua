@@ -26,8 +26,8 @@ export default function MethodologyPage() {
           </p>
           <p>
             The assessment summarizes answers across six dimensions: Social Attunement, Empathy,
-            Self-Orientation, Conscientiousness, Agency, and Reactivity. The current questionnaire
-            maps responses onto scores from 1 to 10. A score is a summary of answers, not a diagnosis,
+            Self-Orientation, Conscientiousness, Agency, and Reactivity. The current sets of questionnaires
+            map responses onto scores from 1 to 10. A score is a summary of answers, not a diagnosis,
             a percentile, or a ranking of a person’s worth. Neither end of an axis is inherently better.
           </p>
         </section>
