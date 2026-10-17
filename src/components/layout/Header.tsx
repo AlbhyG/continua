@@ -21,7 +21,7 @@ import {
 } from '@headlessui/react'
 import { getStartedAction } from '@/app/actions/get-started'
 import AccountButton from '@/components/auth/AccountButton'
-import { LAUNCH_LITE, SHOW_ASSESSMENT, SHOW_ACCOUNT } from '@/lib/site-mode'
+import { LAUNCH_LITE, SHOW_ASSESSMENT, SHOW_ACCOUNT, SHOW_RELATIONSHIPS } from '@/lib/site-mode'
 import ContactInquiry from '@/components/ContactInquiry'
 import { createClient } from '@/lib/supabase/client'
 
@@ -379,7 +379,7 @@ function MobileMenu({
           </div>
 
           {/* My Relationships */}
-          {!LAUNCH_LITE && (
+          {(!LAUNCH_LITE || SHOW_RELATIONSHIPS) && (
           <div className="mb-8">
             <Link
               href={`${versionPrefix}/my-relationships`}
@@ -555,7 +555,7 @@ export default function Header() {
             </Menu>
 
             {/* My Relationships */}
-            {!LAUNCH_LITE && (
+            {(!LAUNCH_LITE || SHOW_RELATIONSHIPS) && (
             <Menu>
               <div className="flex items-center gap-0">
                 <Link href={`${versionPrefix}/my-relationships`} className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
