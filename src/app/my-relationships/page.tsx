@@ -5,6 +5,8 @@ import RelationshipManager, {
   type RelationshipPerson,
 } from './relationship-manager'
 import { requireUser } from '@/lib/auth/current-user'
+import { notFound } from 'next/navigation'
+import { RELATIONSHIPS_ENABLED } from '@/lib/site-mode'
 
 export const metadata: Metadata = {
   title: 'My Relationships',
@@ -32,6 +34,7 @@ type ResultRow = {
 }
 
 export default async function MyRelationshipsPage() {
+  if (!RELATIONSHIPS_ENABLED) notFound()
   const { supabase, user } = await requireUser('/my-relationships')
   const [{ data: peopleData }, { data: groupsData }] = await Promise.all([
     supabase

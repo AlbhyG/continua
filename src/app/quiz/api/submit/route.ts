@@ -5,6 +5,7 @@ import { calculateScores, getAxisLabel, AXIS_INFO } from "@/lib/quiz/scoring";
 import { createShareLink } from "@/lib/quiz/share";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { RELATIONSHIPS_ENABLED } from "@/lib/site-mode";
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
@@ -14,6 +15,13 @@ export async function POST(request: NextRequest) {
     anonymousToken: string;
     personId?: string;
   };
+
+  if (personId && !RELATIONSHIPS_ENABLED) {
+    return NextResponse.json(
+      { error: "Assessments for other people are not available yet." },
+      { status: 403 }
+    );
+  }
 
   if (!questionnaireId || !answers || !anonymousToken) {
     return NextResponse.json(

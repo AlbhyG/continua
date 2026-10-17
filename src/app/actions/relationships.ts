@@ -3,6 +3,7 @@
 import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
 import { createClient } from '@/lib/supabase/server'
+import { RELATIONSHIPS_ENABLED } from '@/lib/site-mode'
 
 const personSchema = z.object({
   name: z.string().trim().min(1, 'Name is required').max(100),
@@ -27,6 +28,7 @@ async function authenticatedClient() {
 }
 
 export async function createPerson(input: { name: string; email: string }) {
+  if (!RELATIONSHIPS_ENABLED) throw new Error('This feature is not available yet.')
   const parsed = personSchema.safeParse(input)
   if (!parsed.success) {
     throw new Error(parsed.error.issues[0]?.message ?? 'Check the person details.')
@@ -71,6 +73,7 @@ export async function createGroup(input: {
   kind: string
   memberIds: string[]
 }) {
+  if (!RELATIONSHIPS_ENABLED) throw new Error('This feature is not available yet.')
   const parsed = groupSchema.safeParse(input)
   if (!parsed.success) {
     throw new Error(parsed.error.issues[0]?.message ?? 'Check the group details.')

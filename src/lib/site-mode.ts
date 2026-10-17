@@ -8,7 +8,11 @@ export const LAUNCH_LITE = true
 export const SHOW_ASSESSMENT = true
 export const SHOW_ACCOUNT = true
 
-// Shows My Relationships (add people, groups, compare members) in the menu
-// without turning off LAUNCH_LITE. Off until legal review: users enter
-// assessments about other people, who have not consented.
+// Turns on My Relationships (add people, groups, compare members) without
+// turning off LAUNCH_LITE. While off, the menu link is hidden and the pages,
+// actions, and assess-another-person flow are blocked. Off until legal
+// review: users enter assessments about other people, who have not consented.
 export const SHOW_RELATIONSHIPS = false
+
+// True when the relationships pages and the assess-someone-else flow are usable.
+export const RELATIONSHIPS_ENABLED = !LAUNCH_LITE || SHOW_RELATIONSHIPS

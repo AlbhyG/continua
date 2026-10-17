@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import GroupProfile from './group-profile'
 import { requireUser } from '@/lib/auth/current-user'
+import { notFound } from 'next/navigation'
+import { RELATIONSHIPS_ENABLED } from '@/lib/site-mode'
 import {
   averageLatestGroupScores,
   type GroupResultInput,
@@ -32,6 +34,7 @@ export default async function GroupPage({
   params: Promise<{ id: string }>
 }) {
   const { id } = await params
+  if (!RELATIONSHIPS_ENABLED) notFound()
   const { supabase, user } = await requireUser(`/my-relationships/groups/${id}`)
   const { data: group } = await supabase
     .from('groups')
