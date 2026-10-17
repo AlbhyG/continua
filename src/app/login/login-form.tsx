@@ -121,27 +121,30 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
 
   return (
     <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+      {supported && <div className="border-b border-black/10 pb-5">
+        <button type="button" onClick={signInWithPasskey} disabled={submitting || usingPasskey}
+          className="w-full rounded-xl bg-foreground px-5 py-3 font-bold text-white hover:bg-foreground/85 focus-visible:outline-2 focus-visible:outline-offset-4 disabled:opacity-60">
+          {usingPasskey ? 'Waiting for your passkey…' : 'Sign in with a passkey'}
+        </button>
+        {usingPasskey && <button type="button" onClick={() => ceremony.current?.abort()} className="mt-2 block min-h-11 underline underline-offset-4">Cancel passkey request</button>}
+        <p className="mt-2 text-sm text-foreground/80">Use a Continua passkey saved on this device, or choose another device in the system prompt.</p>
+      </div>}
       <div>
+        {supported && <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-foreground/60">Or use your email</p>}
         <label htmlFor="login-email" className="mb-2 block font-semibold">Email</label>
         <input ref={emailInput} id="login-email" type="email" autoComplete="username webauthn" required maxLength={254}
           value={email} onChange={(event) => setEmail(event.target.value)} disabled={submitting || usingPasskey}
           aria-describedby="login-help" aria-invalid={error ? true : undefined}
           className="w-full rounded-xl border border-black/20 bg-white/85 px-4 py-3 caret-foreground outline-none focus:border-foreground focus:ring-2 focus:ring-foreground/20 disabled:opacity-60" />
-        <p id="login-help" className="mt-2 text-sm text-foreground/80">Choose a saved passkey if your browser offers one, or get a secure link by email.</p>
+        <p id="login-help" className="mt-2 text-sm text-foreground/80">We’ll send you a secure sign-in link. New here? Start with email; you can add a passkey after signing in.</p>
       </div>
       {error && <p className="text-sm text-red-800" role="alert">{error}</p>}
       <button type="submit" disabled={submitting || usingPasskey}
-        className="w-full rounded-xl bg-foreground px-5 py-3 font-bold text-white hover:bg-foreground/85 focus-visible:outline-2 focus-visible:outline-offset-4 disabled:opacity-60">
+        className={supported
+          ? 'w-full rounded-xl border border-foreground/40 bg-white/60 px-5 py-3 font-bold text-foreground hover:bg-white/90 focus-visible:outline-2 focus-visible:outline-offset-4 disabled:opacity-60'
+          : 'w-full rounded-xl bg-foreground px-5 py-3 font-bold text-white hover:bg-foreground/85 focus-visible:outline-2 focus-visible:outline-offset-4 disabled:opacity-60'}>
         {submitting ? 'Sending link…' : 'Email me a sign-in link'}
       </button>
-      {supported && <div className="border-t border-black/10 pt-4">
-        <button type="button" onClick={signInWithPasskey} disabled={submitting || usingPasskey}
-          className="min-h-11 font-semibold underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 disabled:opacity-60">
-          {usingPasskey ? 'Waiting for your passkey…' : 'Sign in with a passkey'}
-        </button>
-        {usingPasskey && <button type="button" onClick={() => ceremony.current?.abort()} className="block min-h-11 underline underline-offset-4">Cancel passkey request</button>}
-        <p className="mt-1 text-sm text-foreground/80">Use a Continua passkey saved on this device, or choose another device in the system prompt. New here? Start with email; you can add a passkey after signing in.</p>
-      </div>}
     </form>
   )
 }

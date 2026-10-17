@@ -32,8 +32,8 @@ export default async function LoginPage({
           Sign in or create an account
         </h1>
         <p className="mt-3 text-foreground/70">
-          Start with your email. Your saved assessments stay with the same account,
-          whether you use email or a passkey. No password to remember.
+          Use a passkey or a link sent to your email. Your saved assessments stay
+          with the same account either way. No password to remember.
         </p>
         <LoginForm
           nextPath={nextPath}
