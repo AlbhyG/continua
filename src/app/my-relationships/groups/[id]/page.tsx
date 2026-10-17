@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import GroupProfile from './group-profile'
 import { requireUser } from '@/lib/auth/current-user'
-import { notFound } from 'next/navigation'
 import { RELATIONSHIPS_ENABLED } from '@/lib/site-mode'
 import {
   averageLatestGroupScores,
