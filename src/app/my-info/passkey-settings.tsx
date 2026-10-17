@@ -52,7 +52,11 @@ export default function PasskeySettings() {
   return (
     <section className="glass-card mt-8 p-5 md:p-6" aria-labelledby="passkeys-title">
       <h2 id="passkeys-title" className="text-xl font-bold">Passkeys</h2>
-      <p className="mt-2 text-sm text-foreground/70">You can add more than one passkey to the same account. To add one for your iPhone or another device, sign in there by email and choose Add a passkey. Passkeys saved in one password manager may not appear in another. Email sign-in remains available if you lose access to your passkeys.</p>
+      {!loading && passkeys.length > 0 ? (
+        <p className="mt-2 text-sm text-foreground/70">Your account has {passkeys.length === 1 ? 'a passkey' : `${passkeys.length} passkeys`}. To use a passkey on another device, such as your phone, sign in there by email and add one from this page. Email sign-in remains available if you lose access to your passkeys.</p>
+      ) : (
+        <p className="mt-2 text-sm text-foreground/70">A passkey lets you sign in with your fingerprint, face, or device PIN instead of waiting for an email. You can add one for each device you use. Email sign-in remains available if you lose access to your passkeys.</p>
+      )}
       {!supported && <p className="mt-3 text-sm text-foreground/70">To add a passkey, open continua.info in a browser that supports passkeys.</p>}
       {error && <p role="alert" className="mt-3 text-sm text-red-700">{error}</p>}
       {message && <p role="status" className="mt-3 text-sm text-foreground/80">{message}</p>}
@@ -113,8 +117,10 @@ export default function PasskeySettings() {
         ceremony.current = controller
         const { error } = await createClient().auth.registerPasskey({ options: { signal: controller.signal } })
         if (error) throw error
-      }, 'Passkey added. You can use it the next time you sign in.')} className="mt-4 rounded-xl bg-accent px-5 py-2.5 text-sm font-bold text-white transition hover:bg-accent/85 disabled:opacity-50">
-        {busy ? 'Working…' : 'Add a passkey'}
+      }, 'Passkey added. You can use it the next time you sign in.')} className={passkeys.length > 0
+        ? 'mt-4 text-sm font-semibold underline underline-offset-4 disabled:opacity-50'
+        : 'mt-4 rounded-xl bg-accent px-5 py-2.5 text-sm font-bold text-white transition hover:bg-accent/85 disabled:opacity-50'}>
+        {busy ? 'Working…' : passkeys.length > 0 ? '+ Add a passkey on this device' : 'Add a passkey'}
       </button>
       {busy && ceremony.current && <button onClick={() => ceremony.current?.abort()} className="ml-4 text-sm underline">Cancel passkey request</button>}
     </section>

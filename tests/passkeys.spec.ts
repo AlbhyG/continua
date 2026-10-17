@@ -83,8 +83,8 @@ test('live passkey lifecycle and email recovery on both production origins', asy
     await expect(page.getByText('Automated verification key', { exact: true })).toBeVisible()
 
     // Already-enrolled authenticator must not create a duplicate credential.
-    await page.getByRole('button', { name: 'Add a passkey', exact: true }).click()
-    await expect(page.getByRole('alert').filter({ hasText: 'already registered' })).toBeVisible()
+    await page.getByRole('button', { name: '+ Add a passkey on this device', exact: true }).click()
+    await expect(page.getByRole('alert').filter({ hasText: 'already has a Continua passkey' })).toBeVisible()
 
     for (const origin of ['https://continua.info', 'https://www.continua.info']) {
       await context.clearCookies()

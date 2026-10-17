@@ -73,8 +73,6 @@ export default async function MyInfoPage() {
         </p>
       )}
 
-      <PasskeySettings />
-
       <section className="mt-8">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
@@ -162,6 +160,8 @@ export default async function MyInfoPage() {
           </>
         )}
       </section>
+
+      <PasskeySettings />
     </main>
   )
 }
