@@ -59,7 +59,7 @@ export default async function ComparePage({
   const [{ p }, mine] = await Promise.all([searchParams, loadMyLatest()])
 
   const figures: CompareEntry[] = (profiles as FamousFigureProfile[])
-    .map((fig) => ({ id: fig.name, name: fig.name, note: fig.tags, scores: fig.scores, isMe: false }))
+    .map((fig) => ({ id: fig.name, name: fig.name, note: fig.tags, scores: fig.scores, isMe: false, group: fig.primary }))
     .sort((a, b) => a.name.localeCompare(b.name))
 
   const me: CompareEntry | null = mine

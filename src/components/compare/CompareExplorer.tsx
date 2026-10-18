@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { usePathname, useRouter } from "next/navigation";
 import { scoresToOrbData } from "@/lib/quiz/orb-mapping";
 import type { AxisScores } from "@/lib/quiz/scoring";
+import { FAMOUS_FIGURE_CATEGORIES } from "@/lib/famous-figures";
 
 const PersonalityOrb = dynamic(() => import("@/components/PersonalityOrb"), {
   ssr: false,
@@ -17,6 +18,7 @@ export interface CompareEntry {
   note: string;
   scores: AxisScores;
   isMe: boolean;
+  group?: string;
 }
 
 const MAX = 3;
@@ -124,6 +126,11 @@ export default function CompareExplorer({
 
   const hasFigure = selected.some((e) => !e.isMe);
 
+  const groups = FAMOUS_FIGURE_CATEGORIES.map(({ key, title }) => ({
+    title,
+    people: figures.filter((f) => f.group === key),
+  })).filter((g) => g.people.length > 0);
+
   return (
     <>
       {/* Picker */}
@@ -190,9 +197,23 @@ export default function CompareExplorer({
             </ul>
           )}
           {q && matches.length === 0 && (
-            <p className="mt-2 text-sm text-foreground/60">No one by that name in the list yet.</p>
+            <p className="mt-2 text-sm text-foreground/60">
+              No one by that name yet.{" "}
+              <a href="#everyone" className="underline underline-offset-2 hover:text-foreground">
+                See who&rsquo;s available
+              </a>
+              .
+            </p>
           )}
         </div>
+        {!q && (
+          <p className="mt-2 text-sm text-foreground/60">
+            Choose from {figures.length} famous figures.{" "}
+            <a href="#everyone" className="font-semibold underline underline-offset-2 hover:text-foreground">
+              See the full list ↓
+            </a>
+          </p>
+        )}
       </div>
 
       {selected.length === 0 ? (
@@ -296,6 +317,43 @@ export default function CompareExplorer({
           )}
         </>
       )}
+      {/* Everyone available, grouped as on the Famous Figures page */}
+      <div id="everyone" className="mt-10 scroll-mt-24">
+        <h2 className="text-[22px] md:text-[26px] font-bold text-white">Who you can compare</h2>
+        <p className="mt-1 text-[15px] text-white/70">
+          {full ? "Remove someone above to add another." : "Click a name to add it."}
+        </p>
+        <div className="mt-4 grid gap-4 md:grid-cols-2">
+          {groups.map((g) => (
+            <div key={g.title} className="glass-card p-5">
+              <h3 className="mb-2 text-[17px] md:text-[19px] font-bold text-foreground">{g.title}</h3>
+              <div className="flex flex-wrap gap-x-1 gap-y-1.5 text-[15px] leading-[1.6]">
+                {g.people.map((f, i) => {
+                  const slot = selectedIds.indexOf(f.id);
+                  const isSel = slot >= 0;
+                  return (
+                    <button
+                      key={f.id}
+                      onClick={() => (isSel ? remove(f.id) : add(f.id))}
+                      disabled={!isSel && full}
+                      aria-pressed={isSel}
+                      className={`inline-flex items-center gap-1 transition-colors ${
+                        isSel
+                          ? "font-semibold text-foreground"
+                          : "text-foreground/80 underline decoration-foreground/20 underline-offset-2 hover:text-foreground hover:decoration-foreground/60 disabled:cursor-not-allowed disabled:no-underline disabled:text-foreground/40"
+                      }`}
+                    >
+                      {isSel && <Marker slot={slot} size={11} />}
+                      {f.name}
+                      {i < g.people.length - 1 && <span className="text-foreground/40">,</span>}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 }
