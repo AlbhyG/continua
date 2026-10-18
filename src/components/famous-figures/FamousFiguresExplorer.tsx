@@ -59,6 +59,27 @@ export default function FamousFiguresExplorer({ profiles }: { profiles: FamousFi
         <span aria-hidden="true" className="ml-auto text-2xl text-foreground/50 transition-transform group-hover:translate-x-1">→</span>
       </Link>
 
+      <Link
+        href="/compare"
+        className="glass-card group mb-4 flex items-center gap-4 p-4 md:p-5 transition-transform hover:-translate-y-0.5"
+      >
+        <div className="shrink-0 flex -space-x-5">
+          <div className="h-[48px] w-[48px] overflow-hidden rounded-full">
+            <PersonalityOrb data={scoresToOrbData({ empathy: 9, self_orientation: 2, reactivity: 3 })} size={48} />
+          </div>
+          <div className="h-[48px] w-[48px] overflow-hidden rounded-full">
+            <PersonalityOrb data={scoresToOrbData({ empathy: 2, self_orientation: 9, agency: 9 })} size={48} />
+          </div>
+        </div>
+        <div className="min-w-0">
+          <p className="text-[18px] md:text-[20px] font-bold text-foreground">Compare two or three side by side</p>
+          <p className="text-[15px] md:text-[16px] leading-[1.5] text-foreground/75">
+            Put any of these figures next to each other and see where each falls on the six continua.
+          </p>
+        </div>
+        <span aria-hidden="true" className="ml-auto text-2xl text-foreground/50 transition-transform group-hover:translate-x-1">→</span>
+      </Link>
+
       <div className="grid md:grid-cols-2 gap-4">
         {FAMOUS_FIGURE_CATEGORIES
           .filter(({ key }) => categories.has(key))
