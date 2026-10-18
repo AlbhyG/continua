@@ -20,14 +20,15 @@ function isComplete(scores: Partial<AxisScores> | null | undefined): scores is A
 
 // The viewer's own most recent complete result, if they are signed in.
 // Anything that goes wrong here just means "no Me option" — the page still works.
-async function loadMyLatest(): Promise<AxisScores | null> {
+async function loadMyLatest(): Promise<{ signedIn: boolean; scores: AxisScores | null }> {
+  const none = { signedIn: false, scores: null }
   try {
-    if (!process.env.NEXT_PUBLIC_SUPABASE_URL) return null
+    if (!process.env.NEXT_PUBLIC_SUPABASE_URL) return none
     const supabase = await createClient()
     const {
       data: { user },
     } = await supabase.auth.getUser()
-    if (!user) return null
+    if (!user) return none
 
     const { data: self } = await supabase
       .from('people')
@@ -35,7 +36,7 @@ async function loadMyLatest(): Promise<AxisScores | null> {
       .eq('owner_user_id', user.id)
       .eq('is_self', true)
       .single()
-    if (!self) return null
+    if (!self) return { signedIn: true, scores: null }
 
     const { data: results } = await supabase
       .from('quiz_results')
@@ -45,9 +46,9 @@ async function loadMyLatest(): Promise<AxisScores | null> {
       .limit(10)
 
     const latest = (results ?? []).find((r) => isComplete(r.scores as Partial<AxisScores> | null))
-    return latest ? (latest.scores as AxisScores) : null
+    return { signedIn: true, scores: latest ? (latest.scores as AxisScores) : null }
   } catch {
-    return null
+    return none
   }
 }
 
@@ -56,7 +57,7 @@ export default async function ComparePage({
 }: {
   searchParams: Promise<{ p?: string }>
 }) {
-  const [{ p }, mine] = await Promise.all([searchParams, loadMyLatest()])
+  const [{ p }, { signedIn, scores: mine }] = await Promise.all([searchParams, loadMyLatest()])
 
   const figures: CompareEntry[] = (profiles as FamousFigureProfile[])
     .map((fig) => ({ id: fig.name, name: fig.name, note: fig.tags, scores: fig.scores, isMe: false, group: fig.primary }))
@@ -91,16 +92,32 @@ export default async function ComparePage({
             Compare Orbs
           </h1>
           <p className="text-[18px] md:text-[20px] leading-[1.6] text-white/80">
-            Pick up to three people and see their orbs side by side, then where
+            Pick two or three people and see their orbs side by side, then where
             each one falls on the six continua.
-            {!me && (
-              <span className="text-white/60">
-                {' '}
-                <Link href="/login?next=/compare" className="underline underline-offset-2 hover:text-white">
-                  Sign in
+          </p>
+          <p className="mt-3 text-[16px] md:text-[18px] leading-[1.6] text-white/70">
+            {me ? (
+              <>You can include yourself: your latest assessment appears as &ldquo;Me.&rdquo;</>
+            ) : signedIn ? (
+              <>
+                Want to see yourself alongside them?{' '}
+                <Link href="/quiz" className="font-semibold text-white underline underline-offset-2">
+                  Take the assessment
                 </Link>{' '}
-                to include your own latest result.
-              </span>
+                and you&rsquo;ll appear here as &ldquo;Me.&rdquo;
+              </>
+            ) : (
+              <>
+                Want to see yourself alongside them?{' '}
+                <Link href="/quiz" className="font-semibold text-white underline underline-offset-2">
+                  Take the assessment
+                </Link>
+                , then{' '}
+                <Link href="/login?next=/compare" className="font-semibold text-white underline underline-offset-2">
+                  sign in
+                </Link>{' '}
+                and you&rsquo;ll appear here as &ldquo;Me.&rdquo;
+              </>
             )}
           </p>
         </FadeIn>

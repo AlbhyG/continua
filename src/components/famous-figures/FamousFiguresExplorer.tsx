@@ -74,7 +74,7 @@ export default function FamousFiguresExplorer({ profiles }: { profiles: FamousFi
         <div className="min-w-0">
           <p className="text-[18px] md:text-[20px] font-bold text-foreground">Compare two or three side by side</p>
           <p className="text-[15px] md:text-[16px] leading-[1.5] text-foreground/75">
-            Put any of these figures next to each other and see where each falls on the six continua.
+            Put any of these figures next to each other, or next to yourself once you&rsquo;ve taken the assessment.
           </p>
         </div>
         <span aria-hidden="true" className="ml-auto text-2xl text-foreground/50 transition-transform group-hover:translate-x-1">→</span>
