@@ -248,6 +248,18 @@ export default function CompareExplorer({
                 <div className="mt-3 w-full">
                   <OrbCell scores={e.scores} />
                 </div>
+                <button
+                  onClick={() => remove(e.id)}
+                  className="mt-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] font-semibold text-foreground/55 transition-colors hover:bg-foreground/10 hover:text-foreground"
+                  aria-label={`Remove ${e.name} from the comparison`}
+                  title="Remove"
+                >
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" aria-hidden="true">
+                    <circle cx="7" cy="7" r="6" />
+                    <path d="M4.8 4.8L9.2 9.2M9.2 4.8L4.8 9.2" />
+                  </svg>
+                  <span className="hidden sm:inline">Remove</span>
+                </button>
               </div>
             ))}
           </div>
