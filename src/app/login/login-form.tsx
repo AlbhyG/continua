@@ -132,7 +132,7 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
     const token = code.replace(/\s/g, '')
     const address = email.trim().toLowerCase()
     if (!address) { setError('Enter the email the code was sent to.'); return }
-    if (!/^\d{6,10}$/.test(token)) { setError('Enter the 6-digit code from the email.'); return }
+    if (!/^\d{6,10}$/.test(token)) { setError('Enter the 8-digit code from the email.'); return }
     inFlight.current = true
     setVerifying(true)
     setError(null)
@@ -155,7 +155,7 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
       <label htmlFor="login-code" className="mb-2 block font-semibold">Code from the email</label>
       <input id="login-code" type="text" inputMode="numeric" autoComplete="one-time-code" maxLength={12}
         value={code} onChange={(event) => setCode(event.target.value)} disabled={verifying}
-        placeholder="123456"
+        placeholder="12345678"
         className="w-full rounded-xl border border-black/20 bg-white/85 px-4 py-3 text-lg tracking-[0.3em] caret-foreground outline-none focus:border-foreground focus:ring-2 focus:ring-foreground/20 disabled:opacity-60" />
       {error && <p className="mt-3 text-sm text-red-800" role="alert">{error}</p>}
       <button type="submit" disabled={verifying}
@@ -168,7 +168,7 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
   // A link failed or the person chose to type a code: email + code together.
   if (codeMode) return (
     <form onSubmit={verifyCode} className="mt-6 space-y-4">
-      <p className="text-foreground/80">Enter your email and the 6-digit code from your newest Continua sign-in email.</p>
+      <p className="text-foreground/80">Enter your email and the 8-digit code from your newest Continua sign-in email.</p>
       <div>
         <label htmlFor="code-email" className="mb-2 block font-semibold">Email</label>
         <input id="code-email" type="email" autoComplete="username" required maxLength={254}
@@ -183,7 +183,7 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
   if (sent) return (
     <div className="mt-6">
       <h2 role="status" className="text-xl font-bold">Check your email</h2>
-      <p className="mt-2 text-foreground/80">We sent a sign-in link and a 6-digit code to <strong className="break-all">{email.trim()}</strong>. It may take a minute to arrive.</p>
+      <p className="mt-2 text-foreground/80">We sent a sign-in link and a 8-digit code to <strong className="break-all">{email.trim()}</strong>. It may take a minute to arrive.</p>
       <p className="mt-2 text-foreground/80">Tap the link in the email, or type the code here. The code works even if your email app opens links on its own, or if you’re reading email on another device.</p>
       <form onSubmit={verifyCode} className="mt-5">{codeFields}</form>
       <button type="button" onClick={() => { setSent(false); setCode(''); setError(null) }} className="mt-4 min-h-11 font-semibold underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Use a different email</button>

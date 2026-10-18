@@ -39,7 +39,7 @@ export default async function LoginPage({
           nextPath={nextPath}
           initialError={
             params.error
-              ? 'That sign-in link didn’t work. Some email apps (Outlook, for one) open links before you do, which uses them up. Use the 6-digit code from the same email instead, or request a new email.'
+              ? 'That sign-in link didn’t work. Some email apps (Outlook, for one) open links before you do, which uses them up. Use the 8-digit code from the same email instead, or request a new email.'
               : null
           }
         />
