@@ -19,6 +19,11 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
   // Lead with the passkey only on a browser known to have one; elsewhere,
   // email is what will actually work, so it goes first.
   const [passkeyHere, setPasskeyHere] = useState(false)
+  // Code entry: shown after a link is sent, or on request after a link failed
+  // (some email apps, e.g. Outlook's servers, open links before the person does).
+  const [code, setCode] = useState('')
+  const [codeMode, setCodeMode] = useState(false)
+  const [verifying, setVerifying] = useState(false)
   const inFlight = useRef(false)
   const navigating = useRef(false)
   const ceremony = useRef<AbortController | null>(null)
@@ -121,11 +126,67 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
     }
   }
 
+  async function verifyCode(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    if (inFlight.current || navigating.current) return
+    const token = code.replace(/\s/g, '')
+    const address = email.trim().toLowerCase()
+    if (!address) { setError('Enter the email the code was sent to.'); return }
+    if (!/^\d{6,10}$/.test(token)) { setError('Enter the 6-digit code from the email.'); return }
+    inFlight.current = true
+    setVerifying(true)
+    setError(null)
+    try {
+      autofill.current?.controller.abort()
+      const { error } = await createClient().auth.verifyOtp({ email: address, token, type: 'email' })
+      if (error) throw error
+      navigating.current = true
+      window.location.assign('/auth/passkey-setup?next=' + encodeURIComponent(nextPath))
+    } catch {
+      setError('That code didn’t work. Codes expire after an hour, and requesting a new email replaces the old code, so use the code from your newest email.')
+    } finally {
+      inFlight.current = false
+      setVerifying(false)
+    }
+  }
+
+  const codeFields = (
+    <>
+      <label htmlFor="login-code" className="mb-2 block font-semibold">Code from the email</label>
+      <input id="login-code" type="text" inputMode="numeric" autoComplete="one-time-code" maxLength={12}
+        value={code} onChange={(event) => setCode(event.target.value)} disabled={verifying}
+        placeholder="123456"
+        className="w-full rounded-xl border border-black/20 bg-white/85 px-4 py-3 text-lg tracking-[0.3em] caret-foreground outline-none focus:border-foreground focus:ring-2 focus:ring-foreground/20 disabled:opacity-60" />
+      {error && <p className="mt-3 text-sm text-red-800" role="alert">{error}</p>}
+      <button type="submit" disabled={verifying}
+        className="mt-4 w-full rounded-xl bg-foreground px-5 py-3 font-bold text-white hover:bg-foreground/85 focus-visible:outline-2 focus-visible:outline-offset-4 disabled:opacity-60">
+        {verifying ? 'Checking…' : 'Sign in with code'}
+      </button>
+    </>
+  )
+
+  // A link failed or the person chose to type a code: email + code together.
+  if (codeMode) return (
+    <form onSubmit={verifyCode} className="mt-6 space-y-4">
+      <p className="text-foreground/80">Enter your email and the 6-digit code from your newest Continua sign-in email.</p>
+      <div>
+        <label htmlFor="code-email" className="mb-2 block font-semibold">Email</label>
+        <input id="code-email" type="email" autoComplete="username" required maxLength={254}
+          value={email} onChange={(event) => setEmail(event.target.value)} disabled={verifying}
+          className="w-full rounded-xl border border-black/20 bg-white/85 px-4 py-3 caret-foreground outline-none focus:border-foreground focus:ring-2 focus:ring-foreground/20 disabled:opacity-60" />
+      </div>
+      <div>{codeFields}</div>
+      <button type="button" onClick={() => { setCodeMode(false); setError(null) }} className="min-h-11 font-semibold underline underline-offset-4">Email me a new link instead</button>
+    </form>
+  )
+
   if (sent) return (
-    <div className="mt-6" role="status">
-      <h2 className="text-xl font-bold">Check your email</h2>
-      <p className="mt-2 text-foreground/80">We sent a sign-in link to <strong className="break-all">{email.trim()}</strong>. It may take a minute to arrive. Open it on the device where you want to sign in.</p>
-      <button type="button" onClick={() => setSent(false)} className="mt-4 min-h-11 font-semibold underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Use a different email</button>
+    <div className="mt-6">
+      <h2 role="status" className="text-xl font-bold">Check your email</h2>
+      <p className="mt-2 text-foreground/80">We sent a sign-in link and a 6-digit code to <strong className="break-all">{email.trim()}</strong>. It may take a minute to arrive.</p>
+      <p className="mt-2 text-foreground/80">Tap the link in the email, or type the code here. The code works even if your email app opens links on its own, or if you’re reading email on another device.</p>
+      <form onSubmit={verifyCode} className="mt-5">{codeFields}</form>
+      <button type="button" onClick={() => { setSent(false); setCode(''); setError(null) }} className="mt-4 min-h-11 font-semibold underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Use a different email</button>
     </div>
   )
 
@@ -152,6 +213,12 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
         <p id="login-help" className="mt-2 text-sm text-foreground/80">We’ll email you a secure sign-in link. New here, or on a new device? Start with email; you can add a passkey for this device right after.</p>
       </div>
       {error && <p className="text-sm text-red-800" role="alert">{error}</p>}
+      {initialError && error === initialError && (
+        <button type="button" onClick={() => { setCodeMode(true); setError(null) }}
+          className="w-full rounded-xl border border-foreground/40 bg-white/60 px-5 py-3 font-bold text-foreground hover:bg-white/90">
+          Enter the code from that email
+        </button>
+      )}
       <button type="submit" disabled={submitting || usingPasskey}
         className={primary
           ? 'w-full rounded-xl bg-foreground px-5 py-3 font-bold text-white hover:bg-foreground/85 focus-visible:outline-2 focus-visible:outline-offset-4 disabled:opacity-60'
