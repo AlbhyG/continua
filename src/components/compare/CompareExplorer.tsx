@@ -99,14 +99,15 @@ export default function CompareExplorer({
     return me ? ["me"] : [];
   });
   const [query, setQuery] = useState("");
-  const orbsRef = useRef<HTMLDivElement>(null);
+  const pickerRef = useRef<HTMLDivElement>(null);
   const [scrollPending, setScrollPending] = useState(false);
 
-  // After a pick, bring the orbs into view (once they've rendered).
+  // After a pick, bring the name box and the orbs below it into view together,
+  // so the next name can be added without scrolling back up.
   useEffect(() => {
     if (!scrollPending) return;
     setScrollPending(false);
-    orbsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    pickerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   }, [scrollPending, selectedIds]);
 
   // Keep the URL in step so a comparison can be bookmarked or shared.
@@ -145,7 +146,7 @@ export default function CompareExplorer({
   return (
     <>
       {/* Picker */}
-      <div className="glass-card p-5 md:p-6">
+      <div ref={pickerRef} className="glass-card scroll-mt-20 p-5 md:p-6">
         <div className="flex flex-wrap items-center gap-2">
           {selected.map((e, slot) => (
             <span
@@ -233,8 +234,7 @@ export default function CompareExplorer({
         <>
           {/* Orbs side by side */}
           <div
-            ref={orbsRef}
-            className={`mt-6 scroll-mt-24 grid gap-2 md:gap-4 ${
+            className={`mt-6 grid gap-2 md:gap-4 ${
               selected.length === 1 ? "grid-cols-1 max-w-[320px] mx-auto" : selected.length === 2 ? "grid-cols-2" : "grid-cols-3"
             }`}
           >
