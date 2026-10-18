@@ -183,7 +183,7 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
   if (sent) return (
     <div className="mt-6">
       <h2 role="status" className="text-xl font-bold">Check your email</h2>
-      <p className="mt-2 text-foreground/80">We sent a sign-in link and a 8-digit code to <strong className="break-all">{email.trim()}</strong>. It may take a minute to arrive.</p>
+      <p className="mt-2 text-foreground/80">We sent a sign-in link and an 8-digit code to <strong className="break-all">{email.trim()}</strong>. It may take a minute to arrive.</p>
       <p className="mt-2 text-foreground/80">Tap the link in the email, or type the code here. The code works even if your email app opens links on its own, or if you’re reading email on another device.</p>
       <form onSubmit={verifyCode} className="mt-5">{codeFields}</form>
       <button type="button" onClick={() => { setSent(false); setCode(''); setError(null) }} className="mt-4 min-h-11 font-semibold underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Use a different email</button>
