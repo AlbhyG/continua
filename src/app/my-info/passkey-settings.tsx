@@ -3,12 +3,14 @@
 import { useEffect, useRef, useState } from 'react'
 import type { PasskeyListItem } from '@supabase/supabase-js'
 import { createClient } from '@/lib/supabase/client'
-import { canUsePasskeys, passkeyErrorMessage } from '@/lib/auth/passkeys'
+import { canUsePasskeys, passkeyErrorMessage, isAlreadyRegisteredError } from '@/lib/auth/passkeys'
+import { deviceHasPasskey, rememberPasskeyOnDevice } from '@/lib/auth/device-memory'
 
 export default function PasskeySettings() {
   const [passkeys, setPasskeys] = useState<PasskeyListItem[]>([])
   const [loading, setLoading] = useState(true)
   const [supported, setSupported] = useState(false)
+  const [passkeyHere, setPasskeyHere] = useState(false)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [message, setMessage] = useState<string | null>(null)
@@ -26,6 +28,7 @@ export default function PasskeySettings() {
 
   useEffect(() => {
     setSupported(canUsePasskeys())
+    setPasskeyHere(deviceHasPasskey())
     refresh().catch((error) => setError(passkeyErrorMessage(error))).finally(() => setLoading(false))
     return () => ceremony.current?.abort()
   }, [])
@@ -115,12 +118,18 @@ export default function PasskeySettings() {
       <button disabled={busy || loading || !supported} onClick={() => void run(async () => {
         const controller = new AbortController()
         ceremony.current = controller
-        const { error } = await createClient().auth.registerPasskey({ options: { signal: controller.signal } })
-        if (error) throw error
-      }, 'Passkey added. You can use it the next time you sign in.')} className={passkeys.length > 0
+        try {
+          const { error } = await createClient().auth.registerPasskey({ options: { signal: controller.signal } })
+          if (error) throw error
+        } catch (error) {
+          if (!isAlreadyRegisteredError(error)) throw error
+        }
+        rememberPasskeyOnDevice()
+        setPasskeyHere(true)
+      }, 'This device is set up. Next time, tap “Sign in with a passkey.”')} className={passkeys.length > 0 && passkeyHere
         ? 'mt-4 text-sm font-semibold underline underline-offset-4 disabled:opacity-50'
         : 'mt-4 rounded-xl bg-accent px-5 py-2.5 text-sm font-bold text-white transition hover:bg-accent/85 disabled:opacity-50'}>
-        {busy ? 'Working…' : passkeys.length > 0 ? '+ Add a passkey on this device' : 'Add a passkey'}
+        {busy ? 'Working…' : passkeys.length > 0 && passkeyHere ? '+ Add another passkey' : 'Add a passkey for this device'}
       </button>
       {busy && ceremony.current && <button onClick={() => ceremony.current?.abort()} className="ml-4 text-sm underline">Cancel passkey request</button>}
     </section>

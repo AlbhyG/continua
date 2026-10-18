@@ -5,6 +5,23 @@ export function canUsePasskeys() {
     ['continua.info', 'www.continua.info'].includes(window.location.hostname)
 }
 
+export function isAlreadyRegisteredError(error: unknown): boolean {
+  const value = error as { code?: string; name?: string; cause?: { name?: string } } | null
+  return value?.code === 'webauthn_credential_exists' || value?.code === 'ERROR_AUTHENTICATOR_PREVIOUSLY_REGISTERED' ||
+    value?.name === 'InvalidStateError' || value?.cause?.name === 'InvalidStateError'
+}
+
+// Sign-in specific: the system prompt was dismissed or found nothing. On a
+// device with no Continua passkey this is what "nothing happened" looks like.
+export function passkeySignInErrorMessage(error: unknown): string {
+  const value = error as { name?: string; message?: string; cause?: { name?: string }; code?: string } | null
+  if (value?.name === 'NotAllowedError' || value?.name === 'AbortError' ||
+      value?.cause?.name === 'NotAllowedError' || /cancel|timed out|not allowed|abort/i.test(value?.message ?? '')) {
+    return 'No passkey was used. If this device doesn’t have a Continua passkey yet, sign in with your email below; you can add a passkey for this device right after.'
+  }
+  return passkeyErrorMessage(error)
+}
+
 export function passkeyErrorMessage(error: unknown): string {
   const value = error as { code?: string; name?: string; message?: string; cause?: { name?: string } } | null
   const code = value?.code
