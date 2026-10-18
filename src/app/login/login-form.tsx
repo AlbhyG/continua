@@ -7,6 +7,7 @@ import { canUsePasskeys, passkeySignInErrorMessage } from '@/lib/auth/passkeys'
 import { deviceHasPasskey, forgetPasskeyOnDevice, rememberPasskeyOnDevice } from '@/lib/auth/device-memory'
 import { signInWithPasskeyAutofill, abortable } from '@/lib/auth/passkey-autofill'
 import { requestEmailLink } from '@/lib/auth/email-link'
+import Turnstile, { TURNSTILE_SITE_KEY, type TurnstileHandle } from '@/components/auth/Turnstile'
 
 export default function LoginForm({ nextPath, initialError }: { nextPath: string; initialError: string | null }) {
   const [email, setEmail] = useState('')
@@ -24,6 +25,8 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
   const [code, setCode] = useState('')
   const [codeMode, setCodeMode] = useState(false)
   const [verifying, setVerifying] = useState(false)
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null)
+  const turnstile = useRef<TurnstileHandle>(null)
   const inFlight = useRef(false)
   const navigating = useRef(false)
   const ceremony = useRef<AbortController | null>(null)
@@ -101,6 +104,10 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     if (inFlight.current || navigating.current) return
+    if (TURNSTILE_SITE_KEY && !captchaToken) {
+      setError('One moment: still checking that you’re not a bot. Try again in a few seconds.')
+      return
+    }
     inFlight.current = true
     setSubmitting(true)
     setError(null)
@@ -113,7 +120,7 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
       if (navigating.current) return
       const callback = new URL('/auth/callback', window.location.origin)
       callback.searchParams.set('next', nextPath)
-      await requestEmailLink(email.trim().toLowerCase(), callback.toString(), controller.signal)
+      await requestEmailLink(email.trim().toLowerCase(), callback.toString(), controller.signal, captchaToken)
       setSent(true)
     } catch (error) {
       setError(controller.signal.aborted
@@ -121,6 +128,8 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
         : error instanceof Error ? error.message : 'We couldn’t send the sign-in link. Please try again.')
     } finally {
       window.clearTimeout(timeout)
+      // Each bot-check pass works once; get a fresh one for any next request.
+      turnstile.current?.reset()
       setSubmitting(false)
       inFlight.current = false
     }
@@ -213,6 +222,7 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
         <p id="login-help" className="mt-2 text-sm text-foreground/80">We’ll email you a secure sign-in link. New here, or on a new device? Start with email; you can add a passkey for this device right after.</p>
       </div>
       {error && <p className="text-sm text-red-800" role="alert">{error}</p>}
+      <Turnstile ref={turnstile} onToken={setCaptchaToken} />
       {initialError && error === initialError && (
         <button type="button" onClick={() => { setCodeMode(true); setError(null) }}
           className="w-full rounded-xl border border-foreground/40 bg-white/60 px-5 py-3 font-bold text-foreground hover:bg-white/90">
