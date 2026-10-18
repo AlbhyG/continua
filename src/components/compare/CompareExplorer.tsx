@@ -99,6 +99,15 @@ export default function CompareExplorer({
     return me ? ["me"] : [];
   });
   const [query, setQuery] = useState("");
+  const orbsRef = useRef<HTMLDivElement>(null);
+  const [scrollPending, setScrollPending] = useState(false);
+
+  // After a pick, bring the orbs into view (once they've rendered).
+  useEffect(() => {
+    if (!scrollPending) return;
+    setScrollPending(false);
+    orbsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [scrollPending, selectedIds]);
 
   // Keep the URL in step so a comparison can be bookmarked or shared.
   useEffect(() => {
@@ -114,10 +123,12 @@ export default function CompareExplorer({
     ? all.filter((e) => !selectedIds.includes(e.id) && e.name.toLowerCase().includes(q)).slice(0, 8)
     : [];
 
-  function add(id: string) {
+  // Shift-click keeps you where you are, for picking several in a row.
+  function add(id: string, stay = false) {
     if (full || selectedIds.includes(id)) return;
     setSelectedIds((ids) => [...ids, id]);
     setQuery("");
+    if (!stay) setScrollPending(true);
   }
 
   function remove(id: string) {
@@ -222,7 +233,8 @@ export default function CompareExplorer({
         <>
           {/* Orbs side by side */}
           <div
-            className={`mt-6 grid gap-2 md:gap-4 ${
+            ref={orbsRef}
+            className={`mt-6 scroll-mt-24 grid gap-2 md:gap-4 ${
               selected.length === 1 ? "grid-cols-1 max-w-[320px] mx-auto" : selected.length === 2 ? "grid-cols-2" : "grid-cols-3"
             }`}
           >
@@ -334,7 +346,7 @@ export default function CompareExplorer({
                   return (
                     <button
                       key={f.id}
-                      onClick={() => (isSel ? remove(f.id) : add(f.id))}
+                      onClick={(ev) => (isSel ? remove(f.id) : add(f.id, ev.shiftKey))}
                       disabled={!isSel && full}
                       aria-pressed={isSel}
                       className={`inline-flex items-center gap-1 transition-colors ${
