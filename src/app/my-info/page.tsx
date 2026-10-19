@@ -11,7 +11,7 @@ import HistoryChart from '@/components/quiz/HistoryChart'
 import { AXIS_INFO, type AxisScores } from '@/lib/quiz/scoring'
 
 export const metadata: Metadata = {
-  title: 'My Info',
+  title: 'Account',
   description: 'Review your Continua assessment history.',
 }
 
@@ -68,7 +68,7 @@ export default async function MyInfoPage() {
           <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/70">
             Your Continua
           </p>
-          <h1 className="mt-2 text-4xl font-bold text-white md:text-5xl">My Info</h1>
+          <h1 className="mt-2 text-4xl font-bold text-white md:text-5xl">Account</h1>
           <p className="mt-3 max-w-2xl text-lg text-white/80">
             Return to the personality snapshots you’ve taken over time.
           </p>
