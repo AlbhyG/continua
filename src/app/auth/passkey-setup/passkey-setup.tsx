@@ -54,7 +54,7 @@ export default function PasskeySetup({ nextPath }: { nextPath: string }) {
         {added ? <p role="status" className="mt-4 text-foreground/80">Next time on this device, tap “Sign in with a passkey” and use Face ID, Touch ID, or your screen lock. Email sign-in still works everywhere.</p> : <>
           <p className="mt-4 text-foreground/80">You’re signed in. Add a passkey for this device and next time you can sign in with Face ID, Touch ID, or your screen lock instead of waiting for an email.</p>
           {elsewhere && <p className="mt-3 text-sm text-foreground/80">You already have a passkey on another device. Passkeys don’t always carry over between devices or browsers, so add one here too.</p>}
-          <p className="mt-3 text-sm text-foreground/70">Optional. You can also add one later in My Info.</p>
+          <p className="mt-3 text-sm text-foreground/70">Optional. You can also add one later under Account.</p>
           {error && <p role="alert" className="mt-4 text-sm text-red-800">{error}</p>}
           <button type="button" disabled={busy} onClick={addPasskey} className="mt-6 w-full rounded-xl bg-foreground px-5 py-3 font-bold text-white hover:bg-foreground/85 focus-visible:outline-2 focus-visible:outline-offset-4 disabled:opacity-60">{busy ? 'Waiting for your device…' : 'Add a passkey'}</button>
           {busy && <button type="button" onClick={() => ceremony.current?.abort()} className="mt-2 min-h-11 underline underline-offset-4">Cancel passkey request</button>}
