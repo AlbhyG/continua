@@ -333,17 +333,17 @@ export default function QuizResultsPage() {
           </p>
         )}
         {activeShares > 0 ? (
-          <div className="rounded-xl bg-white/30 p-4 text-center text-xs text-foreground/60">
-            <p>
-              Anyone with a link to this result can see these scores until you
-              stop sharing or delete the result.
-            </p>
+          <div className="text-center">
             <button
               onClick={stopSharing}
-              className="mt-2 font-bold text-foreground/80 underline underline-offset-2 hover:text-foreground"
+              className="text-xs font-semibold text-foreground/60 underline underline-offset-4 hover:text-foreground"
             >
               Stop sharing (turn off all links)
             </button>
+            <p className="mt-1 text-[11px] text-foreground/50">
+              Anyone with a link to this result can see these scores until you
+              stop sharing or delete the result.
+            </p>
           </div>
         ) : (
           shareStatus === "stopped" && (
