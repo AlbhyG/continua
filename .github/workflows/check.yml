@@ -1,0 +1,23 @@
+name: Check
+
+# Runs on every pull request and every push to main: type check, code-style
+# check (ESLint) and unit tests. Vercel builds and deploys separately.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run test:unit
