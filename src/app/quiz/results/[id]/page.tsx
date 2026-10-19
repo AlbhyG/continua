@@ -332,11 +332,19 @@ export default function QuizResultsPage() {
             Something went wrong. Please try again.
           </p>
         )}
-        {activeShares > 0 ? (
+          </>
+        )}
+        <Link
+          href="/famous-figures"
+          className="w-full rounded-xl bg-white/40 px-4 py-4 text-center text-sm font-bold text-foreground transition-all hover:bg-white/60"
+        >
+          Famous Archetypal Figures
+        </Link>
+        {result.canShare !== false && (activeShares > 0 ? (
           <div className="text-center">
             <button
               onClick={stopSharing}
-              className="text-xs font-semibold text-foreground/60 underline underline-offset-4 hover:text-foreground"
+              className="text-sm font-bold text-foreground/70 underline underline-offset-4 hover:text-foreground"
             >
               Stop sharing (turn off all links)
             </button>
@@ -347,26 +355,18 @@ export default function QuizResultsPage() {
           </div>
         ) : (
           shareStatus === "stopped" && (
-            <p className="text-center text-xs text-foreground/60">
+            <p className="text-center text-sm text-foreground/60">
               Sharing is off. Links to this result no longer work.
             </p>
           )
-        )}
-          </>
-        )}
-        <Link
-          href="/famous-figures"
-          className="w-full rounded-xl bg-white/40 px-4 py-4 text-center text-sm font-bold text-foreground transition-all hover:bg-white/60"
-        >
-          Famous Archetypal Figures
-        </Link>
+        ))}
       </div>
 
-      <div className="mt-6 text-center">
+      <div className="mt-3 text-center">
         <button
           onClick={deleteResult}
           disabled={deleteStatus === "working"}
-          className="text-xs font-semibold text-foreground/60 underline underline-offset-4 hover:text-foreground disabled:cursor-wait disabled:opacity-50"
+          className="text-sm font-bold text-foreground/70 underline underline-offset-4 hover:text-foreground disabled:cursor-wait disabled:opacity-50"
         >
           {deleteStatus === "working" ? "Deleting…" : "Delete this result"}
         </button>
@@ -384,7 +384,6 @@ export default function QuizResultsPage() {
 
       <p className="mt-6 text-center text-[10px] text-foreground/40">
         Take the assessment in different contexts to see how your coordinates shift.
-        The book recommends quarterly reassessments.
       </p>
     </div>
   );
