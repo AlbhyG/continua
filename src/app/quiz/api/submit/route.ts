@@ -126,6 +126,7 @@ export async function POST(request: NextRequest) {
     axisResults,
     activeShareCount: 0,
     canShare: !personId,
+    signedIn: Boolean(user),
     personId: ownedPersonId,
     personName,
   });

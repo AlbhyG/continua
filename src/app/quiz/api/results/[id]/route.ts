@@ -45,6 +45,24 @@ export async function GET(
     return NextResponse.json({ error: "Result not found" }, { status: 404 });
   }
 
+  // Someone who took the assessment without an account and then signed in
+  // (for example from "Keep this result" on this page): attach this browser's
+  // results to the account now, so the result follows them to other devices.
+  if (user && token && !row.user_id && row.anonymous_token === token) {
+    const { error: ensureError } = await supabase.rpc("ensure_current_user_records");
+    if (ensureError) {
+      console.error("Could not ensure user records:", ensureError.message);
+    }
+    const { error: claimError } = await supabase.rpc("claim_anonymous_quiz_results", {
+      p_token: token,
+    });
+    if (claimError) {
+      console.error("Could not claim anonymous quiz results:", claimError.message);
+    } else {
+      row.user_id = user.id;
+    }
+  }
+
   const scores = (row.scores || { empathy: row.score }) as AxisScores;
 
   const axisResults = Object.entries(scores).map(([key, score]) => {
@@ -75,6 +93,7 @@ export async function GET(
     activeShareCount,
     canShare,
     isOwner,
+    signedIn: Boolean(user),
     personId: row.person_id,
   });
 }

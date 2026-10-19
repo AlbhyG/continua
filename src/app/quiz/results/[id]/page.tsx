@@ -38,6 +38,7 @@ interface ResultData {
   activeShareCount?: number;
   canShare?: boolean;
   isOwner?: boolean;
+  signedIn?: boolean;
   personId?: string | null;
   personName?: string | null;
 }
@@ -310,6 +311,30 @@ export default function QuizResultsPage() {
           </div>
         ))}
       </div>
+
+      {result.signedIn === false && result.isOwner !== false && (
+        <div className="mt-6 rounded-xl bg-white/80 p-4 text-sm text-foreground shadow-sm">
+          <p>
+            <span className="font-bold">Keep this result.</span> Sign in to see
+            it on any device and track how it changes over time.
+          </p>
+          <a
+            href={`/login?next=${encodeURIComponent(`/quiz/results/${resultId}`)}`}
+            onClick={() => {
+              // Make the page ask the server again after sign-in, which is
+              // when the result is attached to the account.
+              try {
+                sessionStorage.removeItem(`result_${resultId}`);
+              } catch {
+                // Browser storage is a convenience only.
+              }
+            }}
+            className="mt-2 inline-block font-semibold underline underline-offset-4"
+          >
+            Sign in to save it
+          </a>
+        </div>
+      )}
 
       {/* Action buttons */}
       <div className="mt-8 flex flex-col gap-3">
