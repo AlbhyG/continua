@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { ensureUser, storeResult } from "@/lib/quiz/db";
 import { getQuestionnaire } from "@/lib/quiz/questionnaires";
 import { calculateScores, getAxisLabel, AXIS_INFO } from "@/lib/quiz/scoring";
-import { createShareLink } from "@/lib/quiz/share";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { RELATIONSHIPS_ENABLED } from "@/lib/site-mode";
@@ -66,13 +65,6 @@ export async function POST(request: NextRequest) {
     };
   });
 
-  const shareLink = createShareLink({
-    score: scores.empathy,
-    label: getAxisLabel("empathy", scores.empathy),
-    questionnaireId,
-    scores,
-  });
-
   const supabase = await createClient();
   const {
     data: { user },
@@ -132,7 +124,8 @@ export async function POST(request: NextRequest) {
     resultId,
     scores,
     axisResults,
-    shareLink,
+    activeShareCount: 0,
+    canShare: !personId,
     personId: ownedPersonId,
     personName,
   });

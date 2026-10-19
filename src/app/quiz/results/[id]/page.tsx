@@ -35,7 +35,8 @@ interface AxisResult {
 interface ResultData {
   scores: Record<string, number>;
   axisResults: AxisResult[];
-  shareLink: string;
+  activeShareCount?: number;
+  canShare?: boolean;
   personId?: string | null;
   personName?: string | null;
 }
@@ -46,7 +47,11 @@ export default function QuizResultsPage() {
   const resultId = params.id;
 
   const [result, setResult] = useState<ResultData | null>(null);
-  const [copied, setCopied] = useState(false);
+  const [shareStatus, setShareStatus] = useState<
+    "idle" | "working" | "copied" | "manual" | "stopped" | "error"
+  >("idle");
+  const [shareUrl, setShareUrl] = useState<string | null>(null);
+  const [activeShares, setActiveShares] = useState(0);
   const [loadError, setLoadError] = useState<"not_found" | "unavailable" | null>(null);
 
   useEffect(() => {
@@ -78,6 +83,26 @@ export default function QuizResultsPage() {
       .catch(() => setLoadError("unavailable"));
   }, [resultId]);
 
+  useEffect(() => {
+    if (result) setActiveShares(result.activeShareCount ?? 0);
+  }, [result]);
+
+  function rememberShareCount(count: number) {
+    setActiveShares(count);
+    try {
+      const key = `result_${resultId}`;
+      const stored = sessionStorage.getItem(key);
+      if (stored) {
+        sessionStorage.setItem(
+          key,
+          JSON.stringify({ ...JSON.parse(stored), activeShareCount: count })
+        );
+      }
+    } catch {
+      // Session storage is a convenience only.
+    }
+  }
+
   async function takeAnother() {
     const personQuery = result?.personId
       ? `?person=${encodeURIComponent(result.personId)}`
@@ -98,13 +123,68 @@ export default function QuizResultsPage() {
     router.push(`/quiz/take/${id}${next.size ? `?${next.toString()}` : ""}`);
   }
 
-  function copyShareLink() {
-    if (!result) return;
-    const url = window.location.origin + result.shareLink;
-    navigator.clipboard.writeText(url).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+  // A link is created only when the owner asks to share. It carries a random
+  // token, not the scores, so it stops working when sharing is turned off or
+  // the result is deleted.
+  async function shareResult() {
+    if (!result || shareStatus === "working") return;
+    setShareStatus("working");
+    setShareUrl(null);
+
+    const urlPromise: Promise<string> = fetch(
+      `/quiz/api/results/${resultId}/share`,
+      { method: "POST" }
+    )
+      .then((res) => {
+        if (!res.ok) throw new Error("share_failed");
+        return res.json();
+      })
+      .then((data: { shareLink: string }) => window.location.origin + data.shareLink);
+
+    try {
+      // Passing the pending URL to ClipboardItem keeps the copy inside the
+      // click gesture, which Safari requires.
+      if (typeof ClipboardItem !== "undefined" && navigator.clipboard?.write) {
+        await navigator.clipboard.write([
+          new ClipboardItem({
+            "text/plain": urlPromise.then(
+              (url) => new Blob([url], { type: "text/plain" })
+            ),
+          }),
+        ]);
+      } else {
+        await navigator.clipboard.writeText(await urlPromise);
+      }
+      setShareUrl(await urlPromise);
+      setShareStatus("copied");
+      rememberShareCount(activeShares + 1);
+      setTimeout(
+        () => setShareStatus((s) => (s === "copied" ? "idle" : s)),
+        2500
+      );
+    } catch {
+      try {
+        // The link was made but could not be copied; show it instead.
+        setShareUrl(await urlPromise);
+        setShareStatus("manual");
+        rememberShareCount(activeShares + 1);
+      } catch {
+        setShareStatus("error");
+      }
+    }
+  }
+
+  async function stopSharing() {
+    const res = await fetch(`/quiz/api/results/${resultId}/share`, {
+      method: "DELETE",
     });
+    if (!res.ok) {
+      setShareStatus("error");
+      return;
+    }
+    rememberShareCount(0);
+    setShareUrl(null);
+    setShareStatus("stopped");
   }
 
   if (!result && loadError) {
@@ -193,12 +273,57 @@ export default function QuizResultsPage() {
         >
           Take Another Assessment
         </button>
+        {result.canShare !== false && (
+          <>
         <button
-          onClick={copyShareLink}
-          className="w-full rounded-xl bg-white/40 px-4 py-4 text-sm font-bold text-foreground transition-all hover:bg-white/60"
+          onClick={shareResult}
+          disabled={shareStatus === "working"}
+          className="w-full rounded-xl bg-white/40 px-4 py-4 text-sm font-bold text-foreground transition-all hover:bg-white/60 disabled:opacity-60"
         >
-          {copied ? "Link Copied!" : "Share Result"}
+          {shareStatus === "working"
+            ? "Creating Link..."
+            : shareStatus === "copied"
+              ? "Link Copied!"
+              : "Share Result"}
         </button>
+        {shareStatus === "manual" && shareUrl && (
+          <div className="rounded-xl bg-white/60 p-3 text-xs text-foreground/70">
+            <p className="mb-2">Copy this link to share your result:</p>
+            <input
+              readOnly
+              value={shareUrl}
+              onFocus={(e) => e.currentTarget.select()}
+              className="w-full rounded-lg bg-white px-3 py-2 text-xs text-foreground"
+            />
+          </div>
+        )}
+        {shareStatus === "error" && (
+          <p className="text-center text-xs text-foreground/60">
+            Something went wrong. Please try again.
+          </p>
+        )}
+        {activeShares > 0 ? (
+          <div className="rounded-xl bg-white/30 p-4 text-center text-xs text-foreground/60">
+            <p>
+              Anyone with a link to this result can see these scores until you
+              stop sharing or delete the result.
+            </p>
+            <button
+              onClick={stopSharing}
+              className="mt-2 font-bold text-foreground/80 underline underline-offset-2 hover:text-foreground"
+            >
+              Stop sharing (turn off all links)
+            </button>
+          </div>
+        ) : (
+          shareStatus === "stopped" && (
+            <p className="text-center text-xs text-foreground/60">
+              Sharing is off. Links to this result no longer work.
+            </p>
+          )
+        )}
+          </>
+        )}
         <Link
           href="/famous-figures"
           className="w-full rounded-xl bg-white/40 px-4 py-4 text-center text-sm font-bold text-foreground transition-all hover:bg-white/60"

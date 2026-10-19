@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getResultById } from "@/lib/quiz/db";
 import { getAxisLabel, AXIS_INFO, type AxisScores } from "@/lib/quiz/scoring";
-import { createShareLink } from "@/lib/quiz/share";
+import { countShareLinks, isShareableResult } from "@/lib/quiz/share";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { hasAdminContactsSession } from "@/lib/admin/contacts-auth";
@@ -59,18 +59,15 @@ export async function GET(
     };
   });
 
-  const shareLink = createShareLink({
-    score: scores.empathy,
-    label: getAxisLabel("empathy", scores.empathy),
-    questionnaireId: row.questionnaire_id,
-    scores,
-  });
+  const activeShareCount = await countShareLinks(row.id, admin);
+  const canShare = await isShareableResult(row.person_id ?? null, admin);
 
   return NextResponse.json({
     resultId: row.id,
     scores,
     axisResults,
-    shareLink,
+    activeShareCount,
+    canShare,
     personId: row.person_id,
   });
 }
