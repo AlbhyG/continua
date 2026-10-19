@@ -131,15 +131,22 @@ export default async function MyInfoPage() {
           </div>
         ) : (
           <>
-            <section className="glass-card mt-5 p-5 md:p-6">
-              <h3 className="text-xl font-bold">Your trends</h3>
-              <p className="mt-1 text-sm text-foreground/60">
-                Each line tracks one coordinate on the 1–10 scale, oldest to newest.
+            {quizResults.length >= 2 ? (
+              <section className="glass-card mt-5 p-5 md:p-6">
+                <h3 className="text-xl font-bold">Your trends</h3>
+                <p className="mt-1 text-sm text-foreground/60">
+                  Each line tracks one coordinate on the 1–10 scale, oldest to newest.
+                </p>
+                <div className="mt-5">
+                  <HistoryChart data={[...quizResults].reverse()} />
+                </div>
+              </section>
+            ) : (
+              <p className="glass-card mt-5 p-4 text-sm text-foreground/70">
+                Take the assessment again some other time, and a chart here will show how your
+                answers compare across occasions.
               </p>
-              <div className="mt-5">
-                <HistoryChart data={[...quizResults].reverse()} />
-              </div>
-            </section>
+            )}
 
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               {quizResults.map((result) => {
