@@ -59,6 +59,7 @@ export default function QuizResultsPage() {
     "idle" | "working" | "error" | "sign_in"
   >("idle");
   const [loadError, setLoadError] = useState<"not_found" | "unavailable" | null>(null);
+  const [invitedBy, setInvitedBy] = useState<string[]>([]);
 
   useEffect(() => {
     const stored = sessionStorage.getItem(`result_${resultId}`);
@@ -107,6 +108,28 @@ export default function QuizResultsPage() {
       }
     }
   }, [result, resultId]);
+
+  // Someone invited to compare is asked to decide after seeing their own result.
+  useEffect(() => {
+    if (!result) return;
+    const ownSignedIn =
+      result.signedIn !== false && result.isOwner !== false && result.canShare !== false;
+    if (!ownSignedIn) return;
+    let cancelled = false;
+    fetch("/compare/api/comparisons", { cache: "no-store" })
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (cancelled || !data) return;
+        const names = (data.comparisons ?? [])
+          .filter((c: { needsMyResponse?: boolean }) => c.needsMyResponse)
+          .map((c: { other: { name: string } }) => c.other.name);
+        setInvitedBy(names);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [result]);
 
   function rememberShareCount(count: number) {
     setActiveShares(count);
@@ -312,6 +335,25 @@ export default function QuizResultsPage() {
           </div>
         ))}
       </div>
+
+      {invitedBy.length > 0 && (
+        <div className="mt-6 rounded-xl bg-white/80 p-4 text-center text-sm text-foreground shadow-sm">
+          <p>
+            <span className="font-bold">
+              {invitedBy.length === 1
+                ? `${invitedBy[0]} invited you to compare results.`
+                : `${invitedBy.join(", ")} invited you to compare results.`}
+            </span>{" "}
+            Now that you have seen your result, you can choose whether to share it.
+          </p>
+          <Link
+            href="/compare/people"
+            className="mt-2 block text-base font-bold underline underline-offset-4"
+          >
+            Decide now
+          </Link>
+        </div>
+      )}
 
       {result.signedIn === false && result.isOwner !== false && (
         <div className="mt-6 rounded-xl bg-white/80 p-4 text-center text-sm text-foreground shadow-sm">

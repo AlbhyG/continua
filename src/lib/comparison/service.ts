@@ -54,6 +54,14 @@ async function latestOwnResultId(db: Db, userId: string): Promise<number | null>
   return data?.id ?? null;
 }
 
+// Whether the user has taken an assessment of their own yet. An invitee who
+// hasn't is asked to take it first, so they see their own result before deciding.
+export async function hasOwnResult(db: Db, userId: string): Promise<boolean> {
+  return (await latestOwnResultId(db, userId)) !== null;
+}
+
+export const MAX_INVITES_PER_DAY = 10;
+
 function hasAllAxes(scores: unknown): scores is AxisScores {
   if (!scores || typeof scores !== "object") return false;
   return AXIS_ORDER.every((k) => Number.isFinite((scores as Record<string, unknown>)[k]));
@@ -73,6 +81,17 @@ export async function createComparison(
 
   const resultId = await latestOwnResultId(db, actor.id);
   if (!resultId) return fail(400, "Take an assessment first, then invite someone.");
+
+  // Invitations send email, so cap how many one account can send in a day.
+  const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+  const { count: recent } = await db
+    .from("comparisons")
+    .select("id", { count: "exact", head: true })
+    .eq("created_by", actor.id)
+    .gte("created_at", since);
+  if ((recent ?? 0) >= MAX_INVITES_PER_DAY) {
+    return fail(429, "You have sent the most invitations allowed in a day. Please try again tomorrow.");
+  }
 
   // One open comparison per pair at a time.
   const { data: mine } = await db

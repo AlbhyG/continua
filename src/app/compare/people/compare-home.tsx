@@ -17,19 +17,27 @@ type Summary = {
 
 export default function CompareHome() {
   const [items, setItems] = useState<Summary[] | null>(null);
+  const [hasResult, setHasResult] = useState(true);
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
   const load = useCallback(() => {
     fetch("/compare/api/comparisons", { cache: "no-store" })
-      .then((res) => (res.ok ? res.json() : { comparisons: [] }))
-      .then((data) => setItems(data.comparisons))
+      .then((res) => (res.ok ? res.json() : { comparisons: [], hasResult: true }))
+      .then((data) => {
+        setItems(data.comparisons);
+        setHasResult(data.hasResult !== false);
+      })
       .catch(() => setItems([]));
   }, []);
   useEffect(load, [load]);
 
-  async function call(url: string, init: RequestInit, done?: string) {
+  async function call(
+    url: string,
+    init: RequestInit,
+    done?: string | ((body: Record<string, unknown>) => string)
+  ) {
     setBusy(true);
     setMessage(null);
     try {
@@ -39,7 +47,7 @@ export default function CompareHome() {
       });
       const body = await res.json().catch(() => ({}));
       if (!res.ok) setMessage(body.error ?? "Something went wrong.");
-      else if (done) setMessage(done);
+      else if (done) setMessage(typeof done === "function" ? done(body) : done);
       return res.ok;
     } finally {
       setBusy(false);
@@ -49,10 +57,14 @@ export default function CompareHome() {
 
   async function invite(event: React.FormEvent) {
     event.preventDefault();
+    const sentTo = email.trim();
     const ok = await call(
       "/compare/api/comparisons",
       { method: "POST", body: JSON.stringify({ email }) },
-      "Invitation created. We don't email it yet, so ask them to sign in to Continua and open Compare."
+      (body) =>
+        body.emailed
+          ? `Invitation emailed to ${sentTo}.`
+          : `Invitation saved, but the email could not be sent. Ask ${sentTo} to sign in to Continua with that address and open ${String(body.link ?? "Compare")}.`
     );
     if (ok) setEmail("");
   }
@@ -74,8 +86,8 @@ export default function CompareHome() {
       <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/70">Your Continua</p>
       <h1 className="mt-2 text-4xl font-bold text-white">Compare</h1>
       <p className="mt-3 text-lg text-white/80">
-        See your profile next to someone else&apos;s. Both of you have to agree, and either of you can end it at
-        any time.
+        See your result next to someone else&apos;s. Each of you takes the assessment yourself, nothing is
+        shown until both of you agree, and either of you can end it at any time.
       </p>
 
       <div className="mt-5">
@@ -92,19 +104,35 @@ export default function CompareHome() {
               <p className="font-bold">
                 {c.other.name} ({c.other.email}) would like to compare with you.
               </p>
-              <p className="mt-2 text-sm text-foreground/75">
-                If you accept, you will each see both profiles side by side, using your most recent
-                assessments. Nothing is shown until you accept. Either of you can end the comparison at any
-                time, and it disappears for both of you.
-              </p>
+              {hasResult ? (
+                <p className="mt-2 text-sm text-foreground/75">
+                  If you accept, you will each see both results side by side, using your most recent
+                  assessment. Nothing is shown until you accept. Either of you can end the comparison at any
+                  time, and it disappears for both of you.
+                </p>
+              ) : (
+                <p className="mt-2 text-sm text-foreground/75">
+                  First take the assessment yourself. Your answers are private. After you see your result,
+                  come back here and choose whether to share it with {c.other.name}.
+                </p>
+              )}
               <div className="mt-4 flex gap-3">
-                <button
-                  disabled={busy}
-                  onClick={() => respond(c.id, "accept")}
-                  className="rounded-xl bg-white/90 px-5 py-2.5 text-sm font-bold text-foreground disabled:opacity-60"
-                >
-                  Accept
-                </button>
+                {hasResult ? (
+                  <button
+                    disabled={busy}
+                    onClick={() => respond(c.id, "accept")}
+                    className="rounded-xl bg-white/90 px-5 py-2.5 text-sm font-bold text-foreground disabled:opacity-60"
+                  >
+                    Share my result
+                  </button>
+                ) : (
+                  <Link
+                    href="/quiz"
+                    className="rounded-xl bg-white/90 px-5 py-2.5 text-sm font-bold text-foreground"
+                  >
+                    Take the assessment
+                  </Link>
+                )}
                 <button
                   disabled={busy}
                   onClick={() => respond(c.id, "decline")}
@@ -162,7 +190,7 @@ export default function CompareHome() {
         <h2 className="text-xl font-bold text-white">Invite someone</h2>
         <form onSubmit={invite} className="glass-card mt-3 p-5">
           <label htmlFor="invite-email" className="text-sm font-semibold">
-            Their email address (the one they use to sign in to Continua)
+            Their email address
           </label>
           <input
             id="invite-email"
@@ -174,8 +202,9 @@ export default function CompareHome() {
             placeholder="name@example.com"
           />
           <p className="mt-3 text-sm text-foreground/70">
-            If they accept, they will see your most recent assessment, and you will see theirs. You need to
-            have taken an assessment first. Either of you can end the comparison at any time.
+            We&apos;ll email them an invitation. They take the assessment themselves, see their own result,
+            and then choose whether to share it. If they do, they will see your most recent assessment and you
+            will see theirs. Either of you can end the comparison at any time.
           </p>
           <button
             type="submit"
