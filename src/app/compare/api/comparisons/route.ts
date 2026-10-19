@@ -13,11 +13,12 @@ import { getActor, NO_STORE } from "../auth";
 export async function GET() {
   const got = await getActor();
   if ("error" in got) return got.error;
-  const [comparisons, hasResult] = await Promise.all([
+  const [comparisons, hasResult, myName] = await Promise.all([
     listForUser(got.db, got.actor),
     hasOwnResult(got.db, got.actor.id),
+    displayNameFor(got.db, got.actor.id, got.actor.email),
   ]);
-  return NextResponse.json({ comparisons, hasResult }, { headers: NO_STORE });
+  return NextResponse.json({ comparisons, hasResult, myName }, { headers: NO_STORE });
 }
 
 // Invite someone (by email) to compare. Nothing is shown until they accept.
