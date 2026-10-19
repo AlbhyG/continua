@@ -313,7 +313,7 @@ export default function QuizResultsPage() {
       </div>
 
       {result.signedIn === false && result.isOwner !== false && (
-        <div className="mt-6 rounded-xl bg-white/80 p-4 text-sm text-foreground shadow-sm">
+        <div className="mt-6 rounded-xl bg-white/80 p-4 text-center text-sm text-foreground shadow-sm">
           <p>
             <span className="font-bold">Keep this result.</span> Sign in to see
             it on any device and track how it changes over time.
@@ -329,7 +329,7 @@ export default function QuizResultsPage() {
                 // Browser storage is a convenience only.
               }
             }}
-            className="mt-2 inline-block font-semibold underline underline-offset-4"
+            className="mt-2 block text-base font-bold underline underline-offset-4"
           >
             Sign in to save it
           </a>
