@@ -474,6 +474,28 @@ export default function Header() {
     }
   }, [])
 
+  // Signed in on a browser that has no result stored (for example a phone,
+  // after taking the assessment on a laptop): use the account's latest result.
+  useEffect(() => {
+    if (!signedInEmail || latestResultId) return
+    let cancelled = false
+    fetch('/quiz/api/results/latest', { cache: 'no-store' })
+      .then((res) => (res.status === 200 ? res.json() : null))
+      .then((data: { id: number } | null) => {
+        if (cancelled || !data?.id) return
+        try {
+          localStorage.setItem('latest_result_id', String(data.id))
+        } catch {
+          // Browser storage is a convenience only.
+        }
+        setLatestResultId(String(data.id))
+      })
+      .catch(() => {})
+    return () => {
+      cancelled = true
+    }
+  }, [signedInEmail, latestResultId])
+
   return (
     <>
       <header className="fixed top-0 inset-x-0 z-50 bg-white/70 backdrop-blur-xl border-b border-white/30">
