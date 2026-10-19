@@ -4,23 +4,16 @@ import { getQuestionnaire } from "@/lib/quiz/questionnaires";
 import { calculateScores, getAxisLabel, AXIS_INFO } from "@/lib/quiz/scoring";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { RELATIONSHIPS_ENABLED } from "@/lib/site-mode";
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
-  const { questionnaireId, answers, anonymousToken, personId } = body as {
+  // Assessments are always of the person taking them. (An earlier version let
+  // signed-in users assess someone else; that was removed in October 2026.)
+  const { questionnaireId, answers, anonymousToken } = body as {
     questionnaireId: number;
     answers: number[];
     anonymousToken: string;
-    personId?: string;
   };
-
-  if (personId && !RELATIONSHIPS_ENABLED) {
-    return NextResponse.json(
-      { error: "Assessments for other people are not available yet." },
-      { status: 403 }
-    );
-  }
 
   if (!questionnaireId || !answers || !anonymousToken) {
     return NextResponse.json(
@@ -74,29 +67,20 @@ export async function POST(request: NextRequest) {
   let personName: string | null = null;
   if (user) {
     await supabase.rpc("ensure_current_user_records");
-    let personQuery = supabase
+    const { data: person } = await supabase
       .from("people")
       .select("id,name")
-      .eq("owner_user_id", user.id);
-
-    personQuery = personId
-      ? personQuery.eq("id", personId)
-      : personQuery.eq("is_self", true);
-
-    const { data: person } = await personQuery.single();
+      .eq("owner_user_id", user.id)
+      .eq("is_self", true)
+      .single();
     if (!person) {
       return NextResponse.json(
-        { error: "That person is not available." },
+        { error: "Your account record is not available." },
         { status: 403 }
       );
     }
     ownedPersonId = person.id;
     personName = person.name;
-  } else if (personId) {
-    return NextResponse.json(
-      { error: "Sign in to save assessments for another person." },
-      { status: 403 }
-    );
   }
 
   const admin = createAdminClient();
@@ -125,7 +109,7 @@ export async function POST(request: NextRequest) {
     scores,
     axisResults,
     activeShareCount: 0,
-    canShare: !personId,
+    canShare: true,
     signedIn: Boolean(user),
     personId: ownedPersonId,
     personName,
