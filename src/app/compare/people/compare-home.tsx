@@ -18,6 +18,7 @@ type Summary = {
 export default function CompareHome() {
   const [items, setItems] = useState<Summary[] | null>(null);
   const [hasResult, setHasResult] = useState(true);
+  const [myName, setMyName] = useState<string | null>(null);
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
@@ -28,6 +29,7 @@ export default function CompareHome() {
       .then((data) => {
         setItems(data.comparisons);
         setHasResult(data.hasResult !== false);
+        setMyName(typeof data.myName === "string" ? data.myName : null);
       })
       .catch(() => setItems([]));
   }, []);
@@ -109,6 +111,16 @@ export default function CompareHome() {
                   If you accept, you will each see both results side by side, using your most recent
                   assessment. Nothing is shown until you accept. Either of you can end the comparison at any
                   time, and it disappears for both of you.
+                  {myName && (
+                    <>
+                      {" "}
+                      You will appear to them as <b>{myName}</b> (
+                      <Link href="/my-info" className="underline underline-offset-2">
+                        change
+                      </Link>
+                      ).
+                    </>
+                  )}
                 </p>
               ) : (
                 <p className="mt-2 text-sm text-foreground/75">
@@ -206,6 +218,14 @@ export default function CompareHome() {
             and then choose whether to share it. If they do, they will see your most recent assessment and you
             will see theirs. Either of you can end the comparison at any time.
           </p>
+          {myName && (
+            <p className="mt-3 text-sm text-foreground/70">
+              The invitation will come from <b>{myName}</b>.{" "}
+              <Link href="/my-info" className="font-semibold underline underline-offset-2">
+                Change your name
+              </Link>
+            </p>
+          )}
           <button
             type="submit"
             disabled={busy || !email}

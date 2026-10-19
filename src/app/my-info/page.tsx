@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import DeleteAssessmentButton from './delete-assessment-button'
+import NameForm from './name-form'
 import PasskeySettings from './passkey-settings'
 import StopSharingButton from './stop-sharing-button'
 import { createAdminClient } from '@/lib/supabase/admin'
@@ -30,7 +31,7 @@ export default async function MyInfoPage() {
     supabase.rpc('consume_first_login_welcome'),
     supabase
       .from('people')
-      .select('id')
+      .select('id,name')
       .eq('owner_user_id', user.id)
       .eq('is_self', true)
       .single(),
@@ -87,6 +88,8 @@ export default async function MyInfoPage() {
           Welcome to Continua — your assessment history and tools are ready below.
         </p>
       )}
+
+      <NameForm name={typeof selfPerson?.name === 'string' ? selfPerson.name : ''} />
 
       <section className="mt-8">
         <div className="flex flex-wrap items-end justify-between gap-3">
