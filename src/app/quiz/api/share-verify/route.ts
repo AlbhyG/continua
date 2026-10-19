@@ -1,29 +1,48 @@
 import { NextRequest, NextResponse } from "next/server";
-import { verifyShareLink } from "@/lib/quiz/share";
+import { resolveShareLink } from "@/lib/quiz/share";
 import { getExplanation, getAxisLabel, AXIS_INFO } from "@/lib/quiz/scoring";
+import { createAdminClient } from "@/lib/supabase/admin";
+
+const NO_STORE = { "Cache-Control": "no-store" };
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
-  const data = searchParams.get("data");
-  const sig = searchParams.get("sig");
+  const token = searchParams.get("t");
 
-  if (!data || !sig) {
+  // Links made before revocable sharing carried the scores in the URL itself.
+  // They are no longer honored, so they cannot outlive a deleted result.
+  if (!token && (searchParams.has("data") || searchParams.has("sig"))) {
     return NextResponse.json(
-      { error: "Missing data or signature" },
-      { status: 400 }
+      { error: "legacy_link" },
+      { status: 410, headers: NO_STORE }
+    );
+  }
+  if (!token) {
+    return NextResponse.json(
+      { error: "missing_token" },
+      { status: 400, headers: NO_STORE }
     );
   }
 
-  const payload = verifyShareLink(data, sig);
-  if (!payload) {
+  const admin = createAdminClient();
+  if (!admin) {
     return NextResponse.json(
-      { error: "Invalid or tampered share link" },
-      { status: 403 }
+      { error: "unavailable" },
+      { status: 503, headers: NO_STORE }
     );
   }
 
-  const axisResults = payload.scores
-    ? (Object.entries(payload.scores) as [keyof typeof AXIS_INFO, number][]).map(
+  const shared = await resolveShareLink(token, admin);
+  if (!shared) {
+    return NextResponse.json(
+      { error: "not_available" },
+      { status: 404, headers: NO_STORE }
+    );
+  }
+
+  const scores = shared.scores;
+  const axisResults = scores
+    ? (Object.entries(scores) as [keyof typeof AXIS_INFO, number][]).map(
         ([axis, score]) => ({
           axis,
           name: AXIS_INFO[axis].name,
@@ -34,12 +53,16 @@ export async function GET(request: NextRequest) {
         })
       )
     : null;
+  const empathy = scores?.empathy ?? shared.score;
 
-  return NextResponse.json({
-    score: payload.score,
-    label: payload.label,
-    explanation: getExplanation(payload.score),
-    scores: payload.scores ?? null,
-    axisResults,
-  });
+  return NextResponse.json(
+    {
+      score: empathy,
+      label: getAxisLabel("empathy", empathy),
+      explanation: getExplanation(empathy),
+      scores,
+      axisResults,
+    },
+    { headers: NO_STORE }
+  );
 }

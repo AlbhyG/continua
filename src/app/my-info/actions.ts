@@ -2,6 +2,8 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
+import { revokeShareLinks } from '@/lib/quiz/share'
 
 export async function deleteAssessmentAction(formData: FormData) {
   const resultId = Number(formData.get('result_id'))
@@ -27,6 +29,41 @@ export async function deleteAssessmentAction(formData: FormData) {
   if (error) {
     throw new Error(`Could not delete assessment: ${error.message}`)
   }
+
+  revalidatePath('/my-info')
+}
+
+export async function stopSharingAction(formData: FormData) {
+  const resultId = Number(formData.get('result_id'))
+  if (!Number.isSafeInteger(resultId) || resultId < 1) {
+    throw new Error('Invalid assessment result')
+  }
+
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
+  if (!user) {
+    throw new Error('You must be signed in to stop sharing an assessment')
+  }
+
+  // Confirm the result belongs to this account before touching its share links.
+  const { data: owned } = await supabase
+    .from('quiz_results')
+    .select('id')
+    .eq('id', resultId)
+    .eq('user_id', user.id)
+    .single()
+  if (!owned) {
+    throw new Error('Assessment not found')
+  }
+
+  const admin = createAdminClient()
+  if (!admin) {
+    throw new Error('Could not turn off sharing')
+  }
+  await revokeShareLinks(resultId, admin)
 
   revalidatePath('/my-info')
 }

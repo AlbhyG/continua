@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import { scoresToOrbData } from "@/lib/quiz/orb-mapping";
+import AssessmentLimitations from "@/components/AssessmentLimitations";
 
 const RadarProfile = dynamic(
   () => import("@/components/quiz/RadarProfile"),
@@ -46,28 +47,42 @@ function ShareContent() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const data = searchParams.get("data");
-    const sig = searchParams.get("sig");
+    const token = searchParams.get("t");
+    const isLegacy = !token && (searchParams.has("data") || searchParams.has("sig"));
 
-    if (!data || !sig) {
-      setError("Invalid share link.");
+    if (!token && !isLegacy) {
+      setError("This link is incomplete. Check that you copied the whole link.");
       setLoading(false);
       return;
     }
 
-    fetch(
-      `/quiz/api/share-verify?data=${encodeURIComponent(data)}&sig=${encodeURIComponent(sig)}`
-    )
-      .then((res) => {
-        if (!res.ok) throw new Error("Invalid");
+    const query = token
+      ? `t=${encodeURIComponent(token)}`
+      : "data=legacy";
+
+    fetch(`/quiz/api/share-verify?${query}`, { cache: "no-store" })
+      .then(async (res) => {
+        if (res.status === 410) {
+          throw new Error(
+            "This link uses an older format that is no longer supported. Ask the person who shared it to send a new link."
+          );
+        }
+        if (res.status === 404) {
+          throw new Error(
+            "This result is no longer shared. The person who shared it may have turned sharing off or deleted the result."
+          );
+        }
+        if (!res.ok) {
+          throw new Error("This shared result is temporarily unavailable. Please try again later.");
+        }
         return res.json();
       })
       .then((data) => {
         setResult(data);
         setLoading(false);
       })
-      .catch(() => {
-        setError("This share link is invalid or has been tampered with.");
+      .catch((err: Error) => {
+        setError(err.message);
         setLoading(false);
       });
   }, [searchParams]);
@@ -83,7 +98,7 @@ function ShareContent() {
   if (error) {
     return (
       <div className="mx-auto max-w-2xl px-6 py-12">
-        <h1 className="text-3xl font-bold text-white">Invalid Link</h1>
+        <h1 className="text-3xl font-bold text-white">Link Not Available</h1>
         <p className="mt-4 text-white/60">{error}</p>
         <a
           href="/quiz"
@@ -109,6 +124,8 @@ function ShareContent() {
           {result.axisResults ? "Personality Graph" : "Empathy Spectrum"}
         </h1>
       </div>
+
+      <div className="mt-6"><AssessmentLimitations /></div>
 
       {orbData && (
         <div className="mt-8 flex justify-center">
