@@ -52,6 +52,9 @@ export default function QuizResultsPage() {
   >("idle");
   const [shareUrl, setShareUrl] = useState<string | null>(null);
   const [activeShares, setActiveShares] = useState(0);
+  const [deleteStatus, setDeleteStatus] = useState<
+    "idle" | "working" | "error" | "sign_in"
+  >("idle");
   const [loadError, setLoadError] = useState<"not_found" | "unavailable" | null>(null);
 
   useEffect(() => {
@@ -185,6 +188,33 @@ export default function QuizResultsPage() {
     rememberShareCount(0);
     setShareUrl(null);
     setShareStatus("stopped");
+  }
+
+  async function deleteResult() {
+    const message =
+      activeShares > 0
+        ? "Delete this result permanently? Links you've shared will stop working. This cannot be undone."
+        : "Delete this result permanently? This cannot be undone.";
+    if (!window.confirm(message)) return;
+
+    setDeleteStatus("working");
+    const res = await fetch(`/quiz/api/results/${resultId}`, { method: "DELETE" });
+    if (!res.ok) {
+      const data = await res.json().catch(() => null);
+      setDeleteStatus(data?.error === "sign_in_required" ? "sign_in" : "error");
+      return;
+    }
+
+    try {
+      sessionStorage.removeItem(`result_${resultId}`);
+      if (localStorage.getItem("latest_result_id") === String(resultId)) {
+        localStorage.removeItem("latest_result_id");
+        window.dispatchEvent(new Event("continua:latest-result"));
+      }
+    } catch {
+      // Browser storage is a convenience only.
+    }
+    router.push("/quiz?deleted=1");
   }
 
   if (!result && loadError) {
@@ -330,6 +360,26 @@ export default function QuizResultsPage() {
         >
           Famous Archetypal Figures
         </Link>
+      </div>
+
+      <div className="mt-6 text-center">
+        <button
+          onClick={deleteResult}
+          disabled={deleteStatus === "working"}
+          className="text-xs font-semibold text-foreground/60 underline underline-offset-4 hover:text-foreground disabled:cursor-wait disabled:opacity-50"
+        >
+          {deleteStatus === "working" ? "Deleting…" : "Delete this result"}
+        </button>
+        {deleteStatus === "error" && (
+          <p className="mt-2 text-xs text-foreground/60">
+            Could not delete this result. Please try again.
+          </p>
+        )}
+        {deleteStatus === "sign_in" && (
+          <p className="mt-2 text-xs text-foreground/60">
+            This result is saved to an account. Sign in to that account to delete it.
+          </p>
+        )}
       </div>
 
       <p className="mt-6 text-center text-[10px] text-foreground/40">

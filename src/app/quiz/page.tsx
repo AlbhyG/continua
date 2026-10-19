@@ -11,6 +11,7 @@ function QuizLandingContent() {
   const [loading, setLoading] = useState(false);
   const personId = searchParams.get("person");
   const personName = searchParams.get("name");
+  const justDeleted = searchParams.get("deleted") === "1";
 
   useEffect(() => {
     const existing = localStorage.getItem("anonymous_token");
@@ -52,6 +53,14 @@ function QuizLandingContent() {
   return (
     <div className="flex min-h-[70vh] flex-col items-center justify-center gap-10 px-6 pt-24 text-center">
       <div>
+        {justDeleted && (
+          <p
+            role="status"
+            className="mb-6 rounded-xl bg-white/70 px-4 py-3 text-sm text-foreground/80"
+          >
+            Your result was deleted, and any links to it no longer work.
+          </p>
+        )}
         {personName && (
           <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-foreground/55">
             Assessment for {personName}
