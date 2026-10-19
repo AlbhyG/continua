@@ -61,6 +61,12 @@ export async function GET(
 
   const activeShareCount = await countShareLinks(row.id, admin);
   const canShare = await isShareableResult(row.person_id ?? null, admin);
+  // True only for the person who took it (by account or this browser), not
+  // for an admin viewing someone else's result.
+  const isOwner = Boolean(
+    (user?.id && row.user_id === user.id) ||
+      (token && row.anonymous_token === token)
+  );
 
   return NextResponse.json({
     resultId: row.id,
@@ -68,6 +74,7 @@ export async function GET(
     axisResults,
     activeShareCount,
     canShare,
+    isOwner,
     personId: row.person_id,
   });
 }

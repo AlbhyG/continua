@@ -37,6 +37,7 @@ interface ResultData {
   axisResults: AxisResult[];
   activeShareCount?: number;
   canShare?: boolean;
+  isOwner?: boolean;
   personId?: string | null;
   personName?: string | null;
 }
@@ -87,8 +88,23 @@ export default function QuizResultsPage() {
   }, [resultId]);
 
   useEffect(() => {
-    if (result) setActiveShares(result.activeShareCount ?? 0);
-  }, [result]);
+    if (!result) return;
+    setActiveShares(result.activeShareCount ?? 0);
+
+    // Opening one of your own results (for example from the Account page on
+    // another device) makes the header's "See Results" point to it.
+    const ownResult = result.isOwner !== false && result.canShare !== false;
+    if (ownResult) {
+      try {
+        if (localStorage.getItem("latest_result_id") !== String(resultId)) {
+          localStorage.setItem("latest_result_id", String(resultId));
+          window.dispatchEvent(new Event("continua:latest-result"));
+        }
+      } catch {
+        // Browser storage is a convenience only.
+      }
+    }
+  }, [result, resultId]);
 
   function rememberShareCount(count: number) {
     setActiveShares(count);
