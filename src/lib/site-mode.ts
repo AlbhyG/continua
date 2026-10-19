@@ -16,3 +16,9 @@ export const SHOW_RELATIONSHIPS = false
 
 // True when the relationships pages and the assess-someone-else flow are usable.
 export const RELATIONSHIPS_ENABLED = !LAUNCH_LITE || SHOW_RELATIONSHIPS
+
+// Comparing results with people you know (invite by email; both must accept).
+// While off, the buttons that lead there are hidden, but /compare/people and
+// invitation links still work for anyone signed in, so it can be tried
+// privately (for example, with family) before it is announced.
+export const SHOW_PEOPLE_COMPARISON = false
