@@ -338,7 +338,7 @@ function MobileMenu({
           <div className="mb-8">
             {LAUNCH_LITE ? (
               <span className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-3 block">
-                Info
+                Assessment
               </span>
             ) : (
               <Link
@@ -346,7 +346,7 @@ function MobileMenu({
                 onClick={onClose}
                 className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-3 block hover:text-foreground transition-colors"
               >
-                Info
+                Assessment
               </Link>
             )}
             <div className="space-y-1">
@@ -527,13 +527,13 @@ export default function Header() {
               <div className="flex items-center gap-0">
                 {LAUNCH_LITE ? (
                   <MenuButton className="flex items-center text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors cursor-pointer">
-                    Info
+                    Assessment
                     <span className="p-1"><ChevronDown /></span>
                   </MenuButton>
                 ) : (
                   <>
                     <Link href={`${versionPrefix}/my-info`} className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
-                      Info
+                      Assessment
                     </Link>
                     <MenuButton className="p-1 text-foreground/80 hover:text-foreground transition-colors cursor-pointer">
                       <ChevronDown />
