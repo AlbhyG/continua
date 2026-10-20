@@ -1,6 +1,7 @@
 'use client'
 
 import { useActionState } from 'react'
+import Link from 'next/link'
 import { verifyEmailAction } from '@/app/actions/verify-email'
 
 interface VerificationFormProps {
@@ -35,7 +36,7 @@ export default function VerificationForm({ token }: VerificationFormProps) {
             </div>
           ) : (
             <p className="text-gray-600">
-              Your email has been verified successfully. You'll be able to download your Book shortly.
+              Your email has been verified successfully. You&rsquo;ll be able to download your Book shortly.
             </p>
           )}
         </div>
@@ -57,7 +58,7 @@ export default function VerificationForm({ token }: VerificationFormProps) {
           className="mb-6 p-4 rounded-lg bg-red-50 border border-red-200 text-red-800 text-sm"
         >
           {state.error}
-          {' '}<a href="/" className="underline">Return to the homepage</a>
+          {' '}<Link href="/" className="underline">Return to the homepage</Link>
         </div>
       )}
 

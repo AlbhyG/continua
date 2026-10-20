@@ -9,8 +9,6 @@ function QuizLandingContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [loading, setLoading] = useState(false);
-  const personId = searchParams.get("person");
-  const personName = searchParams.get("name");
   const justDeleted = searchParams.get("deleted") === "1";
 
   useEffect(() => {
@@ -22,23 +20,17 @@ function QuizLandingContent() {
 
   async function startQuiz() {
     setLoading(true);
-    const query = personId ? `?person=${encodeURIComponent(personId)}` : "";
-    const res = await fetch(`/quiz/api/random${query}`);
+    const res = await fetch("/quiz/api/random");
     if (!res.ok) {
       const data = await res.json();
       if (data.error === "all_completed") {
-        alert("All available assessments have been completed for this person.");
-      } else if (data.error === "sign_in_required") {
-        router.push(`/login?next=${encodeURIComponent(window.location.pathname + window.location.search)}`);
+        alert("All available assessments have been completed.");
       }
       setLoading(false);
       return;
     }
     const { id } = await res.json();
-    const next = new URLSearchParams();
-    if (personId) next.set("person", personId);
-    if (personName) next.set("name", personName);
-    router.push(`/quiz/take/${id}${next.size ? `?${next.toString()}` : ""}`);
+    router.push(`/quiz/take/${id}`);
   }
 
   if (loading) {
@@ -59,11 +51,6 @@ function QuizLandingContent() {
             className="mb-6 rounded-xl bg-white/70 px-4 py-3 text-sm text-foreground/80"
           >
             Your result was deleted, and any links to it no longer work.
-          </p>
-        )}
-        {personName && (
-          <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-foreground/55">
-            Assessment for {personName}
           </p>
         )}
         <h1 className="text-4xl font-bold text-foreground md:text-5xl">

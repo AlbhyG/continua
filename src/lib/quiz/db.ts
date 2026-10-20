@@ -62,18 +62,6 @@ export async function getCompletedIds(anonymousToken: string): Promise<number[]>
   return (data || []).map((r) => r.questionnaire_id);
 }
 
-export async function getCompletedIdsForPerson(
-  personId: string,
-  supabase: SupabaseClient
-): Promise<number[]> {
-  const { data } = await supabase
-    .from("quiz_results")
-    .select("questionnaire_id")
-    .eq("person_id", personId);
-
-  return (data || []).map((result) => result.questionnaire_id);
-}
-
 export async function getResultById(
   resultId: number,
   options: {
