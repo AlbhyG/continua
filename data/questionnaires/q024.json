@@ -1,0 +1,149 @@
+{
+  "id": 24,
+  "questions": [
+    {
+      "text": "Thinking through someone's difficulties rarely makes me care about them more.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I think it is important to make a stand and defend it.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I sense when a group has collectively decided on something before any formal vote or discussion.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I often forgo recognition so that others can be acknowledged instead.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I can be in the midst of uncertainty and still feel fundamentally okay.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I routinely upgrade my skills specifically to increase my market value.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I detect when a group's energy shifts from casual to serious.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I tend to miss it when someone laughs at the wrong moment because they are uncomfortable.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I commit to a decision and adjust quickly if the outcome isn't what I expected.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I frequently volunteer to be the spokesperson or point person.",
+      "direction": "agentic"
+    },
+    {
+      "text": "Each new encounter with suffering still matters to me; it doesn't become routine.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that my creative projects deserve the same level of investment I would give to a professional obligation.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I tend to miss when someone includes me in a plan out of obligation rather than desire.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "When someone trusts me with their pain, I want to hold it with care.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I routinely go out of my way to introduce people to opportunities they deserve.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I routinely proofread, edit, or review other people's work without being asked.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I register the weight of another person's pain not just intellectually but as something that genuinely matters to me and moves me.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I make it a point to arrive early to appointments and meetings.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "Suffering among people whose lives are very different from mine carries little weight for me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to view my savings as a tool for my own future, not a resource for others.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "A tense silence in a conversation produces a physical knot in my stomach almost instantly.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel comfortable contributing to something that bears the group's stamp, not mine.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I tend not to read meaning into someone choosing to communicate by text versus calling versus meeting in person.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I would rather let the team take extra time than force a call that divides people.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I track the time I spend on different activities to understand where my hours go.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I experience the onset of emotion as a sudden physical sensation before I can even name what I'm feeling.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I think it is important to remain open and willing to shift with the group.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I experience change as something to be navigated calmly rather than something that triggers alarm.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I notice that even reading a particularly moving paragraph in a book can make my throat tighten.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I notice when a conversation partner's pupils dilate or contract in response to what is being discussed.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I get bored when a process becomes too routine and look for ways to shake things up.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I prepare for meetings by reviewing agendas and relevant materials in advance.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I notice that waiting for important outcomes produces alertness in me, not agitation.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I am drawn to moments where one person's decision changes everything.",
+      "direction": "agentic"
+    },
+    {
+      "text": "Someone's serious suffering leaves me with little concern for what happens to them.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel more in control when I'm free to react to what's actually happening rather than following a script.",
+      "direction": "spontaneous"
+    }
+  ]
+}

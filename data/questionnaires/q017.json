@@ -1,0 +1,149 @@
+{
+  "id": 17,
+  "questions": [
+    {
+      "text": "I notice that people sometimes wonder if I'm affected by things, but I simply process them at a lower volume.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to take on the overnight shift or the early morning slot so others can have the easier schedule.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I sense the difference between a group that is comfortable with each other and a group that is performing comfort.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I routinely surround myself with people and environments that elevate my personal trajectory.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I forget about other people's suffering as soon as I have something else to think about.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I routinely stay late to help a colleague finish their work, even when mine is already done.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice that even subtle shifts in atmosphere — a room going quiet, a change in tone — hit me with force.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find that I generally miss when someone uses my name mid-conversation to increase intimacy or pressure.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I do not naturally sense when someone wants to be contradicted rather than agreed with.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I routinely gather extra supplies so I can offer them to anyone in my circle who runs short.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I would rather lead a small group than follow in a large one.",
+      "direction": "agentic"
+    },
+    {
+      "text": "When I learn that someone I know is going through a difficult time, my first instinct is rarely to consider how I might help.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel more in control when I have a plan, even if it needs to be adjusted later.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I rarely detect when a person's interest in a conversation suddenly spikes because of something specific that was said.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "When a friend is hurting, I usually want to help.",
+      "direction": "empathy"
+    },
+    {
+      "text": "Even after hearing only a brief account of someone's suffering, I care what happens to them.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to work on whatever grabs my attention rather than following a priority list.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I enjoy adapting to and reinforcing the culture that already exists on a team.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I often know what someone is about to say before they say it based on context cues.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that decorating my space exactly to my taste improves my daily mood and output.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I detect when someone uses a nickname versus a full name to signal the current state of a relationship.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I give others a quick overview and trust them to figure out the details their own way.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I actively lobby for my perspective before a group makes a decision.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I experience the feeling of being startled as a brief flash that dissipates almost immediately.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I establish personal policies for recurring decisions so I don't have to deliberate each time.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I tend to make major life decisions based primarily on what excites and fulfills me.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find it energizing to be part of a team that navigates challenges together.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I naturally defer to others in informal group settings.",
+      "direction": "yielding"
+    },
+    {
+      "text": "Someone's pain stops mattering to me almost as soon as I stop seeing it.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to feel the emotional stakes of a situation far more intensely than the practical stakes.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "When I feel wronged, the indignation is so intense it can keep me awake at night.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I head out the door and figure out what I forgot along the way.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice that I can hold space for difficult conversations without my own equilibrium being disrupted.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I use consistent formats and templates for recurring communications.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "Another person's hardship pulls at me even when responding is difficult.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I volunteer to chair committees or working groups without hesitation.",
+      "direction": "agentic"
+    }
+  ]
+}

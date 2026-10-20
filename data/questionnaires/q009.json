@@ -1,0 +1,149 @@
+{
+  "id": 9,
+  "questions": [
+    {
+      "text": "I detect when someone is watching a conversation from the periphery with more interest than they are showing.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I often feel like my emotional responses are running at double speed compared to the people around me.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I would describe my influence style as directive.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I prefer the group to decide together when a project is truly complete.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I can usually tell when someone has been crying even if they have composed themselves.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "Learning that suffering could easily be prevented seldom makes me want it prevented.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I design my workflows to minimize friction and maximize repeatability.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "When I see an opportunity, I move quickly to claim it.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I experience the conclusion of something I care about with a sense of readiness to move on.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I take a methodical approach to learning new skills, following a structured curriculum.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "Most of the time, other people's suffering does not feel important to me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I would share a professional secret or competitive advantage if it would significantly help someone else.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I am typically the one who helps the group keep deliberating until a tie resolves itself.",
+      "direction": "yielding"
+    },
+    {
+      "text": "When I feel truly heard and understood, the relief is so profound it can make me cry.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "A person's suffering still matters to me when many other people also know about it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "Learning that a person is suffering makes me want to know if there is anything that would help them.",
+      "direction": "empathy"
+    },
+    {
+      "text": "As I learn the reasons a person is struggling, their wellbeing becomes more important to me.",
+      "direction": "empathy"
+    },
+    {
+      "text": "When someone near me is visibly upset, I rarely feel any urge to comfort or help them.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to feel the same emotional temperature whether I'm at home or in a novel situation.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I do regular tasks when I remember them rather than relying on calendar prompts.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I routinely protect my focus time even when others express disappointment.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I rotate seasonal items in and out of storage on a predictable schedule.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I tend to treat silence in a conversation as simply a pause rather than as communication.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I can look back on difficult periods without re-experiencing the emotional intensity.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to schedule personal time before committing to obligations for others.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I notice that when I feel vulnerable, every nerve ending seems to be exposed.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I routinely decline social events that don't advance my personal interests.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I tend to be unaware of the unspoken rules about what topics are acceptable at a particular gathering.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I tend to miss it when a person's agreement comes with a subtle qualifier that changes its meaning entirely.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I notice when a group conversation has an unacknowledged moderator who is guiding the flow without being explicit about it.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I tend to go without rest to make sure the people around me are supported.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I routinely make financial sacrifices to support people in my life.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel uncomfortable when someone challenges my authority in front of the group.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I hold my commitments loosely, knowing that priorities shift and flexibility matters.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I handle errands and tasks as they come up, even if that means extra trips.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "When a conversation stalls, I invite quieter voices to share before proposing anything.",
+      "direction": "yielding"
+    }
+  ]
+}

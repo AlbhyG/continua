@@ -1,0 +1,149 @@
+{
+  "id": 27,
+  "questions": [
+    {
+      "text": "I tend to take jokes and comments literally when others see layers of meaning.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I prefer that the group collectively decides when a meeting has run its course.",
+      "direction": "yielding"
+    },
+    {
+      "text": "My emotional responses have a muted quality compared to what I observe in others.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I routinely hand off leads, clients, or referrals to colleagues who need them more.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice when someone volunteers to leave a room to give others privacy they did not explicitly request.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I'm comfortable with ambiguity in group projects and trust things will sort themselves out.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "When I encounter injustice, my entire body lights up with agitation.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I routinely check in on neighbors, acquaintances, and distant friends to make sure they are okay.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I do not usually sense when the mood of a text conversation shifts because of an emoji choice or its absence.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I believe that the time I spend alone working on my goals is among my most valuable hours.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel uneasy when I don't have a clear plan for the week ahead.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I am the type of person who always has a five-year plan or long-range vision.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I want to support whoever launches new ventures within my team.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel most alive when I am steering the course of a project.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I rarely notice the implicit choreography of how a group arranges itself when it walks together.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I tend to move through emotionally charged moments with a sense of groundedness.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "When I have extra money, my first thought is who else could use it.",
+      "direction": "altruism"
+    },
+    {
+      "text": "Understanding how many people a problem harms makes me want to see their suffering reduced.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I return borrowed items promptly because outstanding obligations weigh on me.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I prefer to own the outcome of a decision rather than share that ownership.",
+      "direction": "agentic"
+    },
+    {
+      "text": "Wanting others to suffer less is a real motivation in my life.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I detect when someone answers a different question than the one that was asked to steer the conversation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I experience the pressure of a deadline not just mentally but as a tightening sensation throughout my body.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I tend to frame every major decision by asking: does this move me closer to where I want to be?",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I am the one who typically helps the group settle on the key question together.",
+      "direction": "yielding"
+    },
+    {
+      "text": "Even when someone I am with is clearly in distress, their pain leaves me largely unmoved.",
+      "direction": "detachment"
+    },
+    {
+      "text": "When someone shares their struggle with me, I experience it as a call to action rather than as information.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I think of each day as its own self-contained experience rather than an investment in the future.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I am easily swept up in the emotional energy of a crowd or a room.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I often sense that there is a conversation happening beneath the surface conversation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "Others' suffering sometimes fails to register as something that matters to me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel that personal reading time is a non-negotiable part of my schedule.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I experience the act of letting go of something as a natural, uncomplicated process.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I make choices based on present circumstances and adapt to downstream effects as they appear.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "When a person I know is struggling, I rarely feel a wish to be of help.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I naturally assume the authority to speak on behalf of a group.",
+      "direction": "agentic"
+    }
+  ]
+}

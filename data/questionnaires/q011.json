@@ -1,0 +1,149 @@
+{
+  "id": 11,
+  "questions": [
+    {
+      "text": "I tend to undercharge or waive fees when someone genuinely cannot afford what I offer.",
+      "direction": "altruism"
+    },
+    {
+      "text": "When I feel overwhelmed, it's not just emotional — my body feels like it's short-circuiting.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "A stranger's pain matters to me as much as a friend's.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I want to be the one who shapes how a project unfolds.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I swap seasonal items when the weather actually changes rather than on a set date.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I tend to miss the social significance of who reaches out to whom first after a conflict.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "A stranger's obvious anguish in front of me rarely makes me want to step in.",
+      "direction": "detachment"
+    },
+    {
+      "text": "When I receive unexpected praise, the flush of pleasure is so strong it makes me lightheaded.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I hold the view that every person's first responsibility is to themselves.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find it satisfying to have direct reports and be responsible for their output.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I often find myself hoping that people I hear about who are struggling will be okay.",
+      "direction": "empathy"
+    },
+    {
+      "text": "Even a stranger's serious suffering makes me want to see it relieved.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice that confrontations, while unpleasant, don't leave a physiological residue in my body.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel responsible for keeping a group connected and cohesive.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I tend to allocate the majority of my time to tasks that benefit other people.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I can tell when someone volunteers information to create an impression of transparency while still hiding the important parts.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I show up to learning experiences fresh, without preparation, to keep my perspective unbiased.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I sense when a conversation partner is mirroring my energy not out of genuine rapport but as a social technique.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I rarely sense when a person's choice of words reveals their stance on an issue they have not explicitly addressed.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I notice micro-expressions that flash across someone's face during conversation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "My emotional baseline is so stable that people often describe me as having a calming presence.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I sit with vague goals and let clarity emerge before forcing them into action steps.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I can still feel the emotional residue of an argument hours or even days later.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I am open to revisiting any decision if the group raises new concerns.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I routinely lend my possessions and rarely ask for them back.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice that my emotional life, while not dramatic, is dependable and clear.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I routinely choose solitude for deep personal work over collaboration that dilutes my focus.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel most confident when I have rehearsed or prepared thoroughly for an event.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I review my goals regularly and adjust my plans to stay on track.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I am careful to manage my energy across the day so I don't burn out before evening.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I often do not notice when someone feels excluded from a group.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "When someone shares a struggle with me, I tend to treat it as information rather than as something that calls for a response.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I have been told that I am a great team player.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I routinely take credit for my contributions because acknowledging my own work matters to me.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "Another person's pain rarely feels real enough to matter to me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I am the person who usually decides how resources get distributed in a group project.",
+      "direction": "agentic"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "id": 20,
+  "questions": [
+    {
+      "text": "Learning that someone has had bad news usually makes me want to reach out.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I routinely say no to requests that don't align with my personal objectives.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel the emotional atmosphere of a room the moment I walk in, and it lands in my body immediately.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I value variety in my daily routine because it keeps me mentally sharp and engaged.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I routinely translate, explain, or simplify information so others can access it.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I pick up on the way someone's posture shifts when a particular person enters the room.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "Hearing that a problem harms many people rarely makes me want their suffering reduced.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I act on my initial understanding and ask for clarification only if I get stuck.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel that when I take care of my own needs, I am better equipped for everything else.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I prefer to speak off the cuff because rehearsed delivery feels stiff to me.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I don't see other people's private suffering as something I need to be concerned about.",
+      "direction": "detachment"
+    },
+    {
+      "text": "When I am near someone in deep pain, their suffering exists in my awareness as a moral weight that requires a response.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I do not usually register when a person responds with slightly more distance after I said something they disagreed with.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find it difficult to tell whether a group's silence indicates contentment or suppressed disagreement.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I do not usually notice when a text message carries emotional subtext that goes beyond the words.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "Another person's serious suffering weighs on me.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice that I can sit with ambiguity and uncertainty without my nervous system escalating.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I keep a record of decisions and the reasoning behind them for future reference.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I review my calendar at the start of each day to set my intentions.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I routinely choose the option that benefits others, even when a different choice would benefit me more.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I routinely audit my commitments and drop those that no longer serve my personal direction.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I tend to view emotional intensity in others with a kind of curiosity because my own experience is different.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I would choose a less prestigious school or job if the alternative let me stay close to people who need me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "Even a mildly critical tone of voice can set off alarm bells throughout my system.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I have a tendency to take over tasks that others are doing too slowly.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I can tell when a person adjusts their level of formality mid-conversation in response to a social cue they received.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I notice that I can move from a difficult situation to a normal one without needing a transition period.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "When entering a new group, I observe how things work before settling into a role.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I go from calm to fully activated in a matter of seconds.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I tend to consult the team before making any scope changes mid-project.",
+      "direction": "yielding"
+    },
+    {
+      "text": "Wanting someone else's suffering to ease is rarely part of how I respond to their situation.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to be the one who says the meeting is over and assigns next steps.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I sense when the energy of a room drops the moment a particular person starts speaking.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I practice new skills in a structured, progressive way, building from simple to complex.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I naturally listen first and speak after others have shared their thoughts.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I think of authority as something to be exercised, not just held.",
+      "direction": "agentic"
+    }
+  ]
+}

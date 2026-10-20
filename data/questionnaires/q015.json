@@ -1,0 +1,149 @@
+{
+  "id": 15,
+  "questions": [
+    {
+      "text": "I focus on creating the conditions for a great present and let the future emerge from that.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice when two people have developed private shorthand or inside references that exclude others in the group.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I routinely pick up litter, fix broken things, and tidy shared spaces without being asked.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I set recurring calendar events for tasks that need to happen regularly.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel most capable when authority is shared across team members in a domain.",
+      "direction": "yielding"
+    },
+    {
+      "text": "Knowing that someone will keep suffering rarely bothers me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I instinctively adapt to whatever structure the group has established.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I establish naming conventions for my files so I can search for them easily.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "Once I know that someone is in serious pain, their wellbeing matters a great deal to me.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I routinely make lifestyle choices that reflect my personal standards and aspirations.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I notice that my hands stay steady and my voice stays even in situations that rattle other people.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I am often less concerned about other people's troubles than the people around me are.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I often cancel my own plans to help a friend, colleague, or family member.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to miss the warning signs that a conversation is heading toward conflict.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I am comfortable unilaterally canceling plans that I think are not working.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I rarely sense when a social environment has an implicit dress code or behavioral code that I am violating.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I notice when a group's laughter is directed at someone rather than shared with them.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I notice that when multiple emotions arrive at once, the overload can feel physically paralyzing.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "After an emotionally charged event, I feel like I need to recover as if from physical exertion.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I can tell when a couple is mid-argument even though they are being perfectly civil in public.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I proactively recruit people to my initiatives.",
+      "direction": "agentic"
+    },
+    {
+      "text": "Another person's wellbeing matters to me even when I do not feel close to them.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I let each morning develop its own rhythm instead of front-loading priority tasks.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I rarely sense when someone is tailoring their message based on who is listening.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I can remain focused and clearheaded even in high-pressure situations.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I experience the surprise of being startled not as a brief jolt but as a lingering rush of adrenaline.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I tend to let the group decide when the meeting wraps and what the next steps are.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I routinely accept the worst option for myself so that others can have the better one.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel a genuine sense of accomplishment when I execute a plan exactly as designed.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I routinely treat myself to experiences and products that bring me personal joy.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I tend to choose mentors and advisors based on how they can accelerate my personal growth.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I throw things together at the last minute and it usually works out fine.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "It is hard for me to turn away from someone's pain, even when I can't fix it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "A person's suffering rarely changes what I hope will happen for them.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I experience daily frustrations — traffic, delays, minor inconveniences — without a noticeable rise in my stress level.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I enjoy the weight of responsibility that comes with leading.",
+      "direction": "agentic"
+    }
+  ]
+}

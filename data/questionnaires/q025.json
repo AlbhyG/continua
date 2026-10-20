@@ -1,0 +1,149 @@
+{
+  "id": 25,
+  "questions": [
+    {
+      "text": "I treat my calendar as a binding contract with myself.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I experience the tension before a performance or presentation as an almost intolerable buildup of energy.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I ramp up effort as a project progresses, letting early stages stay loose and exploratory.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I prefer to keep my options open rather than lock myself into a specific course of action.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I rarely pick up on the nonverbal negotiation that happens before a group makes a decision.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I sequence my tasks so that each one builds logically on the one before.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I often need someone to explain the social dynamics of a situation after the fact.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "The hardships of people I have no connection to carry little weight for me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I think of my daily habits as investments that pay dividends in the years ahead.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I find it natural to defer my own interests when group needs arise.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I avoid detailed project timelines because they rarely survive contact with reality.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I enjoy shaping the culture of any team I join.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I routinely calculate the return on investment for my personal time and money.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I notice that my sleep quality is rarely affected by emotional events from the preceding day.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to navigate most situations without noticeable shifts in my internal state.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I frequently take on captain or leadership roles in team settings.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I notice when someone's reply to a group message is really only intended for one person in the thread.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I prefer to control the narrative around a project's progress.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I rarely notice when a person carefully positions a negative opinion as a question to soften the delivery.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I gravitate toward letting discussions continue until the group is satisfied.",
+      "direction": "yielding"
+    },
+    {
+      "text": "The felt weight of another person's suffering strongly motivates me to act for them.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I routinely write thoughtful, detailed feedback for others' projects even when no one asks.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I notice that even anticipating a difficult conversation makes my palms sweat and my heart race.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "The suffering of people I don't know rarely seems important to me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "Even when someone I know is suffering deeply, I feel little concern about what happens to them.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to choose careers and projects based on how much they allow me to help others.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I am usually the first to check in with the group before anyone takes charge.",
+      "direction": "yielding"
+    },
+    {
+      "text": "When something excites me, the rush of energy is almost overwhelming.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel at home rotating representation duties among group members.",
+      "direction": "yielding"
+    },
+    {
+      "text": "When an explanation shows me how someone is being harmed, I begin to care about what happens to them.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I feel that healthy self-focus gives me the strength to show up fully in everything I do.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel like I can sense what a group's unwritten rules are without being told.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I notice that my heart rate stays fairly constant even during heated discussions.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "When someone is suffering, I want to act, not just understand.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to think of my career as the central project of my life.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I can tell when someone is interested in a conversation topic versus enduring it out of courtesy.",
+      "direction": "hyper-attuned"
+    }
+  ]
+}

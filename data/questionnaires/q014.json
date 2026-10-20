@@ -1,0 +1,149 @@
+{
+  "id": 14,
+  "questions": [
+    {
+      "text": "I find it puzzling when people say one thing but apparently mean another.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I naturally gravitate toward being the person who introduces people and assigns them roles.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I rarely feel the kind of emotional urgency that demands immediate action.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to frame career conversations around my own aspirations and what I need to get there.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I routinely research and pursue opportunities that specifically strengthen my resume or portfolio.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I often end up as the reliable supporter in group projects.",
+      "direction": "yielding"
+    },
+    {
+      "text": "Other people's pain seldom feels like something that requires a response from me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I sense when an invitation was extended to one person but worded to include the group so it would not seem exclusive.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "Hearing about a crisis affecting others seldom leaves me wanting anything to change for them.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I notice when someone glances at the clock or door during a conversation, signaling they have mentally left.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I let the scope of a task reveal itself as I work rather than defining it upfront.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice that I don't carry the physical tension patterns that many people associate with stress.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "When something wonderful happens, my elation is so strong it can feel almost manic.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "When a report describes people's suffering in impersonal terms, I still care about the people behind it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I value speed and momentum over precision in the early stages of any effort.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I am inclined to keep options open until the group has weighed in.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I value predictability in my daily routine because it lets me focus on what matters.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "Most of the time, other people's suffering feels important to me.",
+      "direction": "empathy"
+    },
+    {
+      "text": "Even when I am convinced that someone is being harmed, I feel little wish to see it stop.",
+      "direction": "detachment"
+    },
+    {
+      "text": "When people are suffering, I want things to get better for them, whether or not I know them.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I instinctively create a chain of command when I work with others.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I would relocate to be closer to someone who needs my daily support.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to receive compliments and praise with a sense of quiet satisfaction rather than elation.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to direct the flow of conversation toward outcomes I envision.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I do not pick up on when someone is testing my reaction before committing to a stance.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I use tools like spreadsheets, project boards, or apps to keep my life organized.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I often do not realize that a conversation had multiple layers until someone explains it to me afterward.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "When I feel rejected, the pain is immediate, physical, and consuming.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I notice the social signals that indicate someone is ready to end a conversation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I routinely update my personal goals and adjust my life to match them.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel most at peace when I know I have put others before myself.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I speak in a way that signals the discussion remains open for others to shape.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I'd rather try something immediately and learn from the result than spend time planning it out.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice that witnessing an argument between other people activates my own nervous system as if I'm involved.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I plan my week on Sunday evening so Monday morning starts with clarity.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I would rather go without something I want so that someone else can have what they need.",
+      "direction": "altruism"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+import type { Metadata } from 'next'
+import Image from 'next/image'
+import FadeIn from '@/components/FadeIn'
+import AxesDiagram from '@/components/AxesDiagram'
+
+export const metadata: Metadata = {
+  title: 'Graphic Exemplar',
+  description:
+    'Personality Color Orbs \u2014 visual representations of the Continua Six-Axis personality profile.',
+}
+
+export default function GraphicExemplarPage() {
+  return (
+    <div>
+      {/* Page header */}
+      <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-20 pb-8">
+        <FadeIn>
+          <h1 className="text-[36px] md:text-[48px] leading-[1.1] font-bold text-white mb-4">
+            Personality Color Orbs
+          </h1>
+          <p className="text-[18px] md:text-[20px] leading-[1.6] text-white/80">
+            We generate color orbs and radar charts (infographics) based on your Continua Six-Axis profile at any
+            moment. The radar chart plots your coordinates across all six axes to create a unique psychological fingerprint, while
+            color orbs use colors to represent the different axes:
+          </p>
+        </FadeIn>
+      </section>
+
+      {/* Axes Diagram */}
+      <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-12">
+        <FadeIn>
+          <div className="glass-card p-6 md:p-8 !bg-white">
+            <div className="flex justify-center">
+              <div className="w-full max-w-[700px]">
+                <AxesDiagram />
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+      </section>
+
+      {/* Extreme Examples */}
+      <section className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pb-12">
+        <FadeIn>
+          <div className="glass-card p-6 md:p-8">
+            <h2 className="text-[24px] md:text-[32px] leading-[1.2] font-bold mb-6">
+              Extreme Examples
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="text-center">
+                <h3 className="text-[18px] font-bold mb-1">High Empathy</h3>
+                <p className="text-[15px] text-foreground/60 italic mb-4">e.g., Florence Nightingale</p>
+                <Image
+                  src="/orb-high-empathy.png"
+                  alt="High Empathy personality color orb (blue, teal, yellow)"
+                  width={388}
+                  height={388}
+                  className="rounded-lg mx-auto max-w-[240px]"
+                />
+              </div>
+              <div className="text-center">
+                <h3 className="text-[18px] font-bold mb-1">Narcissism</h3>
+                <p className="text-[15px] text-foreground/60 italic mb-4">e.g., Hitler</p>
+                <Image
+                  src="/orb-detachment.png"
+                  alt="Detachment personality color orb (purple, magenta, red-orange)"
+                  width={388}
+                  height={388}
+                  className="rounded-lg mx-auto max-w-[240px]"
+                />
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+      </section>
+
+    </div>
+  )
+}

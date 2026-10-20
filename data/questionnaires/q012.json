@@ -1,0 +1,149 @@
+{
+  "id": 12,
+  "questions": [
+    {
+      "text": "I notice when a group instinctively leaves a chair empty next to someone they find socially difficult.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "A smell connected to a past experience can instantly transport me into the full emotional state of that time.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I create project timelines with specific milestones and check-in points.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "When someone shares a painful experience, the fact of their pain carries real weight in my mind.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice that I can attend to multiple tasks even when something emotional is unresolved.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to miss the social implications of who gets credit for an idea in a group.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "After receiving bad news, I can feel the shock reverberating through my body for hours.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "A friend's ongoing struggle rarely weighs on me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I would trade personal recognition for the satisfaction of knowing my efforts lifted the team.",
+      "direction": "altruism"
+    },
+    {
+      "text": "When resources are scarce, I instinctively direct them toward other people first.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I do not automatically read into people's tone or body language.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I enjoy being part of a group that evaluates ideas together without veto power.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I am the type who builds the team around my vision rather than the other way around.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I can tell when a meeting is happening for show rather than for any real decision-making.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I am somewhat more moved by other people's hardships than most people I know.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to process grief in a measured, gradual way rather than in sudden, overwhelming waves.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "Other people's suffering is mostly their concern, not mine.",
+      "direction": "detachment"
+    },
+    {
+      "text": "When someone tells me about something painful that happened to them, I rarely feel any pull to comfort them.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel most productive when I have the freedom to shift direction at any moment.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I systematically review and update my plans as new information becomes available.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I commonly find myself the one editing and finalizing group deliverables.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I rarely register when someone raises their eyebrows briefly to acknowledge a shared understanding.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I can tell when two people have had a private conversation before a group meeting based on how they interact.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I routinely stockpile resources—savings, knowledge, connections—for my own future use.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I prefer to resolve disagreements through dialogue rather than any form of rank.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I would trade a comfortable retirement for the chance to fund someone else's education.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I routinely invest in education and training that advances my own skills.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I pre-read materials before classes, workshops, or events so I can engage more deeply.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I routinely track my personal progress and set benchmarks for my own improvement.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I enjoy the freedom that comes with not being the person in charge.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I trust that I can handle whatever comes up, so I don't waste time on contingency plans.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I am easily brought to goosebumps by music, words, or images that strike the right chord.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "My emotional responses are proportional and consistent, which gives me a sense of reliability.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "Thinking about suffering that future generations may face gives me a genuine wish to prevent it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I shop and pack based on what occurs to me in the moment rather than from a list.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find it rewarding to have the final word in a discussion.",
+      "direction": "agentic"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "id": 4,
+  "questions": [
+    {
+      "text": "My body seems to store emotional charge that I can feel building over the course of a stressful week.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I prioritize long-term wellbeing over short-term pleasure when the two conflict.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "When I understand why someone is suffering, I still rarely want their situation to change.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I find it hard to tell when someone is genuinely asking for my opinion versus looking for validation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I see my job as walking the path alongside the group, wherever it leads.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I detect when someone uses vague language like 'some people think' to express their own opinion without owning it.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I maintain an archive of past work so I can reference and build on it.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "My emotional system operates with a kind of quiet competence that I've come to trust.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I routinely visualize my own future success and make decisions to bring that vision closer.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel most fulfilled when I have given away more than I have kept.",
+      "direction": "altruism"
+    },
+    {
+      "text": "When I think again about a hardship someone faces, I still want them to find relief.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I view deferring to others as a service to the group.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find it hard to tell when someone is being sarcastic versus sincere.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "Others' suffering matters to me whatever mood I am in.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I often have multiple projects going at once and move between them as my interest dictates.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I sense when the real decision-maker in a meeting is not the person with the highest title.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I compare my current progress to my original timeline to gauge whether I'm ahead or behind.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "Hearing that someone has been badly hurt leaves me wanting to reach out to them.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I focus on the explicit agenda of a meeting rather than the interpersonal dynamics.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "Even when I know I could easily help someone in pain, I feel little wish to.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I tend to ask for the raise, the upgrade, or the better deal without hesitation.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "Someone's ongoing hardship rarely stays on my mind once I am no longer with them.",
+      "direction": "detachment"
+    },
+    {
+      "text": "My body is always the first to tell me how I'm feeling, often before I have words for it.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I focus on the conversation during meetings and trust the key points will stick.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I would give up a cherished personal goal if doing so served a greater collective need.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to donate or share resources before setting aside savings for myself.",
+      "direction": "altruism"
+    },
+    {
+      "text": "When I'm in a beautiful place, the experience can feel almost painfully vivid.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I feel a strong pull to shape the agenda of any group I am part of.",
+      "direction": "agentic"
+    },
+    {
+      "text": "My emotional spectrum is real and present but it operates in pastel tones rather than neon.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I negotiate and make requests without scripted fallbacks, adapting to the flow of conversation.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I prefer that ground rules emerge from group discussion before activity begins.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I experience the anticipation before a big moment as a mild heightening of attention, not a surge of adrenaline.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to make executive decisions about scope changes mid-project.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I detect when someone is subtly seeking validation in the way they tell a story.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I feel that taking a solo trip to recharge is more valuable than a group vacation.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I enjoy being the public face of a group effort.",
+      "direction": "agentic"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "id": 2,
+  "questions": [
+    {
+      "text": "I find it satisfying to maintain cohesion as the group moves forward.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I notice when the physical distance between two people in a conversation is slightly greater than normal and read the reason for it.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I schedule appointments with buffer time between them to avoid feeling rushed.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I consistently set long-term goals and build step-by-step plans to reach them.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "Other people's hardships tend to matter to me.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to pick vacations based on what I want to see and do, not on what others prefer.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I redesign my approach each time I encounter a new problem rather than applying a formula.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice that when I feel passionate about something, it becomes all-consuming rather than a background interest.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "When suffering is described in abstract terms, I still want something to improve for those affected.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice that surprises, interruptions, and disruptions produce only a small ripple in my internal state.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "Small hardships in other people's lives rarely matter to me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I bring concerns about a plan to the group rather than canceling it myself.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I sense when someone is being conspicuously silent to make their absence from the conversation felt.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I routinely evaluate friendships by whether they contribute to my personal development.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I am inclined to enforce standards even when the group has not explicitly agreed to them.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I would deplete my emergency fund to help a loved one avoid a crisis.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel a surge of energy when I declare a new direction for a team.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I take pride in my ability to think on my feet and handle the unexpected.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice that my body stays relaxed in situations that make other people tense.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I notice when someone adopts a casual posture to deliberately lower the perceived stakes of a conversation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I prefer straightforward conversations where everything is on the table.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I prefer to own the relationship with external partners on behalf of the team.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I notice that I don't get swept up in the emotional energy of crowds or groups.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "It is hard for me to stop thinking about someone who is suffering.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend not to register when a group's dynamic shifts because of a new piece of information.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I routinely keep a list of personal achievements and review it for motivation.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "When several people need help, none of their situations weighs on me much.",
+      "direction": "detachment"
+    },
+    {
+      "text": "When something touches me, the feeling doesn't just visit — it moves in and stays.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "Hearing that someone has died or been badly hurt leaves me with little wish to reach out.",
+      "direction": "detachment"
+    },
+    {
+      "text": "Five-year plans seem pointless to me because so much changes that they quickly become irrelevant.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I like when the scope of work is something the whole team defines together.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I experience the arrival of strong emotion as a wave that crests before I can brace for it.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I would postpone my own goals indefinitely if someone close to me needed my help.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I leave detailed notes for my future self when pausing a project mid-stream.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I rarely detect the difference between someone making small talk and someone trying to connect.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I instinctively offer my seat, my place in line, or my turn to someone else.",
+      "direction": "altruism"
+    }
+  ]
+}

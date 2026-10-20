@@ -1,0 +1,567 @@
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import {
+  Menu,
+  MenuButton,
+  MenuItems,
+  MenuItem,
+  Popover,
+  PopoverBackdrop,
+  PopoverButton,
+  PopoverPanel,
+  Portal,
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  DialogTitle,
+} from '@headlessui/react'
+import { getStartedAction } from '@/app/actions/get-started'
+import AccountButton from '@/components/auth/AccountButton'
+import ContactInquiry from '@/components/ContactInquiry'
+
+function ChevronDown({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+    >
+      <path
+        d="M3.5 5.25L7 8.75L10.5 5.25"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+function HamburgerIcon() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+      <line x1="3" y1="6" x2="21" y2="6" />
+      <line x1="3" y1="12" x2="21" y2="12" />
+      <line x1="3" y1="18" x2="21" y2="18" />
+    </svg>
+  )
+}
+
+function CloseIcon() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+      <line x1="6" y1="6" x2="18" y2="18" />
+      <line x1="6" y1="18" x2="18" y2="6" />
+    </svg>
+  )
+}
+
+const menuBtnClass =
+  'flex items-center gap-1.5 text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors cursor-pointer'
+
+const dropdownClass =
+  'z-[100] mt-2 min-w-[200px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-1 ring-black/5 p-2'
+
+const greyedItemClass =
+  'block w-full text-left px-4 py-2.5 rounded-lg text-sm text-gray-400 cursor-default'
+
+const menuItemClass =
+  'block w-full text-left px-4 py-2.5 rounded-lg text-sm text-foreground/80 hover:bg-accent/5 hover:text-foreground transition-colors'
+
+// ─── Contact Form ──────────────────────────────────────────
+
+type ContactFormState = {
+  values: { name: string; email: string; phone: string }
+  confirmed: boolean
+}
+
+function ContactForm({
+  state,
+  setState,
+  onSuccess,
+}: {
+  state: ContactFormState
+  setState: React.Dispatch<React.SetStateAction<ContactFormState>>
+  onSuccess: (message: string) => void
+}) {
+  const { values, confirmed } = state
+  const submitInFlight = useRef(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  const hasContact = values.email.trim() !== '' || values.phone.trim() !== ''
+  const canSubmit = values.name.trim() !== '' && hasContact && confirmed
+
+  const setValues = (updater: (v: ContactFormState['values']) => ContactFormState['values']) =>
+    setState((s) => ({ ...s, values: updater(s.values) }))
+
+  const handleSubmit = async () => {
+    if (submitInFlight.current || !canSubmit) {
+      return
+    }
+    submitInFlight.current = true
+    setError(null)
+    setSubmitting(true)
+    try {
+      const result = await getStartedAction({
+        name: values.name,
+        email: values.email || undefined,
+        phone: values.phone || undefined,
+      })
+      if (!result.success) {
+        setError(result.error || 'Something went wrong. Please try again.')
+        return
+      }
+      setState({ values: { name: '', email: '', phone: '' }, confirmed: false })
+      onSuccess(
+        result.deliveryMethod === 'manual'
+          ? result.smsSent
+            ? 'Thanks. Your information was saved, and a text with the first chapter is on its way.'
+            : 'Thanks. Your information was saved, and Albhy will follow up manually.'
+          : result.smsSent
+            ? 'Thanks. The first chapter is on its way by email and text. The PDF password is your lowercase email address.'
+            : 'Thanks. The first chapter is on its way by email. The PDF password is your lowercase email address.'
+      )
+    } finally {
+      submitInFlight.current = false
+      setSubmitting(false)
+    }
+  }
+
+  return (
+    <div className="p-5 space-y-3">
+      <div>
+        <p className="text-base font-bold text-foreground">
+          Interested in reading the first chapter?
+        </p>
+        <p className="mt-1 text-xs text-gray-500">
+          Tell us where to send your password-protected copy.
+        </p>
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-foreground mb-1">Name</label>
+        <input
+          type="text"
+          value={values.name}
+          onChange={(e) => {
+            setError(null)
+            setValues((v) => ({ ...v, name: e.target.value }))
+          }}
+          className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-foreground mb-1">Email</label>
+        <input
+          type="email"
+          value={values.email}
+          onChange={(e) => {
+            setError(null)
+            setValues((v) => ({ ...v, email: e.target.value }))
+          }}
+          className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
+        />
+        <p className="mt-1 text-xs text-gray-500">
+          Email requests receive a password-protected PDF. The password is your lowercase email address.
+        </p>
+      </div>
+      <p className="text-xs text-gray-400 text-center">And / Or</p>
+      <div>
+        <label className="block text-sm font-medium text-foreground mb-1">Phone</label>
+        <input
+          type="tel"
+          value={values.phone}
+          onChange={(e) => {
+            setError(null)
+            setValues((v) => ({ ...v, phone: e.target.value }))
+          }}
+          className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-colors"
+        />
+        <p className="mt-1 text-xs text-gray-500">
+          Enter a phone number only if you want low-volume text follow-up about your Continua request.
+        </p>
+      </div>
+      <label className="flex items-start gap-2.5 text-sm text-gray-700 cursor-pointer pt-1">
+        <input
+          type="checkbox"
+          checked={confirmed}
+          onChange={(e) => {
+            setError(null)
+            setState((s) => ({ ...s, confirmed: e.target.checked }))
+          }}
+          className="mt-0.5 rounded border-gray-300"
+        />
+        <span>
+          OK for Continua to contact me about this request. If I provide a phone number, I agree to receive service-related texts from Continua. Message/data rates may apply, frequency varies, reply STOP to opt out or HELP for help.
+        </span>
+      </label>
+      <button
+        type="button"
+        onClick={handleSubmit}
+        disabled={submitting || !canSubmit}
+        className="w-full mt-2 px-4 py-2.5 rounded-lg bg-accent text-white text-sm font-semibold hover:bg-accent/90 transition-colors disabled:opacity-50 cursor-pointer"
+      >
+        {submitting ? 'Sending...' : 'Send me the first chapter'}
+      </button>
+      {error && (
+        <p className="text-sm text-red-600" role="alert">
+          {error}
+        </p>
+      )}
+    </div>
+  )
+}
+
+function ContactSuccessDialog({
+  message,
+  onClose,
+}: {
+  message: string | null
+  onClose: () => void
+}) {
+  return (
+    <Dialog open={message !== null} onClose={onClose} className="relative z-[70]">
+      <DialogBackdrop className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[70]" />
+      <div className="fixed inset-0 z-[70] flex items-center justify-center p-4">
+        <DialogPanel className="w-full max-w-sm rounded-xl bg-white/95 backdrop-blur shadow-lg p-6">
+          <DialogTitle className="text-lg font-bold text-foreground">
+            Your doc is on the way
+          </DialogTitle>
+          <p className="mt-3 text-sm leading-6 text-foreground/75" role="status">
+            {message}
+          </p>
+          <button
+            type="button"
+            onClick={onClose}
+            className="mt-6 w-full px-4 py-2.5 rounded-lg bg-accent text-white text-sm font-semibold hover:bg-accent/90 transition-colors cursor-pointer"
+          >
+            OK
+          </button>
+        </DialogPanel>
+      </div>
+    </Dialog>
+  )
+}
+
+// ─── Mobile Menu ───────────────────────────────────────────────
+
+function MobileMenu({
+  open,
+  onClose,
+  versionPrefix,
+  latestResultId,
+}: {
+  open: boolean
+  onClose: () => void
+  versionPrefix: string
+  latestResultId: string | null
+}) {
+  return (
+    <Dialog open={open} onClose={onClose} className="relative z-[60]">
+      <DialogBackdrop className="fixed inset-0 bg-black/20 backdrop-blur-sm z-[60]" />
+      <div className="fixed inset-0 z-[60]">
+        <DialogPanel className="w-[300px] h-full bg-white/90 backdrop-blur-xl p-6 overflow-y-auto shadow-2xl">
+          <DialogTitle className="sr-only">Navigation</DialogTitle>
+
+          <div className="flex justify-end mb-6">
+            <button onClick={onClose} className="p-1 cursor-pointer text-foreground/60 hover:text-foreground transition-colors" aria-label="Close menu">
+              <CloseIcon />
+            </button>
+          </div>
+
+          {/* Info */}
+          <div className="mb-8">
+            <Link
+              href={`${versionPrefix}/my-info`}
+              onClick={onClose}
+              className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-3 block hover:text-foreground transition-colors"
+            >
+              Info
+            </Link>
+            <div className="space-y-1">
+              <Link href="/quiz" onClick={onClose} className="block text-[15px] text-foreground/80 py-2 px-3 hover:text-foreground transition-colors">
+                Take an Assessment
+              </Link>
+              {latestResultId ? (
+                <Link
+                  href={`/quiz/results/${latestResultId}`}
+                  onClick={onClose}
+                  className="block text-[15px] text-foreground/80 py-2 px-3 hover:text-foreground transition-colors"
+                >
+                  See Results
+                </Link>
+              ) : (
+                <span className="block text-[15px] text-gray-400 py-2 px-3">
+                  + See Results
+                </span>
+              )}
+              <span className="block text-[15px] text-gray-400 py-2 px-3">
+                + Tools &amp; Actions
+              </span>
+            </div>
+          </div>
+
+          {/* My Relationships */}
+          <div className="mb-8">
+            <Link
+              href={`${versionPrefix}/my-relationships`}
+              onClick={onClose}
+              className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-3 block hover:text-foreground transition-colors"
+            >
+              My Relationships
+            </Link>
+            <div className="space-y-1">
+              <Link
+                href="/my-relationships?add=person"
+                onClick={onClose}
+                className="block px-3 py-2 text-[15px] text-foreground/80 hover:text-foreground"
+              >
+                + Add a Person
+              </Link>
+              <Link
+                href="/my-relationships?add=group"
+                onClick={onClose}
+                className="block px-3 py-2 text-[15px] text-foreground/80 hover:text-foreground"
+              >
+                + Add a Group
+              </Link>
+            </div>
+          </div>
+
+          <Link
+            href="/about"
+            onClick={onClose}
+            className="text-xs font-semibold text-foreground/60 uppercase tracking-wider block hover:text-foreground transition-colors"
+          >
+            About
+          </Link>
+          <Link
+            href="/orb-demo"
+            onClick={onClose}
+            className="mt-5 text-xs font-semibold text-foreground/60 uppercase tracking-wider block hover:text-foreground transition-colors"
+          >
+            Orb Generator
+          </Link>
+          <div className="mt-8">
+            <AccountButton mobile onNavigate={onClose} />
+          </div>
+        </DialogPanel>
+      </div>
+    </Dialog>
+  )
+}
+
+// ─── Header ────────────────────────────────────────────────────
+
+export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [latestResultId, setLatestResultId] = useState<string | null>(null)
+  const [portalReady, setPortalReady] = useState(false)
+  const [contactState, setContactState] = useState<ContactFormState>({
+    values: { name: '', email: '', phone: '' },
+    confirmed: false,
+  })
+  const [contactSuccessMessage, setContactSuccessMessage] = useState<string | null>(null)
+  const pathname = usePathname()
+  const versionMatch = pathname.match(/^\/(v\d+)(?:\/|$)/)
+  const versionPrefix = versionMatch ? `/${versionMatch[1]}` : ''
+
+  useEffect(() => {
+    setPortalReady(true)
+    setLatestResultId(localStorage.getItem('latest_result_id'))
+
+    const syncLatestResult = () => {
+      setLatestResultId(localStorage.getItem('latest_result_id'))
+    }
+
+    window.addEventListener('storage', syncLatestResult)
+    window.addEventListener('continua:latest-result', syncLatestResult)
+
+    return () => {
+      window.removeEventListener('storage', syncLatestResult)
+      window.removeEventListener('continua:latest-result', syncLatestResult)
+    }
+  }, [])
+
+  return (
+    <>
+      <header className="fixed top-0 inset-x-0 z-50 bg-white/70 backdrop-blur-xl border-b border-white/30">
+        <div className="max-w-[720px] xl:max-w-[1120px] mx-auto px-4 py-3 flex items-center justify-between">
+          {/* Logo + mobile hamburger */}
+          <div className="flex items-center gap-3">
+            <Link href="/">
+              <Image
+                src="/logo.png"
+                alt="Continua"
+                width={72}
+                height={48}
+                priority
+              />
+            </Link>
+            <button
+              className="xl:hidden p-2 rounded-lg hover:bg-accent/5 transition-colors cursor-pointer"
+              onClick={() => setMobileMenuOpen(true)}
+              aria-label="Open menu"
+            >
+              <HamburgerIcon />
+            </button>
+          </div>
+
+          {/* Desktop nav */}
+          <nav className="hidden xl:flex items-center gap-4">
+            {/* Info — clickable link with dropdown */}
+            <Menu>
+              <div className="flex items-center gap-0">
+                <Link href={`${versionPrefix}/my-info`} className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
+                  Info
+                </Link>
+                <MenuButton className="p-1 text-foreground/80 hover:text-foreground transition-colors cursor-pointer">
+                  <ChevronDown />
+                </MenuButton>
+              </div>
+              <MenuItems anchor="bottom start" className={dropdownClass}>
+                <MenuItem>
+                  {() => (
+                    <Link href="/quiz" className={menuItemClass}>Take an Assessment</Link>
+                  )}
+                </MenuItem>
+                {latestResultId ? (
+                  <MenuItem>
+                    {() => (
+                      <Link href={`/quiz/results/${latestResultId}`} className={menuItemClass}>See Results</Link>
+                    )}
+                  </MenuItem>
+                ) : (
+                  <MenuItem disabled>
+                    {() => (
+                      <span className={greyedItemClass}>+ See Results</span>
+                    )}
+                  </MenuItem>
+                )}
+                <MenuItem disabled>
+                  {() => (
+                    <span className={greyedItemClass}>+ Tools &amp; Actions</span>
+                  )}
+                </MenuItem>
+              </MenuItems>
+            </Menu>
+
+            {/* My Relationships */}
+            <Menu>
+              <div className="flex items-center gap-0">
+                <Link href={`${versionPrefix}/my-relationships`} className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
+                  My Relationships
+                </Link>
+                <MenuButton className="p-1 text-foreground/80 hover:text-foreground transition-colors cursor-pointer">
+                  <ChevronDown />
+                </MenuButton>
+              </div>
+              <MenuItems anchor="bottom start" className={dropdownClass}>
+                <MenuItem>
+                  {() => (
+                    <Link href="/my-relationships?add=person" className={menuItemClass}>
+                      + Add a Person
+                    </Link>
+                  )}
+                </MenuItem>
+                <MenuItem>
+                  {() => (
+                    <Link href="/my-relationships?add=group" className={menuItemClass}>
+                      + Add a Group
+                    </Link>
+                  )}
+                </MenuItem>
+              </MenuItems>
+            </Menu>
+
+            <Link href="/about" className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
+              About
+            </Link>
+
+            <Link href="/orb-demo" className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors">
+              Orb Generator
+            </Link>
+
+            <AccountButton />
+
+            {/* First-chapter request (desktop) */}
+            <Popover className="relative">
+              <PopoverButton className="whitespace-nowrap bg-accent text-white rounded-full px-5 py-2 text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer ring-1 ring-accent/30">
+                Get the First Chapter
+              </PopoverButton>
+              {portalReady && (
+                <Portal>
+                  <PopoverBackdrop className="fixed inset-0 z-[90] bg-transparent" />
+                </Portal>
+              )}
+              <PopoverPanel
+                anchor="bottom end"
+                className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
+              >
+                {({ close }) => (
+                  <ContactForm
+                    state={contactState}
+                    setState={setContactState}
+                    onSuccess={(message) => {
+                      close()
+                      setContactSuccessMessage(message)
+                    }}
+                  />
+                )}
+              </PopoverPanel>
+            </Popover>
+            <ContactInquiry />
+          </nav>
+
+          {/* First-chapter request (mobile/tablet) */}
+          <div className="xl:hidden flex flex-col items-end gap-1">
+            <Popover className="relative">
+              <PopoverButton className="max-w-[155px] bg-accent text-white rounded-full px-3 py-1.5 text-xs sm:text-sm font-semibold hover:bg-accent/85 transition-colors cursor-pointer ring-1 ring-accent/30">
+                Get the First Chapter
+              </PopoverButton>
+              {portalReady && (
+                <Portal>
+                  <PopoverBackdrop className="fixed inset-0 z-[90] bg-transparent" />
+                </Portal>
+              )}
+              <PopoverPanel
+                anchor="bottom end"
+                className="z-[100] mt-2 w-[280px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-2 ring-black/10"
+              >
+                {({ close }) => (
+                  <ContactForm
+                    state={contactState}
+                    setState={setContactState}
+                    onSuccess={(message) => {
+                      close()
+                      setContactSuccessMessage(message)
+                    }}
+                  />
+                )}
+              </PopoverPanel>
+            </Popover>
+            <ContactInquiry compact />
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile menu */}
+      <MobileMenu
+        open={mobileMenuOpen}
+        onClose={() => setMobileMenuOpen(false)}
+        versionPrefix={versionPrefix}
+        latestResultId={latestResultId}
+      />
+      <ContactSuccessDialog
+        message={contactSuccessMessage}
+        onClose={() => setContactSuccessMessage(null)}
+      />
+    </>
+  )
+}

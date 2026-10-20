@@ -1,0 +1,2 @@
+# RFC 4180 CSV exports intentionally use CRLF record separators.
+docs/question-bank/*.csv whitespace=cr-at-eol

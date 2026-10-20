@@ -1,0 +1,35 @@
+{
+  "name": "continua",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.9",
+    "@jspawn/qpdf-wasm": "^0.0.2",
+    "@react-email/components": "^1.0.7",
+    "@supabase/ssr": "^0.8.0",
+    "@supabase/supabase-js": "2.116.0",
+    "@tailwindcss/postcss": "^4.1.18",
+    "next": "^15",
+    "react": "^19",
+    "react-dom": "^19",
+    "recharts": "^3.8.1",
+    "resend": "^6.9.2",
+    "tailwindcss": "^4.1.18",
+    "uuid": "^13.0.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.61.1",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "supabase": "^2.76.8",
+    "typescript": "^5"
+  }
+}

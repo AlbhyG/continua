@@ -1,0 +1,247 @@
+{
+  "method": "lexical-screen-v1; candidates require editorial review; no_lexical_cue does not establish absence of context",
+  "sources": [
+    {
+      "file": "data/question-pools/axis1-empathy-detachment.json",
+      "sha256": "e7c465012d7683f905de1a6950ead75c23ab9e25b98717d33678c9f8a4ef871e"
+    },
+    {
+      "file": "data/question-pools/axis2-self-orientation.json",
+      "sha256": "0955fa94824caa05b6aa942d07b1f195e81a1805645fc0df2ca91e24898cb5b5"
+    },
+    {
+      "file": "data/question-pools/axis3-social-attunement.json",
+      "sha256": "ca47d13a6273391b28269b0c40e038c675e7c1f01ff4c21e8267b50d984cbc2c"
+    },
+    {
+      "file": "data/question-pools/axis4-conscientiousness.json",
+      "sha256": "4f0e91c012efd4c9e590d7959942db6faf78ec632a82a93b89c04a21c0fa8e52"
+    },
+    {
+      "file": "data/question-pools/axis5-agency.json",
+      "sha256": "80c11fc20eb0eaad3f0c698bfe9cd39b505f142e80ff6b831df859ce0291dd47"
+    },
+    {
+      "file": "data/question-pools/axis6-reactivity.json",
+      "sha256": "7be43ab8553ca9b7d68ff97a534aad1e95208836922047e1f0579afd487d6b0a"
+    },
+    {
+      "file": "data/questionnaires/q001.json",
+      "sha256": "9779f47e177cf7a4d62bc3d3d4582a813b457e425075811c4ee37c205710e78e"
+    },
+    {
+      "file": "data/questionnaires/q002.json",
+      "sha256": "6b7656a937a44c6ff68c3bd7e3c7f892ada5c365958ba0a0da381b29587ebd3f"
+    },
+    {
+      "file": "data/questionnaires/q003.json",
+      "sha256": "6378643c8e9244c481f44ce0cce8e2e988c78d9719dc3a020680dc42446b5a8a"
+    },
+    {
+      "file": "data/questionnaires/q004.json",
+      "sha256": "b3915abbceb6b23f110b14df6a279e7587a1ed12a4a9a2ee7f7e6c26ec455f45"
+    },
+    {
+      "file": "data/questionnaires/q005.json",
+      "sha256": "0700e39a79cc4b3942a80caaac6a22eca008c47fb2b77a53171436ace1bef63f"
+    },
+    {
+      "file": "data/questionnaires/q006.json",
+      "sha256": "0310708120eb03e26016cc7122fa60a34e20e67a798b27eccb10382f7d6a1c74"
+    },
+    {
+      "file": "data/questionnaires/q007.json",
+      "sha256": "c2f16c58a500f378d6b53f30876e9b2023ae9a95261655cc96db6ef6caba4009"
+    },
+    {
+      "file": "data/questionnaires/q008.json",
+      "sha256": "ee3c16779e6f23b6de705dd90632f469f83e4662c67a6d4ab26b2f458c14291b"
+    },
+    {
+      "file": "data/questionnaires/q009.json",
+      "sha256": "6462b961ab4ecd668231272571989ba4d59a80b12bcb8670163bd47cac47062b"
+    },
+    {
+      "file": "data/questionnaires/q010.json",
+      "sha256": "7f5708ca212d72e83735a73acf5c169ba3bf214b8c1f75c4b4265b5dad5aa4a8"
+    },
+    {
+      "file": "data/questionnaires/q011.json",
+      "sha256": "a4871f70eaca1649ab8617d2292b58146c36e66611567256b598d0d10de5eeb8"
+    },
+    {
+      "file": "data/questionnaires/q012.json",
+      "sha256": "451c508595d6321e19d7dc56d7c975ec13f38eb1fef90b267212f4dadc9bd86b"
+    },
+    {
+      "file": "data/questionnaires/q013.json",
+      "sha256": "d500e5a6ae0b88ec4a7bacccd02515b4be5ddc7e89d09918f8bbd8b2a8493f14"
+    },
+    {
+      "file": "data/questionnaires/q014.json",
+      "sha256": "52786de80636e33499d88ac7059dec99d0f5637617373daa85a95a7ba4a78ee4"
+    },
+    {
+      "file": "data/questionnaires/q015.json",
+      "sha256": "18501e8af9f8abe7d4b8a118ef8cb675e0a8e8f99840f5fa7651a8743194c926"
+    },
+    {
+      "file": "data/questionnaires/q016.json",
+      "sha256": "f72654c5c166e6b725a8c1e66b899e1f35970193797f3b8a3ab590aa47c578b9"
+    },
+    {
+      "file": "data/questionnaires/q017.json",
+      "sha256": "17a54da65172d32361fc9979c33b15bbd2f2f13b2409cc66cccb7b0637a64dc1"
+    },
+    {
+      "file": "data/questionnaires/q018.json",
+      "sha256": "10bfd8303752ca621919fb92f9e188a60d781978f6d4fc1d02195380d5a9ee2a"
+    },
+    {
+      "file": "data/questionnaires/q019.json",
+      "sha256": "b8da4750ca4210ea05032e8a9ad61b46da6888afe9e41646626a46e7cc8e549d"
+    },
+    {
+      "file": "data/questionnaires/q020.json",
+      "sha256": "c5f61a58d3ff8522863cac5f40db72ce108755e47097d786c625f288040cfaab"
+    },
+    {
+      "file": "data/questionnaires/q021.json",
+      "sha256": "f2d1a7fecf00aa0b1d679ab9c07361286a14c560d6c72080c59efd33081b4b23"
+    },
+    {
+      "file": "data/questionnaires/q022.json",
+      "sha256": "82ea7a5dc5bcb828d827e6b55688ab3c846e8b2d347b1a1207ca1948a5430625"
+    },
+    {
+      "file": "data/questionnaires/q023.json",
+      "sha256": "e55a19b91a70dd4bc44339203f0a8bfe034c1782a41b229febc54a76c301a055"
+    },
+    {
+      "file": "data/questionnaires/q024.json",
+      "sha256": "7b1d737f28b541937af52242ff4e0848aa3b4bbbd07ce6a9b33e44b088a7148f"
+    },
+    {
+      "file": "data/questionnaires/q025.json",
+      "sha256": "3167bf96bbd1128472a1d5674babe94ed31dda2508384aa0e30a7d590eb967d9"
+    },
+    {
+      "file": "data/questionnaires/q026.json",
+      "sha256": "f11f2ef17e7dce268924bea07a3e5a5af1c914815878e621b3c2fc4ee6e17005"
+    },
+    {
+      "file": "data/questionnaires/q027.json",
+      "sha256": "cb7390b07c94438e388ef61c0d38cb7e1919ecf523e80ee3c9ee1504fbaec2ba"
+    },
+    {
+      "file": "data/questionnaires/q028.json",
+      "sha256": "0d45e52170f52fd569c84d6295c86ba913d3e4922259dbd5aeca60878c6b6397"
+    },
+    {
+      "file": "data/questionnaires/q029.json",
+      "sha256": "4d103af914f46bacf08f62d8b93f801cdce0591c45309a0955074f953895b7c7"
+    },
+    {
+      "file": "data/questionnaires/q030.json",
+      "sha256": "869ab6326d002cc5ca87ba971df9a99e2200fe9aa0ee2a91dfa2b7b2ca29acb3"
+    }
+  ],
+  "counts": [
+    {
+      "corpus": "source_pool",
+      "axis": "Empathy",
+      "total": 180,
+      "context_candidates": 79,
+      "conditional_only": 51,
+      "no_lexical_cue": 50
+    },
+    {
+      "corpus": "source_pool",
+      "axis": "Self-Orientation",
+      "total": 180,
+      "context_candidates": 18,
+      "conditional_only": 32,
+      "no_lexical_cue": 130
+    },
+    {
+      "corpus": "source_pool",
+      "axis": "Social Attunement",
+      "total": 180,
+      "context_candidates": 31,
+      "conditional_only": 114,
+      "no_lexical_cue": 35
+    },
+    {
+      "corpus": "source_pool",
+      "axis": "Conscientiousness",
+      "total": 180,
+      "context_candidates": 6,
+      "conditional_only": 51,
+      "no_lexical_cue": 123
+    },
+    {
+      "corpus": "source_pool",
+      "axis": "Agency",
+      "total": 180,
+      "context_candidates": 38,
+      "conditional_only": 53,
+      "no_lexical_cue": 89
+    },
+    {
+      "corpus": "source_pool",
+      "axis": "Reactivity",
+      "total": 180,
+      "context_candidates": 24,
+      "conditional_only": 52,
+      "no_lexical_cue": 104
+    },
+    {
+      "corpus": "live_questionnaire",
+      "axis": "Empathy",
+      "total": 180,
+      "context_candidates": 79,
+      "conditional_only": 51,
+      "no_lexical_cue": 50
+    },
+    {
+      "corpus": "live_questionnaire",
+      "axis": "Self-Orientation",
+      "total": 180,
+      "context_candidates": 18,
+      "conditional_only": 32,
+      "no_lexical_cue": 130
+    },
+    {
+      "corpus": "live_questionnaire",
+      "axis": "Social Attunement",
+      "total": 180,
+      "context_candidates": 31,
+      "conditional_only": 114,
+      "no_lexical_cue": 35
+    },
+    {
+      "corpus": "live_questionnaire",
+      "axis": "Conscientiousness",
+      "total": 180,
+      "context_candidates": 6,
+      "conditional_only": 51,
+      "no_lexical_cue": 123
+    },
+    {
+      "corpus": "live_questionnaire",
+      "axis": "Agency",
+      "total": 180,
+      "context_candidates": 38,
+      "conditional_only": 53,
+      "no_lexical_cue": 89
+    },
+    {
+      "corpus": "live_questionnaire",
+      "axis": "Reactivity",
+      "total": 180,
+      "context_candidates": 24,
+      "conditional_only": 52,
+      "no_lexical_cue": 104
+    }
+  ]
+}

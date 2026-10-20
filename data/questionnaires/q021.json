@@ -1,0 +1,149 @@
+{
+  "id": 21,
+  "questions": [
+    {
+      "text": "I find that the moral pull of another's pain is something I experience as a direct call to action, not as an abstract consideration.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I frequently reorganize a group's workflow to align with my approach.",
+      "direction": "agentic"
+    },
+    {
+      "text": "When I hear that an unfamiliar person is in pain, I want their situation to improve.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I routinely turn down personal opportunities if they would take me away from people who rely on me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I keep a maintenance schedule for equipment, subscriptions, and recurring needs.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I tend to miss when someone frames bad news inside good news to soften the blow.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find that deferring my desires so a group can reach consensus comes easily to me.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I am energized by the process of building a decision together.",
+      "direction": "yielding"
+    },
+    {
+      "text": "When someone raises their voice near me, my whole system goes on high alert.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I routinely turn down favors that would distract from my personal priorities.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel a strong pull to finish what I start, even when enthusiasm fades.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I rarely notice when someone slows down a conversation to give a quieter person space to contribute.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel little concern for the wellbeing of people I will never meet.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I experience the space between stimulus and response as comfortably wide.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "Statistics or reports about people's suffering leave me with little concern for the people involved.",
+      "direction": "detachment"
+    },
+    {
+      "text": "Wanting someone else's suffering to ease rarely crosses my mind.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel a strong pull to be deeply involved in important initiatives, though not necessarily in charge.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I often help synthesize multiple perspectives into a direction the group can support.",
+      "direction": "yielding"
+    },
+    {
+      "text": "When something delights me, the delight fills me completely.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I notice the micro-adjustments people make to their clothing or hair when someone they want to impress is nearby.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I notice that I can compartmentalize emotional events and return to whatever I was doing without difficulty.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I have a hard time following when I think I could lead better.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I routinely spend my lunch break helping others with their tasks instead of resting.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I feel most alive when I am working toward my own aspirations.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I find that designing my ideal morning, without accommodation for anyone else, sets me up for success.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I rarely think about what someone left unsaid after a conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I tend to wait until the pressure of a deadline sharpens my focus.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I am attuned to the way social norms shift from one context to another within the same group.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I start projects with what I have and acquire tools as the need becomes clear.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I read whatever catches my interest without following a list.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I naturally claim authority in informal group settings.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I rarely cry, not because I suppress emotions but because they simply don't reach that intensity.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I create backup plans because I know that primary plans sometimes fail.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I am aware of the invisible alliances that form in any group setting.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I notice that my skin flushes or goes pale in direct response to what I'm feeling.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "A person's suffering sometimes stays with me after I have left them.",
+      "direction": "empathy"
+    }
+  ]
+}

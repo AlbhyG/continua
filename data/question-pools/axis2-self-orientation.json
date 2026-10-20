@@ -1,0 +1,722 @@
+[
+  {
+    "text": "When I have extra money, my first thought is who else could use it.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to craft my daily schedule around what the people in my life need from me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would spend my sabbatical working on behalf of a community project rather than resting.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I often cancel my own plans to help a friend, colleague, or family member.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely pick up tasks no one else wants to do, so the group can function well.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to work extra hours not for my own advancement, but to lighten the load for my team.",
+    "direction": "altruism"
+  },
+  {
+    "text": "When resources are scarce, I instinctively direct them toward other people first.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to fill gaps in any group without being asked—whatever is missing, I provide.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find it natural to defer my own interests when group needs arise.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to take on the overnight shift or the early morning slot so others can have the easier schedule.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely turn down personal opportunities if they would take me away from people who rely on me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel a responsibility to contribute more than my fair share.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I prefer to let others take credit even when I did most of the work.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to choose the harder path if it clears the way for someone else.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would use my professional influence to open doors for others rather than to advance my own agenda.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to allocate the majority of my time to tasks that benefit other people.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely choose the option that benefits others, even when a different choice would benefit me more.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find deep contentment in giving away things I worked hard to earn.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find purpose in being the one who shoulders the burden so others don't have to.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would rather go without something I want so that someone else can have what they need.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to spend my weekends doing things for other people rather than pursuing my own hobbies.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find deep satisfaction in making personal sacrifices for the benefit of my community.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would work a job I dislike if it meant my family or community benefited greatly.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to donate or share resources before setting aside savings for myself.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to put others' comfort ahead of efficiency when the two conflict.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would postpone my own goals indefinitely if someone close to me needed my help.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to respond to every request for help before attending to my own inbox.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I often forgo recognition so that others can be acknowledged instead.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to go without rest to make sure the people around me are supported.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to share my food, my space, and my belongings without a second thought.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely offer to drive others to appointments, even when it disrupts my own plans.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would decline an award or honor and redirect attention to the team.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to measure my worth by how much I've contributed to others, not by what I've accumulated.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely absorb extra costs in group situations so others pay less.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel a deep sense of duty to use everything I have in service of others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would choose a lower-paying role that lets me serve my community over a higher-paying one that does not.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would give up a cherished personal goal if doing so served a greater collective need.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely check in on neighbors, acquaintances, and distant friends to make sure they are okay.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would skip my own vacation to cover for a coworker dealing with a family crisis.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would forgo a hobby I love if the time could be better spent helping my community.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely put my health second to the needs of those who depend on me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I instinctively offer my seat, my place in line, or my turn to someone else.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would trade a comfortable retirement for the chance to fund someone else's education.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would happily take a pay cut if it meant funding a cause I care about.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely spend my lunch break helping others with their tasks instead of resting.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely stay late to help a colleague finish their work, even when mine is already done.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely accept the worst option for myself so that others can have the better one.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would downsize my own living situation to free up resources for people who need help.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find it genuinely easier to give than to receive.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely carry extra supplies, snacks, or resources in case someone around me needs them.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely lend my possessions and rarely ask for them back.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would take on a second job to support a family member's dream.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely proofread, edit, or review other people's work without being asked.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to choose careers and projects based on how much they allow me to help others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that the thought of others benefiting from my effort is the strongest motivation I know.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would relocate to be closer to someone who needs my daily support.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely translate, explain, or simplify information so others can access it.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely make financial sacrifices to support people in my life.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that deflecting praise and redirecting it to others feels natural and right.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that working behind the scenes for others' benefit is more satisfying than being in the spotlight.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would trade personal recognition for the satisfaction of knowing my efforts lifted the team.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely offer to handle the least glamorous tasks in any group effort.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel most proud of the things I did for others, not the things I achieved for myself.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel most purposeful when I am tutoring, coaching, or guiding someone through a challenge.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to set my thermostat, my music, and my lighting to what makes my household most comfortable, not just me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel most fulfilled when I have given away more than I have kept.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would turn down a dream job if accepting it meant abandoning someone who depends on me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely reduce my own workload expectations so I can pitch in where others are struggling.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would give up a front-row seat so a stranger could have a better experience.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely bring extra food, supplies, or materials to share with whoever might need them.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely pick up litter, fix broken things, and tidy shared spaces without being asked.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely write thoughtful, detailed feedback for others' projects even when no one asks.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would deplete my emergency fund to help a loved one avoid a crisis.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel most aligned with my values when I am serving a purpose bigger than myself.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely go out of my way to introduce people to opportunities they deserve.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely set aside a portion of every paycheck specifically for helping others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would share a professional secret or competitive advantage if it would significantly help someone else.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel most at peace when I know I have put others before myself.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to undercharge or waive fees when someone genuinely cannot afford what I offer.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely gather extra supplies so I can offer them to anyone in my circle who runs short.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely hand off leads, clients, or referrals to colleagues who need them more.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that deferring my desires so a group can reach consensus comes easily to me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I find that spending an afternoon helping a friend move is more rewarding than spending it on my own pursuits.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would sacrifice a personal milestone to attend to someone else's urgent need.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe the measure of my day is how much I gave, not how much I gained.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I would choose a less prestigious school or job if the alternative let me stay close to people who need me.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I believe that the right response to abundance is to distribute it, not to hoard it.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I feel most like myself when I am in the middle of helping someone.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I hold the view that generosity with my time is the highest form of generosity.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I routinely adjust my pace, my route, or my method to match what works best for others.",
+    "direction": "altruism"
+  },
+  {
+    "text": "I tend to pick the option that strengthens my personal position, even when alternatives would benefit the group more.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to frame every major decision by asking: does this move me closer to where I want to be?",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to think of my career as the central project of my life.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to evaluate any group activity by asking what I personally stand to gain.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely take credit for my contributions because acknowledging my own work matters to me.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to weigh how a decision affects me before considering how it affects others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to view my personal bucket list as a binding contract with myself.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to view my savings as a tool for my own future, not a resource for others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely set ambitious goals for myself and dedicate significant effort to reaching them.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to ask for the raise, the upgrade, or the better deal without hesitation.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to schedule personal time before committing to obligations for others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to pick vacations based on what I want to see and do, not on what others prefer.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely say no to requests that don't align with my personal objectives.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to keep a running tally of my personal wins and review them when I need motivation.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to make sure my own needs are fully met before turning my attention outward.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to measure a good day by how much progress I made on my own goals.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to frame career conversations around my own aspirations and what I need to get there.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely spend my free time on activities that benefit me personally.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to choose mentors and advisors based on how they can accelerate my personal growth.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to see networking as a way to build my own opportunities, first and foremost.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to accept praise graciously and use it as fuel for further personal achievement.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely choose personal development over group activities.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to use unexpected free time for personal projects rather than reaching out to see if someone needs help.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to exit commitments that no longer align with where I want to go personally.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely set aside time and money specifically for my own growth and enjoyment.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to seek out roles and projects that will look good on my own record.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to define success in terms of my own benchmarks, not in terms of what I did for others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely invest in education and training that advances my own skills.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely turn down favors that would distract from my personal priorities.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to make major life decisions based primarily on what excites and fulfills me.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to measure my week by how much I advanced my own objectives.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely block off calendar time that belongs exclusively to me.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to structure group decisions around outcomes that benefit me most.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely optimize my schedule around my own peak performance.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely choose the path of least resistance for myself, even if it requires more from others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that designing my ideal morning, without accommodation for anyone else, sets me up for success.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to choose the restaurant, the movie, or the activity that I most want.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely turn down invitations that do not serve my personal interests or growth.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely invest in courses, certifications, and credentials that advance my career.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that protecting my sleep schedule is more important than being available to others late at night.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that taking a solo trip to recharge is more valuable than a group vacation.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely track my personal progress and set benchmarks for my own improvement.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely surround myself with people and environments that elevate my personal trajectory.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that my creative projects deserve the same level of investment I would give to a professional obligation.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely update my personal goals and adjust my life to match them.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely make lifestyle choices that reflect my personal standards and aspirations.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that splurging on a personal passion project is money well spent.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that personal reading time is a non-negotiable part of my schedule.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to keep my most innovative ideas for my own ventures.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely evaluate friendships by whether they contribute to my personal development.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely rearrange my environment to maximize my own comfort and productivity.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely upgrade my personal environment—better lighting, better furniture, better technology.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely advocate for my own interests in negotiations and discussions.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that eating alone at my favorite restaurant is a perfectly worthwhile way to spend an evening.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that healthy self-focus gives me the strength to show up fully in everything I do.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that when I take care of my own needs, I am better equipped for everything else.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that every person's first responsibility is to themselves.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that enjoying the fruits of my own labor is exactly what hard work is for.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely choose quality-of-life improvements for myself over gifts for others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely decline social events that don't advance my personal interests.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely keep a list of personal achievements and review it for motivation.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I tend to choose my battles based on what matters most to my own goals.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely visualize my own future success and make decisions to bring that vision closer.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely research and pursue opportunities that specifically strengthen my resume or portfolio.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel most alive when I am working toward my own aspirations.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely opt for premium personal experiences—travel, dining, learning—because I believe I am worth it.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely protect my focus time even when others express disappointment.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that traveling alone to pursue my own interests is more fulfilling than compromising on a group itinerary.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely audit my commitments and drop those that no longer serve my personal direction.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely choose solitude for deep personal work over collaboration that dilutes my focus.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that maintaining a wish list of things I want for myself keeps me motivated.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely assess whether my current role still serves my personal growth trajectory.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely document my own accomplishments so they are recognized and remembered.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely ensure that my personal brand is visible, polished, and intentionally cultivated.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely calculate the return on investment for my personal time and money.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely prioritize my own deadlines over requests that come from others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that decorating my space exactly to my taste improves my daily mood and output.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely upgrade my skills specifically to increase my market value.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely treat myself to experiences and products that bring me personal joy.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that pursuing mastery in my chosen field is worth more than diversifying my efforts for others.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that the person most responsible for my well-being is me.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that saying no to requests that dilute my focus is one of my most valuable habits.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that the time I spend alone working on my goals is among my most valuable hours.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that my most important competition is with my past self, and I intend to keep winning.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I believe that assembling a life that reflects my personal values and desires is the primary task of adulthood.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I routinely stockpile resources—savings, knowledge, connections—for my own future use.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I hold the view that personal ambition and drive are qualities to be proud of, not downplayed.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that refining my personal aesthetic—in everything from clothing to home design—is a worthy pursuit.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I find that building a strong personal financial cushion gives me more confidence than anything else.",
+    "direction": "self-focus"
+  },
+  {
+    "text": "I feel that it is healthy and right to put my own needs first in most situations.",
+    "direction": "self-focus"
+  }
+]

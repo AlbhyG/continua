@@ -1,0 +1,149 @@
+{
+  "id": 30,
+  "questions": [
+    {
+      "text": "I notice the precise moment when a group conversation becomes dominated by one person.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I tend to choose the restaurant, the movie, or the activity that I most want.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I can handle multiple stressors simultaneously without feeling destabilized.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I do not usually notice when someone is carefully not mentioning a person or topic that is obviously relevant.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I compare estimated time versus actual time on tasks to improve my planning accuracy.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I sense when a team member is withdrawing their investment in a project through subtle disengagement.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "After a stressful event, it takes me a long time to return to my emotional baseline.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I keep a running list of things I need to remember and review it regularly.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I proactively organize shared spaces and group projects because order enables progress.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I notice when a person arranges their belongings on a table to claim space or establish boundaries.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "When I hear about a group of people in serious trouble, I usually feel some concern for them.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I tend to weigh how a decision affects me before considering how it affects others.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "Even after hearing the whole story of what a person has endured, I feel little wish to help them.",
+      "direction": "detachment"
+    },
+    {
+      "text": "Even when I clearly understand another person's hardship, their wellbeing rarely becomes more important to me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel most like myself when I am in the middle of helping someone.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I rarely feel emotionally overwhelmed, even during genuinely difficult times.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "A messy desk doesn't bother me; I know where everything is in my own way.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I tend to miss when someone uses a particular anecdote to send a message to someone else in the group.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I rarely consider whether the timing of a message carries meaning beyond its content.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I routinely offer to drive others to appointments, even when it disrupts my own plans.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I am the person who reframes a problem so the team can act on it.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I send emails as soon as I write them, trusting my first phrasing is good enough.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I let the day's most important task reveal itself through my engagement rather than deciding it in advance.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "When I'm emotionally activated, my peripheral vision narrows and everything feels urgent.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "Suffering among people outside my own circle rarely concerns me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I rarely overrule a group decision, even when I think there is a better option.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that traveling alone to pursue my own interests is more fulfilling than compromising on a group itinerary.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "When I have a vision, I pursue it whether or not others initially agree.",
+      "direction": "agentic"
+    },
+    {
+      "text": "As I work through the details of another person's difficulty, I care about what the experience is like for them.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I ask the group to define what done looks like before we begin.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I often wait for the group to signal readiness before pursuing change.",
+      "direction": "yielding"
+    },
+    {
+      "text": "When I learn that someone has been harmed, I feel a moral pull to respond that remains present until I have taken action.",
+      "direction": "empathy"
+    },
+    {
+      "text": "When I feel content, the contentment saturates me completely — it's not a background hum, it's the whole song.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I tend to be the voice that names the elephant in the room.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I tend to respond to every request for help before attending to my own inbox.",
+      "direction": "altruism"
+    },
+    {
+      "text": "My nervous system seems to have a wide comfort zone that few experiences push me out of.",
+      "direction": "low-reactive"
+    }
+  ]
+}

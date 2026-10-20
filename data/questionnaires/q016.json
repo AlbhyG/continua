@@ -1,0 +1,149 @@
+{
+  "id": 16,
+  "questions": [
+    {
+      "text": "I often yield to the group's preferred approach, even if mine differs.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I tend to measure a good day by how much progress I made on my own goals.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I tend to choose my battles based on what matters most to my own goals.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "My body stays in a state of relaxed readiness regardless of the emotional temperature around me.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I often proactively define the criteria for who gets to participate in key discussions.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I tend to respond to emotional provocations with a measured internal response rather than a visceral one.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "The suffering of people I see as outside my group rarely concerns me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I rarely feel drawn to check in on people who are having a hard time.",
+      "direction": "detachment"
+    },
+    {
+      "text": "A photograph from the past can plunge me back into the feelings of that era with startling force.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I can receive criticism without it sending a jolt through my system.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I clean as I go when cooking or working on a project to avoid a big mess at the end.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "When I reason through a situation in which someone is suffering, easing their pain matters to me.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I'm comfortable leaving things unfinished, trusting I'll return to them when the time is right.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I feel that the weight of another person's struggle is something I carry with me, not something I observe from a distance.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I notice that my system takes much longer than others' to recalibrate after a disruptive event.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I would work a job I dislike if it meant my family or community benefited greatly.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I am wired to flag what seems broken and let the group decide how to address it.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I eat when I'm hungry and exercise when I feel like it, without a fixed schedule.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I jump into the deep end with new skills and piece together understanding through experience.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I maintain separate spaces or systems for different areas of my life to avoid confusion.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I detect when a friend group has a designated peacekeeper who steps in at predictable moments.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find it easy to go along with the group's direction, even when I have reservations.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I feel most aligned with my values when I am serving a purpose bigger than myself.",
+      "direction": "altruism"
+    },
+    {
+      "text": "When I'm excited about something, I feel it in every cell of my body.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "Evidence that people are experiencing preventable pain makes me want that pain relieved.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I enjoy naming the problem and telling the group how we will solve it.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I tend to be unaware of when someone is matching my energy level to put me at ease.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I can feel when a social gathering has an invisible guest list that determines who was and was not expected.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I find that deflecting praise and redirecting it to others feels natural and right.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I routinely choose quality-of-life improvements for myself over gifts for others.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I tend to miss when a conversation has a dual purpose beyond its surface topic.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I do not naturally notice when a conversation between two people nearby is meant for me to overhear.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I am the type who creates the rules of engagement for a group.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I invest time in building habits that will pay dividends over months and years.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I feel like I have a sixth sense for when something is off in a social situation.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "Evidence of preventable harm to others seldom makes me want to do anything about it.",
+      "direction": "detachment"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "id": 5,
+  "questions": [
+    {
+      "text": "I schedule regular maintenance for my car, home, and other possessions.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I tend to accept praise graciously and use it as fuel for further personal achievement.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I would take on a second job to support a family member's dream.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I find that spending an afternoon helping a friend move is more rewarding than spending it on my own pursuits.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I do not usually notice when someone is nervous during a conversation unless they say so.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find it hard to detect when someone is being supportive on the surface but competitive underneath.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I notice when an email is bcc'd to someone based on the overly formal tone.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I routinely turn down invitations that do not serve my personal interests or growth.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "When I recognize that someone could be seriously hurt, preventing that harm matters to me personally.",
+      "direction": "empathy"
+    },
+    {
+      "text": "When someone is suffering, its claim on me is immediate; I don't need a further reason.",
+      "direction": "empathy"
+    },
+    {
+      "text": "When I connect deeply with someone, the intensity of that bond registers as a physical sensation.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I prefer to set the ground rules before any group activity begins.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I can feel the residue of a stressful phone call still buzzing in my body an hour later.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I can sense when two people are pretending to get along but actually dislike each other.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "When I hear about a group of people in serious trouble, I seldom feel any concern for them.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I resist starting new projects until current ones are at a natural stopping point.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I experience the ebb and flow of life at a volume that never requires me to adjust.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I tend to re-feel past emotional experiences at nearly their original intensity when I remember them.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "Someone's tears or visible distress rarely change what I want to do.",
+      "direction": "detachment"
+    },
+    {
+      "text": "When I hear that someone is having a hard time, I usually wish things would go better for them.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I do not naturally decode the layers of meaning in polite conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I naturally position myself at the center of decision-making networks.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I always consult with my team before making commitments that involve them.",
+      "direction": "yielding"
+    },
+    {
+      "text": "When I have a vision, I wait to see if others share it before moving forward.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I give my full attention to what's happening now and prepare for future obligations closer to the time.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I find that saying no to requests that dilute my focus is one of my most valuable habits.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel a responsibility to contribute more than my fair share.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I prefer to let my day unfold naturally rather than follow a rigid schedule.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I tend to wait and see if the group will name the elephant in the room on its own.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I can tell when two people in a room are aware of each other even when they are not interacting.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I approach important decisions by gathering information and analyzing options systematically.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I rarely make backup plans because I trust my ability to improvise if things go sideways.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I notice that excitement in me feels like a pleasant warmth rather than a roaring fire.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I find it hard to stay quiet when I disagree with the group's direction.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I can be in the middle of a crisis and still feel internally composed.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "Learning about serious harm to people far away leaves me with little wish to see it end.",
+      "direction": "detachment"
+    }
+  ]
+}

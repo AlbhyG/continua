@@ -1,0 +1,149 @@
+{
+  "id": 13,
+  "questions": [
+    {
+      "text": "When I recognize that someone could be seriously hurt, preventing that harm rarely matters to me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I notice expired items when I happen to come across them, not on a set schedule.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I make a point of having the last say before a group commits to a course of action.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I experience the end of a meaningful period — a trip, a project, a visit — with quiet acceptance rather than anguish.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I feel most purposeful when I am tutoring, coaching, or guiding someone through a challenge.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to spend my weekends doing things for other people rather than pursuing my own hobbies.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I tend to pick the option that strengthens my personal position, even when alternatives would benefit the group more.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I often reshape a project's scope based on my own assessment of what matters.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I can read the atmosphere of a meeting within seconds of walking in.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I experience the buildup to an important event as a nearly unbearable crescendo of feeling.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I find it genuinely easier to give than to receive.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I do not usually notice when someone answers a question for another person to control the narrative.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I sense when a person is choosing to sit in a specific seat because of who is already sitting where.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I usually do not notice when someone adjusts their behavior after getting a social signal from someone else.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I prepare agendas before any meeting I'm responsible for.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "As I consider evidence about someone's circumstances, the suffering involved has real weight for me.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I have a strong desire to leave my mark on the things I work on.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I trust that the group will find its way forward without one person driving.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I find that I cannot simply turn off my concern for someone once I have seen their pain.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I find it hard to be around conflict because my body reacts so strongly to tension.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "My internal state resembles a deep, slow river — there is movement, but it is steady and unhurried.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I notice the way people edit their stories in real time based on the reactions they are getting.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I tend to miss the way people calibrate how much personal information to share based on their read of the room.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I feel uncomfortable starting a project without a clear outline of the steps involved.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "Hearing that someone is going through a hard time rarely changes how I think about my own day.",
+      "direction": "detachment"
+    },
+    {
+      "text": "When I hear unexpected good news, the rush of feeling is so strong I sometimes have to sit down.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I rarely feel the need to decompress emotionally after social interactions.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "When someone I love is going through something painful, I feel little wish to ease it.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I feel most in my element when the go or no-go call is a genuine group decision.",
+      "direction": "yielding"
+    },
+    {
+      "text": "Another person's pain matters to me whether or not I feel it myself.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I believe that my most important competition is with my past self, and I intend to keep winning.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I feel that splurging on a personal passion project is money well spent.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I share information as I learn it, refining my understanding in conversation.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I take pride in the behind-the-scenes work that makes a project succeed.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I keep a log of what I accomplish each day to maintain awareness of my productivity.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "When facing a decision, I often go with my first instinct rather than deliberating at length.",
+      "direction": "spontaneous"
+    }
+  ]
+}

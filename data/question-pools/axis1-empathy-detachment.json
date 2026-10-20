@@ -1,0 +1,722 @@
+[
+  {
+    "text": "When I learn that someone I know is going through a difficult time, my first instinct is to consider how I might help.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When someone shares a painful experience, the fact of their pain carries real weight in my mind.",
+    "direction": "empathy"
+  },
+  {
+    "text": "I feel that the weight of another person's struggle is something I carry with me, not something I observe from a distance.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When I am near someone in deep pain, their suffering exists in my awareness as a moral weight that requires a response.",
+    "direction": "empathy"
+  },
+  {
+    "text": "I find that I cannot simply turn off my concern for someone once I have seen their pain.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When someone shares their struggle with me, I experience it as a call to action rather than as information.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When I learn that someone has been harmed, I feel a moral pull to respond that remains present until I have taken action.",
+    "direction": "empathy"
+  },
+  {
+    "text": "I find that the moral pull of another's pain is something I experience as a direct call to action, not as an abstract consideration.",
+    "direction": "empathy"
+  },
+  {
+    "text": "I register the weight of another person's pain not just intellectually but as something that genuinely matters to me and moves me.",
+    "direction": "empathy"
+  },
+  {
+    "text": "The felt weight of another person's hardship stays with me long after the encounter.",
+    "direction": "empathy"
+  },
+  {
+    "text": "I often feel drawn to check in on people I know are having a hard time, even when they haven't asked.",
+    "direction": "empathy"
+  },
+  {
+    "text": "It is hard for me to turn away from someone's pain, even when I can't fix it.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Another person's hardship pulls at me even when responding is difficult.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When someone is suffering, I want to act, not just understand.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Someone's suffering matters to me even when they can't put their need into words.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When someone is suffering, its claim on me is immediate; I don't need a further reason.",
+    "direction": "empathy"
+  },
+  {
+    "text": "The wish to respond to others' suffering is one of the strongest forces shaping my daily choices.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Someone's pain matters even more to me when they have no one else to turn to.",
+    "direction": "empathy"
+  },
+  {
+    "text": "The felt weight of another person's suffering strongly motivates me to act for them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Feeling the weight of others' hardship keeps me from becoming complacent about it.",
+    "direction": "empathy"
+  },
+  {
+    "text": "I feel a genuine pull to act when I encounter suffering, not just to notice it.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When someone trusts me with their pain, I want to hold it with care.",
+    "direction": "empathy"
+  },
+  {
+    "text": "I find it hard to ignore a person's pain just to stay comfortable.",
+    "direction": "empathy"
+  },
+  {
+    "text": "A stranger's pain matters to me as much as a friend's.",
+    "direction": "empathy"
+  },
+  {
+    "text": "I don't turn away from suffering because it is complex or uncomfortable.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Others' suffering carries real weight for me.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Each new encounter with suffering still matters to me; it doesn't become routine.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When someone's suffering is vivid to me, I feel a strong wish to ease it.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When I learn about suffering in a place I have never visited, the people affected matter to me.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Understanding how many people a problem harms makes me want to see their suffering reduced.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When an explanation shows me how someone is being harmed, I begin to care about what happens to them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "As I learn the reasons a person is struggling, their wellbeing becomes more important to me.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Someone's continuing hardship still matters to me long after I first heard about it.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When I think through someone's problem, I care about the pain it is causing them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When I hear that an unfamiliar person is in pain, I want their situation to improve.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When a report describes people's suffering in impersonal terms, I still care about the people behind it.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Evidence that people are experiencing preventable pain makes me want that pain relieved.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When I recognize that someone could be seriously hurt, preventing that harm matters to me personally.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Another person's wellbeing matters to me even when I do not feel close to them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When several people need help, understanding each person's hardship makes me care about their situation.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When suffering is described in abstract terms, I still want something to improve for those affected.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Knowing that people are still suffering keeps their wellbeing important to me after public attention has moved on.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Another person's pain matters to me whether or not I feel it myself.",
+    "direction": "empathy"
+  },
+  {
+    "text": "A person's suffering still matters to me when many other people also know about it.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When I understand how someone's pain could be eased, I want that relief for them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When I think again about a hardship someone faces, I still want them to find relief.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Thinking about suffering that future generations may face gives me a genuine wish to prevent it.",
+    "direction": "empathy"
+  },
+  {
+    "text": "The more I learn about what someone is going through, the stronger my wish to help them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "As I work through the details of another person's difficulty, I care about what the experience is like for them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Wanting others to suffer less is a real motivation in my life.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When I reason through a situation in which someone is suffering, easing their pain matters to me.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Others' suffering matters to me whatever mood I am in.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When I understand that someone has been hurt by unfair treatment, I care about the suffering it has caused them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Understanding how a policy harms people makes me concerned for them, even if it does not affect me.",
+    "direction": "empathy"
+  },
+  {
+    "text": "I am concerned about what the people around me are going through.",
+    "direction": "empathy"
+  },
+  {
+    "text": "As I consider evidence about someone's circumstances, the suffering involved has real weight for me.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When I consider people with competing needs, I care about the suffering each person is experiencing.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When I notice that I have overlooked someone's hardship, I become concerned about what they are experiencing.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When someone I love is in pain, I feel a strong wish to ease it.",
+    "direction": "empathy"
+  },
+  {
+    "text": "A stranger's visible distress makes me want to step in.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Hearing that someone has been badly hurt leaves me wanting to reach out to them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When someone tells me about a painful loss, I want to comfort them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "It is hard for me to stop thinking about someone who is suffering.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Someone's suffering stays on my mind until I know they are all right.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When someone is hurting, I want their pain to end.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Even a stranger's serious suffering makes me want to see it relieved.",
+    "direction": "empathy"
+  },
+  {
+    "text": "I feel a strong wish to help when someone I know is struggling.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Another person's serious suffering weighs on me.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Once I know that someone is in serious pain, their wellbeing matters a great deal to me.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Even after hearing only a brief account of someone's suffering, I care what happens to them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Seeing someone I don't know in real trouble makes me care about their wellbeing.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When people are suffering, I want things to get better for them, whether or not I know them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When someone's hardship is severe, it matters to me even if I can do nothing about it.",
+    "direction": "empathy"
+  },
+  {
+    "text": "I wish I could relieve suffering I hear about, even when I have no means to.",
+    "direction": "empathy"
+  },
+  {
+    "text": "The suffering of the people close to me matters a great deal to me.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Learning that a person is suffering makes me want to know if there is anything that would help them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Other people's hardships tend to matter to me.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When I hear that someone is having a hard time, I usually wish things would go better for them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "I often find myself hoping that people I hear about who are struggling will be okay.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Most of the time, other people's suffering feels important to me.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Learning that someone has had bad news usually makes me want to reach out.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Other people's small hardships often matter to me too.",
+    "direction": "empathy"
+  },
+  {
+    "text": "I am somewhat more moved by other people's hardships than most people I know.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When a friend is hurting, I usually want to help.",
+    "direction": "empathy"
+  },
+  {
+    "text": "A person's suffering sometimes stays with me after I have left them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Suffering among people whose lives are very different from mine still matters to me.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When I hear about a group of people in serious trouble, I usually feel some concern for them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Reflecting on someone's difficulties often makes me wish I could ease them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "When someone is suffering, I hope things turn out well for them.",
+    "direction": "empathy"
+  },
+  {
+    "text": "I often wish I could do something for people who are having a hard time.",
+    "direction": "empathy"
+  },
+  {
+    "text": "Other people's hardships tend to matter little to me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When someone shares a painful experience, the fact of their pain carries little weight in my mind.",
+    "direction": "detachment"
+  },
+  {
+    "text": "The suffering of people I don't know rarely seems important to me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Hearing that someone is going through a hard time rarely changes how I think about my own day.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Someone's ongoing hardship rarely stays on my mind once I am no longer with them.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Learning that people are suffering somewhere else seldom makes me care what happens to them.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Reading or hearing about people in pain usually leaves me without much concern for them.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When someone is in pain, I rarely feel a wish to make it better.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Knowing that a person is struggling seldom makes me want to do anything about it.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When I understand why someone is suffering, I still rarely want their situation to change.",
+    "direction": "detachment"
+  },
+  {
+    "text": "I seldom feel pulled to respond when someone around me is having a hard time.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When someone shares a struggle with me, I tend to treat it as information rather than as something that calls for a response.",
+    "direction": "detachment"
+  },
+  {
+    "text": "I rarely feel drawn to check in on people who are having a hard time.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When I learn that someone I know is going through a difficult time, my first instinct is rarely to consider how I might help.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When I see that someone is suffering, it usually makes no difference to what I want to do next.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Even when I clearly understand another person's hardship, their wellbeing rarely becomes more important to me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Thinking through someone's difficulties rarely makes me care about them more.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Statistics or reports about people's suffering leave me with little concern for the people involved.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Hearing that a problem harms many people rarely makes me want their suffering reduced.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Even when someone's pain is vivid and immediate, I feel little wish to ease it.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When someone near me is visibly upset, I rarely feel any urge to comfort or help them.",
+    "direction": "detachment"
+  },
+  {
+    "text": "A person's hardship stops mattering to me soon after I hear about it.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Once I stop hearing about a person's troubles, I stop thinking about their wellbeing.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Suffering among people outside my own circle rarely concerns me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "I feel little concern for the wellbeing of people I will never meet.",
+    "direction": "detachment"
+  },
+  {
+    "text": "A stranger's hardship rarely matters to me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Other people's suffering is mostly their concern, not mine.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When several people need help, none of their situations weighs on me much.",
+    "direction": "detachment"
+  },
+  {
+    "text": "I am often less concerned about other people's troubles than the people around me are.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Other people's pain seldom feels like something that requires a response from me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When I see someone crying, I rarely feel any wish to help.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Even when someone I am with is clearly in distress, their pain leaves me largely unmoved.",
+    "direction": "detachment"
+  },
+  {
+    "text": "A stranger's obvious anguish in front of me rarely makes me want to step in.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When someone tells me about something painful that happened to them, I rarely feel any pull to comfort them.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Being close to someone's suffering rarely makes it matter more to me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Someone's tears or visible distress rarely change what I want to do.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When a friend is in real pain, I often feel little wish to relieve it.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Watching a person suffer usually stirs no wish in me to ease their suffering.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Even when I am convinced that someone is being harmed, I feel little wish to see it stop.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Learning that suffering could easily be prevented seldom makes me want it prevented.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When I understand that a person's pain is serious, that fact alone rarely makes me want to help.",
+    "direction": "detachment"
+  },
+  {
+    "text": "I don't see other people's private suffering as something I need to be concerned about.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Even after hearing exactly what a person has endured, I feel little concern about what happens to them.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Evidence of preventable harm to others seldom makes me want to do anything about it.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When I recognize that someone could be seriously hurt, preventing that harm rarely matters to me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Once a hard moment for someone has passed, I rarely give their wellbeing another thought.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Someone's continuing hardship rarely matters to me once the news is old.",
+    "direction": "detachment"
+  },
+  {
+    "text": "A friend's ongoing struggle rarely weighs on me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "The suffering of people I see as outside my group rarely concerns me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "I feel little concern for suffering in places I have never been.",
+    "direction": "detachment"
+  },
+  {
+    "text": "The hardships of people I have no connection to carry little weight for me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Most of the time, other people's suffering does not feel important to me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Others' pain rarely feels like it matters to me, even when I know them well.",
+    "direction": "detachment"
+  },
+  {
+    "text": "I seldom find myself concerned about how another person's difficulties will turn out.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When a person I know is struggling, I rarely feel a wish to be of help.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Even when I know I could easily help someone in pain, I feel little wish to.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Others' need for help seldom gives me a reason to want to act.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When someone asks for my support in a hard time, I usually feel little wish to give it.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Hearing about a crisis affecting others seldom leaves me wanting anything to change for them.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Wanting someone else's suffering to ease is rarely part of how I respond to their situation.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When someone I love is going through something painful, I feel little wish to ease it.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Another person's pain rarely feels real enough to matter to me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Someone's serious suffering leaves me with little concern for what happens to them.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When a stranger is in visible distress, I feel little wish to help.",
+    "direction": "detachment"
+  },
+  {
+    "text": "I feel little concern when I hear that someone has been badly hurt.",
+    "direction": "detachment"
+  },
+  {
+    "text": "However serious someone's suffering is, it seldom makes me want to do anything.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Even when someone I know is suffering deeply, I feel little concern about what happens to them.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Someone else's grief rarely makes me want to comfort them.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Hearing that someone has died or been badly hurt leaves me with little wish to reach out.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Someone's pain stops mattering to me almost as soon as I stop seeing it.",
+    "direction": "detachment"
+  },
+  {
+    "text": "I forget about other people's suffering as soon as I have something else to think about.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Wanting someone else's suffering to ease rarely crosses my mind.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Even after hearing the whole story of what a person has endured, I feel little wish to help them.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When suffering is described in vivid detail, it still carries little weight for me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Learning about serious harm to people far away leaves me with little wish to see it end.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When a coworker or neighbor is struggling, I feel little wish to help them.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Knowing that someone will keep suffering rarely bothers me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Someone else's suffering rarely makes me want anything at all for them.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Other people's problems only occasionally seem to matter to me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Others' suffering sometimes fails to register as something that matters to me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Others' hardships sometimes leave me without much wish to help.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When a friend is hurting, my wish to help is often weaker than I expect it to be.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Someone's suffering usually has to be severe before it matters to me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Hearing that someone has had bad news usually doesn't make me want to reach out.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Small hardships in other people's lives rarely matter to me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "I am somewhat less moved by other people's hardships than most people I know.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Suffering among people whose lives are very different from mine carries little weight for me.",
+    "direction": "detachment"
+  },
+  {
+    "text": "Reflecting on someone's difficulties rarely makes me feel any wish to ease them.",
+    "direction": "detachment"
+  },
+  {
+    "text": "When I hear about a group of people in serious trouble, I seldom feel any concern for them.",
+    "direction": "detachment"
+  },
+  {
+    "text": "A person's suffering rarely changes what I hope will happen for them.",
+    "direction": "detachment"
+  }
+]

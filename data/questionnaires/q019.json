@@ -1,0 +1,149 @@
+{
+  "id": 19,
+  "questions": [
+    {
+      "text": "I track my progress methodically to ensure I'm meeting my targets.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I work on whatever pulls me in, whether it's hard or easy, based on the moment.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I weigh the trade-offs of a decision on paper before committing.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "I thrive when I have the trust of a group that works together.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I would skip my own vacation to cover for a coworker dealing with a family crisis.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I think about what tools or supplies I'll need before starting a project.",
+      "direction": "conscientious"
+    },
+    {
+      "text": "Someone else's suffering rarely makes me want anything at all for them.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I routinely document my own accomplishments so they are recognized and remembered.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I routinely set aside a portion of every paycheck specifically for helping others.",
+      "direction": "altruism"
+    },
+    {
+      "text": "I experience the quiet moments of life — a still morning, a warm drink — with a gentle appreciation that never tips into intensity.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I offer feedback only when asked or when the group has a feedback culture in place.",
+      "direction": "yielding"
+    },
+    {
+      "text": "When I understand that a person's pain is serious, that fact alone rarely makes me want to help.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I notice that major life events produce a proportionate, not outsized, emotional response in me.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "When there is a vacuum of leadership, I look around to see who else might step in.",
+      "direction": "yielding"
+    },
+    {
+      "text": "I do not usually detect when a question is rhetorical versus when someone actually wants an answer.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "Someone's continuing hardship still matters to me long after I first heard about it.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I am concerned about what the people around me are going through.",
+      "direction": "empathy"
+    },
+    {
+      "text": "I experience boredom not as a quiet absence but as an agitating restlessness.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I would use my professional influence to open doors for others rather than to advance my own agenda.",
+      "direction": "altruism"
+    },
+    {
+      "text": "My inner emotional life is relatively smooth and consistent.",
+      "direction": "low-reactive"
+    },
+    {
+      "text": "I pick up on when a person lingers after a group disperses because they want a private word with someone specific.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I am quick to declare a path forward when the group is circling.",
+      "direction": "agentic"
+    },
+    {
+      "text": "Other people's problems only occasionally seem to matter to me.",
+      "direction": "detachment"
+    },
+    {
+      "text": "I notice the way certain people in a group look to one specific person before reacting.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I notice when people adjust their vocabulary depending on who they are speaking to.",
+      "direction": "hyper-attuned"
+    },
+    {
+      "text": "I do not naturally sense when a room is tense.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I am comfortable making commitments on behalf of my team without consulting them first.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I notice that strong emotions make me hyper-aware of my heartbeat, as if my body is broadcasting its state.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "I rarely sense when a person is anchoring a negotiation through seemingly casual conversation.",
+      "direction": "hypo-attuned"
+    },
+    {
+      "text": "I find budgets and financial plans too restrictive and prefer to manage money intuitively.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I tend to exit commitments that no longer align with where I want to go personally.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I tend to keep my most innovative ideas for my own ventures.",
+      "direction": "self-focus"
+    },
+    {
+      "text": "I like to try a different approach each time, even if the old way worked.",
+      "direction": "spontaneous"
+    },
+    {
+      "text": "I often end up as the de facto leader in group projects.",
+      "direction": "agentic"
+    },
+    {
+      "text": "I experience moments of tenderness with such intensity that they can bring me to tears.",
+      "direction": "high-reactive"
+    },
+    {
+      "text": "When someone I love is in pain, I feel a strong wish to ease it.",
+      "direction": "empathy"
+    }
+  ]
+}

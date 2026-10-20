@@ -1,0 +1,722 @@
+[
+  {
+    "text": "After an emotionally charged event, I feel like I need to recover as if from physical exertion.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I hear unexpected good news, the rush of feeling is so strong I sometimes have to sit down.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I'm excited about something, I feel it in every cell of my body.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I feel gratitude, it swells inside me until I can barely contain it.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When someone raises their voice near me, my whole system goes on high alert.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I get frustrated, the frustration escalates rapidly to a peak.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "After receiving bad news, I can feel the shock reverberating through my body for hours.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I am easily swept up in the emotional energy of a crowd or a room.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "After a stressful event, it takes me a long time to return to my emotional baseline.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I'm in a beautiful place, the experience can feel almost painfully vivid.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I tend to be the first person in a room to react emotionally to what's happening.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When something wonderful happens, my elation is so strong it can feel almost manic.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I'm moved by something, the feeling washes over me like a wave.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I get good news, the euphoria can last for days.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I notice that my emotional intensity ebbs and flows like weather systems rather than following a predictable pattern.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When something excites me, the rush of energy is almost overwhelming.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I tend to feel the full weight of an experience rather than experiencing it at a distance.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I notice that even subtle shifts in atmosphere — a room going quiet, a change in tone — hit me with force.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I go from calm to fully activated in a matter of seconds.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I often feel like my emotional responses are running at double speed compared to the people around me.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "Loud noises, bright lights, or sudden changes can trigger an outsized emotional response in me.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I'm upset, the feeling saturates my entire body.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I can still feel the emotional residue of an argument hours or even days later.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I am the kind of person who can be brought to tears by a commercial.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I experience the onset of emotion as a sudden physical sensation before I can even name what I'm feeling.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I can feel adrenaline surge through me in response to relatively minor provocations.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I carry the emotional tone of a dream well into my waking day.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I notice that when I feel passionate about something, it becomes all-consuming rather than a background interest.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I experience boredom not as a quiet absence but as an agitating restlessness.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I tend to re-feel past emotional experiences at nearly their original intensity when I remember them.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I witness something moving, my eyes well up before I've even decided how I feel about it.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I feel truly heard and understood, the relief is so profound it can make me cry.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "After a heated exchange, my body stays in fight-or-flight mode long after the words have stopped.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When something embarrassing happens, I can feel the heat in my face and neck for minutes afterward.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When someone shares good news, my own excitement can rival theirs in intensity.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I'm emotionally activated, my peripheral vision narrows and everything feels urgent.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I feel rejected, the pain is immediate, physical, and consuming.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I'm excited about a future event, the excitement builds to a pitch that makes it hard to concentrate on anything else.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "My body seems to store emotional charge that I can feel building over the course of a stressful week.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I notice that even anticipating a difficult conversation makes my palms sweat and my heart race.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I encounter injustice, my entire body lights up with agitation.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "A photograph from the past can plunge me back into the feelings of that era with startling force.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I experience the surprise of being startled not as a brief jolt but as a lingering rush of adrenaline.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I experience the arrival of strong emotion as a wave that crests before I can brace for it.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I feel overwhelmed, it's not just emotional — my body feels like it's short-circuiting.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I notice that my jaw clenches and my shoulders tense the instant I feel threatened or upset.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I notice that I feel the emotional weight of news stories as if they were happening to me personally.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I am easily brought to goosebumps by music, words, or images that strike the right chord.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I have cried from the sheer intensity of a sunset, a piece of art, or an act of kindness.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I tend to feel the emotional stakes of a situation far more intensely than the practical stakes.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I notice that my skin flushes or goes pale in direct response to what I'm feeling.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "Even a mildly critical tone of voice can set off alarm bells throughout my system.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I experience the end of a vacation or a visit with someone I love as a sharp, almost physical loss.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I experience a new environment as a barrage of stimulation that takes time to process.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I experience the buildup to an important event as a nearly unbearable crescendo of feeling.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I experience guilt as a heavy, nauseating weight that settles in my gut and stays.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I wake from nightmares with my heart pounding and the fear persisting long after I'm fully awake.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I experience moments of tenderness with such intensity that they can bring me to tears.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I can feel the residue of a stressful phone call still buzzing in my body an hour later.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I notice that even reading a particularly moving paragraph in a book can make my throat tighten.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I feel wronged, the indignation is so intense it can keep me awake at night.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I connect deeply with someone, the intensity of that bond registers as a physical sensation.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I'm in the grip of a strong emotion, the world outside of it seems to temporarily cease to exist.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I receive unexpected praise, the flush of pleasure is so strong it makes me lightheaded.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I feel betrayed, the shock and hurt land in my body like a physical blow.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I feel content, the contentment saturates me completely — it's not a background hum, it's the whole song.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When something touches me deeply, I can feel it reverberating in my chest for hours.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I experience the pressure of a deadline not just mentally but as a tightening sensation throughout my body.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When I feel at peace, the sensation is so vivid and complete that it's almost sacred.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I feel the emotional atmosphere of a room the moment I walk in, and it lands in my body immediately.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "A tense silence in a conversation produces a physical knot in my stomach almost instantly.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When my expectations are violated, my system reacts as if to a physical shock.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When something delights me, the delight fills me completely.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I notice that my emotional sensitivity means I am deeply affected by the tone of a room, a text, or a glance.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I notice that strong emotions make me hyper-aware of my heartbeat, as if my body is broadcasting its state.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I experience the world as though my emotional volume knob is permanently set several notches above average.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I notice that the anticipation of seeing someone I've missed builds to a physical crescendo in my chest.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "My body is always the first to tell me how I'm feeling, often before I have words for it.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I have been told that I feel things more intensely than most people.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I experience the ending of a meaningful chapter — a project, a season, a relationship — as a kind of small death.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I experience the tension before a performance or presentation as an almost intolerable buildup of energy.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I find it hard to be around conflict because my body reacts so strongly to tension.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I notice that my system takes much longer than others' to recalibrate after a disruptive event.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I experience the first moments of waking up after a bad dream as indistinguishable from the terror of the dream itself.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "When something touches me, the feeling doesn't just visit — it moves in and stays.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "A smell connected to a past experience can instantly transport me into the full emotional state of that time.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I notice that witnessing an argument between other people activates my own nervous system as if I'm involved.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "Even reading about an intense event can produce a strong physical reaction in me.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I notice that when I feel vulnerable, every nerve ending seems to be exposed.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I notice that when multiple emotions arrive at once, the overload can feel physically paralyzing.",
+    "direction": "high-reactive"
+  },
+  {
+    "text": "I experience the stress of a tight schedule as a practical reality rather than a source of internal turmoil.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I tend to absorb the emotional content of a conversation without it altering my physiological state.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I rarely cry, not because I suppress emotions but because they simply don't reach that intensity.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that my body stays relaxed in situations that make other people tense.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My baseline state is one of such stability that disruptions feel like small departures rather than upheavals.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I tend to process grief in a measured, gradual way rather than in sudden, overwhelming waves.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My emotional spectrum is real and present but it operates in pastel tones rather than neon.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My emotional baseline is so stable that people often describe me as having a calming presence.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that people sometimes wonder if I'm affected by things, but I simply process them at a lower volume.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I tend to notice my emotional reactions in retrospect rather than being gripped by them in the moment.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I tend to feel the same emotional temperature whether I'm at home or in a novel situation.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I tend to move through emotionally charged moments with a sense of groundedness.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I tend to view emotional intensity in others with a kind of curiosity because my own experience is different.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I experience the end of a meaningful period — a trip, a project, a visit — with quiet acceptance rather than anguish.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I tend to feel settled even when circumstances around me are in flux.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that excitement in me feels like a pleasant warmth rather than a roaring fire.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I can receive bad news without my body going into alarm mode.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I experience the ups and downs of life as gentle undulations rather than dramatic swings.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I tend to receive compliments and praise with a sense of quiet satisfaction rather than elation.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I don't tend to carry the emotional residue of one event into the next.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I experience change as something to be navigated calmly rather than something that triggers alarm.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I tend to feel emotionally prepared for whatever comes, because my system doesn't overreact.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I rarely feel emotionally overwhelmed, even during genuinely difficult times.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I tend to emerge from stressful periods without the accumulated tension that others describe.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I can remain focused and clearheaded even in high-pressure situations.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I tend to process emotional experiences in the background while staying functionally engaged.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I tend to respond to emotional provocations with a measured internal response rather than a visceral one.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I tend to feel emotions at a manageable intensity rather than at their extremes.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My inner emotional life is relatively smooth and consistent.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that my heart rate stays fairly constant even during heated discussions.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My inner life has a quality of spaciousness — there's room for emotions without them crowding everything out.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that my hands stay steady and my voice stays even in situations that rattle other people.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I experience the anticipation before a big moment as a mild heightening of attention, not a surge of adrenaline.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My internal state has a steadiness that I've come to recognize as simply the way I'm built.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I can be in the middle of a crisis and still feel internally composed.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My emotional responses are proportional and consistent, which gives me a sense of reliability.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that I don't get swept up in the emotional energy of crowds or groups.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that I can hold space for difficult conversations without my own equilibrium being disrupted.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I rarely feel the need to decompress emotionally after social interactions.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I experience emotional pain as a dull awareness that fades predictably over time.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that other people sometimes need to tell me a situation was intense because I didn't register it that way.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I can receive criticism without it sending a jolt through my system.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that major life events produce a proportionate, not outsized, emotional response in me.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that I can be fully engaged in a situation without my emotional volume increasing.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I rarely feel the kind of emotional urgency that demands immediate action.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I experience the space between stimulus and response as comfortably wide.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I can be in the midst of uncertainty and still feel fundamentally okay.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My emotional life has a consistent, predictable quality that I've come to rely on.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that I can sit with ambiguity and uncertainty without my nervous system escalating.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I tend to navigate most situations without noticeable shifts in my internal state.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that I can shift my attention away from emotional stimuli relatively easily.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I can handle multiple stressors simultaneously without feeling destabilized.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My emotional responses have a muted quality compared to what I observe in others.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I rarely wake up from a dream still gripped by its emotional content.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My baseline emotional state is one of calm readiness.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I rarely experience the physiological markers of stress even in stressful situations.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I can look back on difficult periods without re-experiencing the emotional intensity.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that confrontations, while unpleasant, don't leave a physiological residue in my body.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that my emotional reactions rarely interfere with my ability to function.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that my pulse and breathing remain steady even during emotionally charged discussions.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I experience reunion with people I care about as warm and welcome without it being an emotional avalanche.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that I rarely feel the need to talk through my emotions to reduce their intensity.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My nervous system seems to have a wide comfort zone that few experiences push me out of.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that my emotional reactions to the same type of event are remarkably consistent over time.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that I can re-enter a stressful situation after a break without the stress having compounded.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I experience the ebb and flow of life at a volume that never requires me to adjust.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I experience the sensation of calm not as something I achieve but as something I simply inhabit.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My body stays in a state of relaxed readiness regardless of the emotional temperature around me.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that surprises, interruptions, and disruptions produce only a small ripple in my internal state.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that music, films, and stories move me intellectually more than they move me physically.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My emotional system operates with a kind of quiet competence that I've come to trust.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that emotional content in conversations registers with me but doesn't alter my breathing or posture.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that I can compartmentalize emotional events and return to whatever I was doing without difficulty.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that I don't carry the physical tension patterns that many people associate with stress.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that waiting for important outcomes produces alertness in me, not agitation.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I experience the feeling of being startled as a brief flash that dissipates almost immediately.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that I can attend to multiple tasks even when something emotional is unresolved.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that I can be in the presence of someone who is deeply distressed without my own system mirroring their state.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that I can move from a difficult situation to a normal one without needing a transition period.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I experience daily frustrations — traffic, delays, minor inconveniences — without a noticeable rise in my stress level.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My emotional responses have a brevity to them — they arise, deliver their message, and recede.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I experience the act of letting go of something as a natural, uncomplicated process.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My internal state resembles a deep, slow river — there is movement, but it is steady and unhurried.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My emotions feel like background music — always present, but never drowning out the rest of my experience.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I experience the quiet moments of life — a still morning, a warm drink — with a gentle appreciation that never tips into intensity.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I experience the conclusion of something I care about with a sense of readiness to move on.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that my sleep quality is rarely affected by emotional events from the preceding day.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that I don't experience the emotional hangovers that others describe after intense days.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "My system seems to auto-regulate emotional intensity without requiring conscious effort.",
+    "direction": "low-reactive"
+  },
+  {
+    "text": "I notice that my emotional life, while not dramatic, is dependable and clear.",
+    "direction": "low-reactive"
+  }
+]
