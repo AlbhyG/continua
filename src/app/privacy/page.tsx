@@ -118,7 +118,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-[24px] font-bold mb-3">5. Comparing Results with Other People</h2>
           <p>
-            Continua may allow a signed-in user to invite another person, by email address, to compare assessment results. To send the invitation, we use the email address the user provides and include the inviting user&apos;s chosen display name.
+            Continua may allow a signed-in user to invite another person, by email address, to compare assessment results. To send the invitation, we use the email address the user provides and include the inviting user&apos;s chosen display name and any short personal note they add. We do not keep a separate copy of the note, though like other emails, the invitation may be retained by our email delivery provider.
           </p>
           <p className="mt-3">
             Nothing is compared or shown to either person unless the invited person signs in and accepts. Once both have joined, each participant can see the other&apos;s results within the comparison. Either participant can end a comparison at any time, which removes it for both.

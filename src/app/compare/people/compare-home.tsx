@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import CompareDisclaimer from "@/components/compare/CompareDisclaimer";
+import { INVITE_NOTE_MAX } from "@/lib/comparison/invite-note";
 
 type Summary = {
   id: string;
@@ -20,6 +21,7 @@ export default function CompareHome() {
   const [hasResult, setHasResult] = useState(true);
   const [myName, setMyName] = useState<string | null>(null);
   const [email, setEmail] = useState("");
+  const [note, setNote] = useState("");
   const [message, setMessage] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
@@ -62,13 +64,16 @@ export default function CompareHome() {
     const sentTo = email.trim();
     const ok = await call(
       "/compare/api/comparisons",
-      { method: "POST", body: JSON.stringify({ email }) },
+      { method: "POST", body: JSON.stringify({ email, note }) },
       (body) =>
         body.emailed
           ? `Invitation emailed to ${sentTo}.`
           : `Invitation saved, but the email could not be sent. Ask ${sentTo} to sign in to Continua with that address and open ${String(body.link ?? "Compare")}.`
     );
-    if (ok) setEmail("");
+    if (ok) {
+      setEmail("");
+      setNote("");
+    }
   }
 
   const respond = (id: string, action: "accept" | "decline") =>
@@ -213,6 +218,24 @@ export default function CompareHome() {
             className="mt-2 w-full rounded-lg border border-foreground/20 bg-white/80 px-3 py-2 text-foreground"
             placeholder="name@example.com"
           />
+          <label htmlFor="invite-note" className="mt-4 block text-sm font-semibold">
+            Add a personal note <span className="font-normal text-foreground/60">(optional)</span>
+          </label>
+          <textarea
+            id="invite-note"
+            value={note}
+            onChange={(e) => setNote(e.target.value)}
+            maxLength={INVITE_NOTE_MAX}
+            rows={3}
+            className="mt-2 w-full rounded-lg border border-foreground/20 bg-white/80 px-3 py-2 text-foreground"
+            placeholder="Hi, this is the project I mentioned. I'd love to compare."
+          />
+          <p className="mt-1 flex justify-between text-xs text-foreground/60">
+            <span>Plain text. Links and email addresses can&apos;t be included.</span>
+            <span>
+              {note.length}/{INVITE_NOTE_MAX}
+            </span>
+          </p>
           <p className="mt-3 text-sm text-foreground/70">
             We&apos;ll email them an invitation. They take the assessment themselves, see their own result,
             and then choose whether to share it. If they do, they will see your most recent assessment and you

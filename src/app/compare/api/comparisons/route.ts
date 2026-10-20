@@ -6,6 +6,7 @@ import {
   listForUser,
   normEmail,
 } from "@/lib/comparison/service";
+import { cleanInviteNote } from "@/lib/comparison/invite-note";
 import { sendComparisonInvite } from "@/lib/email/send-comparison-invite";
 import { getActor, NO_STORE } from "../auth";
 
@@ -27,6 +28,12 @@ export async function POST(request: NextRequest) {
   if ("error" in got) return got.error;
   const body = await request.json().catch(() => ({}));
   const inviteeEmail = String(body?.email ?? "");
+  // Check the note before creating anything, so a refused note doesn't leave
+  // a half-made invitation behind.
+  const note = cleanInviteNote(body?.note);
+  if (!note.ok) {
+    return NextResponse.json({ error: note.error }, { status: 400, headers: NO_STORE });
+  }
   const result = await createComparison(got.db, got.actor, inviteeEmail);
   if (!result.ok) {
     return NextResponse.json({ error: result.error }, { status: result.status, headers: NO_STORE });
@@ -39,6 +46,7 @@ export async function POST(request: NextRequest) {
     inviterEmail: got.actor.email,
     inviteeEmail: normEmail(inviteeEmail),
     link,
+    note: note.note,
   });
   return NextResponse.json({ id: result.id, emailed, link }, { headers: NO_STORE });
 }
