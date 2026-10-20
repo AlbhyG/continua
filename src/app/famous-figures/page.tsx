@@ -34,9 +34,9 @@ export default function FamousFiguresPage() {
             Famous Archetypal Figures
           </h1>
           <p className="text-[18px] md:text-[20px] leading-[1.6] text-white/80">
-            Using the internet &mdash; not official diagnoses but the opinions of
-            the crowds, here are some people that many believe to be on the
-            extreme ends of the continua.{' '}
+            Using AI to gather the opinions of the crowds on the internet &mdash;
+            not official diagnoses &mdash; here are some people that many believe
+            to be on the extreme ends of the continua.{' '}
             <span className="text-white/60">
               Click any name to see their personality orb.
             </span>

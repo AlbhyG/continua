@@ -95,6 +95,10 @@ export default async function ComparePage({
             Pick two or three people and see their orbs side by side, then where
             each one falls on the six continua.
           </p>
+          <p className="mt-3 text-[14px] md:text-[15px] leading-[1.6] text-white/60">
+            Famous figures&apos; scores are estimated by AI from opinions about them found on
+            the internet. They are not diagnoses, and none of these people took the assessment.
+          </p>
           <p className="mt-3 text-[16px] md:text-[18px] leading-[1.6] text-white/70">
             {me ? (
               <>You can include yourself: your latest assessment appears as &ldquo;Me.&rdquo;</>
