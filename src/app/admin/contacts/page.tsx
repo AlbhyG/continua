@@ -35,8 +35,7 @@ type ContactRow = {
 
 export default async function AdminContactsPage() {
   const adminStatus = await getAdminStatus()
-  const gate = <AdminGate status={adminStatus} next="/admin/contacts" />
-  if (gate) return gate
+  if (adminStatus.status !== 'admin') return <AdminGate status={adminStatus} next="/admin/contacts" />
 
   const supabase = createAdminClient()
   if (!supabase) {

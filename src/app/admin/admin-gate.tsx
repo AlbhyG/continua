@@ -4,10 +4,10 @@ import type { AdminStatus } from '@/lib/admin/admin-auth'
 // Shared "you can't be here" states for every /admin page, now that access is
 // tied to a real signed-in account on the admin_users allowlist instead of a
 // shared password. Render this whenever getAdminStatus() didn't return
-// 'admin'; returns null for the admin case so callers can do:
+// 'admin'. Callers must check the status themselves -- a JSX element is
+// always truthy, even when the component renders nothing:
 //   const status = await getAdminStatus()
-//   const gate = <AdminGate status={status} next="/admin/assessments" />
-//   if (gate) return gate
+//   if (status.status !== 'admin') return <AdminGate status={status} next="/admin/assessments" />
 export function AdminGate({ status, next }: { status: AdminStatus; next: string }) {
   if (status.status === 'signed_out') {
     return (

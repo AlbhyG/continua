@@ -37,8 +37,7 @@ const AXES = Object.keys(AXIS_INFO) as Array<keyof AxisScores>
 
 export default async function AdminAssessmentsPage() {
   const adminStatus = await getAdminStatus()
-  const gate = <AdminGate status={adminStatus} next="/admin/assessments" />
-  if (gate) return gate
+  if (adminStatus.status !== 'admin') return <AdminGate status={adminStatus} next="/admin/assessments" />
 
   const supabase = createAdminClient()
   if (!supabase) {
