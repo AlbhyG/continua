@@ -71,7 +71,7 @@ export function useResult(resultId: string) {
       .catch(() => setLoadError("unavailable"));
   }, [resultId]);
 
-  // Opening one of your own results (for example from the Account page on
+  // Opening one of your own results (for example from the My Continua page on
   // another device) makes the header's "See Results" point to it.
   useEffect(() => {
     if (result && result.isOwner !== false && result.canShare !== false) {
