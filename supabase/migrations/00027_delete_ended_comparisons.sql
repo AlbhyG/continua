@@ -41,7 +41,7 @@ WHERE status = 'pending' AND created_at < NOW() - INTERVAL '30 days';
 --    here, this step is skipped with a notice and the rest still applies.
 DO $$
 BEGIN
-  CREATE EXTENSION IF NOT EXISTS pg_cron;
+  CREATE EXTENSION IF NOT EXISTS pg_cron WITH SCHEMA pg_catalog;
   PERFORM cron.schedule(
     'continua-expire-comparisons',
     '17 9 * * *',
