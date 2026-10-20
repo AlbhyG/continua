@@ -253,7 +253,7 @@ export default function PrivacyPage() {
             <li>Appeal or complain to an appropriate privacy or data-protection authority where applicable.</li>
           </ul>
           <p className="mt-3">
-            You may make a privacy request by contacting us at <a href="mailto:privacy@continua.info" className="underline hover:text-accent transition-colors">privacy@continua.info</a>.
+            You may make a privacy request by contacting us at <a href="mailto:albhy@continua.info" className="underline hover:text-accent transition-colors">albhy@continua.info</a>.
           </p>
           <p className="mt-3">
             We may need to verify your identity before completing certain requests. We will respond within the period required by applicable law.
@@ -275,7 +275,7 @@ export default function PrivacyPage() {
             We do not knowingly collect personal information from children under 13. If we learn that we have collected personal information from a child under 13, we will take reasonable steps to delete that information.
           </p>
           <p className="mt-3">
-            If you are a parent or guardian and believe that a child under 13 has provided personal information to Continua, please contact us at <a href="mailto:privacy@continua.info" className="underline hover:text-accent transition-colors">privacy@continua.info</a>.
+            If you are a parent or guardian and believe that a child under 13 has provided personal information to Continua, please contact us at <a href="mailto:albhy@continua.info" className="underline hover:text-accent transition-colors">albhy@continua.info</a>.
           </p>
         </section>
 
@@ -326,7 +326,7 @@ export default function PrivacyPage() {
           <p>If you have questions about this Privacy Policy, our privacy practices, or a request concerning your personal information, contact:</p>
           <p className="mt-3">
             Continua<br />
-            Email: <a href="mailto:privacy@continua.info" className="underline hover:text-accent transition-colors">privacy@continua.info</a><br />
+            Email: <a href="mailto:albhy@continua.info" className="underline hover:text-accent transition-colors">albhy@continua.info</a><br />
             Website: <a href="https://continua.info" className="underline hover:text-accent transition-colors">continua.info</a>
           </p>
         </section>
