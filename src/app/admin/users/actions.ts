@@ -75,20 +75,23 @@ export async function createTestSignInLinkAction(
     return { error: 'Admin client unavailable' }
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
-  const redirectTo = siteUrl
-    ? `${siteUrl.replace(/\/$/, '')}/auth/callback?next=${encodeURIComponent('/my-info')}`
-    : undefined
-
   const { data, error } = await admin.auth.admin.generateLink({
     type: 'magiclink',
     email: trimmed,
-    options: redirectTo ? { redirectTo } : undefined,
   })
 
-  if (error || !data?.properties?.action_link) {
+  const tokenHash = data?.properties?.hashed_token
+  if (error || !tokenHash) {
     return { error: error?.message || 'Could not generate a sign-in link' }
   }
 
-  return { link: data.properties.action_link }
+  // Same path real emailed links take: the confirm page, whose button posts
+  // the token to /auth/callback, which sets the server session cookies.
+  // (Supabase's action_link would sign in through the browser instead, and
+  // the server-rendered pages wouldn't see the session.)
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://continua.info').replace(/\/$/, '')
+  const link = new URL('/auth/confirm', siteUrl)
+  link.searchParams.set('token_hash', tokenHash)
+  link.searchParams.set('next', '/my-info')
+  return { link: link.toString() }
 }
