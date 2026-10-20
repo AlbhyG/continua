@@ -2,6 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import {
+  INVITE_EXPIRY_DAYS,
   MAX_INVITES_PER_DAY,
   createComparison,
   getView,
@@ -87,6 +88,10 @@ function fakeDb(tables: Record<string, Row[]>) {
           filters.push((r) => String(r[col]) >= val);
           return builder;
         },
+        lt(col: string, val: string) {
+          filters.push((r) => String(r[col]) < val);
+          return builder;
+        },
         order(col: string, opts?: { ascending?: boolean }) {
           order = { col, asc: opts?.ascending !== false };
           return builder;
@@ -140,6 +145,7 @@ function world() {
     quiz_results: [{ id: 101, person_id: "p-albhy", scores: scores(3), taken_at: "2026-10-01" }],
     comparisons: [],
     comparison_participants: [],
+    comparison_invite_log: [],
   };
   return { db: fakeDb(tables), tables, albhy, mel, stranger };
 }
@@ -192,16 +198,43 @@ test("either person can end it, and it disappears for both", async () => {
   await respond(db, mel, id, "accept");
 
   assert.equal((await revoke(db, mel, id)).ok, true);
-  assert.deepEqual(await getView(db, albhy, id), { state: "revoked" });
-  assert.deepEqual(await getView(db, mel, id), { state: "revoked" });
+  assert.equal(await getView(db, albhy, id), null);
+  assert.equal(await getView(db, mel, id), null);
+  // The record is deleted, not just marked ended. Both results remain.
+  assert.equal(tables.comparisons.length, 0);
+  assert.equal(tables.comparison_participants.length, 0);
+  assert.equal(tables.quiz_results.length, 2);
 });
 
-test("declining closes the invitation and shows nothing", async () => {
-  const { db, albhy, mel } = world();
+test("declining deletes the invitation, including the invited email", async () => {
+  const { db, tables, albhy, mel } = world();
   const id = ((await createComparison(db, albhy, mel.email)) as { id: string }).id;
   assert.equal((await respond(db, mel, id, "decline")).ok, true);
-  assert.deepEqual(await getView(db, albhy, id), { state: "declined" });
+  assert.equal(await getView(db, albhy, id), null);
   assert.equal(await getView(db, mel, id), null);
+  assert.equal(tables.comparisons.length, 0);
+  assert.equal(tables.comparison_participants.length, 0);
+  assert.equal((await listForUser(db, albhy)).length, 0);
+});
+
+test("an invitation unanswered for 30 days is deleted", async () => {
+  const { db, tables, albhy, mel } = world();
+  const id = ((await createComparison(db, albhy, mel.email)) as { id: string }).id;
+  const old = new Date(Date.now() - (INVITE_EXPIRY_DAYS + 1) * 24 * 60 * 60 * 1000).toISOString();
+  tables.comparisons.find((c) => c.id === id)!.created_at = old;
+  assert.equal((await listForUser(db, mel)).length, 0);
+  assert.equal(tables.comparisons.length, 0);
+  assert.equal(tables.comparison_participants.length, 0);
+});
+
+test("ending invitations does not free up the daily cap", async () => {
+  const { db, albhy } = world();
+  for (let i = 0; i < MAX_INVITES_PER_DAY; i++) {
+    const id = ((await createComparison(db, albhy, `f${i}@example.com`)) as { id: string }).id;
+    assert.equal((await revoke(db, albhy, id)).ok, true);
+  }
+  const capped = await createComparison(db, albhy, "more@example.com");
+  assert.equal(capped.ok === false && capped.status, 429);
 });
 
 test("invitations are refused without a result, to yourself, twice, or past the daily cap", async () => {

@@ -23,7 +23,7 @@ type View =
 const MESSAGES: Record<string, string> = {
   pending: "This comparison is waiting for the other person to accept. Nothing is shown until they do.",
   declined: "This invitation was declined.",
-  revoked: "This comparison was ended, and it is no longer available to either person.",
+  revoked: "This comparison was ended and deleted for both of you.",
   unavailable:
     "This comparison can't be shown right now. One of the two assessments it uses is no longer available.",
 };
@@ -56,7 +56,7 @@ export default function ComparisonView({ id }: { id: string }) {
     setBusy(true);
     try {
       const res = await fetch(`/compare/api/comparisons/${id}`, { method: "DELETE" });
-      if (res.ok) load();
+      if (res.ok) setView({ state: "revoked" });
     } finally {
       setBusy(false);
     }

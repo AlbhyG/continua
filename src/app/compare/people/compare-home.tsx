@@ -86,7 +86,6 @@ export default function CompareHome() {
   const waitingForMe = (items ?? []).filter((c) => c.needsMyResponse);
   const active = (items ?? []).filter((c) => c.canView);
   const waitingOnThem = (items ?? []).filter((c) => c.waitingOnThem);
-  const ended = (items ?? []).filter((c) => c.status === "declined" || c.status === "revoked");
 
   return (
     <main className="mx-auto max-w-[760px] px-6 py-16">
@@ -258,17 +257,6 @@ export default function CompareHome() {
           </button>
         </form>
       </section>
-
-      {ended.length > 0 && (
-        <section className="mt-8">
-          <h2 className="text-xl font-bold text-white">Ended</h2>
-          {ended.map((c) => (
-            <p key={c.id} className="glass-card mt-3 p-4 text-sm text-foreground/70">
-              {c.other.name}: {c.status === "declined" ? "declined" : "ended"}
-            </p>
-          ))}
-        </section>
-      )}
 
       {items === null && <p className="mt-8 text-white/70">Loading…</p>}
     </main>

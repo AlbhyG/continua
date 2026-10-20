@@ -61,6 +61,31 @@ export async function hasOwnResult(db: Db, userId: string): Promise<boolean> {
 }
 
 export const MAX_INVITES_PER_DAY = 10;
+// Unanswered invitations are deleted after this many days.
+export const INVITE_EXPIRY_DAYS = 30;
+
+// Ending, declining, or letting an invitation expire deletes the comparison
+// and its participant rows (invited email, responses, which result each
+// person compared). Nothing about it is kept afterward.
+async function deleteComparison(db: Db, comparisonId: string): Promise<void> {
+  await db.from("comparison_participants").delete().eq("comparison_id", comparisonId);
+  await db.from("comparisons").delete().eq("id", comparisonId);
+}
+
+// Deletes invitations left unanswered past INVITE_EXPIRY_DAYS, and invite-cap
+// entries older than a day. A daily database job does the same (migration
+// 00027); running it here as well keeps things tidy if that job is missing.
+export async function purgeExpired(db: Db): Promise<void> {
+  const cutoff = new Date(Date.now() - INVITE_EXPIRY_DAYS * 24 * 60 * 60 * 1000).toISOString();
+  const { data: stale } = await db
+    .from("comparisons")
+    .select("id")
+    .eq("status", "pending")
+    .lt("created_at", cutoff);
+  for (const c of stale ?? []) await deleteComparison(db, c.id as string);
+  const dayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+  await db.from("comparison_invite_log").delete().lt("sent_at", dayAgo);
+}
 
 function hasAllAxes(scores: unknown): scores is AxisScores {
   if (!scores || typeof scores !== "object") return false;
@@ -82,13 +107,17 @@ export async function createComparison(
   const resultId = await latestOwnResultId(db, actor.id);
   if (!resultId) return fail(400, "Take an assessment first, then invite someone.");
 
+  await purgeExpired(db);
+
   // Invitations send email, so cap how many one account can send in a day.
+  // Counted from a separate log (account id and time only), because ended and
+  // declined comparisons are deleted and would otherwise free up the cap.
   const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
   const { count: recent } = await db
-    .from("comparisons")
-    .select("id", { count: "exact", head: true })
-    .eq("created_by", actor.id)
-    .gte("created_at", since);
+    .from("comparison_invite_log")
+    .select("user_id", { count: "exact", head: true })
+    .eq("user_id", actor.id)
+    .gte("sent_at", since);
   if ((recent ?? 0) >= MAX_INVITES_PER_DAY) {
     return fail(429, "You have sent the most invitations allowed in a day. Please try again tomorrow.");
   }
@@ -134,9 +163,10 @@ export async function createComparison(
     { comparison_id: created.id, invited_email: invitee, response: "invited" },
   ]);
   if (partError) {
-    await db.from("comparisons").delete().eq("id", created.id);
+    await deleteComparison(db, created.id);
     return fail(500, "Could not create the comparison.");
   }
+  await db.from("comparison_invite_log").insert({ user_id: actor.id, sent_at: now });
   return { ok: true, id: created.id };
 }
 
@@ -152,6 +182,7 @@ export type ComparisonSummary = {
 };
 
 export async function listForUser(db: Db, actor: Actor): Promise<ComparisonSummary[]> {
+  await purgeExpired(db);
   const me = normEmail(actor.email);
   const { data: mine } = await db
     .from("comparison_participants")
@@ -221,19 +252,12 @@ export async function respond(
     .maybeSingle();
   if (!cmp || cmp.status !== "pending") return fail(409, "This invitation is no longer open.");
 
-  const now = new Date().toISOString();
   if (action === "decline") {
-    await db
-      .from("comparison_participants")
-      .update({ response: "declined", user_id: actor.id, responded_at: now })
-      .eq("comparison_id", comparisonId)
-      .eq("invited_email", me);
-    await db
-      .from("comparisons")
-      .update({ status: "declined", ended_at: now, ended_by: actor.id })
-      .eq("id", comparisonId);
+    await deleteComparison(db, comparisonId);
     return { ok: true };
   }
+
+  const now = new Date().toISOString();
 
   const resultId = await latestOwnResultId(db, actor.id);
   if (!resultId) return fail(400, "Take an assessment first, then accept.");
@@ -257,7 +281,7 @@ export async function respond(
 }
 
 // Either accepted participant can end a pending or active comparison. It is
-// then unavailable to both sides immediately.
+// deleted, so it is gone for both sides immediately.
 export async function revoke(
   db: Db,
   actor: Actor,
@@ -281,10 +305,7 @@ export async function revoke(
   if (cmp.status !== "pending" && cmp.status !== "active") {
     return fail(409, "This comparison has already ended.");
   }
-  await db
-    .from("comparisons")
-    .update({ status: "revoked", ended_at: new Date().toISOString(), ended_by: actor.id })
-    .eq("id", comparisonId);
+  await deleteComparison(db, comparisonId);
   return { ok: true };
 }
 
