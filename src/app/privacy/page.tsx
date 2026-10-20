@@ -112,7 +112,7 @@ export default function PrivacyPage() {
             Nothing is compared or shown to either person unless the invited person signs in, takes the assessment, and accepts. A comparison uses the result each person had when they joined it. Once both have joined, each participant can see the other’s result within the comparison. Either participant can end a comparison at any time; after that, neither can see the other’s result through it. Users should invite only people they know and should respect their decision whether to take part.
           </p>
           <p className="mt-3">
-            Continua previously allowed users to record another person’s name and limited related information. That feature has been removed, and those records are no longer shown on the site. Such a record does not mean the other person took a Continua assessment, consented to it, or verified its accuracy. Either the user who created a record or the person named may ask us to delete it by contacting <a href="mailto:albhy@continua.info" className="underline hover:text-accent transition-colors">albhy@continua.info</a>.
+            Continua previously allowed users to record another person’s name and limited related information. That feature has been removed, and those records are no longer shown on the site. Such a record does not mean the other person took a Continua assessment, consented to it, or verified its accuracy. Either the user who created a record or the person named may ask us to delete it by contacting <a href="mailto:privacy@continua.info" className="underline hover:text-accent transition-colors">privacy@continua.info</a>.
           </p>
           <p className="mt-3">
             Users should respect the privacy of other people and should not use Continua to record sensitive, confidential, defamatory, harassing, or unlawful information about another person.
@@ -198,7 +198,7 @@ export default function PrivacyPage() {
             Depending on where you live and applicable law, you may have rights concerning your personal information, which may include rights to request access, correction, or deletion; obtain certain information in a portable format; object to or restrict certain processing; withdraw consent where processing is based on consent; and appeal or complain to an appropriate privacy or data-protection authority where applicable.
           </p>
           <p className="mt-3">
-            You can delete individual results, turn off shared links, and end comparisons yourself. To delete your account or make any other privacy request, contact <a href="mailto:albhy@continua.info" className="underline hover:text-accent transition-colors">albhy@continua.info</a>. We may need to verify your identity before completing certain requests. We will respond within the period required by applicable law. We will not discriminate against you for exercising privacy rights provided by applicable law.
+            You can delete individual results, turn off shared links, and end comparisons yourself. To delete your account or make any other privacy request, contact <a href="mailto:privacy@continua.info" className="underline hover:text-accent transition-colors">privacy@continua.info</a>. We may need to verify your identity before completing certain requests. We will respond within the period required by applicable law. We will not discriminate against you for exercising privacy rights provided by applicable law.
           </p>
         </section>
 
@@ -208,7 +208,7 @@ export default function PrivacyPage() {
             Continua is intended for adults age 18 and older. We ask individuals under 18 not to create an account, take a Continua assessment, or provide personal information through the service. Continua does not use age-verification technology.
           </p>
           <p className="mt-3">
-            We do not knowingly collect personal information from children under 13. If we learn that we have collected personal information from a child under 13, we will take reasonable steps to delete it. If you are a parent or guardian and believe that a child under 13 has provided personal information to Continua, please contact us at <a href="mailto:albhy@continua.info" className="underline hover:text-accent transition-colors">albhy@continua.info</a>.
+            We do not knowingly collect personal information from children under 13. If we learn that we have collected personal information from a child under 13, we will take reasonable steps to delete it. If you are a parent or guardian and believe that a child under 13 has provided personal information to Continua, please contact us at <a href="mailto:privacy@continua.info" className="underline hover:text-accent transition-colors">privacy@continua.info</a>.
           </p>
         </section>
 
@@ -236,7 +236,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-[24px] font-bold mb-3">18. Contact Us</h2>
           <p>
-            If you have questions about this Privacy Policy, our privacy practices, or a request concerning your personal information, contact: <a href="mailto:albhy@continua.info" className="underline hover:text-accent transition-colors">albhy@continua.info</a> · continua.info
+            If you have questions about this Privacy Policy, our privacy practices, or a request concerning your personal information, contact: <a href="mailto:privacy@continua.info" className="underline hover:text-accent transition-colors">privacy@continua.info</a> · continua.info
           </p>
         </section>
       </div>
