@@ -193,9 +193,12 @@ export default async function MyInfoPage() {
 
       {/* Rarely needed, so kept closed at the bottom of the page. */}
       <details className="group mt-12">
-        <summary className="cursor-pointer list-none text-sm font-semibold text-white/70 transition hover:text-white">
-          <span className="inline-block transition-transform group-open:rotate-90" aria-hidden="true">›</span>{' '}
-          Sign-in settings
+        <summary className="flex cursor-pointer list-none items-center justify-between rounded-2xl border border-white/30 px-5 py-4 text-lg font-bold text-white transition hover:bg-white/10 [&::-webkit-details-marker]:hidden">
+          <span>
+            Sign-in settings
+            <span className="ml-2 text-sm font-normal text-white/70">Passkeys</span>
+          </span>
+          <span className="text-2xl leading-none transition-transform group-open:rotate-90" aria-hidden="true">›</span>
         </summary>
         <PasskeySettings />
       </details>
