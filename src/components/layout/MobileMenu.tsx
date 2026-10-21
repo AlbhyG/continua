@@ -64,9 +64,6 @@ export default function MobileMenu({
           <Link href="/about" onClick={onClose} className={sectionClass}>
             About
           </Link>
-          <Link href="/famous-figures" onClick={onClose} className={`mt-5 ${sectionClass}`}>
-            Famous Figures
-          </Link>
           <div className="mt-8">
             <AccountButton mobile onNavigate={onClose} />
           </div>

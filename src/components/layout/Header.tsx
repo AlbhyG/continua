@@ -153,9 +153,6 @@ export default function Header() {
             <Link href="/about" className={navLinkClass}>
               About
             </Link>
-            <Link href="/famous-figures" className={`whitespace-nowrap ${navLinkClass}`}>
-              Famous Figures
-            </Link>
             <AccountButton />
 
             <FirstChapterPopover
