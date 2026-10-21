@@ -33,10 +33,13 @@ const COLORS: Record<keyof AxisScores, string> = {
 
 export default function HistoryChart({ data }: { data: HistoryEntry[] }) {
   const chartData = data.map((entry) => ({
-    assessment: `#${entry.questionnaire_id} · ${new Date(entry.taken_at).toLocaleDateString("en-US", {
+    // Date and time, so two assessments on the same day are told apart.
+    assessment: new Date(entry.taken_at).toLocaleString("en-US", {
       month: "short",
       day: "numeric",
-    })}`,
+      hour: "numeric",
+      minute: "2-digit",
+    }),
     ...entry.scores,
     empathy: entry.scores?.empathy ?? entry.score,
   }));

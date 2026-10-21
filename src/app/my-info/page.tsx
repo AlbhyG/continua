@@ -8,6 +8,7 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import { requireUser } from '@/lib/auth/current-user'
 import { SHOW_PEOPLE_COMPARISON } from '@/lib/site-mode'
 import HistoryChart from '@/components/quiz/HistoryChart'
+import LocalDateTime from '@/components/LocalDateTime'
 import { AXIS_INFO, type AxisScores } from '@/lib/quiz/scoring'
 
 export const metadata: Metadata = {
@@ -152,18 +153,10 @@ export default async function MyInfoPage() {
                 return (
                   <article key={result.id} className="glass-card-interactive p-5">
                     <Link href={`/quiz/results/${result.id}`} className="block">
-                    <div className="flex items-start justify-between gap-4">
-                      <p className="text-xs font-bold uppercase tracking-wide text-foreground/45">
-                        Assessment {result.questionnaire_id}
-                      </p>
-                      <time className="text-xs text-foreground/55">
-                        {new Intl.DateTimeFormat('en-US', {
-                          month: 'short',
-                          day: 'numeric',
-                          year: 'numeric',
-                        }).format(new Date(result.taken_at))}
-                      </time>
-                    </div>
+                    <LocalDateTime
+                      iso={result.taken_at}
+                      className="block text-sm font-bold text-foreground/70"
+                    />
                     <div className="mt-4 grid grid-cols-2 gap-2">
                       {AXES.filter((axis) => Number.isFinite(scores[axis])).map(
                         (axis) => (
