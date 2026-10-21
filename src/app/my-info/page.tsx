@@ -28,39 +28,36 @@ const AXES = Object.keys(AXIS_INFO) as Array<keyof AxisScores>
 
 export default async function MyInfoPage() {
   const { supabase, user } = await requireUser('/my-info')
-  const [{ data: showWelcome, error: welcomeError }, { data: selfPerson }] = await Promise.all([
-    supabase.rpc('consume_first_login_welcome'),
-    supabase
-      .from('people')
-      .select('id,name')
-      .eq('owner_user_id', user.id)
-      .eq('is_self', true)
-      .single(),
-  ])
+  // These three don't depend on each other, so run them together. Results come
+  // embedded with the person record, and share links are looked up by account
+  // (results are attached to the account before this runs, in requireUser).
+  const admin = createAdminClient()
+  const [{ data: showWelcome, error: welcomeError }, { data: selfPerson }, { data: shares }] =
+    await Promise.all([
+      supabase.rpc('consume_first_login_welcome'),
+      supabase
+        .from('people')
+        .select('id,name,quiz_results(id,questionnaire_id,score,scores,taken_at)')
+        .eq('owner_user_id', user.id)
+        .eq('is_self', true)
+        .order('taken_at', { referencedTable: 'quiz_results', ascending: false })
+        .single(),
+      admin
+        ? admin
+            .from('result_share_links')
+            .select('result_id, quiz_results!inner(user_id)')
+            .eq('quiz_results.user_id', user.id)
+            .or(`expires_at.is.null,expires_at.gt.${new Date().toISOString()}`)
+        : Promise.resolve({ data: [] as { result_id: number }[] }),
+    ])
   if (welcomeError) {
     console.error('Could not record first-login welcome:', welcomeError.message)
   }
-  const { data: results } = selfPerson
-    ? await supabase
-      .from('quiz_results')
-      .select('id,questionnaire_id,score,scores,taken_at')
-      .eq('person_id', selfPerson.id)
-      .order('taken_at', { ascending: false })
-    : { data: [] }
 
-  const quizResults = (results ?? []) as QuizResult[]
+  const quizResults = ((selfPerson?.quiz_results ?? []) as QuizResult[])
 
   // Which of these results currently have a working share link.
-  const sharedIds = new Set<number>()
-  const admin = createAdminClient()
-  if (admin && quizResults.length > 0) {
-    const { data: shares } = await admin
-      .from('result_share_links')
-      .select('result_id')
-      .in('result_id', quizResults.map((result) => result.id))
-      .or(`expires_at.is.null,expires_at.gt.${new Date().toISOString()}`)
-    for (const share of shares ?? []) sharedIds.add(share.result_id)
-  }
+  const sharedIds = new Set<number>((shares ?? []).map((share) => share.result_id))
 
   return (
     <main className="mx-auto max-w-[960px] px-6 py-16">
