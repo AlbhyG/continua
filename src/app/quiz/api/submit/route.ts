@@ -4,6 +4,7 @@ import { getQuestionnaire } from "@/lib/quiz/questionnaires";
 import { calculateScores, getAxisLabel, AXIS_INFO } from "@/lib/quiz/scoring";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { countEarlierResults } from "@/lib/quiz/earlier-count";
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
@@ -104,8 +105,11 @@ export async function POST(request: NextRequest) {
     }
   );
 
+  const earlierCount = user ? await countEarlierResults(admin, ownedPersonId, resultId) : 0;
+
   return NextResponse.json({
     resultId,
+    earlierCount,
     scores,
     axisResults,
     activeShareCount: 0,

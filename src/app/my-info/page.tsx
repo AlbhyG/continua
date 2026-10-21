@@ -127,7 +127,7 @@ export default async function MyInfoPage() {
         ) : (
           <>
             {quizResults.length >= 2 ? (
-              <section className="glass-card mt-5 p-5 md:p-6">
+              <section id="trends" className="glass-card mt-5 scroll-mt-28 p-5 md:p-6">
                 <h3 className="text-xl font-bold">Your trends</h3>
                 <p className="mt-1 text-sm text-foreground/60">
                   Each line tracks one coordinate on the 1–10 scale, oldest to newest.
@@ -161,7 +161,7 @@ export default async function MyInfoPage() {
                             <p className="truncate text-[11px] font-semibold text-foreground/55">
                               {AXIS_INFO[axis].name}
                             </p>
-                            <p className="mt-0.5 text-lg font-bold">{scores[axis]}</p>
+                            <p className="mt-0.5 text-lg font-bold">{Number(scores[axis]).toFixed(1)}</p>
                           </div>
                         )
                       )}

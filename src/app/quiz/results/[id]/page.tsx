@@ -87,8 +87,15 @@ function ResultView({ resultId, result }: { resultId: string; result: ResultData
           onClick={takeAnother}
           className="w-full rounded-xl bg-white/90 px-4 py-4 text-sm font-bold text-foreground transition-all hover:bg-white shadow-sm"
         >
-          Take Another Assessment
+          Take another assessment
         </button>
+        {(result.earlierCount ?? 0) > 0 && (
+          <Link href="/my-info#trends" className={secondaryButtonClass}>
+            {result.earlierCount === 1
+              ? "Compare with your earlier assessment"
+              : `Compare with your ${result.earlierCount} earlier assessments`}
+          </Link>
+        )}
         {canShare && <ShareButton sharing={sharing} />}
         {SHOW_PEOPLE_COMPARISON && (
           <Link href="/compare/people" className={secondaryButtonClass}>

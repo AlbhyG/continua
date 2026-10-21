@@ -20,6 +20,8 @@ export interface ResultData {
   signedIn?: boolean;
   personId?: string | null;
   personName?: string | null;
+  // Other saved results for the same signed-in person.
+  earlierCount?: number;
 }
 
 // Tell the header's "See Results" which result is the latest (or that there is none).

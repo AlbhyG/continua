@@ -5,6 +5,7 @@ import { countShareLinks, isShareableResult } from "@/lib/quiz/share";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { isAdmin } from "@/lib/admin/admin-auth";
+import { countEarlierResults } from "@/lib/quiz/earlier-count";
 
 export async function GET(
   request: NextRequest,
@@ -86,8 +87,14 @@ export async function GET(
       (token && row.anonymous_token === token)
   );
 
+  const earlierCount =
+    user && row.user_id === user.id
+      ? await countEarlierResults(admin, row.person_id, row.id)
+      : 0;
+
   return NextResponse.json({
     resultId: row.id,
+    earlierCount,
     scores,
     axisResults,
     activeShareCount,

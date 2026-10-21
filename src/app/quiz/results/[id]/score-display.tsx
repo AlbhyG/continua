@@ -35,7 +35,7 @@ export default function ScoreDisplay({ result }: { result: ResultData }) {
           <div key={ar.axis} className="rounded-xl bg-white/80 backdrop-blur-sm p-4 shadow-sm">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-bold text-foreground/80">{ar.name}</span>
-              <span className="text-sm text-foreground/50">{ar.score}</span>
+              <span className="text-sm text-foreground/50">{Number(ar.score).toFixed(1)}</span>
             </div>
             <div className="relative h-1.5 rounded-full bg-foreground/10">
               <div
