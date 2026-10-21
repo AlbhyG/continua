@@ -191,7 +191,14 @@ export default async function MyInfoPage() {
         )}
       </section>
 
-      <PasskeySettings />
+      {/* Rarely needed, so kept closed at the bottom of the page. */}
+      <details className="group mt-12">
+        <summary className="cursor-pointer list-none text-sm font-semibold text-white/70 transition hover:text-white">
+          <span className="inline-block transition-transform group-open:rotate-90" aria-hidden="true">›</span>{' '}
+          Sign-in settings
+        </summary>
+        <PasskeySettings />
+      </details>
     </main>
   )
 }
