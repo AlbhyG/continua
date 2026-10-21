@@ -107,7 +107,7 @@ export default async function MyInfoPage() {
               href="/quiz"
               className="rounded-xl bg-white/90 px-5 py-2.5 text-sm font-bold text-foreground transition hover:bg-white"
             >
-              Take an assessment
+              {quizResults.length > 0 ? 'Take another assessment' : 'Take an assessment'}
             </Link>
           </div>
         </div>
