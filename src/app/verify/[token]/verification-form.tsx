@@ -67,7 +67,7 @@ export default function VerificationForm({ token }: VerificationFormProps) {
         <button
           type="submit"
           disabled={isPending}
-          className="w-full rounded-full bg-accent text-white font-bold py-3 hover:bg-accent/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full rounded-full bg-accent text-white font-bold py-3 hover:bg-accent/90 transition-colors disabled:opacity-70 disabled:cursor-wait"
         >
           {isPending ? 'Verifying...' : 'Verify Email'}
         </button>

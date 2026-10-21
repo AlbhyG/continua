@@ -163,13 +163,26 @@ export default function QuizTakePage() {
         <button
           onClick={handleSubmit}
           disabled={!allAnswered || submitting}
+          aria-busy={submitting}
           className={`w-full rounded-xl px-4 py-4 text-sm font-bold transition-all ${
-            allAnswered && !submitting
-              ? "bg-white/90 text-foreground hover:bg-white shadow-sm"
-              : "cursor-not-allowed bg-white/30 text-foreground/30"
+            submitting
+              ? "cursor-wait bg-white/90 text-foreground shadow-sm"
+              : allAnswered
+                ? "bg-white/90 text-foreground hover:bg-white shadow-sm"
+                : "cursor-not-allowed bg-white/30 text-foreground/30"
           }`}
         >
-          {submitting ? "Submitting..." : "Submit Answers"}
+          {submitting ? (
+            <span className="inline-flex items-center justify-center gap-2">
+              <span
+                className="h-4 w-4 animate-spin rounded-full border-2 border-foreground/20 border-t-foreground/70"
+                aria-hidden="true"
+              />
+              Calculating your results…
+            </span>
+          ) : (
+            "Submit Answers"
+          )}
         </button>
         {!allAnswered && (
           <p className="mt-3 text-center text-sm text-foreground/50">
