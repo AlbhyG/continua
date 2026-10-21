@@ -18,7 +18,6 @@ export default function AccountButton({
 
   useEffect(() => {
     const supabase = createClient()
-    supabase.auth.getUser().then(({ data }) => setSignedIn(Boolean(data.user)))
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
@@ -26,6 +25,28 @@ export default function AccountButton({
     })
     return () => subscription.unsubscribe()
   }, [])
+
+  // The header stays mounted across pages, so check again with the server on
+  // every page change and when the tab regains focus. Otherwise a session that
+  // ended in the meantime still shows "Sign out" while the site treats the
+  // person as signed out (and saves their assessment without the account).
+  useEffect(() => {
+    const supabase = createClient()
+    let cancelled = false
+    const check = () =>
+      supabase.auth.getUser().then(({ data }) => {
+        if (!cancelled) setSignedIn(Boolean(data.user))
+      })
+    check()
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') check()
+    }
+    document.addEventListener('visibilitychange', onVisible)
+    return () => {
+      cancelled = true
+      document.removeEventListener('visibilitychange', onVisible)
+    }
+  }, [pathname])
 
   const linkClassName = mobile
     ? 'block w-full rounded-xl bg-accent px-4 py-2.5 text-center text-sm font-semibold text-white'
