@@ -10,6 +10,7 @@ import { SHOW_PEOPLE_COMPARISON } from '@/lib/site-mode'
 import HistoryChart from '@/components/quiz/HistoryChart'
 import LocalDateTime from '@/components/LocalDateTime'
 import { AXIS_INFO, type AxisScores } from '@/lib/quiz/scoring'
+import { AXIS_COLORS } from '@/lib/quiz/axis-colors'
 
 export const metadata: Metadata = {
   title: 'My Continua',
@@ -154,17 +155,34 @@ export default async function MyInfoPage() {
                       iso={result.taken_at}
                       className="block text-sm font-bold text-foreground/70"
                     />
-                    <div className="mt-4 grid grid-cols-2 gap-2">
-                      {AXES.filter((axis) => Number.isFinite(scores[axis])).map(
-                        (axis) => (
-                          <div key={axis} className="rounded-lg bg-white/45 px-3 py-2">
-                            <p className="truncate text-[11px] font-semibold text-foreground/55">
-                              {AXIS_INFO[axis].name}
-                            </p>
-                            <p className="mt-0.5 text-lg font-bold">{Number(scores[axis]).toFixed(1)}</p>
+                    <div className="mt-3 flex flex-col">
+                      {AXES.filter((axis) => Number.isFinite(scores[axis])).map((axis) => {
+                        const value = Number(scores[axis])
+                        const info = AXIS_INFO[axis]
+                        return (
+                          <div key={axis} className="border-t border-foreground/10 py-2 first:border-t-0">
+                            <div className="flex items-baseline justify-between gap-2">
+                              <span className="text-sm font-semibold text-foreground/75">{info.name}</span>
+                              <span className="text-sm font-bold tabular-nums">{value.toFixed(1)}</span>
+                            </div>
+                            <div
+                              className="relative mx-1.5 mt-1.5 h-3"
+                              role="img"
+                              aria-label={`${info.name} ${value.toFixed(1)}, between ${info.lowLabel} (1) and ${info.highLabel} (10)`}
+                            >
+                              <div className="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 rounded-full bg-foreground/15" />
+                              <div
+                                className="absolute top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full ring-2 ring-white"
+                                style={{ left: `${((value - 1) / 9) * 100}%`, backgroundColor: AXIS_COLORS[axis] }}
+                              />
+                            </div>
+                            <div className="mt-0.5 flex justify-between text-[10px] text-foreground/45">
+                              <span>{info.lowLabel}</span>
+                              <span>{info.highLabel}</span>
+                            </div>
                           </div>
                         )
-                      )}
+                      })}
                     </div>
                     {!result.scores && (
                       <p className="mt-3 text-xs text-foreground/50">
