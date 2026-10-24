@@ -30,7 +30,7 @@ export async function deleteAssessmentAction(formData: FormData) {
     throw new Error(`Could not delete assessment: ${error.message}`)
   }
 
-  revalidatePath('/my-info')
+  revalidatePath('/my-continua')
 }
 
 export async function stopSharingAction(formData: FormData) {
@@ -65,5 +65,5 @@ export async function stopSharingAction(formData: FormData) {
   }
   await revokeShareLinks(resultId, admin)
 
-  revalidatePath('/my-info')
+  revalidatePath('/my-continua')
 }

@@ -52,7 +52,7 @@ export async function updateDisplayName(
     .eq('user_id', user.id)
   if (contactError) console.error('Contact name update failed:', contactError.message)
 
-  revalidatePath('/my-info')
+  revalidatePath('/my-continua')
   revalidatePath('/compare/people')
   return { success: true, message: 'Saved.' }
 }

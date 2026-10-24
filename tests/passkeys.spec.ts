@@ -50,7 +50,7 @@ test('live passkey lifecycle and email recovery on both production origins', asy
 
   try {
     await emailSession('https://continua.info')
-    await page.goto('https://continua.info/auth/passkey-setup?next=%2Fmy-info')
+    await page.goto('https://continua.info/auth/passkey-setup?next=%2Fmy-continua')
     await expect(page.getByRole('heading', { name: 'Make this faster next time' })).toBeVisible()
     for (const width of [375, 1440]) {
       await page.setViewportSize({ width, height: 900 })
@@ -58,13 +58,13 @@ test('live passkey lifecycle and email recovery on both production origins', asy
       await page.screenshot({ path: `/tmp/continua-login-review/setup-${width}.png`, fullPage: true })
     }
     await page.getByRole('link', { name: 'Skip for now' }).click()
-    await expect(page).toHaveURL('https://continua.info/my-info')
-    await page.goto('https://continua.info/auth/passkey-setup?next=%2Fmy-info')
-    await expect(page).toHaveURL('https://continua.info/my-info')
+    await expect(page).toHaveURL('https://continua.info/my-continua')
+    await page.goto('https://continua.info/auth/passkey-setup?next=%2Fmy-continua')
+    await expect(page).toHaveURL('https://continua.info/my-continua')
     // Reset only this isolated fixture to exercise the alternative first-run choice.
     const { error: resetError } = await admin.from('contacts').update({ passkey_setup_offered_at: null }).eq('user_id', userId)
     if (resetError) throw resetError
-    await page.goto('https://continua.info/auth/passkey-setup?next=%2Fmy-info')
+    await page.goto('https://continua.info/auth/passkey-setup?next=%2Fmy-continua')
     await expect(page.getByRole('button', { name: 'Add a passkey', exact: true })).toBeEnabled()
     await page.getByRole('button', { name: 'Add a passkey', exact: true }).click()
     await expect(page.getByRole('status')).toContainText('Passkey added')
@@ -88,19 +88,19 @@ test('live passkey lifecycle and email recovery on both production origins', asy
 
     for (const origin of ['https://continua.info', 'https://www.continua.info']) {
       await context.clearCookies()
-      await page.goto(`${origin}/login?next=%2Fmy-info`)
+      await page.goto(`${origin}/login?next=%2Fmy-continua`)
       await page.getByLabel('Email', { exact: true }).fill(email.toUpperCase())
       await page.getByRole('button', { name: 'Sign in with a passkey', exact: true }).click()
-      await expect(page).toHaveURL(`${origin}/my-info`)
+      await expect(page).toHaveURL(`${origin}/my-continua`)
       await expect(page.getByText('Automated verification key', { exact: true })).toBeVisible()
       await expect(page.locator(`a[href="/quiz/results/${resultId}"]`)).toBeVisible()
     }
     expect(signedInIds).toEqual([userId, userId])
 
     await context.clearCookies()
-    await page.goto('https://continua.info/login?autofill-test=1&next=%2Fmy-info')
+    await page.goto('https://continua.info/login?autofill-test=1&next=%2Fmy-continua')
     await page.getByLabel('Email', { exact: true }).focus()
-    await expect(page).toHaveURL('https://continua.info/my-info', { timeout: 10_000 })
+    await expect(page).toHaveURL('https://continua.info/my-continua', { timeout: 10_000 })
     expect(signedInIds).toEqual([userId, userId, userId])
     await expect(page.locator(`a[href="/quiz/results/${resultId}"]`)).toBeVisible()
 
@@ -123,7 +123,7 @@ test('live passkey lifecycle and email recovery on both production origins', asy
     await cdp.send('WebAuthn.setAutomaticPresenceSimulation', { authenticatorId, enabled: true })
 
     await emailSession('https://continua.info')
-    await page.goto('https://continua.info/my-info')
+    await page.goto('https://continua.info/my-continua')
     await expect(page.locator(`a[href="/quiz/results/${resultId}"]`)).toBeVisible()
     await page.getByRole('button', { name: 'Remove', exact: true }).click()
     await expect(page.getByText(/This is your last passkey/)).toBeVisible()
@@ -131,8 +131,8 @@ test('live passkey lifecycle and email recovery on both production origins', asy
     await expect(page.getByText('No passkeys added yet.')).toBeVisible()
     await context.clearCookies()
     await emailSession('https://www.continua.info')
-    await page.goto('https://www.continua.info/auth/passkey-setup?next=%2Fmy-info')
-    await expect(page).toHaveURL('https://www.continua.info/my-info')
+    await page.goto('https://www.continua.info/auth/passkey-setup?next=%2Fmy-continua')
+    await expect(page).toHaveURL('https://www.continua.info/my-continua')
     await expect(page.locator(`a[href="/quiz/results/${resultId}"]`)).toBeVisible()
     await expect(page.getByRole('heading', { name: 'My Info', exact: true })).toBeVisible()
 

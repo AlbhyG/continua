@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import DeleteAssessmentButton from './delete-assessment-button'
+import LatestOrb from './latest-orb'
 import NameForm from './name-form'
 import PasskeySettings from './passkey-settings'
 import StopSharingButton from './stop-sharing-button'
@@ -27,8 +28,8 @@ type QuizResult = {
 
 const AXES = Object.keys(AXIS_INFO) as Array<keyof AxisScores>
 
-export default async function MyInfoPage() {
-  const { supabase, user } = await requireUser('/my-info')
+export default async function MyContinuaPage() {
+  const { supabase, user } = await requireUser('/my-continua')
   // These three don't depend on each other, so run them together. Results come
   // embedded with the person record, and share links are looked up by account
   // (results are attached to the account before this runs, in requireUser).
@@ -83,6 +84,14 @@ export default async function MyInfoPage() {
         <p className="glass-card mt-8 p-4 text-center font-semibold text-foreground/80">
           Welcome to Continua — your assessment history and tools are ready below.
         </p>
+      )}
+
+      {quizResults[0]?.scores && (
+        <LatestOrb
+          resultId={quizResults[0].id}
+          scores={quizResults[0].scores}
+          takenAt={quizResults[0].taken_at}
+        />
       )}
 
       <NameForm name={typeof selfPerson?.name === 'string' ? selfPerson.name : ''} />

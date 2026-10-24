@@ -14,5 +14,5 @@ test('missing, external, malformed and recursive destinations go home', () => {
   for (const value of [null, '', '//evil.example', '/a/..//evil.example', '/%2e%2e//evil.example', '/\\evil.example', '/\nevil.example', 'https://continua.info.evil.example/path', 'https://continua.info@evil.example', 'http://continua.info/path', 'javascript:alert(1)', '/login?next=/login', '/auth/complete', 'https://evil.example/path']) {
     expect(safeNextPath(value)).toBe('/')
   }
-  expect(emailReturnPath('https://evil.example/auth/callback?next=/my-info')).toBe('/')
+  expect(emailReturnPath('https://evil.example/auth/callback?next=/my-continua')).toBe('/')
 })

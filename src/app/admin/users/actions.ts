@@ -92,6 +92,6 @@ export async function createTestSignInLinkAction(
   const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://continua.info').replace(/\/$/, '')
   const link = new URL('/auth/confirm', siteUrl)
   link.searchParams.set('token_hash', tokenHash)
-  link.searchParams.set('next', '/my-info')
+  link.searchParams.set('next', '/my-continua')
   return { link: link.toString() }
 }

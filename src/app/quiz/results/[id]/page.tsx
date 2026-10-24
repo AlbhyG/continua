@@ -90,7 +90,7 @@ function ResultView({ resultId, result }: { resultId: string; result: ResultData
           Take another assessment
         </button>
         {(result.earlierCount ?? 0) > 0 && (
-          <Link href="/my-info#trends" className={secondaryButtonClass}>
+          <Link href="/my-continua#trends" className={secondaryButtonClass}>
             {result.earlierCount === 1
               ? "Compare with your earlier assessment"
               : `Compare with your ${result.earlierCount} earlier assessments`}

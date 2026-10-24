@@ -8,7 +8,7 @@ import { requireUser } from '@/lib/auth/current-user'
 // browser itself remembers a "not now" (see device-memory). `elsewhere` only
 // changes the wording.
 export async function passkeySetupEligibility(): Promise<{ eligible: boolean; elsewhere: boolean }> {
-  const { supabase, user } = await requireUser('/my-info')
+  const { supabase, user } = await requireUser('/my-continua')
   if (!user.email_confirmed_at || user.is_anonymous) return { eligible: false, elsewhere: false }
   const { data: passkeys, error } = await supabase.auth.passkey.list()
   // Optional onboarding must never prevent an otherwise valid sign-in.

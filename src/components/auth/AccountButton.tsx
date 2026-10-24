@@ -76,7 +76,7 @@ export default function AccountButton({
 
   return (
     <div className={mobile ? 'grid w-full grid-cols-2 gap-2' : 'flex items-center gap-3'}>
-      <Link href="/my-info" onClick={onNavigate} className={linkClassName}>
+      <Link href="/my-continua" onClick={onNavigate} className={linkClassName}>
         My Continua
       </Link>
       <form action="/auth/signout" method="post" className={mobile ? 'w-full' : undefined}>
