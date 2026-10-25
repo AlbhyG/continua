@@ -412,6 +412,10 @@ function NameChoice({
   return (
     <fieldset>
       <legend className="text-lg font-bold">Should {first} see your name?</legend>
+      <p className="mt-1 text-sm text-foreground/75">
+        Choose now so you know how your answers will be shown while you answer. You can change your mind at the end,
+        before you submit.
+      </p>
       <div className="mt-3 flex flex-col gap-2">
         <label className={`flex cursor-pointer gap-3 rounded-lg p-3 ${named === true ? "bg-white" : "bg-white/50"}`}>
           <input type="radio" name="named" className="mt-1" checked={named === true} onChange={() => onChange(true)} />
@@ -427,14 +431,14 @@ function NameChoice({
           <span>
             <b>Include me only in an anonymous average</b>
             <span className="block text-sm text-foreground/70">
-              Your scores are averaged with other anonymous answers and only shown once at least two people have chosen
-              this. Your email address is not kept. If only a few people answer, {first} may still be able to guess who
-              said what.
+              Your scores are shown only as an average with at least one other person who also chose anonymous. If no
+              one else does, {first} won&apos;t see your answers at all. So if you may be the only person {first} asked,
+              a partner for example, anonymous means your answers go unseen. Your email address is not kept, but if
+              only a few people answer, {first} may still be able to guess who said what.
             </span>
           </span>
         </label>
       </div>
-      <p className="mt-2 text-xs text-foreground/60">You can change this at the end, before you submit.</p>
     </fieldset>
   );
 }
