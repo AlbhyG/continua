@@ -334,7 +334,7 @@ export default function RaterFlow() {
 
       <div className={`${card} mt-5`}>
         {changingChoice ? (
-          <NameChoice first={first} named={named} onChange={setNamed} />
+          <NameChoice first={first} named={named} onChange={setNamed} atEnd />
         ) : (
           <p className="text-foreground/85">
             {named ? (
@@ -404,8 +404,10 @@ function NameChoice({
   first,
   named,
   onChange,
+  atEnd = false,
 }: {
   first: string;
+  atEnd?: boolean;
   named: boolean | null;
   onChange: (v: boolean) => void;
 }) {
@@ -413,8 +415,9 @@ function NameChoice({
     <fieldset>
       <legend className="text-lg font-bold">Should {first} see your name?</legend>
       <p className="mt-1 text-sm text-foreground/75">
-        Choose now so you know how your answers will be shown while you answer. You can change your mind at the end,
-        before you submit.
+        {atEnd
+          ? "Your answers are saved only when you submit, so you can still switch."
+          : "Choose now so you know how your answers will be shown while you answer. You can change your mind at the end, before you submit."}
       </p>
       <div className="mt-3 flex flex-col gap-2">
         <label className={`flex cursor-pointer gap-3 rounded-lg p-3 ${named === true ? "bg-white" : "bg-white/50"}`}>
