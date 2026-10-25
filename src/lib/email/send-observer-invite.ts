@@ -6,8 +6,8 @@ const escapeHtml = (value: string) =>
   value.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c] as string)
 
 // The invitation to describe someone. It says who asked, what they will and
-// won't see, and that the rater decides at the end whether their name is
-// shown. It contains no scores. The link is personal to this recipient.
+// won't see, and that the rater decides, before answering, whether their
+// name is shown. It contains no scores. The link is personal to this recipient.
 // An optional note (cleaned by cleanInviteNote: plain text, short, no links)
 // appears after the first line, labeled as the inviter's own words.
 export function observerInviteContent(inviterName: string, link: string, note: string | null = null) {
@@ -17,7 +17,7 @@ export function observerInviteContent(inviterName: string, link: string, note: s
     `${inviterName} is using Continua, a short personality questionnaire based on the book Continua: How Opposites Align, and would like to know how you see them.`,
     ...(note ? [noteHeading, note] : []),
     `You'll read 36 short statements about ${inviterName} and say how well each describes them. "Can't tell" is always an option. It takes about five minutes and you don't need an account.`,
-    `${inviterName} will see your answers only as six overall scores, never your answer to any single statement. At the end, you choose whether ${inviterName} sees your name with your scores or only as part of an anonymous average.`,
+    `${inviterName} will see your answers only as six overall scores, never your answer to any single statement. Before you start, you choose whether ${inviterName} sees your name with your scores or only as part of an anonymous average, and you can change your mind before you submit.`,
     'This link is just for you:',
     link,
     'If you were not expecting this, you can ignore this email. The invitation is deleted after 30 days.',

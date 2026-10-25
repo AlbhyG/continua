@@ -214,7 +214,7 @@ test("an anonymous submission keeps no email, and answers once", async () => {
   if (!r.ok) throw new Error("invite failed");
   const body = {
     answers: answersFor(q.questions.length, 2),
-    named: false,
+    named: false, initialNamed: true,
     raterName: "Carol",
     relationship: "friend",
     knownFor: "5_to_15",
@@ -225,6 +225,7 @@ test("an anonymous submission keeps no email, and answers once", async () => {
   assert.equal(row.invited_email, null);
   assert.equal(row.rater_name, null, "a name typed before choosing anonymous is dropped");
   assert.equal(row.research_consent, true);
+  assert.equal(row.initial_is_named, true, "the first-screen choice is kept for research");
   const again = await submitRating(db, r.token, body);
   assert.equal(again.ok, false);
   assert.deepEqual(await getForRater(db, r.token), { state: "completed", subjectName: "Albhy Galuten" });
@@ -236,7 +237,7 @@ test("submissions are validated", async () => {
   if (!r.ok) throw new Error("invite failed");
   const ok = {
     answers: answersFor(q.questions.length, 3),
-    named: true,
+    named: true, initialNamed: true,
     raterName: "Carol",
     relationship: "friend",
     knownFor: "1_to_5",
@@ -247,6 +248,7 @@ test("submissions are validated", async () => {
     { ...ok, answers: answersFor(q.questions.length, 6) },
     { ...ok, answers: answersFor(q.questions.length, CANT_TELL) },
     { ...ok, named: "yes" },
+    { ...ok, initialNamed: undefined },
     { ...ok, raterName: "   " },
     { ...ok, raterName: "x".repeat(61) },
     { ...ok, relationship: "enemy" },
@@ -267,8 +269,8 @@ test("the subject sees named raters and held-back anonymous ones, never answers"
   const carol = await mk("carol@example.com");
   const anon1 = await mk("dan@example.com");
   await mk("erin@example.com");
-  await submitRating(db, carol, { ...base, answers: answersFor(q.questions.length, 1), named: true, raterName: "Carol" });
-  await submitRating(db, anon1, { ...base, answers: answersFor(q.questions.length, 5), named: false, raterName: null });
+  await submitRating(db, carol, { ...base, answers: answersFor(q.questions.length, 1), named: true, initialNamed: true, raterName: "Carol" });
+  await submitRating(db, anon1, { ...base, answers: answersFor(q.questions.length, 5), named: false, initialNamed: true, raterName: null });
 
   const s = await summaryForSubject(db, albhy);
   assert.deepEqual(
@@ -298,8 +300,8 @@ test("deleting: subject by id (not anonymous ones), anonymous all together, rate
   const b = await createInvite(db, albhy, "b@example.com");
   const c = await createInvite(db, albhy, "c@example.com");
   if (!a.ok || !b.ok || !c.ok) throw new Error("invite failed");
-  await submitRating(db, a.token, { ...base, answers: answersFor(q.questions.length, 2), named: true, raterName: "A" });
-  await submitRating(db, b.token, { ...base, answers: answersFor(q.questions.length, 2), named: false, raterName: null });
+  await submitRating(db, a.token, { ...base, answers: answersFor(q.questions.length, 2), named: true, initialNamed: true, raterName: "A" });
+  await submitRating(db, b.token, { ...base, answers: answersFor(q.questions.length, 2), named: false, initialNamed: true, raterName: null });
 
   assert.equal((await deleteForSubject(db, other, a.id)).ok, false, "only the subject can delete");
   assert.equal((await deleteForSubject(db, albhy, b.id)).ok, false, "anonymous ratings aren't addressable one by one");

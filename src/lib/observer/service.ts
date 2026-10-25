@@ -256,6 +256,8 @@ export async function getForRater(db: Db, token: string): Promise<RaterView | nu
 export type Submission = {
   answers: unknown;
   named: unknown;
+  /** The choice made on the first screen, before answering. */
+  initialNamed: unknown;
   raterName: unknown;
   relationship: unknown;
   knownFor: unknown;
@@ -289,6 +291,7 @@ export async function submitRating(
     return fail(400, "Please answer at least some statements other than \"Can't tell\".");
   }
   if (typeof body.named !== "boolean") return fail(400, "Choose whether to show your name.");
+  if (typeof body.initialNamed !== "boolean") return fail(400, "Choose whether to show your name.");
   const raterName = body.named ? cleanRaterName(body.raterName) : null;
   if (body.named && !raterName) return fail(400, `Enter your name (up to ${RATER_NAME_MAX} characters).`);
   if (!RELATIONSHIPS.includes(body.relationship as RelationshipKey)) return fail(400, "Choose how you know them.");
@@ -299,6 +302,7 @@ export async function submitRating(
     status: "completed",
     completed_at: new Date().toISOString(),
     is_named: body.named,
+    initial_is_named: body.initialNamed,
     rater_name: raterName,
     relationship: body.relationship,
     known_for: body.knownFor,

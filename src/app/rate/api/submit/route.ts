@@ -11,6 +11,7 @@ export async function POST(request: NextRequest) {
   const result = await submitRating(db, String(body?.token ?? ""), {
     answers: body?.answers,
     named: body?.named,
+    initialNamed: body?.initialNamed,
     raterName: body?.raterName,
     relationship: body?.relationship,
     knownFor: body?.knownFor,

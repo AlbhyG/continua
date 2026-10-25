@@ -51,6 +51,10 @@ export default function RaterFlow() {
   const [stage, setStage] = useState<Stage>("intro");
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [named, setNamed] = useState<boolean | null>(null);
+  // What the rater chose on the first screen, before answering. Kept for
+  // research; they can still change it at the end.
+  const [initialNamed, setInitialNamed] = useState<boolean | null>(null);
+  const [changingChoice, setChangingChoice] = useState(false);
   const [raterName, setRaterName] = useState("");
   const [relationship, setRelationship] = useState("");
   const [knownFor, setKnownFor] = useState("");
@@ -108,6 +112,7 @@ export default function RaterFlow() {
     const ok = await post("/rate/api/submit", {
       answers: ordered,
       named,
+      initialNamed,
       raterName: named ? raterName : null,
       relationship,
       knownFor,
@@ -189,12 +194,8 @@ export default function RaterFlow() {
             minutes, and you don&apos;t need an account.
           </p>
           <p>
-            <b>What {first} will see:</b> six overall scores, never your answer to any single statement. At the end
-            you choose whether {first} sees your name with your scores, or only as part of an anonymous average with
-            other people&apos;s.
-          </p>
-          <p>
-            <b>Your choice later:</b> you can withdraw your answers at any time using this same link.
+            <b>What {first} will see:</b> six overall scores, never your answer to any single statement. You can
+            withdraw your answers at any time using this same link.
           </p>
           <p className="text-sm text-foreground/65">
             Continua is a self-reflection tool based on the book <i>Continua: How Opposites Align</i>. It is not a
@@ -204,9 +205,19 @@ export default function RaterFlow() {
             </Link>
           </p>
         </div>
+        <div className={`${card} mt-5`}>
+          <NameChoice first={first} named={named} onChange={setNamed} />
+        </div>
         {error && <p role="alert" className="mt-3 text-sm font-semibold text-white">{error}</p>}
         <div className="mt-6 flex items-center gap-5">
-          <button className={primary} onClick={() => setStage("questions")}>
+          <button
+            className={primary}
+            disabled={named === null}
+            onClick={() => {
+              setInitialNamed(named);
+              setStage("questions");
+            }}
+          >
             Start
           </button>
           <button className="text-sm font-semibold text-white underline underline-offset-4" disabled={busy} onClick={() => withdraw("decline")}>
@@ -276,7 +287,7 @@ export default function RaterFlow() {
               ? `Answer all ${questions.length} statements to continue (${answeredCount} done)`
               : allCantTell
                 ? "Please answer at least some statements other than “Can't tell”."
-                : "Next: a few questions about you, and whether to show your name."}
+                : "Next: two quick questions about how you know them."}
           </p>
         </div>
       </main>
@@ -285,7 +296,7 @@ export default function RaterFlow() {
 
   // stage === "about"
   const cleanName = raterName.trim();
-  const ready = named !== null && (!named || cleanName.length > 0) && relationship && knownFor;
+  const ready = named !== null && initialNamed !== null && (!named || cleanName.length > 0) && relationship && knownFor;
   return (
     <main className="mx-auto max-w-2xl px-6 pt-20 pb-12">
       <h1 className="text-3xl font-bold text-white">Almost done</h1>
@@ -322,29 +333,24 @@ export default function RaterFlow() {
       </div>
 
       <div className={`${card} mt-5`}>
-        <h2 className="text-lg font-bold">Should {first} see your name?</h2>
-        <div className="mt-3 flex flex-col gap-2">
-          <label className={`flex cursor-pointer gap-3 rounded-lg p-3 ${named === true ? "bg-white" : "bg-white/50"}`}>
-            <input type="radio" name="named" className="mt-1" checked={named === true} onChange={() => setNamed(true)} />
-            <span>
-              <b>Show my name with my scores</b>
-              <span className="block text-sm text-foreground/70">
-                {first} sees your six scores labeled with your name and how you know them.
-              </span>
-            </span>
-          </label>
-          <label className={`flex cursor-pointer gap-3 rounded-lg p-3 ${named === false ? "bg-white" : "bg-white/50"}`}>
-            <input type="radio" name="named" className="mt-1" checked={named === false} onChange={() => setNamed(false)} />
-            <span>
-              <b>Include me only in an anonymous average</b>
-              <span className="block text-sm text-foreground/70">
-                Your scores are averaged with other anonymous answers and only shown once at least two people have
-                chosen this. Your email address is not kept. If only a few people answer, {first} may still be able
-                to guess who said what.
-              </span>
-            </span>
-          </label>
-        </div>
+        {changingChoice ? (
+          <NameChoice first={first} named={named} onChange={setNamed} />
+        ) : (
+          <p className="text-foreground/85">
+            {named ? (
+              <>
+                You chose to <b>show your name</b> with your scores.
+              </>
+            ) : (
+              <>
+                You chose to be included <b>only in an anonymous average</b>.
+              </>
+            )}{" "}
+            <button type="button" className="font-semibold underline underline-offset-2" onClick={() => setChangingChoice(true)}>
+              Change
+            </button>
+          </p>
+        )}
         {named && (
           <div className="mt-4">
             <label htmlFor="rater-name" className="text-sm font-semibold">
@@ -388,5 +394,47 @@ export default function RaterFlow() {
         </button>
       </div>
     </main>
+  );
+}
+
+// The named-or-anonymous choice. Shown on the first screen, so raters know
+// how their answers will be shown while they answer, with nothing
+// pre-selected, and again at the end if they want to change it.
+function NameChoice({
+  first,
+  named,
+  onChange,
+}: {
+  first: string;
+  named: boolean | null;
+  onChange: (v: boolean) => void;
+}) {
+  return (
+    <fieldset>
+      <legend className="text-lg font-bold">Should {first} see your name?</legend>
+      <div className="mt-3 flex flex-col gap-2">
+        <label className={`flex cursor-pointer gap-3 rounded-lg p-3 ${named === true ? "bg-white" : "bg-white/50"}`}>
+          <input type="radio" name="named" className="mt-1" checked={named === true} onChange={() => onChange(true)} />
+          <span>
+            <b>Show my name with my scores</b>
+            <span className="block text-sm text-foreground/70">
+              {first} sees your six scores labeled with your name and how you know them.
+            </span>
+          </span>
+        </label>
+        <label className={`flex cursor-pointer gap-3 rounded-lg p-3 ${named === false ? "bg-white" : "bg-white/50"}`}>
+          <input type="radio" name="named" className="mt-1" checked={named === false} onChange={() => onChange(false)} />
+          <span>
+            <b>Include me only in an anonymous average</b>
+            <span className="block text-sm text-foreground/70">
+              Your scores are averaged with other anonymous answers and only shown once at least two people have chosen
+              this. Your email address is not kept. If only a few people answer, {first} may still be able to guess who
+              said what.
+            </span>
+          </span>
+        </label>
+      </div>
+      <p className="mt-2 text-xs text-foreground/60">You can change this at the end, before you submit.</p>
+    </fieldset>
   );
 }
