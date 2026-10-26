@@ -110,7 +110,7 @@ export default async function MyContinuaPage() {
                 href="/compare/people"
                 className="rounded-xl border border-white/40 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-white/10"
               >
-                Compare with Someone
+                Comparisons
               </Link>
             )}
             <Link

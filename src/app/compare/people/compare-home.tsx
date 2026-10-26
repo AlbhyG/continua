@@ -90,10 +90,10 @@ export default function CompareHome() {
   return (
     <main className="mx-auto max-w-[760px] px-6 py-16">
       <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/70">Your Continua</p>
-      <h1 className="mt-2 text-4xl font-bold text-white">Compare</h1>
+      <h1 className="mt-2 text-4xl font-bold text-white">Comparisons</h1>
       <p className="mt-3 text-lg text-white/80">
-        See your result next to someone else&apos;s. Each of you takes the assessment yourself, nothing is
-        shown until both of you agree, and either of you can end it at any time.
+        Open a comparison you already have, or invite someone new. Each of you takes the assessment
+        yourself, nothing is shown until both of you agree, and either of you can end it at any time.
       </p>
 
       <div className="mt-5">
@@ -165,19 +165,29 @@ export default function CompareHome() {
 
       {active.length > 0 && (
         <section className="mt-8">
-          <h2 className="text-xl font-bold text-white">Comparisons</h2>
+          <h2 className="text-xl font-bold text-white">
+            {active.length === 1 ? "Your comparison" : "Your comparisons"}
+          </h2>
           {active.map((c) => (
             <div key={c.id} className="glass-card mt-3 flex items-center justify-between gap-3 p-5">
               <Link href={`/compare/${c.id}`} className="font-bold underline underline-offset-4">
                 You and {c.other.name}
               </Link>
-              <button
-                disabled={busy}
-                onClick={() => end(c.id)}
-                className="text-xs font-semibold text-foreground/60 underline underline-offset-4 disabled:opacity-60"
-              >
-                End
-              </button>
+              <div className="flex items-center gap-4">
+                <Link
+                  href={`/compare/${c.id}`}
+                  className="rounded-xl bg-white/90 px-4 py-2 text-sm font-bold text-foreground"
+                >
+                  View
+                </Link>
+                <button
+                  disabled={busy}
+                  onClick={() => end(c.id)}
+                  className="text-xs font-semibold text-foreground/60 underline underline-offset-4 disabled:opacity-60"
+                >
+                  End
+                </button>
+              </div>
             </div>
           ))}
         </section>
@@ -185,7 +195,9 @@ export default function CompareHome() {
 
       {waitingOnThem.length > 0 && (
         <section className="mt-8">
-          <h2 className="text-xl font-bold text-white">Waiting for them</h2>
+          <h2 className="text-xl font-bold text-white">
+            {waitingOnThem.length === 1 ? "Invitation you sent" : "Invitations you sent"}
+          </h2>
           {waitingOnThem.map((c) => (
             <div key={c.id} className="glass-card mt-3 flex items-center justify-between gap-3 p-5">
               <p>

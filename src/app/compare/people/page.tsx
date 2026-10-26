@@ -3,7 +3,7 @@ import { requireUser } from "@/lib/auth/current-user";
 import CompareHome from "./compare-home";
 
 export const metadata: Metadata = {
-  title: "Compare",
+  title: "Comparisons",
   description: "Compare your Continua profile with someone else's.",
 };
 

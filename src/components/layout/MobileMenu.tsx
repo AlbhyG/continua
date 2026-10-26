@@ -60,7 +60,7 @@ export default function MobileMenu({
               )}
               {SHOW_PEOPLE_COMPARISON && (
                 <Link href="/compare/people" onClick={onClose} className={itemClass}>
-                  Compare with Someone
+                  Comparisons
                 </Link>
               )}
               <span className={greyedClass}>+ Tools &amp; Actions</span>

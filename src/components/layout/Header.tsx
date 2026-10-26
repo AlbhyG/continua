@@ -147,7 +147,7 @@ export default function Header() {
                 )}
                 {SHOW_PEOPLE_COMPARISON && (
                   <MenuItem>
-                    {() => <Link href="/compare/people" className={menuItemClass}>Compare with Someone</Link>}
+                    {() => <Link href="/compare/people" className={menuItemClass}>Comparisons</Link>}
                   </MenuItem>
                 )}
                 <MenuItem disabled>

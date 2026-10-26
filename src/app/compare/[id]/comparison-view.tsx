@@ -75,7 +75,7 @@ export default function ComparisonView({ id }: { id: string }) {
   return (
     <main className="mx-auto max-w-[760px] px-6 py-16">
       <Link href="/compare/people" className="text-sm font-semibold text-white/75 underline underline-offset-2">
-        ← Compare
+        ← Comparisons
       </Link>
 
       {missing && (
