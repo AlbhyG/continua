@@ -8,6 +8,23 @@ export const COLOR_OTHER = "#b8730a";
 
 const pct = (v: number) => ((v - 1) / 9) * 100;
 
+// Dots are 26px wide, so two close scores would draw one dot on top of the
+// other. When they are this close (in % of the track), nudge them apart
+// sideways so both stay visible; the exact numbers are in the caption.
+const CLOSE_PCT = 8;
+const NUDGE_PX = 11;
+function dotLefts(a: number, b: number): [string, string] {
+  const pa = pct(a);
+  const pb = pct(b);
+  if (Math.abs(pa - pb) >= CLOSE_PCT) return [`${pa}%`, `${pb}%`];
+  const mid = (pa + pb) / 2;
+  // Keep their left-to-right order; on a tie, the viewer goes on the left.
+  const aLeft = pa <= pb;
+  return aLeft
+    ? [`calc(${mid}% - ${NUDGE_PX}px)`, `calc(${mid}% + ${NUDGE_PX}px)`]
+    : [`calc(${mid}% + ${NUDGE_PX}px)`, `calc(${mid}% - ${NUDGE_PX}px)`];
+}
+
 export function initials(a: string, b: string): [string, string] {
   const x = (a.trim()[0] ?? "A").toUpperCase();
   const y = (b.trim()[0] ?? "B").toUpperCase();
@@ -28,6 +45,7 @@ export default function DumbbellChart({
     <div>
       {axes.map((axis) => {
         const info = AXIS_INFO[axis.axis];
+        const [leftA, leftB] = dotLefts(axis.a, axis.b);
         return (
           <div key={axis.axis} className="border-t border-foreground/10 py-3 first:border-t-0">
             <div className="flex items-baseline justify-between gap-2">
@@ -47,13 +65,13 @@ export default function DumbbellChart({
                 />
                 <b
                   className="absolute top-1/2 grid h-[26px] w-[26px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-2 border-white text-xs font-semibold text-white"
-                  style={{ left: `${pct(axis.a)}%`, background: COLOR_ME }}
+                  style={{ left: leftA, background: COLOR_ME }}
                 >
                   {ia}
                 </b>
                 <b
                   className="absolute top-1/2 grid h-[26px] w-[26px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-2 border-white text-xs font-semibold text-white"
-                  style={{ left: `${pct(axis.b)}%`, background: COLOR_OTHER }}
+                  style={{ left: leftB, background: COLOR_OTHER }}
                 >
                   {ib}
                 </b>
@@ -68,7 +86,15 @@ export default function DumbbellChart({
               <span className="font-semibold" style={{ color: COLOR_OTHER }}>{names.b} {axis.b}</span>
             </p>
             <p className="mt-0.5 text-xs text-foreground/65">
-              Between you: <b className="text-foreground">{axis.low} to {axis.high}</b>
+              {axis.low === axis.high ? (
+                <>
+                  Both at <b className="text-foreground">{axis.low}</b>
+                </>
+              ) : (
+                <>
+                  Between you: <b className="text-foreground">{axis.low} to {axis.high}</b>
+                </>
+              )}
             </p>
           </div>
         );
