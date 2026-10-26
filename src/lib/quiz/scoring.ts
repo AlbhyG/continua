@@ -45,13 +45,13 @@ const AXIS_MAP: Record<string, { axis: keyof AxisScores; pole: "high" | "low" }>
 };
 
 // Score a single question: 1-5 Likert mapped so "high" pole agree = 1, "low" pole agree = 5
-function scoreQuestion(likertValue: number, direction: Direction): { axis: keyof AxisScores; score: number } {
+export function scoreQuestion(likertValue: number, direction: Direction): { axis: keyof AxisScores; score: number } {
   const mapping = AXIS_MAP[direction];
   const score = mapping.pole === "high" ? likertValue : (6 - likertValue);
   return { axis: mapping.axis, score };
 }
 
-function scaleToTen(rawScores: number[]): number {
+export function scaleToTen(rawScores: number[]): number {
   if (rawScores.length === 0) return 5.5;
   const mean = rawScores.reduce((a, b) => a + b, 0) / rawScores.length;
   const scaled = ((mean - 1) / 4) * 9 + 1;

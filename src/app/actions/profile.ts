@@ -3,6 +3,7 @@
 import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
 import { createClient } from '@/lib/supabase/server'
+import { isPronoun } from '@/lib/observer/pronouns'
 
 export type ProfileState =
   | { success: true; message: string }
@@ -54,5 +55,28 @@ export async function updateDisplayName(
 
   revalidatePath('/my-continua')
   revalidatePath('/compare/people')
+  return { success: true, message: 'Saved.' }
+}
+
+// How statements about you read when other people describe you ("How others
+// see you"): he, she or they. Saved on your own person record.
+export async function updatePronoun(pronoun: string): Promise<ProfileState> {
+  if (!isPronoun(pronoun)) return { success: false, message: 'Please choose one of the options.' }
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return { success: false, message: 'Please sign in again.' }
+
+  await supabase.rpc('ensure_current_user_records')
+  const { error } = await supabase
+    .from('people')
+    .update({ pronoun, updated_at: new Date().toISOString() })
+    .eq('owner_user_id', user.id)
+    .eq('is_self', true)
+  if (error) {
+    console.error('Pronoun update failed:', error.message)
+    return { success: false, message: 'Your choice could not be saved.' }
+  }
   return { success: true, message: 'Saved.' }
 }

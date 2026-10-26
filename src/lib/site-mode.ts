@@ -9,3 +9,8 @@
 // invitation links still work for anyone signed in, so it can be tried
 // privately (for example, with family) before it is announced.
 export const SHOW_PEOPLE_COMPARISON = false
+
+// "How others see you": invite people to answer the assessment about you
+// (src/app/others). While off, the link on My Continua is hidden, but /others
+// and raters' invitation links still work, so it can be tried privately first.
+export const SHOW_OTHERS_VIEW = false
