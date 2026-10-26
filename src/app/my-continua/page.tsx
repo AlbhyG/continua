@@ -3,6 +3,7 @@ import Link from 'next/link'
 import DeleteAssessmentButton from './delete-assessment-button'
 import LatestOrb from './latest-orb'
 import NameForm from './name-form'
+import PhotoForm from './photo-form'
 import PasskeySettings from './passkey-settings'
 import StopSharingButton from './stop-sharing-button'
 import { createAdminClient } from '@/lib/supabase/admin'
@@ -57,6 +58,18 @@ export default async function MyContinuaPage({
             .or(`expires_at.is.null,expires_at.gt.${new Date().toISOString()}`)
         : Promise.resolve({ data: [] as { result_id: number }[] }),
     ])
+  // Asked for separately so the page still works if the photo column hasn't
+  // been added to the database yet (migration 00028).
+  const { data: photoRow } = await supabase
+    .from('people')
+    .select('photo')
+    .eq('owner_user_id', user.id)
+    .eq('is_self', true)
+    .maybeSingle()
+  const photo = typeof photoRow?.photo === 'string' ? photoRow.photo : null
+  const displayName = typeof selfPerson?.name === 'string' ? selfPerson.name.trim() : ''
+  const initial = ((displayName || user.email || '?').trim()[0] ?? '?').toUpperCase()
+
   if (welcomeError) {
     console.error('Could not record first-login welcome:', welcomeError.message)
   }
@@ -226,11 +239,12 @@ export default async function MyContinuaPage({
         <summary className="flex cursor-pointer list-none items-center justify-between rounded-2xl border border-white/30 px-5 py-4 text-lg font-bold text-white transition hover:bg-white/10 [&::-webkit-details-marker]:hidden">
           <span>
             Settings
-            <span className="ml-2 text-sm font-normal text-white/70">Your name, passkeys</span>
+            <span className="ml-2 text-sm font-normal text-white/70">Your name, photo, passkeys</span>
           </span>
           <span className="text-2xl leading-none transition-transform group-open:rotate-90" aria-hidden="true">›</span>
         </summary>
         <NameForm name={typeof selfPerson?.name === 'string' ? selfPerson.name : ''} />
+        <PhotoForm photo={photo} initial={initial} />
         <PasskeySettings />
       </details>
     </main>

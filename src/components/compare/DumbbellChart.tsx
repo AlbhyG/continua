@@ -25,10 +25,11 @@ function dotLefts(a: number, b: number): [string, string] {
     : [`calc(${mid}% + ${NUDGE_PX}px)`, `calc(${mid}% - ${NUDGE_PX}px)`];
 }
 
-export function initials(a: string, b: string): [string, string] {
-  const x = (a.trim()[0] ?? "A").toUpperCase();
-  const y = (b.trim()[0] ?? "B").toUpperCase();
-  return x === y ? ["1", "2"] : [x, y];
+// The viewer's dot always says "Me", so it can't be confused with the other
+// person even when they share an initial (Jacob and Jason). The other dot
+// shows that person's initial.
+export function initials(_a: string, b: string): [string, string] {
+  return ["Me", (b.trim()[0] ?? "?").toUpperCase()];
 }
 
 // One row per axis in a fixed order: a dot per person on a 1 to 10 track, the
@@ -64,7 +65,7 @@ export default function DumbbellChart({
                   style={{ left: `${pct(axis.low)}%`, width: `${pct(axis.high) - pct(axis.low)}%` }}
                 />
                 <b
-                  className="absolute top-1/2 grid h-[26px] w-[26px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-2 border-white text-xs font-semibold text-white"
+                  className="absolute top-1/2 grid h-[26px] w-[26px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-2 border-white text-[10px] font-semibold text-white"
                   style={{ left: leftA, background: COLOR_ME }}
                 >
                   {ia}

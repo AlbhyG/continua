@@ -56,3 +56,36 @@ export async function updateDisplayName(
   revalidatePath('/compare/people')
   return { success: true, message: 'Saved.' }
 }
+
+// A small JPEG data URL (resized in the browser to 128 x 128), or null to
+// remove the photo. Shown only to the account holder, in the header.
+const PHOTO_PREFIX = 'data:image/jpeg;base64,'
+const PHOTO_MAX = 60000
+
+export async function updatePhoto(photo: string | null): Promise<{ ok: boolean; message: string }> {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return { ok: false, message: 'Please sign in again.' }
+  if (photo !== null) {
+    if (typeof photo !== 'string' || !photo.startsWith(PHOTO_PREFIX) || photo.length > PHOTO_MAX) {
+      return { ok: false, message: 'That image could not be used. Please try another.' }
+    }
+    if (!/^[A-Za-z0-9+/=]+$/.test(photo.slice(PHOTO_PREFIX.length))) {
+      return { ok: false, message: 'That image could not be used. Please try another.' }
+    }
+  }
+  await supabase.rpc('ensure_current_user_records')
+  const { error } = await supabase
+    .from('people')
+    .update({ photo, updated_at: new Date().toISOString() })
+    .eq('owner_user_id', user.id)
+    .eq('is_self', true)
+  if (error) {
+    console.error('Photo update failed:', error.message)
+    return { ok: false, message: 'Your photo could not be saved.' }
+  }
+  revalidatePath('/my-continua')
+  return { ok: true, message: photo ? 'Photo saved.' : 'Photo removed.' }
+}
