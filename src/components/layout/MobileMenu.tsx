@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { SHOW_PEOPLE_COMPARISON } from '@/lib/site-mode'
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
 import AccountButton from '@/components/auth/AccountButton'
 
@@ -56,6 +57,11 @@ export default function MobileMenu({
                 </Link>
               ) : (
                 <span className={greyedClass}>+ See Results</span>
+              )}
+              {SHOW_PEOPLE_COMPARISON && (
+                <Link href="/compare/people" onClick={onClose} className={itemClass}>
+                  Compare with Someone
+                </Link>
               )}
               <span className={greyedClass}>+ Tools &amp; Actions</span>
             </div>

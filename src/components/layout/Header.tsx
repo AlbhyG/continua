@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { SHOW_PEOPLE_COMPARISON } from '@/lib/site-mode'
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
 import AccountButton from '@/components/auth/AccountButton'
 import ContactInquiry from '@/components/ContactInquiry'
@@ -142,6 +143,11 @@ export default function Header() {
                 ) : (
                   <MenuItem disabled>
                     {() => <span className={greyedItemClass}>+ See Results</span>}
+                  </MenuItem>
+                )}
+                {SHOW_PEOPLE_COMPARISON && (
+                  <MenuItem>
+                    {() => <Link href="/compare/people" className={menuItemClass}>Compare with Someone</Link>}
                   </MenuItem>
                 )}
                 <MenuItem disabled>

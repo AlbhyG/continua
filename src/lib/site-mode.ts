@@ -8,4 +8,4 @@
 // While off, the buttons that lead there are hidden, but /compare/people and
 // invitation links still work for anyone signed in, so it can be tried
 // privately (for example, with family) before it is announced.
-export const SHOW_PEOPLE_COMPARISON = false
+export const SHOW_PEOPLE_COMPARISON = true
