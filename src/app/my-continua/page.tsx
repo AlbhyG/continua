@@ -28,7 +28,12 @@ type QuizResult = {
 
 const AXES = Object.keys(AXIS_INFO) as Array<keyof AxisScores>
 
-export default async function MyContinuaPage() {
+export default async function MyContinuaPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ settings?: string }>
+}) {
+  const settingsOpen = (await searchParams).settings === 'open'
   const { supabase, user } = await requireUser('/my-continua')
   // These three don't depend on each other, so run them together. Results come
   // embedded with the person record, and share links are looked up by account
@@ -93,8 +98,6 @@ export default async function MyContinuaPage() {
           takenAt={quizResults[0].taken_at}
         />
       )}
-
-      <NameForm name={typeof selfPerson?.name === 'string' ? selfPerson.name : ''} />
 
       <section className="mt-8">
         <div className="flex flex-wrap items-end justify-between gap-3">
@@ -219,14 +222,15 @@ export default async function MyContinuaPage() {
       </section>
 
       {/* Rarely needed, so kept closed at the bottom of the page. */}
-      <details className="group mt-12">
+      <details id="settings" open={settingsOpen} className="group mt-12 scroll-mt-28">
         <summary className="flex cursor-pointer list-none items-center justify-between rounded-2xl border border-white/30 px-5 py-4 text-lg font-bold text-white transition hover:bg-white/10 [&::-webkit-details-marker]:hidden">
           <span>
-            Sign-in settings
-            <span className="ml-2 text-sm font-normal text-white/70">Passkeys</span>
+            Settings
+            <span className="ml-2 text-sm font-normal text-white/70">Your name, passkeys</span>
           </span>
           <span className="text-2xl leading-none transition-transform group-open:rotate-90" aria-hidden="true">›</span>
         </summary>
+        <NameForm name={typeof selfPerson?.name === 'string' ? selfPerson.name : ''} />
         <PasskeySettings />
       </details>
     </main>

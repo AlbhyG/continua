@@ -8,7 +8,7 @@ export default function NameForm({ name }: { name: string }) {
   const [state, action, pending] = useActionState<ProfileState, FormData>(updateDisplayName, null)
 
   return (
-    <form action={action} className="glass-card mt-8 p-5">
+    <form action={action} className="glass-card mt-4 p-5">
       <label htmlFor="display-name" className="block text-sm font-semibold">
         Your name
       </label>

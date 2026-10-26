@@ -120,7 +120,7 @@ export default function CompareHome() {
                     <>
                       {" "}
                       You will appear to them as <b>{myName}</b> (
-                      <Link href="/my-continua" className="underline underline-offset-2">
+                      <Link href="/my-continua?settings=open#settings" className="underline underline-offset-2">
                         change
                       </Link>
                       ).
@@ -256,7 +256,7 @@ export default function CompareHome() {
           {myName && (
             <p className="mt-3 text-sm text-foreground/70">
               The invitation will come from <b>{myName}</b>.{" "}
-              <Link href="/my-continua" className="font-semibold underline underline-offset-2">
+              <Link href="/my-continua?settings=open#settings" className="font-semibold underline underline-offset-2">
                 Change your name
               </Link>
             </p>
