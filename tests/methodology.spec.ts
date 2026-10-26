@@ -24,7 +24,7 @@ test('methodology explains current behavior and labels future safeguards honestl
 test('assessment and result disclosures both link to the complete explanation', async ({ page }) => {
   await page.goto(`${baseURL}/quiz`)
   const disclosure = page.getByRole('complementary', { name: 'Assessment limitations' })
-  await expect(disclosure.getByRole('link', { name: 'Methodology & Limitations' })).toHaveAttribute('href', '/methodology')
+  await expect(disclosure.getByRole('link', { name: 'How this assessment works, and its limits' })).toHaveAttribute('href', '/methodology')
   await expect(disclosure).toContainText('not therapy or a clinical assessment')
   // Synthetic browser-local fixture only; no account, real assessment, or DB write.
   await page.addInitScript(() => {
@@ -35,6 +35,6 @@ test('assessment and result disclosures both link to the complete explanation', 
   })
   await page.goto(`${baseURL}/quiz/results/methodology-test`)
   await expect(disclosure).toBeVisible()
-  await disclosure.getByRole('link', { name: 'Methodology & Limitations' }).click()
+  await disclosure.getByRole('link', { name: 'How this assessment works, and its limits' }).click()
   await expect(page).toHaveURL(`${baseURL}/methodology`)
 })
