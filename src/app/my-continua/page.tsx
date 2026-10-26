@@ -4,6 +4,8 @@ import DeleteAssessmentButton from './delete-assessment-button'
 import LatestOrbs from './latest-orb'
 import NameForm from './name-form'
 import PhotoForm from './photo-form'
+import SettingsScroll from './settings-scroll'
+import { Suspense } from 'react'
 import PasskeySettings from './passkey-settings'
 import StopSharingButton from './stop-sharing-button'
 import { createAdminClient } from '@/lib/supabase/admin'
@@ -246,6 +248,9 @@ export default async function MyContinuaPage({
         <PhotoForm photo={photo} initial={initial} />
         <PasskeySettings />
       </details>
+      <Suspense fallback={null}>
+        <SettingsScroll />
+      </Suspense>
     </main>
   )
 }
