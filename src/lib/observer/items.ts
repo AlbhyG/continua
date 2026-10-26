@@ -1,6 +1,9 @@
 import fs from "fs";
 import path from "path";
 import { getQuestionnaire } from "@/lib/quiz/questionnaires";
+import { DEFAULT_PRONOUN, renderItem, type Pronoun } from "./pronouns";
+
+export { renderItem };
 
 // Third-person versions of the questionnaire items, for people rating someone
 // else. Built by scripts/build-observer-items.py; keyed "questionnaireId:index",
@@ -23,18 +26,13 @@ export function itemName(displayName: string): string {
   return first || "this person";
 }
 
-export function renderItem(template: string, name: string): string {
-  const out = template.replaceAll("{name}", name);
-  // Templates can start with {name}; a lowercase fallback name ("this person")
-  // still needs a capital at the start of the sentence.
-  return out.charAt(0).toUpperCase() + out.slice(1);
-}
-
-// The observer questionnaire for one questionnaire id, rendered for a name.
+// The observer questionnaire for one questionnaire id, rendered for a name
+// and the way the person chose to be referred to.
 // Returns null if the questionnaire or any of its items is missing.
 export function observerQuestions(
   questionnaireId: number,
-  displayName: string
+  displayName: string,
+  pronoun: Pronoun = DEFAULT_PRONOUN
 ): { text: string; direction: string }[] | null {
   const q = getQuestionnaire(questionnaireId);
   if (!q) return null;
@@ -44,7 +42,7 @@ export function observerQuestions(
   for (let i = 0; i < q.questions.length; i++) {
     const t = all[`${questionnaireId}:${i}`];
     if (!t) return null;
-    out.push({ text: renderItem(t, name), direction: q.questions[i].direction });
+    out.push({ text: renderItem(t, name, pronoun), direction: q.questions[i].direction });
   }
   return out;
 }

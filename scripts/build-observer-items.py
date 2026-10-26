@@ -34,11 +34,16 @@ ADVERBS = {
 }
 # "tend" and "not" are in ADVERBS only so they are never treated as adverbs:
 # they are removed below. (Kept in one place for readability.)
-ADVERBS -= {"tend", "not", "rather", "first", "then"}
+ADVERBS -= {"tend", "not", "rather", "then"}
+ADVERBS |= {"first", "most", "last"}
 
 MODALS = {"can", "can't", "cannot", "could", "couldn't", "would", "wouldn't",
           "will", "won't", "should", "shouldn't", "might", "must", "may"}
-PAST_OR_FIXED = {"was", "wasn't", "had", "felt", "found", "did", "used"}
+PAST_OR_FIXED = {"was", "wasn't", "had", "felt", "found", "did", "used", "made", "gave",
+                 "took", "got", "went", "saw", "knew", "thought", "told", "said",
+                 "came", "left", "kept", "spent", "brought", "began", "became",
+                 "ran", "wrote", "chose", "forgot", "heard", "lost", "met", "sent",
+                 "understood", "led", "grew", "fell", "held", "won", "built"}
 
 IRREGULAR = {"am": "is", "have": "has", "do": "does", "go": "goes",
              "don't": "doesn't", "haven't": "hasn't", "be": "is"}
@@ -48,7 +53,8 @@ def third_person(verb: str) -> str:
     low = verb.lower()
     if low in IRREGULAR:
         return IRREGULAR[low]
-    if low in MODALS or low in PAST_OR_FIXED or low.endswith("ed"):
+    # "-ed" means past tense, except for verbs like "need" and "succeed".
+    if low in MODALS or low in PAST_OR_FIXED or (low.endswith("ed") and not low.endswith("eed")):
         return verb
     if re.search(r"(s|sh|ch|x|z|o)$", low):
         return verb + "es"
@@ -57,10 +63,24 @@ def third_person(verb: str) -> str:
     return verb + "s"
 
 
-SUBJ_THEY = {"I": "they", "I'm": "they're", "I've": "they've", "I'd": "they'd",
-             "I'll": "they'll"}
+# Later references to the rated person become placeholders the site fills in
+# with he, she or they (src/lib/observer/items.ts). A verb after {they} is
+# written in both forms, {v:plural|singular}, e.g. {v:feel|feels}.
+SUBJ_THEY = {"I": "{they}", "I'm": "{they're}", "I've": "{they've}", "I'd": "{they'd}",
+             "I'll": "{they'll}"}
 SUBJ_NAME = {"I": "{name}", "I'm": "{name} is", "I've": "{name} has",
              "I'd": "{name} would", "I'll": "{name} will"}
+
+def agree(verb: str) -> str:
+    """A verb after {they}: both forms when they differ, else the verb as is."""
+    low = verb.lower()
+    if low == "am":
+        return "{v:are|is}"
+    if low == "was":
+        return "{v:were|was}"
+    single = third_person(verb)
+    return verb if single == verb else "{v:%s|%s}" % (verb, single)
+
 
 TOKEN = re.compile(r"[A-Za-z][A-Za-z']*|[^A-Za-z]+")
 
@@ -83,7 +103,7 @@ def convert(text: str) -> str:
                 pending_conj = "name" if tok == "I" else None
             else:
                 rep = SUBJ_THEY[tok]
-                out.append(rep[0].upper() + rep[1:] if i == 0 else rep)
+                out.append(rep.replace("{t", "{T", 1) if i == 0 else rep)
                 pending_conj = "they" if tok == "I" else None
             continue
         if low == "my":
@@ -91,20 +111,20 @@ def convert(text: str) -> str:
                 out.append("{name}'s")
                 named = True
             else:
-                out.append("Their" if cap and i == 0 else "their")
+                out.append("{Their}" if cap and i == 0 else "{their}")
             continue
         # Before the person has been named, an object pronoun names them
         # ("matters to me" -> "matters to {name}"); after, it is "them".
         if low == "me":
-            out.append("them" if named else "{name}")
+            out.append("{them}" if named else "{name}")
             named = True
             continue
         if low == "myself":
-            out.append("themselves" if named else "{name}")
+            out.append("{themselves}" if named else "{name}")
             named = True
             continue
         if low == "mine":
-            out.append("theirs" if named else "{name}\u2019s")
+            out.append("{theirs}" if named else "{name}\u2019s")
             named = True
             continue
         if pending_conj:
@@ -114,13 +134,36 @@ def convert(text: str) -> str:
             if pending_conj == "name":
                 out.append(third_person(tok))
             else:
-                out.append({"am": "are", "was": "were"}.get(low, tok))
+                out.append(agree(tok))
             pending_conj = None
             continue
         out.append(tok)
     s = "".join(out)
     s = s.replace("{name}'s", "{name}’s")
     return s
+
+
+KNOWN_TOKENS = {"{name}", "{they}", "{They}", "{their}", "{Their}", "{them}",
+                "{themselves}", "{theirs}", "{they're}", "{They're}", "{they've}",
+                "{They've}", "{they'd}", "{They'd}", "{they'll}", "{They'll}"}
+BASE_VERBS = {"help", "feel", "want", "lash", "go", "try", "make", "take", "give",
+              "ask", "let", "stay", "keep", "move", "find", "get", "start", "stop",
+              "look", "work", "act", "check", "say", "tell", "become", "think",
+              "need", "care", "use", "do", "have", "rest", "return", "adjust",
+              "wish", "reach", "step", "offer", "pull", "hold", "turn", "see",
+              "come", "leave", "put", "speak", "listen", "write", "read"}
+# Items checked by hand where the flagged word is not a verb of the {they} clause.
+REVIEWED_COORDINATION = {"2:5", "4:6"}  # infinitive or after "can"
+
+
+def collect_base_verbs(texts) -> set:
+    """Every word that follows "I" (past adverbs) somewhere in the items:
+    the verbs these statements actually use."""
+    found = set()
+    for t in texts:
+        for m in re.finditer(r"\bI ((?:[a-z]+ly |often |rarely |never |always |still |also |even )*)([a-z]+)\b", t):
+            found.add(m.group(2))
+    return found - MODALS - PAST_OR_FIXED - {"am", "tend", "do", "have"}
 
 
 def main() -> int:
@@ -131,8 +174,9 @@ def main() -> int:
         overrides = json.load(open(overrides_path, encoding="utf8"))
     out = {}
     problems = []
-    for f in sorted(glob.glob(os.path.join(QDIR, "*.json"))):
-        q = json.load(open(f, encoding="utf8"))
+    files = [json.load(open(f, encoding="utf8")) for f in sorted(glob.glob(os.path.join(QDIR, "*.json")))]
+    BASE_VERBS.update(collect_base_verbs(it["text"] for q in files for it in q["questions"]))
+    for q in files:
         for i, item in enumerate(q["questions"]):
             key = f"{q['id']}:{i}"
             text = overrides.get(key) or convert(item["text"])
@@ -141,6 +185,14 @@ def main() -> int:
                 problems.append((key, "no {name}", text))
             if re.search(r"\b(I|me|my|mine|myself|I'm|I've|I'd|I'll)\b", text):
                 problems.append((key, "first person left", text))
+            for tok in re.findall(r"\{[^}]*\}", text):
+                if tok not in KNOWN_TOKENS and not re.fullmatch(r"\{v:[a-z']+\|[a-z']+\}", tok):
+                    problems.append((key, f"unknown placeholder {tok}", text))
+            # A second verb in a {they} clause ("{they} stay late and help")
+            # must agree too; flag it unless it is already a {v:...} pair.
+            m = re.search(r"\{(?:they|They)\}[^.;,]*?\b(?:and|or) ([a-z]+)\b", text)
+            if m and m.group(1) in BASE_VERBS and key not in REVIEWED_COORDINATION:
+                problems.append((key, f"second verb '{m.group(1)}' after {{they}}", text))
     unused = sorted(set(overrides) - set(out))
     with open(os.path.join(ODIR, "observer-items.json"), "w", encoding="utf8") as fh:
         json.dump(out, fh, ensure_ascii=False, indent=1, sort_keys=False)
