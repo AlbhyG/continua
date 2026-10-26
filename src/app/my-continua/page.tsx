@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import DeleteAssessmentButton from './delete-assessment-button'
-import LatestOrb from './latest-orb'
+import LatestOrbs from './latest-orb'
 import NameForm from './name-form'
 import PhotoForm from './photo-form'
 import PasskeySettings from './passkey-settings'
@@ -104,13 +104,12 @@ export default async function MyContinuaPage({
         </p>
       )}
 
-      {quizResults[0]?.scores && (
-        <LatestOrb
-          resultId={quizResults[0].id}
-          scores={quizResults[0].scores}
-          takenAt={quizResults[0].taken_at}
-        />
-      )}
+      <LatestOrbs
+        orbs={quizResults
+          .filter((r) => r.scores)
+          .slice(0, 2)
+          .map((r) => ({ resultId: r.id, scores: r.scores as Partial<AxisScores>, takenAt: r.taken_at }))}
+      />
 
       <section className="mt-8">
         <div className="flex flex-wrap items-end justify-between gap-3">
