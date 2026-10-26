@@ -156,6 +156,11 @@ export default function Header() {
               </MenuItems>
             </Menu>
 
+            {signedInEmail && (
+              <Link href="/my-continua" className={navLinkClass}>
+                My Continua
+              </Link>
+            )}
             <Link href="/about" className={navLinkClass}>
               About
             </Link>

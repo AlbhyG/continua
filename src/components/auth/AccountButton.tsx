@@ -5,7 +5,6 @@ import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
 import { createClient } from '@/lib/supabase/client'
-import { SHOW_PEOPLE_COMPARISON } from '@/lib/site-mode'
 
 const dropdownClass =
   'z-[100] mt-2 min-w-[220px] rounded-xl bg-white/95 backdrop-blur-xl shadow-lg ring-1 ring-black/5 p-2'
@@ -103,7 +102,7 @@ export default function AccountButton({
     : 'whitespace-nowrap text-sm font-semibold text-foreground/80 transition-colors hover:text-foreground'
 
   if (signedIn === null) {
-    return <span className={linkClassName}>My Continua</span>
+    return mobile ? <span className={linkClassName}>My Continua</span> : <span className="h-9 w-9" aria-hidden="true" />
   }
 
   if (!signedIn) {
@@ -148,14 +147,6 @@ export default function AccountButton({
               {who.name && <p className="text-sm font-bold text-foreground">{who.name}</p>}
               <p className="text-xs text-foreground/60">{who.email}</p>
             </div>
-          )}
-          <MenuItem>
-            {() => <Link href="/my-continua" className={menuItemClass}>My Continua</Link>}
-          </MenuItem>
-          {SHOW_PEOPLE_COMPARISON && (
-            <MenuItem>
-              {() => <Link href="/compare/people" className={menuItemClass}>Comparisons</Link>}
-            </MenuItem>
           )}
           <MenuItem>
             {() => <Link href="/my-continua?settings=open#settings" className={menuItemClass}>Name, photo &amp; settings</Link>}
