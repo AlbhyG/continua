@@ -130,8 +130,7 @@ export default function OthersHome() {
 
       {view.anonymousHeldBack > 0 && (
         <p className="glass-card mt-4 p-4 text-sm text-foreground/75">
-          One person answered anonymously. Anonymous answers are shown, as an average, once at least two people have
-          chosen to answer that way.
+          1 anonymous answer is waiting. It will appear once a second person answers anonymously.
         </p>
       )}
 

@@ -434,9 +434,8 @@ function NameChoice({
           <span>
             <b>Include me only in an anonymous average</b>
             <span className="block text-sm text-foreground/70">
-              Your scores are shown only as an average with at least one other person who also chose anonymous. If no
-              one else does, {first} won&apos;t see your answers at all. So if you may be the only person {first} asked,
-              a partner for example, anonymous means your answers go unseen.
+              Your answers are averaged with other anonymous answers. {first} sees them only once at least one
+              other person also chooses anonymous.
             </span>
           </span>
         </label>
