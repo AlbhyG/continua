@@ -39,9 +39,9 @@ export default function PronounPicker({
 
   return (
     <fieldset className="glass-card mt-3 p-5" aria-busy={pending}>
-      <legend className="sr-only">How should the statements about you read?</legend>
+      <legend className="sr-only">How would you like the statements about you to read?</legend>
       <p className="font-semibold" aria-hidden="true">
-        How should the statements about you read?
+        How would you like the statements about you to read?
       </p>
       <p className="mt-1 text-sm text-foreground/70">
         {value
