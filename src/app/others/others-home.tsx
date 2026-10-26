@@ -5,6 +5,7 @@ import { useCallback, useEffect, useState } from "react";
 import ObserverChart, { ChartLegend } from "@/components/observer/ObserverChart";
 import { INVITE_NOTE_MAX } from "@/lib/comparison/invite-note";
 import type { SubjectSummary } from "@/lib/observer/service";
+import PronounPicker from "./pronoun-picker";
 
 const fmt = (iso: string) =>
   new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric" }).format(new Date(iso));
@@ -120,7 +121,11 @@ export default function OthersHome() {
             </ul>
           )}
           <section className="glass-card mt-4 p-5">
-            <ChartLegend named={view.named} anonymousShown={view.anonymousShown} />
+            <ChartLegend
+              named={view.named}
+              anonymousShown={view.anonymousShown}
+              showRange={view.axes.some((x) => x.count >= 2)}
+            />
             <div className="mt-4">
               <ObserverChart axes={view.axes} named={view.named} />
             </div>
@@ -196,7 +201,13 @@ export default function OthersHome() {
       {self && (
         <section className="mt-8">
           <h2 className="text-xl font-bold text-white">Invite someone</h2>
-          <form onSubmit={invite} className="glass-card mt-3 p-5">
+          <PronounPicker
+            key={data.pronoun}
+            displayName={data.myName}
+            initial={data.pronoun}
+            chosen={data.pronounChosen}
+          />
+          <form onSubmit={invite} className="glass-card mt-4 p-5">
             <label htmlFor="observer-email" className="text-sm font-semibold">
               Their email address
             </label>

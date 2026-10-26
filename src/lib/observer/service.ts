@@ -5,6 +5,7 @@ import { displayNameFor, normEmail, type Actor } from "@/lib/comparison/service"
 import { hashShareToken, isWellFormedShareToken } from "@/lib/quiz/share";
 import type { AxisScores } from "@/lib/quiz/scoring";
 import { observerQuestions } from "./items";
+import { DEFAULT_PRONOUN, isPronoun, type Pronoun } from "./pronouns";
 import { CANT_TELL, isValidObserverAnswer, scoreObserverAnswers, type Axis, type ObserverScores } from "./scoring";
 import { buildOthersView, type OthersView, type RatingInput, type RelationshipKey } from "./view";
 
@@ -119,6 +120,9 @@ export async function createInvite(
 
 export type SubjectSummary = {
   myName: string;
+  /** How statements about this person read for raters; "they" until chosen. */
+  pronoun: Pronoun;
+  pronounChosen: boolean;
   self: { scores: AxisScores; takenAt: string } | null;
   pending: { id: string; email: string; createdAt: string }[];
   view: OthersView;
@@ -151,7 +155,7 @@ function cantTellShare(row: RatingRow): Record<Axis, number> {
 
 export async function summaryForSubject(db: Db, actor: Actor): Promise<SubjectSummary> {
   await purgeExpired(db);
-  const [latest, myName, { data }] = await Promise.all([
+  const [latest, myName, { data }, { data: me }] = await Promise.all([
     latestOwnResult(db, actor.id),
     displayNameFor(db, actor.id, actor.email),
     db
@@ -160,6 +164,7 @@ export async function summaryForSubject(db: Db, actor: Actor): Promise<SubjectSu
         "id, questionnaire_id, invited_email, status, created_at, is_named, rater_name, relationship, answers, scores"
       )
       .eq("subject_user_id", actor.id),
+    db.from("people").select("pronoun").eq("owner_user_id", actor.id).eq("is_self", true).maybeSingle(),
   ]);
   const rows = (data ?? []) as RatingRow[];
 
@@ -178,6 +183,8 @@ export async function summaryForSubject(db: Db, actor: Actor): Promise<SubjectSu
   const self = latest && hasAllAxes(latest.scores) ? { scores: latest.scores, takenAt: latest.taken_at } : null;
   return {
     myName,
+    pronoun: isPronoun(me?.pronoun) ? me.pronoun : DEFAULT_PRONOUN,
+    pronounChosen: isPronoun(me?.pronoun),
     self,
     pending: rows
       .filter((r) => r.status === "invited" && r.invited_email)
@@ -225,17 +232,20 @@ async function rowForToken(db: Db, token: string) {
   return data as { id: string; subject_user_id: string; questionnaire_id: number; status: string } | null;
 }
 
-async function subjectName(db: Db, userId: string): Promise<string> {
+async function subjectProfile(db: Db, userId: string): Promise<{ name: string; pronoun: Pronoun }> {
   const { data } = await db
     .from("people")
-    .select("name")
+    .select("name, pronoun")
     .eq("owner_user_id", userId)
     .eq("is_self", true)
     .maybeSingle();
   const name = typeof data?.name === "string" ? data.name.trim() : "";
   // The subject's email is never shown to the rater, so there is no
   // email-based fallback here.
-  return name || "Someone you know";
+  return {
+    name: name || "Someone you know",
+    pronoun: isPronoun(data?.pronoun) ? data.pronoun : DEFAULT_PRONOUN,
+  };
 }
 
 export type RaterView =
@@ -246,9 +256,9 @@ export async function getForRater(db: Db, token: string): Promise<RaterView | nu
   await purgeExpired(db);
   const row = await rowForToken(db, token);
   if (!row) return null;
-  const name = await subjectName(db, row.subject_user_id);
+  const { name, pronoun } = await subjectProfile(db, row.subject_user_id);
   if (row.status === "completed") return { state: "completed", subjectName: name };
-  const questions = observerQuestions(row.questionnaire_id, name);
+  const questions = observerQuestions(row.questionnaire_id, name, pronoun);
   if (!questions) return null;
   return { state: "open", subjectName: name, questions };
 }

@@ -3,7 +3,8 @@ import { RELATIONSHIP_LABEL, type AxisView, type NamedRater } from "@/lib/observ
 
 // One row per axis on the 1 to 10 track: the person's own rating (teal),
 // each named rater (amber, with an initial), the anonymous average (grey
-// diamond), and a shaded band covering the range of everyone shown. Same
+// diamond), and, once two or more people's answers are shown, a shaded band
+// covering their range. Same
 // colors as the comparison chart, and nothing that implies a better end.
 export const COLOR_SELF = "#1d7f6a";
 export const COLOR_NAMED = "#b8730a";
@@ -51,7 +52,7 @@ export default function ObserverChart({ axes, named }: { axes: AxisView[]; named
             <div className="relative mt-2 h-9" role="img" aria-label={label}>
               <div className="absolute inset-x-3.5 top-1/2 h-0.5 -translate-y-1/2 bg-foreground/15" />
               <div className="absolute inset-y-0 inset-x-3.5">
-                {a.low !== null && a.high !== null && (
+                {a.count >= 2 && a.low !== null && a.high !== null && (
                   <i
                     className="absolute top-[4px] bottom-[4px] rounded-md bg-[#b8730a]/15 ring-1 ring-[#b8730a]/30"
                     style={{ left: `${pct(a.low)}%`, width: `${Math.max(pct(a.high) - pct(a.low), 0.8)}%` }}
@@ -116,7 +117,16 @@ export default function ObserverChart({ axes, named }: { axes: AxisView[]; named
   );
 }
 
-export function ChartLegend({ named, anonymousShown }: { named: NamedRater[]; anonymousShown: number }) {
+export function ChartLegend({
+  named,
+  anonymousShown,
+  showRange,
+}: {
+  named: NamedRater[];
+  anonymousShown: number;
+  /** Only when at least two people's answers are shown, so there is a range. */
+  showRange: boolean;
+}) {
   const initials = raterInitials(named);
   return (
     <ul className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-foreground/75">
@@ -141,10 +151,12 @@ export function ChartLegend({ named, anonymousShown }: { named: NamedRater[]; an
           {anonymousShown} people)
         </li>
       )}
-      <li className="flex items-center gap-1.5">
-        <span className="inline-block h-3 w-5 rounded-sm bg-[#b8730a]/15 ring-1 ring-[#b8730a]/30" /> Range of how
-        others see you
-      </li>
+      {showRange && (
+        <li className="flex items-center gap-1.5">
+          <span className="inline-block h-3 w-5 rounded-sm bg-[#b8730a]/15 ring-1 ring-[#b8730a]/30" /> Range of how
+          others see you
+        </li>
+      )}
     </ul>
   );
 }

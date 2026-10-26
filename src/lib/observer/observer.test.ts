@@ -7,6 +7,7 @@ import type { Actor } from "../comparison/service";
 import { hashShareToken } from "../quiz/share";
 import { getAllQuestionnaires } from "../quiz/questionnaires";
 import { itemName, observerQuestions, renderItem } from "./items";
+import { PRONOUNS } from "./pronouns";
 import { scoreObserverAnswers, CANT_TELL } from "./scoring";
 import { buildOthersView, observationsFor, type RatingInput } from "./view";
 import {
@@ -57,6 +58,37 @@ test("items use the first name and keep each item's direction", () => {
   rendered.forEach((r, i) => assert.equal(r.direction, q.questions[i].direction));
   assert.equal(itemName("  "), "this person");
   assert.equal(renderItem("{name} rarely notices.", "this person"), "This person rarely notices.");
+});
+
+test("placeholders become he, she or they, with verbs to match", () => {
+  const t = "{name} keeps {their} word to {themselves}; {they} {v:feel|feels} it when {they're} tired.";
+  assert.equal(renderItem(t, "Albhy", "they"), "Albhy keeps their word to themselves; they feel it when they're tired.");
+  assert.equal(renderItem(t, "Albhy", "he"), "Albhy keeps his word to himself; he feels it when he's tired.");
+  assert.equal(renderItem(t, "Mel", "she"), "Mel keeps her word to herself; she feels it when she's tired.");
+  assert.equal(renderItem("{They} {v:are|is} late.", "x", "she"), "She is late.");
+  assert.equal(renderItem("{name} lends it.", "Albhy"), "Albhy lends it.", "default is they");
+});
+
+test("every statement renders cleanly in all three versions", () => {
+  for (const q of getAllQuestionnaires()) {
+    for (const p of PRONOUNS) {
+      const rendered = observerQuestions(q.id, "Albhy", p);
+      assert.ok(rendered, `questionnaire ${q.id}`);
+      for (const r of rendered) assert.doesNotMatch(r.text, /[{}|]/, `${q.id} ${p}: ${r.text}`);
+    }
+    // The he and she versions differ from "they" only where they should: no
+    // "he"/"she" ever appears in the they version.
+    for (const r of observerQuestions(q.id, "Albhy", "they")!) {
+      assert.doesNotMatch(r.text, /\b(he|she|his|him|himself|herself|hers)\b/i, r.text);
+    }
+  }
+});
+
+test("25:29 keeps the two people apart in every version", () => {
+  for (const p of PRONOUNS) {
+    const text = observerQuestions(25, "Albhy", p)![29].text;
+    assert.match(text, /what happens to that person\.$/, text);
+  }
 });
 
 // ---------------------------------------------------------------------------
@@ -206,6 +238,21 @@ test("a rater sees the items for the subject's name, never their email", async (
   assert.match(view.questions[0].text, /Albhy/);
   assert.ok(!JSON.stringify(view).includes(albhy.email));
   assert.equal(await getForRater(db, "not-a-real-token-at-all-xxxxxxxx"), null);
+});
+
+test("raters see statements in the way the person chose", async () => {
+  const { db, albhy, tables } = world();
+  (tables.people[0] as Record<string, unknown>).pronoun = "he";
+  const r = await createInvite(db, albhy, "carol@example.com");
+  if (!r.ok) throw new Error("invite failed");
+  const view = await getForRater(db, r.token);
+  if (!view || view.state !== "open") throw new Error("no view");
+  const all = view.questions.map((x) => x.text).join(" ");
+  assert.match(all, /\b(his|him|himself|he)\b/);
+  assert.doesNotMatch(all, /\b(themselves)\b/);
+  const summary = await summaryForSubject(db, albhy);
+  assert.equal(summary.pronoun, "he");
+  assert.equal(summary.pronounChosen, true);
 });
 
 test("an anonymous submission keeps no email, and answers once", async () => {

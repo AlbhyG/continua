@@ -1,9 +1,9 @@
 import fs from "fs";
 import path from "path";
 import { getQuestionnaire } from "@/lib/quiz/questionnaires";
-import { DEFAULT_PRONOUN, renderItem, type Pronoun } from "./pronouns";
+import { DEFAULT_PRONOUN, itemName, renderItem, type Pronoun } from "./pronouns";
 
-export { renderItem };
+export { itemName, renderItem };
 
 // Third-person versions of the questionnaire items, for people rating someone
 // else. Built by scripts/build-observer-items.py; keyed "questionnaireId:index",
@@ -16,14 +16,6 @@ function templates(): Record<string, string> {
   const file = path.join(process.cwd(), "data", "observer-items", "observer-items.json");
   cache = JSON.parse(fs.readFileSync(file, "utf-8")) as Record<string, string>;
   return cache;
-}
-
-// The name used inside items: the first word of the person's display name, so
-// a full name reads "Albhy rarely notices..." rather than "Albhy Galuten
-// rarely notices...".
-export function itemName(displayName: string): string {
-  const first = displayName.trim().split(/\s+/)[0] ?? "";
-  return first || "this person";
 }
 
 // The observer questionnaire for one questionnaire id, rendered for a name

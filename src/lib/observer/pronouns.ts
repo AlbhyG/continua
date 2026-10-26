@@ -29,6 +29,13 @@ const FORMS: Record<Pronoun, Record<string, string>> = {
   },
 };
 
+// The name used inside statements: the first word of the display name, so
+// "Albhy Galuten" reads "Albhy rarely notices...".
+export function itemName(displayName: string): string {
+  const first = displayName.trim().split(/\s+/)[0] ?? "";
+  return first || "this person";
+}
+
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
 export function renderItem(template: string, name: string, pronoun: Pronoun = DEFAULT_PRONOUN): string {
