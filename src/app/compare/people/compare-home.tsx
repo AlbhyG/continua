@@ -112,8 +112,9 @@ export default function CompareHome() {
               </p>
               {hasResult ? (
                 <p className="mt-2 text-sm text-foreground/75">
-                  If you accept, you will each see both results side by side, using your most recent
-                  assessment. Nothing is shown until you accept. Either of you can end the comparison at any
+                  If you accept, you will each see both results side by side. The comparison always uses
+                  each person&apos;s most recent assessment, including any taken later. Nothing is shown until
+                  you accept. Either of you can end the comparison at any
                   time, and it disappears for both of you.
                   {myName && (
                     <>
@@ -129,7 +130,7 @@ export default function CompareHome() {
               ) : (
                 <p className="mt-2 text-sm text-foreground/75">
                   First take the assessment yourself. Your answers are private. After you see your result,
-                  come back here and choose whether to share it with {c.other.name}.
+                  come back here and choose whether to compare with {c.other.name}.
                 </p>
               )}
               <div className="mt-4 flex gap-3">
@@ -139,7 +140,7 @@ export default function CompareHome() {
                     onClick={() => respond(c.id, "accept")}
                     className="rounded-xl bg-white/90 px-5 py-2.5 text-sm font-bold text-foreground disabled:opacity-60"
                   >
-                    Share my result
+                    Accept and compare
                   </button>
                 ) : (
                   <Link
@@ -237,8 +238,8 @@ export default function CompareHome() {
           </p>
           <p className="mt-3 text-sm text-foreground/70">
             We&apos;ll email them an invitation. They take the assessment themselves, see their own result,
-            and then choose whether to share it. If they do, they will see your most recent assessment and you
-            will see theirs. Either of you can end the comparison at any time.
+            and then choose whether to take part. If they do, you will each see the other&apos;s most recent
+            assessment, including any taken later. Either of you can end the comparison at any time.
           </p>
           {myName && (
             <p className="mt-3 text-sm text-foreground/70">

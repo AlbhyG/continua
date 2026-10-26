@@ -22,8 +22,8 @@ export function comparisonInviteContent(
   const lines = [
     `${inviterName} would like to compare Continua results with you.`,
     ...(note ? [noteHeading, note] : []),
-    'Continua is a short personality questionnaire based on the book Continua: How Opposites Align. Your answers are private. After you take it and see your own result, you choose whether to share it with ' +
-      `${inviterName}. If you do, you will each see both results side by side. Either of you can end the comparison at any time.`,
+    'Continua is a short personality questionnaire based on the book Continua: How Opposites Align. Your answers are private. After you take it and see your own result, you choose whether to compare with ' +
+      `${inviterName}. If you do, you will each see both results side by side, always using each person's most recent assessment. Either of you can end the comparison at any time.`,
     `To start, open this link and sign in with this email address (${inviteeEmail}):`,
     link,
     'If you were not expecting this, you can ignore this email. Nothing is shared unless you accept.',

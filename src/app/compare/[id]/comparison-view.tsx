@@ -17,8 +17,8 @@ const PersonalityOrb = dynamic(() => import("@/components/PersonalityOrb"), {
 
 type Person = { name: string; scores: AxisScores; takenAt: string };
 type View =
-  | { state: "active"; me: Person; other: Person; comparison: Comparison; myNewerResult?: boolean }
-  | { state: "unavailable"; mineMissing: boolean; theirsMissing: boolean; canUseLatest: boolean }
+  | { state: "active"; me: Person; other: Person; comparison: Comparison }
+  | { state: "unavailable"; mineMissing: boolean; theirsMissing: boolean }
   | { state: "pending" | "declined" | "revoked" };
 
 const MESSAGES: Record<string, string> = {
@@ -27,19 +27,15 @@ const MESSAGES: Record<string, string> = {
   revoked: "This comparison was ended and deleted for both of you.",
 };
 
-// Says whose result is missing and what each of you can do about it.
+// Says whose assessment is missing and what to do about it.
 function unavailableMessage(v: Extract<View, { state: "unavailable" }>): string {
   if (v.mineMissing && v.theirsMissing) {
-    return v.canUseLatest
-      ? "The assessments this comparison used were deleted, on both sides. Use your latest result below, and ask the other person to open this comparison and do the same."
-      : "The assessments this comparison used were deleted, on both sides. Take the assessment again, then come back here to use your new result. The other person will need to do the same.";
+    return "Neither of you has an assessment saved right now. Once you both take it again, the comparison will reappear here.";
   }
   if (v.mineMissing) {
-    return v.canUseLatest
-      ? "The assessment you shared in this comparison was deleted. Use your latest result instead to see the comparison again."
-      : "The assessment you shared in this comparison was deleted. Take the assessment again, then come back here to use your new result.";
+    return "You don't have an assessment saved right now. Take it again and the comparison will reappear here.";
   }
-  return "The other person's assessment for this comparison was deleted. They can open this comparison and choose to use their latest result. Nothing of theirs is shown until they do.";
+  return "The other person doesn't have an assessment saved right now. The comparison will reappear once they take it again.";
 }
 
 const fmt = (iso: string) =>
@@ -63,21 +59,6 @@ export default function ComparisonView({ id }: { id: string }) {
       .catch(() => setMissing(true));
   }, [id]);
   useEffect(load, [load]);
-
-  async function switchToLatest() {
-    if (busy) return;
-    setBusy(true);
-    try {
-      const res = await fetch(`/compare/api/comparisons/${id}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action: "use-latest" }),
-      });
-      if (res.ok) load();
-    } finally {
-      setBusy(false);
-    }
-  }
 
   async function endComparison() {
     if (busy) return;
@@ -118,16 +99,7 @@ export default function ComparisonView({ id }: { id: string }) {
           <h1 className="text-2xl font-bold">Comparison</h1>
           <p className="mt-2 text-foreground/70">{unavailableMessage(view)}</p>
           <div className="mt-4 flex flex-wrap items-center gap-4">
-            {view.canUseLatest && (
-              <button
-                onClick={switchToLatest}
-                disabled={busy}
-                className="rounded-lg bg-foreground px-4 py-2 text-sm font-semibold text-background disabled:opacity-50"
-              >
-                Use my latest result
-              </button>
-            )}
-            {view.mineMissing && !view.canUseLatest && (
+            {view.mineMissing && (
               <Link href="/quiz" className="rounded-lg bg-foreground px-4 py-2 text-sm font-semibold text-background">
                 Take the assessment
               </Link>
@@ -144,7 +116,7 @@ export default function ComparisonView({ id }: { id: string }) {
       )}
 
       {view && view.state === "active" && (
-        <Active view={view} onEnd={endComparison} onSwitchToLatest={switchToLatest} busy={busy} />
+        <Active view={view} onEnd={endComparison} busy={busy} />
       )}
     </main>
   );
@@ -153,12 +125,10 @@ export default function ComparisonView({ id }: { id: string }) {
 function Active({
   view,
   onEnd,
-  onSwitchToLatest,
   busy,
 }: {
   view: Extract<View, { state: "active" }>;
   onEnd: () => void;
-  onSwitchToLatest: () => void;
   busy: boolean;
 }) {
   const { me, other, comparison } = view;
@@ -172,20 +142,9 @@ function Active({
         {me.name} and {other.name}
       </h1>
       <p className="mt-2 text-sm text-white/70">
-        Based on assessments taken {fmt(me.takenAt)} ({me.name}) and {fmt(other.takenAt)} ({other.name}).
+        Based on each person&apos;s most recent assessment: {fmt(me.takenAt)} ({me.name}) and{" "}
+        {fmt(other.takenAt)} ({other.name}).
       </p>
-      {view.myNewerResult && (
-        <p className="mt-2 text-sm text-white/80">
-          You have taken a newer assessment since this one.{" "}
-          <button
-            onClick={onSwitchToLatest}
-            disabled={busy}
-            className="font-semibold underline underline-offset-2 disabled:opacity-50"
-          >
-            Use my latest result
-          </button>
-        </p>
-      )}
 
       <section className="glass-card mt-6 grid grid-cols-2 gap-4 p-5">
         {[

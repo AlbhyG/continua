@@ -10,7 +10,6 @@ import {
   listForUser,
   respond,
   revoke,
-  switchToLatestResult,
   type Actor,
 } from "./service";
 
@@ -253,47 +252,42 @@ test("invitations are refused without a result, to yourself, twice, or past the 
   assert.equal(capped.ok === false && capped.status, 429);
 });
 
-test("a deleted result can be replaced by the person's own latest result", async () => {
+test("a comparison always shows each person's most recent result", async () => {
   const { db, tables, albhy, mel } = world();
   tables.quiz_results.push({ id: 202, person_id: "p-mel", scores: scores(8), taken_at: "2026-10-19" });
   const id = ((await createComparison(db, albhy, mel.email)) as { id: string }).id;
   await respond(db, mel, id, "accept");
 
-  // Melanie deletes the result she shared, then takes a new one.
-  tables.quiz_results = tables.quiz_results.filter((r) => r.id !== 202);
-  const broken = await getView(db, albhy, id);
-  assert.deepEqual(broken, { state: "unavailable", mineMissing: false, theirsMissing: true, canUseLatest: false });
-  tables.quiz_results.push({ id: 203, person_id: "p-mel", scores: scores(3), taken_at: "2026-10-26" });
-  const hers = await getView(db, mel, id);
-  assert.deepEqual(hers, { state: "unavailable", mineMissing: true, theirsMissing: false, canUseLatest: true });
-
-  // Albhy can't switch Melanie's side; only she can.
-  assert.equal((await switchToLatestResult(db, albhy, id)).ok, true);
-  assert.equal((await getView(db, albhy, id))?.state, "unavailable");
-  assert.equal((await switchToLatestResult(db, mel, id)).ok, true);
-  const fixed = await getView(db, albhy, id);
-  assert.equal(fixed?.state, "active");
-  if (fixed?.state === "active") assert.equal(fixed.other.scores.empathy, 3);
+  // Melanie takes a newer assessment; Albhy sees it without anyone doing anything.
+  tables.quiz_results.push({ id: 203, person_id: "p-mel", scores: scores(2), taken_at: "2026-10-26" });
+  const view = await getView(db, albhy, id);
+  assert.equal(view?.state, "active");
+  if (view?.state === "active") {
+    assert.equal(view.other.scores.empathy, 2);
+    assert.equal(view.other.takenAt, "2026-10-26");
+  }
 });
 
-test("a newer result is offered but never swapped in automatically", async () => {
+test("deleting the latest result falls back to the one before it", async () => {
+  const { db, tables, albhy, mel } = world();
+  tables.quiz_results.push({ id: 202, person_id: "p-mel", scores: scores(8), taken_at: "2026-10-19" });
+  tables.quiz_results.push({ id: 203, person_id: "p-mel", scores: scores(2), taken_at: "2026-10-26" });
+  const id = ((await createComparison(db, albhy, mel.email)) as { id: string }).id;
+  await respond(db, mel, id, "accept");
+
+  tables.quiz_results = tables.quiz_results.filter((r) => r.id !== 203);
+  const view = await getView(db, albhy, id);
+  if (view?.state === "active") assert.equal(view.other.scores.empathy, 8);
+  else assert.fail("expected an active comparison");
+});
+
+test("with every result deleted, the page says whose is missing", async () => {
   const { db, tables, albhy, mel } = world();
   tables.quiz_results.push({ id: 202, person_id: "p-mel", scores: scores(8), taken_at: "2026-10-19" });
   const id = ((await createComparison(db, albhy, mel.email)) as { id: string }).id;
   await respond(db, mel, id, "accept");
-  tables.quiz_results.push({ id: 204, person_id: "p-mel", scores: scores(2), taken_at: "2026-10-26" });
 
-  const before = await getView(db, mel, id);
-  assert.equal(before?.state === "active" && before.myNewerResult, true);
-  const albhySees = await getView(db, albhy, id);
-  if (albhySees?.state === "active") assert.equal(albhySees.other.scores.empathy, 8);
-  assert.equal((await switchToLatestResult(db, mel, id)).ok, true);
-  const after = await getView(db, albhy, id);
-  if (after?.state === "active") assert.equal(after.other.scores.empathy, 2);
-});
-
-test("someone outside a comparison cannot switch results in it", async () => {
-  const { db, albhy, mel, stranger } = world();
-  const id = ((await createComparison(db, albhy, mel.email)) as { id: string }).id;
-  assert.equal((await switchToLatestResult(db, stranger, id)).ok, false);
+  tables.quiz_results = tables.quiz_results.filter((r) => r.person_id !== "p-mel");
+  assert.deepEqual(await getView(db, albhy, id), { state: "unavailable", mineMissing: false, theirsMissing: true });
+  assert.deepEqual(await getView(db, mel, id), { state: "unavailable", mineMissing: true, theirsMissing: false });
 });
