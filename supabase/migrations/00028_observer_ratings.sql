@@ -76,23 +76,17 @@ REVOKE ALL ON TABLE public.observer_invite_log FROM anon, authenticated;
 GRANT ALL ON TABLE public.observer_ratings TO service_role;
 GRANT ALL ON TABLE public.observer_invite_log TO service_role;
 
--- Daily cleanup of unanswered invitations and old cap entries. The app also
--- runs this whenever the feature is used. Skipped with a notice if pg_cron
--- isn't available.
-DO $$
-BEGIN
-  CREATE EXTENSION IF NOT EXISTS pg_cron WITH SCHEMA pg_catalog;
-  PERFORM cron.schedule(
-    'continua-expire-observer-invites',
-    '23 9 * * *',
-    $job$
-      DELETE FROM public.observer_ratings
-      WHERE status = 'invited' AND created_at < NOW() - INTERVAL '30 days';
-      DELETE FROM public.observer_invite_log
-      WHERE sent_at < NOW() - INTERVAL '1 day';
-    $job$
-  );
-EXCEPTION WHEN OTHERS THEN
-  RAISE NOTICE 'pg_cron not available (%); the app-side cleanup still runs.', SQLERRM;
-END
-$$;
+-- Daily cleanup of unanswered invitations and old cap entries, using pg_cron
+-- (already enabled by migration 00027). The app also runs this cleanup
+-- whenever the feature is used, so nothing depends on the job. Written without
+-- a nested DO $$ block because the Supabase SQL editor can't parse one.
+SELECT cron.schedule(
+  'continua-expire-observer-invites',
+  '23 9 * * *',
+  $$
+    DELETE FROM public.observer_ratings
+    WHERE status = 'invited' AND created_at < NOW() - INTERVAL '30 days';
+    DELETE FROM public.observer_invite_log
+    WHERE sent_at < NOW() - INTERVAL '1 day';
+  $$
+);
