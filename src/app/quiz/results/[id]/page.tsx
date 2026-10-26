@@ -98,7 +98,7 @@ function ResultView({ resultId, result }: { resultId: string; result: ResultData
         )}
         {canShare && <ShareButton sharing={sharing} />}
         {SHOW_PEOPLE_COMPARISON && (
-          <Link href="/compare/people" className={secondaryButtonClass}>
+          <Link href="/compare/people#invite" className={secondaryButtonClass}>
             Compare with someone
           </Link>
         )}

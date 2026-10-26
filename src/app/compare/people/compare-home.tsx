@@ -38,6 +38,16 @@ export default function CompareHome() {
   }, []);
   useEffect(load, [load]);
 
+  // Arriving with #invite (from "Compare with someone" on a result page): once
+  // the list above has loaded and the page has its final height, go straight
+  // to the invitation form and put the cursor in the email field.
+  useEffect(() => {
+    if (items === null || window.location.hash !== "#invite") return;
+    const section = document.getElementById("invite");
+    section?.scrollIntoView({ block: "start" });
+    document.getElementById("invite-email")?.focus({ preventScroll: true });
+  }, [items]);
+
   async function call(
     url: string,
     init: RequestInit,
@@ -226,7 +236,7 @@ export default function CompareHome() {
         </section>
       )}
 
-      <section className="mt-8">
+      <section id="invite" className="mt-8 scroll-mt-28">
         <h2 className="text-xl font-bold text-white">Invite someone</h2>
         <form onSubmit={invite} className="glass-card mt-3 p-5">
           <label htmlFor="invite-email" className="text-sm font-semibold">
