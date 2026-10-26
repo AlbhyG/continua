@@ -77,9 +77,9 @@ export async function sendContactNotificationEmail({
     `Name: ${name}`,
     `Email: ${email || '(none)'}`,
     `Phone: ${phone || '(none)'}`,
-    `Roles: ${roles.join(', ')}`,
+    `${roles.length === 1 ? 'Role' : 'Roles'}: ${roles.join(', ')}`,
     `Delivery status: ${status}`,
-    `Files sent: ${filesSent.length ? filesSent.join(', ') : '(none)'}`,
+    `${filesSent.length === 1 ? 'File sent' : 'Files sent'}: ${filesSent.length ? filesSent.join(', ') : '(none)'}`,
     error ? `Error: ${error}` : null,
   ]
     .filter(Boolean)

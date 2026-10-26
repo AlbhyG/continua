@@ -132,17 +132,17 @@ export default function Header() {
               </div>
               <MenuItems anchor="bottom start" className={dropdownClass}>
                 <MenuItem>
-                  {() => <Link href="/quiz" className={menuItemClass}>Take an Assessment</Link>}
+                  {() => <Link href="/quiz" className={menuItemClass}>{latestResultId ? 'Take Another Assessment' : 'Take an Assessment'}</Link>}
                 </MenuItem>
                 {latestResultId ? (
                   <MenuItem>
                     {() => (
-                      <Link href={`/quiz/results/${latestResultId}`} className={menuItemClass}>See Results</Link>
+                      <Link href={`/quiz/results/${latestResultId}`} className={menuItemClass}>See Latest Result</Link>
                     )}
                   </MenuItem>
                 ) : (
                   <MenuItem disabled>
-                    {() => <span className={greyedItemClass}>+ See Results</span>}
+                    {() => <span className={greyedItemClass}>+ See Latest Result</span>}
                   </MenuItem>
                 )}
                 {SHOW_PEOPLE_COMPARISON && (

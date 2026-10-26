@@ -56,9 +56,9 @@ export default function PasskeySettings() {
     <section className="glass-card mt-8 p-5 md:p-6" aria-labelledby="passkeys-title">
       <h2 id="passkeys-title" className="text-xl font-bold">Passkeys</h2>
       {!loading && passkeys.length > 0 ? (
-        <p className="mt-2 text-sm text-foreground/70">Your account has {passkeys.length === 1 ? 'a passkey' : `${passkeys.length} passkeys`}. To use a passkey on another device, such as your phone, sign in there by email and add one from this page. Email sign-in remains available if you lose access to your passkeys.</p>
+        <p className="mt-2 text-sm text-foreground/70">Your account has {passkeys.length === 1 ? 'a passkey' : `${passkeys.length} passkeys`}. To use a passkey on another device, such as your phone, sign in there by email and add one from this page. Email sign-in remains available if you lose access to {passkeys.length === 1 ? 'it' : 'them'}.</p>
       ) : (
-        <p className="mt-2 text-sm text-foreground/70">A passkey lets you sign in with your fingerprint, face, or device PIN instead of waiting for an email. You can add one for each device you use. Email sign-in remains available if you lose access to your passkeys.</p>
+        <p className="mt-2 text-sm text-foreground/70">A passkey lets you sign in with your fingerprint, face, or device PIN instead of waiting for an email. You can add one for each device you use. Email sign-in remains available if you lose access to {passkeys.length === 1 ? 'it' : 'them'}.</p>
       )}
       {!supported && <p className="mt-3 text-sm text-foreground/70">To add a passkey, open continua.info in a browser that supports passkeys.</p>}
       {error && <p role="alert" className="mt-3 text-sm text-red-700">{error}</p>}

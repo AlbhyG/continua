@@ -91,7 +91,7 @@ export function AssessmentsTable({ rows }: { rows: AssessmentAdminRow[] }) {
       </div>
 
       <p className="text-sm text-gray-600">
-        Showing {visibleRows.length} of {rows.length} assessments
+        Showing {visibleRows.length} of {rows.length} {rows.length === 1 ? 'assessment' : 'assessments'}
       </p>
 
       <div className="overflow-x-auto rounded-md border border-gray-200 bg-white">

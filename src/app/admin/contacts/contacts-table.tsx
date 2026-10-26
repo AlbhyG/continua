@@ -181,7 +181,7 @@ export function ContactsTable({ rows }: { rows: ContactAdminRow[] }) {
 
       <div className="flex items-center justify-between text-sm text-gray-600">
         <span>
-          Showing {visibleRows.length} of {rows.length} rows
+          Showing {visibleRows.length} of {rows.length} {rows.length === 1 ? 'row' : 'rows'}
         </span>
         {notice && <span role="status">{notice}</span>}
       </div>

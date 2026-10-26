@@ -49,14 +49,14 @@ export default function MobileMenu({
             </span>
             <div className="space-y-1">
               <Link href="/quiz" onClick={onClose} className={itemClass}>
-                Take an Assessment
+                {latestResultId ? 'Take Another Assessment' : 'Take an Assessment'}
               </Link>
               {latestResultId ? (
                 <Link href={`/quiz/results/${latestResultId}`} onClick={onClose} className={itemClass}>
-                  See Results
+                  See Latest Result
                 </Link>
               ) : (
-                <span className={greyedClass}>+ See Results</span>
+                <span className={greyedClass}>+ See Latest Result</span>
               )}
               {SHOW_PEOPLE_COMPARISON && (
                 <Link href="/compare/people" onClick={onClose} className={itemClass}>
