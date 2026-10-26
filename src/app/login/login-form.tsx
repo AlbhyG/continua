@@ -164,7 +164,7 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
       <label htmlFor="login-code" className="mb-2 block font-semibold">Code from the email</label>
       <input id="login-code" type="text" inputMode="numeric" autoComplete="one-time-code" maxLength={12}
         value={code} onChange={(event) => setCode(event.target.value)} disabled={verifying}
-        placeholder="12345678"
+        placeholder="________"
         className="w-full rounded-xl border border-black/20 bg-white/85 px-4 py-3 text-lg tracking-[0.3em] caret-foreground outline-none focus:border-foreground focus:ring-2 focus:ring-foreground/20 disabled:opacity-60" />
       {error && <p className="mt-3 text-sm text-red-800" role="alert">{error}</p>}
       <button type="submit" disabled={verifying}
