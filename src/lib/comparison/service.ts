@@ -310,8 +310,60 @@ export async function revoke(
 }
 
 export type ComparisonView =
-  | { state: "active"; me: PersonView; other: PersonView; comparison: Comparison }
-  | { state: "pending" | "declined" | "revoked" | "unavailable" };
+  | {
+      state: "active";
+      me: PersonView;
+      other: PersonView;
+      comparison: Comparison;
+      // The viewer has taken a newer assessment than the one this comparison uses.
+      myNewerResult: boolean;
+    }
+  | {
+      state: "unavailable";
+      // Which side's result is gone. The viewer can fix their own side by
+      // switching to their latest result; the other person has to fix theirs.
+      mineMissing: boolean;
+      theirsMissing: boolean;
+      // The viewer has a result of their own they could switch to.
+      canUseLatest: boolean;
+    }
+  | { state: "pending" | "declined" | "revoked" };
+
+// Switch the viewer's side of a comparison to their own latest result. Each
+// person decides this only for their own result; the other person's side is
+// never changed. Used when a result was deleted, or to show a newer one.
+export async function switchToLatestResult(
+  db: Db,
+  actor: Actor,
+  comparisonId: string
+): Promise<{ ok: true } | Fail> {
+  const { data: part } = await db
+    .from("comparison_participants")
+    .select("comparison_id")
+    .eq("comparison_id", comparisonId)
+    .eq("user_id", actor.id)
+    .eq("response", "accepted")
+    .maybeSingle();
+  if (!part) return fail(404, "Comparison not found.");
+
+  const { data: cmp } = await db
+    .from("comparisons")
+    .select("id, status")
+    .eq("id", comparisonId)
+    .maybeSingle();
+  if (!cmp || (cmp.status !== "pending" && cmp.status !== "active")) {
+    return fail(409, "This comparison has already ended.");
+  }
+
+  const resultId = await latestOwnResultId(db, actor.id);
+  if (!resultId) return fail(400, "Take an assessment first.");
+  await db
+    .from("comparison_participants")
+    .update({ result_id: resultId })
+    .eq("comparison_id", comparisonId)
+    .eq("user_id", actor.id);
+  return { ok: true };
+}
 type PersonView = { name: string; scores: AxisScores; takenAt: string };
 
 // Only an accepted participant can view a comparison, and only while it is active.
@@ -347,32 +399,41 @@ export async function getView(
   const otherPart = (parts ?? []).find(
     (p) => p.user_id !== actor.id && p.response === "accepted"
   );
-  if (!otherPart || !mePart.result_id || !otherPart.result_id) {
-    return { state: "unavailable" };
+  if (!otherPart) {
+    return { state: "unavailable", mineMissing: false, theirsMissing: true, canUseLatest: false };
   }
 
-  const { data: results } = await db
-    .from("quiz_results")
-    .select("id, scores, taken_at")
-    .in("id", [mePart.result_id, otherPart.result_id]);
+  const ids = [mePart.result_id, otherPart.result_id].filter((v) => v != null);
+  const { data: results } = ids.length
+    ? await db.from("quiz_results").select("id, scores, taken_at").in("id", ids)
+    : { data: [] as { id: number; scores: unknown; taken_at: string }[] };
   const mineRow = (results ?? []).find((r) => r.id === mePart.result_id);
   const theirRow = (results ?? []).find((r) => r.id === otherPart.result_id);
-  if (!mineRow || !theirRow || !hasAllAxes(mineRow.scores) || !hasAllAxes(theirRow.scores)) {
-    return { state: "unavailable" };
+  const mineOk = !!mineRow && hasAllAxes(mineRow.scores);
+  const theirsOk = !!theirRow && hasAllAxes(theirRow.scores);
+  const latestMine = await latestOwnResultId(db, actor.id);
+  if (!mineOk || !theirsOk || !mineRow || !theirRow) {
+    return {
+      state: "unavailable",
+      mineMissing: !mineOk,
+      theirsMissing: !theirsOk,
+      canUseLatest: !mineOk && latestMine !== null,
+    };
   }
 
   return {
+    myNewerResult: latestMine !== null && latestMine !== mePart.result_id,
     state: "active",
     me: {
       name: await displayNameFor(db, actor.id, actor.email),
-      scores: mineRow.scores,
+      scores: mineRow.scores as AxisScores,
       takenAt: mineRow.taken_at,
     },
     other: {
       name: await displayNameFor(db, otherPart.user_id, otherPart.invited_email),
-      scores: theirRow.scores,
+      scores: theirRow.scores as AxisScores,
       takenAt: theirRow.taken_at,
     },
-    comparison: compareProfiles(mineRow.scores, theirRow.scores),
+    comparison: compareProfiles(mineRow.scores as AxisScores, theirRow.scores as AxisScores),
   };
 }
