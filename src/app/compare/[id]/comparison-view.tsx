@@ -3,7 +3,6 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
-import CompareDisclaimer from "@/components/compare/CompareDisclaimer";
 import DumbbellChart, { COLOR_ME, COLOR_OTHER } from "@/components/compare/DumbbellChart";
 import { scoresToOrbData } from "@/lib/quiz/orb-mapping";
 import { AXIS_INFO, type AxisScores } from "@/lib/quiz/scoring";
@@ -163,10 +162,6 @@ function Active({
         ))}
       </section>
 
-      <div className="mt-5">
-        <CompareDisclaimer />
-      </div>
-
       <p className="mt-6 text-lg text-white">
         {close ? (
           <>The two profiles are close on every axis.</>
@@ -212,6 +207,12 @@ function Active({
           );
         })}
       </section>
+
+      {/* Kept on the page with the scores, but quietly at the bottom. */}
+      <p className="mt-8 text-xs leading-snug text-white/70">
+        A self-reflection tool, not therapy or a clinical assessment. Results describe self-reported
+        tendencies, not compatibility, relationship health, or anyone&apos;s character.
+      </p>
 
       <div className="mt-8 flex justify-end">
         <button

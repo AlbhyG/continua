@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
-import CompareDisclaimer from "@/components/compare/CompareDisclaimer";
 import { INVITE_NOTE_MAX } from "@/lib/comparison/invite-note";
 
 type Summary = {
@@ -19,6 +18,7 @@ type Summary = {
 export default function CompareHome() {
   const [items, setItems] = useState<Summary[] | null>(null);
   const [hasResult, setHasResult] = useState(true);
+  const [resultCount, setResultCount] = useState(0);
   const [myName, setMyName] = useState<string | null>(null);
   const [email, setEmail] = useState("");
   const [note, setNote] = useState("");
@@ -31,6 +31,7 @@ export default function CompareHome() {
       .then((data) => {
         setItems(data.comparisons);
         setHasResult(data.hasResult !== false);
+        setResultCount(typeof data.resultCount === "number" ? data.resultCount : 0);
         setMyName(typeof data.myName === "string" ? data.myName : null);
       })
       .catch(() => setItems([]));
@@ -96,9 +97,6 @@ export default function CompareHome() {
         yourself, nothing is shown until both of you agree, and either of you can end it at any time.
       </p>
 
-      <div className="mt-5">
-        <CompareDisclaimer />
-      </div>
 
       {message && <p className="glass-card mt-6 p-4 text-sm font-semibold text-foreground/80">{message}</p>}
 
@@ -163,11 +161,24 @@ export default function CompareHome() {
         </section>
       )}
 
-      {active.length > 0 && (
+      {(active.length > 0 || resultCount >= 2) && (
         <section className="mt-8">
           <h2 className="text-xl font-bold text-white">
-            {active.length === 1 ? "Your comparison" : "Your comparisons"}
+            {active.length + (resultCount >= 2 ? 1 : 0) === 1 ? "Your comparison" : "Your comparisons"}
           </h2>
+          {resultCount >= 2 && (
+            <div className="glass-card mt-3 flex items-center justify-between gap-3 p-5">
+              <Link href="/my-continua#trends" className="font-bold underline underline-offset-4">
+                Your {resultCount} assessments over time
+              </Link>
+              <Link
+                href="/my-continua#trends"
+                className="rounded-xl bg-white/90 px-4 py-2 text-sm font-bold text-foreground"
+              >
+                View
+              </Link>
+            </div>
+          )}
           {active.map((c) => (
             <div key={c.id} className="glass-card mt-3 flex items-center justify-between gap-3 p-5">
               <Link href={`/compare/${c.id}`} className="font-bold underline underline-offset-4">

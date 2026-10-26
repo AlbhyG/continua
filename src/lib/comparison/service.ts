@@ -56,6 +56,22 @@ async function latestOwnResultId(db: Db, userId: string): Promise<number | null>
 
 // Whether the user has taken an assessment of their own yet. An invitee who
 // hasn't is asked to take it first, so they see their own result before deciding.
+// How many results the user has of their own (for "compare your assessments").
+export async function countOwnResults(db: Db, userId: string): Promise<number> {
+  const { data: self } = await db
+    .from("people")
+    .select("id")
+    .eq("owner_user_id", userId)
+    .eq("is_self", true)
+    .maybeSingle();
+  if (!self) return 0;
+  const { count } = await db
+    .from("quiz_results")
+    .select("id", { count: "exact", head: true })
+    .eq("person_id", self.id);
+  return count ?? 0;
+}
+
 export async function hasOwnResult(db: Db, userId: string): Promise<boolean> {
   return (await latestOwnResultId(db, userId)) !== null;
 }
