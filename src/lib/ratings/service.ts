@@ -283,6 +283,8 @@ export async function raterView(db: Db, actor: Actor): Promise<RaterView> {
 
 export type RatingForm = {
   subjectName: string;
+  // Questions and answer choices use the first name only ("Albhy", not "Albhy Galuten").
+  firstName: string;
   questions: string[];
   options: { value: number; label: string }[];
 };
@@ -312,9 +314,13 @@ export async function ratingForm(
     pronounFor(db, inv.subject_user_id),
   ]);
   const subjectName = name || "this person";
-  const questions = q.questions.map((qq) => raterText(qq.text, subjectName, pronoun));
+  const firstName = name ? name.trim().split(/\s+/)[0] : "this person";
+  const questions = q.questions.map((qq) => raterText(qq.text, firstName, pronoun));
   if (questions.some((t) => t === null)) return fail(500, "Some questions couldn't be prepared.");
-  return { ok: true, form: { subjectName, questions: questions as string[], options: raterOptions(subjectName) } };
+  return {
+    ok: true,
+    form: { subjectName, firstName, questions: questions as string[], options: raterOptions(firstName) },
+  };
 }
 
 export async function submitRating(

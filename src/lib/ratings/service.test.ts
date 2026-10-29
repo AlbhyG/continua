@@ -188,7 +188,7 @@ function world() {
   const kim: Actor = { id: "u-kim", email: "kim@example.com" };
   const tables: Record<string, Row[]> = {
     people: [
-      { id: "p-me", owner_user_id: me.id, is_self: true, name: "Albhy", pronoun: "he" },
+      { id: "p-me", owner_user_id: me.id, is_self: true, name: "Albhy Galuten", pronoun: "he" },
       { id: "p-mel", owner_user_id: mel.id, is_self: true, name: "Melanie" },
       { id: "p-jo", owner_user_id: jo.id, is_self: true, name: "Jo" },
       { id: "p-kim", owner_user_id: kim.id, is_self: true, name: "Kim" },
@@ -215,7 +215,9 @@ test("only the invited email can see and answer the questions, written about the
   const form = await ratingForm(db, mel, id, load);
   assert.equal(form.ok, true);
   if (form.ok) {
-    assert.equal(form.form.subjectName, "Albhy");
+    assert.equal(form.form.subjectName, "Albhy Galuten");
+    assert.equal(form.form.firstName, "Albhy");
+    assert.ok(form.form.questions.every((t) => !t.includes("Galuten")));
     assert.equal(form.form.questions.length, q1.questions.length);
     assert.ok(form.form.questions.every((t) => !t.includes("{") && !/\bI\b/.test(t) || t.includes("people I know") || t.includes("I would expect")));
   }

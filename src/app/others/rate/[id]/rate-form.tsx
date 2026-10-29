@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-type Form = { subjectName: string; questions: string[]; options: { value: number; label: string }[] };
+type Form = { subjectName: string; firstName: string; questions: string[]; options: { value: number; label: string }[] };
 
 // A rater answers the subject's questions, written about the subject, with
 // "Can't tell" always available, then chooses named or anonymous.
@@ -88,10 +88,10 @@ export default function RateForm({ id }: { id: string }) {
     return <p className="mx-auto mt-24 max-w-2xl px-6 text-white/70">Loading…</p>;
   }
 
-  const name = form.subjectName;
+  const name = form.firstName;
   return (
     <div className="mx-auto max-w-2xl px-6 pt-20 pb-12">
-      <h1 className="text-3xl font-bold text-foreground">How you see {name}</h1>
+      <h1 className="text-3xl font-bold text-foreground">How you see {form.subjectName}</h1>
       <p className="mt-2 text-foreground/75">
         Answer from your own experience of {name}. There are no right answers, and &quot;Can&apos;t tell&quot; is a
         good answer whenever you don&apos;t know, for example about something you&apos;ve never seen {name} in.
