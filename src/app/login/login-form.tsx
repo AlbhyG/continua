@@ -15,6 +15,8 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
   const emailInput = useRef<HTMLInputElement>(null)
   const [submitting, setSubmitting] = useState(false)
   const [sent, setSent] = useState(false)
+  // After 'Send a new code': a short note above the send button.
+  const [resendHint, setResendHint] = useState(false)
   const [error, setError] = useState<string | null>(initialError)
   const [supported, setSupported] = useState(false)
   const [usingPasskey, setUsingPasskey] = useState(false)
@@ -123,6 +125,7 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
       callback.searchParams.set('next', nextPath)
       await requestEmailLink(cleanEmail(email), callback.toString(), controller.signal, captchaToken)
       setSent(true)
+      setResendHint(false)
     } catch (error) {
       setError(controller.signal.aborted
         ? 'Sending the link took too long. Please try again. If a link arrives, you can still use it.'
@@ -196,7 +199,11 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
       <p className="mt-2 text-foreground/80">We sent a sign-in link and an 8-digit code to <strong className="break-all">{cleanEmail(email)}</strong>. It may take a minute to arrive.</p>
       <p className="mt-2 text-foreground/80">Tap the link in the email, or type the code here. The code works even if your email app opens links on its own, or if you’re reading email on another device.</p>
       <form onSubmit={verifyCode} className="mt-5">{codeFields}</form>
-      <button type="button" onClick={() => { setSent(false); setCode(''); setError(null) }} className="mt-4 min-h-11 font-semibold underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Use a different email</button>
+      <div className="mt-4 flex flex-wrap gap-x-6">
+        {/* Back to the form with the same address filled in, ready to send again. */}
+        <button type="button" onClick={() => { setSent(false); setCode(''); setError(null); setResendHint(true) }} className="min-h-11 font-semibold underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Send a new code</button>
+        <button type="button" onClick={() => { setSent(false); setCode(''); setError(null); setResendHint(false); setEmail('') }} className="min-h-11 font-semibold underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Use a different email</button>
+      </div>
     </div>
   )
 
@@ -230,11 +237,12 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
           Enter the code from that email
         </button>
       )}
+      {resendHint && <p className="text-sm text-foreground/80">Click below to send a new code to the same address. Any earlier code stops working.</p>}
       <button type="submit" disabled={submitting || usingPasskey}
         className={primary
           ? 'w-full rounded-xl bg-foreground px-5 py-3 font-bold text-white hover:bg-foreground/85 focus-visible:outline-2 focus-visible:outline-offset-4 disabled:opacity-60'
           : 'w-full rounded-xl border border-foreground/40 bg-white/60 px-5 py-3 font-bold text-foreground hover:bg-white/90 focus-visible:outline-2 focus-visible:outline-offset-4 disabled:opacity-60'}>
-        {submitting ? 'Sending link…' : 'Email me a sign-in link'}
+        {submitting ? 'Sending…' : resendHint ? 'Send a new code' : 'Email me a sign-in link'}
       </button>
     </>
   )
