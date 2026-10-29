@@ -237,7 +237,7 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
           Enter the code from that email
         </button>
       )}
-      {resendHint && <p className="text-sm text-foreground/80">Click below to send a new code to the same address. Any earlier code stops working.</p>}
+      {resendHint && <p className="text-sm text-foreground/80">Click below to send a new code to the same address.</p>}
       <button type="submit" disabled={submitting || usingPasskey}
         className={primary
           ? 'w-full rounded-xl bg-foreground px-5 py-3 font-bold text-white hover:bg-foreground/85 focus-visible:outline-2 focus-visible:outline-offset-4 disabled:opacity-60'
