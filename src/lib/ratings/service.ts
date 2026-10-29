@@ -20,7 +20,7 @@ import { AXES, isValidAnswers, scoreRating, type PartialScores } from "./score";
 type Db = SupabaseClient;
 type Fail = { ok: false; status: number; error: string };
 const fail = (status: number, error: string): Fail => ({ ok: false, status, error });
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const EMAIL_RE = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/;
 
 export const MAX_INVITES_PER_DAY = 10;
 export const INVITE_EXPIRY_DAYS = 30;

@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { cleanEmail } from '@/lib/email-address'
 import type { AuthPasskeyAuthenticationVerifyResponse } from '@supabase/supabase-js'
 import { createClient } from '@/lib/supabase/client'
 import { canUsePasskeys, passkeySignInErrorMessage } from '@/lib/auth/passkeys'
@@ -35,7 +36,7 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
   async function completePasskey(result: AuthPasskeyAuthenticationVerifyResponse) {
     if (result.error) throw result.error
     if (!result.data?.session || !result.data.user?.email_confirmed_at) throw new Error('Missing verified session')
-    const enteredEmail = emailInput.current?.value.trim().toLowerCase()
+    const enteredEmail = (emailInput.current ? cleanEmail(emailInput.current.value) : '')
     if (enteredEmail && enteredEmail !== result.data.user.email?.toLowerCase()) {
       const { error } = await createClient().auth.signOut({ scope: 'local' })
       if (error) throw error
@@ -120,7 +121,7 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
       if (navigating.current) return
       const callback = new URL('/auth/callback', window.location.origin)
       callback.searchParams.set('next', nextPath)
-      await requestEmailLink(email.trim().toLowerCase(), callback.toString(), controller.signal, captchaToken)
+      await requestEmailLink(cleanEmail(email), callback.toString(), controller.signal, captchaToken)
       setSent(true)
     } catch (error) {
       setError(controller.signal.aborted
@@ -139,7 +140,7 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
     event.preventDefault()
     if (inFlight.current || navigating.current) return
     const token = code.replace(/\s/g, '')
-    const address = email.trim().toLowerCase()
+    const address = cleanEmail(email)
     if (!address) { setError('Enter the email the code was sent to.'); return }
     if (!/^\d{6,10}$/.test(token)) { setError('Enter the 8-digit code from the email.'); return }
     inFlight.current = true
@@ -192,7 +193,7 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
   if (sent) return (
     <div className="mt-6">
       <h2 role="status" className="text-xl font-bold">Check your email</h2>
-      <p className="mt-2 text-foreground/80">We sent a sign-in link and an 8-digit code to <strong className="break-all">{email.trim()}</strong>. It may take a minute to arrive.</p>
+      <p className="mt-2 text-foreground/80">We sent a sign-in link and an 8-digit code to <strong className="break-all">{cleanEmail(email)}</strong>. It may take a minute to arrive.</p>
       <p className="mt-2 text-foreground/80">Tap the link in the email, or type the code here. The code works even if your email app opens links on its own, or if you’re reading email on another device.</p>
       <form onSubmit={verifyCode} className="mt-5">{codeFields}</form>
       <button type="button" onClick={() => { setSent(false); setCode(''); setError(null) }} className="mt-4 min-h-11 font-semibold underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Use a different email</button>

@@ -262,3 +262,13 @@ test("you need your own result before inviting anyone", async () => {
   const { db, mel, jo } = world();
   assert.equal((await createRatingInvite(db, mel, jo.email)).ok, false);
 });
+
+test("a stray trailing period or brackets from a copied address are removed, and bad domains rejected", async () => {
+  const { db, tables, me } = world();
+  assert.equal((await createRatingInvite(db, me, "Mel@Example.com.")).ok, true);
+  assert.equal(tables.ratings[0].rater_email, "mel@example.com");
+  assert.equal((await createRatingInvite(db, me, "<jo@example.com>,")).ok, true);
+  assert.equal(tables.ratings[1].rater_email, "jo@example.com");
+  assert.equal((await createRatingInvite(db, me, "kim@example..com")).ok, false);
+  assert.equal((await createRatingInvite(db, me, "kim@localhost")).ok, false);
+});

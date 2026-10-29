@@ -1,4 +1,5 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
+import { cleanEmail } from "@/lib/email-address";
 import type { AxisScores } from "@/lib/quiz/scoring";
 import { AXIS_ORDER, compareProfiles, type Comparison } from "./compare";
 
@@ -10,8 +11,9 @@ import { AXIS_ORDER, compareProfiles, type Comparison } from "./compare";
 type Db = SupabaseClient;
 export type Actor = { id: string; email: string };
 
-export const normEmail = (email: string) => email.trim().toLowerCase();
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Also drops punctuation copied along with an address (see cleanEmail).
+export const normEmail = (email: string) => cleanEmail(email);
+const EMAIL_RE = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/;
 export const isUuid = (v: string) =>
   /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(v);
 

@@ -72,7 +72,7 @@ export default function OthersHome() {
       }
       setMessage(
         body.emailed
-          ? `Invitation emailed to ${sentTo}.`
+          ? `Invitation emailed to: ${sentTo}`
           : `Invitation saved, but the email could not be sent. Send ${sentTo} this link yourself: ${body.link}`
       );
       setEmail("");
