@@ -9,3 +9,6 @@
 // invitation links still work for anyone signed in, so it can be tried
 // privately (for example, with family) before it is announced.
 export const SHOW_PEOPLE_COMPARISON = true
+
+// How Others See You: people who know you rate you on the six axes.
+export const SHOW_HOW_OTHERS_SEE_YOU = true
