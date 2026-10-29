@@ -18,7 +18,7 @@ type Mine = {
   notableGaps: (AxisRow & { gap: number | null })[];
 };
 type AsRater = {
-  requests: { id: string; subjectName: string; invitedAt: string }[];
+  requests: { id: string; subjectName: string; subjectPronoun: "he" | "she" | "they"; invitedAt: string }[];
   given: { id: string; subjectName: string; visibility: string; submittedAt: string }[];
 };
 
@@ -123,12 +123,47 @@ export default function OthersHome() {
 
       {mine === null && <p className="mt-10 text-white/70">Loading…</p>}
 
+      {asRater && asRater.requests.length > 0 && (
+        <section className="mt-8">
+          <h2 className="text-xl font-bold text-white">
+            {asRater.requests.length === 1 ? "Someone wants your view" : "People want your view"}
+          </h2>
+            <div className="glass-card mt-3 p-5 text-sm">
+              <ul className="space-y-2">
+                {asRater.requests.map((r) => (
+                  <li key={r.id} className="flex items-center justify-between gap-3">
+                    <span>
+                      {r.subjectName || "Someone"} would like to know how you see{" "}
+                      {r.subjectPronoun === "he" ? "him" : r.subjectPronoun === "she" ? "her" : "them"}.
+                    </span>
+                    <span className="flex shrink-0 items-center gap-3">
+                      <Link href={`/others/rate/${r.id}`} className="rounded-xl bg-white/90 px-4 py-2 text-sm font-bold text-foreground">
+                        Start
+                      </Link>
+                      <button
+                        disabled={busy}
+                        onClick={() => remove(r.id, "rater", "Decline this invitation? It will be deleted.")}
+                        className="text-xs font-semibold text-foreground/60 underline underline-offset-4 disabled:opacity-60"
+                      >
+                        Decline
+                      </button>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+        </section>
+      )}
+
       {mine && !mine.self && (
         <div className="glass-card mt-8 p-6">
-          <p className="font-bold">Take the assessment yourself first.</p>
+          <p className="font-bold">
+            {asRater && asRater.requests.length > 0 ? "Want others to rate you too?" : "Take the assessment yourself first."}
+          </p>
           <p className="mt-2 text-sm text-foreground/75">
-            The people you invite answer the same questions you answered, so you need a result of your own before
-            you can invite anyone.
+            {asRater && asRater.requests.length > 0
+              ? "You don't need an assessment of your own to answer the request above. To invite people to rate you, take the assessment first; they'll answer the same questions you did."
+              : "The people you invite answer the same questions you answered, so you need a result of your own before you can invite anyone."}
           </p>
           <Link href="/quiz" className="mt-4 inline-block rounded-xl bg-white/90 px-5 py-2.5 text-sm font-bold text-foreground">
             Take the assessment
@@ -285,34 +320,9 @@ export default function OthersHome() {
         </>
       )}
 
-      {asRater && (asRater.requests.length > 0 || asRater.given.length > 0) && (
+      {asRater && asRater.given.length > 0 && (
         <section className="mt-8">
           <h2 className="text-xl font-bold text-white">Rating other people</h2>
-          {asRater.requests.length > 0 && (
-            <div className="glass-card mt-3 p-5 text-sm">
-              <p className="font-bold">{asRater.requests.length === 1 ? "Someone has asked you" : "People have asked you"}</p>
-              <ul className="mt-2 space-y-2">
-                {asRater.requests.map((r) => (
-                  <li key={r.id} className="flex items-center justify-between gap-3">
-                    <span>{r.subjectName || "Someone"} would like to know how you see them.</span>
-                    <span className="flex shrink-0 items-center gap-3">
-                      <Link href={`/others/rate/${r.id}`} className="rounded-xl bg-white/90 px-4 py-2 text-sm font-bold text-foreground">
-                        Start
-                      </Link>
-                      <button
-                        disabled={busy}
-                        onClick={() => remove(r.id, "rater", "Decline this invitation? It will be deleted.")}
-                        className="text-xs font-semibold text-foreground/60 underline underline-offset-4 disabled:opacity-60"
-                      >
-                        Decline
-                      </button>
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-          {asRater.given.length > 0 && (
             <div className="glass-card mt-3 p-5 text-sm">
               <p className="font-bold">{asRater.given.length === 1 ? "Rating you've given" : "Ratings you've given"}</p>
               <ul className="mt-2 space-y-2">
@@ -335,7 +345,6 @@ export default function OthersHome() {
                 ))}
               </ul>
             </div>
-          )}
         </section>
       )}
     </main>

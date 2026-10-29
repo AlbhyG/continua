@@ -247,7 +247,7 @@ export async function removeNamed(db: Db, actor: Actor, id: string): Promise<{ o
 // ---- What the rater sees ----
 
 export type RaterView = {
-  requests: { id: string; subjectName: string; invitedAt: string }[];
+  requests: { id: string; subjectName: string; subjectPronoun: Pronoun; invitedAt: string }[];
   given: { id: string; subjectName: string; visibility: string; submittedAt: string }[];
 };
 
@@ -273,7 +273,7 @@ export async function raterView(db: Db, actor: Actor): Promise<RaterView> {
   for (const r of rows) {
     const subjectName = await displayNameFor(db, r.subject_user_id, "");
     if (r.status === "invited" && r.rater_email === me) {
-      requests.push({ id: r.id, subjectName, invitedAt: r.created_at });
+      requests.push({ id: r.id, subjectName, subjectPronoun: await pronounFor(db, r.subject_user_id), invitedAt: r.created_at });
     } else if (r.status === "submitted") {
       given.push({ id: r.id, subjectName, visibility: r.visibility ?? "named", submittedAt: r.submitted_at as string });
     }
