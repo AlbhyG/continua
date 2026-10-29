@@ -10,7 +10,7 @@ import PronounPicker from "./pronoun-picker";
 type Scores = Record<string, number | null>;
 type Mine = {
   self: { scores: AxisScores; takenAt: string } | null;
-  pronoun: "he" | "she" | "they";
+  pronoun: "he" | "she" | "they" | null;
   invited: { email: string; invitedAt: string }[];
   named: { id: string; name: string; scores: Scores; submittedAt: string }[];
   anonymous: { count: number; average: Scores | null };
@@ -290,11 +290,11 @@ export default function OthersHome() {
                 anonymous average.
               </p>
               <div className="mt-3 text-sm text-foreground/70">
-                <PronounPicker initial={mine.pronoun} name={myName} />
+                <PronounPicker initial={mine.pronoun} name={myName} onChosen={(p) => setMine((m) => (m ? { ...m, pronoun: p } : m))} />
               </div>
               <button
                 type="submit"
-                disabled={busy || !email}
+                disabled={busy || !email || !mine.pronoun}
                 className="mt-4 rounded-xl bg-white/90 px-5 py-2.5 text-sm font-bold text-foreground disabled:opacity-60"
               >
                 Send invitation

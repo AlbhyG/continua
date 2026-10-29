@@ -274,3 +274,13 @@ test("a stray trailing period or brackets from a copied address are removed, and
   assert.equal((await createRatingInvite(db, me, "kim@example..com")).ok, false);
   assert.equal((await createRatingInvite(db, me, "kim@localhost")).ok, false);
 });
+
+test("you choose a pronoun before your first invitation", async () => {
+  const { db, tables, me, mel } = world();
+  tables.people[0].pronoun = null;
+  const r = await createRatingInvite(db, me, mel.email);
+  assert.equal(r.ok, false);
+  assert.equal((await subjectView(db, me)).pronoun, null);
+  tables.people[0].pronoun = "she";
+  assert.equal((await createRatingInvite(db, me, mel.email)).ok, true);
+});

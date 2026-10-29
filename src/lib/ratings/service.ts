@@ -42,9 +42,15 @@ async function selfPersonOf(db: Db, userId: string) {
   return data as { id: string; name: string | null; pronoun: string | null } | null;
 }
 
-export async function pronounFor(db: Db, userId: string): Promise<Pronoun> {
+// The pronoun a person chose, or null if they haven't chosen yet.
+export async function chosenPronoun(db: Db, userId: string): Promise<Pronoun | null> {
   const p = await selfPersonOf(db, userId);
-  return isPronoun(p?.pronoun) ? p!.pronoun as Pronoun : "they";
+  return isPronoun(p?.pronoun) ? (p!.pronoun as Pronoun) : null;
+}
+
+// For writing questions: the chosen pronoun, or "they" if none was chosen.
+export async function pronounFor(db: Db, userId: string): Promise<Pronoun> {
+  return (await chosenPronoun(db, userId)) ?? "they";
 }
 
 // The user's most recent complete self-assessment.
@@ -86,6 +92,9 @@ export async function createRatingInvite(
 
   const latest = await latestOwnResult(db, actor.id);
   if (!latest) return fail(400, "Take the assessment yourself first, then invite people to rate you.");
+  if (!(await chosenPronoun(db, actor.id))) {
+    return fail(400, "Choose how the questions should refer to you (he, she, or they) before sending an invitation.");
+  }
 
   await purgeExpired(db);
 
@@ -131,7 +140,7 @@ export type AxisSummary = {
 
 export type SubjectView = {
   self: { scores: AxisScores; takenAt: string } | null;
-  pronoun: Pronoun;
+  pronoun: Pronoun | null;
   invited: { email: string; invitedAt: string }[];
   named: { id: string; name: string; scores: PartialScores; submittedAt: string }[];
   anonymous: { count: number; average: PartialScores | null };
@@ -183,7 +192,7 @@ export function summarize(
 
 export async function subjectView(db: Db, actor: Actor): Promise<SubjectView> {
   await purgeExpired(db);
-  const [latest, pronoun] = await Promise.all([latestOwnResult(db, actor.id), pronounFor(db, actor.id)]);
+  const [latest, pronoun] = await Promise.all([latestOwnResult(db, actor.id), chosenPronoun(db, actor.id)]);
   const { data } = await db
     .from("ratings")
     .select("id, rater_email, rater_user_id, status, visibility, scores, created_at, submitted_at")
