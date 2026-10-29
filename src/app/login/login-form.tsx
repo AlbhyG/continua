@@ -220,7 +220,7 @@ export default function LoginForm({ nextPath, initialError }: { nextPath: string
           value={email} onChange={(event) => setEmail(event.target.value)} disabled={submitting || usingPasskey}
           aria-describedby="login-help" aria-invalid={error ? true : undefined}
           className="w-full rounded-xl border border-black/20 bg-white/85 px-4 py-3 caret-foreground outline-none focus:border-foreground focus:ring-2 focus:ring-foreground/20 disabled:opacity-60" />
-        <p id="login-help" className="mt-2 text-sm text-foreground/80">We’ll email you a secure sign-in link. New here, or on a new device? Start with email; you can add a passkey for this device right after.</p>
+        <p id="login-help" className="mt-2 text-sm text-foreground/80">{supported ? 'We’ll email you a secure sign-in link. New here, or on a new device? Start with email; you can add a passkey for this device right after.' : 'We’ll email you a secure sign-in link and an 8-digit code.'}</p>
       </div>
       {error && <p className="text-sm text-red-800" role="alert">{error}</p>}
       <Turnstile ref={turnstile} onToken={setCaptchaToken} />
