@@ -1,3 +1,4 @@
+import { headers } from 'next/headers'
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
@@ -25,6 +26,11 @@ export default async function LoginPage({
     redirect(nextPath)
   }
 
+  // Passkeys work only on continua.info itself (not preview addresses), so
+  // don't offer them where they can't be used.
+  const host = ((await headers()).get('host') ?? '').split(':')[0]
+  const passkeysWork = host === 'continua.info' || host === 'www.continua.info'
+
   return (
     <main className="mx-auto flex min-h-[70vh] max-w-lg items-center px-6 py-20">
       <section className="glass-card w-full p-7 md:p-9">
@@ -32,8 +38,9 @@ export default async function LoginPage({
           Sign in or create an account
         </h1>
         <p className="mt-3 text-foreground/70">
-          Use a passkey or a link sent to your email. Your saved assessments stay
-          with the same account either way. No password to remember.
+          {passkeysWork
+            ? 'Use a passkey or a link sent to your email. Your saved assessments stay with the same account either way. No password to remember.'
+            : 'We’ll email you a sign-in link and code. Your saved assessments stay with the same account. No password to remember.'}
         </p>
         <LoginForm
           nextPath={nextPath}

@@ -89,3 +89,26 @@ export async function updatePhoto(photo: string | null): Promise<{ ok: boolean; 
   revalidatePath('/my-continua')
   return { ok: true, message: photo ? 'Photo saved.' : 'Photo removed.' }
 }
+
+// Which pronoun is used when other people's questions are written about you.
+export async function updatePronoun(pronoun: string): Promise<{ ok: boolean; message: string }> {
+  if (pronoun !== 'he' && pronoun !== 'she' && pronoun !== 'they') {
+    return { ok: false, message: 'Please choose he, she, or they.' }
+  }
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return { ok: false, message: 'Please sign in again.' }
+  await supabase.rpc('ensure_current_user_records')
+  const { error } = await supabase
+    .from('people')
+    .update({ pronoun, updated_at: new Date().toISOString() })
+    .eq('owner_user_id', user.id)
+    .eq('is_self', true)
+  if (error) {
+    console.error('Pronoun update failed:', error.message)
+    return { ok: false, message: 'Could not save.' }
+  }
+  return { ok: true, message: 'Saved.' }
+}

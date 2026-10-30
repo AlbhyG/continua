@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { SHOW_PEOPLE_COMPARISON } from '@/lib/site-mode'
+import { SHOW_HOW_OTHERS_SEE_YOU, SHOW_PEOPLE_COMPARISON } from '@/lib/site-mode'
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
 import AccountButton from '@/components/auth/AccountButton'
 import ContactInquiry from '@/components/ContactInquiry'
@@ -148,6 +148,11 @@ export default function Header() {
                 {SHOW_PEOPLE_COMPARISON && (
                   <MenuItem>
                     {() => <Link href="/compare/people" className={menuItemClass}>Comparisons</Link>}
+                  </MenuItem>
+                )}
+                {SHOW_HOW_OTHERS_SEE_YOU && (
+                  <MenuItem>
+                    {() => <Link href="/others" className={menuItemClass}>How Others See You</Link>}
                   </MenuItem>
                 )}
                 <MenuItem disabled>

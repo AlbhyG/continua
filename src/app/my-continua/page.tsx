@@ -10,7 +10,7 @@ import PasskeySettings from './passkey-settings'
 import StopSharingButton from './stop-sharing-button'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { requireUser } from '@/lib/auth/current-user'
-import { SHOW_PEOPLE_COMPARISON } from '@/lib/site-mode'
+import { SHOW_HOW_OTHERS_SEE_YOU, SHOW_PEOPLE_COMPARISON } from '@/lib/site-mode'
 import HistoryChart from '@/components/quiz/HistoryChart'
 import LocalDateTime from '@/components/LocalDateTime'
 import { AXIS_INFO, type AxisScores } from '@/lib/quiz/scoring'
@@ -128,6 +128,14 @@ export default async function MyContinuaPage({
                 className="rounded-xl border border-white/40 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-white/10"
               >
                 Comparisons
+              </Link>
+            )}
+            {SHOW_HOW_OTHERS_SEE_YOU && (
+              <Link
+                href="/others"
+                className="rounded-xl border border-white/40 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-white/10"
+              >
+                How Others See You
               </Link>
             )}
             <Link

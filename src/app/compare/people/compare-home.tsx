@@ -78,7 +78,7 @@ export default function CompareHome() {
       { method: "POST", body: JSON.stringify({ email, note }) },
       (body) =>
         body.emailed
-          ? `Invitation emailed to ${sentTo}.`
+          ? `Invitation emailed to: ${sentTo}`
           : `Invitation saved, but the email could not be sent. Ask ${sentTo} to sign in to Continua with that address and open ${String(body.link ?? "Compare")}.`
     );
     if (ok) {
