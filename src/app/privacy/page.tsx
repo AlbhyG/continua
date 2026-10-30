@@ -9,7 +9,7 @@ export default function PrivacyPage() {
   return (
     <main className="max-w-[720px] lg:max-w-[960px] mx-auto px-6 pt-20 pb-12">
       <h1 className="text-[32px] font-bold mb-2">Privacy Policy</h1>
-      <p className="text-[14px] mb-8 opacity-70">Continua | Effective Date: October 20, 2026</p>
+      <p className="text-[14px] mb-8 opacity-70">Continua | Effective Date: October 30, 2026</p>
 
       <div className="text-[18px] md:text-[20px] leading-[1.6] space-y-8">
         <p>
@@ -64,7 +64,7 @@ export default function PrivacyPage() {
             <li>Create and manage user accounts.</li>
             <li>Authenticate users and maintain account security.</li>
             <li>Calculate, save, retrieve, and display assessment results, including displaying your own result alongside historical figures when you use the Compare page. Your result on that page is shown only to you.</li>
-            <li>Send comparison invitations you request, and show a comparison to the people who agreed to take part in it.</li>
+            <li>Send comparison and rating invitations you request, show a comparison to the people who agreed to take part in it, and show ratings to the person who was rated.</li>
             <li>Deliver book chapters or other materials requested by users.</li>
             <li>Send service-related communications.</li>
             <li>Respond to questions, comments, privacy requests, and support requests.</li>
@@ -129,7 +129,7 @@ export default function PrivacyPage() {
             We do not sell, rent, or trade personal information. We may disclose information to service providers that process information on our behalf to operate Continua (see Section 7). We may also disclose information:
           </p>
           <ul className="list-disc pl-6 mt-3 space-y-2">
-            <li>At your direction, including when you create or share an assessment-results link or take part in a comparison with another person;</li>
+            <li>At your direction, including when you create or share an assessment-results link, take part in a comparison with another person, or rate someone who invited you;</li>
             <li>When required by applicable law, regulation, subpoena, court order, or other valid legal process;</li>
             <li>When reasonably necessary to protect the security, rights, property, or safety of Continua, our users, or others; or</li>
             <li>In connection with a merger, acquisition, financing, reorganization, sale of assets, or similar business transaction, subject to applicable law.</li>
@@ -166,7 +166,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-[24px] font-bold mb-3">10. Email and Text Communications</h2>
           <p>
-            We may send email messages necessary to provide services you request, authenticate your account, deliver requested content, send comparison invitations you request, respond to you, or provide important information about Continua.
+            We may send email messages necessary to provide services you request, authenticate your account, deliver requested content, send comparison and rating invitations you request, respond to you, or provide important information about Continua.
           </p>
           <p className="mt-3">
             If you provide a phone number in order to receive a requested chapter or other content, Continua may send that content to you by text message. Standard message and data rates imposed by your mobile carrier may apply. You can reply STOP to any text message from Continua to stop receiving further texts at that number.
@@ -202,7 +202,7 @@ export default function PrivacyPage() {
             Depending on where you live and applicable law, you may have rights concerning your personal information, which may include rights to request access, correction, or deletion; obtain certain information in a portable format; object to or restrict certain processing; withdraw consent where processing is based on consent; and appeal or complain to an appropriate privacy or data-protection authority where applicable.
           </p>
           <p className="mt-3">
-            You can delete individual results, turn off shared links, and end comparisons yourself. To delete your account or make any other privacy request, contact <a href="mailto:privacy@continua.info" className="underline hover:text-accent transition-colors">privacy@continua.info</a>. We may need to verify your identity before completing certain requests. We will respond within the period required by applicable law. We will not discriminate against you for exercising privacy rights provided by applicable law.
+            You can delete individual results, turn off shared links, end comparisons, withdraw ratings you have given, and remove named ratings of you yourself. To delete your account or make any other privacy request, contact <a href="mailto:privacy@continua.info" className="underline hover:text-accent transition-colors">privacy@continua.info</a>. We may need to verify your identity before completing certain requests. We will respond within the period required by applicable law. We will not discriminate against you for exercising privacy rights provided by applicable law.
           </p>
         </section>
 
