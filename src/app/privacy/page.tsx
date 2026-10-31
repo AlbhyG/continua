@@ -202,7 +202,7 @@ export default function PrivacyPage() {
             Depending on where you live and applicable law, you may have rights concerning your personal information, which may include rights to request access, correction, or deletion; obtain certain information in a portable format; object to or restrict certain processing; withdraw consent where processing is based on consent; and appeal or complain to an appropriate privacy or data-protection authority where applicable.
           </p>
           <p className="mt-3">
-            You can delete individual results, turn off shared links, end comparisons, withdraw ratings you have given, and remove named ratings of you yourself. To delete your account or make any other privacy request, contact <a href="mailto:privacy@continua.info" className="underline hover:text-accent transition-colors">privacy@continua.info</a>. We may need to verify your identity before completing certain requests. We will respond within the period required by applicable law. We will not discriminate against you for exercising privacy rights provided by applicable law.
+            You can delete individual results, turn off shared links, end comparisons, withdraw ratings you have given, and remove named ratings of you. To delete your account or make any other privacy request, contact <a href="mailto:privacy@continua.info" className="underline hover:text-accent transition-colors">privacy@continua.info</a>. We may need to verify your identity before completing certain requests. We will respond within the period required by applicable law. We will not discriminate against you for exercising privacy rights provided by applicable law.
           </p>
         </section>
 
