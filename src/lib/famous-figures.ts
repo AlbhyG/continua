@@ -10,7 +10,7 @@ export interface FamousFigureProfile {
 export const FAMOUS_FIGURE_CATEGORIES = [
   { key: "Narcissist", title: "Narcissists" },
   { key: "Altruist", title: "Altruists" },
-  { key: "Hyper-Empathic", title: "Hyper-Empathics" },
+  { key: "Empathetic", title: "Empathetic" },
   { key: "Hypo-Attuned", title: "Hypo-Attuneds" },
   { key: "Conscientious", title: "Conscientious" },
   { key: "Impulsive", title: "Impulsives" },

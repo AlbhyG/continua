@@ -444,7 +444,7 @@
   {
     "name": "Mahatma Gandhi",
     "primary": "Altruist",
-    "tags": "Altruist · Hyper-Empathic · Conscientious · Assertive",
+    "tags": "Altruist · Empathetic · Conscientious · Assertive",
     "scores": {
       "social_attunement": 8,
       "empathy": 9,
@@ -470,7 +470,7 @@
   {
     "name": "Eleanor Roosevelt",
     "primary": "Altruist",
-    "tags": "Altruist · Hyper-Empathic · Conscientious · Assertive · Low-Reactive",
+    "tags": "Altruist · Empathetic · Conscientious · Assertive · Low-Reactive",
     "scores": {
       "social_attunement": 8,
       "empathy": 9,
@@ -651,8 +651,8 @@
   },
   {
     "name": "Abraham Lincoln",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic · Conscientious · Assertive",
+    "primary": "Empathetic",
+    "tags": "Empathetic · Conscientious · Assertive",
     "scores": {
       "social_attunement": 8,
       "empathy": 9,
@@ -664,8 +664,8 @@
   },
   {
     "name": "Charles Darwin",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
+    "primary": "Empathetic",
+    "tags": "Empathetic",
     "scores": {
       "social_attunement": 5,
       "empathy": 8,
@@ -677,8 +677,8 @@
   },
   {
     "name": "Walt Whitman",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
+    "primary": "Empathetic",
+    "tags": "Empathetic",
     "scores": {
       "social_attunement": 8,
       "empathy": 10,
@@ -690,8 +690,8 @@
   },
   {
     "name": "Fyodor Dostoevsky",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
+    "primary": "Empathetic",
+    "tags": "Empathetic",
     "scores": {
       "social_attunement": 8,
       "empathy": 10,
@@ -703,8 +703,8 @@
   },
   {
     "name": "Leo Tolstoy",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
+    "primary": "Empathetic",
+    "tags": "Empathetic",
     "scores": {
       "social_attunement": 8,
       "empathy": 10,
@@ -716,8 +716,8 @@
   },
   {
     "name": "Harriet Beecher Stowe",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
+    "primary": "Empathetic",
+    "tags": "Empathetic",
     "scores": {
       "social_attunement": 8,
       "empathy": 10,
@@ -729,8 +729,8 @@
   },
   {
     "name": "Charles Dickens",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
+    "primary": "Empathetic",
+    "tags": "Empathetic",
     "scores": {
       "social_attunement": 8,
       "empathy": 10,
@@ -742,8 +742,8 @@
   },
   {
     "name": "Elizabeth Barrett Browning",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
+    "primary": "Empathetic",
+    "tags": "Empathetic",
     "scores": {
       "social_attunement": 8,
       "empathy": 10,
@@ -755,8 +755,8 @@
   },
   {
     "name": "Fred Rogers",
-    "primary": "Hyper-Empathic",
-    "tags": "Hyper-Empathic",
+    "primary": "Empathetic",
+    "tags": "Empathetic",
     "scores": {
       "social_attunement": 8,
       "empathy": 10,
