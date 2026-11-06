@@ -1,4 +1,7 @@
 import { resend } from '@/lib/resend/client'
+import type { Pronoun } from '@/lib/ratings/questions'
+
+const OBJECT_FORM: Record<Pronoun, string> = { he: 'him', she: 'her', they: 'them' }
 
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'reply@continua.info'
 
@@ -8,11 +11,12 @@ const escapeHtml = (value: string) =>
 // Asks someone to rate the person who invited them. It explains what they'll
 // be asked, that "Can't tell" is fine, and that they choose to be named or
 // anonymous. A personal note (already cleaned) appears after the first line.
-export function ratingInviteContent(subjectName: string, raterEmail: string, link: string, note: string | null = null) {
-  const subject = `${subjectName} would like to know how you see them`
+export function ratingInviteContent(subjectName: string, raterEmail: string, link: string, note: string | null = null, pronoun: Pronoun = 'they') {
+  const them = OBJECT_FORM[pronoun]
+  const subject = `${subjectName} would like to know how you see ${them}`
   const noteHeading = `A note from ${subjectName}:`
   const lines = [
-    `${subjectName} has asked you to answer a short set of questions about them on Continua, to see how the people who know them see them.`,
+    `${subjectName} has asked you to answer a short set of questions about ${them} on Continua, to see how the people who know ${them} see ${them}.`,
     ...(note ? [noteHeading, note] : []),
     `It takes about five to seven minutes. Answer from your own experience of ${subjectName}, and choose "Can't tell" for anything you don't know. Before you submit, you choose whether ${subjectName} sees your answers under your name or only as part of an anonymous average.`,
     `To start, open this link and sign in with this email address (${raterEmail}):`,
@@ -39,8 +43,9 @@ export async function sendRatingInvite(args: {
   raterEmail: string
   link: string
   note?: string | null
+  pronoun?: Pronoun
 }): Promise<boolean> {
-  const { subject, text, html } = ratingInviteContent(args.subjectName, args.raterEmail, args.link, args.note ?? null)
+  const { subject, text, html } = ratingInviteContent(args.subjectName, args.raterEmail, args.link, args.note ?? null, args.pronoun ?? 'they')
   try {
     const { error } = await resend.emails.send({
       from: `Continua <${FROM_EMAIL}>`,

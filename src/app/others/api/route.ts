@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { displayNameFor, normEmail } from "@/lib/comparison/service";
 import { cleanInviteNote } from "@/lib/comparison/invite-note";
-import { createRatingInvite, raterView, subjectView } from "@/lib/ratings/service";
+import { createRatingInvite, pronounFor, raterView, subjectView } from "@/lib/ratings/service";
 import { sendRatingInvite } from "@/lib/email/send-rating-invite";
 import { getActor, NO_STORE } from "@/app/compare/api/auth";
 
@@ -37,6 +37,7 @@ export async function POST(request: NextRequest) {
     raterEmail: normEmail(email),
     link,
     note: note.note,
+    pronoun: await pronounFor(got.db, got.actor.id),
   });
   return NextResponse.json({ id: result.id, emailed, link }, { headers: NO_STORE });
 }
